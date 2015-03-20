@@ -1,0 +1,248 @@
+/*
+font-family: 'Jim Nightshade', cursive;
+font-family: 'IM Fell DW Pica SC', serif;
+font-family: 'Trade Winds', cursive;
+font-family: 'Londrina Sketch', cursive;
+font-family: 'Eagle Lake', cursive; *****
+font-family: 'UnifrakturCook', cursive;
+font-family: 'UnifrakturMaguntia', cursive;
+font-family: 'Fondamento', cursive;
+font-family: 'IM Fell Double Pica SC', serif;
+*/
+/* line 44, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, css.scss */
+div {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 54, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 59, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 62, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 65, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 68, css.scss */
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "Eagle Lake", cursive;
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  background: url("../images/bg-grad.png") repeat-x #95160a;
+  text-align: center;
+}
+
+/* line 79, css.scss */
+#intro {
+  width: 100%;
+  height: 100%;
+  background: url("../images/clouds.png") no-repeat 0 0;
+  background-size: 300% 300%;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+}
+/* line 86, css.scss */
+#intro h1 {
+  color: #ff9000;
+}
+
+/* line 90, css.scss */
+.opener {
+  position: absolute;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -100%;
+  margin-left: -50%;
+  opacity: 0;
+}
+/* line 99, css.scss */
+.opener h1 {
+  padding-left: 30%;
+}
+
+/* line 103, css.scss */
+#evil {
+  background: url("../images/beast.png") no-repeat center;
+  background-size: 100%;
+}
+/* line 106, css.scss */
+#evil h1 {
+  margin-top: 50%;
+}
+
+/* line 110, css.scss */
+#love {
+  background: url("../images/johnny.png") no-repeat center;
+  background-size: 100%;
+}
+/* line 113, css.scss */
+#love h1 {
+  margin-top: 30%;
+}
+
+/* line 117, css.scss */
+#hero {
+  background: url("../images/kingsley.png") no-repeat center;
+  background-size: 100%;
+}
+/* line 120, css.scss */
+#hero h1 {
+  margin-top: 60%;
+}
+
+/* line 124, css.scss */
+#world {
+  background: url("../images/hecate.png") no-repeat center;
+  background-size: 100%;
+}
+/* line 127, css.scss */
+#world h1 {
+  margin-top: 55%;
+}
+
+/* line 131, css.scss */
+#all {
+  background: url("../images/caster.png") no-repeat center;
+  background-size: 100%;
+}
+/* line 134, css.scss */
+#all h1 {
+  margin-top: 25%;
+}
+
+/* line 138, css.scss */
+#page {
+  text-align: center;
+}
+
+/* line 141, css.scss */
+#header {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 450px;
+  padding: 25px 0;
+  text-align: center;
+  border-bottom: solid #ff9000 2px;
+  color: #ff9000;
+}
+/* line 150, css.scss */
+#header img {
+  margin-bottom: -20px;
+  margin-right: -437px;
+  width: 80%;
+  max-width: 437px;
+}
+/* line 156, css.scss */
+#header h2, #header h3 {
+  font-size: 19px;
+  display: inline-block;
+}
+/* line 160, css.scss */
+#header h3 {
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 167, css.scss */
+  #header {
+    text-align: left;
+  }
+}
+/*
+                 #socnet {
+                    font-size: 16px;
+                    text-align: center;
+                    margin-top: $gutter;
+                    h4 {
+                        display: inline-block;
+                        color: $charcoal;
+                        font-weight: 400;
+                        width: 100%;
+                    }
+                    a {
+                        width: $soc-size;
+                        height: $soc-size;
+                        border-radius: $soc-size/2;
+                        margin: 5px 4px 0 4px;
+                        box-shadow: 2px 2px 5px $charcoal; 
+                        background: url("../images/socnet-sprite.png") no-repeat;
+                    }
+                    .fb {
+                        background-position: 0 -1*$soc-size;
+                        background-color: $fb-blue;
+                        &:hover {
+                            background-position: 0 0;
+                        }
+                    }
+                    .tw {
+                        background-position: -1*$soc-size -1*$soc-size;
+                        background-color: $tw-blue;
+                        &:hover {
+                            background-position: -1*$soc-size 0;
+                        }
+                    }
+                    .go {
+                        background-position: -2*$soc-size -1*$soc-size;
+                        background-color: $go-red;
+                        &:hover {
+                            background-position: -2*$soc-size 0;
+                        }
+                    }
+                    .in {
+                        background-position: -3*$soc-size -1*$soc-size;
+                        background-color: $in-blue;
+                        &:hover {
+                            background-position: -3*$soc-size 0;
+                        }
+                    }
+                    .em {
+                        background-position: -4*$soc-size -1*$soc-size;
+                        background-color: $em-neutral;
+                        &:hover {
+                            background-position: -4*$soc-size 0;
+                        }
+                    }
+                }
+    #footer {
+        clear: both;
+        font-size: 11px;
+        margin: $gutter*3;
+        font-family: $fonts-sub;
+        text-align: center;
+        a {
+            color: $ash;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+*/

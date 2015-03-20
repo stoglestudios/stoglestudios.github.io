@@ -1,0 +1,230 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$fonts-main: 'Arimo', sans-serif;
+$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$im-width: 640px;
+$im-height: 360px;
+$logo-height: 150px;
+$gutter: 30px;
+$bleed: 10px;
+$cta-width: 250px;
+$head-height: $gutter*2 + $logo-height;
+$soc-size: 30px;
+$col-width: $im-width + $cta-width + $gutter*9;
+$corners: 5px;
+
+//-----COLORS--------
+
+$steel: #203049;
+$aluminum: #36455b;
+$l-blue: #6699cc;
+$d-blue: #112233;
+
+$logo-nuetral: #03a538;
+$logo-bright: #ef7d05;
+$ash: #e2e3e5;
+$grey: #6e6e6e;
+$charcoal: #39383a;
+$bg-grey: #49484a;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20;
+$in-blue: #1779b3;
+$em-neutral: #999999;
+$bg-orange: #fd6720;
+$pn-red: #c51e23;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+body {
+    position: relative;
+    font-family: $fonts-main;
+    font-weight: 400;
+    background: url("../images/hex.png") repeat $charcoal;
+    padding: $gutter/2 $gutter;
+}
+#page {
+    width: 100%;
+    max-width: $col-width - $gutter*2;
+    min-width: $im-width + $gutter*2;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url("../images/bg.png") repeat-x $bg-grey;
+    box-shadow: 0 0 10px black;
+}
+    #header {
+        display: inline-block;
+        width: 100%;
+        height: $head-height;
+        padding: $gutter $gutter*3;
+        text-align: center;
+    }
+    #container {
+        margin: 0 auto; 
+        width: 100%;
+        text-align: center;
+        max-width: $im-width + $gutter*2 + $cta-width;
+        min-width: $im-width;
+    }
+        #movie {
+            display: inline-block;
+            height: $im-height;
+            width: $im-width;
+            margin: 0 $gutter/2 $gutter;
+            box-shadow: 0 8px 15px $charcoal;
+        }
+            #movie_video_player {
+                height: $im-height;
+                width: $im-width;
+                background-color: black;
+            }
+            #cta {
+                display: inline-block;
+                padding: $gutter;
+                width: $im-width;
+                background-color: $ash;
+                box-shadow: 0 8px 15px $charcoal;
+                vertical-align: top;
+                margin: 0 $gutter/2;
+                .phone {
+                    text-align: right;
+                    background: url("../images/ph-icon.png") no-repeat left;
+                    height: $gutter*2;
+                    line-height: $gutter*2;
+                    width: 100%;
+                    max-width: $cta-width - $gutter*2;
+                    cursor: default;
+                    font-size: 22px;
+                    color: $charcoal;
+                }
+                .btn {
+                    display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 100%;
+                    max-width: $cta-width;
+                    margin: $gutter/2 0;
+                    font-size: 18px;
+                    border-radius: $corners;
+                    border: solid $logo-nuetral 1px;
+                    text-align: center;
+                    color: white;
+                    box-shadow: 2px 2px 5px $charcoal; 
+                    background: url("../images/gel-btn.png") repeat-x $logo-nuetral; 
+                    &:hover {
+                        background-color: $logo-bright;
+                        border: solid $logo-bright 1px;
+                    }
+                }
+            }
+                #socnet {
+                    font-size: 16px;
+                    text-align: center;
+                    margin-top: $gutter;
+                    h4 {
+                        display: inline-block;
+                        color: $charcoal;
+                        font-weight: 400;
+                        width: 100%;
+                    }
+                    a {
+                        width: $soc-size;
+                        height: $soc-size;
+                        border-radius: $soc-size/2;
+                        margin: 5px 4px 0 4px;
+                        box-shadow: 2px 2px 5px $charcoal; 
+                        background: url("../images/socnet-sprite.png") no-repeat;
+                    }
+                    .fb {
+                        background-position: 0 -1*$soc-size;
+                        background-color: $fb-blue;
+                        &:hover {
+                            background-position: 0 0;
+                        }
+                    }
+                    .tw {
+                        background-position: -1*$soc-size -1*$soc-size;
+                        background-color: $tw-blue;
+                        &:hover {
+                            background-position: -1*$soc-size 0;
+                        }
+                    }
+                    .go {
+                        background-position: -2*$soc-size -1*$soc-size;
+                        background-color: $go-red;
+                        &:hover {
+                            background-position: -2*$soc-size 0;
+                        }
+                    }
+                    .in {
+                        background-position: -3*$soc-size -1*$soc-size;
+                        background-color: $in-blue;
+                        &:hover {
+                            background-position: -3*$soc-size 0;
+                        }
+                    }
+                    .em {
+                        background-position: -4*$soc-size -1*$soc-size;
+                        background-color: $em-neutral;
+                        &:hover {
+                            background-position: -4*$soc-size 0;
+                        }
+                    }
+                }
+    #footer {
+        clear: both;
+        font-size: 11px;
+        margin: $gutter*3;
+        font-family: $fonts-sub;
+        text-align: center;
+        a {
+            color: $ash;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+@media screen and (min-width: $col-width - $gutter*4) {
+    #header {
+       text-align: left;
+    }
+        #cta {
+            width: $cta-width;
+            height: $im-height;
+            text-align: left;
+        }
+    #footer {
+        text-align: left;
+    }
+}
+@media screen and (max-device-width: 600px) {
+    #footer {
+        font-size: 14px;
+    }
+}
