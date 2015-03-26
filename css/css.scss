@@ -1,32 +1,31 @@
 //-------------------
 // VARIABLIZE
 //-------------------
-$fonts-main: 'Arimo', sans-serif;
-$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$fonts-main: 'Muli', "Century Gothic", ariel, sans-serif;
+$fonts-sub: 'Oswald', "Futura", helvetica, sans-serif;
 $im-width: 640px;
 $im-height: 360px;
-$logo-height: 150px;
-$gutter: 30px;
+$logo-height: 80px;
+$gutter: 20px;
 $bleed: 10px;
-$cta-width: 250px;
-$head-height: $gutter*2 + $logo-height;
+$cta-width: 350px;
+$head-height: $gutter + $logo-height;
 $soc-size: 30px;
-$col-width: $im-width + $cta-width + $gutter*9;
+$col-width:  $im-width + $cta-width + $gutter*10;
 $corners: 5px;
 
 //-----COLORS--------
 
 $steel: #203049;
 $aluminum: #36455b;
-$l-blue: #6699cc;
 $d-blue: #112233;
 
-$logo-nuetral: #03a538;
-$logo-bright: #ef7d05;
-$ash: #e2e3e5;
-$grey: #6e6e6e;
-$charcoal: #39383a;
-$bg-grey: #49484a;
+$red: #96241D;
+$orange: #D19547;
+$blue: #2BA0F9;
+$purple: #A83AAB;
+$yellow: #E0DC59;
+$green: #46922A;
 
 $fb-blue: #3c5a96;
 $tw-blue: #59adeb;
@@ -66,163 +65,128 @@ body {
     position: relative;
     font-family: $fonts-main;
     font-weight: 400;
-    background: url("../images/hex.png") repeat $charcoal;
-    padding: $gutter/2 $gutter;
+    background: url("../images/grid-big.png") repeat $steel;
 }
 #page {
     width: 100%;
     max-width: $col-width - $gutter*2;
-    min-width: $im-width + $gutter*2;
+    min-width: 200px;
     overflow: hidden;
-    margin: 0 auto;
-    background: url("../images/bg.png") repeat-x $bg-grey;
+    margin: $bleed auto 0;
+    background: url("../images/cross.png") repeat #ddd;
     box-shadow: 0 0 10px black;
 }
     #header {
         display: inline-block;
         width: 100%;
         height: $head-height;
-        padding: $gutter $gutter*3;
+        padding: $gutter $gutter;
         text-align: center;
+        background: url("../images/hi-grad.png") repeat-x $aluminum;
+        border-bottom: solid #E0DC59 2px;
+        box-shadow: 0 2px 5px black;
     }
-    #container {
-        margin: 0 auto; 
-        width: 100%;
-        text-align: center;
-        max-width: $im-width + $gutter*2 + $cta-width;
-        min-width: $im-width;
-    }
-        #movie {
-            display: inline-block;
-            height: $im-height;
-            width: $im-width;
-            margin: 0 $gutter/2 $gutter;
-            box-shadow: 0 8px 15px $charcoal;
-        }
-            #movie_video_player {
-                height: $im-height;
-                width: $im-width;
-                background-color: black;
-            }
-            #cta {
+            #socnet {
+            float: right;
+            height: $gutter*2;
+            font-size: 14px;
+            text-align: right;
+            h4 {
                 display: inline-block;
-                padding: $gutter;
-                width: $im-width;
-                background-color: $ash;
-                box-shadow: 0 8px 15px $charcoal;
+                line-height: $gutter*2;
                 vertical-align: top;
-                margin: 0 $gutter/2;
-                .phone {
-                    text-align: right;
-                    background: url("../images/ph-icon.png") no-repeat left;
-                    height: $gutter*2;
-                    line-height: $gutter*2;
-                    width: 100%;
-                    max-width: $cta-width - $gutter*2;
-                    cursor: default;
-                    font-size: 22px;
-                    color: $charcoal;
-                }
-                .btn {
-                    display: inline-block;
-                    height: 40px;
-                    line-height: 40px;
-                    width: 100%;
-                    max-width: $cta-width;
-                    margin: $gutter/2 0;
-                    font-size: 18px;
-                    border-radius: $corners;
-                    border: solid $logo-nuetral 1px;
-                    text-align: center;
-                    color: white;
-                    box-shadow: 2px 2px 5px $charcoal; 
-                    background: url("../images/gel-btn.png") repeat-x $logo-nuetral; 
-                    &:hover {
-                        background-color: $logo-bright;
-                        border: solid $logo-bright 1px;
-                    }
+                color: white;
+                font-weight: 400;
+            }
+            a {
+                width: $soc-size;
+                height: $soc-size;
+                border-radius: $soc-size/2;
+                margin: 5px 0 0 4px;
+                background: url("../images/socnet-sprite.png") no-repeat $aluminum;
+            }
+            .fb {
+                background-position: 0 -1*$soc-size;
+                &:hover {
+                    background-position: 0 0;
+                    background-color: $fb-blue;
+                    border-color: $fb-blue;
                 }
             }
-                #socnet {
-                    font-size: 16px;
-                    text-align: center;
-                    margin-top: $gutter;
-                    h4 {
-                        display: inline-block;
-                        color: $charcoal;
-                        font-weight: 400;
-                        width: 100%;
-                    }
-                    a {
-                        width: $soc-size;
-                        height: $soc-size;
-                        border-radius: $soc-size/2;
-                        margin: 5px 4px 0 4px;
-                        box-shadow: 2px 2px 5px $charcoal; 
-                        background: url("../images/socnet-sprite.png") no-repeat;
-                    }
-                    .fb {
-                        background-position: 0 -1*$soc-size;
-                        background-color: $fb-blue;
-                        &:hover {
-                            background-position: 0 0;
-                        }
-                    }
-                    .tw {
-                        background-position: -1*$soc-size -1*$soc-size;
-                        background-color: $tw-blue;
-                        &:hover {
-                            background-position: -1*$soc-size 0;
-                        }
-                    }
-                    .go {
-                        background-position: -2*$soc-size -1*$soc-size;
-                        background-color: $go-red;
-                        &:hover {
-                            background-position: -2*$soc-size 0;
-                        }
-                    }
-                    .in {
-                        background-position: -3*$soc-size -1*$soc-size;
-                        background-color: $in-blue;
-                        &:hover {
-                            background-position: -3*$soc-size 0;
-                        }
-                    }
-                    .em {
-                        background-position: -4*$soc-size -1*$soc-size;
-                        background-color: $em-neutral;
-                        &:hover {
-                            background-position: -4*$soc-size 0;
-                        }
-                    }
+            .tw {
+                background-position: -1*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -1*$soc-size 0;
+                    background-color: $tw-blue;
+                    border-color: $tw-blue;
                 }
-    #footer {
-        clear: both;
-        font-size: 11px;
-        margin: $gutter*3;
-        font-family: $fonts-sub;
+            }
+            .go {
+                background-position: -2*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -2*$soc-size 0;
+                    background-color: $go-red;
+                    border-color: $go-red;
+                }
+            }
+            .in {
+                background-position: -3*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -3*$soc-size 0;
+                    background-color: $in-blue;
+                    border-color: $in-blue;
+                }
+            }
+            .em {
+                background-position: -4*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -4*$soc-size 0;
+                    background-color: $em-neutral;
+                    border-color: $em-neutral;
+                }
+            }
+        }
+    #cta-bar {
+        width: 100%;
+        padding: 0 $gutter;
+        color: white;
+        box-shadow: 0 2px 5px black;
+        background: url("../images/gel-btn.png") repeat-x #A83AAB;
+        a { 
+            width: 20%;
+            text-align: center;
+            color: white;
+            line-height: $gutter*2;
+            &:hover {
+                background-color: #2BA0F9;
+            }
+        }
+    }
+
+    #container {
+        margin: $gutter; 
         text-align: center;
+        padding: $gutter;
+        background-color: white;
+        border-radius: $corners;
+    }
+    #footer {
+        line-height: $gutter*2;
+        height: $gutter*2;
+        font-size: 10px;
+        padding: 0 $gutter*2;
+        background-color: $green;
+        border-top: solid 2px $orange;
+        border-bottom: solid 2px $red;
+        color: white;
         a {
-            color: $ash;
+            float: right;
+            color: white;
             &:hover {
                 text-decoration: underline;
             }
         }
     }
-@media screen and (min-width: $col-width - $gutter*4) {
-    #header {
-       text-align: left;
-    }
-        #cta {
-            width: $cta-width;
-            height: $im-height;
-            text-align: left;
-        }
-    #footer {
-        text-align: left;
-    }
-}
 @media screen and (max-device-width: 600px) {
     #footer {
         font-size: 14px;
