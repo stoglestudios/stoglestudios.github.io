@@ -1,0 +1,345 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$fonts-main: 'Oswald', "Futura", helvetica, sans-serif;
+$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$im-width: 640px;
+$im-height: 360px;
+$logo-height: 80px;
+$gutter: 20px;
+$bleed: 10px;
+$cta-width: 330px;
+$head-height: $gutter + $logo-height;
+$soc-size: 30px;
+$col-width:  $im-width + $cta-width + $gutter*3;
+$corners: 5px;
+$btn-width: 100px;
+$spacer: 5px;
+$thumb-height: 40px;
+
+//-----COLORS--------
+$dusk: #1e265b;
+$yellow: #fcd506;
+$electric: #4475fe;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20;
+$in-blue: #1779b3;
+$em-neutral: #999999;
+$bg-orange: #fd6720;
+$pn-red: #c51e23;
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+div {
+	position:relative;
+}
+img {
+	display:inline-block;
+	border:0;
+	outline:none;
+}
+a img {
+	border:0;
+}
+a, a:hover, a:visited, a:active {
+	text-decoration:none;
+}
+
+//------------------
+// HYPNOTIZE
+//------------------
+body {
+	background: #EEEEEE;
+	position:relative;
+	font-family:$fonts-main;
+	width:100%;
+	margin:0 auto;
+}
+input {
+	font-family:$fonts-main;
+}
+
+/* A centered div within each 100% width section */
+.column {
+	width:100%;
+    max-width: $col-width + $gutter*2;
+    min-width: $im-width + $gutter*2;
+	margin:0 auto;
+	overflow:hidden;
+    padding: 0 $gutter;
+}
+.movie-chapters {
+    box-shadow: 0 0 8px black;
+    margin: 0 auto;
+	width: $im-width;
+	list-style: none;
+    border-top: solid grey 1px;
+    border-left: solid grey 1px;
+    border-right: solid grey 1px;
+    li {
+        height: $thumb-height + $spacer*2;
+        a {
+            display: block;
+            height: $thumb-height + $spacer*2;
+            width: 100%;
+            font-size: 14px;
+            padding: $spacer;
+            background-color: white;
+            color: $electric;
+            vertical-align:middle;
+            border-bottom: solid grey 1px;
+            p {
+                display: inline-block;
+                line-height: $thumb-height;
+                vertical-align: top;
+            }
+            b {
+                display: inline-block;
+                color: black;
+                width: 35px;
+                text-align: right;
+                margin-right: $spacer;
+            }
+        }
+    }
+}
+.chapter1:hover, .chapter1.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter2:hover, .chapter2.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter3:hover, .chapter3.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter4:hover, .chapter4.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter5:hover, .chapter5.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter6:hover, .chapter6.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter7:hover, .chapter7.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter8:hover, .chapter8.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter9:hover, .chapter9.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+.chapter10:hover, .chapter10.chapter-selected {
+	background-color: $dusk;
+    color: white;
+    b {
+        color: $yellow;
+    }
+}
+
+#header {
+	background-color: $dusk;
+	width: 100%;
+    img {
+        float: left;
+        margin: $gutter 0;
+    }
+}
+	#cta-head {
+		margin-top: 28px;
+		float: right;
+        vertical-align: top;
+        text-align: right;
+        padding-top: $gutter;
+       a {
+           font-weight: bold;
+           font-size: 28px;
+           color: #fff;
+		}
+        .phone {
+            cursor: default;
+        }
+        .mail {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+	}
+#grad-bar {
+	display: block;
+    text-align: center;
+	background: url(../images/headertile.png) repeat-x $dusk;
+	width: 100%;
+    padding: $bleed 0 0;
+    .btn {
+        display: inline-block;
+        height: $soc-size;
+        line-height: $soc-size;
+        color: black;
+        background: url("../images/hi-shad-grad.png") repeat-x $yellow;
+        padding: 0 $gutter;
+        border-radius: $corners;
+        margin-bottom: $bleed;
+        &:hover {
+            background-color: $dusk;
+            color: white;
+        }
+    }
+}
+    #socnet {
+        width: 100%;
+        text-align: center;
+        float: left;
+        height: $soc-size + 1px;
+        margin-bottom: $bleed;
+        h4 {
+            display: inline-block;
+            font-weight: 400;
+            line-height: $soc-size;
+            color: white;
+            font-size: 12px;
+        }
+        a {
+            display: inline-block;
+            vertical-align: top;
+            width: $soc-size;
+            height: $soc-size;
+            border-radius: $soc-size/2 +2px;
+            margin: 0 0 0 4px;
+            box-shadow: 0 1px 0 $electric;
+            background: url("../images/socnet-sprite.png") no-repeat $dusk;
+        }
+        .fb {
+            background-position: 0 -1*$soc-size;
+            &:hover {
+                background-position: 0 0;
+                background-color: $fb-blue;
+            }
+        }
+        .tw {
+            background-position: -1*$soc-size -1*$soc-size;
+            &:hover {
+                background-position: -1*$soc-size 0;
+                background-color: $tw-blue;
+            }
+        }
+        .go {
+            background-position: -2*$soc-size -1*$soc-size;
+            &:hover {
+                background-position: -2*$soc-size 0;
+                background-color: $go-red;
+            }
+        }
+        .in {
+            background-position: -3*$soc-size -1*$soc-size;
+            &:hover {
+                background-position: -3*$soc-size 0;
+                background-color: $in-blue;
+            }
+        }
+        .em {
+            background-position: -4*$soc-size -1*$soc-size;
+            &:hover {
+                background-position: -4*$soc-size 0;
+                background-color: $em-neutral;
+            }
+        }
+    }
+#wrap {
+    background-color: white;
+    width: 100%;
+    padding: $gutter;
+    max-width: $col-width + $gutter*2;
+    min-width: $im-width + $gutter*2;
+}
+        #movie {
+            margin: 0 auto $gutter;
+            height: $im-height;
+            width: $im-width;
+            box-shadow: 0 0 8px black;
+        }
+            #movie_video_player {
+                height: $im-height;
+                width: $im-width;
+                background-color: grey;
+            }
+    #footer {
+        clear: both;
+        margin: $gutter*2 auto 0;
+        font-size: 12px;
+        width: $im-width;
+        padding-top: $gutter;
+        border-top: solid grey 1px;
+        a {
+            color: grey;
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+    }
+@media screen and (min-width: $col-width + $gutter*3) {
+    #grad-bar {
+	   text-align: left;
+    }
+    #socnet {
+        float: right;
+        width: $cta-width;
+        text-align: right;
+    }
+    #movie {
+        float: left;
+    }
+    .movie-chapters {
+        height: $thumb-height*10 + $spacer*20;
+        float: right;
+        width: $cta-width;
+    }
+    #footer {
+        margin: 140px 0 0;
+    }
+}

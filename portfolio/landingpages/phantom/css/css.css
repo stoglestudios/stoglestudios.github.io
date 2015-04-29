@@ -1,0 +1,284 @@
+/* line 32, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 38, css.scss */
+div {
+  position: relative;
+}
+
+/* line 41, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 46, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 49, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 52, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 55, css.scss */
+body {
+  position: relative;
+  font-family: "Oswald", "Futura", helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 61, css.scss */
+.column {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 950px;
+  min-width: 680px;
+}
+
+/* line 67, css.scss */
+#page {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("../images/logo-bg.png") no-repeat top center white;
+}
+
+/* line 74, css.scss */
+#header {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 2px;
+}
+
+/* line 80, css.scss */
+#head-box {
+  text-align: right;
+  color: #a2998c;
+  height: 100px;
+  font-family: "Gruppo", sans-serif;
+  font-size: 18px;
+  background: url("../images/head-bg.png") no-repeat bottom right;
+}
+/* line 87, css.scss */
+#head-box p {
+  padding-top: 5px;
+}
+
+/* line 91, css.scss */
+#logo-box {
+  width: 180px;
+  float: left;
+  text-align: left;
+  padding: 10px 20px;
+  background: url("../images/logo-grad-bg.png") repeat-y left;
+}
+
+/* line 98, css.scss */
+#sub-head {
+  width: 100%;
+  height: 52px;
+  background: url("../images/sub-bg.png") repeat-x;
+}
+
+/* line 103, css.scss */
+#container {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px 20px;
+  background: url("../images/body-bg.png") repeat-x black;
+}
+
+/* line 109, css.scss */
+#body-box {
+  background: url("../images/body-grad.png") repeat-x #4c4c4c;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 990px) {
+  /* line 114, css.scss */
+  #container {
+    width: 100%;
+    height: 400px;
+  }
+
+  /* line 118, css.scss */
+  #body-box {
+    height: 380px;
+    padding: 0 20px;
+  }
+}
+/* line 123, css.scss */
+#movie {
+  display: inline-block;
+  height: 360px;
+  width: 640px;
+}
+
+/* line 128, css.scss */
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: black;
+}
+
+@media screen and (min-width: 990px) {
+  /* line 134, css.scss */
+  #movie {
+    float: left;
+  }
+}
+/* line 138, css.scss */
+#cta {
+  padding: 20px 0 0;
+  margin: 0 auto;
+  width: 640px;
+  color: white;
+}
+/* line 143, css.scss */
+#cta .btn {
+  height: 40px;
+  line-height: 40px;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px black;
+  margin: 20px 0;
+  background: url("../images/gel-btn.png") repeat-x #99509c;
+}
+/* line 154, css.scss */
+#cta .btn:hover {
+  background-color: #a2998c;
+  color: black;
+}
+/* line 159, css.scss */
+#cta #socnet {
+  height: 30px;
+}
+/* line 161, css.scss */
+#cta #socnet a {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 0 5px 0 0;
+  background: url("../images/socnet-sprite.png") no-repeat;
+}
+/* line 168, css.scss */
+#cta #socnet .fb {
+  background-position: 0 0;
+}
+/* line 170, css.scss */
+#cta #socnet .fb:hover {
+  background-position: 0 -30px;
+  background-color: #3c5a96;
+}
+/* line 175, css.scss */
+#cta #socnet .tw {
+  background-position: -30px 0;
+}
+/* line 177, css.scss */
+#cta #socnet .tw:hover {
+  background-position: -30px -30px;
+  background-color: #59adeb;
+}
+/* line 182, css.scss */
+#cta #socnet .go {
+  background-position: -60px 0;
+}
+/* line 184, css.scss */
+#cta #socnet .go:hover {
+  background-position: -60px -30px;
+  background-color: #d82a20;
+}
+/* line 189, css.scss */
+#cta #socnet .in {
+  background-position: -90px 0;
+}
+/* line 191, css.scss */
+#cta #socnet .in:hover {
+  background-position: -90px -30px;
+  background-color: #1779b3;
+}
+/* line 196, css.scss */
+#cta #socnet .em {
+  background-position: -120px 0;
+}
+/* line 198, css.scss */
+#cta #socnet .em:hover {
+  background-position: -120px -30px;
+  background-color: #a2998c;
+}
+
+@media screen and (min-width: 990px) {
+  /* line 206, css.scss */
+  #cta {
+    padding: 60px 0 0;
+    float: right;
+    width: 250px;
+    height: 360px;
+    text-align: left;
+  }
+  /* line 212, css.scss */
+  #cta .btn {
+    margin: 60px 0;
+  }
+}
+/* line 217, css.scss */
+#footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  padding-top: 180px;
+  font-size: 10px;
+  font-family: "Muli", "Century Gothic", ariel, sans-serif;
+  background: url("../images/shad-grad.png") repeat-x;
+  color: grey;
+}
+/* line 227, css.scss */
+#footer a {
+  color: grey;
+}
+/* line 229, css.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-device-width: 600px) {
+  /* line 236, css.scss */
+  #cta p {
+    font-size: 34px;
+  }
+  /* line 239, css.scss */
+  #cta .btn {
+    font-size: 34px;
+  }
+
+  /* line 243, css.scss */
+  #head-box {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  /* line 247, css.scss */
+  #footer {
+    font-size: 20px;
+  }
+}

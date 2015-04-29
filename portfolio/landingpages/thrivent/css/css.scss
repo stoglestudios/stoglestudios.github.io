@@ -1,0 +1,222 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$fonts-main: 'Muli', "Century Gothic", ariel, sans-serif;
+$im-width: 640px;
+$im-height: 360px;
+$logo-height: 48px;
+$gutter: 20px;
+$block: $gutter*4;
+$cta-width: 300px;
+$head-height: $gutter*2 + $logo-height;
+$soc-size: 30px;
+$col-width:  $im-width + $cta-width + + $block*2 + $gutter*2;
+$corners: 5px;
+
+$one-blue: #00457C;
+$two-blue:#003162;
+$three-blue: #001B44;
+$four-blue: #002C5C;
+$grey: #4a5965;
+$red: #db1f38;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20;
+$in-blue: #1779b3;
+$em-neutral: #334455;
+$bg-orange: #fd6720;
+$pn-red: #c51e23;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+body {
+    position: relative;
+    font-family: $fonts-main;
+    font-weight: 400;
+    width: 100%;
+    background: url("../images/stripes2.png") repeat #ccc;
+}
+#page {
+    width: $col-width;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url("../images/cross.png") repeat $grey;
+    box-shadow: 0 0 10px black;
+    
+}
+    #header {
+        display: inline-block;
+        width: $col-width;
+        height: $head-height;
+        padding: $gutter $block;
+        text-align: left;
+        background-color: white;
+        border-bottom: solid $red 4px;
+        box-shadow: 0 2px 5px $one-blue;
+        
+    }
+        #socnet {
+            float: right;
+            height: $soc-size + 12px;
+            padding: 5px 5px 5px 0;
+            border-top: solid $grey 1px;
+            border-right: solid $grey 1px;
+            border-left: solid $grey 1px;
+            margin: $gutter + 4px 0;
+            border-radius: $corners $corners 0 0;
+            font-size: 14px;
+            text-align: right;
+            a {
+                width: $soc-size;
+                height: $soc-size;
+                border-radius: $corners;
+                margin: 0 0 0 5px;
+                background: url("../images/socnet-sprite.png") no-repeat;
+            }
+            .fb {
+                background-position: 0 -1*$soc-size;
+                background-color: $fb-blue;
+                &:hover {
+                    background-position: 0 0;
+                    
+                }
+            }
+            .tw {
+                background-position: -1*$soc-size -1*$soc-size;
+                background-color: $tw-blue;
+                &:hover {
+                    background-position: -1*$soc-size 0;
+                }
+            }
+            .go {
+                background-position: -2*$soc-size -1*$soc-size;
+                background-color: $go-red;
+                &:hover {
+                    background-position: -2*$soc-size 0;
+                }
+            }
+            .in {
+                background-position: -3*$soc-size -1*$soc-size;
+                background-color: $in-blue;
+                &:hover {
+                    background-position: -3*$soc-size 0;
+                }
+            }
+            .em {
+                background-position: -4*$soc-size -1*$soc-size;
+                background-color: $em-neutral;
+                &:hover {
+                    background-position: -4*$soc-size 0;
+                }
+            }
+        }
+    #container {
+        margin: $gutter auto;
+        width: $im-width + $gutter*2 + $cta-width;
+        height: $im-height + $gutter*2;
+        padding: $gutter;
+        background-color: white;
+        border-radius: $corners;
+        box-shadow: 0 2px 8px black;
+        
+    }
+        #movie {
+            float: left;
+            height: $im-height;
+            width: $im-width;
+        }
+            #movie_video_player {
+                height: $im-height;
+                width: $im-width;
+                background-color: black;
+            }
+            #cta {
+                float: right;
+                width: $cta-width;
+                height: $im-height;
+                padding: $gutter/2 $gutter;
+                border-radius: 0 $corners $corners 0;
+                border-top: solid $grey 1px;
+                border-right: solid $grey 1px;
+                h1 {
+                    color: $red;
+                }
+                p {
+                    margin: $gutter/2 0;
+                    color: $grey;
+                }
+                .phone {
+                    text-align: left;
+                    background: url("../images/ph-icon.png") no-repeat left;
+                    height: $gutter*2;
+                    line-height: $gutter*2;
+                    cursor: default;
+                    font-size: 21px;
+                    padding-left: 18px;
+                    color: $red;
+                    margin: 0 0 0 $gutter;
+                }
+                .btn {
+                    display: inline-block;
+                    height: $gutter*2;
+                    line-height: $gutter*2;
+                    width: $cta-width - $gutter*2;
+                    margin: $gutter/3 0;
+                    font-size: 18px;
+                    border-radius: $corners;
+                    border: solid $red 1px;
+                    text-align: center;
+                    color: white;
+                    box-shadow: 0 1px 3px black;
+                    background: url("../images/gel-btn.png") repeat-x $red; 
+                    &:hover {
+                        background-color: $grey;
+                        border: solid $grey 1px;
+                    }
+                }
+                img {
+                    display: block;
+                    margin: $gutter auto;
+                }
+            }
+    #footer {
+        line-height: $gutter*2 + 10px;
+        height: $gutter*2 + 10px;
+        font-size: 10px;
+        padding: 0 $gutter*2;
+        margin-top: $gutter*6;
+        background-color: white;
+        box-shadow: 0 0 10px $one-blue; 
+        text-align: center;
+        a {
+            color: grey;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }

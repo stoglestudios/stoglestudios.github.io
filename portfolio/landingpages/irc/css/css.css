@@ -1,0 +1,319 @@
+/* line 40, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 46, css.scss */
+div {
+  position: relative;
+}
+
+/* line 49, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 54, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 57, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 60, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 63, css.scss */
+body {
+  position: relative;
+  font-family: "Oswald", "Futura", helvetica, sans-serif;
+  font-weight: 400;
+  background-color: white;
+  padding: 10px;
+}
+
+/* line 70, css.scss */
+#page {
+  width: 100%;
+  max-width: 1150px;
+  min-width: 680px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: url("../images/bg_stripes.png") repeat;
+  box-shadow: 0 0 10px black;
+}
+/* line 78, css.scss */
+#page .txt {
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* line 85, css.scss */
+#header {
+  display: inline-block;
+  width: 100%;
+  height: 85px;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: solid #3a3a3a 2px;
+}
+
+/* line 93, css.scss */
+#cta-bar {
+  margin: 0 auto 20px;
+  width: 94%;
+  max-width: 1150px;
+  min-width: 680px;
+  padding: 0 20px;
+  height: 40px;
+  color: white;
+  box-shadow: 0 2px 5px black;
+  border-radius: 5px;
+  text-align: left;
+  background: url("../images/shad-grad.png") repeat-x #fec12b;
+}
+/* line 105, css.scss */
+#cta-bar .btn {
+  height: 40px;
+  line-height: 40px;
+  cursor: default;
+  font-size: 18px;
+  color: #2a2526;
+  border-right: solid white 1px;
+}
+/* line 113, css.scss */
+#cta-bar .phone {
+  cursor: default;
+  padding: 0 18px 0 0;
+}
+/* line 117, css.scss */
+#cta-bar .email {
+  padding: 0 18px;
+}
+/* line 119, css.scss */
+#cta-bar .email:hover {
+  background-color: #2a2526;
+  color: white;
+}
+
+/* line 125, css.scss */
+#socnet {
+  float: right;
+  height: 40px;
+  font-size: 14px;
+  text-align: right;
+}
+/* line 130, css.scss */
+#socnet h4 {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: top;
+  color: white;
+  font-weight: 400;
+}
+/* line 137, css.scss */
+#socnet a {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 5px 0 0 4px;
+  background: url("../images/socnet-sprite.png") no-repeat #2a2526;
+}
+/* line 144, css.scss */
+#socnet .fb {
+  background-position: 0 -30px;
+}
+/* line 146, css.scss */
+#socnet .fb:hover {
+  background-position: 0 0;
+  background-color: #3c5a96;
+}
+/* line 151, css.scss */
+#socnet .tw {
+  background-position: -30px -30px;
+}
+/* line 153, css.scss */
+#socnet .tw:hover {
+  background-position: -30px 0;
+  background-color: #59adeb;
+}
+/* line 158, css.scss */
+#socnet .go {
+  background-position: -60px -30px;
+}
+/* line 160, css.scss */
+#socnet .go:hover {
+  background-position: -60px 0;
+  background-color: #d82a20;
+}
+/* line 165, css.scss */
+#socnet .in {
+  background-position: -90px -30px;
+}
+/* line 167, css.scss */
+#socnet .in:hover {
+  background-position: -90px 0;
+  background-color: #1779b3;
+}
+/* line 172, css.scss */
+#socnet .em {
+  background-position: -120px -30px;
+}
+/* line 174, css.scss */
+#socnet .em:hover {
+  background-position: -120px 0;
+  background-color: #999999;
+}
+
+/* line 180, css.scss */
+#container {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  max-width: 990px;
+  min-width: 680px;
+}
+
+/* line 187, css.scss */
+#movie {
+  display: inline-block;
+  height: 360px;
+  width: 640px;
+  box-shadow: 0 0 10px black;
+  z-index: 100;
+}
+
+/* line 194, css.scss */
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: black;
+}
+
+/* line 199, css.scss */
+#cta {
+  display: inline-block;
+  padding: 20px;
+  width: 640px;
+  box-shadow: 0 0 10px black;
+  background: url("../images/arrow-tips.png") no-repeat top center #fec12b;
+}
+/* line 205, css.scss */
+#cta p {
+  margin: auto;
+  color: white;
+  width: 150px;
+}
+/* line 210, css.scss */
+#cta #formholder {
+  width: 100%;
+  margin-top: 50px;
+  font-size: 12pt;
+  text-align: middle;
+}
+/* line 215, css.scss */
+#cta #formholder input {
+  border-radius: 2.5px;
+  display: block;
+  height: 26px;
+  width: 100%;
+  background-color: white;
+  color: #2a2526;
+  border: solid #2a2526 1px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+/* line 226, css.scss */
+#cta #formholder textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: solid #2a2526 1px;
+  color: #2a2526;
+}
+/* line 233, css.scss */
+#cta #formholder .form-thank {
+  display: none;
+  color: #2a2526;
+  text-align: center;
+}
+/* line 238, css.scss */
+#cta #formholder .submit {
+  display: inline-block;
+  width: 100px;
+  height: 26px;
+  font-size: 14px;
+  color: white;
+  background: url("../images/submit.png") #2a2526;
+}
+/* line 245, css.scss */
+#cta #formholder .submit:hover {
+  background-color: white;
+  color: #2a2526;
+}
+/* line 251, css.scss */
+#cta #reqText {
+  width: 100%;
+  margin: 0 60px;
+  font-size: 7.5pt;
+}
+
+/* line 257, css.scss */
+#footer {
+  clear: both;
+  line-height: 50px;
+  height: 50px;
+  font-size: 10px;
+  padding: 0 40px;
+  font-family: "Muli", "Century Gothic", ariel, sans-serif;
+  text-align: center;
+}
+/* line 265, css.scss */
+#footer a {
+  color: #112233;
+}
+/* line 267, css.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1190px) {
+  /* line 273, css.scss */
+  #container {
+    width: 100%;
+  }
+
+  /* line 276, css.scss */
+  #movie {
+    float: left;
+  }
+
+  /* line 279, css.scss */
+  #cta {
+    width: 350px;
+    height: 360px;
+  }
+
+  /* line 283, css.scss */
+  #footer {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-device-width: 600px) {
+  /* line 288, css.scss */
+  #footer {
+    font-size: 14px;
+  }
+}

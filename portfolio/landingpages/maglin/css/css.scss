@@ -1,0 +1,264 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$fonts-main: 'Quicksand', sans-serif;
+$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$im-width: 640px;
+$im-height: 360px;
+$logo-height: 80px;
+$gutter: 20px;
+$bleed: 10px;
+$cta-width: 350px;
+$head-height: $gutter*2 + $logo-height;
+$soc-size: 30px;
+$col-width: $im-width + $cta-width + $gutter*10;
+$corners: 5px;
+$line: 2px;
+
+//-----COLORS--------
+
+$steel: #203049;
+$aluminum: #36455b;
+$l-blue: #6699cc;
+$d-blue: #112233;
+
+$green: #597b7c;
+$orange: #f38034;
+$ash: #e1dfdf;
+$grey: #808080;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20;
+$in-blue: #1779b3;
+$em-neutral: $orange;
+$bg-orange: #fd6720;
+$pn-red: #c51e23;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+body {
+    position: relative;
+    font-family: $fonts-main;
+    font-weight: 400;
+}
+#page {
+    width: 100%;
+    max-width: $col-width - $gutter*2;
+    min-width: $im-width + $gutter*2;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url("../images/dots.png") repeat $green;
+}
+    #header {
+        display: inline-block;
+        width: 100%;
+        height: $head-height;
+        background-color: white;
+        img {
+            margin: $gutter/2 $gutter*2;
+        }
+    }
+    #cta-bar {
+        margin: $gutter/2 $gutter*2;
+        float: right;
+        text-align: right;
+        color: white;
+        .phone {
+            cursor: default;
+            font-size: 21px;
+            color: $grey;
+            margin-bottom: 10px;
+        }
+    }
+        #socnet {
+            float: right;
+            height: $soc-size;
+            font-size: 14px;
+            text-align: right;
+            h4 {
+                display: inline-block;
+                line-height: $soc-size;
+                vertical-align: top;
+                color: $grey;
+                font-weight: 400;
+            }
+            a {
+                width: $soc-size;
+                height: $soc-size;
+                border-radius: $soc-size/2 +2px;
+                margin: 0 0 0 4px;
+                background: url("../images/socnet-sprite.png") no-repeat $green;
+                &:hover {
+                    background-color: $orange;
+                }
+            }
+            .fb {
+                background-position: 0 -1*$soc-size;
+            }
+            .tw {
+                background-position: -1*$soc-size -1*$soc-size;
+            }
+            .go {
+                background-position: -2*$soc-size -1*$soc-size;
+            }
+            .in {
+                background-position: -3*$soc-size -1*$soc-size;
+            }
+            .em {
+                background-position: -4*$soc-size -1*$soc-size;
+            }
+        }
+        #line {
+            border-top: dotted $ash 2px;
+            margin-top: $gutter/2;
+        }
+    #container {
+        margin: $gutter auto; 
+        width: 90%;
+        text-align: center;
+        max-width: $im-width + $gutter*2 + $cta-width;
+        min-width: $im-width + $gutter*2;
+        padding: $gutter;
+        background: url("../images/glass.png") repeat;
+    }
+    @media screen and (min-width: $im-width + $gutter*3 + $cta-width) {
+        #container {
+           width: 100%;
+        }
+    }
+        #movie {
+            display: inline-block;
+            height: $im-height;
+            width: $im-width;
+        }
+            #movie_video_player {
+                height: $im-height;
+                width: $im-width;
+                background-color: black;
+            }
+        @media screen and (min-width: $im-width + $gutter*3 + $cta-width) {
+            #movie {
+                float: left;
+            }
+        }
+            #cta {
+                display: inline-block;
+                width: $im-width;
+                padding: $gutter $gutter*3 $gutter*2;
+                background-color: white;
+                border-left: solid $orange $line;
+                border-right: solid $orange $line;
+                border-bottom: solid $orange $line;
+                h1 {
+                    color: $orange;
+                    font-weight: 300;
+                    font-size: 36px;
+                    margin-top: $gutter;
+                }
+                p {
+                    margin: $gutter 0;
+                    color: $grey;
+                }
+                .btn {
+                    display: inline-block;
+                    height: $gutter*2;
+                    line-height: $gutter*2;
+                    width: $cta-width - $gutter*4;
+                    margin: $gutter $gutter 0;
+                    font-size: 18px;
+                    border-radius: $corners;
+                    border: solid $green 1px;
+                    text-align: center;
+                    color: white;
+                    box-shadow: 0 2px 5px $grey;
+                    background: url("../images/gel-btn.png") repeat-x $green; 
+                    &:hover {
+                        background-color: $orange;
+                        border-color: $orange;
+                    }
+                }
+            }
+            @media screen and (min-width: $im-width + $gutter*3 + $cta-width) {
+                #cta {
+                    width: $cta-width;
+                    height: $im-height;
+                    padding: $gutter;
+                    border-top: solid $orange $line;
+                    border-right: solid $orange $line;
+                    border-bottom: solid $orange $line;
+                    border-left: solid $orange 0;
+                    text-align: left;
+                }
+            }
+    #footer {
+        clear: both;
+        line-height: $gutter*2 + 10px;
+        height: $gutter*2 + 10px;
+        font-size: 10px;
+        padding: 0 $gutter*2;
+        margin-top: $gutter*6;
+        background-color: white;
+        box-shadow: 0 0 200px white; 
+        font-family: $fonts-sub;
+        color: $grey;
+        border-bottom: dotted $ash 2px;
+        a {
+            float: right;
+            color: $grey;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+@media screen and (max-device-width: 600px) {
+    #cta-bar {
+        .phone {
+            font-size: 34px;
+        }
+    }
+    #socnet {
+        h4 {
+            font-size: 30px;
+        }
+    }
+    #cta {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 34px;
+        }
+        .btn {
+            font-size: 34px;
+        }
+    }
+    #footer {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,242 @@
+/* line 42, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 48, css.scss */
+div {
+  position: relative;
+}
+
+/* line 51, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 56, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 59, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 62, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 65, css.scss */
+body {
+  position: relative;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  background: url("../images/hex.png") repeat #39383a;
+  padding: 15px 30px;
+}
+
+/* line 72, css.scss */
+#page {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: url("../images/bg.png") repeat-x #49484a;
+  box-shadow: 0 0 10px black;
+}
+
+/* line 81, css.scss */
+#header {
+  display: inline-block;
+  width: 100%;
+  height: 210px;
+  padding: 30px 90px;
+  text-align: center;
+}
+
+/* line 88, css.scss */
+#container {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  max-width: 950px;
+  min-width: 640px;
+}
+
+/* line 95, css.scss */
+#movie {
+  display: inline-block;
+  height: 360px;
+  width: 640px;
+  margin: 0 15px 30px;
+  box-shadow: 0 8px 15px #39383a;
+}
+
+/* line 102, css.scss */
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: black;
+}
+
+/* line 107, css.scss */
+#cta {
+  display: inline-block;
+  padding: 30px;
+  width: 640px;
+  background-color: #e2e3e5;
+  box-shadow: 0 8px 15px #39383a;
+  vertical-align: top;
+  margin: 0 15px;
+}
+/* line 115, css.scss */
+#cta .phone {
+  text-align: right;
+  background: url("../images/ph-icon.png") no-repeat left;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  max-width: 190px;
+  cursor: default;
+  font-size: 22px;
+  color: #39383a;
+}
+/* line 126, css.scss */
+#cta .btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  max-width: 250px;
+  margin: 15px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  border: solid #03a538 1px;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 5px #39383a;
+  background: url("../images/gel-btn.png") repeat-x #03a538;
+}
+/* line 140, css.scss */
+#cta .btn:hover {
+  background-color: #ef7d05;
+  border: solid #ef7d05 1px;
+}
+
+/* line 146, css.scss */
+#socnet {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30px;
+}
+/* line 150, css.scss */
+#socnet h4 {
+  display: inline-block;
+  color: #39383a;
+  font-weight: 400;
+  width: 100%;
+}
+/* line 156, css.scss */
+#socnet a {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 5px 4px 0 4px;
+  box-shadow: 2px 2px 5px #39383a;
+  background: url("../images/socnet-sprite.png") no-repeat;
+}
+/* line 164, css.scss */
+#socnet .fb {
+  background-position: 0 -30px;
+  background-color: #3c5a96;
+}
+/* line 167, css.scss */
+#socnet .fb:hover {
+  background-position: 0 0;
+}
+/* line 171, css.scss */
+#socnet .tw {
+  background-position: -30px -30px;
+  background-color: #59adeb;
+}
+/* line 174, css.scss */
+#socnet .tw:hover {
+  background-position: -30px 0;
+}
+/* line 178, css.scss */
+#socnet .go {
+  background-position: -60px -30px;
+  background-color: #d82a20;
+}
+/* line 181, css.scss */
+#socnet .go:hover {
+  background-position: -60px 0;
+}
+/* line 185, css.scss */
+#socnet .in {
+  background-position: -90px -30px;
+  background-color: #1779b3;
+}
+/* line 188, css.scss */
+#socnet .in:hover {
+  background-position: -90px 0;
+}
+/* line 192, css.scss */
+#socnet .em {
+  background-position: -120px -30px;
+  background-color: #999999;
+}
+/* line 195, css.scss */
+#socnet .em:hover {
+  background-position: -120px 0;
+}
+
+/* line 200, css.scss */
+#footer {
+  clear: both;
+  font-size: 11px;
+  margin: 90px;
+  font-family: "Muli", "Century Gothic", ariel, sans-serif;
+  text-align: center;
+}
+/* line 206, css.scss */
+#footer a {
+  color: #e2e3e5;
+}
+/* line 208, css.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1040px) {
+  /* line 214, css.scss */
+  #header {
+    text-align: left;
+  }
+
+  /* line 217, css.scss */
+  #cta {
+    width: 250px;
+    height: 360px;
+    text-align: left;
+  }
+
+  /* line 222, css.scss */
+  #footer {
+    text-align: left;
+  }
+}
+@media screen and (max-device-width: 600px) {
+  /* line 227, css.scss */
+  #footer {
+    font-size: 14px;
+  }
+}

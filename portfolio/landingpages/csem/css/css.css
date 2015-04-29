@@ -1,0 +1,400 @@
+/* line 35, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 41, css.scss */
+div {
+  position: relative;
+}
+
+/* line 44, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 49, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 52, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 59, css.scss */
+body {
+  background: #EEEEEE;
+  position: relative;
+  font-family: "Oswald", "Futura", helvetica, sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 66, css.scss */
+input {
+  font-family: "Oswald", "Futura", helvetica, sans-serif;
+}
+
+/* A centered div within each 100% width section */
+/* line 71, css.scss */
+.column {
+  width: 100%;
+  max-width: 1070px;
+  min-width: 680px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* line 79, css.scss */
+.movie-chapters {
+  box-shadow: 0 0 8px black;
+  margin: 0 auto;
+  width: 640px;
+  list-style: none;
+  border-top: solid grey 1px;
+  border-left: solid grey 1px;
+  border-right: solid grey 1px;
+}
+/* line 87, css.scss */
+.movie-chapters li {
+  height: 50px;
+}
+/* line 89, css.scss */
+.movie-chapters li a {
+  display: block;
+  height: 50px;
+  width: 100%;
+  font-size: 14px;
+  padding: 5px;
+  background-color: white;
+  color: #4475fe;
+  vertical-align: middle;
+  border-bottom: solid grey 1px;
+}
+/* line 99, css.scss */
+.movie-chapters li a p {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: top;
+}
+/* line 104, css.scss */
+.movie-chapters li a b {
+  display: inline-block;
+  color: black;
+  width: 35px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+/* line 114, css.scss */
+.chapter1:hover, .chapter1.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 117, css.scss */
+.chapter1:hover b, .chapter1.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 121, css.scss */
+.chapter2:hover, .chapter2.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 124, css.scss */
+.chapter2:hover b, .chapter2.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 128, css.scss */
+.chapter3:hover, .chapter3.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 131, css.scss */
+.chapter3:hover b, .chapter3.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 135, css.scss */
+.chapter4:hover, .chapter4.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 138, css.scss */
+.chapter4:hover b, .chapter4.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 142, css.scss */
+.chapter5:hover, .chapter5.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 145, css.scss */
+.chapter5:hover b, .chapter5.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 149, css.scss */
+.chapter6:hover, .chapter6.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 152, css.scss */
+.chapter6:hover b, .chapter6.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 156, css.scss */
+.chapter7:hover, .chapter7.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 159, css.scss */
+.chapter7:hover b, .chapter7.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 163, css.scss */
+.chapter8:hover, .chapter8.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 166, css.scss */
+.chapter8:hover b, .chapter8.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 170, css.scss */
+.chapter9:hover, .chapter9.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 173, css.scss */
+.chapter9:hover b, .chapter9.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 177, css.scss */
+.chapter10:hover, .chapter10.chapter-selected {
+  background-color: #1e265b;
+  color: white;
+}
+/* line 180, css.scss */
+.chapter10:hover b, .chapter10.chapter-selected b {
+  color: #fcd506;
+}
+
+/* line 185, css.scss */
+#header {
+  background-color: #1e265b;
+  width: 100%;
+}
+/* line 188, css.scss */
+#header img {
+  float: left;
+  margin: 20px 0;
+}
+
+/* line 193, css.scss */
+#cta-head {
+  margin-top: 28px;
+  float: right;
+  vertical-align: top;
+  text-align: right;
+  padding-top: 20px;
+}
+/* line 199, css.scss */
+#cta-head a {
+  font-weight: bold;
+  font-size: 28px;
+  color: #fff;
+}
+/* line 204, css.scss */
+#cta-head .phone {
+  cursor: default;
+}
+/* line 208, css.scss */
+#cta-head .mail:hover {
+  text-decoration: underline;
+}
+
+/* line 213, css.scss */
+#grad-bar {
+  display: block;
+  text-align: center;
+  background: url(../images/headertile.png) repeat-x #1e265b;
+  width: 100%;
+  padding: 10px 0 0;
+}
+/* line 219, css.scss */
+#grad-bar .btn {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: black;
+  background: url("../images/hi-shad-grad.png") repeat-x #fcd506;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/* line 228, css.scss */
+#grad-bar .btn:hover {
+  background-color: #1e265b;
+  color: white;
+}
+
+/* line 234, css.scss */
+#socnet {
+  width: 100%;
+  text-align: center;
+  float: left;
+  height: 31px;
+  margin-bottom: 10px;
+}
+/* line 240, css.scss */
+#socnet h4 {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 30px;
+  color: white;
+  font-size: 12px;
+}
+/* line 247, css.scss */
+#socnet a {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  border-radius: 17px;
+  margin: 0 0 0 4px;
+  box-shadow: 0 1px 0 #4475fe;
+  background: url("../images/socnet-sprite.png") no-repeat #1e265b;
+}
+/* line 257, css.scss */
+#socnet .fb {
+  background-position: 0 -30px;
+}
+/* line 259, css.scss */
+#socnet .fb:hover {
+  background-position: 0 0;
+  background-color: #3c5a96;
+}
+/* line 264, css.scss */
+#socnet .tw {
+  background-position: -30px -30px;
+}
+/* line 266, css.scss */
+#socnet .tw:hover {
+  background-position: -30px 0;
+  background-color: #59adeb;
+}
+/* line 271, css.scss */
+#socnet .go {
+  background-position: -60px -30px;
+}
+/* line 273, css.scss */
+#socnet .go:hover {
+  background-position: -60px 0;
+  background-color: #d82a20;
+}
+/* line 278, css.scss */
+#socnet .in {
+  background-position: -90px -30px;
+}
+/* line 280, css.scss */
+#socnet .in:hover {
+  background-position: -90px 0;
+  background-color: #1779b3;
+}
+/* line 285, css.scss */
+#socnet .em {
+  background-position: -120px -30px;
+}
+/* line 287, css.scss */
+#socnet .em:hover {
+  background-position: -120px 0;
+  background-color: #999999;
+}
+
+/* line 293, css.scss */
+#wrap {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  max-width: 1070px;
+  min-width: 680px;
+}
+
+/* line 300, css.scss */
+#movie {
+  margin: 0 auto 20px;
+  height: 360px;
+  width: 640px;
+  box-shadow: 0 0 8px black;
+}
+
+/* line 306, css.scss */
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: grey;
+}
+
+/* line 311, css.scss */
+#footer {
+  clear: both;
+  margin: 40px auto 0;
+  font-size: 12px;
+  width: 640px;
+  padding-top: 20px;
+  border-top: solid grey 1px;
+}
+/* line 318, css.scss */
+#footer a {
+  color: grey;
+}
+/* line 320, css.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1090px) {
+  /* line 326, css.scss */
+  #grad-bar {
+    text-align: left;
+  }
+
+  /* line 329, css.scss */
+  #socnet {
+    float: right;
+    width: 330px;
+    text-align: right;
+  }
+
+  /* line 334, css.scss */
+  #movie {
+    float: left;
+  }
+
+  /* line 337, css.scss */
+  .movie-chapters {
+    height: 500px;
+    float: right;
+    width: 330px;
+  }
+
+  /* line 342, css.scss */
+  #footer {
+    margin: 140px 0 0;
+  }
+}

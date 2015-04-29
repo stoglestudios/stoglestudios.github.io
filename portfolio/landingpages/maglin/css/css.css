@@ -1,0 +1,279 @@
+/* line 41, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 47, css.scss */
+div {
+  position: relative;
+}
+
+/* line 50, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 55, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 58, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 61, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 64, css.scss */
+body {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+/* line 69, css.scss */
+#page {
+  width: 100%;
+  max-width: 1150px;
+  min-width: 680px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: url("../images/dots.png") repeat #597b7c;
+}
+
+/* line 77, css.scss */
+#header {
+  display: inline-block;
+  width: 100%;
+  height: 120px;
+  background-color: white;
+}
+/* line 82, css.scss */
+#header img {
+  margin: 10px 40px;
+}
+
+/* line 86, css.scss */
+#cta-bar {
+  margin: 10px 40px;
+  float: right;
+  text-align: right;
+  color: white;
+}
+/* line 91, css.scss */
+#cta-bar .phone {
+  cursor: default;
+  font-size: 21px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* line 98, css.scss */
+#socnet {
+  float: right;
+  height: 30px;
+  font-size: 14px;
+  text-align: right;
+}
+/* line 103, css.scss */
+#socnet h4 {
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: top;
+  color: gray;
+  font-weight: 400;
+}
+/* line 110, css.scss */
+#socnet a {
+  width: 30px;
+  height: 30px;
+  border-radius: 17px;
+  margin: 0 0 0 4px;
+  background: url("../images/socnet-sprite.png") no-repeat #597b7c;
+}
+/* line 116, css.scss */
+#socnet a:hover {
+  background-color: #f38034;
+}
+/* line 120, css.scss */
+#socnet .fb {
+  background-position: 0 -30px;
+}
+/* line 123, css.scss */
+#socnet .tw {
+  background-position: -30px -30px;
+}
+/* line 126, css.scss */
+#socnet .go {
+  background-position: -60px -30px;
+}
+/* line 129, css.scss */
+#socnet .in {
+  background-position: -90px -30px;
+}
+/* line 132, css.scss */
+#socnet .em {
+  background-position: -120px -30px;
+}
+
+/* line 136, css.scss */
+#line {
+  border-top: dotted #e1dfdf 2px;
+  margin-top: 10px;
+}
+
+/* line 140, css.scss */
+#container {
+  margin: 20px auto;
+  width: 90%;
+  text-align: center;
+  max-width: 1030px;
+  min-width: 680px;
+  padding: 20px;
+  background: url("../images/glass.png") repeat;
+}
+
+@media screen and (min-width: 1050px) {
+  /* line 150, css.scss */
+  #container {
+    width: 100%;
+  }
+}
+/* line 154, css.scss */
+#movie {
+  display: inline-block;
+  height: 360px;
+  width: 640px;
+}
+
+/* line 159, css.scss */
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: black;
+}
+
+@media screen and (min-width: 1050px) {
+  /* line 165, css.scss */
+  #movie {
+    float: left;
+  }
+}
+/* line 169, css.scss */
+#cta {
+  display: inline-block;
+  width: 640px;
+  padding: 20px 60px 40px;
+  background-color: white;
+  border-left: solid #f38034 2px;
+  border-right: solid #f38034 2px;
+  border-bottom: solid #f38034 2px;
+}
+/* line 177, css.scss */
+#cta h1 {
+  color: #f38034;
+  font-weight: 300;
+  font-size: 36px;
+  margin-top: 20px;
+}
+/* line 183, css.scss */
+#cta p {
+  margin: 20px 0;
+  color: gray;
+}
+/* line 187, css.scss */
+#cta .btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 270px;
+  margin: 20px 20px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  border: solid #597b7c 1px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px gray;
+  background: url("../images/gel-btn.png") repeat-x #597b7c;
+}
+/* line 200, css.scss */
+#cta .btn:hover {
+  background-color: #f38034;
+  border-color: #f38034;
+}
+
+@media screen and (min-width: 1050px) {
+  /* line 207, css.scss */
+  #cta {
+    width: 350px;
+    height: 360px;
+    padding: 20px;
+    border-top: solid #f38034 2px;
+    border-right: solid #f38034 2px;
+    border-bottom: solid #f38034 2px;
+    border-left: solid #f38034 0;
+    text-align: left;
+  }
+}
+/* line 218, css.scss */
+#footer {
+  clear: both;
+  line-height: 50px;
+  height: 50px;
+  font-size: 10px;
+  padding: 0 40px;
+  margin-top: 120px;
+  background-color: white;
+  box-shadow: 0 0 200px white;
+  font-family: "Muli", "Century Gothic", ariel, sans-serif;
+  color: gray;
+  border-bottom: dotted #e1dfdf 2px;
+}
+/* line 230, css.scss */
+#footer a {
+  float: right;
+  color: gray;
+}
+/* line 233, css.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-device-width: 600px) {
+  /* line 241, css.scss */
+  #cta-bar .phone {
+    font-size: 34px;
+  }
+
+  /* line 246, css.scss */
+  #socnet h4 {
+    font-size: 30px;
+  }
+
+  /* line 251, css.scss */
+  #cta h1 {
+    font-size: 40px;
+  }
+  /* line 254, css.scss */
+  #cta p {
+    font-size: 34px;
+  }
+  /* line 257, css.scss */
+  #cta .btn {
+    font-size: 34px;
+  }
+
+  /* line 261, css.scss */
+  #footer {
+    font-size: 20px;
+  }
+}

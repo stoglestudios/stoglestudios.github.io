@@ -1,0 +1,234 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$im-width: 640px;
+$im-height: 360px;
+$cta-width: 440px;
+$logo-height: 150px;
+$gutter: 26px;
+$head-height: $logo-height + $gutter*2;
+$soc-size: 30px;
+$col-width: $im-width + $cta-width + $gutter;
+
+$yellow: #fcb017;
+$orange: #f59431;
+$grey: #c5c4c2;
+$charcoal: #575a5b;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20; 
+$in-blue: #1779b3;
+$em-neutral: $grey;
+
+$fonts-main: Verdana, Ariel, sans-serif;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative; 
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+body {
+	position: relative;
+	font-family: $fonts-main;
+	width: 100%;
+	background-color: white;
+	margin: 0 auto; 
+}
+input {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+}
+#page-wrap {
+	height: 900px;
+	background-color: white;
+}
+	#header {
+		width: $col-width;
+		height: $head-height;
+        padding: $gutter 0;
+		margin: 0 auto;
+        img {
+            float: left;
+        }
+	}
+        #socnet {
+            float: right;
+            height: $gutter*2;
+            width: $col-width/2;
+            font-size: 14px;
+            text-align: right;
+            margin-top: $logo-height - $soc-size;
+            h4 {
+                display: inline-block;
+                line-height: $soc-size;
+                vertical-align: top;
+                color: $grey;
+                font-weight: 700;
+            }
+            a {
+                display: inline-block;
+                width: $soc-size;
+                height: $soc-size;
+                margin: 0 0 0 5px;
+                background: url("../images/socnet-sprite-lg.png") no-repeat $yellow;
+            }
+            .fb {
+                background-position: 0 -1*$soc-size;
+                &:hover {
+                    background-color: $fb-blue;
+                }
+            }
+                .tw {
+                    background-position: -1*$soc-size -1*$soc-size;
+                    &:hover {
+                        background-color: $tw-blue;
+                    }
+                }
+                .go {
+                    background-position: -2*$soc-size -1*$soc-size;
+                    &:hover {
+                        background-color: $go-red;
+                    }
+                }
+                .in {
+                    background-position: -3*$soc-size -1*$soc-size;
+                    &:hover {
+                        background-color: $in-blue;
+                    }
+                }
+                .em {
+                    background-position: -4*$soc-size -1*$soc-size;
+                    &:hover {
+                        background-color: $em-neutral;
+                    }
+                }
+            }
+	#top-spacer {
+		height: $gutter;
+		background: url("../images/shadow.png") repeat-x;
+	}
+	#im-wrap {
+		width: $col-width;
+		height: $im-height + $gutter*2;
+		background-color: $grey;
+		padding: $gutter 0 $gutter $gutter;
+		margin: 0 auto;
+	}
+        #movie {
+            float: left;
+            width: $im-width;
+            height: $im-height;
+        }
+            #movie_video_player {
+                width: $im-width;
+                height: $im-height;
+                background-color: black;
+            }
+		#cta {
+			float: right;
+			width: $cta-width;
+			height: $im-height;
+			background-color: white;
+            h1 {
+                color: $charcoal;
+                background-color: $grey;
+                height: $gutter*3;
+                line-height: 30px;
+                margin: 0;
+                padding: 0 $gutter;
+            }
+            h2 {
+                color: $charcoal;
+                padding: $gutter/2 $gutter;
+                background-color: $yellow;
+                line-height: 19px;
+                border-top: solid white $gutter/2;
+                font-size: 17px;
+                height: $gutter*3;
+            }
+		}
+		#buttons {
+			padding: $gutter/2 $gutter;
+            h3 {
+                color: $yellow;
+            }
+            b {
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            p {
+                color: $charcoal;
+                font-size: 12px;
+                margin-top: 8px;
+                &:hover {
+                    color: $yellow;
+                }
+            }
+            .ph {
+                display: inline-block;
+                margin-top: 8px;
+                cursor: default;
+                color: $charcoal;
+                font-weight: 700;
+            }
+		}
+			#contact {
+				float: left;
+                width: $cta-width/2 - $gutter;
+			}
+			#find {
+				float: right;
+				background: url("../images/map.png") no-repeat 0 20px;
+				height: 113px;
+				width: 150px;
+				text-align: center;
+                &:hover {
+                    background-position: -150px 20px;
+                }
+			}
+			#req {
+                margin-top: $gutter/2;
+				float: right;
+				color: $yellow;
+				width: 100%;
+				text-align: center;
+				line-height: $gutter*1.4;
+				height: $gutter*1.5;
+                font-size: 18px;
+				background: url("../images/gel-btn.png") repeat-x #333;
+				border: solid $charcoal 1px;
+				cursor: pointer;
+                &:hover {
+                    border: solid $orange 1px;
+                    background-color: $yellow;
+                    color: white;
+                }
+			}
+	#bottom-spacer {
+		height: $gutter*2;
+		background: url("../images/shadow-up.png") repeat-x;
+		background-position: bottom;
+	}
+	#footer {
+		height: $gutter*4;
+		background-color: $charcoal;
+		border-top: solid white $gutter;
+	}

@@ -1,0 +1,291 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$fonts-main: 'Oswald', "Futura", helvetica, sans-serif;
+$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$im-width: 640px;
+$im-height: 360px;
+$logo-height: 65px;
+$gutter: 20px;
+$bleed: 10px;
+$cta-width: 350px;
+$head-height: $gutter + $logo-height;
+$soc-size: 30px;
+$col-width:  $im-width + $cta-width + $gutter*10;
+$corners: 5px;
+
+//-----COLORS--------
+
+$steel: #203049;
+$aluminum: #36455b;
+$l-blue: #6699cc;
+$d-blue: #112233;
+
+$soil: #2a2526;
+$charcoal: #3a3a3a;
+$yellow: #fec12b;
+$dirt: #473708;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20;
+$in-blue: #1779b3;
+$em-neutral: #999999;
+$bg-orange: #fd6720;
+$pn-red: #c51e23;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+body {
+    position: relative;
+    font-family: $fonts-main;
+    font-weight: 400;
+    background-color: white;
+    padding: $gutter/2;
+}
+#page {
+    width: 100%;
+    max-width: $col-width - $gutter*2;
+    min-width: $im-width + $gutter*2;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url("../images/bg_stripes.png") repeat;
+    box-shadow: 0 0 10px black;
+    .txt {
+        text-align: center;
+        padding: $gutter $gutter*2;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+    #header {
+        display: inline-block;
+        width: 100%;
+        height: $head-height;
+        padding: $gutter/2 $gutter;
+        text-align: center;
+        border-bottom: solid $charcoal 2px;
+    }
+    #cta-bar {
+        margin: 0 auto $gutter;
+        width: 94%;
+        max-width: $col-width - $gutter*2;
+        min-width: $im-width + $gutter*2;
+        padding: 0 $gutter;
+        height: $gutter*2;
+        color: white;
+        box-shadow: 0 2px 5px black;
+        border-radius: $corners;
+        text-align: left;
+        background: url("../images/shad-grad.png") repeat-x $yellow;
+        .btn {
+            height: $gutter*2;
+            line-height: $gutter*2;
+            cursor: default;
+            font-size: 18px;
+            color: $soil;
+            border-right: solid white 1px;
+        }
+        .phone {
+            cursor: default;
+            padding: 0 18px 0 0;
+        }
+        .email {
+            padding: 0 18px;
+            &:hover {
+                background-color: $soil;
+                color: white;
+            }
+        }
+    }
+        #socnet {
+            float: right;
+            height: $gutter*2;
+            font-size: 14px;
+            text-align: right;
+            h4 {
+                display: inline-block;
+                line-height: $gutter*2;
+                vertical-align: top;
+                color: white;
+                font-weight: 400;
+            }
+            a {
+                width: $soc-size;
+                height: $soc-size;
+                border-radius: $soc-size/2;
+                margin: 5px 0 0 4px;
+                background: url("../images/socnet-sprite.png") no-repeat $soil;
+            }
+            .fb {
+                background-position: 0 -1*$soc-size;
+                &:hover {
+                    background-position: 0 0;
+                    background-color: $fb-blue;
+                }
+            }
+            .tw {
+                background-position: -1*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -1*$soc-size 0;
+                    background-color: $tw-blue;
+                }
+            }
+            .go {
+                background-position: -2*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -2*$soc-size 0;
+                    background-color: $go-red;
+                }
+            }
+            .in {
+                background-position: -3*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -3*$soc-size 0;
+                    background-color: $in-blue;
+                }
+            }
+            .em {
+                background-position: -4*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -4*$soc-size 0;
+                    background-color: $em-neutral;
+                }
+            }
+        }
+    #container {
+        margin: auto; 
+        width: 90%;
+        text-align: center;
+        max-width: $im-width + $cta-width;
+        min-width: $im-width + $gutter*2;
+    }
+        #movie {
+            display: inline-block;
+            height: $im-height;
+            width: $im-width;
+            box-shadow: 0 0 10px black;
+            z-index: 100;
+        }
+            #movie_video_player {
+                height: $im-height;
+                width: $im-width;
+                background-color: black;
+            }
+            #cta {
+                display: inline-block;
+                padding: $gutter;
+                width: $im-width;
+                box-shadow: 0 0 10px black;
+                background: url("../images/arrow-tips.png") no-repeat top center $yellow;
+                p {
+                    margin: auto;
+                    color: white;
+                    width: 150px;
+                }
+                #formholder {
+                    width: 100%;
+                    margin-top: $gutter*2.5;
+                    font-size: 12pt;
+                    text-align: middle;
+                    input {
+                        border-radius: $corners/2;
+                        display: block;
+                        height: 26px;
+                        width: 100%;
+                        background-color: white;
+                        color: $soil;
+                        border: solid $soil 1px;
+                        margin-bottom: $bleed/2;
+                        padding: 0 $bleed;
+                    }
+                    textarea {
+                        width: 100%;
+                        margin-bottom: $bleed/2;
+                        padding: $bleed/2 $bleed;
+                        border: solid $soil 1px;
+                        color: $soil;
+                    }
+                    .form-thank {
+                        display: none;
+                        color: $soil;
+                        text-align: center;
+                    }
+                    .submit {
+                        display: inline-block;
+                        width: $gutter*5;
+                        height: 26px;
+                        font-size: 14px;
+                        color: white;
+                        background: url("../images/submit.png") $soil;
+                        &:hover {
+                            background-color: white;
+                            color: $soil;
+                        }
+                    }
+                }
+                    #reqText {
+                        width: 100%;
+                        margin: 0 60px;
+                        font-size: 7.5pt;
+                    }
+            }
+    #footer {
+        clear: both;
+        line-height: $gutter*2 + 10px;
+        height: $gutter*2 + 10px;
+        font-size: 10px;
+        padding: 0 $gutter*2;
+        font-family: $fonts-sub;
+        text-align: center;
+        a {
+            color: $d-blue;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+@media screen and (min-width: $col-width) {
+    #container {
+       width: 100%;
+    }
+        #movie {
+            float: left;
+        }
+        #cta {
+            width: $cta-width;
+            height: $im-height;
+        }
+    #footer {
+        margin-top: $gutter*4;
+    }
+}
+@media screen and (max-device-width: 600px) {
+    #footer {
+        font-size: 14px;
+    }
+}

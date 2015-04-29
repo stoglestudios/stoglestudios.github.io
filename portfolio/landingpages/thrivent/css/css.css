@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+div {
+  position: relative; }
+
+img {
+  display: inline-block;
+  border: 0;
+  outline: none; }
+
+a {
+  display: inline-block; }
+
+a img {
+  border: 0; }
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none; }
+
+body {
+  position: relative;
+  font-family: "Muli", "Century Gothic", ariel, sans-serif;
+  font-weight: 400;
+  width: 100%;
+  background: url("../images/stripes2.png") repeat #cccccc; }
+
+#page {
+  width: 1140px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: url("../images/cross.png") repeat #4a5965;
+  box-shadow: 0 0 10px black; }
+
+#header {
+  display: inline-block;
+  width: 1140px;
+  height: 88px;
+  padding: 20px 80px;
+  text-align: left;
+  background-color: white;
+  border-bottom: solid #db1f38 4px;
+  box-shadow: 0 2px 5px #00457c; }
+
+#socnet {
+  float: right;
+  height: 42px;
+  padding: 5px 5px 5px 0;
+  border-top: solid #4a5965 1px;
+  border-right: solid #4a5965 1px;
+  border-left: solid #4a5965 1px;
+  margin: 24px 0;
+  border-radius: 5px 5px 0 0;
+  font-size: 14px;
+  text-align: right; }
+  #socnet a {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 0 0 0 5px;
+    background: url("../images/socnet-sprite.png") no-repeat; }
+  #socnet .fb {
+    background-position: 0 -30px;
+    background-color: #3c5a96; }
+    #socnet .fb:hover {
+      background-position: 0 0; }
+  #socnet .tw {
+    background-position: -30px -30px;
+    background-color: #59adeb; }
+    #socnet .tw:hover {
+      background-position: -30px 0; }
+  #socnet .go {
+    background-position: -60px -30px;
+    background-color: #d82a20; }
+    #socnet .go:hover {
+      background-position: -60px 0; }
+  #socnet .in {
+    background-position: -90px -30px;
+    background-color: #1779b3; }
+    #socnet .in:hover {
+      background-position: -90px 0; }
+  #socnet .em {
+    background-position: -120px -30px;
+    background-color: #334455; }
+    #socnet .em:hover {
+      background-position: -120px 0; }
+
+#container {
+  margin: 20px auto;
+  width: 980px;
+  height: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px black; }
+
+#movie {
+  float: left;
+  height: 360px;
+  width: 640px; }
+
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: black; }
+
+#cta {
+  float: right;
+  width: 300px;
+  height: 360px;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  border-top: solid #4a5965 1px;
+  border-right: solid #4a5965 1px; }
+  #cta h1 {
+    color: #db1f38; }
+  #cta p {
+    margin: 10px 0;
+    color: #4a5965; }
+  #cta .phone {
+    text-align: left;
+    background: url("../images/ph-icon.png") no-repeat left;
+    height: 40px;
+    line-height: 40px;
+    cursor: default;
+    font-size: 21px;
+    padding-left: 18px;
+    color: #db1f38;
+    margin: 0 0 0 20px; }
+  #cta .btn {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 260px;
+    margin: 6.66667px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid #db1f38 1px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 1px 3px black;
+    background: url("../images/gel-btn.png") repeat-x #db1f38; }
+    #cta .btn:hover {
+      background-color: #4a5965;
+      border: solid #4a5965 1px; }
+  #cta img {
+    display: block;
+    margin: 20px auto; }
+
+#footer {
+  line-height: 50px;
+  height: 50px;
+  font-size: 10px;
+  padding: 0 40px;
+  margin-top: 120px;
+  background-color: white;
+  box-shadow: 0 0 10px #00457c;
+  text-align: center; }
+  #footer a {
+    color: grey; }
+    #footer a:hover {
+      text-decoration: underline; }

@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+div {
+  position: relative; }
+
+img {
+  display: inline-block;
+  border: 0;
+  outline: none; }
+
+a img {
+  border: 0; }
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none; }
+
+body {
+  position: relative;
+  font-family: Verdana, Ariel, sans-serif;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto; }
+
+input {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+#page-wrap {
+  height: 900px;
+  background-color: white; }
+
+#header {
+  width: 1106px;
+  height: 202px;
+  padding: 26px 0;
+  margin: 0 auto; }
+  #header img {
+    float: left; }
+
+#socnet {
+  float: right;
+  height: 52px;
+  width: 553px;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 120px; }
+  #socnet h4 {
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: top;
+    color: #c5c4c2;
+    font-weight: 700; }
+  #socnet a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 5px;
+    background: url("../images/socnet-sprite-lg.png") no-repeat #fcb017; }
+  #socnet .fb {
+    background-position: 0 -30px; }
+    #socnet .fb:hover {
+      background-color: #3c5a96; }
+  #socnet .tw {
+    background-position: -30px -30px; }
+    #socnet .tw:hover {
+      background-color: #59adeb; }
+  #socnet .go {
+    background-position: -60px -30px; }
+    #socnet .go:hover {
+      background-color: #d82a20; }
+  #socnet .in {
+    background-position: -90px -30px; }
+    #socnet .in:hover {
+      background-color: #1779b3; }
+  #socnet .em {
+    background-position: -120px -30px; }
+    #socnet .em:hover {
+      background-color: #c5c4c2; }
+
+#top-spacer {
+  height: 26px;
+  background: url("../images/shadow.png") repeat-x; }
+
+#im-wrap {
+  width: 1106px;
+  height: 412px;
+  background-color: #c5c4c2;
+  padding: 26px 0 26px 26px;
+  margin: 0 auto; }
+
+#movie {
+  float: left;
+  width: 640px;
+  height: 360px; }
+
+#movie_video_player {
+  width: 640px;
+  height: 360px;
+  background-color: black; }
+
+#cta {
+  float: right;
+  width: 440px;
+  height: 360px;
+  background-color: white; }
+  #cta h1 {
+    color: #575a5b;
+    background-color: #c5c4c2;
+    height: 78px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 26px; }
+  #cta h2 {
+    color: #575a5b;
+    padding: 13px 26px;
+    background-color: #fcb017;
+    line-height: 19px;
+    border-top: solid white 13px;
+    font-size: 17px;
+    height: 78px; }
+
+#buttons {
+  padding: 13px 26px; }
+  #buttons h3 {
+    color: #fcb017; }
+  #buttons b {
+    display: inline-block;
+    margin-bottom: 5px; }
+  #buttons p {
+    color: #575a5b;
+    font-size: 12px;
+    margin-top: 8px; }
+    #buttons p:hover {
+      color: #fcb017; }
+  #buttons .ph {
+    display: inline-block;
+    margin-top: 8px;
+    cursor: default;
+    color: #575a5b;
+    font-weight: 700; }
+
+#contact {
+  float: left;
+  width: 194px; }
+
+#find {
+  float: right;
+  background: url("../images/map.png") no-repeat 0 20px;
+  height: 113px;
+  width: 150px;
+  text-align: center; }
+  #find:hover {
+    background-position: -150px 20px; }
+
+#req {
+  margin-top: 13px;
+  float: right;
+  color: #fcb017;
+  width: 100%;
+  text-align: center;
+  line-height: 36.4px;
+  height: 39px;
+  font-size: 18px;
+  background: url("../images/gel-btn.png") repeat-x #333333;
+  border: solid #575a5b 1px;
+  cursor: pointer; }
+  #req:hover {
+    border: solid #f59431 1px;
+    background-color: #fcb017;
+    color: white; }
+
+#bottom-spacer {
+  height: 52px;
+  background: url("../images/shadow-up.png") repeat-x;
+  background-position: bottom; }
+
+#footer {
+  height: 104px;
+  background-color: #575a5b;
+  border-top: solid white 26px; }

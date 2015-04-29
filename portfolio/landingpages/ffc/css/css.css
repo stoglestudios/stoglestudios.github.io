@@ -1,0 +1,364 @@
+/* line 36, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 42, css.scss */
+div {
+  position: relative;
+}
+
+/* line 45, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 50, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 53, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 56, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 59, css.scss */
+body {
+  position: relative;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+/* line 65, css.scss */
+.column {
+  width: 100%;
+  max-width: 960px;
+  min-width: 640px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 72, css.scss */
+.column-boxes {
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* line 76, css.scss */
+#superhead {
+  display: inline-block;
+  height: 50px;
+  font-size: 16px;
+  background: url("../images/superhead-bg.png") repeat-x bottom #186792;
+  border-bottom: solid #c9cccd 5px;
+  color: white;
+}
+/* line 83, css.scss */
+#superhead .phone {
+  line-height: 50px;
+  cursor: default;
+  color: white;
+}
+
+/* line 89, css.scss */
+#socnet {
+  float: right;
+  height: 40px;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 10px;
+}
+/* line 95, css.scss */
+#socnet h4 {
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: top;
+  color: white;
+  font-weight: 400;
+}
+/* line 102, css.scss */
+#socnet a {
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 10px;
+  border-radius: 5px;
+  background: url("../images/socnet-sprite.png") no-repeat;
+}
+/* line 109, css.scss */
+#socnet .fb {
+  background-position: 0 0;
+}
+/* line 112, css.scss */
+#socnet .fb:hover {
+  background-position: 0 -30px;
+  background-color: #3c5a96;
+  box-shadow: -1px -1px 0 white;
+}
+/* line 118, css.scss */
+#socnet .tw {
+  background-position: -30px 0;
+}
+/* line 120, css.scss */
+#socnet .tw:hover {
+  background-position: -30px -30px;
+  background-color: #59adeb;
+  box-shadow: -1px -1px 0 white;
+}
+/* line 126, css.scss */
+#socnet .go {
+  background-position: -60px 0;
+}
+/* line 128, css.scss */
+#socnet .go:hover {
+  background-position: -60px -30px;
+  background-color: #d82a20;
+  box-shadow: -1px -1px 0 white;
+}
+/* line 134, css.scss */
+#socnet .in {
+  background-position: -90px 0;
+}
+/* line 136, css.scss */
+#socnet .in:hover {
+  background-position: -90px -30px;
+  background-color: #1779b3;
+  box-shadow: -1px -1px 0 white;
+}
+/* line 142, css.scss */
+#socnet .em {
+  background-position: -120px 0;
+}
+/* line 144, css.scss */
+#socnet .em:hover {
+  background-position: -120px -30px;
+  background-color: #999999;
+  box-shadow: -1px -1px 0 white;
+}
+
+/* line 151, css.scss */
+#header {
+  display: inline-block;
+  height: 187px;
+  padding: 20px;
+  background-color: white;
+}
+/* line 156, css.scss */
+#header img {
+  margin-right: 20px;
+}
+/* line 159, css.scss */
+#header .column .head-txt {
+  margin-top: 40px;
+  font-size: 28px;
+  font-family: "Tinos", serif;
+  float: right;
+  width: 78%;
+  color: #228434;
+}
+
+/* line 168, css.scss */
+#subhead {
+  background: url("../images/subhead-bg.png") repeat-x bottom #228434;
+  height: 70px;
+  color: white;
+  line-height: 70px;
+  font-size: 16px;
+}
+/* line 174, css.scss */
+#subhead a {
+  color: white;
+}
+/* line 176, css.scss */
+#subhead a:hover {
+  text-decoration: underline;
+}
+
+/* line 181, css.scss */
+#container {
+  background: url("../images/body-bg.png") repeat-x top #767676;
+}
+/* line 183, css.scss */
+#container .column {
+  width: 640px;
+}
+
+/* line 187, css.scss */
+#movie {
+  display: inline-block;
+  height: 360px;
+  width: 640px;
+}
+
+/* line 192, css.scss */
+#movie_video_player {
+  height: 360px;
+  width: 640px;
+  background-color: black;
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 198, css.scss */
+  #container .column {
+    width: 960px;
+  }
+
+  /* line 201, css.scss */
+  #movie {
+    float: left;
+  }
+}
+/* line 205, css.scss */
+#cta {
+  display: inline-block;
+  width: 640px;
+  background: url("../images/cta-bg.png") repeat-x top #767676;
+}
+/* line 209, css.scss */
+#cta .squares {
+  display: inline-block;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: url("../images/squares.png") no-repeat bottom right;
+}
+/* line 216, css.scss */
+#cta .squares span {
+  text-align: center;
+  background-color: grey;
+}
+/* line 221, css.scss */
+#cta h2 {
+  text-align: left;
+  font-family: "Tinos", serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+/* line 228, css.scss */
+#cta p {
+  text-align: left;
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 32px;
+}
+/* line 234, css.scss */
+#cta .btn {
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  width: 240px;
+  font-size: 18px;
+  border-radius: 35px;
+  border-top: solid #c9cccd 1px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px black;
+  text-shadow: 0 2px 2px black;
+  background: url("../images/btn-bg.png") repeat-x #228434;
+}
+/* line 247, css.scss */
+#cta .btn:hover {
+  background: url("../images/btn-over-bg.png") repeat-x #697f9a;
+  color: #186792;
+  text-shadow: 0 2px 2px white;
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 255, css.scss */
+  #cta {
+    width: 320px;
+    height: 360px;
+  }
+}
+/* line 260, css.scss */
+.shadow {
+  clear: both;
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  margin-bottom: 60px;
+  background: url("../images/shadow.png") no-repeat top left;
+}
+
+/* line 268, css.scss */
+#left-shad {
+  background-position: top left;
+}
+
+/* line 271, css.scss */
+#right-shad {
+  background-position: top right;
+}
+
+/* line 274, css.scss */
+#footer {
+  line-height: 50px;
+  height: 50px;
+  font-size: 10px;
+  background-color: white;
+  font-family: "Muli", "Century Gothic", ariel, sans-serif;
+  box-shadow: 0 -5px 5px #434242;
+}
+/* line 281, css.scss */
+#footer a {
+  color: #186792;
+}
+/* line 283, css.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-device-width: 600px) {
+  /* line 290, css.scss */
+  #superhead {
+    font-size: 34px;
+  }
+
+  /* line 294, css.scss */
+  #socnet h4 {
+    font-size: 30px;
+  }
+
+  /* line 298, css.scss */
+  #header .column .head-txt {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+
+  /* line 302, css.scss */
+  #subhead {
+    font-size: 34px;
+  }
+
+  /* line 306, css.scss */
+  #cta h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  /* line 310, css.scss */
+  #cta p {
+    font-size: 34px;
+  }
+  /* line 313, css.scss */
+  #cta .btn {
+    font-size: 34px;
+  }
+
+  /* line 317, css.scss */
+  #footer {
+    font-size: 28px;
+  }
+}

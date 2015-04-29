@@ -1,0 +1,250 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$fonts-main: 'Oswald', "Futura", helvetica, sans-serif;
+$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$fonts-head: 'Gruppo', sans-serif;
+$im-width: 640px;
+$im-height: 360px;
+$logo-height: 80px;
+$gutter: 20px;
+$bleed: 10px;
+$cta-width: 250px;
+$head-height: $gutter + $logo-height;
+$soc-size: 30px;
+$col-width:  $im-width + $cta-width + $gutter;
+$corners: 5px;
+
+//-----COLORS--------
+$purple: #99509c;
+
+$fb-blue: #3c5a96;
+$tw-blue: #59adeb;
+$go-red: #d82a20;
+$in-blue: #1779b3;
+$em-neutral: #a2998c;
+$bg-orange: #fd6720;
+$pn-red: #c51e23;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+body {
+    position: relative;
+    font-family: $fonts-main;
+    font-size: 18px;
+    font-weight: 400;
+}
+.column {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $col-width + $gutter*2;
+    min-width: $im-width + $gutter*2;
+}
+#page {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("../images/logo-bg.png") no-repeat top center white;
+}
+    #header {
+        display: inline-block;
+        width: 100%;
+        height: $head-height;
+        margin-bottom: 2px;
+    }
+        #head-box {
+            text-align: right;
+            color: $em-neutral;
+            height: $head-height;
+            font-family: $fonts-head;
+            font-size: 18px;
+            background: url("../images/head-bg.png") no-repeat bottom right;
+            p {
+                padding-top: 5px;
+            }
+        }
+            #logo-box {
+                width: 180px;
+                float: left;
+                text-align: left;
+                padding: $gutter/2 $gutter;
+                background: url("../images/logo-grad-bg.png") repeat-y left;
+            }
+    #sub-head {
+        width: 100%;
+        height: 52px;
+        background: url("../images/sub-bg.png") repeat-x;
+    }
+    #container {
+        width: 100%;
+        text-align: center;
+        padding: 0 $gutter $gutter;
+        background: url("../images/body-bg.png") repeat-x black;
+    }
+        #body-box {
+            background: url("../images/body-grad.png") repeat-x #4c4c4c;
+            padding-bottom: $gutter;
+        }
+    @media screen and (min-width: $im-width + $gutter*5 + $cta-width) {
+        #container {
+            width: 100%;
+            height: $im-height + $gutter*2;
+        }
+        #body-box {
+            height: $im-height + $gutter;
+            padding: 0 $gutter;
+        }
+    }
+        #movie {
+            display: inline-block;
+            height: $im-height;
+            width: $im-width;
+        }
+            #movie_video_player {
+                height: $im-height;
+                width: $im-width;
+                background-color: black;
+            }
+        @media screen and (min-width: $im-width + $gutter*5 + $cta-width) {
+            #movie {
+                float: left;
+            }
+        }
+            #cta {
+                padding: $gutter 0 0;
+                margin: 0 auto;
+                width: $im-width;
+                color: white;
+                .btn {
+                    height: $gutter*2;
+                    line-height: $gutter*2;
+                    width: $cta-width;
+                    font-size: 18px;
+                    border-radius: $corners;
+                    text-align: center;
+                    color: white;
+                    box-shadow: 0 2px 5px black;
+                    margin: $gutter 0;
+                    background: url("../images/gel-btn.png") repeat-x $purple; 
+                    &:hover {
+                        background-color: $em-neutral;
+                        color: black;
+                    }
+                }
+                #socnet {
+                    height: $soc-size;
+                    a {
+                        width: $soc-size;
+                        height: $soc-size;
+                        border-radius: $soc-size/2;
+                        margin: 0 5px 0 0;
+                        background: url("../images/socnet-sprite.png") no-repeat;
+                    }
+                    .fb {
+                        background-position: 0 0;
+                        &:hover {
+                            background-position: 0 -1*$soc-size;
+                            background-color: $fb-blue;
+                        }
+                    }
+                    .tw {
+                        background-position: -1*$soc-size 0;
+                        &:hover {
+                            background-position: -1*$soc-size -1*$soc-size;
+                            background-color: $tw-blue;
+                        }
+                    }
+                    .go {
+                        background-position: -2*$soc-size 0;
+                        &:hover {
+                            background-position: -2*$soc-size -1*$soc-size;
+                            background-color: $go-red;
+                        }
+                    }
+                    .in {
+                        background-position: -3*$soc-size 0;
+                        &:hover {
+                            background-position: -3*$soc-size -1*$soc-size;
+                            background-color: $in-blue;
+                        }
+                    }
+                    .em {
+                        background-position: -4*$soc-size 0;
+                        &:hover {
+                            background-position: -4*$soc-size -1*$soc-size;
+                            background-color: $em-neutral;
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: $im-width + $gutter*5 + $cta-width) {
+                #cta {
+                    padding: $gutter*3 0 0;
+                    float: right;
+                    width: $cta-width;
+                    height: $im-height;
+                    text-align: left;
+                    .btn {
+                        margin: $gutter*3 0;
+                    }
+                }
+            }
+    #footer {
+        clear: both;
+        width: 100%;
+        text-align: center;
+        height: $gutter*10;
+        padding-top: $gutter*9;
+        font-size: 10px;
+        font-family: $fonts-sub;
+        background: url("../images/shad-grad.png") repeat-x;
+        color: grey;
+        a {
+            color: grey;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+@media screen and (max-device-width: 600px) {
+    #cta {
+        p {
+            font-size: 34px;
+        }
+        .btn {
+            font-size: 34px;
+        }
+    }
+    #head-box {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    #footer {
+        font-size: 20px;
+    }
+}
