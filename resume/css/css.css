@@ -1,0 +1,377 @@
+/* line 29, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 35, css.scss */
+div {
+  position: relative;
+}
+
+/* line 38, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 43, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 46, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 49, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 52, css.scss */
+ul {
+  list-style: none;
+}
+
+/* line 55, css.scss */
+h1 {
+  font-family: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 62, css.scss */
+h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #5a9245;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* line 69, css.scss */
+body {
+  position: relative;
+  width: 100%;
+  background: url("../images/cross.png") #e5eec7;
+  font-family: "Quicksand", "Century Gothic", sans-serif;
+}
+
+/* line 75, css.scss */
+#resume {
+  max-width: 1000px;
+  width: 94%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 5px #436337;
+  padding-bottom: 25px;
+}
+
+/* line 83, css.scss */
+header {
+  text-align: center;
+  background: linear-gradient(#5a9245, #436337) #5a9245;
+  color: white;
+}
+/* line 87, css.scss */
+header li {
+  display: inline-block;
+  font-size: .8em;
+}
+/* line 90, css.scss */
+header li a {
+  color: white;
+}
+/* line 93, css.scss */
+header li .btn {
+  color: white;
+  margin: 0 10px;
+}
+/* line 96, css.scss */
+header li .btn:hover {
+  text-decoration: underline;
+}
+/* line 100, css.scss */
+header li .phone {
+  cursor: default;
+}
+
+/* line 105, css.scss */
+#gaius {
+  padding: 25px 0 10px;
+  background: url("../images/gaius.png") no-repeat 0 -30px;
+  background-size: 700px;
+}
+
+/* line 110, css.scss */
+content {
+  display: block;
+  padding-top: 25px;
+}
+
+/* line 114, css.scss */
+footer {
+  clear: both;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  padding: 10px 25px;
+  margin: 0 25px;
+  color: white;
+  text-align: center;
+  background-color: #5c5948;
+}
+
+/* line 125, css.scss */
+#qual-sum {
+  padding: 0 25px 10px;
+}
+/* line 127, css.scss */
+#qual-sum ul {
+  margin-left: 3%;
+}
+/* line 129, css.scss */
+#qual-sum ul li {
+  margin-bottom: 10px;
+}
+/* line 131, css.scss */
+#qual-sum ul li b {
+  display: inline-block;
+  width: 25%;
+  padding-right: 10px;
+  vertical-align: text-top;
+}
+/* line 137, css.scss */
+#qual-sum ul li em {
+  display: inline-block;
+  color: #5a9245;
+  width: 15%;
+  vertical-align: text-top;
+  padding-right: 10px;
+  text-align: right;
+}
+/* line 145, css.scss */
+#qual-sum ul li p {
+  display: inline-block;
+  width: 60%;
+  vertical-align: text-top;
+}
+
+/* line 153, css.scss */
+.sections {
+  padding: 0 25px;
+  border-top: solid #5c5948 1px;
+}
+/* line 156, css.scss */
+.sections h2 {
+  margin-top: 25px;
+}
+/* line 159, css.scss */
+.sections li {
+  border-top: solid #5a9245 1px;
+  margin-bottom: 10px;
+}
+/* line 162, css.scss */
+.sections li b {
+  display: inline-block;
+  text-align: center;
+  width: 18%;
+  padding: 10px 0;
+  background-color: #5a9245;
+  color: white;
+  vertical-align: text-top;
+}
+/* line 171, css.scss */
+.sections li p {
+  display: inline-block;
+  width: 82%;
+  padding: 10px 0 0 25px;
+  vertical-align: text-top;
+}
+/* line 176, css.scss */
+.sections li p em {
+  font-weight: 600;
+  font-style: normal;
+}
+/* line 180, css.scss */
+.sections li p i {
+  color: #5a9245;
+}
+
+/* line 186, css.scss */
+.left {
+  float: left;
+  width: 50%;
+  border-right: solid #5c5948 1px;
+}
+
+/* line 191, css.scss */
+.right {
+  float: right;
+  width: 50%;
+}
+/* line 194, css.scss */
+.right li {
+  border-top: solid #301f3a 1px;
+}
+/* line 196, css.scss */
+.right li b {
+  background-color: #301f3a;
+}
+
+/* line 203, css.scss */
+#skills li {
+  border: none;
+}
+/* line 206, css.scss */
+#skills h3 {
+  line-height: 16px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 50%;
+}
+/* line 212, css.scss */
+#skills .holder {
+  display: inline-block;
+  height: 16px;
+  vertical-align: text-top;
+  width: 50%;
+  border-radius: 8px;
+  background: linear-gradient(#999966, #5c5948);
+}
+/* line 220, css.scss */
+#skills .bar {
+  display: block;
+  height: 12px;
+  margin: 2px;
+  border-radius: 6px;
+  background: linear-gradient(#e5eec7, #5a9245);
+}
+/* line 227, css.scss */
+#skills #ps {
+  padding-right: 0%;
+}
+/* line 230, css.scss */
+#skills #ai {
+  padding-right: 8%;
+}
+/* line 233, css.scss */
+#skills #ae {
+  padding-right: 4%;
+}
+/* line 236, css.scss */
+#skills #vid {
+  padding-right: 6%;
+}
+/* line 239, css.scss */
+#skills #in {
+  padding-right: 22%;
+}
+/* line 242, css.scss */
+#skills #office {
+  padding-right: 10%;
+}
+/* line 245, css.scss */
+#skills #win {
+  padding-right: 5%;
+}
+/* line 248, css.scss */
+#skills #osx {
+  padding-right: 0%;
+}
+/* line 251, css.scss */
+#skills #css {
+  padding-right: 4%;
+}
+/* line 254, css.scss */
+#skills #jq {
+  padding-right: 6%;
+}
+/* line 257, css.scss */
+#skills #js {
+  padding-right: 8%;
+}
+/* line 260, css.scss */
+#skills #as {
+  padding-right: 2%;
+}
+/* line 263, css.scss */
+#skills #git {
+  padding-right: 10%;
+}
+/* line 266, css.scss */
+#skills #php {
+  padding-right: 22%;
+}
+/* line 269, css.scss */
+#skills #sql {
+  padding-right: 24%;
+}
+/* line 272, css.scss */
+#skills #ls {
+  padding-right: 4%;
+}
+/* line 275, css.scss */
+#skills #tm {
+  padding-right: 2%;
+}
+/* line 278, css.scss */
+#skills #atd {
+  padding-right: 4%;
+}
+/* line 281, css.scss */
+#skills #prob {
+  padding-right: 0%;
+}
+
+/* line 285, css.scss */
+#volunteer {
+  padding-bottom: 25px;
+}
+
+/* line 289, css.scss */
+.group:after {
+  content: “”;
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 800px) {
+  /* line 297, css.scss */
+  #qual-sum ul li {
+    margin-bottom: 25px;
+  }
+  /* line 299, css.scss */
+  #qual-sum ul li p {
+    width: 100%;
+    padding-top: 10px;
+  }
+  /* line 303, css.scss */
+  #qual-sum ul li b {
+    width: 50%;
+  }
+  /* line 306, css.scss */
+  #qual-sum ul li em {
+    width: 50%;
+  }
+
+  /* line 310, css.scss */
+  .left, .right {
+    float: none;
+    width: 100%;
+    border-right-width: 0;
+  }
+}
+@media (max-width: 640px) {
+  /* line 318, css.scss */
+  body {
+    font-size: .6em;
+  }
+}

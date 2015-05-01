@@ -1,0 +1,321 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$body-font: "Quicksand", 'Century Gothic', sans-serif;
+$title-font: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
+$gutter: 25px; 
+$bleed: 10px;
+$corners: 5px;
+$head-height: 100px;
+$soc-size: 28px;
+$pg-width: 1000px;
+$pg-height: 1100px;
+$fr-width: $pg-width - $gutter*2;
+$fr-height: $pg-height - $gutter*2;
+
+$main-color: #5A9245;
+$alt-color: #301F3A;
+$accent-color: #E5EEC7;
+$neutral-color: #5C5948;
+$dark-color: #436337;
+$in-blue: #1779b3;
+
+$font-head: 24px;
+
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+ul {
+    list-style: none;
+}
+h1 {
+    font-family: $title-font;
+    font-weight: 100;
+    font-size: 2em;
+    line-height: 30px;
+    margin-bottom: $bleed;
+}
+h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $main-color;
+    text-align: left;
+    margin-bottom: $bleed;
+}
+body {
+    position: relative;
+    width: 100%;
+    background: url("../images/cross.png") $accent-color;
+    font-family: $body-font;
+}
+#resume {
+    max-width: $pg-width;
+    width: 94%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 5px $dark-color;
+    padding-bottom: $gutter;
+}
+header {
+    text-align: center;
+    background: linear-gradient($main-color, $dark-color) $main-color;
+    color: white;
+    li {
+        display: inline-block;
+        font-size: .8em;
+        a {
+            color: white;
+        }
+        .btn {
+            color: white;
+            margin: 0 $bleed;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .phone {
+            cursor: default;
+        }
+    }
+}
+    #gaius {
+        padding: $gutter 0 $bleed;
+        background: url("../images/gaius.png") no-repeat 0 -30px;
+        background-size: 700px;
+    }
+content {
+    display: block;
+    padding-top: $gutter;
+}
+footer {
+    clear: both;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+    padding: $bleed $gutter;
+    margin: 0 $gutter;
+    color: white;
+    text-align: center;
+    background-color: $neutral-color;
+}
+#qual-sum {
+    padding: 0 $gutter $bleed;
+    ul {
+        margin-left: 3%;
+        li {
+            margin-bottom: $bleed;
+            b {
+                display: inline-block;
+                width: 25%;
+                padding-right: 10px;
+                vertical-align: text-top;
+            }
+            em {
+                display: inline-block;
+                color: $main-color;
+                width: 15%;
+                vertical-align: text-top;
+                padding-right: 10px;
+                text-align: right;
+            }
+            p {
+                display: inline-block;
+                width: 60%;
+                vertical-align: text-top;
+            }
+        }
+    }
+}
+.sections {
+    padding: 0 $gutter;
+    border-top: solid $neutral-color 1px;
+    h2 {
+        margin-top: $gutter;
+    }
+    li {
+        border-top: solid $main-color 1px;
+        margin-bottom: $bleed;
+        b {
+            display: inline-block;
+            text-align: center;
+            width: 18%;
+            padding: $bleed 0;
+            background-color: $main-color;
+            color: white;
+            vertical-align: text-top;
+        }
+        p {
+            display: inline-block;
+            width: 82%;
+            padding: $bleed 0 0 $gutter;
+            vertical-align: text-top;
+            em {
+                font-weight: 600;
+                font-style: normal;
+            }
+            i {
+                color: $main-color;
+            }
+        }
+    }
+}
+.left {
+    float: left;
+    width: 50%;
+    border-right: solid $neutral-color 1px;
+}
+.right {
+    float: right;
+    width: 50%;
+    li {
+        border-top: solid $alt-color 1px;
+        b {
+            background-color: $alt-color;
+
+        }
+    }
+}
+#skills {
+    li {
+        border: none;
+    }
+    h3 {
+        line-height: 16px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 50%;
+    }
+    .holder {
+        display: inline-block;
+        height: 16px;
+        vertical-align: text-top;
+        width: 50%;
+        border-radius: 8px;
+        background: linear-gradient(#996, $neutral-color);
+    }
+    .bar {
+        display: block;
+        height: 12px;
+        margin: 2px;
+        border-radius: 6px;
+        background: linear-gradient($accent-color, $main-color);
+    }
+    #ps {
+        padding-right: 0%;
+    }
+    #ai {
+        padding-right: 8%;
+    }
+    #ae {
+        padding-right: 4%;
+    }
+    #vid {
+        padding-right: 6%;
+    }
+    #in {
+        padding-right: 22%;
+    }
+    #office {
+        padding-right: 10%;
+    }
+    #win {
+        padding-right: 5%;
+    }
+    #osx {
+        padding-right: 0%;
+    }
+    #css {
+        padding-right: 4%;
+    }
+    #jq {
+        padding-right: 6%;
+    }
+    #js {
+        padding-right: 8%;
+    }
+    #as {
+        padding-right: 2%;
+    }
+    #git {
+        padding-right: 10%;
+    }
+    #php {
+        padding-right: 22%;
+    }
+    #sql {
+        padding-right: 24%;
+    }
+    #ls {
+        padding-right: 4%;
+    }
+    #tm {
+        padding-right: 2%;
+    }
+    #atd {
+        padding-right: 4%;
+    }
+    #prob {
+        padding-right: 0%;
+    }
+}
+#volunteer {
+    padding-bottom: $gutter;
+}
+
+.group:after {
+	content: “”;
+	display: table;
+	clear: both;
+}
+
+
+@media (max-width: 800px) {
+    #qual-sum ul li {
+        margin-bottom: $gutter;
+        p {
+            width: 100%;
+            padding-top: $bleed;
+        }
+        b {
+            width: 50%;
+        }
+        em {
+            width: 50%;
+        }
+    }
+    .left, .right {
+        float: none;
+        width: 100%;
+        border-right-width: 0;
+    }
+}
+@media (max-width: 640px) {
+
+    body {
+        font-size: .6em;
+    }
+}
