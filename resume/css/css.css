@@ -352,44 +352,49 @@ footer {
   }
 
   /* line 302, css.scss */
+  h1 {
+    font-size: 2.6em;
+  }
+
+  /* line 305, css.scss */
   #qual-sum {
     padding: 0 10px 10px;
   }
 
-  /* line 305, css.scss */
+  /* line 308, css.scss */
   .sections {
     padding: 0 10px;
   }
 
-  /* line 308, css.scss */
+  /* line 311, css.scss */
   #resume {
     padding-bottom: 10px;
   }
 
-  /* line 311, css.scss */
+  /* line 314, css.scss */
   footer {
     margin: 0 10px;
   }
 
-  /* line 314, css.scss */
+  /* line 317, css.scss */
   #qual-sum ul li {
     margin-bottom: 25px;
   }
-  /* line 316, css.scss */
+  /* line 319, css.scss */
   #qual-sum ul li p {
     width: 100%;
     padding-top: 10px;
   }
-  /* line 320, css.scss */
+  /* line 323, css.scss */
   #qual-sum ul li b {
     width: 50%;
   }
-  /* line 323, css.scss */
+  /* line 326, css.scss */
   #qual-sum ul li em {
     width: 50%;
   }
 
-  /* line 327, css.scss */
+  /* line 330, css.scss */
   .left, .right {
     float: none;
     width: 100%;
@@ -397,13 +402,8 @@ footer {
   }
 }
 @media (max-width: 640px) {
-  /* line 335, css.scss */
+  /* line 338, css.scss */
   body {
     font-size: .8em;
-  }
-
-  /* line 338, css.scss */
-  h1 {
-    font-size: 3em;
   }
 }
