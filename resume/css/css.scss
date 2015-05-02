@@ -179,6 +179,7 @@ footer {
             }
             i {
                 color: $main-color;
+                font-weight: 600;
             }
         }
     }
@@ -204,24 +205,25 @@ footer {
         border: none;
     }
     h3 {
-        line-height: 16px;
         display: inline-block;
         vertical-align: text-top;
         width: 50%;
+        font-size: 1em;
     }
     .holder {
         display: inline-block;
-        height: 16px;
+        height: 12px;
+        margin: 2px 0;
         vertical-align: text-top;
         width: 50%;
-        border-radius: 8px;
+        border-radius: 6px;
         background: linear-gradient(#996, $neutral-color);
     }
     .bar {
         display: block;
-        height: 12px;
+        height: 8px;
         margin: 2px;
-        border-radius: 6px;
+        border-radius: 4px;
         background: linear-gradient($accent-color, $main-color);
     }
     #ps {
@@ -307,7 +309,7 @@ footer {
         padding-bottom: $bleed;
     }
     footer {
-        margin: 0 $gutter;
+        margin: 0 $bleed;
     }
     #qual-sum ul li {
         margin-bottom: $gutter;

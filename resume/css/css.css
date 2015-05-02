@@ -203,140 +203,142 @@ footer {
 /* line 180, css.scss */
 .sections li p i {
   color: #5a9245;
+  font-weight: 600;
 }
 
-/* line 186, css.scss */
+/* line 187, css.scss */
 .left {
   float: left;
   width: 50%;
   border-right: solid #5c5948 1px;
 }
 
-/* line 191, css.scss */
+/* line 192, css.scss */
 .right {
   float: right;
   width: 50%;
 }
-/* line 194, css.scss */
+/* line 195, css.scss */
 .right li {
   border-top: solid #301f3a 1px;
 }
-/* line 196, css.scss */
+/* line 197, css.scss */
 .right li b {
   background-color: #301f3a;
 }
 
-/* line 203, css.scss */
+/* line 204, css.scss */
 #skills li {
   border: none;
 }
-/* line 206, css.scss */
+/* line 207, css.scss */
 #skills h3 {
-  line-height: 16px;
   display: inline-block;
   vertical-align: text-top;
   width: 50%;
+  font-size: 1em;
 }
-/* line 212, css.scss */
+/* line 213, css.scss */
 #skills .holder {
   display: inline-block;
-  height: 16px;
+  height: 12px;
+  margin: 2px 0;
   vertical-align: text-top;
   width: 50%;
-  border-radius: 8px;
+  border-radius: 6px;
   background: linear-gradient(#999966, #5c5948);
 }
-/* line 220, css.scss */
+/* line 222, css.scss */
 #skills .bar {
   display: block;
-  height: 12px;
+  height: 8px;
   margin: 2px;
-  border-radius: 6px;
+  border-radius: 4px;
   background: linear-gradient(#e5eec7, #5a9245);
 }
-/* line 227, css.scss */
+/* line 229, css.scss */
 #skills #ps {
   padding-right: 0%;
 }
-/* line 230, css.scss */
+/* line 232, css.scss */
 #skills #ai {
   padding-right: 8%;
 }
-/* line 233, css.scss */
+/* line 235, css.scss */
 #skills #ae {
   padding-right: 4%;
 }
-/* line 236, css.scss */
+/* line 238, css.scss */
 #skills #vid {
   padding-right: 6%;
 }
-/* line 239, css.scss */
+/* line 241, css.scss */
 #skills #in {
   padding-right: 22%;
 }
-/* line 242, css.scss */
+/* line 244, css.scss */
 #skills #office {
   padding-right: 10%;
 }
-/* line 245, css.scss */
+/* line 247, css.scss */
 #skills #win {
   padding-right: 5%;
 }
-/* line 248, css.scss */
+/* line 250, css.scss */
 #skills #osx {
   padding-right: 0%;
 }
-/* line 251, css.scss */
+/* line 253, css.scss */
 #skills #css {
   padding-right: 4%;
 }
-/* line 254, css.scss */
+/* line 256, css.scss */
 #skills #jq {
   padding-right: 6%;
 }
-/* line 257, css.scss */
+/* line 259, css.scss */
 #skills #js {
   padding-right: 8%;
 }
-/* line 260, css.scss */
+/* line 262, css.scss */
 #skills #as {
   padding-right: 2%;
 }
-/* line 263, css.scss */
+/* line 265, css.scss */
 #skills #git {
   padding-right: 10%;
 }
-/* line 266, css.scss */
+/* line 268, css.scss */
 #skills #php {
   padding-right: 22%;
 }
-/* line 269, css.scss */
+/* line 271, css.scss */
 #skills #sql {
   padding-right: 24%;
 }
-/* line 272, css.scss */
+/* line 274, css.scss */
 #skills #ls {
   padding-right: 4%;
 }
-/* line 275, css.scss */
+/* line 277, css.scss */
 #skills #tm {
   padding-right: 2%;
 }
-/* line 278, css.scss */
+/* line 280, css.scss */
 #skills #atd {
   padding-right: 4%;
 }
-/* line 281, css.scss */
+/* line 283, css.scss */
 #skills #prob {
   padding-right: 0%;
 }
 
-/* line 285, css.scss */
+/* line 287, css.scss */
 #volunteer {
   padding-bottom: 25px;
 }
 
-/* line 289, css.scss */
+/* line 291, css.scss */
 .group:after {
   content: “”;
   display: table;
@@ -344,50 +346,50 @@ footer {
 }
 
 @media (max-width: 800px) {
-  /* line 297, css.scss */
+  /* line 299, css.scss */
   body {
     font-size: .9em;
   }
 
-  /* line 300, css.scss */
+  /* line 302, css.scss */
   #qual-sum {
     padding: 0 10px 10px;
   }
 
-  /* line 303, css.scss */
+  /* line 305, css.scss */
   .sections {
     padding: 0 10px;
   }
 
-  /* line 306, css.scss */
+  /* line 308, css.scss */
   #resume {
     padding-bottom: 10px;
   }
 
-  /* line 309, css.scss */
+  /* line 311, css.scss */
   footer {
-    margin: 0 25px;
+    margin: 0 10px;
   }
 
-  /* line 312, css.scss */
+  /* line 314, css.scss */
   #qual-sum ul li {
     margin-bottom: 25px;
   }
-  /* line 314, css.scss */
+  /* line 316, css.scss */
   #qual-sum ul li p {
     width: 100%;
     padding-top: 10px;
   }
-  /* line 318, css.scss */
+  /* line 320, css.scss */
   #qual-sum ul li b {
     width: 50%;
   }
-  /* line 321, css.scss */
+  /* line 323, css.scss */
   #qual-sum ul li em {
     width: 50%;
   }
 
-  /* line 325, css.scss */
+  /* line 327, css.scss */
   .left, .right {
     float: none;
     width: 100%;
@@ -395,12 +397,12 @@ footer {
   }
 }
 @media (max-width: 640px) {
-  /* line 333, css.scss */
+  /* line 335, css.scss */
   body {
     font-size: .7em;
   }
 
-  /* line 336, css.scss */
+  /* line 338, css.scss */
   h1 {
     font-size: 3em;
   }
