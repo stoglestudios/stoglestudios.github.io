@@ -345,24 +345,39 @@ footer {
 
 @media (max-width: 800px) {
   /* line 297, css.scss */
+  body {
+    font-size: .9em;
+  }
+
+  /* line 300, css.scss */
+  #qual-sum {
+    padding: 0 10px 10px;
+  }
+
+  /* line 303, css.scss */
+  .sections {
+    padding: 0 10px;
+  }
+
+  /* line 306, css.scss */
   #qual-sum ul li {
     margin-bottom: 25px;
   }
-  /* line 299, css.scss */
+  /* line 308, css.scss */
   #qual-sum ul li p {
     width: 100%;
     padding-top: 10px;
   }
-  /* line 303, css.scss */
+  /* line 312, css.scss */
   #qual-sum ul li b {
     width: 50%;
   }
-  /* line 306, css.scss */
+  /* line 315, css.scss */
   #qual-sum ul li em {
     width: 50%;
   }
 
-  /* line 310, css.scss */
+  /* line 319, css.scss */
   .left, .right {
     float: none;
     width: 100%;
@@ -370,8 +385,13 @@ footer {
   }
 }
 @media (max-width: 640px) {
-  /* line 318, css.scss */
+  /* line 327, css.scss */
   body {
-    font-size: .6em;
+    font-size: .7em;
+  }
+
+  /* line 330, css.scss */
+  h1 {
+    font-size: 1.5em;
   }
 }

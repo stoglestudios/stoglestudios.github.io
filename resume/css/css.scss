@@ -294,6 +294,15 @@ footer {
 
 
 @media (max-width: 800px) {
+    body {
+        font-size: .9em;
+    }
+    #qual-sum {
+        padding: 0 $bleed $bleed;
+    }
+    .sections {
+        padding: 0 $bleed;
+    }
     #qual-sum ul li {
         margin-bottom: $gutter;
         p {
@@ -316,6 +325,9 @@ footer {
 @media (max-width: 640px) {
 
     body {
-        font-size: .6em;
+        font-size: .7em;
+    }
+    h1 {
+        font-size:  1.5em;
     }
 }
