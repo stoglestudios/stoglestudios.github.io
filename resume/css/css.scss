@@ -86,7 +86,7 @@ header {
     color: white;
     li {
         display: inline-block;
-        font-size: .8em;
+        padding-bottom: $bleed;
         a {
             color: white;
         }
@@ -103,7 +103,7 @@ header {
     }
 }
     #gaius {
-        padding: $gutter 0 $bleed;
+        padding: $gutter $gutter $bleed;
         background: url("../images/gaius.png") no-repeat 0 -30px;
         background-size: 700px;
     }

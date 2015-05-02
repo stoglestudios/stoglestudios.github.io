@@ -83,7 +83,7 @@ header {
 /* line 87, css.scss */
 header li {
   display: inline-block;
-  font-size: .8em;
+  padding-bottom: 10px;
 }
 /* line 90, css.scss */
 header li a {
@@ -105,7 +105,7 @@ header li .phone {
 
 /* line 105, css.scss */
 #gaius {
-  padding: 25px 0 10px;
+  padding: 25px 25px 10px;
   background: url("../images/gaius.png") no-repeat 0 -30px;
   background-size: 700px;
 }
