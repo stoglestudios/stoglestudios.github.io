@@ -13,6 +13,8 @@ $pg-height: 1100px;
 $fr-width: $pg-width - $gutter*2;
 $fr-height: $pg-height - $gutter*2;
 
+$icon-size: 40px;
+
 $main-color: #5A9245;
 $alt-color: #301F3A;
 $accent-color: #E5EEC7;
@@ -79,21 +81,67 @@ body {
     background-color: white;
     box-shadow: 0 0 5px $dark-color;
     padding-bottom: $gutter;
+    overflow: hidden;
 }
 header {
     text-align: center;
+    position: fixed;
+    max-width: $pg-width;
+    width: 94%;
+    z-index: 10;
     background: linear-gradient($main-color, $dark-color) $main-color;
     color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 10px, .5);
     li {
         display: inline-block;
         padding-bottom: $bleed;
         font-size: .9em;
         a {
             color: white;
+            overflow: hidden;
+            margin: 0 $bleed;
+            div {
+                display: none;
+                height: $icon-size;
+                width: $icon-size;
+                background: url(../images/icons.png) no-repeat;
+                background-size: 500% 200%;
+                background-position: bottom;
+                border-radius: 10%;
+                //border: solid white 1px;
+                vertical-align: middle;
+            } 
+            #phone {
+                background-position: 50% 100%;
+            }
+            #email {
+                background-position: 100% 100%;
+                &:hover {
+                    background-position: 100% 0%;
+                }
+            }
+            #portfolio {
+                background-position: 0% 100%;
+                &:hover {
+                    background-position: 0% 0%;
+                }
+            }
+            #linkin {
+                background-position: 75% 100%;
+                &:hover {
+                    background-position: 75% 0%;
+                }
+            }
+            #address {
+                background-position: 25% 100%;
+                &:hover {
+                    background-position: 25% 0%;
+                }
+            }
         }
         .btn {
             color: white;
-            margin: 0 $bleed;
+            
             &:hover {
                 text-decoration: underline;
             }
@@ -110,6 +158,7 @@ header {
     }
 content {
     display: block;
+    margin-top: 110px;
     padding-top: $gutter;
 }
 footer {
@@ -335,8 +384,14 @@ footer {
     }
 }
 @media (max-width: 640px) {
-
     body {
         font-size: .8em;
+    }
+    header li a div {
+        display: inline-block;
+    }
+    header li a {
+        width: $icon-size;
+        height: $icon-size;
     }
 }

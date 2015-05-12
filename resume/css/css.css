@@ -1,4 +1,4 @@
-/* line 29, css.scss */
+/* line 31, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,39 +6,39 @@
   padding: 0;
 }
 
-/* line 35, css.scss */
+/* line 37, css.scss */
 div {
   position: relative;
 }
 
-/* line 38, css.scss */
+/* line 40, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 43, css.scss */
+/* line 45, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 46, css.scss */
+/* line 48, css.scss */
 a img {
   border: 0;
 }
 
-/* line 49, css.scss */
+/* line 51, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 52, css.scss */
+/* line 54, css.scss */
 ul {
   list-style: none;
 }
 
-/* line 55, css.scss */
+/* line 57, css.scss */
 h1 {
   font-family: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 100;
@@ -47,7 +47,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* line 62, css.scss */
+/* line 64, css.scss */
 h2 {
   font-size: 1.2em;
   font-weight: 600;
@@ -56,7 +56,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* line 69, css.scss */
+/* line 71, css.scss */
 body {
   position: relative;
   width: 100%;
@@ -64,7 +64,7 @@ body {
   font-family: "Quicksand", "Century Gothic", sans-serif;
 }
 
-/* line 75, css.scss */
+/* line 77, css.scss */
 #resume {
   max-width: 1000px;
   width: 94%;
@@ -72,52 +72,107 @@ body {
   background-color: white;
   box-shadow: 0 0 5px #436337;
   padding-bottom: 25px;
+  overflow: hidden;
 }
 
-/* line 83, css.scss */
+/* line 86, css.scss */
 header {
   text-align: center;
+  position: fixed;
+  max-width: 1000px;
+  width: 94%;
+  z-index: 10;
   background: linear-gradient(#5a9245, #436337) #5a9245;
   color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 10, 0.5);
 }
-/* line 87, css.scss */
+/* line 95, css.scss */
 header li {
   display: inline-block;
   padding-bottom: 10px;
   font-size: .9em;
 }
-/* line 91, css.scss */
+/* line 99, css.scss */
 header li a {
   color: white;
-}
-/* line 94, css.scss */
-header li .btn {
-  color: white;
+  overflow: hidden;
   margin: 0 10px;
 }
-/* line 97, css.scss */
+/* line 103, css.scss */
+header li a div {
+  display: none;
+  height: 40px;
+  width: 40px;
+  background: url(../images/icons.png) no-repeat;
+  background-size: 500% 200%;
+  background-position: bottom;
+  border-radius: 10%;
+  vertical-align: middle;
+}
+/* line 114, css.scss */
+header li a #phone {
+  background-position: 50% 100%;
+}
+/* line 117, css.scss */
+header li a #email {
+  background-position: 100% 100%;
+}
+/* line 119, css.scss */
+header li a #email:hover {
+  background-position: 100% 0%;
+}
+/* line 123, css.scss */
+header li a #portfolio {
+  background-position: 0% 100%;
+}
+/* line 125, css.scss */
+header li a #portfolio:hover {
+  background-position: 0% 0%;
+}
+/* line 129, css.scss */
+header li a #linkin {
+  background-position: 75% 100%;
+}
+/* line 131, css.scss */
+header li a #linkin:hover {
+  background-position: 75% 0%;
+}
+/* line 135, css.scss */
+header li a #address {
+  background-position: 25% 100%;
+}
+/* line 137, css.scss */
+header li a #address:hover {
+  background-position: 25% 0%;
+}
+/* line 142, css.scss */
+header li .btn {
+  color: white;
+}
+/* line 145, css.scss */
 header li .btn:hover {
   text-decoration: underline;
 }
-/* line 101, css.scss */
+/* line 149, css.scss */
 header li .phone {
   cursor: default;
 }
 
-/* line 106, css.scss */
+/* line 154, css.scss */
 #gaius {
   padding: 25px 10px 10px;
   background: url("../images/gaius.png") no-repeat 0 -30px;
   background-size: 700px;
 }
 
-/* line 111, css.scss */
+/* line 159, css.scss */
 content {
   display: block;
+  margin-top: 110px;
   padding-top: 25px;
 }
 
-/* line 115, css.scss */
+/* line 164, css.scss */
 footer {
   clear: both;
   font-size: 1em;
@@ -130,26 +185,26 @@ footer {
   background-color: #5c5948;
 }
 
-/* line 126, css.scss */
+/* line 175, css.scss */
 #qual-sum {
   padding: 0 25px 10px;
 }
-/* line 128, css.scss */
+/* line 177, css.scss */
 #qual-sum ul {
   margin-left: 3%;
 }
-/* line 130, css.scss */
+/* line 179, css.scss */
 #qual-sum ul li {
   margin-bottom: 10px;
 }
-/* line 132, css.scss */
+/* line 181, css.scss */
 #qual-sum ul li b {
   display: inline-block;
   width: 25%;
   padding-right: 10px;
   vertical-align: text-top;
 }
-/* line 138, css.scss */
+/* line 187, css.scss */
 #qual-sum ul li em {
   display: inline-block;
   color: #5a9245;
@@ -158,28 +213,28 @@ footer {
   padding-right: 10px;
   text-align: right;
 }
-/* line 146, css.scss */
+/* line 195, css.scss */
 #qual-sum ul li p {
   display: inline-block;
   width: 60%;
   vertical-align: text-top;
 }
 
-/* line 154, css.scss */
+/* line 203, css.scss */
 .sections {
   padding: 0 25px;
   border-top: solid #5c5948 1px;
 }
-/* line 157, css.scss */
+/* line 206, css.scss */
 .sections h2 {
   margin-top: 25px;
 }
-/* line 160, css.scss */
+/* line 209, css.scss */
 .sections li {
   border-top: solid #5a9245 1px;
   margin-bottom: 10px;
 }
-/* line 163, css.scss */
+/* line 212, css.scss */
 .sections li b {
   display: inline-block;
   text-align: center;
@@ -189,57 +244,57 @@ footer {
   color: white;
   vertical-align: text-top;
 }
-/* line 172, css.scss */
+/* line 221, css.scss */
 .sections li p {
   display: inline-block;
   width: 82%;
   padding: 10px 0 0 25px;
   vertical-align: text-top;
 }
-/* line 177, css.scss */
+/* line 226, css.scss */
 .sections li p em {
   font-weight: 600;
   font-style: normal;
 }
-/* line 181, css.scss */
+/* line 230, css.scss */
 .sections li p i {
   color: #5a9245;
   font-weight: 600;
 }
 
-/* line 188, css.scss */
+/* line 237, css.scss */
 .left {
   float: left;
   width: 50%;
   border-right: solid #5c5948 1px;
 }
 
-/* line 193, css.scss */
+/* line 242, css.scss */
 .right {
   float: right;
   width: 50%;
 }
-/* line 196, css.scss */
+/* line 245, css.scss */
 .right li {
   border-top: solid #301f3a 1px;
 }
-/* line 198, css.scss */
+/* line 247, css.scss */
 .right li b {
   background-color: #301f3a;
 }
 
-/* line 205, css.scss */
+/* line 254, css.scss */
 #skills li {
   border: none;
 }
-/* line 208, css.scss */
+/* line 257, css.scss */
 #skills h3 {
   display: inline-block;
   vertical-align: text-top;
   width: 50%;
   font-size: 1em;
 }
-/* line 214, css.scss */
+/* line 263, css.scss */
 #skills .holder {
   display: inline-block;
   height: 12px;
@@ -249,7 +304,7 @@ footer {
   border-radius: 6px;
   background: linear-gradient(#999966, #5c5948);
 }
-/* line 223, css.scss */
+/* line 272, css.scss */
 #skills .bar {
   display: block;
   height: 8px;
@@ -257,89 +312,89 @@ footer {
   border-radius: 4px;
   background: linear-gradient(#e5eec7, #5a9245);
 }
-/* line 230, css.scss */
+/* line 279, css.scss */
 #skills #ps {
   padding-right: 0%;
 }
-/* line 233, css.scss */
+/* line 282, css.scss */
 #skills #ai {
   padding-right: 8%;
 }
-/* line 236, css.scss */
+/* line 285, css.scss */
 #skills #ae {
   padding-right: 4%;
 }
-/* line 239, css.scss */
+/* line 288, css.scss */
 #skills #vid {
   padding-right: 6%;
 }
-/* line 242, css.scss */
+/* line 291, css.scss */
 #skills #in {
   padding-right: 22%;
 }
-/* line 245, css.scss */
+/* line 294, css.scss */
 #skills #office {
   padding-right: 10%;
 }
-/* line 248, css.scss */
+/* line 297, css.scss */
 #skills #win {
   padding-right: 5%;
 }
-/* line 251, css.scss */
+/* line 300, css.scss */
 #skills #osx {
   padding-right: 0%;
 }
-/* line 254, css.scss */
+/* line 303, css.scss */
 #skills #css {
   padding-right: 4%;
 }
-/* line 257, css.scss */
+/* line 306, css.scss */
 #skills #jq {
   padding-right: 6%;
 }
-/* line 260, css.scss */
+/* line 309, css.scss */
 #skills #js {
   padding-right: 8%;
 }
-/* line 263, css.scss */
+/* line 312, css.scss */
 #skills #as {
   padding-right: 2%;
 }
-/* line 266, css.scss */
+/* line 315, css.scss */
 #skills #git {
   padding-right: 10%;
 }
-/* line 269, css.scss */
+/* line 318, css.scss */
 #skills #php {
   padding-right: 22%;
 }
-/* line 272, css.scss */
+/* line 321, css.scss */
 #skills #sql {
   padding-right: 24%;
 }
-/* line 275, css.scss */
+/* line 324, css.scss */
 #skills #ls {
   padding-right: 4%;
 }
-/* line 278, css.scss */
+/* line 327, css.scss */
 #skills #tm {
   padding-right: 2%;
 }
-/* line 281, css.scss */
+/* line 330, css.scss */
 #skills #atd {
   padding-right: 4%;
 }
-/* line 284, css.scss */
+/* line 333, css.scss */
 #skills #prob {
   padding-right: 0%;
 }
 
-/* line 288, css.scss */
+/* line 337, css.scss */
 #volunteer {
   padding-bottom: 25px;
 }
 
-/* line 292, css.scss */
+/* line 341, css.scss */
 .group:after {
   content: “”;
   display: table;
@@ -347,55 +402,55 @@ footer {
 }
 
 @media (max-width: 800px) {
-  /* line 300, css.scss */
+  /* line 349, css.scss */
   body {
     font-size: .9em;
   }
 
-  /* line 303, css.scss */
+  /* line 352, css.scss */
   h1 {
     font-size: 2.6em;
   }
 
-  /* line 306, css.scss */
+  /* line 355, css.scss */
   #qual-sum {
     padding: 0 10px 10px;
   }
 
-  /* line 309, css.scss */
+  /* line 358, css.scss */
   .sections {
     padding: 0 10px;
   }
 
-  /* line 312, css.scss */
+  /* line 361, css.scss */
   #resume {
     padding-bottom: 10px;
   }
 
-  /* line 315, css.scss */
+  /* line 364, css.scss */
   footer {
     margin: 0 10px;
   }
 
-  /* line 318, css.scss */
+  /* line 367, css.scss */
   #qual-sum ul li {
     margin-bottom: 25px;
   }
-  /* line 320, css.scss */
+  /* line 369, css.scss */
   #qual-sum ul li p {
     width: 100%;
     padding-top: 10px;
   }
-  /* line 324, css.scss */
+  /* line 373, css.scss */
   #qual-sum ul li b {
     width: 75%;
   }
-  /* line 327, css.scss */
+  /* line 376, css.scss */
   #qual-sum ul li em {
     width: 25%;
   }
 
-  /* line 331, css.scss */
+  /* line 380, css.scss */
   .left, .right {
     float: none;
     width: 100%;
@@ -403,8 +458,19 @@ footer {
   }
 }
 @media (max-width: 640px) {
-  /* line 339, css.scss */
+  /* line 387, css.scss */
   body {
     font-size: .8em;
+  }
+
+  /* line 390, css.scss */
+  header li a div {
+    display: inline-block;
+  }
+
+  /* line 393, css.scss */
+  header li a {
+    width: 40px;
+    height: 40px;
   }
 }

@@ -21,10 +21,12 @@ $soc-size: 30px;
 $col-width:  $im-width + $cta-width + $gutter*10;
 $corners: 5px;
 
+$lorem: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
+
 //-----COLORS--------
 
 $steel: #203049;
-$aluminum: #36455b;
+$aluminum: #aaa;
 $d-blue: #112233;
 
 $red: #96241D;
@@ -82,16 +84,14 @@ body {
     margin: $bleed auto 0;
     background: url("../images/cross.png") repeat #ddd;
     box-shadow: 0 0 10px black;
-}
+} 
     header {
         display: inline-block;
         width: 100%;
         height: $head-height;
         padding: $gutter $gutter;
         text-align: center;
-        background: url("../images/hi-grad.png") repeat-x $aluminum;
-        border-bottom: solid #E0DC59 2px;
-        box-shadow: 0 2px 5px black;
+        background: linear-gradient(#444, $aluminum);
     }
             #socnet {
             float: right;
@@ -159,43 +159,87 @@ body {
         color: white;
         box-shadow: 0 2px 5px black;
         background: url("../images/gel-btn.png") repeat-x #A83AAB;
-        a { 
-            width: 20%;
-            text-align: center;
-            color: white;
-            line-height: $gutter*2;
-            &:hover {
-                background-color: #2BA0F9;
+        ul {
+            list-style: none;
+            li {
+                width: 20%;
+                display: inline-block;
+                a {
+                    width: 100%;
+                    text-align: center;
+                    color: white;
+                    line-height: $gutter*2;
+                    &:hover {
+                        background: url("../images/gel-btn.png") repeat-x $green;
+                    }
+                }
             }
         }
     }
-
-    #container {
+    content {
+        display: block;
+        overflow: hidden;
+        min-height: 200px;
         margin: $gutter; 
         text-align: center;
         padding: $gutter;
         background-color: white;
         border-radius: $corners;
-    }
+        img {
+            width: 100%;
+        }
+        div {
+            text-align: left;
+            display: inline-block;
+            color: darkslategrey;
+            p:after {
+                content: $lorem;
+            }
+            h2:after {
+                content: "Section Title";
+            }
+            h2 {
+                color: $green;
+                margin-bottom: $bleed;   
+            }
+        }
+        div:nth-child(odd) {
+            width: 50%;
+            float: left;
+            padding: 2% 5%;
+        }
+        div:nth-child(even) {
+            width: 50%;
+            float: right;
+            padding: 2% 5%;
+        }
+        .closer {
+            clear: both;
+        }
+    } 
     footer {
-        line-height: $gutter*2;
-        height: $gutter*2;
-        font-size: 10px;
-        padding: 0 $gutter*2;
-        background-color: $green;
-        border-top: solid 2px $orange;
-        border-bottom: solid 2px $red;
+        display: block;
+        text-align: right;
+        font-size: .7em;
+        padding: $bleed $gutter*2;
+        background: linear-gradient($green, #030);
         color: white;
         a {
-            float: right;
             color: white;
             &:hover {
                 text-decoration: underline;
             }
         }
     }
-@media screen and (max-device-width: 600px) {
-    footer {
-        font-size: 14px;
+@media screen and (max-width: 800px) {
+    .content {
+        div:nth-child(odd) {
+            width: 100%;
+            float: none;
+        }
+        div:nth-child(even) {
+            width: 100%;
+            float: none;
+        }
     }
 }

@@ -1,4 +1,4 @@
-/* line 41, css.scss */
+/* line 50, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,34 +6,34 @@
   padding: 0;
 }
 
-/* line 47, css.scss */
+/* line 56, css.scss */
 div {
   position: relative;
 }
 
-/* line 50, css.scss */
+/* line 59, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 55, css.scss */
+/* line 64, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 58, css.scss */
+/* line 67, css.scss */
 a img {
   border: 0;
 }
 
-/* line 61, css.scss */
+/* line 70, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 64, css.scss */
+/* line 73, css.scss */
 body {
   position: relative;
   font-family: "Muli", "Century Gothic", ariel, sans-serif;
@@ -41,7 +41,7 @@ body {
   background: url("../images/grid-big.png") repeat #203049;
 }
 
-/* line 70, css.scss */
+/* line 79, css.scss */
 #page {
   width: 100%;
   max-width: 1150px;
@@ -52,26 +52,24 @@ body {
   box-shadow: 0 0 10px black;
 }
 
-/* line 79, css.scss */
-#header {
+/* line 88, css.scss */
+header {
   display: inline-block;
   width: 100%;
   height: 100px;
   padding: 20px 20px;
   text-align: center;
-  background: url("../images/hi-grad.png") repeat-x #36455b;
-  border-bottom: solid #E0DC59 2px;
-  box-shadow: 0 2px 5px black;
+  background: linear-gradient(#444444, #aaaaaa);
 }
 
-/* line 89, css.scss */
+/* line 96, css.scss */
 #socnet {
   float: right;
   height: 40px;
   font-size: 14px;
   text-align: right;
 }
-/* line 94, css.scss */
+/* line 101, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 40px;
@@ -79,118 +77,172 @@ body {
   color: white;
   font-weight: 400;
 }
-/* line 101, css.scss */
+/* line 108, css.scss */
 #socnet a {
   width: 30px;
   height: 30px;
   border-radius: 15px;
   margin: 5px 0 0 4px;
-  background: url("../images/socnet-sprite.png") no-repeat #36455b;
+  background: url("../images/socnet-sprite.png") no-repeat #aaaaaa;
 }
-/* line 108, css.scss */
+/* line 115, css.scss */
 #socnet .fb {
   background-position: 0 -30px;
 }
-/* line 110, css.scss */
+/* line 117, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
   background-color: #3c5a96;
   border-color: #3c5a96;
 }
-/* line 116, css.scss */
+/* line 123, css.scss */
 #socnet .tw {
   background-position: -30px -30px;
 }
-/* line 118, css.scss */
+/* line 125, css.scss */
 #socnet .tw:hover {
   background-position: -30px 0;
   background-color: #59adeb;
   border-color: #59adeb;
 }
-/* line 124, css.scss */
+/* line 131, css.scss */
 #socnet .go {
   background-position: -60px -30px;
 }
-/* line 126, css.scss */
+/* line 133, css.scss */
 #socnet .go:hover {
   background-position: -60px 0;
   background-color: #d82a20;
   border-color: #d82a20;
 }
-/* line 132, css.scss */
+/* line 139, css.scss */
 #socnet .in {
   background-position: -90px -30px;
 }
-/* line 134, css.scss */
+/* line 141, css.scss */
 #socnet .in:hover {
   background-position: -90px 0;
   background-color: #1779b3;
   border-color: #1779b3;
 }
-/* line 140, css.scss */
+/* line 147, css.scss */
 #socnet .em {
   background-position: -120px -30px;
 }
-/* line 142, css.scss */
+/* line 149, css.scss */
 #socnet .em:hover {
   background-position: -120px 0;
   background-color: #999999;
   border-color: #999999;
 }
 
-/* line 149, css.scss */
-#cta-bar {
+/* line 156, css.scss */
+nav {
   width: 100%;
   padding: 0 20px;
   color: white;
   box-shadow: 0 2px 5px black;
   background: url("../images/gel-btn.png") repeat-x #a83aab;
 }
-/* line 155, css.scss */
-#cta-bar a {
+/* line 162, css.scss */
+nav ul {
+  list-style: none;
+}
+/* line 164, css.scss */
+nav ul li {
   width: 20%;
+  display: inline-block;
+}
+/* line 167, css.scss */
+nav ul li a {
+  width: 100%;
   text-align: center;
   color: white;
   line-height: 40px;
 }
-/* line 160, css.scss */
-#cta-bar a:hover {
-  background-color: #2BA0F9;
+/* line 172, css.scss */
+nav ul li a:hover {
+  background: url("../images/gel-btn.png") repeat-x #46922a;
 }
 
-/* line 166, css.scss */
-#container {
+/* line 179, css.scss */
+content {
+  display: block;
+  overflow: hidden;
+  min-height: 200px;
   margin: 20px;
   text-align: center;
   padding: 20px;
   background-color: white;
   border-radius: 5px;
 }
-
-/* line 173, css.scss */
-#footer {
-  line-height: 40px;
-  height: 40px;
-  font-size: 10px;
-  padding: 0 40px;
-  background-color: #46922a;
-  border-top: solid 2px #d19547;
-  border-bottom: solid 2px #96241d;
-  color: white;
+/* line 188, css.scss */
+content img {
+  width: 100%;
 }
-/* line 182, css.scss */
-#footer a {
+/* line 191, css.scss */
+content div {
+  text-align: left;
+  display: inline-block;
+  color: darkslategrey;
+}
+/* line 195, css.scss */
+content div p:after {
+  content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
+}
+/* line 198, css.scss */
+content div h2:after {
+  content: "Section Title";
+}
+/* line 201, css.scss */
+content div h2 {
+  color: #46922a;
+  margin-bottom: 10px;
+}
+/* line 206, css.scss */
+content div:nth-child(odd) {
+  width: 50%;
+  float: left;
+  padding: 2% 5%;
+}
+/* line 211, css.scss */
+content div:nth-child(even) {
+  width: 50%;
   float: right;
+  padding: 2% 5%;
+}
+/* line 216, css.scss */
+content .closer {
+  clear: both;
+}
+
+/* line 220, css.scss */
+footer {
+  display: block;
+  text-align: right;
+  font-size: .7em;
+  padding: 10px 40px;
+  background: linear-gradient(#46922a, #003300);
   color: white;
 }
-/* line 185, css.scss */
-#footer a:hover {
+/* line 227, css.scss */
+footer a {
+  color: white;
+}
+/* line 229, css.scss */
+footer a:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-device-width: 600px) {
-  /* line 191, css.scss */
-  #footer {
-    font-size: 14px;
+@media screen and (max-width: 800px) {
+  /* line 236, css.scss */
+  .content div:nth-child(odd) {
+    width: 100%;
+    float: none;
+  }
+  /* line 240, css.scss */
+  .content div:nth-child(even) {
+    width: 100%;
+    float: none;
   }
 }
