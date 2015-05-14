@@ -13,7 +13,7 @@ $pg-height: 1100px;
 $fr-width: $pg-width - $gutter*2;
 $fr-height: $pg-height - $gutter*2;
 
-$icon-size: 25px;
+$icon-size: 30px;
 
 $main-color: #5A9245;
 $alt-color: #301F3A;
@@ -393,5 +393,6 @@ footer {
     header li a {
         width: $icon-size;
         height: $icon-size;
+        margin: 0 $bleed/2;
     }
 }
