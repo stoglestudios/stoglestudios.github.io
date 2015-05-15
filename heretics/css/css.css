@@ -56,9 +56,20 @@ body {
   font-size: 12px;
   background: url("../images/bg-grad.png") repeat-x #95160a;
   text-align: center;
+  color: #ff9000;
 }
 
-/* line 79, css.scss */
+/* line 80, css.scss */
+button {
+  padding: 5px 10px;
+  background-color: #ff9000;
+  z-index: 1000;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+/* line 88, css.scss */
 #intro {
   width: 100%;
   height: 100%;
@@ -67,13 +78,12 @@ body {
   box-shadow: 0 0 10px black;
   text-align: center;
 }
-/* line 86, css.scss */
+/* line 95, css.scss */
 #intro h1 {
   color: #ff9000;
 }
-
-/* line 90, css.scss */
-.opener {
+/* line 98, css.scss */
+#intro div {
   position: absolute;
   display: inline-block;
   text-align: left;
@@ -83,67 +93,67 @@ body {
   margin-left: -50%;
   opacity: 0;
 }
-/* line 99, css.scss */
-.opener h1 {
+/* line 107, css.scss */
+#intro div h1 {
   padding-left: 30%;
 }
 
-/* line 103, css.scss */
+/* line 113, css.scss */
 #evil {
   background: url("../images/beast.png") no-repeat center;
   background-size: 100%;
 }
-/* line 106, css.scss */
+/* line 116, css.scss */
 #evil h1 {
   margin-top: 50%;
 }
 
-/* line 110, css.scss */
+/* line 120, css.scss */
 #love {
   background: url("../images/johnny.png") no-repeat center;
   background-size: 100%;
 }
-/* line 113, css.scss */
+/* line 123, css.scss */
 #love h1 {
   margin-top: 30%;
 }
 
-/* line 117, css.scss */
+/* line 127, css.scss */
 #hero {
   background: url("../images/kingsley.png") no-repeat center;
   background-size: 100%;
 }
-/* line 120, css.scss */
+/* line 130, css.scss */
 #hero h1 {
   margin-top: 60%;
 }
 
-/* line 124, css.scss */
+/* line 134, css.scss */
 #world {
   background: url("../images/hecate.png") no-repeat center;
   background-size: 100%;
 }
-/* line 127, css.scss */
+/* line 137, css.scss */
 #world h1 {
   margin-top: 55%;
 }
 
-/* line 131, css.scss */
+/* line 141, css.scss */
 #all {
   background: url("../images/caster.png") no-repeat center;
   background-size: 100%;
 }
-/* line 134, css.scss */
+/* line 144, css.scss */
 #all h1 {
   margin-top: 25%;
 }
 
-/* line 138, css.scss */
+/* line 148, css.scss */
 #page {
   text-align: center;
 }
 
-/* line 141, css.scss */
+/* line 151, css.scss */
 #header {
   display: inline-block;
   width: 100%;
@@ -152,27 +162,26 @@ body {
   padding: 25px 0;
   text-align: center;
   border-bottom: solid #ff9000 2px;
-  color: #ff9000;
 }
-/* line 150, css.scss */
+/* line 160, css.scss */
 #header img {
   margin-bottom: -20px;
   margin-right: -437px;
   width: 80%;
   max-width: 437px;
 }
-/* line 156, css.scss */
+/* line 166, css.scss */
 #header h2, #header h3 {
   font-size: 19px;
   display: inline-block;
 }
-/* line 160, css.scss */
+/* line 170, css.scss */
 #header h3 {
   padding-left: 20px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 167, css.scss */
+  /* line 177, css.scss */
   #header {
     text-align: left;
   }
