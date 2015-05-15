@@ -68,7 +68,7 @@ button {
   right: 20px;
   bottom: 20px;
   border: solid 2px #ff9000;
-  font-size: 1em;
+  font-size: 18em;
   font-family: "Eagle Lake", cursive;
 }
 /* line 90, css.scss */
@@ -162,7 +162,7 @@ header h3 {
 @media screen and (max-width: 600px) {
   /* line 165, css.scss */
   button {
-    font-size: 8em;
+    font-size: 3em;
   }
 }
 /*
