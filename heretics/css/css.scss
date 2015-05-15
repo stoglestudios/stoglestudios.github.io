@@ -85,6 +85,8 @@ button {
     right: 20px;
     bottom: 20px;
     border: solid 2px $orange;
+    font-size: 1em;
+    font-family: $fonts-main;
     &:hover {
         background-color: black;
         color: $orange;
@@ -161,7 +163,7 @@ nav ul li {
 }
 @media screen and (max-width: 800px) {
     button {
-        font-size: 2em;
+        font-size: 4em;
     }
 }
 

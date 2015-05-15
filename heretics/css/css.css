@@ -68,21 +68,23 @@ button {
   right: 20px;
   bottom: 20px;
   border: solid 2px #ff9000;
+  font-size: 1em;
+  font-family: "Eagle Lake", cursive;
 }
-/* line 88, css.scss */
+/* line 90, css.scss */
 button:hover {
   background-color: black;
   color: #ff9000;
 }
 
-/* line 93, css.scss */
+/* line 95, css.scss */
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 0 10px;
 }
 
-/* line 98, css.scss */
+/* line 100, css.scss */
 #intro {
   width: 100%;
   height: 100%;
@@ -91,7 +93,7 @@ nav ul li {
   box-shadow: 0 0 10px black;
   text-align: center;
 }
-/* line 105, css.scss */
+/* line 107, css.scss */
 #intro div {
   position: absolute;
   display: inline-block;
@@ -102,7 +104,7 @@ nav ul li {
   margin-left: -50%;
   opacity: 0;
 }
-/* line 114, css.scss */
+/* line 116, css.scss */
 #intro div h1 {
   color: #ff9000;
   text-shadow: 5px 5px 10px black;
@@ -110,13 +112,13 @@ nav ul li {
   margin: 10% 0 0;
   z-index: 10;
 }
-/* line 121, css.scss */
+/* line 123, css.scss */
 #intro div img {
   z-index: 0;
   width: 90%;
 }
 
-/* line 127, css.scss */
+/* line 129, css.scss */
 #page {
   text-align: center;
   width: 94%;
@@ -124,7 +126,7 @@ nav ul li {
   margin: 0 auto;
 }
 
-/* line 133, css.scss */
+/* line 135, css.scss */
 header {
   display: inline-block;
   width: 100%;
@@ -134,33 +136,33 @@ header {
   text-align: center;
   border-bottom: solid #ff9000 2px;
 }
-/* line 141, css.scss */
+/* line 143, css.scss */
 header img {
   margin-bottom: -20px;
   margin-right: -437px;
   width: 80%;
   max-width: 437px;
 }
-/* line 147, css.scss */
+/* line 149, css.scss */
 header h2, header h3 {
   font-size: 19px;
   display: inline-block;
 }
-/* line 151, css.scss */
+/* line 153, css.scss */
 header h3 {
   padding-left: 20px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 158, css.scss */
+  /* line 160, css.scss */
   header {
     text-align: left;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 163, css.scss */
+  /* line 165, css.scss */
   button {
-    font-size: 2em;
+    font-size: 4em;
   }
 }
 /*
