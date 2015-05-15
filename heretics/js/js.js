@@ -13,38 +13,61 @@
 var contactStart = 0;
 
 // Objects
-var $evil = $('#evil');
-var $love = $('#love');
-var $hero = $('#hero');
-var $world = $('#world');
-var $all = $('#all');
-var $skip = $("<button>skip</button>");
 
-// Adding elements
-$('#intro').append($skip);
+var $openers = [
+    [$('#evil'), "evil", "What Does it Mean to be Evil?", "beast"],
+    [$('#love'), "love", "When is Love too Powerfull?", "johnny"],
+    [$('#hero'), "hero", "When Does One Become a Hero?", "kingsley"],
+    [$('#world'), "world", "Where Will be the Final Battle?", "hecate"],
+    [$('#all'), "all", "And Who Will Control it All?", "caster"]
+];
+var $skip = $("<button>skip ></button>");
+
+
+// Functions
 $skip.click( function() {
     $('#intro').hide();
     $('#page').show();
     console.log("Skip Button Pressed");
 });
-
-// Functions
 (function( $ ){
-    $.fn.introAn = function(waitForIt) {
+    $.fn.introAn = function(waitForIt, startSite) {
         var durationOS = 2000;
         var fadeTime = 2000;
+        var totaltime = durationOS + fadeTime*2;
         $(this).delay(waitForIt).animate({ 
             opacity: 1,
         }, fadeTime).delay(durationOS).animate({
             opacity: 0,
-        }, fadeTime);
+        }, fadeTime
+            , function() {
+                if (startSite) {
+                    $('#intro').hide();
+                    $('#page').show();
+                    $skip.hide();
+                    console.log("Opening Animation finished");
+                }
+            }
+        );
         $(this).children('h1').delay(waitForIt).animate({ 
             paddingLeft: '20%',
-        }, 6000);
-        console.log("IntroAn running for: " + this);
+        }, totaltime);
+        $(this).children('img').delay(waitForIt).animate({ 
+            width: '90%',
+        }, totaltime);
         return this;
    }; 
 })( jQuery );
+
+// Adding elements
+/*
+for (i=0;i<$openers.length;i++) {
+    $('#intro').append("<div id='" + $openers[i][1] + "'></div>");
+    $("#" + $openers[i][1]).append("<h1>" + $openers[i][2] + "</h1>");
+    $("#" + $openers[i][1]).append("<img src='images/" + $openers[i][3] + ".png'></img>");
+    $("#" + $openers[i][0]).introAn(i*5000);
+}*/
+$('#intro').append($skip);
 
 // Document ready
 $(document).ready(function(){
@@ -54,13 +77,13 @@ $(document).ready(function(){
         backgroundPositionY: '100%',
     }, 26000);
     
-    $evil.introAn(0);
-    $love.introAn(5000);
-    $hero.introAn(10000);
-    $world.introAn(15000);
-    $all.introAn(20000);
+    $openers[0][0].introAn(0);
+    $openers[1][0].introAn(5000);
+    $openers[2][0].introAn(10000);
+    $openers[3][0].introAn(15000);
+    $openers[4][0].introAn(20000, true);
 
-    $('#page').delay(25000).animate({ 
-        opacity: 1,
-    }, 2000);
+    //$('#page').delay(25000).animate({ 
+    //    opacity: 1,
+    //}, 2000);
 });
