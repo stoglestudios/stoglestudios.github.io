@@ -91,7 +91,7 @@ header {
     z-index: 10;
     background: linear-gradient($main-color, $dark-color) $main-color;
     color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 10px, .5);
+    box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, .7);
     li {
         display: inline-block;
         padding-bottom: $bleed;
