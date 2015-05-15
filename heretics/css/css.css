@@ -159,7 +159,7 @@ header h3 {
     text-align: left;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   /* line 165, css.scss */
   button {
     font-size: 4em;
