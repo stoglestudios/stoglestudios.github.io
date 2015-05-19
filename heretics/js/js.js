@@ -13,7 +13,6 @@
 var contactStart = 0;
 
 // Objects
-
 var $openers = [
     [$('#evil'), "evil", "What Does it Mean to be Evil?", "beast"],
     [$('#love'), "love", "When is Love too Powerfull?", "johnny"],
@@ -22,7 +21,7 @@ var $openers = [
     [$('#all'), "all", "And Who Will Control it All?", "caster"]
 ];
 var $skip = $("<button>skip ></button>");
-
+var $tabs = $("nav li");
 
 // Functions
 $skip.click( function() {
@@ -71,18 +70,37 @@ $('#intro').append($skip);
 
 // Document ready
 $(document).ready(function(){
+    //Hide/show appropriate sections
     $('#page').hide();
+    $('#characters').hide();
+    $('#cosmology').hide();
+    $('#author').hide();
+    $('#contact').hide();
     $('#intro').animate({ 
         backgroundPositionX: '100%',
         backgroundPositionY: '100%',
     }, 26000);
     
+    //Initiate animated opener sections
     $openers[0][0].introAn(0);
     $openers[1][0].introAn(5000);
     $openers[2][0].introAn(10000);
     $openers[3][0].introAn(15000);
     $openers[4][0].introAn(20000, true);
-
+    
+    //Toggle Sections
+    $tabs.click(function() {
+        var pageClicked = $(this).html().toLowerCase();
+        pageClicked = "#" + pageClicked;
+        console.log(pageClicked);
+        $(this).toggleClass("selected");
+        $(this).siblings().removeClass("selected");
+        $("content").hide();
+        $(pageClicked).show();
+    });
+    
+    
+    
     //$('#page').delay(25000).animate({ 
     //    opacity: 1,
     //}, 2000);

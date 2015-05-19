@@ -1,15 +1,4 @@
-/*
-font-family: 'Jim Nightshade', cursive;
-font-family: 'IM Fell DW Pica SC', serif;
-font-family: 'Trade Winds', cursive;
-font-family: 'Londrina Sketch', cursive;
-font-family: 'Eagle Lake', cursive; *****
-font-family: 'UnifrakturCook', cursive;
-font-family: 'UnifrakturMaguntia', cursive;
-font-family: 'Fondamento', cursive;
-font-family: 'IM Fell Double Pica SC', serif;
-*/
-/* line 44, css.scss */
+/* line 35, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -17,83 +6,89 @@ font-family: 'IM Fell Double Pica SC', serif;
   padding: 0;
 }
 
-/* line 50, css.scss */
+/* line 41, css.scss */
 div {
   position: relative;
   display: inline-block;
 }
 
-/* line 54, css.scss */
+/* line 45, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 59, css.scss */
+/* line 50, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 62, css.scss */
+/* line 53, css.scss */
 a img {
   border: 0;
 }
 
-/* line 65, css.scss */
+/* line 56, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 68, css.scss */
+/* line 59, css.scss */
 body {
   position: absolute;
   width: 100%;
-  height: 100%;
   font-family: "Eagle Lake", cursive;
   display: flex;
   font-weight: 400;
   font-size: 12px;
-  background: url("../images/bg-grad.png") repeat-x #95160a;
+  background: url("../images/bg-grad.png") repeat-x #ff9000;
   text-align: center;
   color: #ff9000;
 }
 
-/* line 80, css.scss */
-button {
-  padding: 5px 10px;
-  background-color: #ff9000;
-  z-index: 1000;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  border: solid 2px #ff9000;
-  font-size: 1em;
-  font-family: "Eagle Lake", cursive;
-}
-/* line 90, css.scss */
-button:hover {
-  background-color: black;
-  color: #ff9000;
+/* line 70, css.scss */
+p {
+  font-family: "Antic", ariel, sans-serif;
 }
 
-/* line 95, css.scss */
+/* line 74, css.scss */
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 0 10px;
+  margin: 0;
+  width: 20%;
+  text-align: center;
+  border-left: solid 1px #ff9000;
+  margin: 10px 0 0;
+}
+/* line 82, css.scss */
+nav ul li:first-child {
+  border-left: none;
+}
+/* line 85, css.scss */
+nav ul li:hover {
+  text-shadow: 0 0 20px #ff9000;
+  color: beige;
 }
 
-/* line 100, css.scss */
+/* line 90, css.scss */
+.selected {
+  background: linear-gradient(to right, #ff9000, #8b0000);
+  text-shadow: 0 0 20px #ff9000;
+  color: beige;
+}
+
+/* line 95, css.scss */
 #intro {
   width: 100%;
   height: 100%;
-  background: url("../images/clouds.png") no-repeat 0 0;
+  background: url("../images/clouds.png") no-repeat 0 0 darkred;
   background-size: 300% 300%;
   box-shadow: 0 0 10px black;
   text-align: center;
 }
-/* line 107, css.scss */
+/* line 102, css.scss */
 #intro div {
   position: absolute;
   display: inline-block;
@@ -104,7 +99,7 @@ nav ul li {
   margin-left: -50%;
   opacity: 0;
 }
-/* line 116, css.scss */
+/* line 111, css.scss */
 #intro div h1 {
   color: #ff9000;
   text-shadow: 5px 5px 10px black;
@@ -112,125 +107,238 @@ nav ul li {
   margin: 10% 0 0;
   z-index: 10;
 }
-/* line 123, css.scss */
+/* line 118, css.scss */
 #intro div img {
   z-index: 0;
   width: 90%;
 }
+/* line 123, css.scss */
+#intro button {
+  padding: 5px 10px;
+  background-color: #ff9000;
+  z-index: 1000;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: solid 2px #ff9000;
+  font-size: 1em;
+  font-family: "Eagle Lake", cursive;
+}
+/* line 133, css.scss */
+#intro button:hover {
+  background-color: black;
+  color: #ff9000;
+}
 
-/* line 129, css.scss */
+/* line 139, css.scss */
 #page {
   text-align: center;
   width: 94%;
   max-width: 1000px;
   margin: 0 auto;
+  background-image: linear-gradient(#000000, #8b0000);
+  background-color: black;
+  box-shadow: 0 0 10px black;
 }
 
-/* line 135, css.scss */
+/* line 148, css.scss */
 header {
   display: inline-block;
   width: 100%;
   max-width: 1000px;
-  min-width: 450px;
-  padding: 25px 0;
+  padding: 25px 0 10px;
   text-align: center;
-  border-bottom: solid #ff9000 2px;
+  background-image: url("../images/666.png");
+  background-repeat: no-repeat;
+  background-position: center 5px;
 }
-/* line 143, css.scss */
+/* line 157, css.scss */
 header img {
-  margin-bottom: -20px;
-  margin-right: -437px;
   width: 80%;
   max-width: 437px;
 }
-/* line 149, css.scss */
-header h2, header h3 {
-  font-size: 19px;
-  display: inline-block;
-}
-/* line 153, css.scss */
-header h3 {
-  padding-left: 20px;
+/* line 161, css.scss */
+header h2 {
+  font-size: 1.7em;
+  padding: 25px 0;
+  text-shadow: 0 0 10px black;
 }
 
-@media screen and (min-width: 1000px) {
-  /* line 160, css.scss */
-  header {
-    text-align: left;
-  }
+/* line 168, css.scss */
+content div {
+  display: inline-block;
+  width: 90%;
+  margin: 25px 0 50px;
+  border-radius: 25px;
+  background: linear-gradient(#f5f5dc, #deb887);
+  padding: 25px;
+  text-align: left;
 }
-@media screen and (max-width: 960px) {
-  /* line 165, css.scss */
-  button {
+/* line 176, css.scss */
+content div img {
+  float: left;
+  border: solid 2px darkred;
+  margin-right: 25px;
+  height: 200px;
+  padding: 10px;
+}
+/* line 183, css.scss */
+content div h1 {
+  color: darkred;
+  font-size: 1.5em;
+}
+/* line 187, css.scss */
+content div p {
+  color: #600;
+  font-size: 1.4em;
+}
+/* line 190, css.scss */
+content div p:after {
+  content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
+}
+
+/* line 195, css.scss */
+#premise div {
+  min-height: 500px;
+}
+/* line 197, css.scss */
+#premise div img {
+  content: url("../images/hecate.png");
+}
+/* line 200, css.scss */
+#premise div h1:after {
+  content: "Introduction";
+}
+
+/* line 206, css.scss */
+#characters div:nth-child(1) h1:after {
+  content: "Special Agent Kingsley";
+}
+/* line 211, css.scss */
+#characters div:nth-child(2) h1:after {
+  content: "Kastir (aka The Devil or The Trickster, Promethius, etc)";
+}
+/* line 216, css.scss */
+#characters div:nth-child(3) h1:after {
+  content: "Dan Englemann (aka The Beast)";
+}
+/* line 221, css.scss */
+#characters div:nth-child(4) h1:after {
+  content: "Claire Jensen-Englemann";
+}
+/* line 226, css.scss */
+#characters div:nth-child(5) h1:after {
+  content: "Hecate";
+}
+/* line 231, css.scss */
+#characters div:nth-child(6) h1:after {
+  content: "Professor thomas Stewart";
+}
+
+/* line 237, css.scss */
+#cosmology div h1:after {
+  content: "Cosmology";
+}
+
+/* line 241, css.scss */
+#author div {
+  min-height: 500px;
+}
+/* line 243, css.scss */
+#author div h1:after {
+  content: "Brandon Gaius Ogle";
+}
+
+/* line 247, css.scss */
+#contact div {
+  min-height: 500px;
+}
+/* line 249, css.scss */
+#contact div h1:after {
+  content: "Contact";
+}
+
+/* line 253, css.scss */
+footer {
+  border-top: solid 2px #ff9000;
+  padding: 10px;
+}
+/* line 256, css.scss */
+footer b {
+  font-family: helvetica;
+}
+/* line 259, css.scss */
+footer p {
+  font-family: "Eagle Lake", cursive;
+}
+/* line 261, css.scss */
+footer p:first-child {
+  float: left;
+  padding-right: 64px;
+}
+/* line 265, css.scss */
+footer p:last-child {
+  float: right;
+}
+/* line 268, css.scss */
+footer p a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: url("../images/socnet-sprite.png") #ff9000;
+  margin-left: 10px;
+}
+/* line 277, css.scss */
+footer p .fb {
+  background-position: 0 0;
+}
+/* line 279, css.scss */
+footer p .fb:hover {
+  background-position: 0 -22px;
+}
+/* line 283, css.scss */
+footer p .bl {
+  background-position: -110px 0;
+}
+/* line 285, css.scss */
+footer p .bl:hover {
+  background-position: -110px -22px;
+}
+/* line 289, css.scss */
+footer p .tw {
+  background-position: -22px 0;
+}
+/* line 291, css.scss */
+footer p .tw:hover {
+  background-position: -22px -22px;
+}
+/* line 295, css.scss */
+footer p .gl {
+  background-position: -44px 0;
+}
+/* line 297, css.scss */
+footer p .gl:hover {
+  background-position: -44px -22px;
+}
+/* line 301, css.scss */
+footer p .em {
+  background-position: -88px 0;
+}
+/* line 303, css.scss */
+footer p .em:hover {
+  background-position: -88px -22px;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 310, css.scss */
+  #intro button {
     font-size: 3em;
   }
+
+  /* line 314, css.scss */
+  header h2 {
+    font-size: 1.4em;
+  }
 }
-/*
-                 #socnet {
-                    font-size: 16px;
-                    text-align: center;
-                    margin-top: $gutter;
-                    h4 {
-                        display: inline-block;
-                        color: $charcoal;
-                        font-weight: 400;
-                        width: 100%;
-                    }
-                    a {
-                        width: $soc-size;
-                        height: $soc-size;
-                        border-radius: $soc-size/2;
-                        margin: 5px 4px 0 4px;
-                        box-shadow: 2px 2px 5px $charcoal; 
-                        background: url("../images/socnet-sprite.png") no-repeat;
-                    }
-                    .fb {
-                        background-position: 0 -1*$soc-size;
-                        background-color: $fb-blue;
-                        &:hover {
-                            background-position: 0 0;
-                        }
-                    }
-                    .tw {
-                        background-position: -1*$soc-size -1*$soc-size;
-                        background-color: $tw-blue;
-                        &:hover {
-                            background-position: -1*$soc-size 0;
-                        }
-                    }
-                    .go {
-                        background-position: -2*$soc-size -1*$soc-size;
-                        background-color: $go-red;
-                        &:hover {
-                            background-position: -2*$soc-size 0;
-                        }
-                    }
-                    .in {
-                        background-position: -3*$soc-size -1*$soc-size;
-                        background-color: $in-blue;
-                        &:hover {
-                            background-position: -3*$soc-size 0;
-                        }
-                    }
-                    .em {
-                        background-position: -4*$soc-size -1*$soc-size;
-                        background-color: $em-neutral;
-                        &:hover {
-                            background-position: -4*$soc-size 0;
-                        }
-                    }
-                }
-    #footer {
-        clear: both;
-        font-size: 11px;
-        margin: $gutter*3;
-        font-family: $fonts-sub;
-        text-align: center;
-        a {
-            color: $ash;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-*/

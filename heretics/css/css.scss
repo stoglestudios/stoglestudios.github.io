@@ -3,30 +3,17 @@
 //-------------------
 $fonts-main: 'Eagle Lake', cursive;
 
-/*
-font-family: 'Jim Nightshade', cursive;
-font-family: 'IM Fell DW Pica SC', serif;
-font-family: 'Trade Winds', cursive;
-font-family: 'Londrina Sketch', cursive;
-font-family: 'Eagle Lake', cursive; *****
-font-family: 'UnifrakturCook', cursive;
-font-family: 'UnifrakturMaguntia', cursive;
-font-family: 'Fondamento', cursive;
-font-family: 'IM Fell Double Pica SC', serif;
-*/
-
-$fonts-sub: 'Muli', "Century Gothic", ariel, sans-serif;
+$fonts-sub: 'Antic', ariel, sans-serif;
 $logo-height: 150px;
 $gutter: 25px;
 $bleed: 10px;
 $head-height: $gutter*2 + $logo-height;
-$soc-size: 30px;
+$soc-size: 22px;
 $col-width: 1000px;
 $corners: 5px;
 
 //-----COLORS--------
 
-$dark-red: #95160a;
 $red: #cf2212;
 $orange: #ff9000;
 
@@ -37,6 +24,10 @@ $in-blue: #1779b3;
 $em-neutral: #999999;
 $bg-orange: #fd6720;
 $pn-red: #c51e23;
+
+
+$ipsum: "Lorem ipsum dolor";
+$lorem: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 
 //-------------------
 // STANDARDIZE
@@ -68,39 +59,43 @@ a, a:hover, a:visited, a:active {
 body {
     position: absolute;
     width: 100%;
-    height: 100%;
     font-family: $fonts-main;
     display: flex;
     font-weight: 400;
     font-size: 12px;
-    background: url("../images/bg-grad.png") repeat-x $dark-red;
+    background: url("../images/bg-grad.png") repeat-x $orange;
     text-align: center;
     color: $orange;
 }
-button {
-    padding: 5px 10px;
-    background-color: $orange;
-    z-index: 1000;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    border: solid 2px $orange;
-    font-size: 1em;
-    font-family: $fonts-main;
-    &:hover {
-        background-color: black;
-        color: $orange;
-    }
+p {
+    font-family: $fonts-sub;
 }
+
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 0 $bleed;
+    margin: 0;
+    width: 20%;
+    text-align: center;
+    border-left: solid 1px $orange;
+    margin: $bleed 0 0;
+    &:first-child {
+        border-left: none;
+    }
+    &:hover {
+        text-shadow: 0 0 20px $orange;
+        color: beige;
+    }
 }
+    .selected {
+        background: linear-gradient(to right, $orange, darkred);
+        text-shadow: 0 0 20px $orange;
+        color: beige;
+    }
 #intro {
     width: 100%;
     height: 100%;
-    background: url("../images/clouds.png") no-repeat 0 0;
+    background: url("../images/clouds.png") no-repeat 0 0 darkred;
     background-size: 300% 300%;
     box-shadow: 0 0 10px black;
     text-align: center;
@@ -125,114 +120,208 @@ nav ul li {
             width: 90%;
         }
     }
+    button {
+        padding: 5px 10px;
+        background-color: $orange;
+        z-index: 1000;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        border: solid 2px $orange;
+        font-size: 1em;
+        font-family: $fonts-main;
+        &:hover {
+            background-color: black;
+            color: $orange;
+        }
+    }
 }
 #page {
     text-align: center;
     width: 94%;
     max-width: 1000px;
     margin: 0 auto;
+    background-image: linear-gradient(black, darkred);
+    background-color: black;
+    box-shadow: 0 0 10px black;
 }
     header {
         display: inline-block;
         width: 100%;
         max-width: 1000px;
-        min-width: 450px;
-        padding: $gutter 0;
+        padding: $gutter 0 $bleed;
         text-align: center;
-        border-bottom: solid $orange 2px;
+        background-image: url("../images/666.png");
+        background-repeat: no-repeat;
+        background-position: center 5px;
         img {
-            margin-bottom: -20px;
-            margin-right: -437px;
             width: 80%;
             max-width: 437px;
         }
-        h2, h3 {
-            font-size: 19px;
-            display: inline-block;
+        h2 {
+            font-size: 1.7em;
+            padding: $gutter 0;
+            //border-bottom: solid 1px darkred;
+            text-shadow: 0 0 10px black;
         }
-        h3 {
-            padding-left: 20px;
+    }
+    content div {
+        display: inline-block;
+        width: 90%;
+        margin: $gutter 0 $gutter*2;
+        border-radius: $gutter;
+        background: linear-gradient(beige, burlywood);
+        padding: $gutter;
+        text-align: left;
+        img {
+            float: left;
+            border: solid 2px darkred;
+            margin-right: $gutter;
+            height: 200px;
+            padding: $bleed;
         }
-    }
-
-
-@media screen and (min-width: 1000px) {
-    header {
-       text-align: left;
-    }
-}
-@media screen and (max-width: 960px) {
-    button {
-        font-size: 3em;
-    }
-}
-
-/*
-                 #socnet {
-                    font-size: 16px;
-                    text-align: center;
-                    margin-top: $gutter;
-                    h4 {
-                        display: inline-block;
-                        color: $charcoal;
-                        font-weight: 400;
-                        width: 100%;
-                    }
-                    a {
-                        width: $soc-size;
-                        height: $soc-size;
-                        border-radius: $soc-size/2;
-                        margin: 5px 4px 0 4px;
-                        box-shadow: 2px 2px 5px $charcoal; 
-                        background: url("../images/socnet-sprite.png") no-repeat;
-                    }
-                    .fb {
-                        background-position: 0 -1*$soc-size;
-                        background-color: $fb-blue;
-                        &:hover {
-                            background-position: 0 0;
-                        }
-                    }
-                    .tw {
-                        background-position: -1*$soc-size -1*$soc-size;
-                        background-color: $tw-blue;
-                        &:hover {
-                            background-position: -1*$soc-size 0;
-                        }
-                    }
-                    .go {
-                        background-position: -2*$soc-size -1*$soc-size;
-                        background-color: $go-red;
-                        &:hover {
-                            background-position: -2*$soc-size 0;
-                        }
-                    }
-                    .in {
-                        background-position: -3*$soc-size -1*$soc-size;
-                        background-color: $in-blue;
-                        &:hover {
-                            background-position: -3*$soc-size 0;
-                        }
-                    }
-                    .em {
-                        background-position: -4*$soc-size -1*$soc-size;
-                        background-color: $em-neutral;
-                        &:hover {
-                            background-position: -4*$soc-size 0;
-                        }
-                    }
-                }
-    #footer {
-        clear: both;
-        font-size: 11px;
-        margin: $gutter*3;
-        font-family: $fonts-sub;
-        text-align: center;
-        a {
-            color: $ash;
-            &:hover {
-                text-decoration: underline;
+        h1 {
+            color: darkred;
+            font-size: 1.5em;
+        }
+        p {
+            color: #600;
+            font-size: 1.4em;
+            &:after {
+                content: $lorem;
             }
         }
     }
-*/
+    #premise div {
+        min-height: 500px;
+        img {
+            content:url("../images/hecate.png");
+        }
+        h1:after {
+            content: "Introduction";
+        }
+    }
+    #characters div {
+        &:nth-child(1) {
+            h1:after {
+                content: "Special Agent Kingsley";
+            }
+        }
+        &:nth-child(2) {
+            h1:after {
+                content: "Kastir (aka The Devil or The Trickster, Promethius, etc)";
+            }
+        }
+        &:nth-child(3) {
+            h1:after {
+                content: "Dan Englemann (aka The Beast)";
+            }
+        }
+        &:nth-child(4) {
+            h1:after {
+                content: "Claire Jensen-Englemann";
+            }
+        }
+        &:nth-child(5) {
+            h1:after {
+                content: "Hecate";
+            }
+        }
+        &:nth-child(6) {
+            h1:after {
+                content: "Professor thomas Stewart";
+            }
+        }
+    }
+    #cosmology div {
+        h1:after {
+            content: "Cosmology";
+        }
+    }
+    #author div {
+        min-height: 500px;
+        h1:after {
+            content: "Brandon Gaius Ogle";
+        }
+    }
+    #contact div {
+        min-height: 500px;
+        h1:after {
+            content: "Contact";
+        }
+    }
+footer {
+    border-top: solid 2px $orange;
+    padding: $bleed;
+    b {
+        font-family: helvetica;
+    }
+    p {
+        font-family: $fonts-main;
+        &:first-child {
+            float: left;
+            padding-right: $soc-size*2 + $bleed*2;
+        }
+        &:last-child {
+            float: right;
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            width: $soc-size;
+            height: $soc-size;
+            border-radius: $corners;
+            background: url("../images/socnet-sprite.png") $orange;
+            margin-left: $bleed;
+        }
+        .fb {
+            background-position: 0 0;
+            &:hover {
+                background-position: 0 -1*$soc-size;
+            }
+        }
+        .bl {
+            background-position: -5*$soc-size 0;
+            &:hover {
+                background-position:-5*$soc-size -1*$soc-size;
+            }
+        }
+        .tw {
+            background-position: -1*$soc-size 0;
+            &:hover {
+                background-position:-1*$soc-size -1*$soc-size;
+            }
+        }
+        .gl {
+            background-position: -2*$soc-size 0;
+            &:hover {
+                background-position: -2*$soc-size -1*$soc-size;
+            }
+        }
+        .em {
+            background-position: -4*$soc-size 0;
+            &:hover {
+                background-position: -4*$soc-size -1*$soc-size;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    #intro button {
+        font-size: 3em;
+    }
+    header {
+        h2 {
+            font-size: 1.4em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
