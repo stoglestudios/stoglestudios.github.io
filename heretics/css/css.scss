@@ -56,57 +56,38 @@ a img {
 a, a:hover, a:visited, a:active {
     text-decoration: none; 
 }
+p {
+    font-family: $fonts-sub;
+}
 body {
     position: absolute;
     width: 100%;
+    height: 100%;
     font-family: $fonts-main;
-    display: flex;
     font-weight: 400;
     font-size: 12px;
     background: url("../images/bg-grad.png") repeat-x $orange;
     text-align: center;
     color: $orange;
 }
-p {
-    font-family: $fonts-sub;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    width: 20%;
-    text-align: center;
-    border-left: solid 1px $orange;
-    margin: $bleed 0 0;
-    &:first-child {
-        border-left: none;
-    }
-    &:hover {
-        text-shadow: 0 0 20px $orange;
-        color: beige;
-    }
-}
-    .selected {
-        background: linear-gradient(to right, $orange, darkred);
-        text-shadow: 0 0 20px $orange;
-        color: beige;
-    }
 #intro {
+    position: relative;
+    display: inline-block;
     width: 100%;
     height: 100%;
-    background: url("../images/clouds.png") no-repeat 0 0 darkred;
+    background: url("../images/clouds.png") no-repeat;
+    background-position: 0 0;
     background-size: 300% 300%;
+    background-color: darkred;
     box-shadow: 0 0 10px black;
     text-align: center;
     div {
         position: absolute;
-        display: inline-block;
+        left: 0;
         text-align: center;
+        margin-bottom: -100%;
         width: 100%;
         height: 100%;
-        margin-bottom: -100%;
-        margin-left: -50%;
         opacity: 0;
         h1 {
             color: $orange;
@@ -130,12 +111,35 @@ nav ul li {
         border: solid 2px $orange;
         font-size: 1em;
         font-family: $fonts-main;
+        font-variant: small-caps;
         &:hover {
             background-color: black;
             color: $orange;
         }
     }
 }
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    width: 20%;
+    text-align: center;
+    border-left: solid 1px $orange;
+    margin: $bleed 0 0;
+    cursor: pointer;
+    &:first-child {
+        border-left: none;
+    }
+    &:hover {
+        text-shadow: 0 0 20px $orange;
+        color: beige;
+    }
+}
+    .selected {
+        background: linear-gradient(to right, $orange, darkred);
+        text-shadow: 0 0 20px $orange;
+        color: beige;
+    }
 #page {
     text-align: center;
     width: 94%;
@@ -167,7 +171,7 @@ nav ul li {
     }
     content div {
         display: inline-block;
-        width: 90%;
+        width: 94%;
         margin: $gutter 0 $gutter*2;
         border-radius: $gutter;
         background: linear-gradient(beige, burlywood);
@@ -181,53 +185,83 @@ nav ul li {
             padding: $bleed;
         }
         h1 {
+            display: inline-block;
+            padding-top: $gutter;
             color: darkred;
             font-size: 1.5em;
         }
         p {
             color: #600;
             font-size: 1.4em;
-            &:after {
-                content: $lorem;
-            }
+            margin-top: $gutter;
+
         }
     }
     #premise div {
-        min-height: 500px;
-        img {
-            content:url("../images/hecate.png");
+        padding: 0;
+        p {
+            margin: $gutter auto 0;
+            max-width: 700px;
         }
-        h1:after {
-            content: "Introduction";
+        div {
+            margin: 0;
+            width: 100%;
+            padding: 400px $gutter*2 $gutter*2;
+            background: url("../images/hecateSketch.png") no-repeat top center;
+        }
+        h1 {
+            max-width: 700px;
+            margin: auto;
         }
     }
     #characters div {
+        p:after {
+            content: $lorem;
+        }
         &:nth-child(1) {
+            img {
+                content: url("../images/kingsley.jpg");
+            }
             h1:after {
                 content: "Special Agent Kingsley";
             }
         }
         &:nth-child(2) {
+            img {
+                content: url("../images/caster.jpg");
+            }
             h1:after {
                 content: "Kastir (aka The Devil or The Trickster, Promethius, etc)";
             }
         }
         &:nth-child(3) {
+            img {
+                content: url("../images/dan.jpg");
+            }
             h1:after {
                 content: "Dan Englemann (aka The Beast)";
             }
-        }
+        } 
         &:nth-child(4) {
+            img {
+                content: url("../images/claire.jpg");
+            }
             h1:after {
                 content: "Claire Jensen-Englemann";
             }
         }
         &:nth-child(5) {
+            img {
+                content: url("../images/hecate.jpg");
+            }
             h1:after {
                 content: "Hecate";
             }
         }
         &:nth-child(6) {
+            img {
+                content: url("../images/stewart.jpg");
+            }
             h1:after {
                 content: "Professor thomas Stewart";
             }
@@ -240,6 +274,9 @@ nav ul li {
     }
     #author div {
         min-height: 500px;
+        img {
+            content: url("../images/brandon.jpg");
+        }
         h1:after {
             content: "Brandon Gaius Ogle";
         }

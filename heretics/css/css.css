@@ -35,11 +35,16 @@ a, a:hover, a:visited, a:active {
 }
 
 /* line 59, css.scss */
+p {
+  font-family: "Antic", ariel, sans-serif;
+}
+
+/* line 62, css.scss */
 body {
   position: absolute;
   width: 100%;
+  height: 100%;
   font-family: "Eagle Lake", cursive;
-  display: flex;
   font-weight: 400;
   font-size: 12px;
   background: url("../images/bg-grad.png") repeat-x #ff9000;
@@ -47,59 +52,30 @@ body {
   color: #ff9000;
 }
 
-/* line 70, css.scss */
-p {
-  font-family: "Antic", ariel, sans-serif;
-}
-
-/* line 74, css.scss */
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 0;
-  width: 20%;
-  text-align: center;
-  border-left: solid 1px #ff9000;
-  margin: 10px 0 0;
-}
-/* line 82, css.scss */
-nav ul li:first-child {
-  border-left: none;
-}
-/* line 85, css.scss */
-nav ul li:hover {
-  text-shadow: 0 0 20px #ff9000;
-  color: beige;
-}
-
-/* line 90, css.scss */
-.selected {
-  background: linear-gradient(to right, #ff9000, #8b0000);
-  text-shadow: 0 0 20px #ff9000;
-  color: beige;
-}
-
-/* line 95, css.scss */
+/* line 73, css.scss */
 #intro {
+  position: relative;
+  display: inline-block;
   width: 100%;
   height: 100%;
-  background: url("../images/clouds.png") no-repeat 0 0 darkred;
+  background: url("../images/clouds.png") no-repeat;
+  background-position: 0 0;
   background-size: 300% 300%;
+  background-color: darkred;
   box-shadow: 0 0 10px black;
   text-align: center;
 }
-/* line 102, css.scss */
+/* line 84, css.scss */
 #intro div {
   position: absolute;
-  display: inline-block;
+  left: 0;
   text-align: center;
+  margin-bottom: -100%;
   width: 100%;
   height: 100%;
-  margin-bottom: -100%;
-  margin-left: -50%;
   opacity: 0;
 }
-/* line 111, css.scss */
+/* line 92, css.scss */
 #intro div h1 {
   color: #ff9000;
   text-shadow: 5px 5px 10px black;
@@ -107,12 +83,12 @@ nav ul li:hover {
   margin: 10% 0 0;
   z-index: 10;
 }
-/* line 118, css.scss */
+/* line 99, css.scss */
 #intro div img {
   z-index: 0;
   width: 90%;
 }
-/* line 123, css.scss */
+/* line 104, css.scss */
 #intro button {
   padding: 5px 10px;
   background-color: #ff9000;
@@ -123,14 +99,43 @@ nav ul li:hover {
   border: solid 2px #ff9000;
   font-size: 1em;
   font-family: "Eagle Lake", cursive;
+  font-variant: small-caps;
 }
-/* line 133, css.scss */
+/* line 115, css.scss */
 #intro button:hover {
   background-color: black;
   color: #ff9000;
 }
 
-/* line 139, css.scss */
+/* line 121, css.scss */
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  width: 20%;
+  text-align: center;
+  border-left: solid 1px #ff9000;
+  margin: 10px 0 0;
+  cursor: pointer;
+}
+/* line 130, css.scss */
+nav ul li:first-child {
+  border-left: none;
+}
+/* line 133, css.scss */
+nav ul li:hover {
+  text-shadow: 0 0 20px #ff9000;
+  color: beige;
+}
+
+/* line 138, css.scss */
+.selected {
+  background: linear-gradient(to right, #ff9000, #8b0000);
+  text-shadow: 0 0 20px #ff9000;
+  color: beige;
+}
+
+/* line 143, css.scss */
 #page {
   text-align: center;
   width: 94%;
@@ -141,7 +146,7 @@ nav ul li:hover {
   box-shadow: 0 0 10px black;
 }
 
-/* line 148, css.scss */
+/* line 152, css.scss */
 header {
   display: inline-block;
   width: 100%;
@@ -152,29 +157,29 @@ header {
   background-repeat: no-repeat;
   background-position: center 5px;
 }
-/* line 157, css.scss */
+/* line 161, css.scss */
 header img {
   width: 80%;
   max-width: 437px;
 }
-/* line 161, css.scss */
+/* line 165, css.scss */
 header h2 {
   font-size: 1.7em;
   padding: 25px 0;
   text-shadow: 0 0 10px black;
 }
 
-/* line 168, css.scss */
+/* line 172, css.scss */
 content div {
   display: inline-block;
-  width: 90%;
+  width: 94%;
   margin: 25px 0 50px;
   border-radius: 25px;
   background: linear-gradient(#f5f5dc, #deb887);
   padding: 25px;
   text-align: left;
 }
-/* line 176, css.scss */
+/* line 180, css.scss */
 content div img {
   float: left;
   border: solid 2px darkred;
@@ -182,105 +187,145 @@ content div img {
   height: 200px;
   padding: 10px;
 }
-/* line 183, css.scss */
+/* line 187, css.scss */
 content div h1 {
+  display: inline-block;
+  padding-top: 25px;
   color: darkred;
   font-size: 1.5em;
 }
-/* line 187, css.scss */
+/* line 193, css.scss */
 content div p {
   color: #600;
   font-size: 1.4em;
+  margin-top: 25px;
 }
-/* line 190, css.scss */
-content div p:after {
+
+/* line 200, css.scss */
+#premise div {
+  padding: 0;
+}
+/* line 202, css.scss */
+#premise div p {
+  margin: 25px auto 0;
+  max-width: 700px;
+}
+/* line 206, css.scss */
+#premise div div {
+  margin: 0;
+  width: 100%;
+  padding: 400px 50px 50px;
+  background: url("../images/hecateSketch.png") no-repeat top center;
+}
+/* line 212, css.scss */
+#premise div h1 {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* line 218, css.scss */
+#characters div p:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-
-/* line 195, css.scss */
-#premise div {
-  min-height: 500px;
+/* line 222, css.scss */
+#characters div:nth-child(1) img {
+  content: url("../images/kingsley.jpg");
 }
-/* line 197, css.scss */
-#premise div img {
-  content: url("../images/hecate.png");
-}
-/* line 200, css.scss */
-#premise div h1:after {
-  content: "Introduction";
-}
-
-/* line 206, css.scss */
+/* line 225, css.scss */
 #characters div:nth-child(1) h1:after {
   content: "Special Agent Kingsley";
 }
-/* line 211, css.scss */
+/* line 230, css.scss */
+#characters div:nth-child(2) img {
+  content: url("../images/caster.jpg");
+}
+/* line 233, css.scss */
 #characters div:nth-child(2) h1:after {
   content: "Kastir (aka The Devil or The Trickster, Promethius, etc)";
 }
-/* line 216, css.scss */
+/* line 238, css.scss */
+#characters div:nth-child(3) img {
+  content: url("../images/dan.jpg");
+}
+/* line 241, css.scss */
 #characters div:nth-child(3) h1:after {
   content: "Dan Englemann (aka The Beast)";
 }
-/* line 221, css.scss */
+/* line 246, css.scss */
+#characters div:nth-child(4) img {
+  content: url("../images/claire.jpg");
+}
+/* line 249, css.scss */
 #characters div:nth-child(4) h1:after {
   content: "Claire Jensen-Englemann";
 }
-/* line 226, css.scss */
+/* line 254, css.scss */
+#characters div:nth-child(5) img {
+  content: url("../images/hecate.jpg");
+}
+/* line 257, css.scss */
 #characters div:nth-child(5) h1:after {
   content: "Hecate";
 }
-/* line 231, css.scss */
+/* line 262, css.scss */
+#characters div:nth-child(6) img {
+  content: url("../images/stewart.jpg");
+}
+/* line 265, css.scss */
 #characters div:nth-child(6) h1:after {
   content: "Professor thomas Stewart";
 }
 
-/* line 237, css.scss */
+/* line 271, css.scss */
 #cosmology div h1:after {
   content: "Cosmology";
 }
 
-/* line 241, css.scss */
+/* line 275, css.scss */
 #author div {
   min-height: 500px;
 }
-/* line 243, css.scss */
+/* line 277, css.scss */
+#author div img {
+  content: url("../images/brandon.jpg");
+}
+/* line 280, css.scss */
 #author div h1:after {
   content: "Brandon Gaius Ogle";
 }
 
-/* line 247, css.scss */
+/* line 284, css.scss */
 #contact div {
   min-height: 500px;
 }
-/* line 249, css.scss */
+/* line 286, css.scss */
 #contact div h1:after {
   content: "Contact";
 }
 
-/* line 253, css.scss */
+/* line 290, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 256, css.scss */
+/* line 293, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 259, css.scss */
+/* line 296, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 261, css.scss */
+/* line 298, css.scss */
 footer p:first-child {
   float: left;
   padding-right: 64px;
 }
-/* line 265, css.scss */
+/* line 302, css.scss */
 footer p:last-child {
   float: right;
 }
-/* line 268, css.scss */
+/* line 305, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -290,54 +335,54 @@ footer p a {
   background: url("../images/socnet-sprite.png") #ff9000;
   margin-left: 10px;
 }
-/* line 277, css.scss */
+/* line 314, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 279, css.scss */
+/* line 316, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 283, css.scss */
+/* line 320, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 285, css.scss */
+/* line 322, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 289, css.scss */
+/* line 326, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 291, css.scss */
+/* line 328, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 295, css.scss */
+/* line 332, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 297, css.scss */
+/* line 334, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 301, css.scss */
+/* line 338, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 303, css.scss */
+/* line 340, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 310, css.scss */
+  /* line 347, css.scss */
   #intro button {
     font-size: 3em;
   }
 
-  /* line 314, css.scss */
+  /* line 351, css.scss */
   header h2 {
     font-size: 1.4em;
   }

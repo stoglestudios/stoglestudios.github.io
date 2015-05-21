@@ -20,7 +20,8 @@ var $openers = [
     [$('#world'), "world", "Where Will be the Final Battle?", "hecate"],
     [$('#all'), "all", "And Who Will Control it All?", "caster"]
 ];
-var $skip = $("<button>skip ></button>");
+var $intro = $("<div></div>");
+var $skip = $("<button>Skip ></button>");
 var $tabs = $("nav li");
 
 // Functions
@@ -34,15 +35,16 @@ $skip.click( function() {
         var durationOS = 2000;
         var fadeTime = 2000;
         var totaltime = durationOS + fadeTime*2;
+        $(this).show();
         $(this).delay(waitForIt).animate({ 
             opacity: 1,
         }, fadeTime).delay(durationOS).animate({
             opacity: 0,
-        }, fadeTime
-            , function() {
+        }, fadeTime,
+            function() {
                 if (startSite) {
                     $('#intro').hide();
-                    $('#page').show();
+                    $('#page').fadeIn(2000);        
                     $skip.hide();
                     console.log("Opening Animation finished");
                 }
@@ -66,22 +68,27 @@ for (i=0;i<$openers.length;i++) {
     $("#" + $openers[i][1]).append("<img src='images/" + $openers[i][3] + ".png'></img>");
     $("#" + $openers[i][0]).introAn(i*5000);
 }*/
-$('#intro').append($skip);
+
 
 // Document ready
 $(document).ready(function(){
+    //Build assets
+    $('#intro').append($skip);
+    
     //Hide/show appropriate sections
     $('#page').hide();
     $('#characters').hide();
     $('#cosmology').hide();
     $('#author').hide();
     $('#contact').hide();
+    
+    //Initiate animated opener sections
     $('#intro').animate({ 
         backgroundPositionX: '100%',
         backgroundPositionY: '100%',
-    }, 26000);
-    
-    //Initiate animated opener sections
+    }, 24000, function() {
+        $('#intro').fadeOut(2000);
+    });
     $openers[0][0].introAn(0);
     $openers[1][0].introAn(5000);
     $openers[2][0].introAn(10000);
@@ -98,10 +105,4 @@ $(document).ready(function(){
         $("content").hide();
         $(pageClicked).show();
     });
-    
-    
-    
-    //$('#page').delay(25000).animate({ 
-    //    opacity: 1,
-    //}, 2000);
 });
