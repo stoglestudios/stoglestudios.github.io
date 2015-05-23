@@ -394,106 +394,110 @@ footer p .em:hover {
   background-position: -88px -22px;
 }
 
-@media screen and (max-width: 800px) {
-  /* line 365, css.scss */
+@media screen and (max-width: 800px) and (orientation: portrait) {
+  /* line 366, css.scss */
+  #intro h1 {
+    font-size: 1em;
+  }
+  /* line 369, css.scss */
   #intro button {
-    font-size: 2em;
+    font-size: 1.2em;
   }
 
-  /* line 368, css.scss */
+  /* line 373, css.scss */
   header {
     padding-top: 10px;
     background-size: 242.52px 215px;
   }
-  /* line 371, css.scss */
+  /* line 376, css.scss */
   header h2 {
     font-size: 1.4em;
     padding: 10px 0;
   }
 
-  /* line 376, css.scss */
+  /* line 381, css.scss */
   nav ul li {
     width: 33.33333%;
   }
-  /* line 378, css.scss */
+  /* line 383, css.scss */
   nav ul li:last-child {
     border-right: solid 1px #ff9000;
   }
 
-  /* line 382, css.scss */
+  /* line 387, css.scss */
   content div {
     text-align: center;
   }
-  /* line 384, css.scss */
+  /* line 389, css.scss */
   content div img {
     margin: 0;
     float: none;
   }
-  /* line 388, css.scss */
+  /* line 393, css.scss */
   content div h1 {
     display: block;
   }
-  /* line 391, css.scss */
+  /* line 396, css.scss */
   content div p {
     text-align: left;
   }
 
-  /* line 395, css.scss */
+  /* line 400, css.scss */
   #premise div p {
     width: 100%;
   }
-  /* line 397, css.scss */
+  /* line 402, css.scss */
   #premise div p:nth-child(even) {
     float: none;
     padding-bottom: 0;
   }
-  /* line 401, css.scss */
+  /* line 406, css.scss */
   #premise div p:nth-child(odd) {
     float: none;
   }
 
-  /* line 405, css.scss */
+  /* line 410, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 407, css.scss */
+  /* line 412, css.scss */
   footer p:last-child {
     clear: both;
     padding-top: 10px;
     border-top: dashed 1px black;
   }
 }
-@media screen and (max-width: 500px) and (orientation: portrait) {
-  /* line 416, css.scss */
+@media screen and (max-width: 500px) {
+  /* line 421, css.scss */
   header {
     padding-top: 0;
     background-size: 191.76px 170px;
   }
-  /* line 419, css.scss */
+  /* line 424, css.scss */
   header h2 {
     font-size: 1em;
     padding: 5px 0;
   }
 
-  /* line 424, css.scss */
+  /* line 429, css.scss */
   nav ul li {
     width: 50%;
   }
-  /* line 426, css.scss */
+  /* line 431, css.scss */
   nav ul li:nth-child(odd) {
     border: none;
   }
-  /* line 429, css.scss */
+  /* line 434, css.scss */
   nav ul li:last-child {
     border-left: solid 1px #ff9000;
     border-right: solid 1px #ff9000;
   }
 
-  /* line 434, css.scss */
+  /* line 439, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 436, css.scss */
+  /* line 441, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;

@@ -361,9 +361,14 @@ footer {
         }
     }
 }
-@media screen and (max-width: 800px) {
-    #intro button {
-        font-size: 2em;
+@media screen and (max-width: 800px) and (orientation: portrait) {
+    #intro { 
+        h1 {
+            font-size: 1em;
+        }
+        button {
+            font-size: 1.2em;
+        }
     }
     header {
         padding-top: $bleed;
@@ -412,7 +417,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 500px) and (orientation: portrait)  {
+@media screen and (max-width: 500px)  {
     header {
         padding-top: 0;
         background-size: $width-666*.68 $height-666*.68;
