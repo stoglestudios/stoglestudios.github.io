@@ -463,7 +463,7 @@ footer p .em:hover {
     border-top: dashed 1px black;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (orientation: portrait) {
   /* line 416, css.scss */
   header {
     padding-top: 0;

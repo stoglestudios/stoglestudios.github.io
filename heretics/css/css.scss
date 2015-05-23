@@ -412,7 +412,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (orientation: portrait)  {
     header {
         padding-top: 0;
         background-size: $width-666*.68 $height-666*.68;
