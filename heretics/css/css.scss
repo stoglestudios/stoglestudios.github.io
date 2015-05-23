@@ -361,7 +361,7 @@ footer {
         }
     }
 }
-@media screen and (max-width: 800px) and (orientation: portrait) {
+@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     #intro { 
         h1 {
             font-size: 1em;
