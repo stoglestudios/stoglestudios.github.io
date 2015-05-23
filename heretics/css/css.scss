@@ -12,6 +12,9 @@ $soc-size: 22px;
 $col-width: 1000px;
 $corners: 5px;
 
+$height-666: 250px;
+$width-666: 282px;
+
 //-----COLORS--------
 
 $red: #cf2212;
@@ -158,6 +161,7 @@ nav ul li {
         background-image: url("../images/666.png");
         background-repeat: no-repeat;
         background-position: center 5px;
+        background-size: $width-666 $height-666;
         img {
             width: 80%;
             max-width: 437px;
@@ -172,11 +176,14 @@ nav ul li {
     content div {
         display: inline-block;
         width: 94%;
-        margin: $gutter 0 $gutter*2;
+        margin: $gutter 0 0;
         border-radius: $gutter;
         background: linear-gradient(beige, burlywood);
         padding: $gutter;
         text-align: left;
+        &:last-child {
+            margin-bottom: $gutter;
+        }
         img {
             float: left;
             border: solid 2px darkred;
@@ -201,16 +208,26 @@ nav ul li {
         padding: 0;
         p {
             margin: $gutter auto 0;
-            max-width: 700px;
+            width: 50%;
+            padding: 0 3% $gutter;
+            &:nth-child(even) {
+                float: left;
+                clear: both;
+            }
+            &:nth-child(odd) {
+                float: right;
+            }
         }
         div {
             margin: 0;
             width: 100%;
-            padding: 400px $gutter*2 $gutter*2;
+            padding: 40% 0 0;
             background: url("../images/hecateSketch.png") no-repeat top center;
+            background-size: 100%;
         }
         h1 {
-            max-width: 700px;
+            padding: 0 3%;
+            display: block;
             margin: auto;
         }
     }
@@ -231,7 +248,7 @@ nav ul li {
                 content: url("../images/caster.jpg");
             }
             h1:after {
-                content: "Kastir (aka The Devil or The Trickster, Promethius, etc)";
+                content: "Kastir (aka The Devil or The Trickster)";
             }
         }
         &:nth-child(3) {
@@ -295,11 +312,11 @@ footer {
     }
     p {
         font-family: $fonts-main;
-        &:first-child {
+        &:nth-child(1) {
             float: left;
             padding-right: $soc-size*2 + $bleed*2;
         }
-        &:last-child {
+        &:nth-child(2) {
             float: right;
         }
         a {
@@ -309,6 +326,7 @@ footer {
             height: $soc-size;
             border-radius: $corners;
             background: url("../images/socnet-sprite.png") $orange;
+            background-size: 900% 200%;
             margin-left: $bleed;
         }
         .fb {
@@ -345,16 +363,83 @@ footer {
 }
 @media screen and (max-width: 800px) {
     #intro button {
-        font-size: 3em;
+        font-size: 2em;
     }
     header {
+        padding-top: $bleed;
+        background-size: $width-666*.86 $height-666*.86;
         h2 {
             font-size: 1.4em;
+            padding: $bleed 0;
+        }
+    }
+    nav ul li {
+        width: 33.33333%;
+        &:last-child {
+            border-right: solid 1px $orange;
+        }
+    }
+    content div {
+        text-align: center;
+        img {
+            margin: 0;
+            float: none;
+        }
+        h1 {
+            display: block;
+        }
+        p {
+            text-align: left;
+        }
+    }
+    #premise div p {
+        width: 100%;
+        &:nth-child(even) {
+            float: none;
+            padding-bottom: 0;
+        }
+        &:nth-child(odd) {
+            float: none;
+        } 
+    }
+    footer p {
+        padding-bottom: $bleed;
+        &:last-child {
+            clear: both;
+            padding-top: $bleed;
+            border-top: dashed 1px black;
         }
     }
 }
 
-
+@media screen and (max-width: 500px) {
+    header {
+        padding-top: 0;
+        background-size: $width-666*.68 $height-666*.68;
+        h2 {
+            font-size: 1em;
+            padding: $bleed/2 0;
+        }
+    }
+    nav ul li {
+        width: 50%;
+        &:nth-child(odd) {
+            border: none;
+        }
+        &:last-child {
+            border-left: solid 1px $orange;
+            border-right: solid 1px $orange;
+        }
+    }
+    footer p {
+        padding-bottom: $bleed;
+        span {
+            text-align: left;
+            padding-left: $bleed;
+            display: block;
+        }
+    }
+}
 
 
 

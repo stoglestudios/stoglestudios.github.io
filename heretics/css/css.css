@@ -1,4 +1,4 @@
-/* line 35, css.scss */
+/* line 38, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,40 +6,40 @@
   padding: 0;
 }
 
-/* line 41, css.scss */
+/* line 44, css.scss */
 div {
   position: relative;
   display: inline-block;
 }
 
-/* line 45, css.scss */
+/* line 48, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 50, css.scss */
+/* line 53, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 53, css.scss */
+/* line 56, css.scss */
 a img {
   border: 0;
 }
 
-/* line 56, css.scss */
+/* line 59, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 59, css.scss */
+/* line 62, css.scss */
 p {
   font-family: "Antic", ariel, sans-serif;
 }
 
-/* line 62, css.scss */
+/* line 65, css.scss */
 body {
   position: absolute;
   width: 100%;
@@ -52,7 +52,7 @@ body {
   color: #ff9000;
 }
 
-/* line 73, css.scss */
+/* line 76, css.scss */
 #intro {
   position: relative;
   display: inline-block;
@@ -65,7 +65,7 @@ body {
   box-shadow: 0 0 10px black;
   text-align: center;
 }
-/* line 84, css.scss */
+/* line 87, css.scss */
 #intro div {
   position: absolute;
   left: 0;
@@ -75,7 +75,7 @@ body {
   height: 100%;
   opacity: 0;
 }
-/* line 92, css.scss */
+/* line 95, css.scss */
 #intro div h1 {
   color: #ff9000;
   text-shadow: 5px 5px 10px black;
@@ -83,12 +83,12 @@ body {
   margin: 10% 0 0;
   z-index: 10;
 }
-/* line 99, css.scss */
+/* line 102, css.scss */
 #intro div img {
   z-index: 0;
   width: 90%;
 }
-/* line 104, css.scss */
+/* line 107, css.scss */
 #intro button {
   padding: 5px 10px;
   background-color: #ff9000;
@@ -101,13 +101,13 @@ body {
   font-family: "Eagle Lake", cursive;
   font-variant: small-caps;
 }
-/* line 115, css.scss */
+/* line 118, css.scss */
 #intro button:hover {
   background-color: black;
   color: #ff9000;
 }
 
-/* line 121, css.scss */
+/* line 124, css.scss */
 nav ul li {
   display: inline-block;
   list-style: none;
@@ -118,24 +118,24 @@ nav ul li {
   margin: 10px 0 0;
   cursor: pointer;
 }
-/* line 130, css.scss */
+/* line 133, css.scss */
 nav ul li:first-child {
   border-left: none;
 }
-/* line 133, css.scss */
+/* line 136, css.scss */
 nav ul li:hover {
   text-shadow: 0 0 20px #ff9000;
   color: beige;
 }
 
-/* line 138, css.scss */
+/* line 141, css.scss */
 .selected {
   background: linear-gradient(to right, #ff9000, #8b0000);
   text-shadow: 0 0 20px #ff9000;
   color: beige;
 }
 
-/* line 143, css.scss */
+/* line 146, css.scss */
 #page {
   text-align: center;
   width: 94%;
@@ -146,7 +146,7 @@ nav ul li:hover {
   box-shadow: 0 0 10px black;
 }
 
-/* line 152, css.scss */
+/* line 155, css.scss */
 header {
   display: inline-block;
   width: 100%;
@@ -156,30 +156,35 @@ header {
   background-image: url("../images/666.png");
   background-repeat: no-repeat;
   background-position: center 5px;
+  background-size: 282px 250px;
 }
-/* line 161, css.scss */
+/* line 165, css.scss */
 header img {
   width: 80%;
   max-width: 437px;
 }
-/* line 165, css.scss */
+/* line 169, css.scss */
 header h2 {
   font-size: 1.7em;
   padding: 25px 0;
   text-shadow: 0 0 10px black;
 }
 
-/* line 172, css.scss */
+/* line 176, css.scss */
 content div {
   display: inline-block;
   width: 94%;
-  margin: 25px 0 50px;
+  margin: 25px 0 0;
   border-radius: 25px;
   background: linear-gradient(#f5f5dc, #deb887);
   padding: 25px;
   text-align: left;
 }
-/* line 180, css.scss */
+/* line 184, css.scss */
+content div:last-child {
+  margin-bottom: 25px;
+}
+/* line 187, css.scss */
 content div img {
   float: left;
   border: solid 2px darkred;
@@ -187,145 +192,157 @@ content div img {
   height: 200px;
   padding: 10px;
 }
-/* line 187, css.scss */
+/* line 194, css.scss */
 content div h1 {
   display: inline-block;
   padding-top: 25px;
   color: darkred;
   font-size: 1.5em;
 }
-/* line 193, css.scss */
+/* line 200, css.scss */
 content div p {
   color: #600;
   font-size: 1.4em;
   margin-top: 25px;
 }
 
-/* line 200, css.scss */
+/* line 207, css.scss */
 #premise div {
   padding: 0;
 }
-/* line 202, css.scss */
+/* line 209, css.scss */
 #premise div p {
   margin: 25px auto 0;
-  max-width: 700px;
+  width: 50%;
+  padding: 0 3% 25px;
 }
-/* line 206, css.scss */
+/* line 213, css.scss */
+#premise div p:nth-child(even) {
+  float: left;
+  clear: both;
+}
+/* line 217, css.scss */
+#premise div p:nth-child(odd) {
+  float: right;
+}
+/* line 221, css.scss */
 #premise div div {
   margin: 0;
   width: 100%;
-  padding: 400px 50px 50px;
+  padding: 40% 0 0;
   background: url("../images/hecateSketch.png") no-repeat top center;
+  background-size: 100%;
 }
-/* line 212, css.scss */
+/* line 228, css.scss */
 #premise div h1 {
-  max-width: 700px;
+  padding: 0 3%;
+  display: block;
   margin: auto;
 }
 
-/* line 218, css.scss */
+/* line 235, css.scss */
 #characters div p:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 222, css.scss */
+/* line 239, css.scss */
 #characters div:nth-child(1) img {
   content: url("../images/kingsley.jpg");
 }
-/* line 225, css.scss */
+/* line 242, css.scss */
 #characters div:nth-child(1) h1:after {
   content: "Special Agent Kingsley";
 }
-/* line 230, css.scss */
+/* line 247, css.scss */
 #characters div:nth-child(2) img {
   content: url("../images/caster.jpg");
 }
-/* line 233, css.scss */
+/* line 250, css.scss */
 #characters div:nth-child(2) h1:after {
-  content: "Kastir (aka The Devil or The Trickster, Promethius, etc)";
+  content: "Kastir (aka The Devil or The Trickster)";
 }
-/* line 238, css.scss */
+/* line 255, css.scss */
 #characters div:nth-child(3) img {
   content: url("../images/dan.jpg");
 }
-/* line 241, css.scss */
+/* line 258, css.scss */
 #characters div:nth-child(3) h1:after {
   content: "Dan Englemann (aka The Beast)";
 }
-/* line 246, css.scss */
+/* line 263, css.scss */
 #characters div:nth-child(4) img {
   content: url("../images/claire.jpg");
 }
-/* line 249, css.scss */
+/* line 266, css.scss */
 #characters div:nth-child(4) h1:after {
   content: "Claire Jensen-Englemann";
 }
-/* line 254, css.scss */
+/* line 271, css.scss */
 #characters div:nth-child(5) img {
   content: url("../images/hecate.jpg");
 }
-/* line 257, css.scss */
+/* line 274, css.scss */
 #characters div:nth-child(5) h1:after {
   content: "Hecate";
 }
-/* line 262, css.scss */
+/* line 279, css.scss */
 #characters div:nth-child(6) img {
   content: url("../images/stewart.jpg");
 }
-/* line 265, css.scss */
+/* line 282, css.scss */
 #characters div:nth-child(6) h1:after {
   content: "Professor thomas Stewart";
 }
 
-/* line 271, css.scss */
+/* line 288, css.scss */
 #cosmology div h1:after {
   content: "Cosmology";
 }
 
-/* line 275, css.scss */
+/* line 292, css.scss */
 #author div {
   min-height: 500px;
 }
-/* line 277, css.scss */
+/* line 294, css.scss */
 #author div img {
   content: url("../images/brandon.jpg");
 }
-/* line 280, css.scss */
+/* line 297, css.scss */
 #author div h1:after {
   content: "Brandon Gaius Ogle";
 }
 
-/* line 284, css.scss */
+/* line 301, css.scss */
 #contact div {
   min-height: 500px;
 }
-/* line 286, css.scss */
+/* line 303, css.scss */
 #contact div h1:after {
   content: "Contact";
 }
 
-/* line 290, css.scss */
+/* line 307, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 293, css.scss */
+/* line 310, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 296, css.scss */
+/* line 313, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 298, css.scss */
-footer p:first-child {
+/* line 315, css.scss */
+footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 302, css.scss */
-footer p:last-child {
+/* line 319, css.scss */
+footer p:nth-child(2) {
   float: right;
 }
-/* line 305, css.scss */
+/* line 322, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -333,57 +350,153 @@ footer p a {
   height: 22px;
   border-radius: 5px;
   background: url("../images/socnet-sprite.png") #ff9000;
+  background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 314, css.scss */
+/* line 332, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 316, css.scss */
+/* line 334, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 320, css.scss */
+/* line 338, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 322, css.scss */
+/* line 340, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 326, css.scss */
+/* line 344, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 328, css.scss */
+/* line 346, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 332, css.scss */
+/* line 350, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 334, css.scss */
+/* line 352, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 338, css.scss */
+/* line 356, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 340, css.scss */
+/* line 358, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 347, css.scss */
+  /* line 365, css.scss */
   #intro button {
-    font-size: 3em;
+    font-size: 2em;
   }
 
-  /* line 351, css.scss */
+  /* line 368, css.scss */
+  header {
+    padding-top: 10px;
+    background-size: 242.52px 215px;
+  }
+  /* line 371, css.scss */
   header h2 {
     font-size: 1.4em;
+    padding: 10px 0;
+  }
+
+  /* line 376, css.scss */
+  nav ul li {
+    width: 33.33333%;
+  }
+  /* line 378, css.scss */
+  nav ul li:last-child {
+    border-right: solid 1px #ff9000;
+  }
+
+  /* line 382, css.scss */
+  content div {
+    text-align: center;
+  }
+  /* line 384, css.scss */
+  content div img {
+    margin: 0;
+    float: none;
+  }
+  /* line 388, css.scss */
+  content div h1 {
+    display: block;
+  }
+  /* line 391, css.scss */
+  content div p {
+    text-align: left;
+  }
+
+  /* line 395, css.scss */
+  #premise div p {
+    width: 100%;
+  }
+  /* line 397, css.scss */
+  #premise div p:nth-child(even) {
+    float: none;
+    padding-bottom: 0;
+  }
+  /* line 401, css.scss */
+  #premise div p:nth-child(odd) {
+    float: none;
+  }
+
+  /* line 405, css.scss */
+  footer p {
+    padding-bottom: 10px;
+  }
+  /* line 407, css.scss */
+  footer p:last-child {
+    clear: both;
+    padding-top: 10px;
+    border-top: dashed 1px black;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 416, css.scss */
+  header {
+    padding-top: 0;
+    background-size: 191.76px 170px;
+  }
+  /* line 419, css.scss */
+  header h2 {
+    font-size: 1em;
+    padding: 5px 0;
+  }
+
+  /* line 424, css.scss */
+  nav ul li {
+    width: 50%;
+  }
+  /* line 426, css.scss */
+  nav ul li:nth-child(odd) {
+    border: none;
+  }
+  /* line 429, css.scss */
+  nav ul li:last-child {
+    border-left: solid 1px #ff9000;
+    border-right: solid 1px #ff9000;
+  }
+
+  /* line 434, css.scss */
+  footer p {
+    padding-bottom: 10px;
+  }
+  /* line 436, css.scss */
+  footer p span {
+    text-align: left;
+    padding-left: 10px;
+    display: block;
   }
 }
