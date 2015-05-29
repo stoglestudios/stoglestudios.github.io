@@ -3,6 +3,8 @@
 // Search Products Functioon
 function searchProducts(evt) {
     $results = $("#results");
+    $submit = $("input[type=submit]");
+    $submit.text() = "Searching...";
     evt.preventDefault();
     $results.html( "" );
     // grab search params, format / Set Vars
@@ -59,9 +61,11 @@ function searchProducts(evt) {
             $results.append( displayHTML );
             $(".avail").click( function () {
                 alert("This feature is currently unavaible. Sorry for the inconvience.");
-            });
-        });
-    }
+            }); // end click()
+            $submit.text() = "Submit";
+        }); // end getJSON
+    } //end If GN
+    
     // Get Childrens Books Data
 
     // Get Merchandise Data
