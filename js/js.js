@@ -40,8 +40,8 @@ function searchProducts(evt) {
             var displayHTML = '<ul class="merchList">';
             $.each( response, function ( index, value ) {
                 displayHTML += '<li>';
-                    if (photoExists(url)) {
-                        displayHTML += '<img alt="' + value.coverPhoto + '" src="' + photoDir + value.coverPhoto + '">';
+                    if ( photoExists( photoDir + value.coverPhoto ) ) {
+                        displayHTML += '<img alt="' + value.series + ': ' + value.name + ', part ' + value.partNum + ' Cover Image" src="' + photoDir + value.coverPhoto + '">';
                     } else {
                         displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'h-np.jpg">';
                     }
