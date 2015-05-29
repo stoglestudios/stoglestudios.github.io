@@ -308,37 +308,53 @@ footer a:hover {
   border-radius: 5px;
   background-color: #dddddd;
 }
+/* line 298, css.scss */
+#results ul {
+  list-style: none;
+  background-color: white;
+}
+/* line 301, css.scss */
+#results ul img {
+  float: left;
+  width: 200px;
+  background-color: darkgray;
+}
+/* line 306, css.scss */
+#results ul h3 {
+  font-weight: 700;
+  font-style: italic;
+}
 
 @media screen and (max-width: 800px) {
-  /* line 301, css.scss */
+  /* line 314, css.scss */
   .content div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 305, css.scss */
+  /* line 318, css.scss */
   .content div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 310, css.scss */
+  /* line 323, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 314, css.scss */
+  /* line 327, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 318, css.scss */
+  /* line 331, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 321, css.scss */
+  /* line 334, css.scss */
   nav {
     font-size: .8em;
   }

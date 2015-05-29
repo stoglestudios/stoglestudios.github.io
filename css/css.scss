@@ -295,6 +295,19 @@ input[type=submit] {
     padding: $gutter 5%;
     border-radius: $corners;
     background-color: $grey;
+    ul {
+        list-style: none;
+        background-color: white;
+        img {
+            float: left;
+            width: 200px;
+            background-color: darkgray;
+        }
+        h3 {
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
 }
 @media screen and (max-width: 800px) {
     .content {
