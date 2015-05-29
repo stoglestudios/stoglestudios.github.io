@@ -298,6 +298,9 @@ input[type=submit] {
     ul {
         list-style: none;
         background-color: white;
+        li {
+            clear: both;
+        }
         img {
             float: left;
             width: 180px;
@@ -307,7 +310,7 @@ input[type=submit] {
         }
         h3 {
             font-weight: 700;
-            margin: $gutter;
+            padding-top: $gutter;
         }
         p {
             margin: 0 $gutter $gutter 0;
