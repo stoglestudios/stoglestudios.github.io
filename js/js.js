@@ -36,7 +36,7 @@ function searchProducts(evt) {
 			displayHTML += '</li>';
 		});
 		displayHTML += '</ul>';
-		$("#div").html( displayHTML );
+		$results.html( displayHTML );
 	});
     
     // Build No Matches Responses -> Currently Temp Output
