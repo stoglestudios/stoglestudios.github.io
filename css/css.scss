@@ -300,13 +300,17 @@ input[type=submit] {
         background-color: white;
         img {
             float: left;
-            width: 200px;
+            width: 180px;
+            min-height: 270px;
             background-color: darkgray;
+            margin: $gutter;
         }
         h3 {
             font-weight: 700;
-            font-style: italic;
+            margin: $gutter;
         }
+        p {
+            margin: 0 $gutter $gutter 0;
     }
 }
 @media screen and (max-width: 800px) {

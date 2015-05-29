@@ -31,7 +31,7 @@ function searchProducts(evt) {
 			displayHTML += '<li>';
             displayHTML += '<img src="' + photoDir + value.coverPhoto + '">';
             displayHTML += '<h1>' + value.name + '</h1>';
-            displayHTML += '<h3>Issue: ' + value.issue + ' - part: ' + value.partNum + ' of ' + value.ofPart + '</h3>';
+            displayHTML += '<h3>Issue: ' + value.issue + ' - <i>part ' + value.partNum + ' of ' + value.ofPart + '</i></h3>';
             displayHTML += '<p>' + value.description + '</p>';
 			displayHTML += '</li>';
 		});
