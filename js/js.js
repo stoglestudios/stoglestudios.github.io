@@ -3,7 +3,7 @@
 // Search Products Functioon
 function searchProducts(evt) {
     $results = $("#results");
-    $submit = $("input['type=submit']");
+    $submit = $("input[type='submit']");
     $submit.text("Searching...");
     evt.preventDefault();
     $results.html( "" );
