@@ -306,13 +306,9 @@ input[type=submit] {
         }
         h1 {
             clear: right;
-            font-size: 1.5em;
-            i {
-                font-size: .7em;
-            }
+            font-size: 1.7em;
         }
         img {
-            clear: both;
             float: left;
             width: 180px;
             min-height: 270px;
@@ -320,12 +316,11 @@ input[type=submit] {
             margin: 0 $gutter $gutter 0;
         }
         button {
-            clear: both;
             float: right;
             padding: $corners;
             border: solid grey 1px;
             background-color: lightgrey;
-            color: darkgreen;
+            color: grey;
             font-size: 1em;
             border-radius: $corners;
         }
@@ -334,7 +329,7 @@ input[type=submit] {
             padding: $corners;
             border: solid green 1px;
             background-color: darkseagreen;
-            color: green;
+            color: darkgreen;
             border-radius: $corners;
             &:hover {
                 color: white;
@@ -343,9 +338,10 @@ input[type=submit] {
         }
         h3 {
             font-weight: 700;
+            margin-bottom: $gutter;
         }
         p {
-            margin: $gutter $gutter $gutter 0;
+            margin: 0 $gutter $gutter 0;
         }
     }
 }
