@@ -306,9 +306,9 @@ input[type=submit] {
         }
         h1 {
             clear: right;
-            font-size: 1.5em;
+            font-size: 2em;
             i {
-                font-size: 1.2em;
+                font-size: .5em;
             }
         }
         img {
@@ -323,7 +323,8 @@ input[type=submit] {
             padding: $corners;
             border: solid grey 1px;
             background-color: lightgrey;
-            color: grey;
+            color: darkgreen;
+            font-size: 1.2em;
             border-radius: $corners;
         }
         button.avail {
