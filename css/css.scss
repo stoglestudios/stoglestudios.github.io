@@ -321,8 +321,17 @@ input[type=submit] {
         button {
             float: right;
             padding: $corners;
+            border: solid grey 1px;
             background-color: lightgrey;
             color: grey;
+            border-radius: $corners;
+        }
+        button.avail {
+            float: right;
+            padding: $corners;
+            border: solid green 1px;
+            background-color: darkseagreen;
+            color: green;
             border-radius: $corners;
         }
         h3 {

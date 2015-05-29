@@ -31,7 +31,11 @@ function searchProducts(evt) {
             $.each( response, function ( index, value ) {
                 displayHTML += '<li>';
                     displayHTML += '<img alt="' + value.coverPhoto + '" src="' + photoDir + value.coverPhoto + '">';
-                    displayHTML += '<button>' + value.price + '</button>';
+                    displayHTML += '<button ';
+                    if ( value.avail ) {
+                        displayHTML += 'class="avail"';
+                    }
+                    displayHTML += '>' + value.price + '</button>';
                     displayHTML += '<h1>' + value.name + ' <i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h1>';
                     displayHTML += '<h3>' + value.series + ' - Issue: ' + value.issue + '</h3>';
                     displayHTML += '<p>' + value.description + '</p>';
