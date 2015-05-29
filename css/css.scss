@@ -299,6 +299,9 @@ input[type=submit] {
         list-style: none;
         background-color: white;
         li {
+            padding: $gutter;
+            margin-bottom: $gutter;
+            border-bottom: solid $bleed $grey;
             clear: both;
         }
         img {
@@ -306,14 +309,13 @@ input[type=submit] {
             width: 180px;
             min-height: 270px;
             background-color: darkgray;
-            margin: $gutter;
+            margin: 0 $gutter $gutter 0;
         }
         h3 {
             font-weight: 700;
-            padding-top: $gutter;
         }
         p {
-            margin: 0 $gutter $gutter 0;
+            margin: $gutter $gutter $gutter 0;
         }
     }
 }

@@ -315,56 +315,58 @@ footer a:hover {
 }
 /* line 301, css.scss */
 #results ul li {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 10px #dddddd;
   clear: both;
 }
-/* line 304, css.scss */
+/* line 307, css.scss */
 #results ul img {
   float: left;
   width: 180px;
   min-height: 270px;
   background-color: darkgray;
-  margin: 20px;
+  margin: 0 20px 20px 0;
 }
-/* line 311, css.scss */
+/* line 314, css.scss */
 #results ul h3 {
   font-weight: 700;
-  padding-top: 20px;
 }
-/* line 315, css.scss */
+/* line 317, css.scss */
 #results ul p {
-  margin: 0 20px 20px 0;
+  margin: 20px 20px 20px 0;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 322, css.scss */
+  /* line 324, css.scss */
   .content div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 326, css.scss */
+  /* line 328, css.scss */
   .content div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 331, css.scss */
+  /* line 333, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 335, css.scss */
+  /* line 337, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 339, css.scss */
+  /* line 341, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 342, css.scss */
+  /* line 344, css.scss */
   nav {
     font-size: .8em;
   }
