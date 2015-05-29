@@ -53,7 +53,7 @@ function searchProducts(evt) {
             });
             displayHTML += '</ul>';
             $results.append( displayHTML );
-            $(".available").click( function () {
+            $(".avail").click( function () {
                 alert("This feature is currently unavaible. Sorry for the inconvience.");
             });
         });

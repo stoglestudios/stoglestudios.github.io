@@ -189,7 +189,7 @@ input[type=submit] {
             text-align: left;
             display: inline-block;
             color: darkslategrey;
-            p:after {
+            p.empty:after {
                 content: $lorem;
             }
             h2:after {
