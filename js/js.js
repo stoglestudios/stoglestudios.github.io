@@ -2,6 +2,7 @@
 
 // Search Products Functioon
 function searchProducts(evt) {
+    $results = $("#results");
     evt.preventDefault();
     $results.html( "" );
     // grab search params, format / Set Vars
@@ -17,7 +18,6 @@ function searchProducts(evt) {
     console.log("Submit Pressed with Params: " + searchFor + " & " + searchInCat);
     
     // Set vars/objs
-    $results = $("#results");
     var displayResults;
     var dataDir = "products/";
     var photoDir = dataDir + "images/";
@@ -32,15 +32,15 @@ function searchProducts(evt) {
             $.each( response, function ( index, value ) {
                 displayHTML += '<li>';
                     displayHTML += '<img alt="' + value.coverPhoto + '" src="' + photoDir + value.coverPhoto + '">';
-                    displayHTML += '<button ';
+                    displayHTML += '<button';
                     if ( value.avail && value.price ) {
-                        displayHTML += 'class="avail"';
+                        displayHTML += ' class="avail"';
                         console.log("issue available!");
                     } else {
                         console.log("issue unavailable :-(");
                     }
                     displayHTML += '>';
-                    if( value.price ) { 
+                    if ( value.price ) { 
                          displayHTML += '$' + value.price;
                     } else {
                         displayHTML += 'unavailable';
