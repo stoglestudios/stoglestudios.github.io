@@ -3,6 +3,7 @@
 // Search Products Functioon
 function searchProducts(evt) {
     evt.preventDefault();
+    $results.html( "" );
     // grab search params, format / Set Vars
     var searchFor = $("input").val();
     var searchInCat = $("select").val();
@@ -32,13 +33,19 @@ function searchProducts(evt) {
                 displayHTML += '<li>';
                     displayHTML += '<img alt="' + value.coverPhoto + '" src="' + photoDir + value.coverPhoto + '">';
                     displayHTML += '<button ';
-                    if ( value.avail ) {
+                    if ( value.avail && value.price ) {
                         displayHTML += 'class="avail"';
                         console.log("issue available!");
                     } else {
                         console.log("issue unavailable :-(");
                     }
-                    displayHTML += '>$' + if( value.price) { value.price } + ' </button>';
+                    displayHTML += '>';
+                    if( value.price ) { 
+                         displayHTML += '$' + value.price;
+                    } else {
+                        displayHTML += 'unavailable';
+                    }
+                    displayHTML += ' </button>';
                     displayHTML += '<h1>' + value.name + ' <i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h1>';
                     displayHTML += '<h3>' + value.series + ' - Issue: ' + value.issue + '</h3>';
                     displayHTML += '<p>' + value.description + '</p>';
