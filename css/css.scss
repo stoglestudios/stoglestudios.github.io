@@ -8,8 +8,8 @@
 //-------------------
 // VARIABLIZE
 //-------------------
-$fonts-main: 'Muli', "Century Gothic", ariel, sans-serif;
-$fonts-sub: 'Oswald', "Futura", helvetica, sans-serif;
+$fonts-main: 'Lato', sans-serif;
+$fonts-sub: 'Quicksand', sans-serif;
 $im-width: 640px;
 $im-height: 360px;
 $logo-height: 80px;
@@ -35,6 +35,7 @@ $blue: #2BA0F9;
 $purple: #A83AAB;
 $yellow: #E0DC59;
 $green: #46922A;
+$grey: #ddd;
 
 $fb-blue: #3c5a96;
 $tw-blue: #59adeb;
@@ -70,11 +71,56 @@ a img {
 a, a:hover, a:visited, a:active {
     text-decoration: none; 
 }
+h1, h2, h3 {
+    font-weight: 400;
+}
 body {
     position: relative;
-    font-family: $fonts-main;
+    font-family: $fonts-sub;
     font-weight: 400;
     background: url("../images/grid-big.png") repeat $steel;
+}
+form {
+    padding: $gutter;
+    background-color: $grey;
+    border-radius: $corners;
+    &:child {
+        
+    }
+}
+input[type=text] {
+    color: $purple;
+    background-color: white;
+    border: solid 1px $purple;
+    border-radius: $corners;
+    padding: $corners;
+    width: 50%;
+    margin-right: $bleed;
+    height: 25px;
+}
+select {
+    
+    display: inline-block;
+    color: white;
+    background-color: $blue;
+    line-height: 1;
+    width: 25%;
+    margin-right: $bleed;
+    padding: $corners;
+    height: 25px;
+}
+input[type=submit] {
+    border-radius: $corners;
+    color: white;
+    background-color: $purple;
+    border: 0;
+    padding: $corners;
+    width: 15%;
+    &:hover {
+        background-color: $blue;
+        cursor: pointer;
+    }
+    height: 25px;
 }
 #page {
     width: 100%;
@@ -82,16 +128,105 @@ body {
     min-width: 200px;
     overflow: hidden;
     margin: $bleed auto 0;
-    background: url("../images/cross.png") repeat #ddd;
     box-shadow: 0 0 10px black;
+    background-color: $grey;
 } 
     header {
         display: inline-block;
         width: 100%;
-        height: $head-height;
-        padding: $gutter $gutter;
         text-align: center;
         background: linear-gradient(#444, $aluminum);
+        a {
+            width: 60%; 
+            max-width: 370px;
+        }
+        img {
+            display: inline-block;
+            width: 100%;
+            margin: $gutter 0 -1*($gutter);
+        }
+        
+    }
+    nav {
+        width: 100%;
+        color: white;
+        box-shadow: 0 2px 5px black;
+        font-size: 1em;
+        background: url("../images/gel-btn.png") repeat-x #A83AAB;
+        ul {
+            list-style: none;
+            li {
+                width: 20%;
+                display: inline-block;
+                a {
+                    width: 100%;
+                    text-align: center;
+                    color: white;
+                    line-height: $gutter*2;
+                    &:hover {
+                        background: url("../images/gel-btn.png") repeat-x $green;
+                    }
+                }
+                .selected {
+                    background: url("../images/gel-btn.png") repeat-x $blue;
+                }
+            }
+        }
+    }
+    content {
+        display: block;
+        overflow: hidden;
+        min-height: 200px;
+        margin: $gutter; 
+        text-align: center;
+        padding: $gutter;
+        background-color: white;
+        border-radius: $corners;
+        img {
+            width: 100%;
+        }
+        div {
+            text-align: left;
+            display: inline-block;
+            color: darkslategrey;
+            p:after {
+                content: $lorem;
+            }
+            h2:after {
+                content: "Section Title";
+            }
+            h2 {
+                color: $green;
+                margin-bottom: $bleed;   
+            }
+        }
+        div:nth-child(odd) {
+            width: 50%;
+            float: left;
+            padding: 2% 5%;
+        }
+        div:nth-child(even) {
+            width: 50%;
+            float: right;
+            padding: 2% 5%;
+        }
+        .closer {
+            clear: both;
+        }
+    } 
+    footer {
+        display: block;
+        text-align: right;
+        font-size: .7em;
+        padding: $bleed $gutter*2;
+        background: linear-gradient($green, #030);
+        color: white;
+        a {
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
             #socnet {
             float: right;
@@ -153,84 +288,14 @@ body {
                 }
             }
         }
-    nav {
-        width: 100%;
-        padding: 0 $gutter;
-        color: white;
-        box-shadow: 0 2px 5px black;
-        background: url("../images/gel-btn.png") repeat-x #A83AAB;
-        ul {
-            list-style: none;
-            li {
-                width: 20%;
-                display: inline-block;
-                a {
-                    width: 100%;
-                    text-align: center;
-                    color: white;
-                    line-height: $gutter*2;
-                    &:hover {
-                        background: url("../images/gel-btn.png") repeat-x $green;
-                    }
-                }
-            }
-        }
-    }
-    content {
-        display: block;
-        overflow: hidden;
-        min-height: 200px;
-        margin: $gutter; 
-        text-align: center;
-        padding: $gutter;
-        background-color: white;
-        border-radius: $corners;
-        img {
-            width: 100%;
-        }
-        div {
-            text-align: left;
-            display: inline-block;
-            color: darkslategrey;
-            p:after {
-                content: $lorem;
-            }
-            h2:after {
-                content: "Section Title";
-            }
-            h2 {
-                color: $green;
-                margin-bottom: $bleed;   
-            }
-        }
-        div:nth-child(odd) {
-            width: 50%;
-            float: left;
-            padding: 2% 5%;
-        }
-        div:nth-child(even) {
-            width: 50%;
-            float: right;
-            padding: 2% 5%;
-        }
-        .closer {
-            clear: both;
-        }
-    } 
-    footer {
-        display: block;
-        text-align: right;
-        font-size: .7em;
-        padding: $bleed $gutter*2;
-        background: linear-gradient($green, #030);
-        color: white;
-        a {
-            color: white;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+#results {
+    width: 100%;
+    margin-top: $gutter;
+    min-height: 300px;
+    padding: $gutter 5%;
+    border-radius: $corners;
+    background-color: $grey;
+}
 @media screen and (max-width: 800px) {
     .content {
         div:nth-child(odd) {
@@ -241,5 +306,19 @@ body {
             width: 100%;
             float: none;
         }
+    }
+    input[type=text] {
+        width: 100%;
+        margin-bottom: $bleed;
+    }
+    select {
+        width: 100%;
+        margin-bottom: $bleed;
+    }
+    input[type=submit] {
+        width: 50%;
+    }
+    nav {
+        font-size: .8em;
     }
 }

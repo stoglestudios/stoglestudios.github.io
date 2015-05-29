@@ -34,7 +34,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html" class="selected">Home</a>
+                        <a href="index.html">Home</a>
                     </li><li>
                         <a href="about.html">About</a>
                     </li><li>
@@ -42,30 +42,23 @@
                     </li><li>
                         <a href="contact.html">Contact</a>
                     </li><li>
-                        <a href="shop.html">Shop</a>
+                        <a href="shop.html" class="selected">Shop</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <content class="content" id="home-content">
-            <img src="images/">
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            <div class="closer"></div>
+        <content class="content" id="shop-content">
+            <form action="" id="search-products">
+                <input type="text" name="searchTerm" placeholder="Search for Items...">
+                <select name="catagory">
+                    <option value="" disabled selected>Search by Catagory</option>
+                    <option value="childrensbooks">Children's Books</option>
+                    <option value="graphicnovels">Graphic Novels</option>
+                    <option value="merchandise">Merchandise</option>
+                </select>
+                <input type="submit">
+            </form>
+            <div id="results"></div>
         </content>
         <footer>
             <a href="http://www.stoglestudios.com" target="_blank">
