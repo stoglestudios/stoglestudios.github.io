@@ -333,6 +333,10 @@ input[type=submit] {
             background-color: darkseagreen;
             color: green;
             border-radius: $corners;
+            &:hover {
+                color: white;
+                background-color: green;
+            }
         }
         h3 {
             font-weight: 700;
