@@ -1,5 +1,14 @@
 //Authored by Brandon Gaius Ogle
 
+// Photo exists testing function
+function photoExists(url) {
+$('<img src="'+ url +'">').load(function() {
+    return true;
+}).bind('error', function() {
+    return false;
+});
+}
+
 // Search Products Functioon
 function searchProducts(evt) {
     $results = $("#results");
@@ -31,7 +40,11 @@ function searchProducts(evt) {
             var displayHTML = '<ul class="merchList">';
             $.each( response, function ( index, value ) {
                 displayHTML += '<li>';
-                    displayHTML += '<img alt="' + value.coverPhoto + '" src="' + photoDir + value.coverPhoto + '">';
+                    if (photoExists(url)) {
+                        displayHTML += '<img alt="' + value.coverPhoto + '" src="' + photoDir + value.coverPhoto + '">';
+                    } else {
+                        displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'h-np.jpg">';
+                    }
                     displayHTML += '<button';
                     if ( value.avail && value.price ) {
                         displayHTML += ' class="avail"';
