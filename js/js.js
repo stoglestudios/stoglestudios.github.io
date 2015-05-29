@@ -4,8 +4,10 @@
 function photoExists(url) {
 $('<img src="'+ url +'">').load(function() {
     return true;
+    console.log("success! " + url);
 }).bind('error', function() {
     return false;
+    console.log("Fail :(" + url);
 });
 }
 
@@ -59,7 +61,7 @@ function searchProducts(evt) {
                         displayHTML += 'unavailable';
                     }
                     displayHTML += ' </button>';
-                    displayHTML += '<h1>' + value.name + ' <i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h1>';
+                    displayHTML += '<h1>' + value.name + '</h1><h3><i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h3>';
                     displayHTML += '<h3>' + value.series + ' - Issue: ' + value.issue + '</h3>';
                     displayHTML += '<p>' + value.description + '</p>';
                 displayHTML += '</li>';
