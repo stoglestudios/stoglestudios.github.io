@@ -1,29 +1,38 @@
 [
 	{
-		name : "Heretics Baseball Hat",
-		type : "Baseball Hat",
-		sizes : [7, 8, 9, 10, 11],
-		colors: ["Black", "White"],
-		avail : true,
-		coverPhoto : "bh-bl.jpg",
-		description : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
+		"name" : "Heretics Baseball Hat",
+		"type" : "Baseball Hat",
+		"sizes" : [7, 8, 9, 10, 11],
+		"colors" : ["Black", "White"],
+		"avail" : true,
+		"coverPhoto" : "bh-bl.jpg",
+		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
 	{
-		name : "Heretics Coffee Mug",
-		type : "Coffee Mug",
-		sizes : 0,
-		colors: ["Black", "Red"],
-		avail : true,
-		coverPhoto : "cm-wh.jpg",
-		description : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
+		"name" : "Heretics Coffee Mug",
+		"type" : "Coffee Mug",
+		"sizes" : 0,
+		"colors" : ["Black", "Red"],
+		"avail" : true,
+		"coverPhoto" : "cm-wh.jpg",
+		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
 	{
-		name : "Heretics T-Shirt",
-		type : "T-Shirt",
-		sizeMin : ["XS", "S", "M", "L", "XL", "XXL"],
-		color: ["black", "Red"],
-		avail : true,
-		coverPhoto : "ts-bl.jpg",
-		description : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
+		"name" : "Heretics Men/'s T-Shirt",
+		"type" : "T-Shirt",
+		"sizeMin" : ["XS", "S", "M", "L", "XL", "XXL"],
+		"color" : ["black", "Red"],
+		"avail" : true,
+		"coverPhoto" : "ts-mn.jpg",
+		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
+	{
+		"name" : "Heretics Women/'s T-Shirt",
+		"type" : "T-Shirt",
+		"sizeMin" : ["XS", "S", "M", "L", "XL", "XXL"],
+		"color" : ["black", "Red", "white"],
+		"avail" : true,
+		"coverPhoto" : "ts-wm.jpg",
+		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
+	}
 ]
