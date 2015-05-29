@@ -323,10 +323,9 @@ footer a:hover {
 /* line 307, css.scss */
 #results ul h1 {
   clear: right;
-  margin-top: 20px;
   font-size: 1.7em;
 }
-/* line 312, css.scss */
+/* line 311, css.scss */
 #results ul img {
   float: left;
   width: 180px;
@@ -334,8 +333,9 @@ footer a:hover {
   background-color: darkgray;
   margin: 0 20px 20px 0;
 }
-/* line 319, css.scss */
+/* line 318, css.scss */
 #results ul button {
+  margin-bottom: 20px;
   float: right;
   padding: 5px;
   border: solid grey 1px;

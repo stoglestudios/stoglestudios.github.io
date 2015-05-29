@@ -306,7 +306,6 @@ input[type=submit] {
         }
         h1 {
             clear: right;
-            margin-top: $gutter;
             font-size: 1.7em;
         }
         img {
@@ -317,6 +316,7 @@ input[type=submit] {
             margin: 0 $gutter $gutter 0;
         }
         button {
+            margin-bottom: $gutter;
             float: right;
             padding: $corners;
             border: solid grey 1px;
