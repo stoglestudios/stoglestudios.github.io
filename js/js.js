@@ -62,7 +62,7 @@ function searchProducts(evt) {
             $(".avail").click( function () {
                 alert("This feature is currently unavaible. Sorry for the inconvience.");
             }); // end click()
-            $submit.text() = "Submit";
+            //$submit.text() = "Submit";
         }); // end getJSON
     } //end If GN
     
