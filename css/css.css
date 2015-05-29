@@ -321,6 +321,15 @@ footer a:hover {
   clear: both;
 }
 /* line 307, css.scss */
+#results ul h1 {
+  clear: right;
+  font-size: 1.5em;
+}
+/* line 310, css.scss */
+#results ul h1 i {
+  font-size: 1.2em;
+}
+/* line 314, css.scss */
 #results ul img {
   float: left;
   width: 180px;
@@ -328,45 +337,53 @@ footer a:hover {
   background-color: darkgray;
   margin: 0 20px 20px 0;
 }
-/* line 314, css.scss */
+/* line 321, css.scss */
+#results ul button {
+  float: right;
+  padding: 5px;
+  background-color: lightgrey;
+  color: grey;
+  border-radius: 5px;
+}
+/* line 328, css.scss */
 #results ul h3 {
   font-weight: 700;
 }
-/* line 317, css.scss */
+/* line 331, css.scss */
 #results ul p {
   margin: 20px 20px 20px 0;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 324, css.scss */
+  /* line 338, css.scss */
   .content div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 328, css.scss */
+  /* line 342, css.scss */
   .content div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 333, css.scss */
+  /* line 347, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 337, css.scss */
+  /* line 351, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 341, css.scss */
+  /* line 355, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 344, css.scss */
+  /* line 358, css.scss */
   nav {
     font-size: .8em;
   }
