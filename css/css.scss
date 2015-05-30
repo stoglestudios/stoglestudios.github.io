@@ -309,10 +309,12 @@ input[type=submit] {
         }
         img {
             float: left;
-            width: 180px;
-            min-height: 270px;
+            max-width: 180px;
+            min-width: 140px;
+            width: 20%;
             background-color: darkgray;
             margin: 0 $gutter $gutter 0;
+            box-shadow: 2px 2px 5px grey;
         }
         button {
             margin-bottom: $gutter;
@@ -369,5 +371,10 @@ input[type=submit] {
     }
     nav {
         font-size: .8em;
+    }
+    #results ul {
+        h1 {
+            clear: both;
+        }
     }
 }

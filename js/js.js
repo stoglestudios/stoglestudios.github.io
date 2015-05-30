@@ -11,6 +11,7 @@ function searchProducts(evt) {
     $submit.prop("value", "Searching...");
     // grab search params, format / Set Vars
     var searchFor = $("input").val();
+    searchFor = searchFor.toLowerCase();
     var searchInCat = $("select").val();
     var displayCat;
     $results = $("#results");
@@ -75,37 +76,42 @@ function searchProducts(evt) {
     */
     if ( searchInCat === "graphicnovels" || searchInCat === "" || searchInCat === "all") {
         $.getJSON( graphicNovelDataURL, function ( response ) {
-            var displayHTML = '<ul class="merchList">';
+            var displayHTML = '<ul class="merchList" id="comics">';
+            var stringSearch;
             $.each( response, function ( index, value ) {
-                numFound++;
-                displayHTML += '<li>';
-                    if ( value.coverPhoto != "" ) {
-                        displayHTML += '<img alt="' + value.series + ': ' + value.name + ', part ' + value.partNum + ' Cover Image" src="' + photoDir + value.coverPhoto + '">';
-                    } else {
-                        displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'h-np.jpg">';
-                    }
-                    displayHTML += '<button';
-                    if ( value.avail && value.price ) {
-                        displayHTML += ' class="avail"';
-                        console.log("issue available!");
-                    } else {
-                        console.log("issue unavailable :-(");
-                    }
-                    displayHTML += '>';
-                    if ( value.price ) { 
-                         displayHTML += '$' + value.price;
-                    } else {
-                        displayHTML += 'unavailable';
-                    }
-                    displayHTML += ' </button>';
-                    displayHTML += '<h1>' + value.name + '</h1><h3><i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h3>';
-                    displayHTML += '<h3>' + value.series + ' - Issue: ' + value.issue + '</h3>';
-                    displayHTML += '<p>' + value.description + '</p>';
-                displayHTML += '</li>';
-            });
+                stringSearch = value.name + value.author + value.illustrator + value.series + value.description;
+                stringSearch = stringSearch.toLowerCase();
+                if ( searchFor === "" || stringSearch.indexOf( searchFor ) !== -1 ) {
+                    numFound++;
+                    displayHTML += '<li>';
+                        if ( value.coverPhoto != "" ) {
+                            displayHTML += '<img alt="' + value.series + ': ' + value.name + ', part ' + value.partNum + ' Cover Image" src="' + photoDir + value.coverPhoto + '">';
+                        } else {
+                            displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'h-np.jpg">';
+                        }
+                        displayHTML += '<button';
+                        if ( value.avail && value.price ) {
+                            displayHTML += ' class="avail"';
+                            console.log("issue available!");
+                        } else {
+                            console.log("issue unavailable :-(");
+                        }
+                        displayHTML += '>';
+                        if ( value.price ) { 
+                             displayHTML += '$' + value.price;
+                        } else {
+                            displayHTML += 'unavailable';
+                        }
+                        displayHTML += ' </button>';
+                        displayHTML += '<h1>' + value.name + '</h1><h3><i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h3>';
+                        displayHTML += '<h3>' + value.series + ' - Issue: ' + value.issue + '</h3>';
+                        displayHTML += '<p>' + value.description + '</p>';
+                    displayHTML += '</li>';
+                }
+            }); // end each
             displayHTML += '</ul>';
             $results.append( displayHTML );
-            $(".avail").click( function () {
+            $("#comics .avail").click( function () {
                 alert("This feature is currently unavaible. Sorry for the inconvience.");
             }); // end click()
             searchCompletes++;
@@ -117,10 +123,45 @@ function searchProducts(evt) {
     // Get Childrens Books Data
     if ( searchInCat === "childrensbooks" || searchInCat === "" || searchInCat === "all" ) {
         $.getJSON( childrensBooksDataURL, function ( response ) {
-            //var displayHTML = '<ul class="merchList">';
+            var displayHTML = '<ul class="merchList" id="kids">';
+            var stringSearch;
             $.each( response, function ( index, value ) {
-                numFound++;
+                stringSearch = value.title + value.author + value.illustrator + value.description;
+                stringSearch = stringSearch.toLowerCase();
+                if ( searchFor === "" || stringSearch.indexOf( searchFor ) !== -1 ) {
+                    numFound++;
+                    displayHTML += '<li>';
+                        if ( value.coverPhoto != "" ) {
+                            displayHTML += '<img alt="' + value.title  + ' Cover Image" src="' + photoDir + value.coverPhoto + '">';
+                        } else {
+                            displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'ch-np.jpg">';
+                        }
+                        displayHTML += '<button';
+                        if ( value.avail && value.price ) {
+                            displayHTML += ' class="avail"';
+                            console.log("issue available!");
+                        } else {
+                            console.log("issue unavailable :-(");
+                        }
+                        displayHTML += '>';
+                        if ( value.price ) { 
+                             displayHTML += '$' + value.price;
+                        } else {
+                            displayHTML += 'unavailable';
+                        }
+                        displayHTML += ' </button>';
+                        displayHTML += '<h1>' + value.title + '</h1>';
+                        displayHTML += '<h3>Author: ' + value.author + '<br>Illustrations: ' + value.illustrator + '</h3>';
+                        displayHTML += '<p>' + value.description + '</p>';
+                    displayHTML += '</li>';
+                }
             }); // end each
+            displayHTML += '</ul>';
+            $results.append( displayHTML );
+            $("#kids .avail").click( function () {
+                alert("This feature is currently unavaible. Sorry for the inconvience.");
+            }); // end click()
+            searchCompletes++;
             $submit.prop("value", "Submit");
             $("#NumOfMatches").text( numFound + " Matches" );
         }); // end getJSON
@@ -128,10 +169,21 @@ function searchProducts(evt) {
     // Get Merchandise Data
     if ( searchInCat === "merchandise" || searchInCat === "" || searchInCat === "all" ) {
         $.getJSON( merchandiseDataURL, function ( response ) {
-            //var displayHTML = '<ul class="merchList">';
+            var displayHTML = '<ul class="merchList" id="merch">';
+            var stringSearch;
             $.each( response, function ( index, value ) {
-                numFound++;
+                //stringSearch = value.name + value.author + value.illustrator + value.series + value.description;
+                stringSearch = stringSearch.toLowerCase();
+                if ( searchFor === "" || stringSearch.indexOf( searchFor ) !== -1 ) {
+                    numFound++;
+                }
             }); // end each
+            displayHTML += '</ul>';
+            $results.append( displayHTML );
+            $("#merch .avail").click( function () {
+                alert("This feature is currently unavaible. Sorry for the inconvience.");
+            }); // end click()
+            searchCompletes++;
             $submit.prop("value", "Submit");
             $("#NumOfMatches").text( numFound + " Matches" );
         }); // end getJSON
