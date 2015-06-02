@@ -8,8 +8,7 @@
 //-------------------
 // VARIABLIZE
 //-------------------
-$fonts-main: 'Lato', sans-serif;
-$fonts-sub: 'Quicksand', sans-serif;
+$fonts-main: 'Quicksand', sans-serif;
 $im-width: 640px;
 $im-height: 360px;
 $logo-height: 80px;
@@ -76,7 +75,7 @@ h1, h2, h3 {
 }
 body {
     position: relative;
-    font-family: $fonts-sub;
+    font-family: $fonts-main;
     font-weight: 400;
     background: url("../images/grid-big.png") repeat $steel;
 }
@@ -177,9 +176,9 @@ input[type=submit] {
         display: block;
         overflow: hidden;
         min-height: 200px;
-        margin: $gutter; 
+        margin: 2%; 
         text-align: center;
-        padding: $gutter;
+        padding: 2%;
         background-color: white;
         border-radius: $corners;
         img {
@@ -189,29 +188,29 @@ input[type=submit] {
             text-align: left;
             display: inline-block;
             color: darkslategrey;
-            p.empty:after {
-                content: $lorem;
-            }
-            h2:after {
-                content: "Section Title";
-            }
             h2 {
                 color: $green;
                 margin-bottom: $bleed;   
             }
         }
-        div:nth-child(odd) {
+        div:nth-child(even) {
             width: 50%;
             float: left;
             padding: 2% 5%;
         }
-        div:nth-child(even) {
+        div:nth-child(odd) {
             width: 50%;
             float: right;
             padding: 2% 5%;
         }
         .closer {
             clear: both;
+        }
+        .needsText:after {
+            content: $lorem;
+        }
+        .needsTitle:after {
+            content: "Lorem Ipsom Dolar";
         }
     } 
     footer {
@@ -336,6 +335,7 @@ input[type=submit] {
             &:hover {
                 color: white;
                 background-color: green;
+                cursor: pointer;
             }
         }
         h3 {
