@@ -6,37 +6,37 @@
 		"sizes" : ["7", "8", "9", "10", "11"],
 		"colors" : ["Black", "White"],
 		"avail" : true,
-		"coverPhoto" : "bh-bl.jpg",
+		"productPhoto" : "h-bh_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
 	{
 		"name" : "Heretics Coffee Mug",
 		"type" : "Coffee Mug",
 		"price" : 9.99,
-		"sizes" : 0,
-		"colors" : ["Black", "Red"],
+		"sizes" : [0],
+		"colors" : ["Black", "Red", "White"],
 		"avail" : true,
-		"coverPhoto" : "cm-wh.jpg",
+		"productPhoto" : "h-cm_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
 	{
 		"name" : "Heretics Men/'s T-Shirt",
 		"type" : "T-Shirt",
 		"price" : 19.99,
-		"sizes" : ["XS", "S", "M", "L", "XL", "XXL"],
+		"sizes" : ["S", "M", "L", "XL", "XXL"],
 		"colors" : ["black", "Red"],
 		"avail" : true,
-		"coverPhoto" : "ts-mn.jpg",
+		"productPhoto" : "h-ts-mn_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
 	{
 		"name" : "Heretics Women/'s T-Shirt",
 		"type" : "T-Shirt",
 		"price" : 19.99,
-		"sizes" : ["XS", "S", "M", "L", "XL", "XXL"],
-		"colors" : ["black", "Red", "white"],
+		"sizes" : ["Xs", "S", "M", "l"],
+		"colors" : ["black", "red", "white"],
 		"avail" : true,
-		"coverPhoto" : "ts-wm.jpg",
+		"productPhoto" : "h-ts-wm_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	}
 ]

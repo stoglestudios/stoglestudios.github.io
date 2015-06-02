@@ -317,6 +317,7 @@ input[type=submit] {
         }
         button {
             margin-bottom: $gutter;
+            clear: right;
             float: right;
             padding: $corners;
             border: solid grey 1px;
@@ -344,6 +345,24 @@ input[type=submit] {
         }
         p {
             margin: 0 $gutter $gutter 0;
+        }
+        select {
+            background-color: white;
+            color: black;
+        }
+        .colors {
+            clear: right;
+            float: left;
+            max-width: 180px;
+            min-width: 140px;
+            width: 20%;
+            text-transform: capitalize;
+        }
+        .sizes {
+            clear: all;
+            float: right;
+            max-width: 80px;
+            text-transform: uppercase;
         }
     }
 }

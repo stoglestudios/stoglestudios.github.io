@@ -337,6 +337,7 @@ footer a:hover {
 /* line 318, css.scss */
 #results ul button {
   margin-bottom: 20px;
+  clear: right;
   float: right;
   padding: 5px;
   border: solid grey 1px;
@@ -345,7 +346,7 @@ footer a:hover {
   font-size: 1em;
   border-radius: 5px;
 }
-/* line 328, css.scss */
+/* line 329, css.scss */
 #results ul button.avail {
   float: right;
   padding: 5px;
@@ -354,57 +355,78 @@ footer a:hover {
   color: darkgreen;
   border-radius: 5px;
 }
-/* line 335, css.scss */
+/* line 336, css.scss */
 #results ul button.avail:hover {
   color: white;
   background-color: green;
   cursor: pointer;
 }
-/* line 341, css.scss */
+/* line 342, css.scss */
 #results ul h3 {
   font-weight: 700;
   margin-bottom: 20px;
 }
-/* line 345, css.scss */
+/* line 346, css.scss */
 #results ul p {
   margin: 0 20px 20px 0;
 }
+/* line 349, css.scss */
+#results ul select {
+  background-color: white;
+  color: black;
+}
+/* line 353, css.scss */
+#results ul .colors {
+  clear: right;
+  float: left;
+  max-width: 180px;
+  min-width: 140px;
+  width: 20%;
+  text-transform: capitalize;
+}
+/* line 361, css.scss */
+#results ul .sizes {
+  clear: all;
+  float: right;
+  max-width: 80px;
+  text-transform: uppercase;
+}
 
 @media screen and (max-width: 800px) {
-  /* line 352, css.scss */
+  /* line 371, css.scss */
   .content div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 356, css.scss */
+  /* line 375, css.scss */
   .content div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 361, css.scss */
+  /* line 380, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 365, css.scss */
+  /* line 384, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 369, css.scss */
+  /* line 388, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 372, css.scss */
+  /* line 391, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 376, css.scss */
+  /* line 395, css.scss */
   #results ul h1 {
     clear: both;
   }
