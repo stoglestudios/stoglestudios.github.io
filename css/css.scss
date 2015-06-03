@@ -82,66 +82,6 @@ body {
     font-weight: 400;
     background: url("../images/grid-big.png") repeat $steel;
 }
-form {
-    padding: $gutter;
-    background-color: $grey;
-    border-radius: $corners;
-    &:child {
-        
-    }
-}
-input[type=text] {
-    color: $purple;
-    background-color: white;
-    border: solid 1px $purple;
-    border-radius: $corners;
-    padding: $corners;
-    width: 50%;
-    margin-right: $bleed;
-    height: 25px;
-}
-select {
-    display: inline-block;
-    color: white;
-    background-color: $blue;
-    line-height: 1;
-    width: 25%;
-    margin-right: $bleed;
-    padding: $corners;
-    height: 25px;
-}
-input[type=submit] {
-    border-radius: $corners;
-    color: white;
-    background-color: $purple;
-    border: 0;
-    padding: $corners;
-    width: 15%;
-    &:hover {
-        background-color: $blue;
-        cursor: pointer;
-    }
-    height: 25px;
-}
-#lightbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background-color: rgba(0,0,0,.8);
-    img {
-        position: fixed;
-        margin: $gutter 10%;
-        max-width: 400px;
-        width: 80%;
-        border: solid lightgrey 2px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
 #page {
     width: 100%;
     max-width: $col-width - $gutter*2;
@@ -163,7 +103,7 @@ input[type=submit] {
         img {
             display: inline-block;
             width: 100%;
-            margin: $gutter 0 -1*($gutter);
+            margin: $gutter 0 0;
         }
         
     }
@@ -252,6 +192,9 @@ input[type=submit] {
             }
         }
     }
+/**************************
+    SOCNET [SAVE for LATER]
+***************************
             #socnet {
             float: right;
             height: $gutter*2;
@@ -312,6 +255,68 @@ input[type=submit] {
                 }
             }
         }
+**************************/
+
+/**************************
+    SHOP PAGE
+**************************/
+form {
+    padding: $gutter;
+    background-color: $grey;
+    border-radius: $corners;
+}
+input[type=text] {
+    color: $purple;
+    background-color: white;
+    border: solid 1px $purple;
+    border-radius: $corners;
+    padding: $corners;
+    width: 50%;
+    margin-right: $bleed;
+    height: 25px;
+}
+select {
+    display: inline-block;
+    color: white;
+    background-color: $blue;
+    line-height: 1;
+    width: 25%;
+    margin-right: $bleed;
+    padding: $corners;
+    height: 25px;
+}
+input[type=submit] {
+    border-radius: $corners;
+    color: white;
+    background-color: $purple;
+    border: 0;
+    padding: $corners;
+    width: 15%;
+    &:hover {
+        background-color: $blue;
+        cursor: pointer;
+    }
+    height: 25px;
+}
+#lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,.8);
+    img {
+        position: fixed;
+        margin: $gutter 10%;
+        max-width: 400px;
+        width: 80%;
+        border: solid lightgrey 2px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
 #results {
     width: 100%;
     margin-top: $gutter;
@@ -351,7 +356,7 @@ input[type=submit] {
         img {
             float: left;
             max-width: 200px;
-            min-width: 100px;
+            min-width: 120px;
             width: 20%;
             background-color: darkgray;
             margin: 0 $gutter $gutter 0;
@@ -389,11 +394,13 @@ input[type=submit] {
         }
         .colors {
             float: right;
+            width: 20%;
             max-width: 80px;
             text-transform: capitalize;
         }
         .sizes {
             float: right;
+            width: 20%;
             max-width: 80px;
             text-transform: uppercase;
         }

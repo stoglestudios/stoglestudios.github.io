@@ -229,7 +229,7 @@ function searchProducts(evt) {
                         displayHTML += renderProdDiscrimption(
                             value.title,
                             false,
-                            value.author, 
+                            "Authur: " + value.author + " - Illsutrator: " + value.illustrator, 
                             value.description
                         );
                         displayHTML += '</li>';
@@ -283,7 +283,7 @@ function searchProducts(evt) {
                         displayHTML += renderProdDiscrimption(
                             value.name,
                             false,
-                            value.type, 
+                            "Product: " + value.type, 
                             value.description
                         );
                         displayHTML += '</li>'; // close li item
