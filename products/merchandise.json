@@ -4,7 +4,7 @@
 		"type" : "Baseball Hat",
 		"price" : 12.99,
 		"sizes" : ["7", "8", "9", "10", "11"],
-		"colors" : ["Black", "White"],
+		"colors" : ["Black", "red"],
 		"avail" : true,
 		"productPhoto" : "h-bh_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
@@ -14,7 +14,7 @@
 		"type" : "Coffee Mug",
 		"price" : 9.99,
 		"sizes" : [0],
-		"colors" : ["Black", "Red", "White"],
+		"colors" : ["White", "Black"],
 		"avail" : true,
 		"productPhoto" : "h-cm_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
@@ -24,7 +24,7 @@
 		"type" : "T-Shirt",
 		"price" : 19.99,
 		"sizes" : ["S", "M", "L", "XL", "XXL"],
-		"colors" : ["black", "Red"],
+		"colors" : ["Red", "black", "white"],
 		"avail" : true,
 		"productPhoto" : "h-ts-mn_black.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."

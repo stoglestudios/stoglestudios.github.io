@@ -374,17 +374,18 @@ footer a:hover {
 #results ul select {
   background-color: white;
   color: black;
+  margin: 0 20px 20px 0;
 }
-/* line 353, css.scss */
+/* line 354, css.scss */
 #results ul .colors {
-  clear: right;
+  clear: left;
   float: left;
   max-width: 180px;
   min-width: 140px;
   width: 20%;
   text-transform: capitalize;
 }
-/* line 361, css.scss */
+/* line 362, css.scss */
 #results ul .sizes {
   clear: all;
   float: right;
@@ -393,40 +394,40 @@ footer a:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 371, css.scss */
+  /* line 372, css.scss */
   .content div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 375, css.scss */
+  /* line 376, css.scss */
   .content div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 380, css.scss */
+  /* line 381, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 384, css.scss */
+  /* line 385, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 388, css.scss */
+  /* line 389, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 391, css.scss */
+  /* line 392, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 395, css.scss */
+  /* line 396, css.scss */
   #results ul h1 {
     clear: both;
   }

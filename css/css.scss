@@ -349,9 +349,10 @@ input[type=submit] {
         select {
             background-color: white;
             color: black;
+            margin: 0 $gutter $gutter 0;
         }
         .colors {
-            clear: right;
+            clear: left;
             float: left;
             max-width: 180px;
             min-width: 140px;

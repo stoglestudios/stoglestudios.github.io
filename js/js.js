@@ -256,7 +256,7 @@ function searchProducts(evt) {
                 alert("This feature is currently unavaible. Sorry for the inconvience.");
             }); // end click()
             $("select.sizes").change(function () {
-                alert( "Size: " + $(this).val() );
+                //alert( "Size: " + $(this).val() );
             });
             $("select.colors").change(function () {
                 $(this).parent().children("img").css( "background-color", $(this).val() );
