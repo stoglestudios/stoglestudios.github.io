@@ -7,38 +7,43 @@
 }
 
 /* line 56, css.scss */
+ul {
+  list-style: none;
+}
+
+/* line 59, css.scss */
 div {
   position: relative;
 }
 
-/* line 59, css.scss */
+/* line 62, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 64, css.scss */
+/* line 67, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 67, css.scss */
+/* line 70, css.scss */
 a img {
   border: 0;
 }
 
-/* line 70, css.scss */
+/* line 73, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 73, css.scss */
+/* line 76, css.scss */
 h1, h2, h3 {
   font-weight: 400;
 }
 
-/* line 76, css.scss */
+/* line 79, css.scss */
 body {
   position: relative;
   font-family: "Quicksand", sans-serif;
@@ -46,14 +51,14 @@ body {
   background: url("../images/grid-big.png") repeat #203049;
 }
 
-/* line 82, css.scss */
+/* line 85, css.scss */
 form {
   padding: 20px;
   background-color: #dddddd;
   border-radius: 5px;
 }
 
-/* line 90, css.scss */
+/* line 93, css.scss */
 input[type=text] {
   color: #a83aab;
   background-color: white;
@@ -65,7 +70,7 @@ input[type=text] {
   height: 25px;
 }
 
-/* line 100, css.scss */
+/* line 103, css.scss */
 select {
   display: inline-block;
   color: white;
@@ -77,7 +82,7 @@ select {
   height: 25px;
 }
 
-/* line 111, css.scss */
+/* line 113, css.scss */
 input[type=submit] {
   border-radius: 5px;
   color: white;
@@ -87,13 +92,36 @@ input[type=submit] {
   width: 15%;
   height: 25px;
 }
-/* line 118, css.scss */
+/* line 120, css.scss */
 input[type=submit]:hover {
   background-color: #2ba0f9;
   cursor: pointer;
 }
 
-/* line 124, css.scss */
+/* line 126, css.scss */
+#lightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 134, css.scss */
+#lightbox img {
+  position: fixed;
+  margin: 20px 10%;
+  max-width: 400px;
+  width: 80%;
+  border: solid lightgrey 2px;
+}
+/* line 140, css.scss */
+#lightbox img:hover {
+  cursor: pointer;
+}
+
+/* line 145, css.scss */
 #page {
   width: 100%;
   max-width: 1150px;
@@ -104,26 +132,26 @@ input[type=submit]:hover {
   background-color: #dddddd;
 }
 
-/* line 133, css.scss */
+/* line 154, css.scss */
 header {
   display: inline-block;
   width: 100%;
   text-align: center;
   background: linear-gradient(#444444, #aaaaaa);
 }
-/* line 138, css.scss */
+/* line 159, css.scss */
 header a {
   width: 60%;
   max-width: 370px;
 }
-/* line 142, css.scss */
+/* line 163, css.scss */
 header img {
   display: inline-block;
   width: 100%;
   margin: 20px 0 -20px;
 }
 
-/* line 149, css.scss */
+/* line 170, css.scss */
 nav {
   width: 100%;
   color: white;
@@ -131,83 +159,86 @@ nav {
   font-size: 1em;
   background: url("../images/gel-btn.png") repeat-x #a83aab;
 }
-/* line 155, css.scss */
+/* line 176, css.scss */
 nav ul {
   list-style: none;
 }
-/* line 157, css.scss */
+/* line 178, css.scss */
 nav ul li {
   width: 20%;
   display: inline-block;
 }
-/* line 160, css.scss */
+/* line 181, css.scss */
 nav ul li a {
   width: 100%;
   text-align: center;
   color: white;
   line-height: 40px;
 }
-/* line 165, css.scss */
+/* line 186, css.scss */
 nav ul li a:hover {
   background: url("../images/gel-btn.png") repeat-x #46922a;
 }
-/* line 169, css.scss */
+/* line 190, css.scss */
 nav ul li .selected {
   background: url("../images/gel-btn.png") repeat-x #2ba0f9;
 }
 
-/* line 175, css.scss */
+/* line 196, css.scss */
 content {
   display: block;
   overflow: hidden;
   min-height: 200px;
   margin: 2%;
   text-align: center;
-  padding: 2%;
   background-color: white;
   border-radius: 5px;
 }
-/* line 184, css.scss */
-content img {
+/* line 204, css.scss */
+content img.main {
   width: 100%;
 }
-/* line 187, css.scss */
-content div {
+/* line 208, css.scss */
+content .text div {
   text-align: left;
   display: inline-block;
   color: darkslategrey;
 }
-/* line 191, css.scss */
-content div h2 {
+/* line 212, css.scss */
+content .text div h2 {
   color: #46922a;
   margin-bottom: 10px;
 }
-/* line 196, css.scss */
-content div:nth-child(even) {
+/* line 217, css.scss */
+content .text div {
+  padding: 0 2%;
+  margin-bottom: 5%;
+}
+/* line 220, css.scss */
+content .text div:nth-child(odd) {
+  clear: both;
   width: 50%;
   float: left;
-  padding: 2% 5%;
 }
-/* line 201, css.scss */
-content div:nth-child(odd) {
+/* line 225, css.scss */
+content .text div:nth-child(even) {
   width: 50%;
   float: right;
-  padding: 2% 5%;
 }
-/* line 206, css.scss */
-content .closer {
-  clear: both;
+/* line 231, css.scss */
+content .shopping {
+  padding: 2%;
 }
-/* line 209, css.scss */
+/* line 234, css.scss */
 content .needsText:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 212, css.scss */
+/* line 237, css.scss */
 content .needsTitle:after {
   content: "Lorem Ipsom Dolar";
 }
 
-/* line 216, css.scss */
+/* line 241, css.scss */
 footer {
   display: block;
   text-align: right;
@@ -216,23 +247,23 @@ footer {
   background: linear-gradient(#46922a, #003300);
   color: white;
 }
-/* line 223, css.scss */
+/* line 248, css.scss */
 footer a {
   color: white;
 }
-/* line 225, css.scss */
+/* line 250, css.scss */
 footer a:hover {
   text-decoration: underline;
 }
 
-/* line 230, css.scss */
+/* line 255, css.scss */
 #socnet {
   float: right;
   height: 40px;
   font-size: 14px;
   text-align: right;
 }
-/* line 235, css.scss */
+/* line 260, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 40px;
@@ -240,7 +271,7 @@ footer a:hover {
   color: white;
   font-weight: 400;
 }
-/* line 242, css.scss */
+/* line 267, css.scss */
 #socnet a {
   width: 30px;
   height: 30px;
@@ -248,96 +279,120 @@ footer a:hover {
   margin: 5px 0 0 4px;
   background: url("../images/socnet-sprite.png") no-repeat #aaaaaa;
 }
-/* line 249, css.scss */
+/* line 274, css.scss */
 #socnet .fb {
   background-position: 0 -30px;
 }
-/* line 251, css.scss */
+/* line 276, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
   background-color: #3c5a96;
   border-color: #3c5a96;
 }
-/* line 257, css.scss */
+/* line 282, css.scss */
 #socnet .tw {
   background-position: -30px -30px;
 }
-/* line 259, css.scss */
+/* line 284, css.scss */
 #socnet .tw:hover {
   background-position: -30px 0;
   background-color: #59adeb;
   border-color: #59adeb;
 }
-/* line 265, css.scss */
+/* line 290, css.scss */
 #socnet .go {
   background-position: -60px -30px;
 }
-/* line 267, css.scss */
+/* line 292, css.scss */
 #socnet .go:hover {
   background-position: -60px 0;
   background-color: #d82a20;
   border-color: #d82a20;
 }
-/* line 273, css.scss */
+/* line 298, css.scss */
 #socnet .in {
   background-position: -90px -30px;
 }
-/* line 275, css.scss */
+/* line 300, css.scss */
 #socnet .in:hover {
   background-position: -90px 0;
   background-color: #1779b3;
   border-color: #1779b3;
 }
-/* line 281, css.scss */
+/* line 306, css.scss */
 #socnet .em {
   background-position: -120px -30px;
 }
-/* line 283, css.scss */
+/* line 308, css.scss */
 #socnet .em:hover {
   background-position: -120px 0;
   background-color: #999999;
   border-color: #999999;
 }
 
-/* line 290, css.scss */
+/* line 315, css.scss */
 #results {
   width: 100%;
   margin-top: 20px;
   min-height: 300px;
-  padding: 20px 5%;
+  padding: 20px 2%;
   border-radius: 5px;
   background-color: #dddddd;
 }
-/* line 297, css.scss */
+/* line 322, css.scss */
 #results ul {
   list-style: none;
   background-color: white;
 }
-/* line 300, css.scss */
+/* line 325, css.scss */
 #results ul li {
   padding: 20px;
   border-bottom: solid 10px #dddddd;
   clear: both;
 }
-/* line 305, css.scss */
+/* line 329, css.scss */
+#results ul li:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+/* line 335, css.scss */
 #results ul h1 {
-  clear: right;
+  color: #46922a;
   font-size: 1.7em;
 }
-/* line 309, css.scss */
+/* line 339, css.scss */
+#results ul h3 {
+  font-weight: 400;
+  color: #a83aab;
+  margin-bottom: 20px;
+}
+/* line 343, css.scss */
+#results ul h3 i {
+  color: #46922a;
+}
+/* line 347, css.scss */
+#results ul p {
+  color: darkslategrey;
+  margin: 0 20px 20px 0;
+}
+/* line 351, css.scss */
 #results ul img {
   float: left;
-  max-width: 180px;
-  min-width: 140px;
+  max-width: 200px;
+  min-width: 100px;
   width: 20%;
   background-color: darkgray;
   margin: 0 20px 20px 0;
   box-shadow: 2px 2px 5px grey;
 }
-/* line 318, css.scss */
+/* line 359, css.scss */
+#results ul img:hover {
+  cursor: pointer;
+}
+/* line 363, css.scss */
 #results ul button {
   margin-bottom: 20px;
-  clear: right;
   float: right;
   padding: 5px;
   border: solid grey 1px;
@@ -346,89 +401,87 @@ footer a:hover {
   font-size: 1em;
   border-radius: 5px;
 }
-/* line 329, css.scss */
+/* line 373, css.scss */
 #results ul button.avail {
-  float: right;
   padding: 5px;
   border: solid green 1px;
   background-color: darkseagreen;
   color: darkgreen;
   border-radius: 5px;
 }
-/* line 336, css.scss */
+/* line 379, css.scss */
 #results ul button.avail:hover {
   color: white;
   background-color: green;
   cursor: pointer;
 }
-/* line 342, css.scss */
-#results ul h3 {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-/* line 346, css.scss */
-#results ul p {
-  margin: 0 20px 20px 0;
-}
-/* line 349, css.scss */
+/* line 385, css.scss */
 #results ul select {
   background-color: white;
   color: black;
   margin: 0 20px 20px 0;
 }
-/* line 354, css.scss */
+/* line 390, css.scss */
 #results ul .colors {
-  clear: left;
-  float: left;
-  max-width: 180px;
-  min-width: 140px;
-  width: 20%;
+  float: right;
+  max-width: 80px;
   text-transform: capitalize;
 }
-/* line 362, css.scss */
+/* line 395, css.scss */
 #results ul .sizes {
-  clear: all;
   float: right;
   max-width: 80px;
   text-transform: uppercase;
 }
+/* line 400, css.scss */
+#results ul .discription {
+  width: 76%;
+  clear: right;
+  float: right;
+  text-align: left;
+}
 
 @media screen and (max-width: 800px) {
-  /* line 372, css.scss */
+  /* line 410, css.scss */
   .content div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 376, css.scss */
+  /* line 414, css.scss */
   .content div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 381, css.scss */
+  /* line 419, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 385, css.scss */
+  /* line 423, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 389, css.scss */
+  /* line 427, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 392, css.scss */
+  /* line 430, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 396, css.scss */
+  /* line 434, css.scss */
   #results ul h1 {
     clear: both;
+  }
+  /* line 437, css.scss */
+  #results ul .discription {
+    clear: both;
+    width: 100%;
   }
 }

@@ -53,6 +53,9 @@ $pn-red: #c51e23;
     margin: 0;
     padding: 0; 
 }
+ul {
+    list-style: none;
+}
 div {
     position: relative;
 }
@@ -98,7 +101,6 @@ input[type=text] {
     height: 25px;
 }
 select {
-    
     display: inline-block;
     color: white;
     background-color: $blue;
@@ -120,6 +122,25 @@ input[type=submit] {
         cursor: pointer;
     }
     height: 25px;
+}
+#lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,.8);
+    img {
+        position: fixed;
+        margin: $gutter 10%;
+        max-width: 400px;
+        width: 80%;
+        border: solid lightgrey 2px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 #page {
     width: 100%;
@@ -178,33 +199,37 @@ input[type=submit] {
         min-height: 200px;
         margin: 2%; 
         text-align: center;
-        padding: 2%;
         background-color: white;
         border-radius: $corners;
-        img {
+        img.main {
             width: 100%;
         }
-        div {
-            text-align: left;
-            display: inline-block;
-            color: darkslategrey;
-            h2 {
-                color: $green;
-                margin-bottom: $bleed;   
+        .text {
+            div {
+                text-align: left;
+                display: inline-block;
+                color: darkslategrey;
+                h2 {
+                    color: $green;
+                    margin-bottom: $bleed;   
+                }
+            }
+            div {
+                padding: 0 2%;
+                margin-bottom: 5%;
+                &:nth-child(odd) {
+                    clear: both;
+                    width: 50%;
+                    float: left;
+                }
+                &:nth-child(even) {
+                    width: 50%;
+                    float: right;
+                }
             }
         }
-        div:nth-child(even) {
-            width: 50%;
-            float: left;
-            padding: 2% 5%;
-        }
-        div:nth-child(odd) {
-            width: 50%;
-            float: right;
-            padding: 2% 5%;
-        }
-        .closer {
-            clear: both;
+        .shopping {
+            padding: 2%;
         }
         .needsText:after {
             content: $lorem;
@@ -291,7 +316,7 @@ input[type=submit] {
     width: 100%;
     margin-top: $gutter;
     min-height: 300px;
-    padding: $gutter 5%;
+    padding: $gutter 2%;
     border-radius: $corners;
     background-color: $grey;
     ul {
@@ -301,23 +326,42 @@ input[type=submit] {
             padding: $gutter;
             border-bottom: solid $bleed $grey;
             clear: both;
+            &:after {
+                content: " ";
+                display: table;
+                clear: both;
+            }
         }
         h1 {
-            clear: right;
+            color: $green;
             font-size: 1.7em;
+        }
+        h3 {
+            font-weight: 400;
+            color: $purple;
+            margin-bottom: $gutter;
+            i {
+                color: $green;
+            }
+        }
+        p {
+            color: darkslategrey;
+            margin: 0 $gutter $gutter 0;
         }
         img {
             float: left;
-            max-width: 180px;
-            min-width: 140px;
+            max-width: 200px;
+            min-width: 100px;
             width: 20%;
             background-color: darkgray;
             margin: 0 $gutter $gutter 0;
             box-shadow: 2px 2px 5px grey;
+            &:hover {
+                cursor: pointer;
+            }
         }
         button {
             margin-bottom: $gutter;
-            clear: right;
             float: right;
             padding: $corners;
             border: solid grey 1px;
@@ -327,7 +371,6 @@ input[type=submit] {
             border-radius: $corners;
         }
         button.avail {
-            float: right;
             padding: $corners;
             border: solid green 1px;
             background-color: darkseagreen;
@@ -339,31 +382,26 @@ input[type=submit] {
                 cursor: pointer;
             }
         }
-        h3 {
-            font-weight: 700;
-            margin-bottom: $gutter;
-        }
-        p {
-            margin: 0 $gutter $gutter 0;
-        }
         select {
             background-color: white;
             color: black;
             margin: 0 $gutter $gutter 0;
         }
         .colors {
-            clear: left;
-            float: left;
-            max-width: 180px;
-            min-width: 140px;
-            width: 20%;
+            float: right;
+            max-width: 80px;
             text-transform: capitalize;
         }
         .sizes {
-            clear: all;
             float: right;
             max-width: 80px;
             text-transform: uppercase;
+        }
+        .discription {
+            width: 76%;
+            clear: right;
+            float: right;
+            text-align: left;
         }
     }
 }
@@ -395,6 +433,10 @@ input[type=submit] {
     #results ul {
         h1 {
             clear: both;
+        }
+        .discription {
+            clear: both;
+            width: 100%;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 //Global Vars
 
-// Search Products Function - Runs on seacrh button click
+// gets image from db and ensure it matches color in selector
 function getNewPhotoName (a, b) {
     var productColor = a;
     var productPhotoURL = b;
@@ -10,9 +10,89 @@ function getNewPhotoName (a, b) {
     var photoIndex = productPhotoArray.length -1;
     var photoPrefix = productPhotoArray[photoIndex].split("_");
     var photoName = photoPrefix[0] + "_" + productColor.toLowerCase() + ".jpg";
-    return photoName
+    return photoName;
+}
+// render price button
+function renderPriceButton (availibilty, price) {
+    var priceHTML = '<button';
+    if ( availibilty && price ) {
+        priceHTML += ' class="avail"';
+    }
+    priceHTML += '>';
+    if ( price ) { 
+         priceHTML += '$' + price;
+    } else {
+        priceHTML += 'unavailable';
+    }
+    priceHTML += ' </button>';
+    return priceHTML;
+}
+// render sizes dropdown selector
+function renderSizesSelector (numOfSizes, sizesArray) {
+    if (numOfSizes > 1) {
+        var sizesHTML = '<select class="sizes">';
+        sizesHTML += '<option value="choose-size" disabled selected>Size</option>';
+        for (var i=0; i<numOfSizes; i++) {
+            sizesHTML += '<option value="';
+            sizesHTML += sizesArray[i];
+            sizesHTML += '">';
+            sizesHTML += sizesArray[i];
+            sizesHTML += '</option>';                        
+        }
+        sizesHTML += '</select>';
+        return sizesHTML;
+    } else {
+        return "";
+    }
+}
+// render images function
+function renderImage (imgFile, imgDir, altText, imgType, imgURL, imgDefault) {
+    var imgHTML = '<img src="';
+    if ( imgFile !== ""  ) {
+        imgHTML += imgDir + imgURL;
+    } else {
+        imgHTML += imgDir + imgDefault;
+    }
+    imgHTML += '" alt="';
+    if ( imgFile !== "" ) {
+        imgHTML += altText;
+    } else {
+        imgHTML += imgType + ' Photo Unavailable';
+    }
+    imgHTML += '">';
+    return imgHTML;
+}
+// render color dropdown selector
+function renderColorSelector ( numOfColors, colorArray ) {
+    if (numOfColors > 0) {
+       var colorsHTML = '<select class="colors">';
+       for (var i=0; i<numOfColors; i++) {
+           colorsHTML += '<option value="';
+           colorsHTML += colorArray[i];
+           colorsHTML += '">';
+           colorsHTML += colorArray[i];
+           colorsHTML += '</option>';
+       }
+       colorsHTML += '</select>';
+    }
+    return colorsHTML;
+}
+// render product description
+function renderProdDiscrimption( prodTitle, prodSubTitle, prodSubHeader, prodDiscription ) {
+    var discriptionHTML = '<div class="discription">';
+    discriptionHTML += '<h1>' + prodTitle + '</h1>';
+    if (prodSubTitle) {
+        discriptionHTML += '<h3>' + prodSubTitle + '</h3>';
+    }
+    if (prodSubHeader) {
+        discriptionHTML += '<h3>' + prodSubHeader + '</h3>';
+    }
+    discriptionHTML += '<p>' + prodDiscription + '</p>';
+    discriptionHTML += '</div>';
+    return discriptionHTML;
 }
 
+// Search Products Function - Runs on seacrh button click
 function searchProducts(evt) {
     // vars
     var $submit = $("form input:last-child");
@@ -90,37 +170,30 @@ function searchProducts(evt) {
                     if ( searchFor === "" || stringSearch.indexOf( searchTerms[i] ) !== -1 ) {
                         numFound++;
                         displayHTML += '<li>';
-                            if ( value.coverPhoto !== "" ) {
-                                displayHTML += '<img alt="' + value.series + ': ' + value.name + ', part ' + value.partNum + ' Cover Image" src="' + photoDir + value.coverPhoto + '">';
-                            } else {
-                                displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'h-np.jpg">';
-                            }
-                            displayHTML += '<button';
-                            if ( value.avail && value.price ) {
-                                displayHTML += ' class="avail"';
-                                console.log("issue available!");
-                            } else {
-                                console.log("issue unavailable :-(");
-                            }
-                            displayHTML += '>';
-                            if ( value.price ) { 
-                                 displayHTML += '$' + value.price;
-                            } else {
-                                displayHTML += 'unavailable';
-                            }
-                            displayHTML += ' </button>';
-                            displayHTML += '<h1>' + value.name + '</h1><h3><i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i></h3>';
-                            displayHTML += '<h3>' + value.series + ' - Issue: ' + value.issue + '</h3>';
-                            displayHTML += '<p>' + value.description + '</p>';
+                        // render image
+                        var altImgText = value.series + ": " + value.name + ", part " + value.partNum + " Cover Image";
+                        displayHTML += renderImage (
+                            value.coverPhoto, photoDir, 
+                            altImgText, "Cover", 
+                            value.coverPhoto, "h-np.jpg"
+                        );
+                        // render price
+                        displayHTML += renderPriceButton (value.avail, value.price );
+                        // render discription
+                        displayHTML += renderProdDiscrimption(
+                            value.name,
+                            '<i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i>',
+                            value.series + ' - Issue: ' + value.issue, 
+                            value.description
+                        );
                         displayHTML += '</li>';
                     } //end if
                 } // end for
             }); // end each
             displayHTML += '</ul>';
+            //append results
             $results.append( displayHTML );
-            $("#comics .avail").click( function () {
-                alert("This feature is currently unavaible. Sorry for the inconvience.");
-            }); // end click()
+            // update data/search button/matches display
             searchCompletes++;
             $submit.prop("value", "Submit");
             if (numFound !== 1) {
@@ -143,37 +216,29 @@ function searchProducts(evt) {
                     if ( searchFor === "" || stringSearch.indexOf( searchTerms[i] ) !== -1 ) {
                         numFound++;
                         displayHTML += '<li>';
-                            if ( value.coverPhoto != "" ) {
-                                displayHTML += '<img alt="' + value.title  + ' Cover Image" src="' + photoDir + value.coverPhoto + '">';
-                            } else {
-                                displayHTML += '<img alt="Cover Photo Unavailable" src="' + photoDir + 'ch-np.jpg">';
-                            }
-                            displayHTML += '<button';
-                            if ( value.avail && value.price ) {
-                                displayHTML += ' class="avail"';
-                                console.log("issue available!");
-                            } else {
-                                console.log("issue unavailable :-(");
-                            }
-                            displayHTML += '>';
-                            if ( value.price ) { 
-                                 displayHTML += '$' + value.price;
-                            } else {
-                                displayHTML += 'unavailable';
-                            }
-                            displayHTML += ' </button>';
-                            displayHTML += '<h1>' + value.title + '</h1>';
-                            displayHTML += '<h3>Author: ' + value.author + '<br>Illustrations: ' + value.illustrator + '</h3>';
-                            displayHTML += '<p>' + value.description + '</p>';
+                        //render image
+                        var altImgText = value.title + " Cover Image";
+                        displayHTML += renderImage (
+                            value.coverPhoto, photoDir, 
+                            altImgText, "Cover", 
+                            value.coverPhoto, "cb-np.jpg"
+                        );
+                        // render price
+                        displayHTML += renderPriceButton (value.avail, value.price );
+                        // render discription
+                        displayHTML += renderProdDiscrimption(
+                            value.title,
+                            false,
+                            value.author, 
+                            value.description
+                        );
                         displayHTML += '</li>';
                     } //end if
                 }//end for
             }); // end each
             displayHTML += '</ul>';
             $results.append( displayHTML );
-            $("#kids .avail").click( function () {
-                alert("This feature is currently unavaible. Sorry for the inconvience.");
-            }); // end click()
+            // update info/search button/matches
             searchCompletes++;
             $submit.prop("value", "Submit");
             if (numFound !== 1) {
@@ -182,7 +247,8 @@ function searchProducts(evt) {
                 $("#NumOfMatches").text( numFound + " Match" );
             }
         }); // end getJSON
-    } 
+    } // end Kids Bks
+    
     // Get Merchandise Data
     if ( searchInCat === "merchandise" || searchInCat === "" || searchInCat === "all" ) {
         $.getJSON( merchandiseDataURL, function ( response ) {
@@ -198,75 +264,35 @@ function searchProducts(evt) {
                 );
                 for (var i=0; i<searchTerms.length; i++) {
                     if ( searchFor === "" || stringSearch.indexOf( searchTerms[i] ) !== -1 ) {
-                       numFound++;
-                       displayHTML += '<li>';
-                       if ( value.coverPhoto != "" ) {
-                           displayHTML += '<img alt="' + value.name  + ' Product Image" src="' + photoDir + initPhotoURL + '">';
-                       } else {
-                           displayHTML += '<img alt="Product Photo Unavailable" src="' + photoDir + 'm-np.jpg">';
-                       }
-                       displayHTML += '<button';
-                       if ( value.avail && value.price ) {
-                           displayHTML += ' class="avail"';
-                           console.log("issue available!");
-                       } else {
-                           console.log("issue unavailable :-(");
-                       }
-                       displayHTML += '>';
-                       if ( value.price ) { 
-                           displayHTML += '$' + value.price;
-                       } else {
-                           displayHTML += 'unavailable';
-                       }
-                       displayHTML += ' </button>';
-                       if (value.sizes.length > 1) {
-                           displayHTML += '<select class="sizes">';
-                           displayHTML += '<option value="choose-size" disabled selected>Size</option>';
-                           for (var i=0; i<value.sizes.length; i++) {
-                               displayHTML += '<option value="';
-                               displayHTML += value.sizes[i];
-                               displayHTML += '">';
-                               displayHTML += value.sizes[i];
-                               displayHTML += '</option>';                        
-                           }
-                           displayHTML += '</select>';
-                       }
-                       displayHTML += '<h1>' + value.name + '</h1>';
-                       displayHTML += '<h3>Product: ' + value.type + "</h3>";
-                       if (value.colors.length > 0) {
-                           displayHTML += '<select class="colors">';
-                           for (var i=0; i<value.colors.length; i++) {
-                               displayHTML += '<option value="';
-                               displayHTML += value.colors[i];
-                               displayHTML += '">';
-                               displayHTML += value.colors[i];
-                               displayHTML += '</option>';
-                           }
-                           displayHTML += '</select>';
-                       }
-                       displayHTML += '<p>' + value.description + '</p>';
-                       displayHTML += '</li>';
-                   } //end if
-               }//end for
+                        numFound++;
+                        displayHTML += '<li>';   
+                        // render price 
+                        displayHTML += renderPriceButton (value.avail, value.price );
+                        // render sizes select
+                        displayHTML += renderSizesSelector( value.sizes.length, value.sizes);
+                        // render color selector
+                        displayHTML += renderColorSelector( value.colors.length, value.colors );
+                        // render image
+                        var altImgText = value.title + " Product Image";
+                        displayHTML += renderImage (
+                            value.productPhoto, photoDir, 
+                            altImgText, "Product", 
+                            initPhotoURL, "m-np.jpg"
+                        );
+                        // render discription
+                        displayHTML += renderProdDiscrimption(
+                            value.name,
+                            false,
+                            value.type, 
+                            value.description
+                        );
+                        displayHTML += '</li>'; // close li item
+                    } //end if
+                }//end for
             }); // end each
-
             displayHTML += '</ul>';
             $results.append( displayHTML );
-            $("#merch .avail").click( function () {
-                alert("This feature is currently unavaible. Sorry for the inconvience.");
-            }); // end click()
-            $("select.sizes").change(function () {
-                //alert( "Size: " + $(this).val() );
-            });
-            $("select.colors").change(function () {
-                $(this).parent().children("img").css( "background-color", $(this).val() );
-                var newPhotoURL = getNewPhotoName( 
-                    $(this).val(), 
-                    $(this).parent().children("img").attr( "src")
-                );
-                $(this).parent().children("img").attr( "src", photoDir + newPhotoURL);
-                
-            });
+            // update info/search button/matches
             searchCompletes++;
             $submit.prop("value", "Submit");
             if (numFound !== 1) {
@@ -275,11 +301,30 @@ function searchProducts(evt) {
                 $("#NumOfMatches").text( numFound + " Match" );
             }
         }); // end getJSON
-    } 
-    
-}
+    } // end Merch
+    // bind dynamic button actions
+    $("body").on("click", ".avail", function () {
+        alert("This feature is currently unavaible. Sorry for the inconvience.");
+    }).on("change", ".sizes", function () {
+        alert( "Size: " + $(this).val() );
+    }).on("change", ".colors", function () {
+        $(this).parent().children("img").css( "background-color", $(this).val() );
+        var newPhotoURL = getNewPhotoName( 
+            $(this).val(), 
+            $(this).parent().children("img").attr( "src")
+        );
+        $(this).parent().children("img").attr( "src", photoDir + newPhotoURL);
+    }).on("click", "img", function() {
+        var imgLink = $(this).attr("src");
+        $("#lightbox").show();
+        $("#lightbox img").attr("src", imgLink);
+    }).on("click", "#lightbox", function() {
+        $("#lightbox").hide();
+    });
+} // end on search click
 
 $( document ).ready( function () {
     console.log("page loaded");
+    $("#lightbox").hide();
     $("form").submit(searchProducts);
 }); // end ready
