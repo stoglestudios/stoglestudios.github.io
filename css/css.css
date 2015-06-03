@@ -1,4 +1,4 @@
-/* line 50, css.scss */
+/* line 48, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,44 +6,44 @@
   padding: 0;
 }
 
-/* line 56, css.scss */
+/* line 54, css.scss */
 ul {
   list-style: none;
 }
 
-/* line 59, css.scss */
+/* line 57, css.scss */
 div {
   position: relative;
 }
 
-/* line 62, css.scss */
+/* line 60, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 67, css.scss */
+/* line 65, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 70, css.scss */
+/* line 68, css.scss */
 a img {
   border: 0;
 }
 
-/* line 73, css.scss */
+/* line 71, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 76, css.scss */
+/* line 74, css.scss */
 h1, h2, h3 {
   font-weight: 400;
 }
 
-/* line 79, css.scss */
+/* line 77, css.scss */
 body {
   position: relative;
   font-family: "Quicksand", sans-serif;
@@ -51,7 +51,7 @@ body {
   background: url("../images/grid-big.png") repeat #203049;
 }
 
-/* line 85, css.scss */
+/* line 83, css.scss */
 #page {
   width: 100%;
   max-width: 1150px;
@@ -62,26 +62,26 @@ body {
   background-color: #dddddd;
 }
 
-/* line 94, css.scss */
+/* line 92, css.scss */
 header {
   display: inline-block;
   width: 100%;
   text-align: center;
   background: linear-gradient(#444444, #aaaaaa);
 }
-/* line 99, css.scss */
+/* line 97, css.scss */
 header a {
   width: 60%;
   max-width: 370px;
 }
-/* line 103, css.scss */
+/* line 101, css.scss */
 header img {
   display: inline-block;
   width: 100%;
   margin: 20px 0 0;
 }
 
-/* line 110, css.scss */
+/* line 108, css.scss */
 nav {
   width: 100%;
   color: white;
@@ -89,32 +89,32 @@ nav {
   font-size: 1em;
   background: url("../images/gel-btn.png") repeat-x #a83aab;
 }
-/* line 116, css.scss */
+/* line 114, css.scss */
 nav ul {
   list-style: none;
 }
-/* line 118, css.scss */
+/* line 116, css.scss */
 nav ul li {
   width: 20%;
   display: inline-block;
 }
-/* line 121, css.scss */
+/* line 119, css.scss */
 nav ul li a {
   width: 100%;
   text-align: center;
   color: white;
   line-height: 40px;
 }
-/* line 126, css.scss */
+/* line 124, css.scss */
 nav ul li a:hover {
   background: url("../images/gel-btn.png") repeat-x #46922a;
 }
-/* line 130, css.scss */
+/* line 128, css.scss */
 nav ul li .selected {
   background: url("../images/gel-btn.png") repeat-x #2ba0f9;
 }
 
-/* line 136, css.scss */
+/* line 134, css.scss */
 content {
   display: block;
   overflow: hidden;
@@ -124,51 +124,51 @@ content {
   background-color: white;
   border-radius: 5px;
 }
-/* line 144, css.scss */
+/* line 142, css.scss */
 content img.main {
   width: 100%;
 }
-/* line 148, css.scss */
+/* line 146, css.scss */
 content .text div {
   text-align: left;
   display: inline-block;
   color: darkslategrey;
 }
-/* line 152, css.scss */
+/* line 150, css.scss */
 content .text div h2 {
   color: #46922a;
   margin-bottom: 10px;
 }
-/* line 157, css.scss */
+/* line 155, css.scss */
 content .text div {
   padding: 0 2%;
   margin-bottom: 5%;
 }
-/* line 160, css.scss */
+/* line 158, css.scss */
 content .text div:nth-child(odd) {
   clear: both;
   width: 50%;
   float: left;
 }
-/* line 165, css.scss */
+/* line 163, css.scss */
 content .text div:nth-child(even) {
   width: 50%;
   float: right;
 }
-/* line 171, css.scss */
+/* line 169, css.scss */
 content .shopping {
   padding: 2%;
 }
-/* line 174, css.scss */
+/* line 172, css.scss */
 content .needsText:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 177, css.scss */
+/* line 175, css.scss */
 content .needsTitle:after {
   content: "Lorem Ipsom Dolar";
 }
 
-/* line 181, css.scss */
+/* line 179, css.scss */
 footer {
   display: block;
   text-align: right;
@@ -177,11 +177,11 @@ footer {
   background: linear-gradient(#46922a, #003300);
   color: white;
 }
-/* line 188, css.scss */
+/* line 186, css.scss */
 footer a {
   color: white;
 }
-/* line 190, css.scss */
+/* line 188, css.scss */
 footer a:hover {
   text-decoration: underline;
 }
@@ -251,16 +251,58 @@ footer a:hover {
         }
 **************************/
 /**************************
+    CONTACT PAGE
+**************************/
+/* line 262, css.scss */
+#contact-content {
+  padding-top: 40px;
+}
+/* line 264, css.scss */
+#contact-content iframe {
+  background-color: #dddddd;
+}
+/* line 268, css.scss */
+#contact-content .text h2 {
+  border-bottom: solid #46922a 1px;
+}
+/* line 271, css.scss */
+#contact-content .text div:nth-child(odd) {
+  width: 40%;
+}
+/* line 274, css.scss */
+#contact-content .text div:nth-child(even) {
+  width: 60%;
+}
+/* line 278, css.scss */
+#contact-content ul {
+  margin: 0 20% 40px;
+}
+/* line 281, css.scss */
+#contact-content li {
+  text-align: left;
+  margin-bottom: 20px;
+}
+/* line 284, css.scss */
+#contact-content li img {
+  margin-right: 10px;
+}
+/* line 288, css.scss */
+#contact-content a:hover {
+  color: #d19547;
+  text-decoration: underline;
+}
+
+/**************************
     SHOP PAGE
 **************************/
-/* line 263, css.scss */
+/* line 297, css.scss */
 form {
   padding: 20px;
   background-color: #dddddd;
   border-radius: 5px;
 }
 
-/* line 268, css.scss */
+/* line 302, css.scss */
 input[type=text] {
   color: #a83aab;
   background-color: white;
@@ -272,7 +314,7 @@ input[type=text] {
   height: 25px;
 }
 
-/* line 278, css.scss */
+/* line 312, css.scss */
 select {
   display: inline-block;
   color: white;
@@ -284,7 +326,7 @@ select {
   height: 25px;
 }
 
-/* line 288, css.scss */
+/* line 322, css.scss */
 input[type=submit] {
   border-radius: 5px;
   color: white;
@@ -294,13 +336,13 @@ input[type=submit] {
   width: 15%;
   height: 25px;
 }
-/* line 295, css.scss */
+/* line 329, css.scss */
 input[type=submit]:hover {
   background-color: #2ba0f9;
   cursor: pointer;
 }
 
-/* line 301, css.scss */
+/* line 335, css.scss */
 #lightbox {
   position: absolute;
   top: 0;
@@ -310,7 +352,7 @@ input[type=submit]:hover {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 309, css.scss */
+/* line 343, css.scss */
 #lightbox img {
   position: fixed;
   margin: 20px 10%;
@@ -318,12 +360,12 @@ input[type=submit]:hover {
   width: 80%;
   border: solid lightgrey 2px;
 }
-/* line 315, css.scss */
+/* line 349, css.scss */
 #lightbox img:hover {
   cursor: pointer;
 }
 
-/* line 320, css.scss */
+/* line 354, css.scss */
 #results {
   width: 100%;
   margin-top: 20px;
@@ -332,44 +374,44 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #dddddd;
 }
-/* line 327, css.scss */
+/* line 361, css.scss */
 #results ul {
   list-style: none;
   background-color: white;
 }
-/* line 330, css.scss */
+/* line 364, css.scss */
 #results ul li {
   padding: 20px;
   border-bottom: solid 10px #dddddd;
   clear: both;
 }
-/* line 334, css.scss */
+/* line 368, css.scss */
 #results ul li:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 340, css.scss */
+/* line 374, css.scss */
 #results ul h1 {
   color: #46922a;
   font-size: 1.7em;
 }
-/* line 344, css.scss */
+/* line 378, css.scss */
 #results ul h3 {
   font-weight: 400;
   color: #a83aab;
   margin-bottom: 20px;
 }
-/* line 348, css.scss */
+/* line 382, css.scss */
 #results ul h3 i {
   color: #46922a;
 }
-/* line 352, css.scss */
+/* line 386, css.scss */
 #results ul p {
   color: darkslategrey;
   margin: 0 20px 20px 0;
 }
-/* line 356, css.scss */
+/* line 390, css.scss */
 #results ul img {
   float: left;
   max-width: 200px;
@@ -379,11 +421,11 @@ input[type=submit]:hover {
   margin: 0 20px 20px 0;
   box-shadow: 2px 2px 5px grey;
 }
-/* line 364, css.scss */
+/* line 398, css.scss */
 #results ul img:hover {
   cursor: pointer;
 }
-/* line 368, css.scss */
+/* line 402, css.scss */
 #results ul button {
   margin-bottom: 20px;
   float: right;
@@ -394,7 +436,7 @@ input[type=submit]:hover {
   font-size: 1em;
   border-radius: 5px;
 }
-/* line 378, css.scss */
+/* line 412, css.scss */
 #results ul button.avail {
   padding: 5px;
   border: solid green 1px;
@@ -402,33 +444,33 @@ input[type=submit]:hover {
   color: darkgreen;
   border-radius: 5px;
 }
-/* line 384, css.scss */
+/* line 418, css.scss */
 #results ul button.avail:hover {
   color: white;
   background-color: green;
   cursor: pointer;
 }
-/* line 390, css.scss */
+/* line 424, css.scss */
 #results ul select {
   background-color: white;
   color: black;
   margin: 0 20px 20px 0;
 }
-/* line 395, css.scss */
+/* line 429, css.scss */
 #results ul .colors {
   float: right;
   width: 20%;
   max-width: 80px;
   text-transform: capitalize;
 }
-/* line 401, css.scss */
+/* line 435, css.scss */
 #results ul .sizes {
   float: right;
   width: 20%;
   max-width: 80px;
   text-transform: uppercase;
 }
-/* line 407, css.scss */
+/* line 441, css.scss */
 #results ul .discription {
   width: 76%;
   clear: right;
@@ -437,44 +479,44 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 417, css.scss */
-  .content div:nth-child(odd) {
+  /* line 451, css.scss */
+  .content .text div:nth-child(odd), #contact-content .text div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 421, css.scss */
-  .content div:nth-child(even) {
+  /* line 455, css.scss */
+  .content .text div:nth-child(even), #contact-content .text div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 426, css.scss */
+  /* line 460, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 430, css.scss */
+  /* line 464, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 434, css.scss */
+  /* line 468, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 437, css.scss */
+  /* line 471, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 441, css.scss */
+  /* line 475, css.scss */
   #results ul h1 {
     clear: both;
   }
-  /* line 444, css.scss */
+  /* line 478, css.scss */
   #results ul .discription {
     clear: both;
     width: 100%;

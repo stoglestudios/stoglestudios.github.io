@@ -26,8 +26,6 @@ $lorem: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, 
 
 $steel: #203049;
 $aluminum: #aaa;
-$d-blue: #112233;
-
 $red: #96241D;
 $orange: #D19547;
 $blue: #2BA0F9;
@@ -90,7 +88,7 @@ body {
     margin: $bleed auto 0;
     box-shadow: 0 0 10px black;
     background-color: $grey;
-} 
+} //cadetblue 
     header {
         display: inline-block;
         width: 100%;
@@ -258,6 +256,42 @@ body {
 **************************/
 
 /**************************
+    CONTACT PAGE
+**************************/
+
+#contact-content {
+    padding-top: $gutter*2;
+    iframe {
+        background-color: $grey;
+    }
+    .text {
+        h2 {
+            border-bottom: solid $green 1px;
+        }
+        div:nth-child(odd){
+            width: 40%;
+        }
+        div:nth-child(even){
+            width: 60%;
+        }
+    }
+    ul {
+        margin: 0 20% $gutter*2;
+    }
+    li {
+        text-align: left;
+        margin-bottom: $gutter;
+        img {
+            margin-right: $bleed;
+        }
+    }
+    a:hover {
+        color: $orange;
+        text-decoration: underline;
+    }
+}
+
+/**************************
     SHOP PAGE
 **************************/
 form {
@@ -413,7 +447,7 @@ input[type=submit] {
     }
 }
 @media screen and (max-width: 800px) {
-    .content {
+    .content .text, #contact-content .text{
         div:nth-child(odd) {
             width: 100%;
             float: none;

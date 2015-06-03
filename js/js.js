@@ -102,14 +102,12 @@ function searchProducts(evt) {
     var childrensBooksDataURL = dataDir + "childrensbooks.json";
     var graphicNovelDataURL = dataDir + "graphicnovels.json";
     var merchandiseDataURL = dataDir + "merchandise.json";
-    
     //start clean slate
     var numFound = 0; 
     var searchCompletes = 0;
     evt.preventDefault();
     $results.html( "" );
     $submit.prop("value", "Searching...");
-    
     // grab search params, format into array
     var searchFor = $("input").val();
     var enteredTemp = searchFor.toLowerCase();
@@ -118,7 +116,6 @@ function searchProducts(evt) {
     enteredTemp = enteredTemp.replace(commaGl, " ");
     enteredTemp = enteredTemp.replace(doubleSpace, " ");
     var searchTerms = enteredTemp.split(" ");
-    
     // grab catagory selection and format
     var searchInCat = $("select").val();
     var displayCat;
@@ -129,7 +126,6 @@ function searchProducts(evt) {
         searchFor = "";
     } 
     console.log("Submit Pressed with Params: " + searchTerms + " & " + searchInCat);
-    
     // Build Found / No Matches Responses
     var displayResults = '<h1 id="NumOfMatches"></h1>';
     displayResults += '<p>You searched for <b>';
@@ -141,6 +137,7 @@ function searchProducts(evt) {
         displayResults += 'anything';
     }
     displayResults += '</b> in <b>';
+    //format display results for catagory
     if (searchInCat != "") {
         if (searchInCat === "childrensbooks") {
             displayCat = "Children\'s Books";
@@ -158,20 +155,22 @@ function searchProducts(evt) {
     displayResults += '<br><br></p>';
     console.log(displayResults);
     $results.prepend(displayResults);
-    
+    // BUILD outputs - get Graphic Novel data
     if ( searchInCat === "graphicnovels" || searchInCat === "" || searchInCat === "all") {
         $.getJSON( graphicNovelDataURL, function ( response ) {
             var displayHTML = '<ul class="merchList" id="comics">';
             var stringSearch;
             $.each( response, function ( index, value ) {
-                stringSearch = value.name + value.author + value.illustrator + value.series + value.description;
+                stringSearch = value.name + value.author + value.illustrator;
+                stringSearch += value.series + value.description;
                 stringSearch = stringSearch.toLowerCase();
                 for (var i=0; i<searchTerms.length; i++) {
                     if ( searchFor === "" || stringSearch.indexOf( searchTerms[i] ) !== -1 ) {
                         numFound++;
                         displayHTML += '<li>';
                         // render image
-                        var altImgText = value.series + ": " + value.name + ", part " + value.partNum + " Cover Image";
+                        var altImgText = value.series + ": " + value.name;
+                        altImgText += ", part " + value.partNum + " Cover Image";
                         displayHTML += renderImage (
                             value.coverPhoto, photoDir, 
                             altImgText, "Cover", 
@@ -203,7 +202,6 @@ function searchProducts(evt) {
             }
         }); // end getJSON
     } //end If GN
-    
     // Get Childrens Books Data
     if ( searchInCat === "childrensbooks" || searchInCat === "" || searchInCat === "all" ) {
         $.getJSON( childrensBooksDataURL, function ( response ) {
@@ -229,7 +227,7 @@ function searchProducts(evt) {
                         displayHTML += renderProdDiscrimption(
                             value.title,
                             false,
-                            "Authur: " + value.author + " - Illsutrator: " + value.illustrator, 
+                            "Author: " + value.author + " - Illsutrator: " + value.illustrator, 
                             value.description
                         );
                         displayHTML += '</li>';
@@ -248,7 +246,6 @@ function searchProducts(evt) {
             }
         }); // end getJSON
     } // end Kids Bks
-    
     // Get Merchandise Data
     if ( searchInCat === "merchandise" || searchInCat === "" || searchInCat === "all" ) {
         $.getJSON( merchandiseDataURL, function ( response ) {
@@ -322,7 +319,7 @@ function searchProducts(evt) {
         $("#lightbox").hide();
     });
 } // end on search click
-
+// doc ready scripts
 $( document ).ready( function () {
     console.log("page loaded");
     $("#lightbox").hide();
