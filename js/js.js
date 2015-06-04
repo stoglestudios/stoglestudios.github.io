@@ -91,6 +91,24 @@ function renderProdDiscrimption( prodTitle, prodSubTitle, prodSubHeader, prodDis
     discriptionHTML += '</div>';
     return discriptionHTML;
 }
+// create checkout string
+function makeCheckout (itemPick, colorPick, sizePick) {
+    var checkoutString = {
+        "item" : itemPick,
+        "size" : sizePick,
+        "color": colorPick
+    };
+    var returnString = "Are you sure you wish to add this to your Cart?\n\nProduct: " + itemPick;
+    if (colorPick) {
+        returnString += "\nColor: " + colorPick;
+    }
+    if (sizePick) {
+        returnString += "\nSize: " + sizePick;
+    }
+    returnString += "\n\nSorry, the Cart is currently under construction.";
+    alert(returnString);
+    return makeCheckout;
+}
 
 // Search Products Function - Runs on seacrh button click
 function searchProducts(evt) {
@@ -177,7 +195,9 @@ function searchProducts(evt) {
                             value.coverPhoto, "h-np.jpg"
                         );
                         // render price
+                        displayHTML += '<div class="shop-options">';
                         displayHTML += renderPriceButton (value.avail, value.price );
+                        displayHTML += '</div>';
                         // render discription
                         displayHTML += renderProdDiscrimption(
                             value.name,
@@ -222,7 +242,9 @@ function searchProducts(evt) {
                             value.coverPhoto, "cb-np.jpg"
                         );
                         // render price
+                        displayHTML += '<div class="shop-options">';
                         displayHTML += renderPriceButton (value.avail, value.price );
+                        displayHTML += '</div>';
                         // render discription
                         displayHTML += renderProdDiscrimption(
                             value.title,
@@ -262,13 +284,15 @@ function searchProducts(evt) {
                 for (var i=0; i<searchTerms.length; i++) {
                     if ( searchFor === "" || stringSearch.indexOf( searchTerms[i] ) !== -1 ) {
                         numFound++;
-                        displayHTML += '<li>';   
+                        displayHTML += '<li>';
                         // render price 
+                        displayHTML += '<div class="shop-options">';
                         displayHTML += renderPriceButton (value.avail, value.price );
                         // render sizes select
                         displayHTML += renderSizesSelector( value.sizes.length, value.sizes);
                         // render color selector
                         displayHTML += renderColorSelector( value.colors.length, value.colors );
+                        displayHTML += '</div>';
                         // render image
                         var altImgText = value.title + " Product Image";
                         displayHTML += renderImage (
@@ -301,9 +325,12 @@ function searchProducts(evt) {
     } // end Merch
     // bind dynamic button actions
     $("body").on("click", ".avail", function () {
-        alert("This feature is currently unavaible. Sorry for the inconvience.");
+        var getItem = $(this).parent().parent().children(".discription").children("h1").text();
+        var getColor = $(this).parent().parent().children(".shop-options").children(".colors").val();
+        var getSize = $(this).parent().parent().children(".shop-options").children(".sizes").val();
+        makeCheckout (getItem, getColor, getSize);
     }).on("change", ".sizes", function () {
-        alert( "Size: " + $(this).val() );
+        console.log( "Size: " + $(this).val() );
     }).on("change", ".colors", function () {
         $(this).parent().children("img").css( "background-color", $(this).val() );
         var newPhotoURL = getNewPhotoName( 

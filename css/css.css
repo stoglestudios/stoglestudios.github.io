@@ -78,10 +78,9 @@ header a {
 header img {
   display: inline-block;
   width: 100%;
-  margin: 20px 0 0;
 }
 
-/* line 108, css.scss */
+/* line 106, css.scss */
 nav {
   width: 100%;
   color: white;
@@ -89,32 +88,32 @@ nav {
   font-size: 1em;
   background: url("../images/gel-btn.png") repeat-x #a83aab;
 }
-/* line 114, css.scss */
+/* line 112, css.scss */
 nav ul {
   list-style: none;
 }
-/* line 116, css.scss */
+/* line 114, css.scss */
 nav ul li {
   width: 20%;
   display: inline-block;
 }
-/* line 119, css.scss */
+/* line 117, css.scss */
 nav ul li a {
   width: 100%;
   text-align: center;
   color: white;
   line-height: 40px;
 }
-/* line 124, css.scss */
+/* line 122, css.scss */
 nav ul li a:hover {
   background: url("../images/gel-btn.png") repeat-x #46922a;
 }
-/* line 128, css.scss */
+/* line 126, css.scss */
 nav ul li .selected {
   background: url("../images/gel-btn.png") repeat-x #2ba0f9;
 }
 
-/* line 134, css.scss */
+/* line 132, css.scss */
 content {
   display: block;
   overflow: hidden;
@@ -124,51 +123,75 @@ content {
   background-color: white;
   border-radius: 5px;
 }
-/* line 142, css.scss */
+/* line 140, css.scss */
+content h1 {
+  position: absolute;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+  margin-bottom: -80px;
+  z-index: 10;
+}
+/* line 151, css.scss */
+content .home-title {
+  text-shadow: 1px 1px 0 #d19547;
+}
+/* line 154, css.scss */
+content .about-title {
+  text-shadow: 1px 1px 0 #e0dc59;
+}
+/* line 157, css.scss */
+content .projects-title {
+  text-shadow: 1px 1px 0 #2ba0f9;
+}
+/* line 160, css.scss */
 content img.main {
   width: 100%;
 }
-/* line 146, css.scss */
+/* line 164, css.scss */
 content .text div {
   text-align: left;
   display: inline-block;
   color: darkslategrey;
 }
-/* line 150, css.scss */
+/* line 168, css.scss */
 content .text div h2 {
   color: #46922a;
   margin-bottom: 10px;
 }
-/* line 155, css.scss */
+/* line 173, css.scss */
 content .text div {
   padding: 0 2%;
   margin-bottom: 5%;
 }
-/* line 158, css.scss */
+/* line 176, css.scss */
 content .text div:nth-child(odd) {
   clear: both;
   width: 50%;
   float: left;
 }
-/* line 163, css.scss */
+/* line 181, css.scss */
 content .text div:nth-child(even) {
   width: 50%;
   float: right;
 }
-/* line 169, css.scss */
+/* line 187, css.scss */
 content .shopping {
   padding: 2%;
 }
-/* line 172, css.scss */
+/* line 190, css.scss */
 content .needsText:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 175, css.scss */
+/* line 193, css.scss */
 content .needsTitle:after {
   content: "Lorem Ipsom Dolar";
 }
 
-/* line 179, css.scss */
+/* line 197, css.scss */
 footer {
   display: block;
   text-align: right;
@@ -177,132 +200,129 @@ footer {
   background: linear-gradient(#46922a, #003300);
   color: white;
 }
-/* line 186, css.scss */
+/* line 204, css.scss */
 footer a {
   color: white;
 }
-/* line 188, css.scss */
+/* line 206, css.scss */
 footer a:hover {
   text-decoration: underline;
 }
 
 /**************************
-    SOCNET [SAVE for LATER]
-***************************
-            #socnet {
-            float: right;
-            height: $gutter*2;
-            font-size: 14px;
-            text-align: right;
-            h4 {
-                display: inline-block;
-                line-height: $gutter*2;
-                vertical-align: top;
-                color: white;
-                font-weight: 400;
-            }
-            a {
-                width: $soc-size;
-                height: $soc-size;
-                border-radius: $soc-size/2;
-                margin: 5px 0 0 4px;
-                background: url("../images/socnet-sprite.png") no-repeat $aluminum;
-            }
-            .fb {
-                background-position: 0 -1*$soc-size;
-                &:hover {
-                    background-position: 0 0;
-                    background-color: $fb-blue;
-                    border-color: $fb-blue;
-                }
-            }
-            .tw {
-                background-position: -1*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -1*$soc-size 0;
-                    background-color: $tw-blue;
-                    border-color: $tw-blue;
-                }
-            }
-            .go {
-                background-position: -2*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -2*$soc-size 0;
-                    background-color: $go-red;
-                    border-color: $go-red;
-                }
-            }
-            .in {
-                background-position: -3*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -3*$soc-size 0;
-                    background-color: $in-blue;
-                    border-color: $in-blue;
-                }
-            }
-            .em {
-                background-position: -4*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -4*$soc-size 0;
-                    background-color: $em-neutral;
-                    border-color: $em-neutral;
-                }
-            }
-        }
+    PRODUCTS PAGE
 **************************/
-/**************************
-    CONTACT PAGE
-**************************/
-/* line 262, css.scss */
-#contact-content {
-  padding-top: 40px;
+/* line 216, css.scss */
+#projects-content div img {
+  float: left;
+  width: 20%;
+  max-width: 100px;
+  margin: 0 2% 2% 0;
+  box-shadow: 2px 2px 5px grey;
 }
-/* line 264, css.scss */
-#contact-content iframe {
-  background-color: #dddddd;
-}
-/* line 268, css.scss */
-#contact-content .text h2 {
-  border-bottom: solid #46922a 1px;
-}
-/* line 271, css.scss */
-#contact-content .text div:nth-child(odd) {
-  width: 40%;
-}
-/* line 274, css.scss */
-#contact-content .text div:nth-child(even) {
-  width: 60%;
-}
-/* line 278, css.scss */
-#contact-content ul {
-  margin: 0 20% 40px;
-}
-/* line 281, css.scss */
-#contact-content li {
-  text-align: left;
-  margin-bottom: 20px;
-}
-/* line 284, css.scss */
-#contact-content li img {
-  margin-right: 10px;
-}
-/* line 288, css.scss */
-#contact-content a:hover {
+/* line 223, css.scss */
+#projects-content div h2:hover {
   color: #d19547;
   text-decoration: underline;
 }
 
 /**************************
+    CONTACT PAGE
+**************************/
+/* line 232, css.scss */
+#contact-content {
+  padding-top: 40px;
+}
+/* line 234, css.scss */
+#contact-content iframe {
+  background-color: #dddddd;
+}
+/* line 238, css.scss */
+#contact-content .text h2 {
+  border-bottom: solid #46922a 1px;
+}
+/* line 241, css.scss */
+#contact-content .text div:nth-child(odd) {
+  width: 40%;
+}
+/* line 244, css.scss */
+#contact-content .text div:nth-child(even) {
+  width: 60%;
+}
+/* line 248, css.scss */
+#contact-content ul {
+  margin: 0 20% 40px;
+}
+/* line 251, css.scss */
+#contact-content li {
+  text-align: left;
+  margin-bottom: 20px;
+}
+/* line 254, css.scss */
+#contact-content li a {
+  display: inline-block;
+  width: 100%;
+  color: darkslategrey;
+}
+/* line 258, css.scss */
+#contact-content li a span {
+  margin-right: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url("../images/socnet-sprite.png") no-repeat #2ba0f9;
+  background-size: 1000% 200%;
+  border-radius: 5px;
+}
+/* line 269, css.scss */
+#contact-content li .hover:hover {
+  text-decoration: underline;
+}
+/* line 272, css.scss */
+#contact-content li .nohover:hover {
+  cursor: default;
+}
+/* line 275, css.scss */
+#contact-content li .phone span {
+  background-position: -234px 0;
+}
+/* line 278, css.scss */
+#contact-content li .email span {
+  background-position: -104px 0;
+}
+/* line 281, css.scss */
+#contact-content li .facebook span {
+  background-position: 0 -26px;
+}
+/* line 284, css.scss */
+#contact-content li .google span {
+  background-position: -52px -26px;
+}
+/* line 287, css.scss */
+#contact-content li .twitter span {
+  background-position: -26px -26px;
+}
+/* line 290, css.scss */
+#contact-content li .linkedin span {
+  background-position: -78px -26px;
+}
+/* line 293, css.scss */
+#contact-content li .forward span {
+  background-position: -104px -26px;
+}
+
+/**************************
     SHOP PAGE
 **************************/
-/* line 297, css.scss */
+/* line 302, css.scss */
 form {
   padding: 20px;
   background-color: #dddddd;
   border-radius: 5px;
 }
 
-/* line 302, css.scss */
+/* line 307, css.scss */
 input[type=text] {
   color: #a83aab;
   background-color: white;
@@ -314,7 +334,7 @@ input[type=text] {
   height: 25px;
 }
 
-/* line 312, css.scss */
+/* line 317, css.scss */
 select {
   display: inline-block;
   color: white;
@@ -326,7 +346,7 @@ select {
   height: 25px;
 }
 
-/* line 322, css.scss */
+/* line 327, css.scss */
 input[type=submit] {
   border-radius: 5px;
   color: white;
@@ -336,13 +356,13 @@ input[type=submit] {
   width: 15%;
   height: 25px;
 }
-/* line 329, css.scss */
+/* line 334, css.scss */
 input[type=submit]:hover {
   background-color: #2ba0f9;
   cursor: pointer;
 }
 
-/* line 335, css.scss */
+/* line 340, css.scss */
 #lightbox {
   position: absolute;
   top: 0;
@@ -352,7 +372,7 @@ input[type=submit]:hover {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 343, css.scss */
+/* line 348, css.scss */
 #lightbox img {
   position: fixed;
   margin: 20px 10%;
@@ -360,12 +380,12 @@ input[type=submit]:hover {
   width: 80%;
   border: solid lightgrey 2px;
 }
-/* line 349, css.scss */
+/* line 354, css.scss */
 #lightbox img:hover {
   cursor: pointer;
 }
 
-/* line 354, css.scss */
+/* line 359, css.scss */
 #results {
   width: 100%;
   margin-top: 20px;
@@ -374,44 +394,58 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #dddddd;
 }
-/* line 361, css.scss */
+/* line 366, css.scss */
+#results h1 {
+  position: relative;
+  color: black;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2em;
+}
+/* line 374, css.scss */
 #results ul {
   list-style: none;
   background-color: white;
 }
-/* line 364, css.scss */
+/* line 377, css.scss */
 #results ul li {
   padding: 20px;
   border-bottom: solid 10px #dddddd;
   clear: both;
 }
-/* line 368, css.scss */
+/* line 381, css.scss */
 #results ul li:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 374, css.scss */
+/* line 387, css.scss */
 #results ul h1 {
+  position: relative;
+  text-align: left;
   color: #46922a;
+  padding: 0;
+  margin: 0;
   font-size: 1.7em;
+  font-weight: 400;
 }
-/* line 378, css.scss */
+/* line 396, css.scss */
 #results ul h3 {
   font-weight: 400;
   color: #a83aab;
   margin-bottom: 20px;
 }
-/* line 382, css.scss */
+/* line 400, css.scss */
 #results ul h3 i {
   color: #46922a;
 }
-/* line 386, css.scss */
+/* line 404, css.scss */
 #results ul p {
   color: darkslategrey;
   margin: 0 20px 20px 0;
 }
-/* line 390, css.scss */
+/* line 408, css.scss */
 #results ul img {
   float: left;
   max-width: 200px;
@@ -421,56 +455,60 @@ input[type=submit]:hover {
   margin: 0 20px 20px 0;
   box-shadow: 2px 2px 5px grey;
 }
-/* line 398, css.scss */
+/* line 416, css.scss */
 #results ul img:hover {
   cursor: pointer;
 }
-/* line 402, css.scss */
-#results ul button {
-  margin-bottom: 20px;
+/* line 420, css.scss */
+#results ul .shop-options {
+  width: 50%;
   float: right;
-  padding: 5px;
+}
+/* line 424, css.scss */
+#results ul button {
+  float: right;
+  padding: 0 .5em;
+  line-height: 2em;
   border: solid grey 1px;
   background-color: lightgrey;
   color: grey;
   font-size: 1em;
   border-radius: 5px;
+  margin: 0 0 20px 20px;
 }
-/* line 412, css.scss */
+/* line 435, css.scss */
 #results ul button.avail {
-  padding: 5px;
   border: solid green 1px;
   background-color: darkseagreen;
   color: darkgreen;
   border-radius: 5px;
 }
-/* line 418, css.scss */
+/* line 440, css.scss */
 #results ul button.avail:hover {
   color: white;
   background-color: green;
   cursor: pointer;
 }
-/* line 424, css.scss */
+/* line 446, css.scss */
 #results ul select {
   background-color: white;
+  height: 3em;
   color: black;
-  margin: 0 2% 20px 0;
+  width: 50%;
+  max-width: 100px;
+  margin: 0 0 5px 2%;
 }
-/* line 429, css.scss */
+/* line 454, css.scss */
 #results ul .colors {
   float: right;
-  width: 30%;
-  max-width: 80px;
   text-transform: capitalize;
 }
-/* line 435, css.scss */
+/* line 458, css.scss */
 #results ul .sizes {
   float: right;
-  width: 30%;
-  max-width: 80px;
   text-transform: uppercase;
 }
-/* line 441, css.scss */
+/* line 462, css.scss */
 #results ul .discription {
   width: 76%;
   clear: right;
@@ -479,44 +517,45 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 451, css.scss */
+  /* line 472, css.scss */
   .content .text div:nth-child(odd), #contact-content .text div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 455, css.scss */
+  /* line 476, css.scss */
   .content .text div:nth-child(even), #contact-content .text div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 460, css.scss */
+  /* line 481, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 464, css.scss */
+  /* line 485, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
+    clear: both;
   }
 
-  /* line 468, css.scss */
+  /* line 490, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 471, css.scss */
+  /* line 493, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 475, css.scss */
+  /* line 497, css.scss */
   #results ul h1 {
     clear: both;
   }
-  /* line 478, css.scss */
+  /* line 500, css.scss */
   #results ul .discription {
     clear: both;
     width: 100%;

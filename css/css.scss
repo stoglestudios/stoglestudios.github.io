@@ -16,7 +16,7 @@ $gutter: 20px;
 $bleed: 10px;
 $cta-width: 350px;
 $head-height: $gutter + $logo-height;
-$soc-size: 30px;
+$soc-size: 26px;
 $col-width:  $im-width + $cta-width + $gutter*10;
 $corners: 5px;
 
@@ -88,7 +88,7 @@ body {
     margin: $bleed auto 0;
     box-shadow: 0 0 10px black;
     background-color: $grey;
-} //cadetblue 
+}
     header {
         display: inline-block;
         width: 100%;
@@ -101,16 +101,14 @@ body {
         img {
             display: inline-block;
             width: 100%;
-            margin: $gutter 0 0;
         }
-        
     }
     nav {
         width: 100%;
         color: white;
         box-shadow: 0 2px 5px black;
         font-size: 1em;
-        background: url("../images/gel-btn.png") repeat-x #A83AAB;
+        background: url("../images/gel-btn.png") repeat-x $purple;
         ul {
             list-style: none;
             li {
@@ -139,6 +137,26 @@ body {
         text-align: center;
         background-color: white;
         border-radius: $corners;
+        h1 {
+            position: absolute;
+            color: white;
+            text-align: left;
+            padding: $gutter;
+            font-size: $gutter*2;
+            font-weight: 300;
+            line-height: $gutter*2;
+            margin-bottom: $gutter * -4;
+            z-index: 10;
+        }
+        .home-title {
+            text-shadow: 1px 1px 0 $orange;
+        }
+        .about-title {
+            text-shadow: 1px 1px 0 $yellow;
+        }
+        .projects-title {
+            text-shadow: 1px 1px 0 $blue;
+        }
         img.main {
             width: 100%;
         }
@@ -191,70 +209,22 @@ body {
         }
     }
 /**************************
-    SOCNET [SAVE for LATER]
-***************************
-            #socnet {
-            float: right;
-            height: $gutter*2;
-            font-size: 14px;
-            text-align: right;
-            h4 {
-                display: inline-block;
-                line-height: $gutter*2;
-                vertical-align: top;
-                color: white;
-                font-weight: 400;
-            }
-            a {
-                width: $soc-size;
-                height: $soc-size;
-                border-radius: $soc-size/2;
-                margin: 5px 0 0 4px;
-                background: url("../images/socnet-sprite.png") no-repeat $aluminum;
-            }
-            .fb {
-                background-position: 0 -1*$soc-size;
-                &:hover {
-                    background-position: 0 0;
-                    background-color: $fb-blue;
-                    border-color: $fb-blue;
-                }
-            }
-            .tw {
-                background-position: -1*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -1*$soc-size 0;
-                    background-color: $tw-blue;
-                    border-color: $tw-blue;
-                }
-            }
-            .go {
-                background-position: -2*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -2*$soc-size 0;
-                    background-color: $go-red;
-                    border-color: $go-red;
-                }
-            }
-            .in {
-                background-position: -3*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -3*$soc-size 0;
-                    background-color: $in-blue;
-                    border-color: $in-blue;
-                }
-            }
-            .em {
-                background-position: -4*$soc-size -1*$soc-size;
-                &:hover {
-                    background-position: -4*$soc-size 0;
-                    background-color: $em-neutral;
-                    border-color: $em-neutral;
-                }
-            }
-        }
+    PRODUCTS PAGE
 **************************/
 
+#projects-content div{
+    img {
+        float: left;
+        width: 20%;
+        max-width: 100px;
+        margin: 0 2% 2% 0;
+        box-shadow: 2px 2px 5px grey;
+    }
+    h2:hover {
+        color: $orange;
+        text-decoration: underline;
+    }
+}
 /**************************
     CONTACT PAGE
 **************************/
@@ -281,13 +251,48 @@ body {
     li {
         text-align: left;
         margin-bottom: $gutter;
-        img {
-            margin-right: $bleed;
+        a {
+            display: inline-block;
+            width: 100%;
+            color: darkslategrey;
+            span {
+                margin-right: $corners;
+                vertical-align: middle;
+                display: inline-block;
+                width: $soc-size;
+                height: $soc-size;
+                background: url("../images/socnet-sprite.png") no-repeat $blue;
+                background-size: 1000% 200%;
+                border-radius: $corners;
+            }
         }
-    }
-    a:hover {
-        color: $orange;
-        text-decoration: underline;
+        .hover:hover {
+            text-decoration: underline;
+        }
+        .nohover:hover {
+            cursor: default;
+        }
+        .phone span {
+            background-position: -9*$soc-size 0;
+        }
+        .email span {
+            background-position: -4*$soc-size 0;
+        }
+        .facebook span {
+            background-position: 0 -1*$soc-size;
+        }
+        .google span {
+            background-position: -2*$soc-size -1*$soc-size;
+        }
+        .twitter span {
+            background-position: -1*$soc-size -1*$soc-size;
+        }
+        .linkedin span {
+            background-position: -3*$soc-size -1*$soc-size;
+        }
+        .forward span {
+            background-position: -4*$soc-size -1*$soc-size;
+        }
     }
 }
 
@@ -358,6 +363,14 @@ input[type=submit] {
     padding: $gutter 2%;
     border-radius: $corners;
     background-color: $grey;
+    h1 {
+        position: relative;
+        color: black;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 2em;
+    }
     ul {
         list-style: none;
         background-color: white;
@@ -372,8 +385,13 @@ input[type=submit] {
             }
         }
         h1 {
+            position: relative;
+            text-align: left;
             color: $green;
+            padding: 0;
+            margin: 0;
             font-size: 1.7em;
+            font-weight: 400;
         }
         h3 {
             font-weight: 400;
@@ -399,18 +417,22 @@ input[type=submit] {
                 cursor: pointer;
             }
         }
-        button {
-            margin-bottom: $gutter;
+        .shop-options {
+            width: 50%;
             float: right;
-            padding: $corners;
+        }
+        button {
+            float: right;
+            padding: 0 .5em;
+            line-height: 2em;
             border: solid grey 1px;
             background-color: lightgrey;
             color: grey;
             font-size: 1em;
             border-radius: $corners;
+            margin: 0 0 $gutter $gutter;
         }
         button.avail {
-            padding: $corners;
             border: solid green 1px;
             background-color: darkseagreen;
             color: darkgreen;
@@ -423,19 +445,18 @@ input[type=submit] {
         }
         select {
             background-color: white;
+            height: 3em;
             color: black;
-            margin: 0 2% $gutter 0;
+            width: 50%;
+            max-width: 100px;
+            margin: 0 0 $corners 2%;
         }
         .colors {
             float: right;
-            width: 30%;
-            max-width: 80px;
             text-transform: capitalize;
         }
         .sizes {
             float: right;
-            width: 30%;
-            max-width: 80px;
             text-transform: uppercase;
         }
         .discription {
@@ -464,6 +485,7 @@ input[type=submit] {
     select {
         width: 100%;
         margin-bottom: $bleed;
+        clear: both;
     }
     input[type=submit] {
         width: 50%;
