@@ -510,7 +510,7 @@ input[type=submit]:hover {
   background-color: white;
   height: 3em;
   color: black;
-  width: 80%;
+  width: 70%;
   max-width: 100px;
   margin: 0 0 5px 2%;
 }
