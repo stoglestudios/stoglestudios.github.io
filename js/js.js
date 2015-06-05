@@ -2,6 +2,12 @@
 
 //Global Vars
 
+var dataDir = "products/";
+var photoDir = dataDir + "images/";
+var childrensBooksDataURL = dataDir + "childrensbooks.json";
+var graphicNovelDataURL = dataDir + "graphicnovels.json";
+var merchandiseDataURL = dataDir + "merchandise.json";
+
 // gets image from db and ensure it matches color in selector
 function getNewPhotoName (a, b) {
     var productColor = a;
@@ -118,14 +124,8 @@ function makeCheckout (itemPick, itemISBN, colorPick, sizePick) {
 
 // Search Products Function - Runs on seacrh button click
 function searchProducts(evt) {
-    // vars
     var $submit = $("form input:last-child");
     var $results = $("#results");
-    var dataDir = "products/";
-    var photoDir = dataDir + "images/";
-    var childrensBooksDataURL = dataDir + "childrensbooks.json";
-    var graphicNovelDataURL = dataDir + "graphicnovels.json";
-    var merchandiseDataURL = dataDir + "merchandise.json";
     //start clean slate
     var numFound = 0; 
     var searchCompletes = 0;
@@ -352,12 +352,12 @@ $( document ).ready( function () {
     }).on("change", ".sizes", function () {
         console.log( "Size: " + $(this).val() );
     }).on("change", ".colors", function () {
-        $(this).parents("li").children("img").css( "background-color", $(this).val() );
+        $(this).parent().parent().children("img").css( "background-color", $(this).val() );
         var newPhotoURL = getNewPhotoName( 
             $(this).val(), 
-            $(this).parents("li").children("img").attr( "src")
+            $(this).parent().parent().children("img").attr( "src")
         );
-        $(this).parents("li").children("img").attr( "src", photoDir + newPhotoURL);
+        $(this).parent().parent().children("img").attr( "src", photoDir + newPhotoURL);
     }).on("click", "img", function() {
         var imgLink = $(this).attr("src");
         $("#lightbox").show();
