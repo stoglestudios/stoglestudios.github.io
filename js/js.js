@@ -78,7 +78,7 @@ function renderColorSelector ( numOfColors, colorArray ) {
     return colorsHTML;
 }
 // render product description
-function renderProdDiscrimption( prodTitle, prodSubTitle, prodSubHeader, prodDiscription ) {
+function renderProdDiscrimption( prodTitle, prodSubTitle, prodSubHeader, prodDiscription, itemISBN ) {
     var discriptionHTML = '<div class="discription">';
     discriptionHTML += '<h1>' + prodTitle + '</h1>';
     if (prodSubTitle) {
@@ -88,22 +88,28 @@ function renderProdDiscrimption( prodTitle, prodSubTitle, prodSubHeader, prodDis
         discriptionHTML += '<h3>' + prodSubHeader + '</h3>';
     }
     discriptionHTML += '<p>' + prodDiscription + '</p>';
+    discriptionHTML += '<p id="isbn"><b>ISBN: </b><span>' + itemISBN + '</span></p>';
     discriptionHTML += '</div>';
     return discriptionHTML;
 }
 // create checkout string
-function makeCheckout (itemPick, colorPick, sizePick) {
-    var checkoutString = {
+function makeCheckout (itemPick, itemISBN, colorPick, sizePick) {
+    var checkoutStringObj = {
         "item" : itemPick,
-        "size" : sizePick,
-        "color": colorPick
+        "isbn" : itemISBN,
+        "color": colorPick,
+        "size" : sizePick
+        
     };
-    var returnString = "Are you sure you wish to add this to your Cart?\n\nProduct: " + itemPick;
-    if (colorPick) {
-        returnString += "\nColor: " + colorPick;
+    var returnString = "Are you sure you wish to add this to your Cart?\n\nProduct: " + checkoutStringObj.item;
+    if (checkoutStringObj.isbn) {
+        returnString += "\nISBN: " + checkoutStringObj.isbn;
     }
-    if (sizePick) {
-        returnString += "\nSize: " + sizePick;
+    if (checkoutStringObj.color) {
+        returnString += "\nColor: " + checkoutStringObj.color;
+    }
+    if (checkoutStringObj.size) {
+        returnString += "\nSize: " + checkoutStringObj.size;
     }
     returnString += "\n\nSorry, the Cart is currently under construction.";
     alert(returnString);
@@ -179,7 +185,7 @@ function searchProducts(evt) {
             var displayHTML = '<ul class="merchList" id="comics">';
             var stringSearch;
             $.each( response, function ( index, value ) {
-                stringSearch = value.name + value.author + value.illustrator;
+                stringSearch = value.name + value.author + value.illustrator + value.isbn;
                 stringSearch += value.series + value.description;
                 stringSearch = stringSearch.toLowerCase();
                 for (var i=0; i<searchTerms.length; i++) {
@@ -203,7 +209,8 @@ function searchProducts(evt) {
                             value.name,
                             '<i>(part ' + value.partNum + ' of ' + value.ofPart + ')</i>',
                             value.series + ' - Issue: ' + value.issue, 
-                            value.description
+                            value.description,
+                            value.isbn
                         );
                         displayHTML += '</li>';
                     } //end if
@@ -228,7 +235,7 @@ function searchProducts(evt) {
             var displayHTML = '<ul class="merchList" id="kids">';
             var stringSearch;
             $.each( response, function ( index, value ) {
-                stringSearch = value.title + value.author + value.illustrator + value.description;
+                stringSearch = value.title + value.author + value.illustrator + value.description + value.isbn;
                 stringSearch = stringSearch.toLowerCase();
                 for (var i=0; i<searchTerms.length; i++) {
                     if ( searchFor === "" || stringSearch.indexOf( searchTerms[i] ) !== -1 ) {
@@ -250,7 +257,8 @@ function searchProducts(evt) {
                             value.title,
                             false,
                             "Author: " + value.author + " - Illsutrator: " + value.illustrator, 
-                            value.description
+                            value.description,
+                            value.isbn
                         );
                         displayHTML += '</li>';
                     } //end if
@@ -274,7 +282,7 @@ function searchProducts(evt) {
             var displayHTML = '<ul class="merchList" id="merch">';
             var stringSearch;
             $.each( response, function ( index, value ) {
-                stringSearch = value.name + value.type + value.description;
+                stringSearch = value.name + value.type + value.description + value.isbn;
                 stringSearch = stringSearch.toLowerCase();
                 // ensure photo color matches color select default
                 var initPhotoURL = getNewPhotoName( 
@@ -305,7 +313,8 @@ function searchProducts(evt) {
                             value.name,
                             false,
                             "Product: " + value.type, 
-                            value.description
+                            value.description,
+                            value.isbn
                         );
                         displayHTML += '</li>'; // close li item
                     } //end if
@@ -328,16 +337,17 @@ function searchProducts(evt) {
         var getItem = $(this).parent().parent().children(".discription").children("h1").text();
         var getColor = $(this).parent().parent().children(".shop-options").children(".colors").val();
         var getSize = $(this).parent().parent().children(".shop-options").children(".sizes").val();
-        makeCheckout (getItem, getColor, getSize);
+        var getISBN = $(this).parent().parent().children(".discription").children("#isbn").children("span").text();
+        makeCheckout (getItem, getISBN, getColor, getSize);
     }).on("change", ".sizes", function () {
         console.log( "Size: " + $(this).val() );
     }).on("change", ".colors", function () {
-        $(this).parent().children("img").css( "background-color", $(this).val() );
+        $(this).parents("li").children("img").css( "background-color", $(this).val() );
         var newPhotoURL = getNewPhotoName( 
             $(this).val(), 
-            $(this).parent().children("img").attr( "src")
+            $(this).parents("li").children("img").attr( "src")
         );
-        $(this).parent().children("img").attr( "src", photoDir + newPhotoURL);
+        $(this).parents("li").children("img").attr( "src", photoDir + newPhotoURL);
     }).on("click", "img", function() {
         var imgLink = $(this).attr("src");
         $("#lightbox").show();
@@ -351,4 +361,8 @@ $( document ).ready( function () {
     console.log("page loaded");
     $("#lightbox").hide();
     $("form").submit(searchProducts);
+    $(".default-shop-img").click(function() {
+        $("input[type=text]").val("24682957003");
+        $("form").submit();
+    });
 }); // end ready

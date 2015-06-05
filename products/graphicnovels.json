@@ -9,6 +9,7 @@
 		"ofPart" : 2,
 		"price" : 1.99,
 		"avail" : true,
+		"isbn": "24682957001",
 		"coverPhoto" : "h-wotw1.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -22,6 +23,7 @@
 		"ofPart" : 2,
 		"price" : 1.99,
 		"avail" : true,
+		"isbn": "24682957002",
 		"coverPhoto" : "h-wotw2.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -35,6 +37,7 @@
 		"ofPart" : 3,
 		"price" : 3.99,
 		"avail" : true,
+		"isbn": "24682957003",
 		"coverPhoto" : "h-tbw1.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -48,6 +51,7 @@
 		"ofPart" : 3,
 		"price" : 1.99,
 		"avail" : false,
+		"isbn": "24682957004",
 		"coverPhoto" : "",
 		"description" :  "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -61,6 +65,7 @@
 		"ofPart" : 3,
 		"price" : 1.99,
 		"avail" : false,
+		"isbn": "24682957005",
 		"coverPhoto" : "",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -74,6 +79,7 @@
 		"ofPart" : 3,
 		"price" : 1.99,
 		"avail" : false,
+		"isbn": "24682957006",
 		"coverPhoto" :  "",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -87,6 +93,7 @@
 		"ofPart" : 3,
 		"price" : 1.99,
 		"avail" : false,
+		"isbn": "24682957007",
 		"coverPhoto" :  "",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -100,6 +107,7 @@
 		"ofPart" : 3,
 		"price" : 1.99,
 		"avail" : false,
+		"isbn": "24682957008",
 		"coverPhoto" : "",
 		"description" :  "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	}

@@ -9,16 +9,11 @@
 // VARIABLIZE
 //-------------------
 $fonts-main: 'Quicksand', sans-serif;
-$im-width: 640px;
-$im-height: 360px;
-$logo-height: 80px;
+$col-width:  1000px;
 $gutter: 20px;
-$bleed: 10px;
-$cta-width: 350px;
-$head-height: $gutter + $logo-height;
+$bleed: $gutter/2;
+$corners: $bleed/2;
 $soc-size: 26px;
-$col-width:  $im-width + $cta-width + $gutter*10;
-$corners: 5px;
 
 $lorem: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 
@@ -82,7 +77,7 @@ body {
 }
 #page {
     width: 100%;
-    max-width: $col-width - $gutter*2;
+    max-width: $col-width;
     min-width: 200px;
     overflow: hidden;
     margin: $bleed auto 0;
@@ -244,6 +239,9 @@ body {
         div:nth-child(even){
             width: 60%;
         }
+        .map {
+            height: 300px;
+        }
     }
     ul {
         margin: 0 20% $gutter*2;
@@ -274,9 +272,11 @@ body {
         }
         .phone span {
             background-position: -9*$soc-size 0;
+            box-shadow: 0 0 0 1px $blue inset;
         }
         .email span {
             background-position: -4*$soc-size 0;
+            box-shadow: 0 0 0 1px $blue inset;
         }
         .facebook span {
             background-position: 0 -1*$soc-size;
@@ -363,6 +363,14 @@ input[type=submit] {
     padding: $gutter 2%;
     border-radius: $corners;
     background-color: $grey;
+    .default-shop-img {
+        background-color: white;
+        padding: 2%;
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
     h1 {
         position: relative;
         color: black;
@@ -468,6 +476,9 @@ input[type=submit] {
     }
 }
 @media screen and (max-width: 800px) {
+    #page {
+        margin: 0 auto 0;
+    }
     .content .text, #contact-content .text{
         div:nth-child(odd) {
             width: 100%;

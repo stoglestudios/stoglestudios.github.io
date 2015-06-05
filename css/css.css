@@ -1,4 +1,4 @@
-/* line 48, css.scss */
+/* line 43, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,44 +6,44 @@
   padding: 0;
 }
 
-/* line 54, css.scss */
+/* line 49, css.scss */
 ul {
   list-style: none;
 }
 
-/* line 57, css.scss */
+/* line 52, css.scss */
 div {
   position: relative;
 }
 
-/* line 60, css.scss */
+/* line 55, css.scss */
 img {
   display: inline-block;
   border: 0;
   outline: none;
 }
 
-/* line 65, css.scss */
+/* line 60, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 68, css.scss */
+/* line 63, css.scss */
 a img {
   border: 0;
 }
 
-/* line 71, css.scss */
+/* line 66, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-/* line 74, css.scss */
+/* line 69, css.scss */
 h1, h2, h3 {
   font-weight: 400;
 }
 
-/* line 77, css.scss */
+/* line 72, css.scss */
 body {
   position: relative;
   font-family: "Quicksand", sans-serif;
@@ -51,10 +51,10 @@ body {
   background: url("../images/grid-big.png") repeat #203049;
 }
 
-/* line 83, css.scss */
+/* line 78, css.scss */
 #page {
   width: 100%;
-  max-width: 1150px;
+  max-width: 1000px;
   min-width: 200px;
   overflow: hidden;
   margin: 10px auto 0;
@@ -62,25 +62,25 @@ body {
   background-color: #dddddd;
 }
 
-/* line 92, css.scss */
+/* line 87, css.scss */
 header {
   display: inline-block;
   width: 100%;
   text-align: center;
   background: linear-gradient(#444444, #aaaaaa);
 }
-/* line 97, css.scss */
+/* line 92, css.scss */
 header a {
   width: 60%;
   max-width: 370px;
 }
-/* line 101, css.scss */
+/* line 96, css.scss */
 header img {
   display: inline-block;
   width: 100%;
 }
 
-/* line 106, css.scss */
+/* line 101, css.scss */
 nav {
   width: 100%;
   color: white;
@@ -88,32 +88,32 @@ nav {
   font-size: 1em;
   background: url("../images/gel-btn.png") repeat-x #a83aab;
 }
-/* line 112, css.scss */
+/* line 107, css.scss */
 nav ul {
   list-style: none;
 }
-/* line 114, css.scss */
+/* line 109, css.scss */
 nav ul li {
   width: 20%;
   display: inline-block;
 }
-/* line 117, css.scss */
+/* line 112, css.scss */
 nav ul li a {
   width: 100%;
   text-align: center;
   color: white;
   line-height: 40px;
 }
-/* line 122, css.scss */
+/* line 117, css.scss */
 nav ul li a:hover {
   background: url("../images/gel-btn.png") repeat-x #46922a;
 }
-/* line 126, css.scss */
+/* line 121, css.scss */
 nav ul li .selected {
   background: url("../images/gel-btn.png") repeat-x #2ba0f9;
 }
 
-/* line 132, css.scss */
+/* line 127, css.scss */
 content {
   display: block;
   overflow: hidden;
@@ -123,7 +123,7 @@ content {
   background-color: white;
   border-radius: 5px;
 }
-/* line 140, css.scss */
+/* line 135, css.scss */
 content h1 {
   position: absolute;
   color: white;
@@ -135,63 +135,63 @@ content h1 {
   margin-bottom: -80px;
   z-index: 10;
 }
-/* line 151, css.scss */
+/* line 146, css.scss */
 content .home-title {
   text-shadow: 1px 1px 0 #d19547;
 }
-/* line 154, css.scss */
+/* line 149, css.scss */
 content .about-title {
   text-shadow: 1px 1px 0 #e0dc59;
 }
-/* line 157, css.scss */
+/* line 152, css.scss */
 content .projects-title {
   text-shadow: 1px 1px 0 #2ba0f9;
 }
-/* line 160, css.scss */
+/* line 155, css.scss */
 content img.main {
   width: 100%;
 }
-/* line 164, css.scss */
+/* line 159, css.scss */
 content .text div {
   text-align: left;
   display: inline-block;
   color: darkslategrey;
 }
-/* line 168, css.scss */
+/* line 163, css.scss */
 content .text div h2 {
   color: #46922a;
   margin-bottom: 10px;
 }
-/* line 173, css.scss */
+/* line 168, css.scss */
 content .text div {
   padding: 0 2%;
   margin-bottom: 5%;
 }
-/* line 176, css.scss */
+/* line 171, css.scss */
 content .text div:nth-child(odd) {
   clear: both;
   width: 50%;
   float: left;
 }
-/* line 181, css.scss */
+/* line 176, css.scss */
 content .text div:nth-child(even) {
   width: 50%;
   float: right;
 }
-/* line 187, css.scss */
+/* line 182, css.scss */
 content .shopping {
   padding: 2%;
 }
-/* line 190, css.scss */
+/* line 185, css.scss */
 content .needsText:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 193, css.scss */
+/* line 188, css.scss */
 content .needsTitle:after {
   content: "Lorem Ipsom Dolar";
 }
 
-/* line 197, css.scss */
+/* line 192, css.scss */
 footer {
   display: block;
   text-align: right;
@@ -200,11 +200,11 @@ footer {
   background: linear-gradient(#46922a, #003300);
   color: white;
 }
-/* line 204, css.scss */
+/* line 199, css.scss */
 footer a {
   color: white;
 }
-/* line 206, css.scss */
+/* line 201, css.scss */
 footer a:hover {
   text-decoration: underline;
 }
@@ -212,7 +212,7 @@ footer a:hover {
 /**************************
     PRODUCTS PAGE
 **************************/
-/* line 216, css.scss */
+/* line 211, css.scss */
 #projects-content div img {
   float: left;
   width: 20%;
@@ -220,7 +220,7 @@ footer a:hover {
   margin: 0 2% 2% 0;
   box-shadow: 2px 2px 5px grey;
 }
-/* line 223, css.scss */
+/* line 218, css.scss */
 #projects-content div h2:hover {
   color: #d19547;
   text-decoration: underline;
@@ -229,42 +229,46 @@ footer a:hover {
 /**************************
     CONTACT PAGE
 **************************/
-/* line 232, css.scss */
+/* line 227, css.scss */
 #contact-content {
   padding-top: 40px;
 }
-/* line 234, css.scss */
+/* line 229, css.scss */
 #contact-content iframe {
   background-color: #dddddd;
 }
-/* line 238, css.scss */
+/* line 233, css.scss */
 #contact-content .text h2 {
   border-bottom: solid #46922a 1px;
 }
-/* line 241, css.scss */
+/* line 236, css.scss */
 #contact-content .text div:nth-child(odd) {
   width: 40%;
 }
-/* line 244, css.scss */
+/* line 239, css.scss */
 #contact-content .text div:nth-child(even) {
   width: 60%;
 }
-/* line 248, css.scss */
+/* line 242, css.scss */
+#contact-content .text .map {
+  height: 300px;
+}
+/* line 246, css.scss */
 #contact-content ul {
   margin: 0 20% 40px;
 }
-/* line 251, css.scss */
+/* line 249, css.scss */
 #contact-content li {
   text-align: left;
   margin-bottom: 20px;
 }
-/* line 254, css.scss */
+/* line 252, css.scss */
 #contact-content li a {
   display: inline-block;
   width: 100%;
   color: darkslategrey;
 }
-/* line 258, css.scss */
+/* line 256, css.scss */
 #contact-content li a span {
   margin-right: 5px;
   vertical-align: middle;
@@ -275,21 +279,23 @@ footer a:hover {
   background-size: 1000% 200%;
   border-radius: 5px;
 }
-/* line 269, css.scss */
+/* line 267, css.scss */
 #contact-content li .hover:hover {
   text-decoration: underline;
 }
-/* line 272, css.scss */
+/* line 270, css.scss */
 #contact-content li .nohover:hover {
   cursor: default;
 }
-/* line 275, css.scss */
+/* line 273, css.scss */
 #contact-content li .phone span {
   background-position: -234px 0;
+  box-shadow: 0 0 0 1px #2ba0f9 inset;
 }
-/* line 278, css.scss */
+/* line 277, css.scss */
 #contact-content li .email span {
   background-position: -104px 0;
+  box-shadow: 0 0 0 1px #2ba0f9 inset;
 }
 /* line 281, css.scss */
 #contact-content li .facebook span {
@@ -395,6 +401,16 @@ input[type=submit]:hover {
   background-color: #dddddd;
 }
 /* line 366, css.scss */
+#results .default-shop-img {
+  background-color: white;
+  padding: 2%;
+}
+/* line 369, css.scss */
+#results .default-shop-img img {
+  width: 100%;
+  cursor: pointer;
+}
+/* line 374, css.scss */
 #results h1 {
   position: relative;
   color: black;
@@ -403,24 +419,24 @@ input[type=submit]:hover {
   text-align: center;
   font-size: 2em;
 }
-/* line 374, css.scss */
+/* line 382, css.scss */
 #results ul {
   list-style: none;
   background-color: white;
 }
-/* line 377, css.scss */
+/* line 385, css.scss */
 #results ul li {
   padding: 20px;
   border-bottom: solid 10px #dddddd;
   clear: both;
 }
-/* line 381, css.scss */
+/* line 389, css.scss */
 #results ul li:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 387, css.scss */
+/* line 395, css.scss */
 #results ul h1 {
   position: relative;
   text-align: left;
@@ -430,22 +446,22 @@ input[type=submit]:hover {
   font-size: 1.7em;
   font-weight: 400;
 }
-/* line 396, css.scss */
+/* line 404, css.scss */
 #results ul h3 {
   font-weight: 400;
   color: #a83aab;
   margin-bottom: 20px;
 }
-/* line 400, css.scss */
+/* line 408, css.scss */
 #results ul h3 i {
   color: #46922a;
 }
-/* line 404, css.scss */
+/* line 412, css.scss */
 #results ul p {
   color: darkslategrey;
   margin: 0 20px 20px 0;
 }
-/* line 408, css.scss */
+/* line 416, css.scss */
 #results ul img {
   float: left;
   max-width: 200px;
@@ -455,16 +471,16 @@ input[type=submit]:hover {
   margin: 0 20px 20px 0;
   box-shadow: 2px 2px 5px grey;
 }
-/* line 416, css.scss */
+/* line 424, css.scss */
 #results ul img:hover {
   cursor: pointer;
 }
-/* line 420, css.scss */
+/* line 428, css.scss */
 #results ul .shop-options {
   width: 50%;
   float: right;
 }
-/* line 424, css.scss */
+/* line 432, css.scss */
 #results ul button {
   float: right;
   padding: 0 .5em;
@@ -476,20 +492,20 @@ input[type=submit]:hover {
   border-radius: 5px;
   margin: 0 0 20px 20px;
 }
-/* line 435, css.scss */
+/* line 443, css.scss */
 #results ul button.avail {
   border: solid green 1px;
   background-color: darkseagreen;
   color: darkgreen;
   border-radius: 5px;
 }
-/* line 440, css.scss */
+/* line 448, css.scss */
 #results ul button.avail:hover {
   color: white;
   background-color: green;
   cursor: pointer;
 }
-/* line 446, css.scss */
+/* line 454, css.scss */
 #results ul select {
   background-color: white;
   height: 3em;
@@ -498,17 +514,17 @@ input[type=submit]:hover {
   max-width: 100px;
   margin: 0 0 5px 2%;
 }
-/* line 454, css.scss */
+/* line 462, css.scss */
 #results ul .colors {
   float: right;
   text-transform: capitalize;
 }
-/* line 458, css.scss */
+/* line 466, css.scss */
 #results ul .sizes {
   float: right;
   text-transform: uppercase;
 }
-/* line 462, css.scss */
+/* line 470, css.scss */
 #results ul .discription {
   width: 76%;
   clear: right;
@@ -517,45 +533,50 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 472, css.scss */
+  /* line 479, css.scss */
+  #page {
+    margin: 0 auto 0;
+  }
+
+  /* line 483, css.scss */
   .content .text div:nth-child(odd), #contact-content .text div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 476, css.scss */
+  /* line 487, css.scss */
   .content .text div:nth-child(even), #contact-content .text div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 481, css.scss */
+  /* line 492, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 485, css.scss */
+  /* line 496, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
     clear: both;
   }
 
-  /* line 490, css.scss */
+  /* line 501, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 493, css.scss */
+  /* line 504, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 497, css.scss */
+  /* line 508, css.scss */
   #results ul h1 {
     clear: both;
   }
-  /* line 500, css.scss */
+  /* line 511, css.scss */
   #results ul .discription {
     clear: both;
     width: 100%;

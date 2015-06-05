@@ -5,6 +5,7 @@
 		"illustrator" : "Joan Stevens",
 		"price" : 4.99,
 		"avail" : true,
+		"isbn": "24682957101",
 		"coverPhoto" : "ch-tgp.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -14,6 +15,7 @@
 		"illustrator" : "Brandon Gaius Ogle",
 		"price" : 1.99,
 		"avail" : true,
+		"isbn": "24682957102",
 		"coverPhoto" : "ch-bbds.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	},
@@ -23,6 +25,7 @@
 		"illustrator" : "Joan Stevens",
 		"price" : 2.99,
 		"avail" : false,
+		"isbn": "24682957103",
 		"coverPhoto" : "ch-f.jpg",
 		"description" : "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."
 	}
