@@ -113,7 +113,7 @@ function makeCheckout (itemPick, itemISBN, colorPick, sizePick) {
     }
     returnString += "\n\nSorry, the Cart is currently under construction.";
     alert(returnString);
-    return makeCheckout;
+    return returnString;
 }
 
 // Search Products Function - Runs on seacrh button click
@@ -332,6 +332,16 @@ function searchProducts(evt) {
             }
         }); // end getJSON
     } // end Merch
+} // end on search click
+// doc ready scripts
+$( document ).ready( function () {
+    console.log("page loaded");
+    $("#lightbox").hide();
+    $("form").submit(searchProducts);
+    $(".default-shop-img").click(function() {
+        $("input[type=text]").val("24682957003");
+        $("form").submit();
+    });
     // bind dynamic button actions
     $("body").on("click", ".avail", function () {
         var getItem = $(this).parent().parent().children(".discription").children("h1").text();
@@ -354,15 +364,5 @@ function searchProducts(evt) {
         $("#lightbox img").attr("src", imgLink);
     }).on("click", "#lightbox", function() {
         $("#lightbox").hide();
-    });
-} // end on search click
-// doc ready scripts
-$( document ).ready( function () {
-    console.log("page loaded");
-    $("#lightbox").hide();
-    $("form").submit(searchProducts);
-    $(".default-shop-img").click(function() {
-        $("input[type=text]").val("24682957003");
-        $("form").submit();
     });
 }); // end ready
