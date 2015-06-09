@@ -19,7 +19,8 @@ $(document).ready(function() {
             scrollTop: $(this).parent().parent().offset().top
         }, 2000);
     });
-    $(window).bind("mousewheel", function(event) {
+    //$(window).on("mousewheel", function(event) {
+    $(window).on("touchmove", function(event) {
         event.preventDefault();
         if (scrollTest) {
             var scrollUp;
