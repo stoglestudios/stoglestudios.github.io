@@ -5,6 +5,7 @@
 var currentSection = "one";
 var sections = ["#one", "#two", "#three", "#four", "#five"];
 var scrollTest = true;
+var inertialTest = true;
 
 $(document).ready(function() {
     $(".jumpdown").click(function(evt) {
@@ -19,13 +20,22 @@ $(document).ready(function() {
             scrollTop: $(this).parent().parent().offset().top
         }, 2000);
     });
-    //$(window).on("mousewheel", function(event) {
-    $(window).on("touchmove", function(event) {
+    $(window).on("mousewheel DOMMouseScroll onmousewheel touchmove scroll", function(event) {
+        if (event.target.id == 'el') return;
         event.preventDefault();
-        if (scrollTest) {
+        event.stopPropagation();
+        
+        var scrollBuffer = setInterval(function() {
+            inertialTest = true;
+            clearInterval(scrollBuffer);
+        }, 1500);
+        
+        if (scrollTest /*&& inertialTest*/) {
             var scrollUp;
             var scrollTo;
-            if (event.originalEvent.wheelDelta >= 0) {
+            if (event.originalEvent.wheelDelta >= 0 && event.originalEvent.wheelDelta >= 0) {
+                scrollUp = true; // UP
+            } else if (event.originalEvent.detail && event.originalEvent.detail <= 0) {
                 scrollUp = true; // UP
             } else {
                 scrollUp = false; // DOWN
@@ -67,32 +77,61 @@ $(document).ready(function() {
             });
         }
         scrollTest = false;
+        inertialTest = false;
     });
     $(".menu").click(function() {
-        if ($(this).parents("nav").css("width") === "40px" ) {
-            console.log("menu opened");
-            $(this).parents("nav").animate({
-                width: "140px",
-                height: "140px",
-                margin: "20px",
-                "border-radius": "70px"
-            }, 500);
-            $(this).parents("ul").animate({
-                "top": "10px",
-                "left": "10px"
-            }, 500);
+        if ($(this).parents("ul").css("height") === "40px" ) {
+            if ($(this).parents("nav").css("width") === "40px" ) {
+                console.log("menu opened");
+                $(this).parents("nav").animate({
+                    width: "370px",
+                    height: "50px",
+                    margin: "5px",
+                    "border-radius": "25px"
+                }, 500);
+                $(this).parents("ul").animate({
+                    "top": "0px",
+                    "left": "0px"
+                }, 500);
+            } else {
+                console.log("menu closed");
+                $(this).parents("nav").animate({
+                    width: "40px",
+                    height: "40px",
+                    margin: "10px",
+                    "border-radius": "20px"
+                }, 500); 
+                $(this).parents("ul").animate({
+                    "top": "-5px",
+                    "left": "-165px"
+                }, 500);
+            }
         } else {
-            console.log("menu closed");
-            $(this).parents("nav").animate({
-                width: "40px",
-                height: "40px",
-                margin: "70px",
-                "border-radius": "20px"
-            }, 500); 
-            $(this).parents("ul").animate({
-                "top": "-40px",
-                "left": "-40px"
-            }, 500);
+            if ($(this).parents("nav").css("width") === "40px" ) {
+                console.log("menu opened");
+                $(this).parents("nav").animate({
+                    width: "120px",
+                    height: "120px",
+                    margin: "5px",
+                    "border-radius": "60px"
+                }, 500);
+                $(this).parents("ul").animate({
+                    "top": "0px",
+                    "left": "0px"
+                }, 500);
+            } else {
+                console.log("menu closed");
+                $(this).parents("nav").animate({
+                    width: "40px",
+                    height: "40px",
+                    margin: "45px",
+                    "border-radius": "20px"
+                }, 500); 
+                $(this).parents("ul").animate({
+                    "top": "-40px",
+                    "left": "-40px"
+                }, 500);
+            }
         }
     });
 });

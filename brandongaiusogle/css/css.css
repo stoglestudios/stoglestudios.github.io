@@ -1,255 +1,209 @@
-/* line 23, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 29, css.scss */
 div, content, nav {
   position: relative;
-  display: inline-block;
-}
+  display: inline-block; }
 
-/* line 33, css.scss */
 img {
   display: inline-block;
   border: 0;
-  outline: none;
-}
+  outline: none; }
 
-/* line 38, css.scss */
 a {
-  display: inline-block;
-}
+  display: inline-block; }
 
-/* line 41, css.scss */
 a img {
-  border: 0;
-}
+  border: 0; }
 
-/* line 44, css.scss */
 a, a:hover, a:visited, a:active {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-/* line 47, css.scss */
 ul {
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 50, css.scss */
 li {
   display: inline-block;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 55, css.scss */
 body {
   position: relative;
   width: 100%;
   height: 500%;
   font-family: "Quicksand", "Century Gothic", sans-serif;
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 65, css.scss */
-nav {
+#nav-holder {
   position: fixed;
-  margin: 20px;
+  width: 100%;
+  text-align: right;
+  z-index: 1000; }
+
+nav {
+  margin: 5px;
   overflow: hidden;
   top: 0;
   right: 0;
-  height: 140px;
-  width: 140px;
-  border-radius: 70px;
-  z-index: 1000;
-  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.4);
-}
-/* line 77, css.scss */
-nav ul {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 120px;
   height: 120px;
-}
-/* line 84, css.scss */
-nav li {
-  width: 40px;
-  height: 40px;
-  vertical-align: top;
-  position: absolute;
-}
-/* line 89, css.scss */
-nav li:nth-child(1) {
-  top: 0;
-  left: 0;
-}
-/* line 92, css.scss */
-nav li:nth-child(1) a {
-  margin: 14px -4px -4px 14px;
-}
-/* line 96, css.scss */
-nav li:nth-child(2) {
-  top: 0;
-  left: 40px;
-}
-/* line 99, css.scss */
-nav li:nth-child(2) a {
-  margin: 0 5px 13px;
-}
-/* line 103, css.scss */
-nav li:nth-child(3) {
-  top: 0;
-  left: 80px;
-}
-/* line 106, css.scss */
-nav li:nth-child(3) a {
-  margin: 14px 14px -4px -4px;
-}
-/* line 110, css.scss */
-nav li:nth-child(4) {
-  top: 40px;
-  left: 0;
-}
-/* line 113, css.scss */
-nav li:nth-child(4) a {
-  margin: 5px 10px 5px 0;
-}
-/* line 117, css.scss */
-nav li:nth-child(5) {
-  top: 40px;
-  left: 40px;
-  z-index: 1001;
-}
-/* line 122, css.scss */
-nav li:nth-child(6) {
-  top: 40px;
-  left: 80px;
-}
-/* line 125, css.scss */
-nav li:nth-child(6) a {
-  margin: 5px 0 5px 10px;
-}
-/* line 129, css.scss */
-nav li:nth-child(7) {
-  top: 80px;
-  left: 0;
-}
-/* line 132, css.scss */
-nav li:nth-child(7) a {
-  margin: -4px -4px 14px 14px;
-}
-/* line 136, css.scss */
-nav li:nth-child(8) {
-  top: 80px;
-  left: 40px;
-}
-/* line 139, css.scss */
-nav li:nth-child(8) a {
-  margin: 10px 5px 0;
-}
-/* line 143, css.scss */
-nav li:nth-child(9) {
-  top: 80px;
-  left: 80px;
-}
-/* line 146, css.scss */
-nav li:nth-child(9) a {
-  margin: -4px 14px 14px -4px;
-}
-/* line 150, css.scss */
-nav li a {
-  color: white;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: blue;
-  font-size: .5em;
-}
-/* line 158, css.scss */
-nav li a:hover {
-  background-color: white;
-  color: black;
-}
-/* line 164, css.scss */
-nav .menu {
-  height: 100%;
-  width: 100%;
-  line-height: 40px;
-  font-size: .7em;
-  margin: 0;
-  border: none;
-  color: white;
-  border-radius: 50%;
-  background-color: blue;
-}
-/* line 174, css.scss */
-nav .menu:hover {
-  background-color: lightblue;
-  color: blue;
-  cursor: pointer;
-}
+  width: 120px;
+  border-radius: 60px;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.4); }
+  nav ul {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 120px; }
+  nav li {
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    position: absolute; }
+    nav li:nth-child(1) {
+      top: 0;
+      left: 0; }
+      nav li:nth-child(1) a {
+        margin: 16px -4px -4px 16px; }
+    nav li:nth-child(2) {
+      top: 0;
+      left: 40px; }
+      nav li:nth-child(2) a {
+        margin: 2px 5px 8px; }
+    nav li:nth-child(3) {
+      top: 0;
+      left: 80px; }
+      nav li:nth-child(3) a {
+        margin: 16px 16px -4px -4px; }
+    nav li:nth-child(4) {
+      top: 40px;
+      left: 0; }
+      nav li:nth-child(4) a {
+        margin: 5px 8px 5px 2px; }
+    nav li:nth-child(5) {
+      top: 40px;
+      left: 40px;
+      z-index: 1001; }
+    nav li:nth-child(6) {
+      top: 40px;
+      left: 80px; }
+      nav li:nth-child(6) a {
+        margin: 5px 2px 5px 8px; }
+    nav li:nth-child(7) {
+      top: 80px;
+      left: 0; }
+      nav li:nth-child(7) a {
+        margin: -4px -4px 16px 16px; }
+    nav li:nth-child(8) {
+      top: 80px;
+      left: 40px; }
+      nav li:nth-child(8) a {
+        margin: 8px 5px 2px; }
+    nav li:nth-child(9) {
+      top: 80px;
+      left: 80px; }
+      nav li:nth-child(9) a {
+        margin: -4px 16px 16px -4px; }
+    nav li a {
+      color: white;
+      line-height: 30px;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: blue;
+      font-size: .5em; }
+      nav li a:hover {
+        background-color: white;
+        color: black; }
+  nav .menu {
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: .7em;
+    margin: 0;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    background-color: blue; }
+    nav .menu:hover {
+      background-color: lightblue;
+      color: blue;
+      cursor: pointer; }
 
-/* line 186, css.scss */
 content {
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 189, css.scss */
 .section {
   width: 100%;
   height: 100vh;
-  left: 0;
-}
-/* line 193, css.scss */
-.section h1 {
-  margin: 20% 3% 0 30%;
-  text-align: left;
-}
-/* line 197, css.scss */
-.section p {
-  margin: 3% 3% 0 30%;
-  text-align: left;
-}
-/* line 200, css.scss */
-.section p:after {
-  content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
-}
-/* line 204, css.scss */
-.section .jumpdown, .section .jumpup {
-  position: absolute;
-  margin: 25px auto;
-  padding: 5px 10px;
-  bottom: 0;
-}
+  left: 0; }
+  .section h1 {
+    margin: 160px 3% 0 30%;
+    text-align: left; }
+  .section p {
+    margin: 3% 3% 0 30%;
+    text-align: left; }
+    .section p:after {
+      content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."; }
+  .section .jumpdown, .section .jumpup {
+    position: absolute;
+    margin: 25px auto;
+    padding: 5px 10px;
+    bottom: 0; }
 
-/* line 211, css.scss */
 #one {
-  background-color: aliceblue;
-}
+  background-color: aliceblue; }
 
-/* line 214, css.scss */
 #two {
-  background-color: antiquewhite;
-}
+  background-color: antiquewhite; }
 
-/* line 217, css.scss */
 #three {
-  background-color: azure;
-}
+  background-color: azure; }
 
-/* line 220, css.scss */
 #four {
-  background-color: beige;
-}
+  background-color: beige; }
 
-/* line 223, css.scss */
 #five {
-  background-color: bisque;
-}
+  background-color: bisque; }
+
+@media (max-width: 800px) {
+  #nav-holder {
+    text-align: center; }
+
+  nav {
+    width: 370px;
+    height: 50px; }
+    nav ul {
+      height: 40px;
+      width: 360px;
+      margin: 5px; }
+    nav li:nth-child(n) {
+      top: 0; }
+      nav li:nth-child(n) a {
+        margin: 5px; }
+      nav li:nth-child(n) .menu {
+        margin: 0; }
+    nav li:nth-child(1) {
+      left: 0; }
+    nav li:nth-child(2) {
+      left: 40px; }
+    nav li:nth-child(3) {
+      left: 80px; }
+    nav li:nth-child(4) {
+      left: 120px; }
+    nav li:nth-child(5) {
+      left: 160px; }
+    nav li:nth-child(6) {
+      left: 200px; }
+    nav li:nth-child(7) {
+      left: 240px; }
+    nav li:nth-child(8) {
+      left: 280px; }
+    nav li:nth-child(9) {
+      left: 320px; } }
+
+/*# sourceMappingURL=css.css.map */
