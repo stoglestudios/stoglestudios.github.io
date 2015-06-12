@@ -20,17 +20,14 @@ $(document).ready(function() {
             scrollTop: $(this).parent().parent().offset().top
         }, 2000);
     });
-    $(window).on("mousewheel DOMMouseScroll onmousewheel touchmove scroll", function(event) {
+    //$(window).on("mousewheel DOMMouseScroll onmousewheel touchmove scroll", function(event) {
+    $(window).on("mousewheel", function(event) {
+
         if (event.target.id == 'el') return;
         event.preventDefault();
         event.stopPropagation();
         
-        var scrollBuffer = setInterval(function() {
-            inertialTest = true;
-            clearInterval(scrollBuffer);
-        }, 1500);
-        
-        if (scrollTest /*&& inertialTest*/) {
+        if (scrollTest) {
             var scrollUp;
             var scrollTo;
             if (event.originalEvent.wheelDelta >= 0 && event.originalEvent.wheelDelta >= 0) {
