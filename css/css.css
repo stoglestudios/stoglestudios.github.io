@@ -380,19 +380,25 @@ input[type=submit]:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 /* line 349, css.scss */
-#lightbox img {
+#lightbox div {
+  width: 100%;
+  height: 100%;
   position: fixed;
+  text-align: center;
+}
+/* line 355, css.scss */
+#lightbox img {
   margin: 20px 10%;
   max-width: 400px;
   width: 80%;
   border: solid lightgrey 2px;
 }
-/* line 355, css.scss */
+/* line 360, css.scss */
 #lightbox img:hover {
   cursor: pointer;
 }
 
-/* line 360, css.scss */
+/* line 365, css.scss */
 #results {
   width: 100%;
   margin-top: 20px;
@@ -401,17 +407,17 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #dddddd;
 }
-/* line 367, css.scss */
+/* line 372, css.scss */
 #results .default-shop-img {
   background-color: white;
   padding: 2%;
 }
-/* line 370, css.scss */
+/* line 375, css.scss */
 #results .default-shop-img img {
   width: 100%;
   cursor: pointer;
 }
-/* line 375, css.scss */
+/* line 380, css.scss */
 #results h1 {
   position: relative;
   color: black;
@@ -420,24 +426,24 @@ input[type=submit]:hover {
   text-align: center;
   font-size: 2em;
 }
-/* line 383, css.scss */
+/* line 388, css.scss */
 #results ul {
   list-style: none;
   background-color: white;
 }
-/* line 386, css.scss */
+/* line 391, css.scss */
 #results ul li {
   padding: 20px;
   border-bottom: solid 10px #dddddd;
   clear: both;
 }
-/* line 390, css.scss */
+/* line 395, css.scss */
 #results ul li:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 396, css.scss */
+/* line 401, css.scss */
 #results ul h1 {
   position: relative;
   text-align: left;
@@ -447,22 +453,22 @@ input[type=submit]:hover {
   font-size: 1.7em;
   font-weight: 400;
 }
-/* line 405, css.scss */
+/* line 410, css.scss */
 #results ul h3 {
   font-weight: 400;
   color: #a83aab;
   margin-bottom: 20px;
 }
-/* line 409, css.scss */
+/* line 414, css.scss */
 #results ul h3 i {
   color: #46922a;
 }
-/* line 413, css.scss */
+/* line 418, css.scss */
 #results ul p {
   color: darkslategrey;
   margin: 0 20px 20px 0;
 }
-/* line 417, css.scss */
+/* line 422, css.scss */
 #results ul img {
   float: left;
   max-width: 200px;
@@ -472,16 +478,16 @@ input[type=submit]:hover {
   margin: 0 20px 20px 0;
   box-shadow: 2px 2px 5px grey;
 }
-/* line 425, css.scss */
+/* line 430, css.scss */
 #results ul img:hover {
   cursor: pointer;
 }
-/* line 429, css.scss */
+/* line 434, css.scss */
 #results ul .shop-options {
   width: 40%;
   float: right;
 }
-/* line 433, css.scss */
+/* line 438, css.scss */
 #results ul button {
   float: right;
   padding: 0 .5em;
@@ -493,20 +499,20 @@ input[type=submit]:hover {
   border-radius: 5px;
   margin: 0 0 20px 20px;
 }
-/* line 444, css.scss */
+/* line 449, css.scss */
 #results ul button.avail {
   border: solid green 1px;
   background-color: darkseagreen;
   color: darkgreen;
   border-radius: 5px;
 }
-/* line 449, css.scss */
+/* line 454, css.scss */
 #results ul button.avail:hover {
   color: white;
   background-color: green;
   cursor: pointer;
 }
-/* line 455, css.scss */
+/* line 460, css.scss */
 #results ul select {
   background-color: white;
   height: 3em;
@@ -515,17 +521,17 @@ input[type=submit]:hover {
   max-width: 100px;
   margin: 0 0 5px 2%;
 }
-/* line 463, css.scss */
+/* line 468, css.scss */
 #results ul .colors {
   float: right;
   text-transform: capitalize;
 }
-/* line 467, css.scss */
+/* line 472, css.scss */
 #results ul .sizes {
   float: right;
   text-transform: uppercase;
 }
-/* line 471, css.scss */
+/* line 476, css.scss */
 #results ul .discription {
   width: 76%;
   clear: right;
@@ -534,50 +540,50 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 480, css.scss */
+  /* line 485, css.scss */
   #page {
     margin: 0 auto 0;
   }
 
-  /* line 484, css.scss */
+  /* line 489, css.scss */
   .content .text div:nth-child(odd), #contact-content .text div:nth-child(odd) {
     width: 100%;
     float: none;
   }
-  /* line 488, css.scss */
+  /* line 493, css.scss */
   .content .text div:nth-child(even), #contact-content .text div:nth-child(even) {
     width: 100%;
     float: none;
   }
 
-  /* line 493, css.scss */
+  /* line 498, css.scss */
   input[type=text] {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* line 497, css.scss */
+  /* line 502, css.scss */
   select {
     width: 100%;
     margin-bottom: 10px;
     clear: both;
   }
 
-  /* line 502, css.scss */
+  /* line 507, css.scss */
   input[type=submit] {
     width: 50%;
   }
 
-  /* line 505, css.scss */
+  /* line 510, css.scss */
   nav {
     font-size: .8em;
   }
 
-  /* line 509, css.scss */
+  /* line 514, css.scss */
   #results ul h1 {
     clear: both;
   }
-  /* line 512, css.scss */
+  /* line 517, css.scss */
   #results ul .discription {
     clear: both;
     width: 100%;

@@ -346,8 +346,13 @@ input[type=submit] {
     display: none;
     z-index: 100;
     background-color: rgba(0,0,0,.8);
-    img {
+    div {
+        width: 100%;
+        height: 100%;
         position: fixed;
+        text-align: center;
+    }
+    img {
         margin: $gutter 10%;
         max-width: 400px;
         width: 80%;
