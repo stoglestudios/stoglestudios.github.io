@@ -99,7 +99,6 @@ $(document).ready(function() {
             clearTimeout(scrollBuffer);
         }, 2000);
     }).on("touchstart", function(event) {
-        event.preventDefault();
         ts = event.originalEvent.touches[0].clientY;
     }).on("touchend", function(event) {
         event.preventDefault();
