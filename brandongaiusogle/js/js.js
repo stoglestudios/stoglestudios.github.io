@@ -98,10 +98,13 @@ $(document).ready(function() {
             inertialTest = true;
             clearTimeout(scrollBuffer);
         }, 2000);
-    }).on("touchstart", function(event) {
+    }).on("touchmove", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
         ts = event.originalEvent.touches[0].clientY;
     }).on("touchend", function(event) {
         event.preventDefault();
+        event.stopPropagation();
         var te = event.originalEvent.changedTouches[0].clientY;
         var touchUp;
         if(ts > te+5){
