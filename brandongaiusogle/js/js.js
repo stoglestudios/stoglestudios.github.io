@@ -98,7 +98,8 @@ $(document).ready(function() {
             inertialTest = true;
             clearTimeout(scrollBuffer);
         }, 2000);
-    }).on("touchmove", function(event) {
+    });
+    $("content").on("touchstart", function(event) {
         event.preventDefault();
         event.stopPropagation();
         ts = event.originalEvent.touches[0].clientY;
