@@ -92,7 +92,6 @@ $(document).ready(function() {
     }).on("DOMMouseScroll", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
-        event.stopPropagation();
         scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail, false);
     }).on("touchstart", function(event) {
         event.preventDefault();
