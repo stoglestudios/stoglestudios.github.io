@@ -6,28 +6,34 @@ var currentSection = "one";
 var sections = ["#one", "#two", "#three", "#four", "#five"];
 var scrollTest = true;
 var inertialTest = true;
+var ts;
 
 //-->Functions
 
-function scrollPage(oe_wd, oe_d) {
+function scrollPage(oe_wd, oe_d, touchUp) {
     if (scrollTest && inertialTest) {
         scrollTest = false;
         inertialTest = false;
         var scrollUp;
         var scrollTo;
+        //deturnmin UP or DOWN
         if (oe_wd && oe_wd >= 0) {
             scrollUp = true; // UP
         } else if (oe_d && oe_d <= 0) {
             scrollUp = true; // UP
+        } else if (touchUp) {
+            scrollUp = true; // UP
         } else {
             scrollUp = false; // DOWN
         }
+        // get current scroll spot
         var documentScroll = $(document).scrollTop();
         var winHeight = $(window).height();
         var scrollUpTo;
         var scrollDownTo;
         console.log("Window's Scroll Position: " + documentScroll);
         console.log("Window's Height: " + winHeight);
+        //figure out where to scroll to from current spot 
         for (var i=0; i<sections.length; i++) {
             var posTops = $(sections[i]).offset().top;
             if (posTops >= documentScroll && posTops < documentScroll + winHeight) {
@@ -61,7 +67,7 @@ function scrollPage(oe_wd, oe_d) {
         var scrollBuffer = setTimeout(function(){
             inertialTest = true;
             clearTimeout(scrollBuffer);
-        }, 1000);
+        }, 2000);
     }
 }
 
@@ -78,32 +84,31 @@ $(document).ready(function() {
             scrollTop: $(this).parent().parent().offset().top
         }, 2000);
     });
-    //$(window).on("mousewheel DOMMouseScroll onmousewheel touchmove scroll", function(event) {
     $(window).on("mousewheel", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
         event.stopPropagation();
-        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail);
+        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail, false);
     }).on("DOMMouseScroll", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
         event.stopPropagation();
-        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail);
-    /*}).on("onmousewheel", function(event) {
-        if (event.target.id == 'el') return;
+        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail, false);
+    }).on("touchstart", function(event) {
         event.preventDefault();
         event.stopPropagation();
-        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail);
-    }).on("scroll", function(event) {
-        if (event.target.id == 'el') return;
+        ts = event.originalEvent.touches[0].clientY;
+    }).on("touchend", function(event) {
         event.preventDefault();
         event.stopPropagation();
-        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail);
-    */}).on("touchmove", function(event) {
-        if (event.target.id == 'el') return;
-        event.preventDefault();
-        event.stopPropagation();
-        scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail);
+        var te = event.originalEvent.changedTouches[0].clientY;
+        var touchUp;
+        if(ts > te+5){
+            touchUp = false;
+        }else if(ts < te-5){
+            touchUp = true;
+        }
+        scrollPage(0, 0, touchUp);
     }); 
     
     $(".menu").click(function() {
@@ -111,7 +116,7 @@ $(document).ready(function() {
             if ($(this).parents("nav").css("width") === "40px" ) {
                 console.log("menu opened");
                 $(this).parents("nav").animate({
-                    width: "370px",
+                    width: "300px",
                     height: "50px",
                     margin: "5px",
                     "border-radius": "25px"
@@ -130,7 +135,7 @@ $(document).ready(function() {
                 }, 500); 
                 $(this).parents("ul").animate({
                     "top": "-5px",
-                    "left": "-165px"
+                    "left": "-130px"
                 }, 500);
             }
         } else {

@@ -6,7 +6,6 @@ $title-font: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
 $gutter: 25px; 
 $bleed: 10px;
 $corners: 5px;
-$icon-size: 30px;
 
 // -> NAV OFFSETS
 $evens-sides: 5px;
@@ -16,6 +15,10 @@ $odds-push: 16px;
 $odds-pull: $odds-push - 20px;
 // -> NAV LI Size
 $li-size: 40px;
+$a-size: 30px;
+
+$green: #5c9149;
+$purple: #301f3a;
 
 $main-color: #5A9245;
 $alt-color: #301F3A;
@@ -74,127 +77,131 @@ body {
 #nav-holder {
     position: fixed;
     width: 100%;
-    text-align: right;
+    text-align: center;
     z-index: 1000;
 }
 nav {
-    margin: 5px;
+    margin: 10px;
     overflow: hidden; 
     top: 0;
     right: 0;
-    height: $li-size*3;
-    width: $li-size*3;
-    border-radius: $li-size*3/2;
+    width: $li-size;
+    height: $li-size;
+    border-radius: $li-size/2;
     box-shadow: 2px 2px 10px 5px rgba(0,0,0,.2) ;
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(60,120,70,.2);
     ul {
         position: absolute;
-        top: 0px;
-        left: 0px;
-        width: $li-size*3;
-        height: $li-size*3;
+        top: -5px;
+        left: -130px;
+        height: $li-size;
+        width: $li-size*7;
+        margin: 5px 10px;
     }
     li {
         width: $li-size;
         height: $li-size;
         vertical-align: top;
         position: absolute;
-        &:nth-child(1) {
-            top: 0;
-            left: 0;
-            a {
-                margin: $odds-push $odds-pull $odds-pull $odds-push;
-            }
-        }
-        &:nth-child(2) {
-            top: 0;
-            left: $li-size;
-            a {
-                margin: $evens-pull $evens-sides $evens-push;
-            }
-        }
-        &:nth-child(3) {
-            top: 0;
-            left: $li-size*2;
-            a {
-                margin: $odds-push $odds-push $odds-pull $odds-pull;
-            }
-        }
-        &:nth-child(4) {
-            top: $li-size;
-            left: 0;
-            a {
-                margin: $evens-sides $evens-push $evens-sides $evens-pull;
-            }
-        }
-        &:nth-child(5) {
-            top: $li-size;
-            left: $li-size;
-            z-index: 1001;
-        }
-        &:nth-child(6) {
-            top: $li-size;
-            left: $li-size*2;
-            a {
-                margin: $evens-sides $evens-pull $evens-sides $evens-push;
-            }
-        }
-        &:nth-child(7) {
-            top: $li-size*2;
-            left: 0;
-            a {
-                margin: $odds-pull $odds-pull $odds-push $odds-push;
-            }
-        }
-        &:nth-child(8) {
-            top: $li-size*2;
-            left: $li-size;
-            a {
-                margin: $evens-push $evens-sides $evens-pull;
-            }
-        }
-        &:nth-child(9) {
-            top: $li-size*2;
-            left: $li-size*2;
-            a {
-                margin: $odds-pull $odds-push $odds-push $odds-pull; 
-            }
-        }
         a {
             color: white;
-            line-height: 30px;
-            width: 30px;
-            height: 30px;
-            border-radius: 15px;
-            background-color: blue;
+            line-height: $a-size;
+            width: $a-size;
+            height: $a-size;
+            border-radius: $a-size/2;
             font-size: .5em;
+            background: url("../images/menu-icons.png") no-repeat $purple;
+            background-size: 700% 200%;
             &:hover {
-                background-color: white;
                 color: black; 
             }
         }
-    }
-    .menu {
-        height: 100%;
-        width: 100%;
-        line-height: $li-size;
-        font-size: .7em;
-        margin: 0;
-        border: none;
-        color: white;
-        border-radius: 50%;
-        background-color: blue;
-        &:hover {
-            background-color: lightblue;
-            color: blue;
-            cursor: pointer;
+        .menu {
+            height: 100%;
+            width: 100%;
+            line-height: $li-size;
+            font-size: .7em;
+            margin: 0;
+            border: none;
+            color: white;
+            border-radius: 50%;
+            background-color: $green;
+            background-position: $li-size*-3 0;
+            &:hover {
+                background-position: $li-size*-3 -1*$li-size;
+                cursor: pointer;
+            }
+        }
+        &:nth-child(1) {
+            left: 0;
+            a {
+                margin: 5px 10px 5px 0;
+                background-position: 0 0;
+                &:hover {
+                    background-position: 0 -1*$a-size;
+                }
+            }
+        }
+        &:nth-child(2) {
+            left: $li-size;
+            a {
+                margin: 5px 10px 5px 0;
+                background-position: -$a-size 0;
+                &:hover {
+                    background-position: $a-size*-1 -1*$a-size;
+                }
+            }
+        }
+        &:nth-child(3) {
+            left: $li-size*2;
+            a {
+                margin: 5px 10px 5px 0;
+                background-position: -$a-size*2 0;
+                &:hover {
+                    background-position: $a-size*-2 -1*$a-size;
+                }
+            }
+        }
+        &:nth-child(4) {
+            left: $li-size*3;
+            z-index: 1001;
+        }
+        &:nth-child(5) {
+            left: $li-size*4;
+            a {
+                margin: 5px 0 5px 10px;
+                background-position: -$a-size*4 0;
+                &:hover {
+                    background-position: -$a-size*4 -1*$a-size;
+                }
+            }
+        }
+        &:nth-child(6) {
+            left: $li-size*5;
+            a {
+                margin: 5px 0 5px 10px;
+                background-position: -$a-size*5 0;
+                &:hover {
+                    background-position: -$a-size*5 -1*$a-size;
+                }
+            }
+        }
+        &:nth-child(7) {
+            left: $li-size*6;
+            a {
+                margin: 5px 0 5px 10px;
+                background-position: -$a-size*6 0;
+                &:hover {
+                    background-position: -$a-size*6 -1*$a-size;
+                }
+            }
         }
     }
 }
     
     
 //--------------------------------------
-// NEED TITLE
+// PAGE CONTENT
 //--------------------------------------
 content {
     width: 100%;
@@ -203,23 +210,44 @@ content {
     width: 100%;
     height: 100vh;
     left: 0;
+    text-align: center;
     h1 {
         margin: $li-size*4 3% 0 30%;
         text-align: left;
+        font-weight: 300;
+        font-size: 24px;
+        color: $green;
+        padding: 3% 3% 0;
+        background-color: rgba(255,255,255,.4);
     }
     p {
-        margin: 3% 3% 0 30%;
+        background-color: rgba(255,255,255,.4);
+        margin: 0 3% 0 30%;
+        padding: 3%;
         text-align: left;
         &:after {
             content: $lorem;
         }
     }
+    .jumpdown {
+        background: url("../images/down-arrow.png") no-repeat;
+    }
+    .jumpup {
+        background: url("../images/up-arrow.png") no-repeat;
+    }
     .jumpdown, .jumpup {
         position: absolute;
-        margin: $gutter auto;
-        padding: $corners $bleed;
+        margin: $gutter*2 0;
         bottom: 0;
+        width: 56.5px;
+        height: 20px;
+        background-size: 100% 200%;
+        &:hover {
+            background-position: bottom;
+        }
     }
+
+    
 }
 #one {
     background-color: aliceblue;
@@ -238,55 +266,5 @@ content {
 }
 
 @media (max-width: 800px) {
-    #nav-holder {
-        text-align: center;
-    }
-    nav {
-        width: $li-size*9 + 10px;
-        height: $li-size +10;
-        ul {
-            height: $li-size;
-            width: $li-size*9;
-            margin: 5px;
-        }
-        li {
-            //background-color: aqua;
-            &:nth-child(n) {
-                top: 0;
-                a {
-                    margin: 5px;
-                }
-                .menu {
-                    margin: 0;
-                }
-            }
-            &:nth-child(1) {
-                left: 0;
-            }
-            &:nth-child(2) {
-                left: $li-size;
-            }
-            &:nth-child(3) {
-                left: $li-size*2;
-            }
-            &:nth-child(4) {
-                left: $li-size*3;
-            }
-            &:nth-child(5) {
-                left: $li-size*4;
-            }
-            &:nth-child(6) {
-                left: $li-size*5;
-            }
-            &:nth-child(7) {
-                left: $li-size*6;
-            }
-            &:nth-child(8) {
-                left: $li-size*7;
-            }
-            &:nth-child(9) {
-                left: $li-size*8;
-            }
-        }
-    }
+
 }
