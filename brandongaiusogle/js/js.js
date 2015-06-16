@@ -64,10 +64,6 @@ function scrollPage(oe_wd, oe_d, touchUp) {
             scrollTest = true;
             
         });
-        var scrollBuffer = setTimeout(function(){
-            inertialTest = true;
-            clearTimeout(scrollBuffer);
-        }, 2000);
     }
 }
 
@@ -89,17 +85,24 @@ $(document).ready(function() {
         event.preventDefault();
         event.stopPropagation();
         scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail, false);
+        var scrollBuffer = setTimeout(function(){
+            inertialTest = true;
+            clearTimeout(scrollBuffer);
+        }, 2000);
     }).on("DOMMouseScroll", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
+        event.stopPropagation();
         scrollPage(event.originalEvent.wheelDelta, event.originalEvent.detail, false);
+        var scrollBuffer = setTimeout(function(){
+            inertialTest = true;
+            clearTimeout(scrollBuffer);
+        }, 2000);
     }).on("touchstart", function(event) {
         event.preventDefault();
-        event.stopPropagation();
         ts = event.originalEvent.touches[0].clientY;
     }).on("touchend", function(event) {
         event.preventDefault();
-        event.stopPropagation();
         var te = event.originalEvent.changedTouches[0].clientY;
         var touchUp;
         if(ts > te+5){
@@ -108,6 +111,10 @@ $(document).ready(function() {
             touchUp = true;
         }
         scrollPage(0, 0, touchUp);
+        var scrollBuffer = setTimeout(function(){
+            inertialTest = true;
+            clearTimeout(scrollBuffer);
+        }, 500);
     }); 
     
     $(".menu").click(function() {
