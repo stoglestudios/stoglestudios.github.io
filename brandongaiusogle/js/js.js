@@ -97,7 +97,7 @@ $(document).ready(function() {
         var scrollBuffer = setTimeout(function(){
             inertialTest = true;
             clearTimeout(scrollBuffer);
-        }, 2000);
+        }, 2500);
     });
     $("content").on("touchstart", function(event) {
         event.preventDefault();
