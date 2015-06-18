@@ -71,13 +71,13 @@ $(document).ready(function() {
     $(".jumpdown").click(function(evt) {
         evt.preventDefault();
         $('html, body').animate({
-            scrollTop: $(this).parent().parent().next().offset().top
+            scrollTop:              $(this).parents(".section").next().offset().top
         }, 1000);
     });
     $(".jumpup").click(function(evt) {
         evt.preventDefault();
         $('html, body').animate({
-            scrollTop: $(this).parent().parent().parent().offset().top
+            scrollTop: $(this).parents("content").offset().top
         }, 2000);
     });
     $(window).on("mousewheel", function(event) {
