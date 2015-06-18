@@ -81,7 +81,8 @@ $(document).ready(function() {
             scrollTop: 0//$(this).parents("html").offset().top
         }, 2000);
         $(this).parents(".section").children("h1").css("color", "black");
-    });*/
+    });
+    */
     $(window).on("mousewheel", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
