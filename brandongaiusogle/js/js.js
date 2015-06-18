@@ -75,7 +75,7 @@ $(document).ready(function() {
             scrollTop:              $(this).parents(".section").next().offset().top
         }, 1000);
     });
-    $(".jumpup").click(function(evt) {
+    $(".jumpup").on("click touchend", function(evt) {
         evt.preventDefault();
         evt.stopPropagation();
         $('html, body').animate({
@@ -108,7 +108,6 @@ $(document).ready(function() {
         ts = event.originalEvent.touches[0].clientY;
     }).on("touchend", function(event) {
         event.preventDefault();
-        event.stopPropagation();
         var te = event.originalEvent.changedTouches[0].clientY;
         var touchUp;
         if(ts > te+5){
