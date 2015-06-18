@@ -77,7 +77,7 @@ $(document).ready(function() {
     $(".jumpup").click(function(evt) {
         evt.preventDefault();
         $('html, body').animate({
-            scrollTop: $(this).parents("content").offset().top
+            scrollTop: $(this).parents("body").offset().top
         }, 2000);
     });
     $(window).on("mousewheel", function(event) {
