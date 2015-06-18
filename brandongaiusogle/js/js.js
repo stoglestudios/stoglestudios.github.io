@@ -100,9 +100,10 @@ $(document).ready(function() {
             clearTimeout(scrollBuffer);
         }, 2500);
     });
-    $("content .section, content h1, content p").on("touchstart", function(event) {
+    //$("content .section, content h1, content p").on("touchstart", function(event) {
+    $(":not(a)").on("touchstart", function(event) {
         event.preventDefault();
-        //event.stopPropagation();
+        event.stopPropagation();
         ts = event.originalEvent.touches[0].clientY;
     }).on("touchend", function(event) {
         event.preventDefault();
