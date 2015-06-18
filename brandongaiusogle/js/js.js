@@ -76,9 +76,10 @@ $(document).ready(function() {
     });
     $(".jumpup").click(function(evt) {
         evt.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0//$(this).parents("html").offset().top
-        }, 2000);
+        //$('html, body').animate({
+          //  scrollTop: 0//$(this).parents("html").offset().top
+        //}, 2000);
+        $(this).parents(".section").children("h1").css("color", "black");
     });
     $(window).on("mousewheel", function(event) {
         if (event.target.id == 'el') return;
