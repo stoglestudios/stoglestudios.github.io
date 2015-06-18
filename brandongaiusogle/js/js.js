@@ -70,14 +70,14 @@ function scrollPage(oe_wd, oe_d, touchUp) {
 $(document).ready(function() {
     $(".jumpdown").click(function(evt) {
         evt.preventDefault();
-        event.stopPropagation();
+        evt.stopPropagation();
         $('html, body').animate({
             scrollTop:              $(this).parents(".section").next().offset().top
         }, 1000);
     });
     $(".jumpup").click(function(evt) {
         evt.preventDefault();
-        event.stopImmediatePropagation();
+        evt.stopPropagation();
         $('html, body').animate({
             scrollTop: 0//$(this).parents("html").offset().top
         }, 2000);
