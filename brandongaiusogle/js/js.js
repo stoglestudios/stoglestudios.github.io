@@ -103,7 +103,7 @@ $(document).ready(function() {
         }, 2500);
     });
     //$("content .section, content h1, content p").on("touchstart", function(event) {
-    $(".section:not(a)").on("touchstart", function(event) {
+    $(".section").on("touchstart", function(event) {
         event.preventDefault();
         ts = event.originalEvent.touches[0].clientY;
     }).on("touchend", function(event) {
