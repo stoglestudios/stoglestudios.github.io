@@ -136,9 +136,9 @@ nav {
             left: 0;
             a {
                 margin: 5px 10px 5px 0;
-                background-position: 0 0;
+                background-position: 0 -1*$a-size;
                 &:hover {
-                    background-position: 0 -1*$a-size;
+                    background-position: 0 0;
                 }
             }
         }
@@ -146,9 +146,9 @@ nav {
             left: $li-size;
             a {
                 margin: 5px 10px 5px 0;
-                background-position: -$a-size 0;
+                background-position: $a-size*-1 -1*$a-size;
                 &:hover {
-                    background-position: $a-size*-1 -1*$a-size;
+                    background-position: -$a-size 0;
                 }
             }
         }
@@ -156,9 +156,9 @@ nav {
             left: $li-size*2;
             a {
                 margin: 5px 10px 5px 0;
-                background-position: -$a-size*2 0;
+                background-position: $a-size*-2 -1*$a-size;
                 &:hover {
-                    background-position: $a-size*-2 -1*$a-size;
+                    background-position: -$a-size*2 0;
                 }
             }
         }
@@ -170,9 +170,9 @@ nav {
             left: $li-size*4;
             a {
                 margin: 5px 0 5px 10px;
-                background-position: -$a-size*4 0;
+                background-position: -$a-size*4 -1*$a-size;
                 &:hover {
-                    background-position: -$a-size*4 -1*$a-size;
+                    background-position: -$a-size*4 0;
                 }
             }
         }
@@ -180,9 +180,9 @@ nav {
             left: $li-size*5;
             a {
                 margin: 5px 0 5px 10px;
-                background-position: -$a-size*5 0;
+                background-position: -$a-size*5 -1*$a-size;
                 &:hover {
-                    background-position: -$a-size*5 -1*$a-size;
+                    background-position: -$a-size*5 0;
                 }
             }
         }
@@ -190,9 +190,9 @@ nav {
             left: $li-size*6;
             a {
                 margin: 5px 0 5px 10px;
-                background-position: -$a-size*6 0;
+                background-position: -$a-size*6 -1*$a-size;
                 &:hover {
-                    background-position: -$a-size*6 -1*$a-size;
+                    background-position: -$a-size*6 0;
                 }
             }
         }
@@ -212,22 +212,25 @@ content {
     left: 0;
     text-align: center;
     h1 {
-        margin: $li-size*4 3% 0 30%;
+        margin: $li-size*4 3% 0 20%;
         text-align: left;
         font-weight: 300;
         font-size: 24px;
         color: $green;
         padding: 3% 3% 0;
-        background-color: rgba(255,255,255,.4);
+        background-color: rgba(255,255,255,.6);
+        border-radius: $li-size/2 $li-size/2 0 0;
     }
     p {
-        background-color: rgba(255,255,255,.4);
-        margin: 0 3% 0 30%;
+        background-color: rgba(255,255,255,.6);
+        margin: 0 3% 0 20%;
+        font-size: .9em;
         padding: 3%;
         text-align: left;
-        &:after {
-            content: $lorem;
-        }
+        border-radius: 0 0 $li-size/2 $li-size/2;
+    }
+    .needs-filler:after {
+        content: $lorem;
     }
     .jumpdown {
         background: url("../images/down-arrow.png") no-repeat;
@@ -246,23 +249,46 @@ content {
             background-position: bottom;
         }
     }
-
-    
 }
 #one {
-    background-color: aliceblue;
+    background-image: 
+        linear-gradient(135deg, rgba(255,255,255,.3), aliceblue ),
+        url("../images/brandon-temp.jpg") 
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #two {
-    background-color: antiquewhite;
+    background-image: 
+        linear-gradient(135deg, rgba(255,255,255,.3), antiquewhite ),
+        url("../images/brandon-temp.jpg") 
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #three {
-    background-color: azure;
+    background-image: 
+        linear-gradient(135deg, rgba(255,255,255,.3), azure ),
+        url("../images/brandon-temp.jpg") 
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #four {
-    background-color: beige;
+    background-image: 
+        linear-gradient(135deg, rgba(255,255,255,.3), beige ),
+        url("../images/brandon-temp.jpg") 
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #five {
-    background-color: bisque;
+    background-image: 
+        linear-gradient(135deg, rgba(255,255,255,.3), bisque ),
+        url("../images/brandon-temp.jpg") 
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (max-width: 800px) {

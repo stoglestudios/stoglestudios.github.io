@@ -99,7 +99,7 @@ $(document).ready(function() {
             clearTimeout(scrollBuffer);
         }, 2500);
     });
-    $("content").on("touchstart", function(event) {
+    $("content div, content h1, content p").on("touchstart", function(event) {
         event.preventDefault();
         event.stopPropagation();
         ts = event.originalEvent.touches[0].clientY;

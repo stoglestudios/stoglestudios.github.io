@@ -173,7 +173,7 @@ footer {
     background-color: $neutral-color;
 }
 #qual-sum {
-    padding: 0 $gutter $bleed;
+    padding: $gutter $gutter $bleed;
     ul {
         margin-left: 3%;
         li {
@@ -353,7 +353,7 @@ footer {
         font-size:  2.6em;
     }
     #qual-sum {
-        padding: 0 $bleed $bleed;
+        padding: $gutter $bleed $bleed;
     }
     .sections {
         padding: 0 $bleed;

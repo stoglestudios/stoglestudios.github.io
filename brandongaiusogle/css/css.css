@@ -94,23 +94,23 @@ nav {
       left: 0; }
       nav li:nth-child(1) a {
         margin: 5px 10px 5px 0;
-        background-position: 0 0; }
+        background-position: 0 -30px; }
         nav li:nth-child(1) a:hover {
-          background-position: 0 -30px; }
+          background-position: 0 0; }
     nav li:nth-child(2) {
       left: 40px; }
       nav li:nth-child(2) a {
         margin: 5px 10px 5px 0;
-        background-position: -30px 0; }
+        background-position: -30px -30px; }
         nav li:nth-child(2) a:hover {
-          background-position: -30px -30px; }
+          background-position: -30px 0; }
     nav li:nth-child(3) {
       left: 80px; }
       nav li:nth-child(3) a {
         margin: 5px 10px 5px 0;
-        background-position: -60px 0; }
+        background-position: -60px -30px; }
         nav li:nth-child(3) a:hover {
-          background-position: -60px -30px; }
+          background-position: -60px 0; }
     nav li:nth-child(4) {
       left: 120px;
       z-index: 1001; }
@@ -118,23 +118,23 @@ nav {
       left: 160px; }
       nav li:nth-child(5) a {
         margin: 5px 0 5px 10px;
-        background-position: -120px 0; }
+        background-position: -120px -30px; }
         nav li:nth-child(5) a:hover {
-          background-position: -120px -30px; }
+          background-position: -120px 0; }
     nav li:nth-child(6) {
       left: 200px; }
       nav li:nth-child(6) a {
         margin: 5px 0 5px 10px;
-        background-position: -150px 0; }
+        background-position: -150px -30px; }
         nav li:nth-child(6) a:hover {
-          background-position: -150px -30px; }
+          background-position: -150px 0; }
     nav li:nth-child(7) {
       left: 240px; }
       nav li:nth-child(7) a {
         margin: 5px 0 5px 10px;
-        background-position: -180px 0; }
+        background-position: -180px -30px; }
         nav li:nth-child(7) a:hover {
-          background-position: -180px -30px; }
+          background-position: -180px 0; }
 
 content {
   width: 100%; }
@@ -145,20 +145,23 @@ content {
   left: 0;
   text-align: center; }
   .section h1 {
-    margin: 160px 3% 0 30%;
+    margin: 160px 3% 0 20%;
     text-align: left;
     font-weight: 300;
     font-size: 24px;
     color: #5c9149;
     padding: 3% 3% 0;
-    background-color: rgba(255, 255, 255, 0.4); }
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px 20px 0 0; }
   .section p {
-    background-color: rgba(255, 255, 255, 0.4);
-    margin: 0 3% 0 30%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 3% 0 20%;
+    font-size: .9em;
     padding: 3%;
-    text-align: left; }
-    .section p:after {
-      content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."; }
+    text-align: left;
+    border-radius: 0 0 20px 20px; }
+  .section .needs-filler:after {
+    content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei."; }
   .section .jumpdown {
     background: url("../images/down-arrow.png") no-repeat; }
   .section .jumpup {
@@ -174,18 +177,28 @@ content {
       background-position: bottom; }
 
 #one {
-  background-color: aliceblue; }
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), aliceblue), url("../images/brandon-temp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 #two {
-  background-color: antiquewhite; }
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), antiquewhite), url("../images/brandon-temp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 #three {
-  background-color: azure; }
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), azure), url("../images/brandon-temp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 #four {
-  background-color: beige; }
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), beige), url("../images/brandon-temp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 #five {
-  background-color: bisque; }
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), bisque), url("../images/brandon-temp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=css.css.map */
