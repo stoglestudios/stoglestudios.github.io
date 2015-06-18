@@ -68,7 +68,7 @@ function scrollPage(oe_wd, oe_d, touchUp) {
 }
 
 $(document).ready(function() {
-    $(".jumpdown").click(function(evt) {
+    $(".jumpdown").on("click touchend", function(evt) {
         evt.preventDefault();
         evt.stopPropagation();
         $('html, body').animate({
@@ -79,9 +79,8 @@ $(document).ready(function() {
         evt.preventDefault();
         evt.stopPropagation();
         $('html, body').animate({
-            scrollTop: 0//$(this).parents("html").offset().top
+            scrollTop: 0
         }, 2000);
-        $(this).parents(".section").children("h1").css("color", "black");
     });
     $(window).on("mousewheel", function(event) {
         if (event.target.id == 'el') return;
