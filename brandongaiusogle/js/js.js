@@ -75,7 +75,7 @@ $(document).ready(function() {
         }, 1000);
     });
     $(".jumpup").click(function(evt) {
-        //evt.preventDefault();
+        evt.preventDefault();
         $('html, body').animate({
             scrollTop: $(this).parent().parent().parent().offset().top
         }, 2000);
