@@ -74,7 +74,6 @@ $(document).ready(function() {
             scrollTop:              $(this).parents(".section").next().offset().top
         }, 1000);
     });
-    /*
     $(".jumpup").click(function(evt) {
         evt.preventDefault();
         $('html, body').animate({
@@ -82,7 +81,6 @@ $(document).ready(function() {
         }, 2000);
         $(this).parents(".section").children("h1").css("color", "black");
     });
-    */
     $(window).on("mousewheel", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
@@ -102,7 +100,7 @@ $(document).ready(function() {
             clearTimeout(scrollBuffer);
         }, 2500);
     });
-    $("content div, content h1, content p").on("touchstart", function(event) {
+    $("content .section, content h1, content p").on("touchstart", function(event) {
         event.preventDefault();
         event.stopPropagation();
         ts = event.originalEvent.touches[0].clientY;
