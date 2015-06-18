@@ -7,7 +7,7 @@ var sections = ["#one", "#two", "#three", "#four", "#five"];
 var scrollTest = true;
 var inertialTest = true;
 var ts;
-
+ 
 //-->Functions
 
 function scrollPage(oe_wd, oe_d, touchUp) {
@@ -71,13 +71,13 @@ $(document).ready(function() {
     $(".jumpdown").click(function(evt) {
         evt.preventDefault();
         $('html, body').animate({
-            scrollTop: $(this).parent().next().offset().top
+            scrollTop: $(this).parent().parent().next().offset().top
         }, 1000);
     });
     $(".jumpup").click(function(evt) {
         //evt.preventDefault();
         $('html, body').animate({
-            scrollTop: $(this).parent().parent().offset().top
+            scrollTop: $(this).parent().parent().parent().offset().top
         }, 2000);
     });
     $(window).on("mousewheel", function(event) {

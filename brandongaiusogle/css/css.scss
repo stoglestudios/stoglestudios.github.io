@@ -3,7 +3,7 @@
 //--------------------------------------
 $body-font: "Quicksand", 'Century Gothic', sans-serif;
 $title-font: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
-$gutter: 25px; 
+$gutter: 3%; 
 $bleed: 10px;
 $corners: 5px;
 
@@ -16,7 +16,7 @@ $odds-pull: $odds-push - 20px;
 // -> NAV LI Size
 $li-size: 40px;
 $a-size: 30px;
-
+ 
 $green: #5c9149;
 $purple: #301f3a;
 
@@ -211,22 +211,25 @@ content {
     height: 100vh;
     left: 0;
     text-align: center;
+    padding: 50vh $gutter $gutter $gutter*10; 
+    .container {
+        display: block;
+        background-color: rgba(255,255,255,.7);
+    }
     h1 {
-        margin: $li-size*4 3% 0 20%;
         text-align: left;
         font-weight: 300;
         font-size: 24px;
         color: $green;
-        padding: 3% 3% 0;
-        background-color: rgba(255,255,255,.6);
+        padding: $gutter $gutter 0;
         border-radius: $li-size/2 $li-size/2 0 0;
     }
     p {
-        background-color: rgba(255,255,255,.6);
-        margin: 0 3% 0 20%;
         font-size: .9em;
-        padding: 3%;
+        padding: $gutter;
         text-align: left;
+    }
+    .next-holder {
         border-radius: 0 0 $li-size/2 $li-size/2;
     }
     .needs-filler:after {
@@ -239,9 +242,7 @@ content {
         background: url("../images/up-arrow.png") no-repeat;
     }
     .jumpdown, .jumpup {
-        position: absolute;
-        margin: $gutter*2 0;
-        bottom: 0;
+        margin-bottom: 3%;
         width: 56.5px;
         height: 20px;
         background-size: 100% 200%;
@@ -292,5 +293,15 @@ content {
 }
 
 @media (max-width: 800px) {
-
+    .section {
+        padding: 40vh $gutter $gutter $gutter; 
+    }
 }
+@media (max-width: 600px) {
+    .section {
+        padding: 20vh $gutter $gutter $gutter; 
+    }
+}
+
+
+
