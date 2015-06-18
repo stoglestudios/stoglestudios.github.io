@@ -219,7 +219,7 @@ content {
     h1 {
         text-align: left;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 1.5em;
         color: $green;
         padding: $gutter $gutter 0;
         border-radius: $li-size/2 $li-size/2 0 0;
@@ -299,7 +299,10 @@ content {
 }
 @media (max-width: 600px) {
     .section {
-        padding: 20vh $gutter $gutter $gutter; 
+        padding: 20vh $gutter $gutter $gutter;
+        h1 {
+            font-size: 1.2em;
+        }
     }
 }
 
