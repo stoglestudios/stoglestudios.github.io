@@ -74,13 +74,14 @@ $(document).ready(function() {
             scrollTop:              $(this).parents(".section").next().offset().top
         }, 1000);
     });
+    /*
     $(".jumpup").click(function(evt) {
-        //evt.preventDefault();
-        //$('html, body').animate({
-          //  scrollTop: 0//$(this).parents("html").offset().top
-        //}, 2000);
+        evt.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0//$(this).parents("html").offset().top
+        }, 2000);
         $(this).parents(".section").children("h1").css("color", "black");
-    });
+    });*/
     $(window).on("mousewheel", function(event) {
         if (event.target.id == 'el') return;
         event.preventDefault();
