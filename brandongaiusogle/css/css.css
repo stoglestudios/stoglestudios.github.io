@@ -46,7 +46,7 @@ li {
   padding: 0;
 }
 
-/* line 67, css.scss */
+/* line 68, css.scss */
 body {
   position: relative;
   width: 100%;
@@ -55,7 +55,7 @@ body {
   text-align: center;
 }
 
-/* line 77, css.scss */
+/* line 78, css.scss */
 #nav-holder {
   position: fixed;
   width: 100%;
@@ -63,7 +63,7 @@ body {
   z-index: 1000;
 }
 
-/* line 83, css.scss */
+/* line 84, css.scss */
 nav {
   margin: 10px;
   overflow: hidden;
@@ -75,7 +75,7 @@ nav {
   box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
   background-color: rgba(60, 120, 70, 0.2);
 }
-/* line 93, css.scss */
+/* line 94, css.scss */
 nav ul {
   position: absolute;
   top: -5px;
@@ -84,14 +84,14 @@ nav ul {
   width: 280px;
   margin: 5px 10px;
 }
-/* line 101, css.scss */
+/* line 102, css.scss */
 nav li {
   width: 40px;
   height: 40px;
   vertical-align: top;
   position: absolute;
 }
-/* line 106, css.scss */
+/* line 107, css.scss */
 nav li a {
   color: white;
   line-height: 30px;
@@ -102,11 +102,11 @@ nav li a {
   background: url("../images/menu-icons.png") no-repeat #301f3a;
   background-size: 700% 200%;
 }
-/* line 115, css.scss */
+/* line 116, css.scss */
 nav li a:hover {
   color: black;
 }
-/* line 119, css.scss */
+/* line 120, css.scss */
 nav li .menu {
   height: 100%;
   width: 100%;
@@ -119,101 +119,101 @@ nav li .menu {
   background-color: #5c9149;
   background-position: -120px 0;
 }
-/* line 130, css.scss */
+/* line 131, css.scss */
 nav li .menu:hover {
   background-position: -120px -40px;
   cursor: pointer;
 }
-/* line 135, css.scss */
+/* line 136, css.scss */
 nav li:nth-child(1) {
   left: 0;
 }
-/* line 137, css.scss */
+/* line 138, css.scss */
 nav li:nth-child(1) a {
   margin: 5px 10px 5px 0;
   background-position: 0 -30px;
 }
-/* line 140, css.scss */
+/* line 141, css.scss */
 nav li:nth-child(1) a:hover {
   background-position: 0 0;
 }
-/* line 145, css.scss */
+/* line 146, css.scss */
 nav li:nth-child(2) {
   left: 40px;
 }
-/* line 147, css.scss */
+/* line 148, css.scss */
 nav li:nth-child(2) a {
   margin: 5px 10px 5px 0;
   background-position: -30px -30px;
 }
-/* line 150, css.scss */
+/* line 151, css.scss */
 nav li:nth-child(2) a:hover {
   background-position: -30px 0;
 }
-/* line 155, css.scss */
+/* line 156, css.scss */
 nav li:nth-child(3) {
   left: 80px;
 }
-/* line 157, css.scss */
+/* line 158, css.scss */
 nav li:nth-child(3) a {
   margin: 5px 10px 5px 0;
   background-position: -60px -30px;
 }
-/* line 160, css.scss */
+/* line 161, css.scss */
 nav li:nth-child(3) a:hover {
   background-position: -60px 0;
 }
-/* line 165, css.scss */
+/* line 166, css.scss */
 nav li:nth-child(4) {
   left: 120px;
   z-index: 1001;
 }
-/* line 169, css.scss */
+/* line 170, css.scss */
 nav li:nth-child(5) {
   left: 160px;
 }
-/* line 171, css.scss */
+/* line 172, css.scss */
 nav li:nth-child(5) a {
   margin: 5px 0 5px 10px;
   background-position: -120px -30px;
 }
-/* line 174, css.scss */
+/* line 175, css.scss */
 nav li:nth-child(5) a:hover {
   background-position: -120px 0;
 }
-/* line 179, css.scss */
+/* line 180, css.scss */
 nav li:nth-child(6) {
   left: 200px;
 }
-/* line 181, css.scss */
+/* line 182, css.scss */
 nav li:nth-child(6) a {
   margin: 5px 0 5px 10px;
   background-position: -150px -30px;
 }
-/* line 184, css.scss */
+/* line 185, css.scss */
 nav li:nth-child(6) a:hover {
   background-position: -150px 0;
 }
-/* line 189, css.scss */
+/* line 190, css.scss */
 nav li:nth-child(7) {
   left: 240px;
 }
-/* line 191, css.scss */
+/* line 192, css.scss */
 nav li:nth-child(7) a {
   margin: 5px 0 5px 10px;
   background-position: -180px -30px;
 }
-/* line 194, css.scss */
+/* line 195, css.scss */
 nav li:nth-child(7) a:hover {
   background-position: -180px 0;
 }
 
-/* line 206, css.scss */
+/* line 207, css.scss */
 content {
   width: 100%;
 }
 
-/* line 209, css.scss */
+/* line 210, css.scss */
 .section {
   width: 100%;
   height: 100vh;
@@ -221,83 +221,86 @@ content {
   text-align: center;
   padding: 50vh 3% 3% 30%;
 }
-/* line 215, css.scss */
+/* line 216, css.scss */
 .section .container {
   display: block;
   background-color: rgba(255, 255, 255, 0.7);
+  border-left: solid #5c9149 1px;
 }
-/* line 219, css.scss */
+/* line 221, css.scss */
 .section h1 {
   text-align: left;
   font-weight: 300;
   font-size: 1.5em;
   color: #5c9149;
   padding: 3% 3% 0;
+  border-top: solid #5c9149 1px;
   border-radius: 20px 20px 0 0;
 }
-/* line 227, css.scss */
+/* line 230, css.scss */
 .section p {
   font-size: .9em;
   padding: 3%;
   text-align: left;
 }
-/* line 232, css.scss */
+/* line 235, css.scss */
 .section .next-holder {
   border-radius: 0 0 20px 20px;
+  border-bottom: solid #5c9149 1px;
 }
-/* line 235, css.scss */
+/* line 239, css.scss */
 .section .needs-filler:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 238, css.scss */
+/* line 242, css.scss */
 .section .jumpdown {
   background: url("../images/down-arrow.png") no-repeat;
 }
-/* line 241, css.scss */
+/* line 245, css.scss */
 .section .jumpup {
   background: url("../images/up-arrow.png") no-repeat;
 }
-/* line 244, css.scss */
+/* line 248, css.scss */
 .section .jumpdown, .section .jumpup {
   margin-bottom: 3%;
   width: 56.5px;
   height: 20px;
   background-size: 100% 200%;
 }
-/* line 249, css.scss */
+/* line 253, css.scss */
 .section .jumpdown:hover, .section .jumpup:hover {
   background-position: bottom;
 }
 
-/* line 254, css.scss */
+/* line 258, css.scss */
 #one {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #f0f8ff), url("../images/brandon-temp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* line 262, css.scss */
+/* line 266, css.scss */
 #two {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #faebd7), url("../images/brandon-temp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* line 270, css.scss */
+/* line 274, css.scss */
 #three {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #f0ffff), url("../images/brandon-temp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* line 278, css.scss */
+/* line 282, css.scss */
 #four {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #f5f5dc), url("../images/brandon-temp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* line 286, css.scss */
+/* line 290, css.scss */
 #five {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #ffe4c4), url("../images/brandon-temp.jpg");
   background-repeat: no-repeat;
@@ -305,17 +308,17 @@ content {
 }
 
 @media (max-width: 800px) {
-  /* line 296, css.scss */
+  /* line 300, css.scss */
   .section {
     padding: 40vh 3% 3% 3%;
   }
 }
 @media (max-width: 600px) {
-  /* line 301, css.scss */
+  /* line 305, css.scss */
   .section {
     padding: 20vh 3% 3% 3%;
   }
-  /* line 303, css.scss */
+  /* line 307, css.scss */
   .section h1 {
     font-size: 1.2em;
   }

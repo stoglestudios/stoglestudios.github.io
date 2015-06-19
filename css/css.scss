@@ -49,6 +49,9 @@ $pn-red: #c51e23;
 ul {
     list-style: none;
 }
+ol li {
+    margin: 0 12% 3%;
+}
 div {
     position: relative;
 }
@@ -164,6 +167,9 @@ body {
                     color: $green;
                     margin-bottom: $bleed;   
                 }
+                p {
+                    margin-bottom: 3%;
+                }
             }
             div {
                 padding: 0 2%;
@@ -196,10 +202,43 @@ body {
         padding: $bleed $gutter*2;
         background: linear-gradient($green, #030);
         color: white;
-        a {
+        .left {
+            float: left;
+            width: $soc-size;
+            height: $soc-size;
+            background: url("../images/socnet-sprite.png");
+            background-size: 1000% 200%;
+            margin-right: $bleed;
+            border-radius: $corners;
+            &:hover {
+                box-shadow: 0 13px 13px 0 rgba(255,255,255,.5) inset;
+            }
+        }
+        .fb {
+            background-position: 0 $soc-size*-1;
+        }
+        .tw {
+            background-position: $soc-size*-1 $soc-size*-1;
+        }
+        .ln {
+            background-position: $soc-size*-2 $soc-size*-1;
+        }
+        .go {
+            background-position: $soc-size*-3 $soc-size*-1;
+        }
+        .em {
+            background-position: $soc-size*-4 $soc-size*-1;
+        }
+        .right {
             color: white;
             &:hover {
                 text-decoration: underline;
+            }
+        }
+        .phone {
+            cursor: default;
+            &:hover {
+                text-decoration: none;
             }
         }
     }
