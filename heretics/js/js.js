@@ -3,12 +3,6 @@
 //STUFF TO DO
 //1. Have jQuery turn off WS -> this way if JS is turn off they will go right to the site
 
-//2. Have jQuery build Opening AN
-    //1.1 create 5 div's
-    //1.2 add bg to div's
-    //1.3 add h1's to div's
-    //1.4 Build a 'Skip' Button
-
 // Variables
 var contactStart = 0;
 
@@ -21,8 +15,8 @@ var $openers = [
     [$('#all'), "all", "And Who Will Control it All?", "caster"]
 ];
 var $intro = $("<div></div>");
-var $skip = $("<button>Skip ></button>");
-var $tabs = $("nav li");
+var $skip = $("<span class='skip'>Skip</span>");
+var $tabs = $("nav li a");
 
 // Functions
 $skip.click( function() {
@@ -50,16 +44,18 @@ $skip.click( function() {
                 }
             }
         );
-        $(this).children('h1').delay(waitForIt).animate({ 
-            paddingLeft: '20%',
-        }, totaltime);
-        $(this).children('img').delay(waitForIt).animate({ 
-            width: '90%',
-        }, totaltime);
+        if ( $(this).children('h1').css("text-align") !== "center" ) {
+            $(this).children('h1').delay(waitForIt).animate({ 
+                paddingLeft: '30%',
+            }, totaltime);
+            $(this).children('img').delay(waitForIt).animate({
+                width: "75vh"
+            }, totaltime);
+        }
         return this;
    }; 
 })( jQuery );
-
+ 
 // Adding elements
 /*
 for (i=0;i<$openers.length;i++) {
@@ -73,6 +69,7 @@ for (i=0;i<$openers.length;i++) {
 // Document ready
 $(document).ready(function(){
     //Build assets
+    $('#intro').css("display", "inline-block");
     $('#intro').append($skip);
     
     //Hide/show appropriate sections
@@ -96,12 +93,13 @@ $(document).ready(function(){
     $openers[4][0].introAn(20000, true);
     
     //Toggle Sections
-    $tabs.click(function() {
+    $tabs.click(function(event) {
+        event.preventDefault();
         var pageClicked = $(this).html().toLowerCase();
         pageClicked = "#" + pageClicked;
         console.log(pageClicked);
-        $(this).toggleClass("selected");
-        $(this).siblings().removeClass("selected");
+        $(this).parent().toggleClass("selected");
+        $(this).parent().siblings().removeClass("selected");
         $("content").hide();
         $(pageClicked).show();
     });

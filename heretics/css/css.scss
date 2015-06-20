@@ -75,7 +75,7 @@ body {
 }
 #intro {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 100%;
     height: 100%;
     background: url("../images/clouds.png") no-repeat;
@@ -93,18 +93,21 @@ body {
         height: 100%;
         opacity: 0;
         h1 {
+            text-align: left;
             color: $orange;
             text-shadow: 5px 5px 10px black;
             padding-left: 35%;
-            margin: 10% 0 0;
+            margin: 22vh 0 0;
             z-index: 10;
         }
         img {
             z-index: 0;
-            width: 90%;
+            //height: 60vh;
+            width: 80vh;
+            opacity: .4;
         }
     }
-    button {
+    .skip {
         padding: 5px 10px;
         background-color: $orange;
         z-index: 1000;
@@ -115,6 +118,7 @@ body {
         font-size: 1em;
         font-family: $fonts-main;
         font-variant: small-caps;
+        color: black;
         &:hover {
             background-color: black;
             color: $orange;
@@ -129,19 +133,27 @@ nav ul li {
     text-align: center;
     border-left: solid 1px $orange;
     margin: $bleed 0 0;
-    cursor: pointer;
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: $orange;
+        &:hover {
+            text-shadow: 0 0 20px $orange;
+            color: beige;
+        }
+    }
     &:first-child {
         border-left: none;
     }
-    &:hover {
-        text-shadow: 0 0 20px $orange;
-        color: beige;
-    }
+
 }
     .selected {
         background: linear-gradient(to right, $orange, darkred);
-        text-shadow: 0 0 20px $orange;
-        color: beige;
+        a {
+            text-shadow: 0 0 20px $orange;
+            color: beige;
+        }
     }
 #page {
     text-align: center;
@@ -188,8 +200,10 @@ nav ul li {
             float: left;
             border: solid 2px darkred;
             margin-right: $gutter;
-            height: 200px;
             padding: $bleed;
+        }
+        .standard-img {
+            height: 200px;
         }
         h1 {
             display: inline-block;
@@ -248,7 +262,7 @@ nav ul li {
                 content: url("../images/caster.jpg");
             }
             h1:after {
-                content: "Kastir (aka The Devil or The Trickster)";
+                content: "Kastir (aka The Trickster)";
             }
         }
         &:nth-child(3) {
@@ -280,7 +294,7 @@ nav ul li {
                 content: url("../images/stewart.jpg");
             }
             h1:after {
-                content: "Professor thomas Stewart";
+                content: "Professor Thomas Stewart";
             }
         }
     }
@@ -289,6 +303,49 @@ nav ul li {
             content: "Cosmology";
         }
     }
+        #cosmological-map {
+            background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
+            background-size: 100% 100%;
+            height: 100vh;
+            .realm {
+                position: absolute;
+                background: none;
+                text-align: left;
+                //border-radius: 50%;
+                span {
+                    display: inline-block;
+                    height: 100%;
+                    vertical-align: middle;
+                }
+                img {
+                    vertical-align: middle;
+                    line-height: 100%;
+                    border: none;
+                    margin: 0;
+                }
+            }
+            .other {
+                width: 20%;
+                height: 20%;
+            }
+            #earth {
+                width: 34%;
+                height: 34%;
+                top: 33%;
+                left: 33%;
+                padding: 0;
+                img {
+                    content: url("../images/earth.png");
+                    width: 100%;
+                }
+                 &:hover {
+                     width: 40%;
+                     height: 40%;
+                     top: 30%;
+                     left: 30%;
+                }
+            }
+        }
     #author div {
         min-height: 500px;
         img {
@@ -300,8 +357,16 @@ nav ul li {
     }
     #contact div {
         min-height: 500px;
-        h1:after {
-            content: "Contact";
+        img {
+            content: url("../images/proposal.jpg");
+        }
+        a {
+            margin: $gutter;
+            color: darkred;
+            font-size: 1.2em;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 footer {
@@ -363,11 +428,18 @@ footer {
 }
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     #intro { 
-        h1 {
+        div h1 {
+            margin: 16vh 0 0;
             font-size: 1em;
+            padding: 0;
+            text-align: center;
         }
-        button {
-            font-size: 1.2em;
+        div img {
+            width: 150%;
+            margin-left: -25%;
+        }
+        .skip {
+            font-size: 1em;
         }
     }
     header {
@@ -378,7 +450,7 @@ footer {
             padding: $bleed 0;
         }
     }
-    nav ul li {
+    nav ul a li {
         width: 33.33333%;
         &:last-child {
             border-right: solid 1px $orange;
