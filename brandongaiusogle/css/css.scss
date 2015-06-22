@@ -117,6 +117,42 @@ nav {
                 color: black; 
             }
         }
+        .portfolio {
+            background-position: 0 -1*$a-size;
+            &:hover {
+                background-position: 0 0;
+            }
+        }
+        .demoreel {
+            background-position: $a-size*-1 -1*$a-size;
+            &:hover {
+                background-position: -$a-size 0;
+            }
+        }
+        .resume {
+            background-position: $a-size*-2 -1*$a-size;
+            &:hover {
+                background-position: -$a-size*2 0;
+            } 
+        }
+        .linkedin {
+            background-position: -$a-size*4 -1*$a-size;
+            &:hover {
+                background-position: -$a-size*4 0;
+            }
+        }
+        .phone {
+            background-position: -$a-size*5 -1*$a-size;
+            &:hover {
+                background-position: -$a-size*5 0;
+            }
+        }
+        .email {
+            background-position: -$a-size*6 -1*$a-size;
+            &:hover {
+                background-position: -$a-size*6 0;
+            }
+        }
         .menu {
             height: 100%;
             width: 100%;
@@ -137,30 +173,18 @@ nav {
             left: 0;
             a {
                 margin: 5px 10px 5px 0;
-                background-position: 0 -1*$a-size;
-                &:hover {
-                    background-position: 0 0;
-                }
             }
         }
         &:nth-child(2) {
             left: $li-size;
             a {
                 margin: 5px 10px 5px 0;
-                background-position: $a-size*-1 -1*$a-size;
-                &:hover {
-                    background-position: -$a-size 0;
-                }
             }
         }
         &:nth-child(3) {
             left: $li-size*2;
             a {
                 margin: 5px 10px 5px 0;
-                background-position: $a-size*-2 -1*$a-size;
-                &:hover {
-                    background-position: -$a-size*2 0;
-                }
             }
         }
         &:nth-child(4) {
@@ -171,30 +195,18 @@ nav {
             left: $li-size*4;
             a {
                 margin: 5px 0 5px 10px;
-                background-position: -$a-size*4 -1*$a-size;
-                &:hover {
-                    background-position: -$a-size*4 0;
-                }
             }
         }
         &:nth-child(6) {
             left: $li-size*5;
             a {
                 margin: 5px 0 5px 10px;
-                background-position: -$a-size*5 -1*$a-size;
-                &:hover {
-                    background-position: -$a-size*5 0;
-                }
             }
         }
         &:nth-child(7) {
             left: $li-size*6;
             a {
                 margin: 5px 0 5px 10px;
-                background-position: -$a-size*6 -1*$a-size;
-                &:hover {
-                    background-position: -$a-size*6 0;
-                }
             }
         }
     }
@@ -210,31 +222,35 @@ content {
 .section {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
     left: 0;
-    text-align: center;
-    padding: 50vh $gutter $gutter $gutter*10; 
+    text-align: right;
     .container {
-        display: block;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 3%; 
+        text-align: center;
+        max-height: 74vh;
+        width: 47%;
+        display: inline-block;
         background-color: rgba(255,255,255,.7);
-        border-left: solid $green 1px;
+        border: solid $green 2px;
+        border-radius: $li-size/2;
+        padding: 3% 3% 1%;
+        box-shadow: 0 15px 20px -10px rgba(0,0,0,.3) ;
     }
     h1 {
         text-align: left;
         font-weight: 300;
         font-size: 1.5em;
         color: $green;
-        padding: $gutter $gutter 0;
-        border-top: solid $green 1px;
-        border-radius: $li-size/2 $li-size/2 0 0;
     }
     p {
         font-size: .9em;
-        padding: $gutter;
+        padding: 3% 0;
         text-align: left;
-    }
-    .next-holder {
-        border-radius: 0 0 $li-size/2 $li-size/2;
-        border-bottom: solid $green 1px;
     }
     .needs-filler:after {
         content: $lorem;
@@ -257,58 +273,118 @@ content {
 }
 #one {
     background-image: 
-        linear-gradient(135deg, rgba(255,255,255,.3), aliceblue ),
-        url("../images/brandon-temp.jpg") 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/cross.png"),
+        linear-gradient( 135deg, $purple, black )
     ;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #two {
     background-image: 
-        linear-gradient(135deg, rgba(255,255,255,.3), antiquewhite ),
-        url("../images/brandon-temp.jpg") 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/dots.png"),
+        linear-gradient( 135deg, $green, #003300 )
     ;
-    background-repeat: no-repeat;
-    background-size: cover;
+    .container {
+        border-color: $purple;
+        h1 {
+            color: $purple;
+        }
+        .jumpdown {
+            background-position: bottom;
+            &:hover {
+                background-position: top;
+            }
+        }
+    }
 }
 #three {
     background-image: 
-        linear-gradient(135deg, rgba(255,255,255,.3), azure ),
-        url("../images/brandon-temp.jpg") 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/hex.png"),
+        linear-gradient( 135deg, #330033, $purple )
     ;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //color: darkolivegreen;
 }
 #four {
     background-image: 
-        linear-gradient(135deg, rgba(255,255,255,.3), beige ),
-        url("../images/brandon-temp.jpg") 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/waves2.png"),
+        linear-gradient( 135deg, $green, black )
     ;
-    background-repeat: no-repeat;
-    background-size: cover;
+    .container {
+        border-color: $purple;
+        h1 {
+            color: $purple;
+        }
+        .jumpdown {
+            background-position: bottom;
+            &:hover {
+                background-position: top;
+            }
+        }
+    }
 }
 #five {
     background-image: 
-        linear-gradient(135deg, rgba(255,255,255,.3), bisque ),
-        url("../images/brandon-temp.jpg") 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/v-stripes.png"),
+        linear-gradient( 135deg, darkslategray, black, $purple )
     ;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //color:
 }
-
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .section {
-        padding: 40vh $gutter $gutter $gutter; 
+        .container {
+            width: 72%;
+        }
     }
 }
-@media (max-width: 600px) {
+@media screen and (max-height: 500px) {
     .section {
-        padding: 20vh $gutter $gutter $gutter;
+        text-align: center;
+        .container {
+            width: 72%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .section {
+        text-align: center;
+        .container {
+            width: 94%;
+        }
         h1 {
             font-size: 1.2em;
         }
     }
 }
+@media screen and (max-height: 300px) {
+    .section {
+        text-align: center;
+        .container {
+            width: 94%;
+            padding: 1% 3%;
+        }
+        h1 {
+            font-size: 1em;
+        }
+        p {
+            padding: 1% 0;
+            font-size: .95em;
+        }
+    }
+}
 
-
-
+/*
+@media screen and (max-height: 400px) and (max-width: 700px) {
+    .section p {
+        font-size: .8em;
+        line-height: .95em;
+    }
+}
+@media screen and (max-height: 200px), screen and (max-width: 500px) {
+    .section p {
+        font-size: .7em;
+        line-height: .85em;
+    }
+}*/

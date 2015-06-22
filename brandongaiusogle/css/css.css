@@ -107,6 +107,54 @@ nav li a:hover {
   color: black;
 }
 /* line 120, css.scss */
+nav li .portfolio {
+  background-position: 0 -30px;
+}
+/* line 122, css.scss */
+nav li .portfolio:hover {
+  background-position: 0 0;
+}
+/* line 126, css.scss */
+nav li .demoreel {
+  background-position: -30px -30px;
+}
+/* line 128, css.scss */
+nav li .demoreel:hover {
+  background-position: -30px 0;
+}
+/* line 132, css.scss */
+nav li .resume {
+  background-position: -60px -30px;
+}
+/* line 134, css.scss */
+nav li .resume:hover {
+  background-position: -60px 0;
+}
+/* line 138, css.scss */
+nav li .linkedin {
+  background-position: -120px -30px;
+}
+/* line 140, css.scss */
+nav li .linkedin:hover {
+  background-position: -120px 0;
+}
+/* line 144, css.scss */
+nav li .phone {
+  background-position: -150px -30px;
+}
+/* line 146, css.scss */
+nav li .phone:hover {
+  background-position: -150px 0;
+}
+/* line 150, css.scss */
+nav li .email {
+  background-position: -180px -30px;
+}
+/* line 152, css.scss */
+nav li .email:hover {
+  background-position: -180px 0;
+}
+/* line 156, css.scss */
 nav li .menu {
   height: 100%;
   width: 100%;
@@ -119,207 +167,249 @@ nav li .menu {
   background-color: #5c9149;
   background-position: -120px 0;
 }
-/* line 131, css.scss */
+/* line 167, css.scss */
 nav li .menu:hover {
   background-position: -120px -40px;
   cursor: pointer;
 }
-/* line 136, css.scss */
+/* line 172, css.scss */
 nav li:nth-child(1) {
   left: 0;
 }
-/* line 138, css.scss */
+/* line 174, css.scss */
 nav li:nth-child(1) a {
   margin: 5px 10px 5px 0;
-  background-position: 0 -30px;
 }
-/* line 141, css.scss */
-nav li:nth-child(1) a:hover {
-  background-position: 0 0;
-}
-/* line 146, css.scss */
+/* line 178, css.scss */
 nav li:nth-child(2) {
   left: 40px;
 }
-/* line 148, css.scss */
+/* line 180, css.scss */
 nav li:nth-child(2) a {
   margin: 5px 10px 5px 0;
-  background-position: -30px -30px;
 }
-/* line 151, css.scss */
-nav li:nth-child(2) a:hover {
-  background-position: -30px 0;
-}
-/* line 156, css.scss */
+/* line 184, css.scss */
 nav li:nth-child(3) {
   left: 80px;
 }
-/* line 158, css.scss */
+/* line 186, css.scss */
 nav li:nth-child(3) a {
   margin: 5px 10px 5px 0;
-  background-position: -60px -30px;
 }
-/* line 161, css.scss */
-nav li:nth-child(3) a:hover {
-  background-position: -60px 0;
-}
-/* line 166, css.scss */
+/* line 190, css.scss */
 nav li:nth-child(4) {
   left: 120px;
   z-index: 1001;
 }
-/* line 170, css.scss */
+/* line 194, css.scss */
 nav li:nth-child(5) {
   left: 160px;
 }
-/* line 172, css.scss */
+/* line 196, css.scss */
 nav li:nth-child(5) a {
   margin: 5px 0 5px 10px;
-  background-position: -120px -30px;
 }
-/* line 175, css.scss */
-nav li:nth-child(5) a:hover {
-  background-position: -120px 0;
-}
-/* line 180, css.scss */
+/* line 200, css.scss */
 nav li:nth-child(6) {
   left: 200px;
 }
-/* line 182, css.scss */
+/* line 202, css.scss */
 nav li:nth-child(6) a {
   margin: 5px 0 5px 10px;
-  background-position: -150px -30px;
 }
-/* line 185, css.scss */
-nav li:nth-child(6) a:hover {
-  background-position: -150px 0;
-}
-/* line 190, css.scss */
+/* line 206, css.scss */
 nav li:nth-child(7) {
   left: 240px;
 }
-/* line 192, css.scss */
+/* line 208, css.scss */
 nav li:nth-child(7) a {
   margin: 5px 0 5px 10px;
-  background-position: -180px -30px;
-}
-/* line 195, css.scss */
-nav li:nth-child(7) a:hover {
-  background-position: -180px 0;
 }
 
-/* line 207, css.scss */
+/* line 219, css.scss */
 content {
   width: 100%;
 }
 
-/* line 210, css.scss */
+/* line 222, css.scss */
 .section {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   left: 0;
-  text-align: center;
-  padding: 50vh 3% 3% 30%;
+  text-align: right;
 }
-/* line 216, css.scss */
+/* line 228, css.scss */
 .section .container {
-  display: block;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 3%;
+  text-align: center;
+  max-height: 74vh;
+  width: 47%;
+  display: inline-block;
   background-color: rgba(255, 255, 255, 0.7);
-  border-left: solid #5c9149 1px;
+  border: solid #5c9149 2px;
+  border-radius: 20px;
+  padding: 3% 3% 1%;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
 }
-/* line 221, css.scss */
+/* line 244, css.scss */
 .section h1 {
   text-align: left;
   font-weight: 300;
   font-size: 1.5em;
   color: #5c9149;
-  padding: 3% 3% 0;
-  border-top: solid #5c9149 1px;
-  border-radius: 20px 20px 0 0;
 }
-/* line 230, css.scss */
+/* line 250, css.scss */
 .section p {
   font-size: .9em;
-  padding: 3%;
+  padding: 3% 0;
   text-align: left;
 }
-/* line 235, css.scss */
-.section .next-holder {
-  border-radius: 0 0 20px 20px;
-  border-bottom: solid #5c9149 1px;
-}
-/* line 239, css.scss */
+/* line 255, css.scss */
 .section .needs-filler:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 242, css.scss */
+/* line 258, css.scss */
 .section .jumpdown {
   background: url("../images/down-arrow.png") no-repeat;
 }
-/* line 245, css.scss */
+/* line 261, css.scss */
 .section .jumpup {
   background: url("../images/up-arrow.png") no-repeat;
 }
-/* line 248, css.scss */
+/* line 264, css.scss */
 .section .jumpdown, .section .jumpup {
   margin-bottom: 3%;
   width: 56.5px;
   height: 20px;
   background-size: 100% 200%;
 }
-/* line 253, css.scss */
+/* line 269, css.scss */
 .section .jumpdown:hover, .section .jumpup:hover {
   background-position: bottom;
 }
 
-/* line 258, css.scss */
-#one {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #f0f8ff), url("../images/brandon-temp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* line 266, css.scss */
-#two {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #faebd7), url("../images/brandon-temp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 /* line 274, css.scss */
+#one {
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
+}
+
+/* line 281, css.scss */
+#two {
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/dots.png"), linear-gradient(135deg, #5c9149, #003300);
+}
+/* line 287, css.scss */
+#two .container {
+  border-color: #301f3a;
+}
+/* line 289, css.scss */
+#two .container h1 {
+  color: #301f3a;
+}
+/* line 292, css.scss */
+#two .container .jumpdown {
+  background-position: bottom;
+}
+/* line 294, css.scss */
+#two .container .jumpdown:hover {
+  background-position: top;
+}
+
+/* line 300, css.scss */
 #three {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #f0ffff), url("../images/brandon-temp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/hex.png"), linear-gradient(135deg, #330033, #301f3a);
 }
 
-/* line 282, css.scss */
+/* line 308, css.scss */
 #four {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #f5f5dc), url("../images/brandon-temp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/waves2.png"), linear-gradient(135deg, #5c9149, #000000);
+}
+/* line 314, css.scss */
+#four .container {
+  border-color: #301f3a;
+}
+/* line 316, css.scss */
+#four .container h1 {
+  color: #301f3a;
+}
+/* line 319, css.scss */
+#four .container .jumpdown {
+  background-position: bottom;
+}
+/* line 321, css.scss */
+#four .container .jumpdown:hover {
+  background-position: top;
 }
 
-/* line 290, css.scss */
+/* line 327, css.scss */
 #five {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #ffe4c4), url("../images/brandon-temp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/v-stripes.png"), linear-gradient(135deg, #2f4f4f, #000000, #301f3a);
 }
 
-@media (max-width: 800px) {
-  /* line 300, css.scss */
-  .section {
-    padding: 40vh 3% 3% 3%;
+@media screen and (max-width: 800px) {
+  /* line 337, css.scss */
+  .section .container {
+    width: 72%;
   }
 }
-@media (max-width: 600px) {
-  /* line 305, css.scss */
+@media screen and (max-height: 500px) {
+  /* line 343, css.scss */
   .section {
-    padding: 20vh 3% 3% 3%;
+    text-align: center;
   }
-  /* line 307, css.scss */
+  /* line 345, css.scss */
+  .section .container {
+    width: 72%;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 351, css.scss */
+  .section {
+    text-align: center;
+  }
+  /* line 353, css.scss */
+  .section .container {
+    width: 94%;
+  }
+  /* line 356, css.scss */
   .section h1 {
     font-size: 1.2em;
   }
 }
+@media screen and (max-height: 300px) {
+  /* line 362, css.scss */
+  .section {
+    text-align: center;
+  }
+  /* line 364, css.scss */
+  .section .container {
+    width: 94%;
+    padding: 1% 3%;
+  }
+  /* line 368, css.scss */
+  .section h1 {
+    font-size: 1em;
+  }
+  /* line 371, css.scss */
+  .section p {
+    padding: 1% 0;
+    font-size: .95em;
+  }
+}
+/*
+@media screen and (max-height: 400px) and (max-width: 700px) {
+    .section p {
+        font-size: .8em;
+        line-height: .95em;
+    }
+}
+@media screen and (max-height: 200px), screen and (max-width: 500px) {
+    .section p {
+        font-size: .7em;
+        line-height: .85em;
+    }
+}*/
