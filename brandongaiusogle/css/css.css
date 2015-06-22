@@ -374,7 +374,7 @@ content {
   /* line 353, css.scss */
   .section .container {
     width: 94%;
-    margin: 3% 3% 6%;
+    margin: 3% 3% 200px;
   }
   /* line 357, css.scss */
   .section h1 {
