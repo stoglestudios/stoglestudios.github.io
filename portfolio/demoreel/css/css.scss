@@ -88,9 +88,8 @@ body {
 }
 header {
     text-align: center;
-    position: fixed;
     max-width: $pg-width;
-    width: 94%;
+    width: 100%;
     z-index: 10;
     background: linear-gradient($green, $dark-color) $green;
     color: white;
@@ -129,16 +128,16 @@ header {
                     background-position: 0% 0%;
                 }
             }
-            #linkin {
-                background-position: 60% 100%;
+            #resume {
+                background-position: 100% 100%;
                 &:hover {
                     background-position: 60% 0%;
                 }
             }
-            #printpdf {
+            #linkin {
                 background-position: 100% 100%;
                 &:hover {
-                    background-position: 100% 0%;
+                    background-position: 60% 0%;
                 }
             }
             #address {
@@ -169,42 +168,69 @@ header {
         width: 94%;
         text-align: center;
         padding: 1%;
-        margin: 150px 3%;
-        background: url("../images/glass.png") repeat $green;
+        margin: 3%;
+        background: linear-gradient($accent-color, $green);
         border-radius: $bleed;
         box-shadow: 0 2px 8px black;
         h1 {
             padding: 2% 0 0;
-            color: white;
+            color: $purple;
+            font-weight: 300;
             text-align: left;
         }
         p {
             clear: both;
             text-align: left;
         }
-        ul {
+        #chapters {
             display: inline-block;
             float: right;
             width: 20%;
-        }
-        li {
-            text-align: center;
-            color: white;
-            background-color: $purple;
-            border-radius: $corners;
-            height:  $movie-height/4 - 6px;
-            margin-bottom: 9px;
-            padding-top: $movie-height/16;
-            p {
+            li {
                 text-align: center;
+                color: white;
+                background-color: $purple;
+                border-radius: $corners;
+                height:  $movie-height/4 - 6px;
+                margin-bottom: 9px;
+                padding-top: $movie-height/16;
+                p {
+                    text-align: center;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: $green;
+                }
             }
-            &:hover {
-                cursor: pointer;
-                background-color: $green;
+            .current {
+                background-color: $dark-color;
             }
         }
-        .current {
-            background-color: $dark-color;
+        .start {
+            display: inline-block;
+            clear: both;
+            margin-top: 40px;
+        }
+        .description {
+            border-left: solid $purple 1px;
+            border-right: solid $purple 1px;
+            padding: 5px 3%;
+            color: white;
+            li {
+                margin: 5px 3%;
+                text-align: left;
+                b {
+                    display: inline-block;
+                    height: 100%;
+                }
+            }
+            a {
+                font-style: italic;
+                color: $purple;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
         #movie {
@@ -216,33 +242,28 @@ header {
         }
 
     footer {
-        clear: both;
-        height: 40px;
-        line-height: 40px;
-        font-size: 10px;
-        color: $purple;
-        padding: 0 $gutter;
-        color: white;
-        box-shadow: 0 2px 5px black;
+        text-align: right;
+        height: $soc-size + 10px;
+        line-height: $soc-size;
+        padding: 5px 3%;
         background: url("../images/gel-btn.png") repeat-x $green;
     }
         #socnet {
-            float: right;
-            height: $gutter*2;
+            height: $soc-size;
             font-size: 14px;
             text-align: right;
             h4 {
                 display: inline-block;
-                line-height: $gutter*2;
+                line-height: $soc-size;
                 vertical-align: top;
                 color: white;
                 font-weight: 400;
             }
             a {
+                margin-left: 1%;
                 width: $soc-size;
                 height: $soc-size;
                 border-radius: $soc-size/2;
-                margin: 5px 0 0 4px;
                 background: url("../images/socnet-sprite-lg.png") no-repeat $purple;
             }
             .fb {
@@ -282,7 +303,7 @@ header {
         width: $movie-width*.86;
         height: $movie-height*.86;
     }
-    #container ul li {
+    #container #chapters li {
         height:  ($movie-height*.86)/4 - 6px;
         margin-bottom: 9px;
         padding-top: $movie-height*.86/16;
@@ -291,9 +312,11 @@ header {
     }
 
 }
-@media (max-width: 800px) {
+@media (max-width: 840px) {
     #movie {
         float: none;
+        display: block;
+        margin: 0 auto;
         width: $movie-width*.75;
         height: $movie-height*.75;
     }
@@ -301,7 +324,7 @@ header {
         h1 {
             text-align: center;
         }
-        ul {
+        #chapters {
             float: none;
             margin-top: 9px;
             width: $movie-width*.75;
@@ -317,16 +340,16 @@ header {
         }
     }
 }
-@media (max-width: 640px) {
+@media (max-width: 650px) {
     body {
         font-size: .8em;
     }
-    #container ul {
-        width: $movie-width*.67;
+    #container #chapters {
+        width: $movie-width*.5;
     }
     #movie {
-        width: $movie-width*.67;
-        height: $movie-height*.67;
+        width: $movie-width*.5;
+        height: $movie-height*.5;
     }
     header li a div {
         display: inline-block;
@@ -339,11 +362,11 @@ header {
 }
 @media (max-width: 520px) {
     #movie {
-        width: $movie-width*.5;
-        height: $movie-height*.5;
+        width: $movie-width*.33;
+        height: $movie-height*.33;
     }
-    #container ul {
-        width: $movie-width*.5;
+    #container #chapters {
+        width: $movie-width*.33;
         p {
             font-size: .9em;
         }

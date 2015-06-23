@@ -7,27 +7,30 @@ $(document).ready(function() {
     var player = $f(iframe);
     var status = $('.status');
     
-    $("#char-chp").on("click", function() {
-        player.api("seekTo", times[0]);
-        console.log("chapter 1");
-    });
-    $("#ed-chp").on("click", function() {
-        console.log("chapter 2");
-        player.api("seekTo", times[1]);
-    });
-    $("#info-chp").on("click", function() {
-        console.log("chapter 3");
-        player.api("seekTo", times[2]);
-    });
-    $("#stil-chp").on("click", function() {
-        console.log("chapter 4");
-        player.api("seekTo", times[3]);
-    });
-    
     player.addEvent("ready", videoReady);
     
     function videoReady() {
         console.log("Vimeo Ready");
+        $("#char-chp").on("click", function() {
+            console.log("chapter 1");
+            player.api("play");
+            player.api("seekTo", times[0]);
+        });
+        $("#ed-chp").on("click", function() {
+            console.log("chapter 2");
+            player.api("play");
+            player.api("seekTo", times[1]);
+        });
+        $("#info-chp").on("click", function() {
+            console.log("chapter 3");
+            player.api("play");
+            player.api("seekTo", times[2]);
+        });
+        $("#stil-chp").on("click", function() {
+            console.log("chapter 4");
+            player.api("play");
+            player.api("seekTo", times[3]);
+        });
         player.addEvent("finish ", function() {
             $("#char-chp").removeClass("current");
             $("#char-chp").siblings().removeClass("current");
