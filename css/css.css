@@ -640,3 +640,20 @@ input[type=submit]:hover {
     width: 100%;
   }
 }
+@media screen and (max-width: 500px) {
+  /* line 563, css.scss */
+  footer {
+    text-align: center;
+  }
+  /* line 565, css.scss */
+  footer .left {
+    float: none;
+    margin-bottom: 10px;
+  }
+  /* line 569, css.scss */
+  footer .right {
+    clear: both;
+    float: none;
+    display: block;
+  }
+}
