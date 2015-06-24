@@ -168,7 +168,7 @@ header {
     #container {
         width: 94%;
         text-align: center;
-        padding: 1%;
+        padding: 1% 1% 5%;
         margin: 3%;
         background: linear-gradient($accent-color, $green);
         border-radius: $bleed;
@@ -339,14 +339,23 @@ header {
                 }
             }
         }
+        .description {
+            border: none;
+        }
+        .start {
+            border-top: solid $purple 1px;
+            padding-top: 20px;
+        }
     }
 }
 @media (max-width: 650px) {
     body {
         font-size: .8em;
     }
-    #container #chapters {
-        width: $movie-width*.5;
+    #container {
+        #chapters {
+            width: $movie-width*.5;
+        }
     }
     #movie {
         width: $movie-width*.5;

@@ -175,7 +175,7 @@ header li .phone {
 #container {
   width: 94%;
   text-align: center;
-  padding: 1%;
+  padding: 1% 1% 5%;
   margin: 3%;
   background: linear-gradient(#e5eec7, #5a9245);
   border-radius: 10px;
@@ -383,30 +383,39 @@ footer {
   #container #chapters li p {
     display: inline;
   }
+  /* line 342, css.scss */
+  #container .description {
+    border: none;
+  }
+  /* line 345, css.scss */
+  #container .start {
+    border-top: solid #301f3a 1px;
+    padding-top: 20px;
+  }
 }
 @media (max-width: 650px) {
-  /* line 345, css.scss */
+  /* line 352, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 348, css.scss */
+  /* line 356, css.scss */
   #container #chapters {
     width: 320px;
   }
 
-  /* line 351, css.scss */
+  /* line 360, css.scss */
   #movie {
     width: 320px;
     height: 180px;
   }
 
-  /* line 355, css.scss */
+  /* line 364, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 358, css.scss */
+  /* line 367, css.scss */
   header li a {
     width: 30px;
     height: 30px;
@@ -414,17 +423,17 @@ footer {
   }
 }
 @media (max-width: 520px) {
-  /* line 365, css.scss */
+  /* line 374, css.scss */
   #movie {
     width: 211.2px;
     height: 118.8px;
   }
 
-  /* line 369, css.scss */
+  /* line 378, css.scss */
   #container #chapters {
     width: 211.2px;
   }
-  /* line 371, css.scss */
+  /* line 380, css.scss */
   #container #chapters p {
     font-size: .9em;
   }
