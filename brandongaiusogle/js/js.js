@@ -32,7 +32,7 @@ for (var i=0; i < (animationInterval/frameFrequency - 8)/5; i++) {
     loopFrames.push(5);
     loopFrames.push(6);
     loopFrames.push(7);
-    loopFrames.push(8);
+    loopFrames.push(8); 
 }
 for (var i=0; i < (animationInterval/frameFrequency - 8)/17; i++) {
     // push new values onto LoopFrames
