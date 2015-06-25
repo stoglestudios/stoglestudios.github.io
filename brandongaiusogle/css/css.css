@@ -295,13 +295,13 @@ content {
 
 /* line 274, css.scss */
 #one {
-  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), url("../images/texture1.png"), linear-gradient(135deg, #301f3a, #000000);
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
 
 /* line 283, css.scss */
 #two {
-  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/dots.png"), url("../images/texture2.png"), linear-gradient(135deg, #5c9149, #003300);
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/dots.png"), linear-gradient(135deg, #5c9149, #003300);
   background-size: cover, 10px 10px, cover, cover;
 }
 /* line 291, css.scss */
@@ -323,13 +323,13 @@ content {
 
 /* line 304, css.scss */
 #three {
-  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/hex.png"), url("../images/texture3.png"), linear-gradient(135deg, #330033, #301f3a);
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/hex.png"), linear-gradient(135deg, #330033, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
 /* line 313, css.scss */
 #four {
-  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/waves2.png"), url("../images/texture4.png"), linear-gradient(135deg, #5c9149, #000000);
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/waves2.png"), linear-gradient(135deg, #5c9149, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
 /* line 321, css.scss */
@@ -351,7 +351,7 @@ content {
 
 /* line 334, css.scss */
 #five {
-  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/v-stripes.png"), url("../images/texture5.png"), linear-gradient(135deg, #2f4f4f, #000000, #301f3a);
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/v-stripes.png"), linear-gradient(135deg, #2f4f4f, #000000, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 

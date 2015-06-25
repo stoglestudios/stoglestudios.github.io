@@ -3,11 +3,80 @@
 */
 //-->Global Vars
 var currentSection = "one";
-var sections = ["#one", "#two", "#three", "#four", "#five"];
+var sections = ["#one", "#two", "#three", "#four", "#five"/*, "#six", "#seven"*/];
 var scrollTest = true;
 var inertialTest = true;
 var ts;
- 
+
+// animation variables 
+// set frame rate; 80 milleseconds is 12.5 f/s
+var frameFrequency = 80;
+// set length of animation; 3 sec is 3000 mil sec 
+var animationInterval = 6000;
+// set interval between animated instances; 15 sec is 15000 mil sec
+var pauseInterval = 30000;
+// set counter for keeping track of on/off cycles
+var animationCounter = 0;
+// create random number between 0 -2
+var randomSelector = Math.floor( Math.random()*3 );
+
+//build frames array for each section
+var loopFrames = [0,1,2,3];
+var backforthFrames = [0,1,2,3];
+var loopPauseFrames = [0,1,2,3];
+var backPauseFrames = [0,1,2,3];
+for (var i=0; i < (animationInterval/frameFrequency - 8)/5; i++) {
+    // push new values onto LoopFrames
+    // Loop frame count 4,5,6,7 and back to 4
+    loopFrames.push(4);
+    loopFrames.push(5);
+    loopFrames.push(6);
+    loopFrames.push(7);
+    loopFrames.push(8);
+}
+for (var i=0; i < (animationInterval/frameFrequency - 8)/17; i++) {
+    // push new values onto LoopFrames
+    // Loop frame count 4,5,6,7 and back to 4
+    loopPauseFrames.push(4);
+    loopPauseFrames.push(5);
+    loopPauseFrames.push(6);
+    loopPauseFrames.push(7);
+    for (var i=0; i< 12; i++) {
+         loopPauseFrames.push(4);
+    }
+}
+for (var i=0; i < (animationInterval/frameFrequency - 8)/20; i++) {
+    // push new values onto backforthFrames
+    // Backforth count 5,6,7,8,7,6,5
+    backPauseFrames.push(4);
+    backPauseFrames.push(5);
+    backPauseFrames.push(6);
+    backPauseFrames.push(7);
+    backPauseFrames.push(8);
+    backPauseFrames.push(7);
+    backPauseFrames.push(6);
+    backPauseFrames.push(5);
+    for (var i=0; i< 12; i++) {
+         backPauseFrames.push(4);
+    }
+}
+loopFrames.push(9);
+loopFrames.push(10);
+loopFrames.push(11);
+loopFrames.push(0);
+backforthFrames.push(9);
+backforthFrames.push(10);
+backforthFrames.push(11);
+backforthFrames.push(0);
+loopPauseFrames.push(9);
+loopPauseFrames.push(10);
+loopPauseFrames.push(11);
+loopPauseFrames.push(0);
+backPauseFrames.push(9);
+backPauseFrames.push(10);
+backPauseFrames.push(11);
+backPauseFrames.push(0);
+
 //-->Functions
 
 function scrollPage(oe_wd, oe_d, touchUp) {
@@ -31,8 +100,8 @@ function scrollPage(oe_wd, oe_d, touchUp) {
         var winHeight = $(window).height();
         var scrollUpTo;
         var scrollDownTo;
-        console.log("Window's Scroll Position: " + documentScroll);
-        console.log("Window's Height: " + winHeight);
+        //console.log("Window's Scroll Position: " + documentScroll);
+        //console.log("Window's Height: " + winHeight);
         //figure out where to scroll to from current spot 
         for (var i=0; i<sections.length; i++) {
             var posTops = $(sections[i]).offset().top;
@@ -48,16 +117,16 @@ function scrollPage(oe_wd, oe_d, touchUp) {
                     scrollDownTo = sections[sections.length-1];
                 }
             }
-            console.log(sections[i] + "'s Position: " + posTops);
+            //console.log(sections[i] + "'s Position: " + posTops);
         }
         if (scrollUp) {
-            console.log("Scroll up to " + scrollUpTo);
+            //console.log("Scroll up to " + scrollUpTo);
             scrollTo = scrollUpTo;
         } else {
-            console.log("Scroll down to " + scrollDownTo);
+            //console.log("Scroll down to " + scrollDownTo);
             scrollTo = scrollDownTo;
         }
-        console.log("\n\n\n----------------END-----------------\n\n\n");
+        //console.log("\n\n\n----------------END-----------------\n\n\n");
         $('html, body').animate({
             scrollTop: $(scrollTo).offset().top
         }, 1000, function () {
@@ -66,8 +135,41 @@ function scrollPage(oe_wd, oe_d, touchUp) {
         });
     }
 }
+function animateMe() {
+    if (animationCounter < backPauseFrames.length) {
+        // create X position value from random number
+        var x_pos = randomSelector * -100;
+        // set frame number to y po
+        var y_pos = backPauseFrames[animationCounter]*-100;
+        // check to see which section is currently displayed
+        // ***???***
+        // set that to a variable
+        //var $currentSection = $(sections[/*???*/]);
+        
+        var newPosition = x_pos + "% " + y_pos + "%";
+        console.log(newPosition + " - " + animationCounter);
+        //$currentSection.children(".illustration .animated").css(
+        //    "background-position", newPosition
+        //);
+        animationCounter++;
+    } else if (animationCounter > 
+               (pauseInterval + animationInterval)/frameFrequency
+              ) {
+        // reset animation counter
+        animationCounter = 0;
+        // choose new random number
+        randomSelector = Math.floor( Math.random()*3 );
+        console.log("\n\n\n---------------RESET----------------\n\n\n");
+    } else {
+        console.log("paused - " + animationCounter);
+        animationCounter++;
+    }
+}
 
 $(document).ready(function() {
+    // timer for animation
+    var animateBrandon = setInterval(animateMe, frameFrequency);
+    
     $(".jumpdown").on("click touchend", function(evt) {
         evt.preventDefault();
         evt.stopPropagation();
