@@ -211,7 +211,28 @@ nav {
         }
     }
 }
-    
+//--------------------------------------
+// Illustrations
+//--------------------------------------
+
+.illustration {
+    display: block;
+    max-height: 600px;
+    max-width: 600px;
+    width: 50vh;
+    height: 50vh;
+    margin: 15vh auto;
+    overflow: hidden; 
+    background: url("../images/HelloWorld_shadow.png") no-repeat;
+    background-size: 100% 100%;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+        height: 1200%;
+    }
+}
     
 //--------------------------------------
 // PAGE CONTENT

@@ -14,7 +14,7 @@ var frameFrequency = 80;
 // set length of animation; 3 sec is 3000 mil sec 
 var animationInterval = 6000;
 // set interval between animated instances; 15 sec is 15000 mil sec
-var pauseInterval = 30000;
+var pauseInterval = 10000;
 // set counter for keeping track of on/off cycles
 var animationCounter = 0;
 // create random number between 0 -2
@@ -32,7 +32,18 @@ for (var i=0; i < (animationInterval/frameFrequency - 8)/5; i++) {
     loopFrames.push(5);
     loopFrames.push(6);
     loopFrames.push(7);
-    loopFrames.push(8); 
+    loopFrames.push(8);
+}
+for (var i=0; i < (animationInterval/frameFrequency - 8)/8; i++) {
+    // push new values onto LoopFrames
+    backforthFrames.push(4);
+    backforthFrames.push(5);
+    backforthFrames.push(6);
+    backforthFrames.push(7);
+    backforthFrames.push(8);
+    backforthFrames.push(7);
+    backforthFrames.push(6);
+    backforthFrames.push(5);
 }
 for (var i=0; i < (animationInterval/frameFrequency - 8)/17; i++) {
     // push new values onto LoopFrames
@@ -136,11 +147,11 @@ function scrollPage(oe_wd, oe_d, touchUp) {
     }
 }
 function animateMe() {
-    if (animationCounter < backPauseFrames.length) {
+    if (animationCounter < backforthFrames.length) {
         // create X position value from random number
-        var x_pos = randomSelector * -100;
+        var x_pos = randomSelector*-100;
         // set frame number to y po
-        var y_pos = backPauseFrames[animationCounter]*-100;
+        var y_pos = backforthFrames[animationCounter]*-100;
         // check to see which section is currently displayed
         // ***???***
         // set that to a variable
@@ -148,9 +159,10 @@ function animateMe() {
         
         var newPosition = x_pos + "% " + y_pos + "%";
         console.log(newPosition + " - " + animationCounter);
-        //$currentSection.children(".illustration .animated").css(
-        //    "background-position", newPosition
-        //);
+        $("#one").children(".illustration").children("img").css({
+            "top": y_pos + "%",
+            "left": x_pos + "%"
+        });
         animationCounter++;
     } else if (animationCounter > 
                (pauseInterval + animationInterval)/frameFrequency
