@@ -235,10 +235,8 @@ nav li:nth-child(7) a {
   height: 50vh;
   margin: 15vh auto;
   overflow: hidden;
-  background: url("../images/HelloWorld_shadow.png") no-repeat;
-  background-size: 100% 100%;
 }
-/* line 228, css.scss */
+/* line 226, css.scss */
 .illustration img {
   position: absolute;
   top: 0;
@@ -247,12 +245,18 @@ nav li:nth-child(7) a {
   height: 1200%;
 }
 
-/* line 240, css.scss */
+/* line 234, css.scss */
+#one .illustration {
+  background: url("../images/HelloWorld_shadow.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 242, css.scss */
 content {
   width: 100%;
 }
 
-/* line 243, css.scss */
+/* line 245, css.scss */
 .section {
   width: 100%;
   height: 100vh;
@@ -260,7 +264,7 @@ content {
   left: 0;
   text-align: right;
 }
-/* line 249, css.scss */
+/* line 251, css.scss */
 .section .container {
   overflow: hidden;
   position: absolute;
@@ -277,156 +281,156 @@ content {
   padding: 3% 3% 1%;
   box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
 }
-/* line 265, css.scss */
+/* line 267, css.scss */
 .section h1 {
   text-align: left;
   font-weight: 300;
   font-size: 1.5em;
   color: #5c9149;
 }
-/* line 271, css.scss */
+/* line 273, css.scss */
 .section p {
   font-size: .9em;
   padding: 3% 0;
   text-align: left;
 }
-/* line 276, css.scss */
+/* line 278, css.scss */
 .section .needs-filler:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 279, css.scss */
+/* line 281, css.scss */
 .section .jumpdown {
   background: url("../images/down-arrow.png") no-repeat;
 }
-/* line 282, css.scss */
+/* line 284, css.scss */
 .section .jumpup {
   background: url("../images/up-arrow.png") no-repeat;
 }
-/* line 285, css.scss */
+/* line 287, css.scss */
 .section .jumpdown, .section .jumpup {
   margin-bottom: 3%;
   width: 56.5px;
   height: 20px;
   background-size: 100% 200%;
 }
-/* line 290, css.scss */
+/* line 292, css.scss */
 .section .jumpdown:hover, .section .jumpup:hover {
   background-position: bottom;
 }
 
-/* line 295, css.scss */
+/* line 297, css.scss */
 #one {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 304, css.scss */
+/* line 306, css.scss */
 #two {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/dots.png"), linear-gradient(135deg, #5c9149, #003300);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 312, css.scss */
+/* line 314, css.scss */
 #two .container {
   border-color: #301f3a;
 }
-/* line 314, css.scss */
+/* line 316, css.scss */
 #two .container h1 {
   color: #301f3a;
 }
-/* line 317, css.scss */
+/* line 319, css.scss */
 #two .container .jumpdown {
   background-position: bottom;
 }
-/* line 319, css.scss */
+/* line 321, css.scss */
 #two .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 325, css.scss */
+/* line 327, css.scss */
 #three {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/hex.png"), linear-gradient(135deg, #330033, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 334, css.scss */
+/* line 336, css.scss */
 #four {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/waves2.png"), linear-gradient(135deg, #5c9149, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 342, css.scss */
+/* line 344, css.scss */
 #four .container {
   border-color: #301f3a;
 }
-/* line 344, css.scss */
+/* line 346, css.scss */
 #four .container h1 {
   color: #301f3a;
 }
-/* line 347, css.scss */
+/* line 349, css.scss */
 #four .container .jumpdown {
   background-position: bottom;
 }
-/* line 349, css.scss */
+/* line 351, css.scss */
 #four .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 355, css.scss */
+/* line 357, css.scss */
 #five {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/v-stripes.png"), linear-gradient(135deg, #2f4f4f, #000000, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 366, css.scss */
+  /* line 368, css.scss */
   .section .container {
     width: 72%;
   }
 }
 @media screen and (max-height: 500px) {
-  /* line 372, css.scss */
+  /* line 374, css.scss */
   .section {
     text-align: center;
   }
-  /* line 374, css.scss */
+  /* line 376, css.scss */
   .section .container {
     width: 72%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 380, css.scss */
+  /* line 382, css.scss */
   .section {
     text-align: center;
   }
-  /* line 382, css.scss */
+  /* line 384, css.scss */
   .section .container {
     width: 94%;
     margin: 3% 3% 80px;
   }
-  /* line 386, css.scss */
+  /* line 388, css.scss */
   .section h1 {
     font-size: 1.2em;
     font-weight: 400;
   }
-  /* line 390, css.scss */
+  /* line 392, css.scss */
   .section p {
     line-height: 1em;
   }
 }
 @media screen and (max-height: 300px) {
-  /* line 396, css.scss */
+  /* line 398, css.scss */
   .section {
     text-align: center;
   }
-  /* line 398, css.scss */
+  /* line 400, css.scss */
   .section .container {
     width: 94%;
     padding: 1% 3%;
   }
-  /* line 402, css.scss */
+  /* line 404, css.scss */
   .section h1 {
     font-size: 1em;
   }
-  /* line 405, css.scss */
+  /* line 407, css.scss */
   .section p {
     padding: 1% 0;
     font-size: .95em;

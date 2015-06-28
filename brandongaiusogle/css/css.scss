@@ -223,8 +223,6 @@ nav {
     height: 50vh;
     margin: 15vh auto;
     overflow: hidden; 
-    background: url("../images/HelloWorld_shadow.png") no-repeat;
-    background-size: 100% 100%;
     img {
         position: absolute;
         top: 0;
@@ -232,6 +230,10 @@ nav {
         width: 300%;
         height: 1200%;
     }
+}
+#one .illustration {
+    background: url("../images/HelloWorld_shadow.png") no-repeat;
+    background-size: 100% 100%;
 }
     
 //--------------------------------------

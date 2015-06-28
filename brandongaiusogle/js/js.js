@@ -19,8 +19,10 @@ var pauseInterval = 10000;
 var animationCounter = 0;
 // create random number between 0 -2
 var randomSelector = Math.floor( Math.random()*3 );
+// create a standard length for frame arrays
+var maxFrames = 100;
 
-//build frames array for each section
+//build frames array for each section and add opening frames
 var loopFrames = [0,1,2,3];
 var backforthFrames = [0,1,2,3];
 var loopPauseFrames = [0,1,2,3];
@@ -34,31 +36,28 @@ for (var i=0; i < (animationInterval/frameFrequency - 8)/5; i++) {
     loopFrames.push(7);
     loopFrames.push(8);
 }
-for (var i=0; i < (animationInterval/frameFrequency - 8)/8; i++) {
-    // push new values onto LoopFrames
+for (var i=0; i < (animationInterval/frameFrequency - 8)/6; i++) {
+    // push new values onto to loop back and forth
     backforthFrames.push(4);
     backforthFrames.push(5);
     backforthFrames.push(6);
-    backforthFrames.push(7);
-    backforthFrames.push(8);
     backforthFrames.push(7);
     backforthFrames.push(6);
     backforthFrames.push(5);
 }
 for (var i=0; i < (animationInterval/frameFrequency - 8)/17; i++) {
-    // push new values onto LoopFrames
-    // Loop frame count 4,5,6,7 and back to 4
+    // push new values to loop w/ a on second pause between
     loopPauseFrames.push(4);
     loopPauseFrames.push(5);
     loopPauseFrames.push(6);
     loopPauseFrames.push(7);
-    for (var i=0; i< 12; i++) {
+    //pause at 4 one second
+    for (var j=0; j< 12; j++) {
          loopPauseFrames.push(4);
     }
 }
 for (var i=0; i < (animationInterval/frameFrequency - 8)/20; i++) {
-    // push new values onto backforthFrames
-    // Backforth count 5,6,7,8,7,6,5
+    // push new values to roch back and forth w/ a on second pause between
     backPauseFrames.push(4);
     backPauseFrames.push(5);
     backPauseFrames.push(6);
@@ -67,10 +66,11 @@ for (var i=0; i < (animationInterval/frameFrequency - 8)/20; i++) {
     backPauseFrames.push(7);
     backPauseFrames.push(6);
     backPauseFrames.push(5);
-    for (var i=0; i< 12; i++) {
+    for (var k=0; k< 12; k++) {
          backPauseFrames.push(4);
     }
 }
+// add closing animation frames
 loopFrames.push(9);
 loopFrames.push(10);
 loopFrames.push(11);
@@ -87,6 +87,20 @@ backPauseFrames.push(9);
 backPauseFrames.push(10);
 backPauseFrames.push(11);
 backPauseFrames.push(0);
+
+// fill out Frame array to maxFrames so they are all a standard Length
+while (loopFrames.length < maxFrames) {
+    loopFrames.push(0);
+}
+while (backforthFrames.length < maxFrames) {
+    backforthFrames.push(0);
+}
+while (loopPauseFrames.length < maxFrames) {
+    loopPauseFrames.push(0);
+}
+while (backPauseFrames.length < maxFrames) {
+    backPauseFrames.push(0);
+}
 
 //-->Functions
 
@@ -147,19 +161,78 @@ function scrollPage(oe_wd, oe_d, touchUp) {
     }
 }
 function animateMe() {
-    if (animationCounter < backforthFrames.length) {
+    if (animationCounter < maxFrames+1) {
         // create X position value from random number
         var x_pos = randomSelector*-100;
-        // set frame number to y po
-        var y_pos = backforthFrames[animationCounter]*-100;
         // check to see which section is currently displayed
-        // ***???***
-        // set that to a variable
-        //var $currentSection = $(sections[/*???*/]);
-        
-        var newPosition = x_pos + "% " + y_pos + "%";
-        console.log(newPosition + " - " + animationCounter);
-        $("#one").children(".illustration").children("img").css({
+        var sectionNum = $(document).scrollTop() / $(window).height();
+        var $actionableObject = $("#one").children(".illustration").children("img");
+        if (sectionNum >=0 && sectionNum < 1.5) { //<---SECTION 1: Hello World - Workbench
+            $actionableObject = $("#one").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Welding (Looping)
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Hammering (Back and forth)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Blinking (Looping w/ Pause)
+            }
+        } else if (sectionNum > 1.5 && sectionNum < 2.5) { //<---SECTION 2 [NEW DESIGN SECTION]
+            $actionableObject = $("#two").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Drums with pens (Back and forth)
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Moves Triangle Around (Looping)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Drinks Coffee (Back and forth w/ Pause)
+            }
+        } else if (sectionNum > 2.5 && sectionNum < 3.5) { //<---SECTION 3: My Art History - Easel
+            $actionableObject = $("#three").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Measure angles with brush in hand
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Leans back, looks around (Back and forth w/ Pause)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Moves brush arouns (Looping)
+            }
+        } else if (sectionNum > 3.5 && sectionNum < 4.5) { //<---SECTION 4: Laziness is Hard Work - Pizza Make Table
+            $actionableObject = $("#four").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Flips pizza dough (Looping)
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Sprinkles Toppings (Looping)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Dumps Ingredients (Back and Forth)
+            }
+        } else if (sectionNum > 4.5 && sectionNum < 5.5) { //<---SECTION 5: My Roots with STEM - White Board'
+            $actionableObject = $("#five").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Points with Pointer (Back and forth w/ Pause)
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Looks around (Back and Forth w/ Pause)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Dances (Back and forth)
+            }
+        } else if (sectionNum > 5.5 && sectionNum < 6.5) { //<---SECTION 6: Leadership or Lead Ship - Open Door
+            $actionableObject = $("#six").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Guesters with hand (Back and Forth w/ Pause)
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Guesters with head (Back and Forth w/ Pause)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Puts fists on hips (Holds Position)
+            }
+        } else if (sectionNum > 6.5) { //<-----------------------SECTION 7: Thank You (CTA) - Laptop
+            $actionableObject = $("#seven").children(".illustration").children("img");
+            if (randomSelector == 2) {
+                var y_pos = loopFrames[animationCounter]*-100; //<-- Wiggles pen in mouth (Back and Forth)
+            } else if (randomSelector == 1) {
+                var y_pos = backforthFrames[animationCounter]*-100; //<-- Gives Thumbs up (Holds Position)
+            }else {
+                var y_pos = loopPauseFrames[animationCounter]*-100; //<-- Gives Okay (Holds Position)
+            }   
+        }
+        //console.log(x_pos + "% " + y_pos + "% - " + animationCounter);
+        $actionableObject.css({
             "top": y_pos + "%",
             "left": x_pos + "%"
         });
@@ -173,7 +246,7 @@ function animateMe() {
         randomSelector = Math.floor( Math.random()*3 );
         console.log("\n\n\n---------------RESET----------------\n\n\n");
     } else {
-        console.log("paused - " + animationCounter);
+        //console.log("paused - " + animationCounter);
         animationCounter++;
     }
 }
