@@ -72,6 +72,9 @@ body {
     font-family: $body-font;
     text-align: center;
 }
+.need-filler:after {
+    content: $lorem;
+}
 //--------------------------------------
 // NAVAGATION
 //--------------------------------------
@@ -217,8 +220,8 @@ nav {
 
 .illustration {
     display: block;
-    max-height: 600px;
-    max-width: 600px;
+    max-height: 400px;
+    max-width: 400px;
     width: 50vh;
     height: 50vh;
     margin: 15vh auto;
@@ -227,14 +230,94 @@ nav {
         position: absolute;
         top: 0;
         left: 0;
-        width: 300%;
+        width: 200%;
         height: 1200%;
+    }
+    .thankyou {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300%;
     }
 }
 #one .illustration {
     background: url("../images/HelloWorld_shadow.png") no-repeat;
     background-size: 100% 100%;
 }
+#two .illustration {
+    background: url("../images/GoodSign_shadow.png") no-repeat;
+    background-size: 100% 100%;
+}
+#three .illustration {
+    background: url("../images/History_shadow.png") no-repeat;
+    background-size: 100% 100%;
+}
+#four .illustration {
+    background: url("../images/Laziness_shadow.png") no-repeat;
+    background-size: 100% 100%;
+}
+#five .illustration {
+    background: url("../images/RootSTEM_shadow.png") no-repeat;
+    background-size: 100% 100%;
+}
+#six .illustration {
+    background: url("../images/Leadership_shadow.png") no-repeat;
+    background-size: 100% 100%;
+}
+#seven {
+    .illustration {
+    background: url("../images/ThankYou_shadow.png") no-repeat;
+    background-size: 100% 100%;
+    }
+    ul {
+        margin: 0 6% 3%;
+        li {
+            margin: 0 3% 3%;
+            a {
+                color: $purple;
+                line-height: $a-size;
+                div {
+                    vertical-align: middle;
+                    width: $a-size;
+                    height: $a-size;
+                    margin: 0 auto;
+                    background-color: $purple;
+                    display: block;
+                    background: url("../images/menu-icons.png") $purple;
+                    background-size: 700% 200%;
+                    border-radius: 5px;
+                }
+                &:hover {
+                    color: $green;
+                    div {
+                        background-color: $green;
+                    }
+                }
+                #demo-reel {
+                    background-position: $a-size*-1 -1*$a-size;
+                }
+                #portfolio-link {
+                    background-position: $a-size*0 -1*$a-size;
+                }
+                #resume-link {
+                    background-position: $a-size*-2 -1*$a-size;
+                }
+                #linked-in {
+                    background-position: $a-size*-4 -1*$a-size;
+                }
+                #email-link {
+                    background-position: $a-size*-6 -1*$a-size;
+                }
+                #phone-link {
+                    background-position: $a-size*-5 -1*$a-size;
+                }
+            }
+        }
+    }
+}
+
+
     
 //--------------------------------------
 // PAGE CONTENT
@@ -298,7 +381,6 @@ content {
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/cross.png"),
-        //url("../images/texture1.png"),
         linear-gradient( 135deg, $purple, black )
     ;
     background-size: cover, 10px 10px, cover, cover;
@@ -307,7 +389,6 @@ content {
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/dots.png"),
-        //url("../images/texture2.png"),
         linear-gradient( 135deg, $green, #003300 )
     ;
     background-size: cover, 10px 10px, cover, cover;
@@ -328,7 +409,6 @@ content {
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/hex.png"),
-        //url("../images/texture3.png"),
         linear-gradient( 135deg, #330033, $purple )
     ;
     background-size: cover, 10px 10px, cover, cover;
@@ -337,7 +417,6 @@ content {
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/waves2.png"),
-        //url("../images/texture4.png"),
         linear-gradient( 135deg, $green, black )
     ;
     background-size: cover, 10px 10px, cover, cover;
@@ -357,25 +436,58 @@ content {
 #five {
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
-        url("../images/v-stripes.png"),
-        //url("../images/texture5.png"),
+        url("../images/grid.png"),
         linear-gradient( 135deg, darkslategray, black, $purple )
     ;
     background-size: cover, 10px 10px, cover, cover;
 }
+#six {
+    background-image: 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/diagnal.png"),
+        linear-gradient( 135deg, forestgreen, #669966, $green )
+    ;
+    background-size: cover, 10px 10px, cover, cover;
+    .container {
+        border-color: $purple;
+        h1 {
+            color: $purple;
+        }
+        .jumpdown {
+            background-position: bottom;
+            &:hover {
+                background-position: top;
+            }
+        }
+    }
+}
+#seven {
+    background-image: 
+        radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+        url("../images/v-stripes.png"),
+        linear-gradient( 135deg, #9966cc, darkslategray, $purple )
+    ;
+    background-size: cover, 10px 10px, cover, cover;
+}
+
+
+//--------------------------------------
+// RESPONSIVE CSS
+//--------------------------------------
+
 @media screen and (max-width: 800px) {
     .section {
         .container {
-            width: 72%;
+            width: 94%;
         }
     }
 }
 @media screen and (max-height: 500px) {
+    .illustration {
+        margin: 50px auto;
+    }  
     .section {
         text-align: center;
-        .container {
-            width: 72%;
-        }
     }
 }
 @media screen and (max-width: 600px) {
@@ -410,17 +522,3 @@ content {
         }
     }
 }
-
-/*
-@media screen and (max-height: 400px) and (max-width: 700px) {
-    .section p {
-        font-size: .8em;
-        line-height: .95em;
-    }
-}
-@media screen and (max-height: 200px), screen and (max-width: 500px) {
-    .section p {
-        font-size: .7em;
-        line-height: .85em;
-    }
-}*/
