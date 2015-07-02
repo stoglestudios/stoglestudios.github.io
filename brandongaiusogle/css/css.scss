@@ -224,7 +224,7 @@ nav {
     max-width: 400px;
     width: 50vh;
     height: 50vh;
-    margin: 15vh auto;
+    margin: 10vh;
     overflow: hidden; 
     img {
         position: absolute;
@@ -336,7 +336,7 @@ content {
         position: absolute;
         right: 0;
         bottom: 0;
-        margin: 3%; 
+        margin: 3% 3% 80px;
         text-align: center;
         max-height: 74vh;
         width: 47%;
@@ -484,17 +484,13 @@ content {
 }
 @media screen and (max-height: 500px) {
     .illustration {
-        margin: 50px auto;
+        margin: 50px;
         width: 30vh;
         height: 30vh;
     }  
-    .section {
-        text-align: center;
-    }
 }
 @media screen and (max-width: 600px) {
     .section {
-        text-align: center;
         .container {
             width: 94%;
             margin: 3% 3% 80px;
@@ -510,7 +506,6 @@ content {
 }
 @media screen and (max-height: 300px) {
     .section {
-        text-align: center;
         .container {
             width: 94%;
             padding: 1% 3%;

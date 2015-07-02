@@ -238,7 +238,7 @@ nav li:nth-child(7) a {
   max-width: 400px;
   width: 50vh;
   height: 50vh;
-  margin: 15vh auto;
+  margin: 10vh;
   overflow: hidden;
 }
 /* line 229, css.scss */
@@ -376,7 +376,7 @@ content {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 3%;
+  margin: 3% 3% 80px;
   text-align: center;
   max-height: 74vh;
   width: 47%;
@@ -523,51 +523,38 @@ content {
 @media screen and (max-height: 500px) {
   /* line 486, css.scss */
   .illustration {
-    margin: 50px auto;
+    margin: 50px;
     width: 30vh;
     height: 30vh;
   }
-
-  /* line 491, css.scss */
-  .section {
-    text-align: center;
-  }
 }
 @media screen and (max-width: 600px) {
-  /* line 496, css.scss */
-  .section {
-    text-align: center;
-  }
-  /* line 498, css.scss */
+  /* line 494, css.scss */
   .section .container {
     width: 94%;
     margin: 3% 3% 80px;
   }
-  /* line 502, css.scss */
+  /* line 498, css.scss */
   .section h1 {
     font-size: 1.2em;
     font-weight: 400;
   }
-  /* line 506, css.scss */
+  /* line 502, css.scss */
   .section p {
     line-height: 1em;
   }
 }
 @media screen and (max-height: 300px) {
-  /* line 512, css.scss */
-  .section {
-    text-align: center;
-  }
-  /* line 514, css.scss */
+  /* line 509, css.scss */
   .section .container {
     width: 94%;
     padding: 1% 3%;
   }
-  /* line 518, css.scss */
+  /* line 513, css.scss */
   .section h1 {
     font-size: 1em;
   }
-  /* line 521, css.scss */
+  /* line 516, css.scss */
   .section p {
     padding: 1% 0;
     font-size: .95em;
