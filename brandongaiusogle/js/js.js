@@ -343,15 +343,15 @@ $(document).ready(function() {
         }
     });
     
-    $("#seven ul a").on("mouseover touchstart", function() {
+    $("#seven ul a").on("mouseover touchstart", function(evt) {
         evt.stopPropagation();
         var rollOver = ( randomSelector + 1 )*(-100) + "%";
         $("#seven").children(".illustration").children("img").css("top", rollOver);
-    }).on("mouseout touchend", function() {
+    }).on("mouseout touchend", function(evt) {
         evt.stopPropagation();
         $("#seven").children(".illustration").children("img").css("top", "0");
         randomSelector = Math.floor( Math.random()*2 );
-    }).on("click touchend", function() {
+    }).on("click touchend", function(evt) {
         evt.stopPropagation();
     }); 
 });
