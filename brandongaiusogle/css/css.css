@@ -376,7 +376,7 @@ content {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 3% 3% 80px;
+  margin: 3% 3% 100px;
   text-align: center;
   max-height: 74vh;
   width: 47%;
@@ -520,41 +520,62 @@ content {
     width: 94%;
   }
 }
-@media screen and (max-height: 500px) {
-  /* line 486, css.scss */
+@media screen and (max-width: 600px) {
+  /* line 487, css.scss */
+  .section .container {
+    width: 94%;
+    margin: 3% 3% 80px;
+  }
+  /* line 491, css.scss */
+  .section h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  /* line 494, css.scss */
+  .section h1:after {
+    content: " - Max-width 600px";
+  }
+  /* line 498, css.scss */
+  .section p {
+    line-height: 1em;
+  }
+}
+@media screen and (max-height: 550px) {
+  /* line 504, css.scss */
   .illustration {
     margin: 50px;
     width: 30vh;
     height: 30vh;
   }
-}
-@media screen and (max-width: 600px) {
-  /* line 494, css.scss */
+
+  /* line 510, css.scss */
   .section .container {
-    width: 94%;
-    margin: 3% 3% 80px;
+    margin: 3% 3% 3%;
   }
-  /* line 498, css.scss */
-  .section h1 {
-    font-size: 1.2em;
-    font-weight: 400;
-  }
-  /* line 502, css.scss */
-  .section p {
-    line-height: 1em;
+  /* line 513, css.scss */
+  .section h1:after {
+    content: " - Max-height 500px";
   }
 }
-@media screen and (max-height: 300px) {
-  /* line 509, css.scss */
+@media screen and (max-height: 350px) {
+  /* line 520, css.scss */
   .section .container {
     width: 94%;
     padding: 1% 3%;
   }
-  /* line 513, css.scss */
+  /* line 524, css.scss */
+  .section .illustration {
+    display: none;
+  }
+  /* line 527, css.scss */
   .section h1 {
     font-size: 1em;
   }
-  /* line 516, css.scss */
+  /* line 529, css.scss */
+  .section h1:after {
+    content: " - Max-height 300px";
+  }
+  /* line 533, css.scss */
   .section p {
     padding: 1% 0;
     font-size: .95em;
