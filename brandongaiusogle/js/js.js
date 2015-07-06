@@ -161,7 +161,7 @@ function scrollPage(oe_wd, oe_d, touchUp) {
     }
 }
 function animateMe() {
-    if (animationCounter < maxFrames+1) {
+    if (animationCounter < maxFrames+1 && scrollTest) {
         // create X position value from random number
         var x_pos = randomSelector*-100;
         // check to see which section is currently displayed
@@ -349,6 +349,7 @@ $(document).ready(function() {
     }).on("mouseout", function() {
         $("#seven").children(".illustration").children("img").css("top", "0");
         randomSelector = Math.floor( Math.random()*2 );
-    });
-        
+    }).on("touchend touchstart", function() {
+        evt.stopPropagation();
+    }); 
 });
