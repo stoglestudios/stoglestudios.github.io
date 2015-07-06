@@ -3,11 +3,18 @@
 */
 //-->Load Sprites for Animation
 $("#one").children(".illustration").children("img").attr("src", "images/HelloWorld_sprite.png");
+$("#one").children(".illustration").children("img").removeClass("temp");
 $("#two").children(".illustration").children("img").attr("src", "images/GoodSign_sprite.png");
+$("#two").children(".illustration").children("img").removeClass("temp");
 $("#three").children(".illustration").children("img").attr("src", "images/History_sprite.png");
+$("#three").children(".illustration").children("img").removeClass("temp");
 $("#four").children(".illustration").children("img").attr("src", "images/Laziness_sprite.png");
+$("#four").children(".illustration").children("img").removeClass("temp");
 $("#five").children(".illustration").children("img").attr("src", "images/RootSTEM_sprite.png");
+$("#five").children(".illustration").children("img").removeClass("temp");
 $("#six").children(".illustration").children("img").attr("src", "images/Leadership_sprite.png");
+$("#six").children(".illustration").children("img").removeClass("temp");
+
 
 //-->Global Vars
 var currentSection = "one";
