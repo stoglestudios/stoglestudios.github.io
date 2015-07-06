@@ -632,6 +632,10 @@ content {
 
   /* line 578, css.scss */
   #seven ul li {
-    width: 60px;
+    width: 10%;
+  }
+  /* line 580, css.scss */
+  #seven ul li a {
+    font-size: .5em;
   }
 }

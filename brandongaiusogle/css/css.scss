@@ -576,7 +576,10 @@ content {
     #seven {
         ul {
             li {
-                width: $a-size*2;
+                width: 10%;
+                a {
+                    font-size: .5em;
+                }
             }
         }
     }
