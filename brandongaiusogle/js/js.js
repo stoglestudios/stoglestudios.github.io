@@ -343,11 +343,11 @@ $(document).ready(function() {
         }
     });
     
-    $("#seven ul a").on("mouseover", function() {
+    $("#seven ul a").on("mouseover touchstart", function() {
         evt.stopPropagation();
         var rollOver = ( randomSelector + 1 )*(-100) + "%";
         $("#seven").children(".illustration").children("img").css("top", rollOver);
-    }).on("mouseout", function() {
+    }).on("mouseout touchend", function() {
         evt.stopPropagation();
         $("#seven").children(".illustration").children("img").css("top", "0");
         randomSelector = Math.floor( Math.random()*2 );
