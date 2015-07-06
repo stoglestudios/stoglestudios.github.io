@@ -578,7 +578,7 @@ content {
   }
   /* line 532, css.scss */
   #seven ul li a {
-    font-size: .7em;
+    font-size: .5em;
   }
 }
 @media screen and (max-height: 350px) {
