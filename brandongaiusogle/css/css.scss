@@ -479,9 +479,6 @@ content {
         h1 {
             font-weight: 400;
             font-size: 1.3em;
-            &:after {
-                content: " - Max-width 800px";
-            }
         }
         p {
             padding: 2% 0;
@@ -508,10 +505,6 @@ content {
         h1 {
             font-size: 1.2em;
             font-weight: 400;
-            
-            &:after {
-                content: " - Max-width 600px";
-            }
         }
         p {
             line-height: 1em;
@@ -531,13 +524,6 @@ content {
         margin: 50px;
         width: 30vh;
         height: 30vh;
-    }
-    .section {
-        .container {
-        }
-        h1:after {
-            content: " - Max-height 500px";
-        }
     }
     #seven {
         ul {
@@ -562,9 +548,6 @@ content {
         }
         h1 {
             font-size: 1em;
-            &:after {
-                content: " - Max-height 300px";
-            }
         }
         p {
             padding: 1% 0;
