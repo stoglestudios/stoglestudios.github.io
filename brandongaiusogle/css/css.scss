@@ -286,7 +286,7 @@ content {
         position: absolute;
         right: 0;
         bottom: 0;
-        margin: 3% 3% 80px;
+        margin: 3% 3% 100px;
         text-align: center;
         max-height: 74vh;
         width: 47%;
@@ -501,6 +501,7 @@ content {
     .section {
         .container {
             width: 94%;
+            margin: 3% 3% 80px;
         }
         h1 {
             font-size: 1.2em;
