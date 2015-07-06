@@ -265,60 +265,10 @@ nav {
     background: url("../images/Leadership_shadow.png") no-repeat;
     background-size: 100% 100%;
 }
-#seven {
-    .illustration {
+#seven .illustration {
     background: url("../images/ThankYou_shadow.png") no-repeat;
     background-size: 100% 100%;
-    }
-    ul {
-        margin: 0 6% 3%;
-        li {
-            margin: 0 3% 3%;
-            a {
-                color: $purple;
-                line-height: $a-size;
-                div {
-                    vertical-align: middle;
-                    width: $a-size;
-                    height: $a-size;
-                    margin: 0 auto;
-                    background-color: $purple;
-                    display: block;
-                    background: url("../images/menu-icons.png") $purple;
-                    background-size: 700% 200%;
-                    border-radius: 5px;
-                }
-                &:hover {
-                    color: $green;
-                    div {
-                        background-color: $green;
-                    }
-                }
-                #demo-reel {
-                    background-position: $a-size*-1 -1*$a-size;
-                }
-                #portfolio-link {
-                    background-position: $a-size*0 -1*$a-size;
-                }
-                #resume-link {
-                    background-position: $a-size*-2 -1*$a-size;
-                }
-                #linked-in {
-                    background-position: $a-size*-4 -1*$a-size;
-                }
-                #email-link {
-                    background-position: $a-size*-6 -1*$a-size;
-                }
-                #phone-link {
-                    background-position: $a-size*-5 -1*$a-size;
-                }
-            }
-        }
-    }
-}
-
-
-    
+}    
 //--------------------------------------
 // PAGE CONTENT
 //--------------------------------------
@@ -468,9 +418,54 @@ content {
         linear-gradient( 135deg, #9966cc, darkslategray, $purple )
     ;
     background-size: cover, 10px 10px, cover, cover;
+    ul {
+        margin: 0 6% 3%;
+        li {
+            width: 30%;
+            margin: 0 0 3%;
+            a {
+                color: $purple;
+                font-size: .9em;
+                overflow: hidden;
+                div {
+                    vertical-align: middle;
+                    width: $a-size;
+                    height: $a-size;
+                    margin: 0 auto 5px;
+                    background-color: $purple;
+                    display: block;
+                    background: url("../images/menu-icons.png") $purple;
+                    background-size: 700% 200%;
+                    border-radius: 5px;
+                }
+                &:hover {
+                    color: $green;
+                    div {
+                        background-color: $green;
+                    }
+                }
+                #demo-reel {
+                    background-position: $a-size*-1 -1*$a-size;
+                }
+                #portfolio-link {
+                    background-position: $a-size*0 -1*$a-size;
+                }
+                #resume-link {
+                    background-position: $a-size*-2 -1*$a-size;
+                }
+                #linked-in {
+                    background-position: $a-size*-4 -1*$a-size;
+                }
+                #email-link {
+                    background-position: $a-size*-6 -1*$a-size;
+                }
+                #phone-link {
+                    background-position: $a-size*-5 -1*$a-size;
+                }
+            }
+        }
+    }
 }
-
-
 //--------------------------------------
 // RESPONSIVE CSS
 //--------------------------------------
@@ -492,6 +487,18 @@ content {
             padding: 2% 0;
         }
     }
+    #seven {
+        ul {
+            margin: 0;
+            li {
+                width: 15%;
+                a {
+                    font-size: .7em;
+                    line-height: 2em;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 600px) {
     .section {
@@ -511,6 +518,14 @@ content {
             line-height: 1em;
         }
     }
+    #seven {
+        ul {
+            li a {
+                height: $a-size;
+                font-size: 0em;
+            }
+        }
+    }
 }
 @media screen and (max-height: 550px) {
     .illustration {
@@ -524,6 +539,17 @@ content {
         }
         h1:after {
             content: " - Max-height 500px";
+        }
+    }
+    #seven {
+        ul {
+            margin: 0;
+            li {
+                width: 15%;
+                a {
+                    font-size: .7em;
+                }
+            }
         }
     }
 }
@@ -545,6 +571,13 @@ content {
         p {
             padding: 1% 0;
             font-size: .95em;
+        }
+    }
+    #seven {
+        ul {
+            li {
+                width: $a-size*2;
+            }
         }
     }
 }

@@ -294,75 +294,18 @@ nav li:nth-child(7) a {
   background-size: 100% 100%;
 }
 
-/* line 269, css.scss */
+/* line 268, css.scss */
 #seven .illustration {
   background: url("../images/ThankYou_shadow.png") no-repeat;
   background-size: 100% 100%;
 }
-/* line 273, css.scss */
-#seven ul {
-  margin: 0 6% 3%;
-}
-/* line 275, css.scss */
-#seven ul li {
-  margin: 0 3% 3%;
-}
-/* line 277, css.scss */
-#seven ul li a {
-  color: #301f3a;
-  line-height: 30px;
-}
-/* line 280, css.scss */
-#seven ul li a div {
-  vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  background-color: #301f3a;
-  display: block;
-  background: url("../images/menu-icons.png") #301f3a;
-  background-size: 700% 200%;
-  border-radius: 5px;
-}
-/* line 291, css.scss */
-#seven ul li a:hover {
-  color: #5c9149;
-}
-/* line 293, css.scss */
-#seven ul li a:hover div {
-  background-color: #5c9149;
-}
-/* line 297, css.scss */
-#seven ul li a #demo-reel {
-  background-position: -30px -30px;
-}
-/* line 300, css.scss */
-#seven ul li a #portfolio-link {
-  background-position: 0px -30px;
-}
-/* line 303, css.scss */
-#seven ul li a #resume-link {
-  background-position: -60px -30px;
-}
-/* line 306, css.scss */
-#seven ul li a #linked-in {
-  background-position: -120px -30px;
-}
-/* line 309, css.scss */
-#seven ul li a #email-link {
-  background-position: -180px -30px;
-}
-/* line 312, css.scss */
-#seven ul li a #phone-link {
-  background-position: -150px -30px;
-}
 
-/* line 325, css.scss */
+/* line 275, css.scss */
 content {
   width: 100%;
 }
 
-/* line 328, css.scss */
+/* line 278, css.scss */
 .section {
   width: 100%;
   height: 100vh;
@@ -370,7 +313,7 @@ content {
   left: 0;
   text-align: right;
 }
-/* line 334, css.scss */
+/* line 284, css.scss */
 .section .container {
   overflow: hidden;
   position: absolute;
@@ -387,211 +330,308 @@ content {
   padding: 3% 3% 1%;
   box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
 }
-/* line 350, css.scss */
+/* line 300, css.scss */
 .section h1 {
   text-align: left;
   font-weight: 300;
   font-size: 1.5em;
   color: #5c9149;
 }
-/* line 356, css.scss */
+/* line 306, css.scss */
 .section p {
   font-size: .9em;
   padding: 3% 0;
   text-align: left;
 }
-/* line 361, css.scss */
+/* line 311, css.scss */
 .section .needs-filler:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
-/* line 364, css.scss */
+/* line 314, css.scss */
 .section .jumpdown {
   background: url("../images/down-arrow.png") no-repeat;
 }
-/* line 367, css.scss */
+/* line 317, css.scss */
 .section .jumpup {
   background: url("../images/up-arrow.png") no-repeat;
 }
-/* line 370, css.scss */
+/* line 320, css.scss */
 .section .jumpdown, .section .jumpup {
   margin-bottom: 3%;
   width: 56.5px;
   height: 20px;
   background-size: 100% 200%;
 }
-/* line 375, css.scss */
+/* line 325, css.scss */
 .section .jumpdown:hover, .section .jumpup:hover {
   background-position: bottom;
 }
 
-/* line 380, css.scss */
+/* line 330, css.scss */
 #one {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 388, css.scss */
+/* line 338, css.scss */
 #two {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/dots.png"), linear-gradient(135deg, #5c9149, #003300);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 395, css.scss */
+/* line 345, css.scss */
 #two .container {
   border-color: #301f3a;
 }
-/* line 397, css.scss */
+/* line 347, css.scss */
 #two .container h1 {
   color: #301f3a;
 }
-/* line 400, css.scss */
+/* line 350, css.scss */
 #two .container .jumpdown {
   background-position: bottom;
 }
-/* line 402, css.scss */
+/* line 352, css.scss */
 #two .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 408, css.scss */
+/* line 358, css.scss */
 #three {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/hex.png"), linear-gradient(135deg, #330033, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 416, css.scss */
+/* line 366, css.scss */
 #four {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/waves2.png"), linear-gradient(135deg, #5c9149, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 423, css.scss */
+/* line 373, css.scss */
 #four .container {
   border-color: #301f3a;
 }
-/* line 425, css.scss */
+/* line 375, css.scss */
 #four .container h1 {
   color: #301f3a;
 }
-/* line 428, css.scss */
+/* line 378, css.scss */
 #four .container .jumpdown {
   background-position: bottom;
 }
-/* line 430, css.scss */
+/* line 380, css.scss */
 #four .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 436, css.scss */
+/* line 386, css.scss */
 #five {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/grid.png"), linear-gradient(135deg, #2f4f4f, #000000, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 444, css.scss */
+/* line 394, css.scss */
 #six {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/diagnal.png"), linear-gradient(135deg, #228b22, #669966, #5c9149);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 451, css.scss */
+/* line 401, css.scss */
 #six .container {
   border-color: #301f3a;
 }
-/* line 453, css.scss */
+/* line 403, css.scss */
 #six .container h1 {
   color: #301f3a;
 }
-/* line 456, css.scss */
+/* line 406, css.scss */
 #six .container .jumpdown {
   background-position: bottom;
 }
-/* line 458, css.scss */
+/* line 408, css.scss */
 #six .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 464, css.scss */
+/* line 414, css.scss */
 #seven {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/v-stripes.png"), linear-gradient(135deg, #9966cc, #2f4f4f, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
+/* line 421, css.scss */
+#seven ul {
+  margin: 0 6% 3%;
+}
+/* line 423, css.scss */
+#seven ul li {
+  width: 30%;
+  margin: 0 0 3%;
+}
+/* line 426, css.scss */
+#seven ul li a {
+  color: #301f3a;
+  font-size: .9em;
+  overflow: hidden;
+}
+/* line 430, css.scss */
+#seven ul li a div {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 5px;
+  background-color: #301f3a;
+  display: block;
+  background: url("../images/menu-icons.png") #301f3a;
+  background-size: 700% 200%;
+  border-radius: 5px;
+}
+/* line 441, css.scss */
+#seven ul li a:hover {
+  color: #5c9149;
+}
+/* line 443, css.scss */
+#seven ul li a:hover div {
+  background-color: #5c9149;
+}
+/* line 447, css.scss */
+#seven ul li a #demo-reel {
+  background-position: -30px -30px;
+}
+/* line 450, css.scss */
+#seven ul li a #portfolio-link {
+  background-position: 0px -30px;
+}
+/* line 453, css.scss */
+#seven ul li a #resume-link {
+  background-position: -60px -30px;
+}
+/* line 456, css.scss */
+#seven ul li a #linked-in {
+  background-position: -120px -30px;
+}
+/* line 459, css.scss */
+#seven ul li a #email-link {
+  background-position: -180px -30px;
+}
+/* line 462, css.scss */
+#seven ul li a #phone-link {
+  background-position: -150px -30px;
+}
 
 @media screen and (max-width: 800px) {
-  /* line 480, css.scss */
+  /* line 475, css.scss */
   .section .container {
     width: 94%;
     padding: 2% 2% 1%;
   }
-  /* line 484, css.scss */
+  /* line 479, css.scss */
   .section h1 {
     font-weight: 400;
     font-size: 1.3em;
   }
-  /* line 487, css.scss */
+  /* line 482, css.scss */
   .section h1:after {
     content: " - Max-width 800px";
   }
-  /* line 491, css.scss */
+  /* line 486, css.scss */
   .section p {
     padding: 2% 0;
   }
+
+  /* line 491, css.scss */
+  #seven ul {
+    margin: 0;
+  }
+  /* line 493, css.scss */
+  #seven ul li {
+    width: 15%;
+  }
+  /* line 495, css.scss */
+  #seven ul li a {
+    font-size: .7em;
+    line-height: 2em;
+  }
 }
 @media screen and (max-width: 600px) {
-  /* line 498, css.scss */
+  /* line 505, css.scss */
   .section .container {
     width: 94%;
     margin: 3% 3% 3%;
   }
-  /* line 502, css.scss */
+  /* line 509, css.scss */
   .section h1 {
     font-size: 1.2em;
     font-weight: 400;
   }
-  /* line 506, css.scss */
+  /* line 513, css.scss */
   .section h1:after {
     content: " - Max-width 600px";
   }
-  /* line 510, css.scss */
+  /* line 517, css.scss */
   .section p {
     line-height: 1em;
   }
+
+  /* line 523, css.scss */
+  #seven ul li a {
+    height: 30px;
+    font-size: 0em;
+  }
 }
 @media screen and (max-height: 550px) {
-  /* line 516, css.scss */
+  /* line 531, css.scss */
   .illustration {
     margin: 50px;
     width: 30vh;
     height: 30vh;
   }
 
-  /* line 522, css.scss */
+  /* line 537, css.scss */
   .section .container {
     margin: 3% 3% 3%;
   }
-  /* line 525, css.scss */
+  /* line 540, css.scss */
   .section h1:after {
     content: " - Max-height 500px";
   }
+
+  /* line 545, css.scss */
+  #seven ul {
+    margin: 0;
+  }
+  /* line 547, css.scss */
+  #seven ul li {
+    width: 15%;
+  }
+  /* line 549, css.scss */
+  #seven ul li a {
+    font-size: .7em;
+  }
 }
 @media screen and (max-height: 350px) {
-  /* line 532, css.scss */
+  /* line 558, css.scss */
   .section .container {
     width: 94%;
     padding: 1% 3%;
   }
-  /* line 536, css.scss */
+  /* line 562, css.scss */
   .section .illustration {
     display: none;
   }
-  /* line 539, css.scss */
+  /* line 565, css.scss */
   .section h1 {
     font-size: 1em;
   }
-  /* line 541, css.scss */
+  /* line 567, css.scss */
   .section h1:after {
     content: " - Max-height 300px";
   }
-  /* line 545, css.scss */
+  /* line 571, css.scss */
   .section p {
     padding: 1% 0;
     font-size: .95em;
+  }
+
+  /* line 578, css.scss */
+  #seven ul li {
+    width: 60px;
   }
 }
