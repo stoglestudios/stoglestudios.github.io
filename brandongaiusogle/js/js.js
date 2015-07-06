@@ -1,6 +1,14 @@
 /*
     Authored by Brandon Gaius Ogle
 */
+//-->Load Sprites for Animation
+$("#one").children(".illustration").children("img").attr("src", "images/HelloWorld_sprite.png");
+$("#two").children(".illustration").children("img").attr("src", "images/GoodSign_sprite.png");
+$("#three").children(".illustration").children("img").attr("src", "images/History_sprite.png");
+$("#four").children(".illustration").children("img").attr("src", "images/Laziness_sprite.png");
+$("#five").children(".illustration").children("img").attr("src", "images/RootSTEM_sprite.png");
+$("#six").children(".illustration").children("img").attr("src", "images/Leadership_sprite.png");
+
 //-->Global Vars
 var currentSection = "one";
 var sections = ["#one", "#two", "#three", "#four", "#five", "#six", "#seven"];

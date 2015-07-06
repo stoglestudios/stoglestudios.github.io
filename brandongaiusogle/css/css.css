@@ -618,34 +618,3 @@ content {
     font-size: .5em;
   }
 }
-@media screen and (min-width: 750px) {
-  /* line 573, css.scss */
-  #one .illustration img {
-    content: url("../images/HelloWorld_sprite.png");
-  }
-
-  /* line 576, css.scss */
-  #two .illustration img {
-    content: url("../images/GoodSign_sprite.png");
-  }
-
-  /* line 579, css.scss */
-  #tree .illustration img {
-    content: url("../images/History_sprite.png");
-  }
-
-  /* line 582, css.scss */
-  #four .illustration img {
-    content: url("../images/Laziness_sprite.png");
-  }
-
-  /* line 585, css.scss */
-  #five .illustration img {
-    content: url("../images/RootSTEM_sprite.png");
-  }
-
-  /* line 588, css.scss */
-  #six .illustration img {
-    content: url("../images/Leadership_sprite.png");
-  }
-}
