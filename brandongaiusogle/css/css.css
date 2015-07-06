@@ -554,87 +554,86 @@ content {
   /* line 505, css.scss */
   .section .container {
     width: 94%;
-    margin: 3% 3% 3%;
   }
-  /* line 509, css.scss */
+  /* line 508, css.scss */
   .section h1 {
     font-size: 1.2em;
     font-weight: 400;
   }
-  /* line 513, css.scss */
+  /* line 512, css.scss */
   .section h1:after {
     content: " - Max-width 600px";
   }
-  /* line 517, css.scss */
+  /* line 516, css.scss */
   .section p {
     line-height: 1em;
   }
 
-  /* line 523, css.scss */
+  /* line 522, css.scss */
   #seven ul li a {
     height: 30px;
     font-size: 0em;
   }
 }
 @media screen and (max-height: 550px) {
-  /* line 531, css.scss */
+  /* line 530, css.scss */
   .illustration {
     margin: 50px;
     width: 30vh;
     height: 30vh;
   }
 
-  /* line 537, css.scss */
+  /* line 536, css.scss */
   .section .container {
-    margin: 3% 3% 3%;
+    margin: 3% 3% 50px;
   }
-  /* line 540, css.scss */
+  /* line 539, css.scss */
   .section h1:after {
     content: " - Max-height 500px";
   }
 
-  /* line 545, css.scss */
+  /* line 544, css.scss */
   #seven ul {
     margin: 0;
   }
-  /* line 547, css.scss */
+  /* line 546, css.scss */
   #seven ul li {
     width: 15%;
   }
-  /* line 549, css.scss */
+  /* line 548, css.scss */
   #seven ul li a {
     font-size: .7em;
   }
 }
 @media screen and (max-height: 350px) {
-  /* line 558, css.scss */
+  /* line 557, css.scss */
   .section .container {
     width: 94%;
     padding: 1% 3%;
   }
-  /* line 562, css.scss */
+  /* line 561, css.scss */
   .section .illustration {
     display: none;
   }
-  /* line 565, css.scss */
+  /* line 564, css.scss */
   .section h1 {
     font-size: 1em;
   }
-  /* line 567, css.scss */
+  /* line 566, css.scss */
   .section h1:after {
     content: " - Max-height 300px";
   }
-  /* line 571, css.scss */
+  /* line 570, css.scss */
   .section p {
     padding: 1% 0;
     font-size: .95em;
   }
 
-  /* line 578, css.scss */
+  /* line 577, css.scss */
   #seven ul li {
     width: 10%;
   }
-  /* line 580, css.scss */
+  /* line 579, css.scss */
   #seven ul li a {
     font-size: .5em;
   }
