@@ -566,3 +566,26 @@ content {
         }
     }
 }
+//--------------------------------------
+// LOADING LARGER ANIMATION SPRITES
+//--------------------------------------
+@media screen and (min-width: 750px) {
+    #one .illustration img {
+        content: url("../images/Leadership_sprite.png");
+    }
+    #two .illustration img {
+        content: url("../images/Leadership_sprite.png");
+    }
+    #tree .illustration img {
+        content: url("../images/Leadership_sprite.png");
+    }
+    #four .illustration img {
+        content: url("../images/Leadership_sprite.png");
+    }
+    #five .illustration img {
+        content: url("../images/Leadership_sprite.png");
+    }
+    #six .illustration img {
+        content: url("../images/Leadership_sprite.png");
+    }
+}
