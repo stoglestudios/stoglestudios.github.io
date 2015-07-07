@@ -157,8 +157,12 @@ nav ul li:first-child {
   background-color: black;
   box-shadow: 0 0 10px black;
 }
+/* line 166, css.scss */
+#page .filler:after {
+  content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
+}
 
-/* line 167, css.scss */
+/* line 170, css.scss */
 header {
   display: inline-block;
   width: 100%;
@@ -170,19 +174,19 @@ header {
   background-position: center 5px;
   background-size: 282px 250px;
 }
-/* line 177, css.scss */
+/* line 180, css.scss */
 header img {
   width: 80%;
   max-width: 437px;
 }
-/* line 181, css.scss */
+/* line 184, css.scss */
 header h2 {
   font-size: 1.7em;
   padding: 25px 0;
   text-shadow: 0 0 10px black;
 }
 
-/* line 188, css.scss */
+/* line 191, css.scss */
 content div {
   display: inline-block;
   width: 94%;
@@ -192,55 +196,52 @@ content div {
   padding: 25px;
   text-align: left;
 }
-/* line 196, css.scss */
+/* line 199, css.scss */
 content div:last-child {
   margin-bottom: 25px;
 }
-/* line 199, css.scss */
-content div img {
+/* line 202, css.scss */
+content div .standard-img {
   float: left;
   border: solid 2px darkred;
-  margin-right: 25px;
-  padding: 10px;
-}
-/* line 205, css.scss */
-content div .standard-img {
   height: 200px;
+  padding: 10px;
+  margin-right: 25px;
 }
-/* line 208, css.scss */
+/* line 209, css.scss */
 content div h1 {
   display: inline-block;
   padding-top: 25px;
   color: darkred;
   font-size: 1.5em;
 }
-/* line 214, css.scss */
+/* line 215, css.scss */
 content div p {
   color: #600;
   font-size: 1.4em;
   margin-top: 25px;
 }
 
-/* line 221, css.scss */
+/* line 222, css.scss */
 #premise div {
   padding: 0;
 }
-/* line 223, css.scss */
+/* line 224, css.scss */
 #premise div p {
   margin: 25px auto 0;
   width: 50%;
   padding: 0 3% 25px;
 }
-/* line 227, css.scss */
+/* line 228, css.scss */
 #premise div p:nth-child(even) {
   float: left;
   clear: both;
 }
-/* line 231, css.scss */
+/* line 232, css.scss */
 #premise div p:nth-child(odd) {
   float: right;
 }
-/* line 235, css.scss */
+/* line 236, css.scss */
 #premise div div {
   margin: 0;
   width: 100%;
@@ -248,177 +249,214 @@ content div p {
   background: url("../images/hecateSketch.png") no-repeat top center;
   background-size: 100%;
 }
-/* line 242, css.scss */
+/* line 243, css.scss */
 #premise div h1 {
   padding: 0 3%;
   display: block;
   margin: auto;
 }
 
-/* line 249, css.scss */
-#characters div p:after {
-  content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
+/* line 251, css.scss */
+#cosmology div .world-img {
+  float: left;
+  background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
+  background-size: 400%;
+  height: 200px;
+  margin-right: 25px;
+  border-radius: 10%;
 }
-/* line 253, css.scss */
-#characters div:nth-child(1) img {
-  content: url("../images/kingsley.jpg");
+/* line 259, css.scss */
+#cosmology div a {
+  font-style: italic;
 }
-/* line 256, css.scss */
-#characters div:nth-child(1) h1:after {
-  content: "Special Agent Kingsley";
+/* line 262, css.scss */
+#cosmology div .periods {
+  color: gray;
 }
-/* line 261, css.scss */
-#characters div:nth-child(2) img {
-  content: url("../images/caster.jpg");
+/* line 265, css.scss */
+#cosmology div .titans {
+  color: darkblue;
 }
-/* line 264, css.scss */
-#characters div:nth-child(2) h1:after {
-  content: "Kastir (aka The Trickster)";
+/* line 268, css.scss */
+#cosmology div .gods {
+  color: blueviolet;
 }
-/* line 269, css.scss */
-#characters div:nth-child(3) img {
-  content: url("../images/dan.jpg");
+/* line 271, css.scss */
+#cosmology div .angels {
+  color: darkgoldenrod;
 }
-/* line 272, css.scss */
-#characters div:nth-child(3) h1:after {
-  content: "Dan Englemann (aka The Beast)";
+/* line 274, css.scss */
+#cosmology div .demons {
+  color: darkred;
 }
 /* line 277, css.scss */
-#characters div:nth-child(4) img {
-  content: url("../images/claire.jpg");
+#cosmology div .elementals {
+  color: darkgreen;
 }
 /* line 280, css.scss */
-#characters div:nth-child(4) h1:after {
-  content: "Claire Jensen-Englemann";
+#cosmology div .backbutton {
+  float: right;
+  font-style: normal;
+  font-size: 1.2em;
+  color: #cf2212;
 }
 /* line 285, css.scss */
-#characters div:nth-child(5) img {
-  content: url("../images/hecate.jpg");
+#cosmology div .backbutton:hover {
+  color: #ff9000;
 }
-/* line 288, css.scss */
-#characters div:nth-child(5) h1:after {
-  content: "Hecate";
-}
-/* line 293, css.scss */
-#characters div:nth-child(6) img {
-  content: url("../images/stewart.jpg");
-}
-/* line 296, css.scss */
-#characters div:nth-child(6) h1:after {
-  content: "Professor Thomas Stewart";
+/* line 290, css.scss */
+#cosmology .viewdef {
+  position: fixed;
+  margin: 0 auto;
+  top: 10%;
+  width: 94%;
+  max-width: 1000px;
+  background-color: red;
+  box-shadow: 0 5px 20px black;
 }
 
 /* line 302, css.scss */
-#cosmology div h1:after {
-  content: "Cosmology";
-}
-
-/* line 306, css.scss */
 #cosmological-map {
   background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
   background-size: 100% 100%;
   height: 100vh;
 }
-/* line 310, css.scss */
+/* line 306, css.scss */
 #cosmological-map .realm {
   position: absolute;
   background: none;
   text-align: left;
+  border-radius: 0;
+  text-align: center;
+  padding: 0;
 }
-/* line 315, css.scss */
+/* line 314, css.scss */
 #cosmological-map .realm span {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 320, css.scss */
+/* line 319, css.scss */
 #cosmological-map .realm img {
   vertical-align: middle;
   line-height: 100%;
+  width: 90%;
   border: none;
   margin: 0;
 }
-/* line 327, css.scss */
-#cosmological-map .other {
-  width: 20%;
-  height: 20%;
+/* line 325, css.scss */
+#cosmological-map .realm img:hover {
+  width: 100%;
+  cursor: pointer;
 }
 /* line 331, css.scss */
+#cosmological-map .other {
+  width: 30%;
+  height: 20vh;
+}
+/* line 335, css.scss */
+#cosmological-map #ouranos {
+  top: -5%;
+  left: 32%;
+}
+/* line 339, css.scss */
+#cosmological-map #hyperion {
+  top: 20%;
+  left: 12%;
+}
+/* line 343, css.scss */
+#cosmological-map #alfheim {
+  top: 12%;
+  left: 35%;
+}
+/* line 347, css.scss */
+#cosmological-map #niflheim {
+  top: 18%;
+  left: 58%;
+}
+/* line 351, css.scss */
 #cosmological-map #earth {
   width: 34%;
-  height: 34%;
+  height: 24vh;
   top: 33%;
   left: 33%;
-  padding: 0;
 }
-/* line 337, css.scss */
-#cosmological-map #earth img {
-  content: url("../images/earth.png");
-  width: 100%;
+/* line 357, css.scss */
+#cosmological-map #oceanus {
+  top: 50%;
+  left: 15%;
 }
-/* line 341, css.scss */
-#cosmological-map #earth:hover {
-  width: 40%;
-  height: 40%;
-  top: 30%;
-  left: 30%;
+/* line 361, css.scss */
+#cosmological-map #khthon {
+  top: 55%;
+  left: 38%;
+}
+/* line 365, css.scss */
+#cosmological-map #vulcan {
+  top: 50%;
+  left: 60%;
+}
+/* line 369, css.scss */
+#cosmological-map #underworld {
+  top: 73%;
+  left: 37%;
 }
 
-/* line 349, css.scss */
+/* line 374, css.scss */
 #author div {
   min-height: 500px;
 }
-/* line 351, css.scss */
+/* line 376, css.scss */
 #author div img {
   content: url("../images/brandon.jpg");
 }
-/* line 354, css.scss */
+/* line 379, css.scss */
 #author div h1:after {
   content: "Brandon Gaius Ogle";
 }
 
-/* line 358, css.scss */
+/* line 383, css.scss */
 #contact div {
   min-height: 500px;
 }
-/* line 360, css.scss */
+/* line 385, css.scss */
 #contact div img {
   content: url("../images/proposal.jpg");
 }
-/* line 363, css.scss */
+/* line 388, css.scss */
 #contact div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 367, css.scss */
+/* line 392, css.scss */
 #contact div a:hover {
   text-decoration: underline;
 }
 
-/* line 372, css.scss */
+/* line 397, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 375, css.scss */
+/* line 400, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 378, css.scss */
+/* line 403, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 380, css.scss */
+/* line 405, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 384, css.scss */
+/* line 409, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 387, css.scss */
+/* line 412, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -429,122 +467,123 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 397, css.scss */
+/* line 422, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 399, css.scss */
+/* line 424, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 403, css.scss */
+/* line 428, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 405, css.scss */
+/* line 430, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 409, css.scss */
+/* line 434, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 411, css.scss */
+/* line 436, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 415, css.scss */
+/* line 440, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 417, css.scss */
+/* line 442, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 421, css.scss */
+/* line 446, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 423, css.scss */
+/* line 448, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 431, css.scss */
+  /* line 461, css.scss */
   #intro div h1 {
     margin: 16vh 0 0;
     font-size: 1em;
     padding: 0;
     text-align: center;
   }
-  /* line 437, css.scss */
+  /* line 467, css.scss */
   #intro div img {
     width: 150%;
     margin-left: -25%;
   }
-  /* line 441, css.scss */
+  /* line 471, css.scss */
   #intro .skip {
     font-size: 1em;
   }
 
-  /* line 445, css.scss */
+  /* line 475, css.scss */
   header {
     padding-top: 10px;
     background-size: 242.52px 215px;
   }
-  /* line 448, css.scss */
+  /* line 478, css.scss */
   header h2 {
     font-size: 1.4em;
     padding: 10px 0;
   }
 
-  /* line 453, css.scss */
+  /* line 483, css.scss */
   nav ul a li {
     width: 33.33333%;
   }
-  /* line 455, css.scss */
+  /* line 485, css.scss */
   nav ul a li:last-child {
     border-right: solid 1px #ff9000;
   }
 
-  /* line 459, css.scss */
+  /* line 489, css.scss */
   content div {
     text-align: center;
   }
-  /* line 461, css.scss */
-  content div img {
-    margin: 0;
-    float: none;
-  }
-  /* line 465, css.scss */
+  /* line 491, css.scss */
   content div h1 {
     display: block;
   }
-  /* line 468, css.scss */
+  /* line 494, css.scss */
   content div p {
     text-align: left;
   }
 
-  /* line 472, css.scss */
+  /* line 499, css.scss */
+  #characters div .standard-img, #characters div .world-img, #cosmology div .standard-img, #cosmology div .world-img {
+    margin: 0;
+    float: none;
+  }
+
+  /* line 504, css.scss */
   #premise div p {
     width: 100%;
   }
-  /* line 474, css.scss */
+  /* line 506, css.scss */
   #premise div p:nth-child(even) {
     float: none;
     padding-bottom: 0;
   }
-  /* line 478, css.scss */
+  /* line 510, css.scss */
   #premise div p:nth-child(odd) {
     float: none;
   }
 
-  /* line 482, css.scss */
+  /* line 514, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 484, css.scss */
+  /* line 516, css.scss */
   footer p:last-child {
     clear: both;
     padding-top: 10px;
@@ -552,36 +591,36 @@ footer p .em:hover {
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 493, css.scss */
+  /* line 525, css.scss */
   header {
     padding-top: 0;
     background-size: 191.76px 170px;
   }
-  /* line 496, css.scss */
+  /* line 528, css.scss */
   header h2 {
     font-size: 1em;
     padding: 5px 0;
   }
 
-  /* line 501, css.scss */
+  /* line 533, css.scss */
   nav ul li {
     width: 50%;
   }
-  /* line 503, css.scss */
+  /* line 535, css.scss */
   nav ul li:nth-child(odd) {
     border: none;
   }
-  /* line 506, css.scss */
+  /* line 538, css.scss */
   nav ul li:last-child {
     border-left: solid 1px #ff9000;
     border-right: solid 1px #ff9000;
   }
 
-  /* line 511, css.scss */
+  /* line 543, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 513, css.scss */
+  /* line 545, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;

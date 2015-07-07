@@ -71,6 +71,10 @@ $(document).ready(function(){
     //Build assets
     $('#intro').css("display", "inline-block");
     $('#intro').append($skip);
+    $worlds = $("#cosmology a");
+    
+    $(".definitions").addClass("viewdef");
+    $(".definitions").hide();
     
     //Hide/show appropriate sections
     $('#page').hide();
@@ -102,5 +106,15 @@ $(document).ready(function(){
         $(this).parent().siblings().removeClass("selected");
         $("content").hide();
         $(pageClicked).show();
+    });
+    $worlds.on("click", function(evt) {
+        $("#cosmological-map").css("opacity", ".5");
+        var idme = $(this).attr("href");
+        $(idme).show();
+        $(idme).siblings(".definitions").hide();
+    });
+    $(".backbutton").on("click", function(evt) {
+        $("#cosmological-map").css("opacity", "1");
+        //$(".definitions").hide().removeClass("viewdef");
     });
 });

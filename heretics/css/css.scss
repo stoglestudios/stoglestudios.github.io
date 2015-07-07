@@ -163,6 +163,9 @@ nav ul li {
     background-image: linear-gradient(black, darkred);
     background-color: black;
     box-shadow: 0 0 10px black;
+    .filler:after {
+        content: $lorem;
+    }
 }
     header {
         display: inline-block;
@@ -196,14 +199,12 @@ nav ul li {
         &:last-child {
             margin-bottom: $gutter;
         }
-        img {
+        .standard-img {
             float: left;
             border: solid 2px darkred;
-            margin-right: $gutter;
-            padding: $bleed;
-        }
-        .standard-img {
             height: 200px;
+            padding: $bleed;
+            margin-right: $gutter;
         }
         h1 {
             display: inline-block;
@@ -245,64 +246,59 @@ nav ul li {
             margin: auto;
         }
     }
-    #characters div {
-        p:after {
-            content: $lorem;
-        }
-        &:nth-child(1) {
-            img {
-                content: url("../images/kingsley.jpg");
+    #cosmology {
+        div {
+            .world-img {
+                float: left;
+                background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
+                background-size: 400%;
+                height: 200px;
+                margin-right: $gutter;
+                border-radius: 10%;
             }
-            h1:after {
-                content: "Special Agent Kingsley";
+            a {
+                font-style: italic;
             }
-        }
-        &:nth-child(2) {
-            img {
-                content: url("../images/caster.jpg");
+            .periods {
+                color: gray;
             }
-            h1:after {
-                content: "Kastir (aka The Trickster)";
+            .titans {
+                color: darkblue;
             }
-        }
-        &:nth-child(3) {
-            img {
-                content: url("../images/dan.jpg");
+            .gods {
+                color: blueviolet;
             }
-            h1:after {
-                content: "Dan Englemann (aka The Beast)";
+            .angels {
+                color: darkgoldenrod;
             }
-        } 
-        &:nth-child(4) {
-            img {
-                content: url("../images/claire.jpg");
+            .demons {
+                color: darkred;
             }
-            h1:after {
-                content: "Claire Jensen-Englemann";
+            .elementals {
+                color: darkgreen;
             }
-        }
-        &:nth-child(5) {
-            img {
-                content: url("../images/hecate.jpg");
-            }
-            h1:after {
-                content: "Hecate";
+            .backbutton {
+                float: right;
+                font-style: normal;
+                font-size: 1.2em;
+                color: $red;
+                &:hover {
+                    color: $orange;
+                }
             }
         }
-        &:nth-child(6) {
-            img {
-                content: url("../images/stewart.jpg");
-            }
-            h1:after {
-                content: "Professor Thomas Stewart";
-            }
-        }
-    }
-    #cosmology div {
-        h1:after {
-            content: "Cosmology";
+        .viewdef {
+            position: fixed;
+            margin: 0 auto;
+            //left: 10%;
+            top: 10%;
+            width: 94%;
+            max-width: $col-width;
+            background-color: red;
+            box-shadow: 0 5px 20px black;
         }
     }
+
         #cosmological-map {
             background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
             background-size: 100% 100%;
@@ -311,6 +307,9 @@ nav ul li {
                 position: absolute;
                 background: none;
                 text-align: left;
+                border-radius: 0;
+                text-align: center;
+                padding: 0;
                 //border-radius: 50%;
                 span {
                     display: inline-block;
@@ -320,30 +319,56 @@ nav ul li {
                 img {
                     vertical-align: middle;
                     line-height: 100%;
+                    width: 90%;
                     border: none;
                     margin: 0;
+                    &:hover {
+                        width: 100%;
+                        cursor: pointer;
+                    }
                 }
             }
             .other {
-                width: 20%;
-                height: 20%;
+                width: 30%;
+                height: 20vh;
+            }
+            #ouranos {
+                top: -5%;
+                left: 32%;
+            }
+            #hyperion {
+                top: 20%;
+                left: 12%;
+            }
+            #alfheim {
+                top: 12%;
+                left: 35%;
+            }
+            #niflheim {
+                top: 18%;
+                left: 58%;
             }
             #earth {
                 width: 34%;
-                height: 34%;
+                height: 24vh;
                 top: 33%;
                 left: 33%;
-                padding: 0;
-                img {
-                    content: url("../images/earth.png");
-                    width: 100%;
-                }
-                 &:hover {
-                     width: 40%;
-                     height: 40%;
-                     top: 30%;
-                     left: 30%;
-                }
+            }
+            #oceanus {
+                top: 50%;
+                left: 15%;
+            }
+            #khthon {
+                top: 55%;
+                left: 38%;
+            }
+            #vulcan {
+                top: 50%;
+                left: 60%;
+            }
+            #underworld {
+                top: 73%;
+                left: 37%;
             }
         }
     #author div {
@@ -426,6 +451,11 @@ footer {
         }
     }
 }
+
+//--------------------------------------
+// RESPONSIVE CSS
+//--------------------------------------
+
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     #intro { 
         div h1 {
@@ -458,15 +488,17 @@ footer {
     }
     content div {
         text-align: center;
-        img {
-            margin: 0;
-            float: none;
-        }
         h1 {
             display: block;
         }
         p {
             text-align: left;
+        }
+    }
+    #characters div, #cosmology div {
+        .standard-img, .world-img {
+            margin: 0;
+            float: none;
         }
     }
     #premise div p {
