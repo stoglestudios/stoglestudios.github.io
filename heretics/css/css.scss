@@ -537,30 +537,6 @@ footer {
         height: 100px;
     }
 }
-@media screen and (max-height: 350px) {
-    #cosmological-map {
-        .other img {
-            //background-color: rgba(0,0,0,.5);
-            max-width: 100px;
-            &:hover {
-                max-width: 120px;
-            }
-        }
-        #earth img {
-            width: 32%;
-            &:hover {
-                width: 37%;
-            }
-        }
-    }
-    #cosmology div .world-img {
-        float: left;
-    }
-    content div .standard-img {
-        float: left;
-    }
-}
-
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     #intro { 
         div h1 {
@@ -659,7 +635,40 @@ footer {
         }
     }
 }
-
+@media screen and (max-height: 350px) {
+    #cosmological-map {
+        .other img {
+            //background-color: rgba(0,0,0,.5);
+            max-width: 100px;
+            &:hover {
+                max-width: 120px;
+            }
+        }
+        #earth img {
+            width: 32%;
+            &:hover {
+                width: 37%;
+            }
+        }
+    }
+    #cosmology div {
+        .world-img {
+            float: left;
+            margin-right: $bleed;
+            margin-bottom: $bleed;
+        }
+        h1 {
+            float: right;
+        }
+        h3 {
+            clear: right;
+            float: right;
+        }
+        p {
+            clear: both;
+        }
+    }
+}
 
 
 
