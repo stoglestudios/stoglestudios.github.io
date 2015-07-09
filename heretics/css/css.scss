@@ -260,6 +260,9 @@ nav ul li {
             }
             a {
                 font-style: italic;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             .periods {
                 color: gray;
@@ -279,6 +282,9 @@ nav ul li {
             .elementals {
                 color: darkgreen;
             }
+            .realms {
+                color: saddlebrown;
+            }
             .backbutton {
                 float: right;
                 font-style: normal;
@@ -286,6 +292,7 @@ nav ul li {
                 color: $red;
                 &:hover {
                     color: $orange;
+                    text-decoration: none;
                     div {
                         background-color: $orange;
                     }
@@ -310,7 +317,6 @@ nav ul li {
         .viewdef {
             position: fixed;
             margin: 0 auto;
-            //left: 10%;
             top: 10%;
             width: 94%;
             max-width: $col-width;
@@ -481,12 +487,14 @@ footer {
 @media screen and (max-height: 750px) {
     #cosmological-map {
         .other img {
+            margin-top: -12%;
             width: 70%;
             &:hover {
                 width: 75%;
             }
         }
         #earth img {
+            margin-top: -12%;
             width: 72%;
             &:hover {
                 width: 77%;
@@ -494,7 +502,7 @@ footer {
         }
     }
 }
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 450px) {
     #cosmological-map {
         .other img {
             width: 50%;
@@ -509,8 +517,14 @@ footer {
             }
         }
     }
+    #cosmology div .world-img {
+        height: 150px;
+    }
+    content div .standard-img {
+        height: 150px;
+    }
 }
-@media screen and (max-height: 350px) {
+@media screen and (max-height: 250px) {
     #cosmological-map {
         .other img {
             width: 30%;
@@ -524,6 +538,12 @@ footer {
                 width: 37%;
             }
         }
+    }
+    #cosmology div .world-img {
+        height: 100px;
+    }
+    content div .standard-img {
+        height: 100px;
     }
 }
 
@@ -570,6 +590,11 @@ footer {
         .standard-img, .world-img {
             margin: 0;
             float: none;
+        }
+        .backbutton {
+            float: none;
+            display: block;
+            margin-bottom: $gutter;
         }
     }
     #premise div p {
