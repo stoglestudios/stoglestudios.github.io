@@ -507,6 +507,12 @@ footer {
             }
         }
     }
+    #cosmology div .world-img {
+        height: 150px;
+    }
+    content div .standard-img {
+        height: 150px;
+    }
 }
 @media screen and (max-height: 450px) {
     #cosmological-map {
@@ -525,10 +531,10 @@ footer {
         }
     }
     #cosmology div .world-img {
-        height: 150px;
+        height: 100px;
     }
     content div .standard-img {
-        height: 150px;
+        height: 100px;
     }
 }
 @media screen and (max-height: 350px) {
@@ -548,10 +554,10 @@ footer {
         }
     }
     #cosmology div .world-img {
-        height: 100px;
+        float: left;
     }
     content div .standard-img {
-        height: 100px;
+        float: left;
     }
 }
 
