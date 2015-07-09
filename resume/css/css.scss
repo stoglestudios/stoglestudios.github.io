@@ -60,6 +60,12 @@ h1 {
     font-size: 2em;
     line-height: 30px;
     margin-bottom: $bleed;
+    a {
+        color: white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 h2 {
     font-size: 1.2em;
