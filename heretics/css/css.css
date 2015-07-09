@@ -658,12 +658,12 @@ footer p .em:hover {
   }
 
   /* line 580, css.scss */
-  #characters div .standard-img, #characters div .world-img, #cosmology div .standard-img, #cosmology div .world-img {
+  #characters div .standard-img, #characters div .world-img, #cosmology div .standard-img, #cosmology div .world-img, #author div .standard-img, #author div .world-img {
     margin: 0;
     float: none;
   }
   /* line 584, css.scss */
-  #characters div .backbutton, #cosmology div .backbutton {
+  #characters div .backbutton, #cosmology div .backbutton, #author div .backbutton {
     float: none;
     display: block;
     margin-bottom: 25px;
