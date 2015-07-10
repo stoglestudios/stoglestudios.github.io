@@ -70,10 +70,13 @@ h1 {
 }
 h2 {
     font-size: 1.2em;
-    font-weight: 600;
-    color: $green;
     text-align: left;
-    margin-bottom: $bleed;
+    color: $purple;
+    font-weight: 400;
+    padding: 2% 2% 0;
+    margin-top: 3%;
+    border-top: solid white 1px;
+    clear: both;
 }
 body {
     position: relative;
@@ -83,8 +86,8 @@ body {
 }
 //-------------------
 // PAGE
-//-------------------
-#demoreel {
+//------------------- 
+#portfolio {
     max-width: $pg-width;
     width: 94%;
     margin: 0 auto;
@@ -104,7 +107,7 @@ header {
         display: inline-block;
         padding-bottom: $bleed;
         font-size: .9em;
-        a {
+        a { 
             color: white;
             overflow: hidden;
             margin: 0 $bleed;
@@ -129,10 +132,10 @@ header {
                     background-position: 50% 0%;
                 }
             }
-            #portfolio {
-                background-position: 0% 100%;
+            #demoreel {
+                background-position: 75% 100%;
                 &:hover {
-                    background-position: 0% 0%;
+                    background-position: 75% 0%;
                 }
             }
             #resume {
@@ -172,10 +175,10 @@ header {
         background-size: 700px;
     }
     #container {
-        width: 94%;
+        width: 96%;
         text-align: center;
         padding: 1% 1% 5%;
-        margin: 3%;
+        margin: 2%;
         background: linear-gradient($accent-color, $green);
         border-radius: $bleed;
         box-shadow: 0 2px 8px black;
@@ -185,68 +188,86 @@ header {
             font-weight: 300;
             text-align: left;
         }
+        h2 {
+            
+        }
         p {
-            clear: both;
             text-align: left;
+            padding: 2%;
         }
-        #chapters {
+        .long-description, .short-description {
             display: inline-block;
-            float: right;
-            width: 20%;
-            li {
-                text-align: center;
-                color: white;
-                background-color: $purple;
-                border-radius: $corners;
-                height:  $movie-height/4 - 6px;
-                margin-bottom: 9px;
-                padding-top: $movie-height/16;
-                p {
-                    text-align: center;
-                }
-                &:hover {
-                    cursor: pointer;
-                    background-color: $green;
-                }
+            padding: 2%;
+            margin: 1%;
+            background-color: rgba(255,255,255,.5);
+            p {
+                padding: 0 0 0;
             }
-            .current {
-                background-color: $dark-color;
+            h3 {
+                color: $green;
+                font-size: 1em;
+                margin: 2% 0;
+            }
+            img {
+                width: 100px;
+                margin: 0 2% 1% 0;
+                box-shadow: 0 1px 1px 2px $green;
             }
         }
-        .start {
-            display: inline-block;
-            clear: both;
-            margin-top: 40px;
-        }
-        .description {
-            border-left: solid $purple 1px;
-            border-right: solid $purple 1px;
-            padding: 5px 3%;
-            color: white;
-            li {
-                margin: 5px 3%;
-                text-align: left;
-                b {
-                    display: inline-block;
-                    height: 100%;
-                }
-            }
-            a {
-                font-style: italic;
-                color: $purple;
-                &:hover {
+        a {
+            &:hover {
+                box-shadow: 0 0 0 2px $green;
+                background-color: rgba(255,255,255,.7);
+                h3 {
                     text-decoration: underline;
                 }
             }
         }
-    }
-        #movie {
-            display: inline-block;
-            width: $movie-width;
-            height: $movie-height;
-            float: left;
-            box-shadow: 0 2px 8px rgba(0,0,0,.5);
+        .long-description {
+            width: 96%;
+            text-align: left;
+            img {
+                float: left;
+                vertical-align: top;
+            }
+            img.unsubscribe {
+                width: 100%;
+                margin-top: 2%;
+            }
+            p { 
+                margin-top: 2%;
+            }
         }
+        .short-description {
+            color: $green;
+            width: 30%;
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 6px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        .more, .less {
+            display: none;
+            cursor: pointer;
+            float: right;
+            color: $green;
+            &:hover {
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
+        iframe { /*500 x 325 100 x 65 200 130*/
+            display: block;
+            margin: 0 auto 1%;
+            width: 300px;
+            height: 195px;
+            box-shadow: 0 1px 1px 2px $green;
+        }
+    }
 
     footer {
         text-align: right;
@@ -305,67 +326,16 @@ header {
             }
 
     }
-@media (max-width: 960px) {
-    #movie {
-        width: $movie-width*.86;
-        height: $movie-height*.86;
-    }
-    #container #chapters li {
-        height:  ($movie-height*.86)/4 - 6px;
-        margin-bottom: 9px;
-        padding-top: $movie-height*.86/16;
-        line-height: $movie-height*.86/16;
-        font-size: $movie-height*.86/20;
-    }
-
-}
-@media (max-width: 840px) {
-    #movie {
-        float: none;
-        display: block;
-        margin: 0 auto;
-        width: $movie-width*.75;
-        height: $movie-height*.75;
-    }
+@media (max-width: 800px) {
     #container {
         h1 {
             text-align: center;
-        }
-        #chapters {
-            float: none;
-            margin-top: 9px;
-            width: $movie-width*.75;
-            li {
-                padding: 0;
-                height: 30px;
-                line-height: 30px;
-                margin: 0 0 3px;
-                p {
-                    display: inline;
-                }
-            }
-        }
-        .description {
-            border: none;
-        }
-        .start {
-            border-top: solid $purple 1px;
-            padding-top: 20px;
         }
     }
 }
 @media (max-width: 650px) {
     body {
         font-size: .8em;
-    }
-    #container {
-        #chapters {
-            width: $movie-width*.5;
-        }
-    }
-    #movie {
-        width: $movie-width*.5;
-        height: $movie-height*.5;
     }
     header li a div {
         display: inline-block;
@@ -375,16 +345,14 @@ header {
         height: $icon-size;
         margin: 0 $bleed/2;
     }
-}
-@media (max-width: 520px) {
-    #movie {
-        width: $movie-width*.33;
-        height: $movie-height*.33;
-    }
-    #container #chapters {
-        width: $movie-width*.33;
-        p {
-            font-size: .9em;
+    #container {
+        .short-description {
+            width: 45%;
+        }
+        iframe {
+            width: 200px;
+            height: 130px;
         }
     }
+    
 }

@@ -73,7 +73,7 @@ body {
 }
 
 /* line 87, css.scss */
-#portfolio {
+#demoreel {
   max-width: 1000px;
   width: 94%;
   margin: 0 auto;
@@ -128,12 +128,12 @@ header li a #email:hover {
   background-position: 50% 0%;
 }
 /* line 132, css.scss */
-header li a #demoreel {
-  background-position: 75% 100%;
+header li a #portfolio {
+  background-position: 0% 100%;
 }
 /* line 134, css.scss */
-header li a #demoreel:hover {
-  background-position: 75% 0%;
+header li a #portfolio:hover {
+  background-position: 0% 0%;
 }
 /* line 138, css.scss */
 header li a #resume {
@@ -196,8 +196,83 @@ header li .phone {
   font-weight: 300;
   text-align: left;
 }
+/* line 188, css.scss */
+#container p {
+  clear: both;
+  text-align: left;
+}
+/* line 192, css.scss */
+#container #chapters {
+  display: inline-block;
+  float: right;
+  width: 20%;
+}
+/* line 196, css.scss */
+#container #chapters li {
+  text-align: center;
+  color: white;
+  background-color: #301f3a;
+  border-radius: 5px;
+  height: 84px;
+  margin-bottom: 9px;
+  padding-top: 22.5px;
+}
+/* line 204, css.scss */
+#container #chapters li p {
+  text-align: center;
+}
+/* line 207, css.scss */
+#container #chapters li:hover {
+  cursor: pointer;
+  background-color: #5a9245;
+}
+/* line 212, css.scss */
+#container #chapters .current {
+  background-color: #436337;
+}
+/* line 216, css.scss */
+#container .start {
+  display: inline-block;
+  clear: both;
+  margin-top: 40px;
+}
+/* line 221, css.scss */
+#container .description {
+  border-left: solid #301f3a 1px;
+  border-right: solid #301f3a 1px;
+  padding: 5px 3%;
+  color: white;
+}
+/* line 226, css.scss */
+#container .description li {
+  margin: 5px 3%;
+  text-align: left;
+}
+/* line 229, css.scss */
+#container .description li b {
+  display: inline-block;
+  height: 100%;
+}
+/* line 234, css.scss */
+#container .description a {
+  font-style: italic;
+  color: #301f3a;
+}
+/* line 237, css.scss */
+#container .description a:hover {
+  text-decoration: underline;
+}
 
-/* line 190, css.scss */
+/* line 243, css.scss */
+#movie {
+  display: inline-block;
+  width: 640px;
+  height: 360px;
+  float: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* line 251, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -206,13 +281,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 197, css.scss */
+/* line 258, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 201, css.scss */
+/* line 262, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -220,7 +295,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 208, css.scss */
+/* line 269, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -228,68 +303,146 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 215, css.scss */
+/* line 276, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 217, css.scss */
+/* line 278, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 221, css.scss */
+/* line 282, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 223, css.scss */
+/* line 284, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 227, css.scss */
+/* line 288, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 229, css.scss */
+/* line 290, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 233, css.scss */
+/* line 294, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 235, css.scss */
+/* line 296, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 239, css.scss */
+/* line 300, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 241, css.scss */
+/* line 302, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
-@media (max-width: 800px) {
-  /* line 249, css.scss */
+@media (max-width: 960px) {
+  /* line 309, css.scss */
+  #movie {
+    width: 550.4px;
+    height: 309.6px;
+  }
+
+  /* line 313, css.scss */
+  #container #chapters li {
+    height: 71.4px;
+    margin-bottom: 9px;
+    padding-top: 19.35px;
+    line-height: 19.35px;
+    font-size: 15.48px;
+  }
+}
+@media (max-width: 840px) {
+  /* line 323, css.scss */
+  #movie {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 480px;
+    height: 270px;
+  }
+
+  /* line 331, css.scss */
   #container h1 {
     text-align: center;
   }
+  /* line 334, css.scss */
+  #container #chapters {
+    float: none;
+    margin-top: 9px;
+    width: 480px;
+  }
+  /* line 338, css.scss */
+  #container #chapters li {
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 3px;
+  }
+  /* line 343, css.scss */
+  #container #chapters li p {
+    display: inline;
+  }
+  /* line 348, css.scss */
+  #container .description {
+    border: none;
+  }
+  /* line 351, css.scss */
+  #container .start {
+    border-top: solid #301f3a 1px;
+    padding-top: 20px;
+  }
 }
 @media (max-width: 650px) {
-  /* line 255, css.scss */
+  /* line 358, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 258, css.scss */
+  /* line 362, css.scss */
+  #container #chapters {
+    width: 320px;
+  }
+
+  /* line 366, css.scss */
+  #movie {
+    width: 320px;
+    height: 180px;
+  }
+
+  /* line 370, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 261, css.scss */
+  /* line 373, css.scss */
   header li a {
     width: 30px;
     height: 30px;
     margin: 0 5px;
+  }
+}
+@media (max-width: 520px) {
+  /* line 380, css.scss */
+  #movie {
+    width: 211.2px;
+    height: 118.8px;
+  }
+
+  /* line 384, css.scss */
+  #container #chapters {
+    width: 211.2px;
+  }
+  /* line 386, css.scss */
+  #container #chapters p {
+    font-size: .9em;
   }
 }

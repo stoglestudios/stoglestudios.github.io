@@ -84,7 +84,7 @@ body {
 //-------------------
 // PAGE
 //-------------------
-#portfolio {
+#demoreel {
     max-width: $pg-width;
     width: 94%;
     margin: 0 auto;
@@ -129,10 +129,10 @@ header {
                     background-position: 50% 0%;
                 }
             }
-            #demoreel {
-                background-position: 75% 100%;
+            #portfolio {
+                background-position: 0% 100%;
                 &:hover {
-                    background-position: 75% 0%;
+                    background-position: 0% 0%;
                 }
             }
             #resume {
@@ -185,7 +185,68 @@ header {
             font-weight: 300;
             text-align: left;
         }
+        p {
+            clear: both;
+            text-align: left;
+        }
+        #chapters {
+            display: inline-block;
+            float: right;
+            width: 20%;
+            li {
+                text-align: center;
+                color: white;
+                background-color: $purple;
+                border-radius: $corners;
+                height:  $movie-height/4 - 6px;
+                margin-bottom: 9px;
+                padding-top: $movie-height/16;
+                p {
+                    text-align: center;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: $green;
+                }
+            }
+            .current {
+                background-color: $dark-color;
+            }
+        }
+        .start {
+            display: inline-block;
+            clear: both;
+            margin-top: 40px;
+        }
+        .description {
+            border-left: solid $purple 1px;
+            border-right: solid $purple 1px;
+            padding: 5px 3%;
+            color: white;
+            li {
+                margin: 5px 3%;
+                text-align: left;
+                b {
+                    display: inline-block;
+                    height: 100%;
+                }
+            }
+            a {
+                font-style: italic;
+                color: $purple;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
+        #movie {
+            display: inline-block;
+            width: $movie-width;
+            height: $movie-height;
+            float: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,.5);
+        }
 
     footer {
         text-align: right;
@@ -244,16 +305,67 @@ header {
             }
 
     }
-@media (max-width: 800px) {
+@media (max-width: 960px) {
+    #movie {
+        width: $movie-width*.86;
+        height: $movie-height*.86;
+    }
+    #container #chapters li {
+        height:  ($movie-height*.86)/4 - 6px;
+        margin-bottom: 9px;
+        padding-top: $movie-height*.86/16;
+        line-height: $movie-height*.86/16;
+        font-size: $movie-height*.86/20;
+    }
+
+}
+@media (max-width: 840px) {
+    #movie {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: $movie-width*.75;
+        height: $movie-height*.75;
+    }
     #container {
         h1 {
             text-align: center;
+        }
+        #chapters {
+            float: none;
+            margin-top: 9px;
+            width: $movie-width*.75;
+            li {
+                padding: 0;
+                height: 30px;
+                line-height: 30px;
+                margin: 0 0 3px;
+                p {
+                    display: inline;
+                }
+            }
+        }
+        .description {
+            border: none;
+        }
+        .start {
+            border-top: solid $purple 1px;
+            padding-top: 20px;
         }
     }
 }
 @media (max-width: 650px) {
     body {
         font-size: .8em;
+    }
+    #container {
+        #chapters {
+            width: $movie-width*.5;
+        }
+    }
+    #movie {
+        width: $movie-width*.5;
+        height: $movie-height*.5;
     }
     header li a div {
         display: inline-block;
@@ -262,5 +374,17 @@ header {
         width: $icon-size;
         height: $icon-size;
         margin: 0 $bleed/2;
+    }
+}
+@media (max-width: 520px) {
+    #movie {
+        width: $movie-width*.33;
+        height: $movie-height*.33;
+    }
+    #container #chapters {
+        width: $movie-width*.33;
+        p {
+            font-size: .9em;
+        }
     }
 }

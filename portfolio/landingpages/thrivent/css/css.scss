@@ -62,7 +62,8 @@ body {
     background: url("../images/stripes2.png") repeat #ccc;
 }
 #page {
-    width: $col-width;
+    max-width: $col-width;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
     background: url("../images/cross.png") repeat $grey;
