@@ -188,9 +188,6 @@ header {
             font-weight: 300;
             text-align: left;
         }
-        h2 {
-            
-        }
         p {
             text-align: left;
             padding: 2%;
@@ -236,6 +233,7 @@ header {
             }
             p { 
                 margin-top: 2%;
+                color: $purple;
             }
         }
         .short-description {

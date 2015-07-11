@@ -199,90 +199,91 @@ header li .phone {
   font-weight: 300;
   text-align: left;
 }
-/* line 194, css.scss */
+/* line 191, css.scss */
 #container p {
   text-align: left;
   padding: 2%;
 }
-/* line 198, css.scss */
+/* line 195, css.scss */
 #container .long-description, #container .short-description {
   display: inline-block;
   padding: 2%;
   margin: 1%;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 203, css.scss */
+/* line 200, css.scss */
 #container .long-description p, #container .short-description p {
   padding: 0 0 0;
 }
-/* line 206, css.scss */
+/* line 203, css.scss */
 #container .long-description h3, #container .short-description h3 {
   color: #5a9245;
   font-size: 1em;
   margin: 2% 0;
 }
-/* line 211, css.scss */
+/* line 208, css.scss */
 #container .long-description img, #container .short-description img {
   width: 100px;
   margin: 0 2% 1% 0;
   box-shadow: 0 1px 1px 2px #5a9245;
 }
-/* line 218, css.scss */
+/* line 215, css.scss */
 #container a:hover {
   box-shadow: 0 0 0 2px #5a9245;
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 221, css.scss */
+/* line 218, css.scss */
 #container a:hover h3 {
   text-decoration: underline;
 }
-/* line 226, css.scss */
+/* line 223, css.scss */
 #container .long-description {
   width: 96%;
   text-align: left;
 }
-/* line 229, css.scss */
+/* line 226, css.scss */
 #container .long-description img {
   float: left;
   vertical-align: top;
 }
-/* line 233, css.scss */
+/* line 230, css.scss */
 #container .long-description img.unsubscribe {
   width: 100%;
   margin-top: 2%;
 }
-/* line 237, css.scss */
+/* line 234, css.scss */
 #container .long-description p {
   margin-top: 2%;
+  color: #301f3a;
 }
-/* line 241, css.scss */
+/* line 239, css.scss */
 #container .short-description {
   color: #5a9245;
   width: 30%;
 }
-/* line 244, css.scss */
+/* line 242, css.scss */
 #container .short-description img {
   display: block;
   margin: 0 auto;
   margin-bottom: 6px;
 }
-/* line 249, css.scss */
+/* line 247, css.scss */
 #container .short-description p {
   text-align: center;
 }
-/* line 253, css.scss */
+/* line 251, css.scss */
 #container .more, #container .less {
   display: none;
   cursor: pointer;
   float: right;
   color: #5a9245;
 }
-/* line 258, css.scss */
+/* line 256, css.scss */
 #container .more:hover, #container .less:hover {
   text-decoration: underline;
   color: #301f3a;
 }
-/* line 263, css.scss */
+/* line 261, css.scss */
 #container iframe {
   /*500 x 325 100 x 65 200 130*/
   display: block;
@@ -292,7 +293,7 @@ header li .phone {
   box-shadow: 0 1px 1px 2px #5a9245;
 }
 
-/* line 272, css.scss */
+/* line 270, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -301,13 +302,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 279, css.scss */
+/* line 277, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 283, css.scss */
+/* line 281, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -315,7 +316,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 290, css.scss */
+/* line 288, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -323,76 +324,76 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 297, css.scss */
+/* line 295, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 299, css.scss */
+/* line 297, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 303, css.scss */
+/* line 301, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 305, css.scss */
+/* line 303, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 309, css.scss */
+/* line 307, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 311, css.scss */
+/* line 309, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 315, css.scss */
+/* line 313, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 317, css.scss */
+/* line 315, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 321, css.scss */
+/* line 319, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 323, css.scss */
+/* line 321, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
 @media (max-width: 800px) {
-  /* line 331, css.scss */
+  /* line 329, css.scss */
   #container h1 {
     text-align: center;
   }
 }
 @media (max-width: 650px) {
-  /* line 337, css.scss */
+  /* line 335, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 340, css.scss */
+  /* line 338, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 343, css.scss */
+  /* line 341, css.scss */
   header li a {
     width: 30px;
     height: 30px;
     margin: 0 5px;
   }
 
-  /* line 349, css.scss */
+  /* line 347, css.scss */
   #container .short-description {
     width: 45%;
   }
-  /* line 352, css.scss */
+  /* line 350, css.scss */
   #container iframe {
     width: 200px;
     height: 130px;
