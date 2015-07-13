@@ -1,0 +1,356 @@
+//-------------------
+// VARIABLIZE
+//-------------------
+$body-font: "Quicksand", 'Century Gothic', sans-serif;
+$title-font: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
+$gutter: 25px; 
+$bleed: 10px;
+$corners: 5px;
+$head-height: 100px;
+$soc-size: 28px;
+$pg-width: 1000px;
+$pg-height: 1100px;
+$fr-width: $pg-width - $gutter*2;
+$fr-height: $pg-height - $gutter*2;
+$movie-width: 640px;
+$movie-height: 360px;
+
+$icon-size: 30px;
+
+$green: #5A9245;
+$purple: #301F3A;
+$accent-color: #E5EEC7;
+$neutral-color: #5C5948;
+$dark-color: #436337;
+$in-blue: #1779b3;
+
+$font-head: 24px;
+
+//-------------------
+// STANDARDIZE
+//-------------------
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+div {
+    position: relative;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none; 
+}
+a {
+    display: inline-block;
+}
+a img {
+    border: 0; 
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none; 
+}
+ul {
+    list-style: none;
+}
+h1 {
+    font-family: $title-font;
+    font-weight: 100;
+    font-size: 2em;
+    line-height: 30px;
+    margin-bottom: $bleed;
+    a {
+        color: white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+h2 {
+    font-size: 1.2em;
+    text-align: left;
+    color: $purple;
+    font-weight: 400;
+    padding: 2% 2% 0;
+    margin-top: 3%;
+    border-top: solid white 1px;
+    clear: both;
+}
+body {
+    position: relative;
+    width: 100%;
+    background: url("../images/cross.png") $accent-color;
+    font-family: $body-font;
+}
+//-------------------
+// PAGE
+//------------------- 
+#portfolio {
+    max-width: $pg-width;
+    width: 94%;
+    margin: 0 auto;
+    background-color: $purple;
+    box-shadow: 0 0 5px $dark-color;
+    overflow: hidden;
+}
+header {
+    text-align: center;
+    max-width: $pg-width;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient($green, $dark-color) $green;
+    color: white;
+    box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, .7);
+    li {
+        display: inline-block;
+        padding-bottom: $bleed;
+        font-size: .9em;
+        a { 
+            color: white;
+            overflow: hidden;
+            margin: 0 $bleed;
+            div {
+                display: none;
+                height: $icon-size;
+                width: $icon-size;
+                background: url(../images/icons.png) no-repeat;
+                background-size: 900% 200%;
+                background-position: bottom;
+                border-radius: 10%;
+                //border: solid white 1px;
+                vertical-align: middle;
+            } 
+            //portfolio 0 | address 12.5 | phone 25 | linkin  37.5 | mail 50 | printer 62.5 | reel  75 | resume 87.5
+            #phone {
+                background-position: 25% 100%;
+            }
+            #email {
+                background-position: 50% 100%;
+                &:hover {
+                    background-position: 50% 0%;
+                }
+            }
+            #demoreel {
+                background-position: 75% 100%;
+                &:hover {
+                    background-position: 75% 0%;
+                }
+            }
+            #resume {
+                background-position: 87.5% 100%;
+                &:hover {
+                    background-position: 87.5% 0%;
+                }
+            }
+            #linkin {
+                background-position: 37.5% 100%;
+                &:hover {
+                    background-position: 37.5% 0%;
+                }
+            }
+            #address {
+                background-position: 12.5% 100%;
+                &:hover {
+                    background-position: 12.5% 0%;
+                }
+            }
+        }
+        .btn {
+            color: white;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .phone {
+            cursor: default;
+        }
+    }
+}
+    #gaius {
+        padding: $gutter $bleed $bleed;
+        background: url("../images/gaius.png") no-repeat 0 -30px;
+        background-size: 700px;
+    }
+    #container {
+        width: 96%;
+        text-align: center;
+        padding: 1% 1% 5%;
+        margin: 2%;
+        background: linear-gradient($accent-color, $green);
+        border-radius: $bleed;
+        box-shadow: 0 2px 8px black;
+        h1 {
+            padding: 2% 0 0;
+            color: $purple;
+            font-weight: 300;
+            text-align: left;
+        }
+        p {
+            text-align: left;
+            padding: 2%;
+        }
+        .long-description, .short-description {
+            display: inline-block;
+            padding: 2%;
+            margin: 1%;
+            background-color: rgba(255,255,255,.5);
+            p {
+                padding: 0 0 0;
+            }
+            h3 {
+                color: $green;
+                font-size: 1em;
+                margin: 2% 0;
+            }
+            img {
+                width: 100px;
+                margin: 0 2% 1% 0;
+                box-shadow: 0 1px 1px 2px $green;
+            }
+        }
+        a {
+            &:hover {
+                box-shadow: 0 0 0 2px $green;
+                background-color: rgba(255,255,255,.7);
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .long-description {
+            width: 96%;
+            text-align: left;
+            img {
+                float: left;
+                vertical-align: top;
+            }
+            img.unsubscribe {
+                width: 100%;
+                margin-top: 2%;
+            }
+            p { 
+                margin-top: 2%;
+                color: $purple;
+            }
+        }
+        .short-description {
+            color: $green;
+            width: 30%;
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 6px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        .more, .less {
+            display: none;
+            cursor: pointer;
+            float: right;
+            color: $green;
+            &:hover {
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
+        iframe { /*500 x 325 100 x 65 200 130*/
+            display: block;
+            margin: 0 auto 1%;
+            width: 300px;
+            height: 195px;
+            box-shadow: 0 1px 1px 2px $green;
+        }
+    }
+
+    footer {
+        text-align: right;
+        height: $soc-size + 10px;
+        line-height: $soc-size;
+        padding: 5px 3%;
+        background: url("../images/gel-btn.png") repeat-x $green;
+    }
+        #socnet {
+            height: $soc-size;
+            font-size: 14px;
+            text-align: right;
+            h4 {
+                display: inline-block;
+                line-height: $soc-size;
+                vertical-align: top;
+                color: white;
+                font-weight: 400;
+            }
+            a {
+                margin-left: 1%;
+                width: $soc-size;
+                height: $soc-size;
+                border-radius: $soc-size/2;
+                background: url("../images/socnet-sprite-lg.png") no-repeat $purple;
+            }
+            .fb {
+                background-position: 0 -1*$soc-size;
+                &:hover {
+                    background-position: 0 0;
+                }
+            }
+            .tw {
+                background-position: -1*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -1*$soc-size 0;
+                }
+            }
+            .go {
+                background-position: -2*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -2*$soc-size 0;
+                }
+            }
+            .in {
+                background-position: -3*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -3*$soc-size 0;
+                }
+            }
+            .em {
+                background-position: -4*$soc-size -1*$soc-size;
+                &:hover {
+                    background-position: -4*$soc-size 0;
+                }
+            }
+
+    }
+@media (max-width: 800px) {
+    #container {
+        h1 {
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 650px) {
+    body {
+        font-size: .8em;
+    }
+    header li a div {
+        display: inline-block;
+    }
+    header li a {
+        width: $icon-size;
+        height: $icon-size;
+        margin: 0 $bleed/2;
+    }
+    #container {
+        .short-description {
+            width: 45%;
+        }
+        iframe {
+            width: 200px;
+            height: 130px;
+        }
+    }
+    
+}

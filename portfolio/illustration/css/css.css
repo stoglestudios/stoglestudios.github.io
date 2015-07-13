@@ -1,0 +1,401 @@
+/* line 32, css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 38, css.scss */
+div {
+  position: relative;
+}
+
+/* line 41, css.scss */
+img {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+/* line 46, css.scss */
+a {
+  display: inline-block;
+}
+
+/* line 49, css.scss */
+a img {
+  border: 0;
+}
+
+/* line 52, css.scss */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+/* line 55, css.scss */
+ul {
+  list-style: none;
+}
+
+/* line 58, css.scss */
+h1 {
+  font-family: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+/* line 64, css.scss */
+h1 a {
+  color: white;
+}
+/* line 66, css.scss */
+h1 a:hover {
+  text-decoration: underline;
+}
+
+/* line 71, css.scss */
+h2 {
+  font-size: 1.2em;
+  text-align: left;
+  color: #301f3a;
+  font-weight: 400;
+  padding: 2% 2% 0;
+  margin-top: 3%;
+  border-top: solid white 1px;
+  clear: both;
+}
+
+/* line 81, css.scss */
+body {
+  position: relative;
+  width: 100%;
+  background: url("../images/cross.png") #e5eec7;
+  font-family: "Quicksand", "Century Gothic", sans-serif;
+}
+
+/* line 90, css.scss */
+#portfolio {
+  max-width: 1000px;
+  width: 94%;
+  margin: 0 auto;
+  background-color: #301f3a;
+  box-shadow: 0 0 5px #436337;
+  overflow: hidden;
+}
+
+/* line 98, css.scss */
+header {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(#5a9245, #436337) #5a9245;
+  color: white;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+/* line 106, css.scss */
+header li {
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: .9em;
+}
+/* line 110, css.scss */
+header li a {
+  color: white;
+  overflow: hidden;
+  margin: 0 10px;
+}
+/* line 114, css.scss */
+header li a div {
+  display: none;
+  height: 30px;
+  width: 30px;
+  background: url(../images/icons.png) no-repeat;
+  background-size: 900% 200%;
+  background-position: bottom;
+  border-radius: 10%;
+  vertical-align: middle;
+}
+/* line 126, css.scss */
+header li a #phone {
+  background-position: 25% 100%;
+}
+/* line 129, css.scss */
+header li a #email {
+  background-position: 50% 100%;
+}
+/* line 131, css.scss */
+header li a #email:hover {
+  background-position: 50% 0%;
+}
+/* line 135, css.scss */
+header li a #demoreel {
+  background-position: 75% 100%;
+}
+/* line 137, css.scss */
+header li a #demoreel:hover {
+  background-position: 75% 0%;
+}
+/* line 141, css.scss */
+header li a #resume {
+  background-position: 87.5% 100%;
+}
+/* line 143, css.scss */
+header li a #resume:hover {
+  background-position: 87.5% 0%;
+}
+/* line 147, css.scss */
+header li a #linkin {
+  background-position: 37.5% 100%;
+}
+/* line 149, css.scss */
+header li a #linkin:hover {
+  background-position: 37.5% 0%;
+}
+/* line 153, css.scss */
+header li a #address {
+  background-position: 12.5% 100%;
+}
+/* line 155, css.scss */
+header li a #address:hover {
+  background-position: 12.5% 0%;
+}
+/* line 160, css.scss */
+header li .btn {
+  color: white;
+}
+/* line 163, css.scss */
+header li .btn:hover {
+  text-decoration: underline;
+}
+/* line 167, css.scss */
+header li .phone {
+  cursor: default;
+}
+
+/* line 172, css.scss */
+#gaius {
+  padding: 25px 10px 10px;
+  background: url("../images/gaius.png") no-repeat 0 -30px;
+  background-size: 700px;
+}
+
+/* line 177, css.scss */
+#container {
+  width: 96%;
+  text-align: center;
+  padding: 1% 1% 5%;
+  margin: 2%;
+  background: linear-gradient(#e5eec7, #5a9245);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px black;
+}
+/* line 185, css.scss */
+#container h1 {
+  padding: 2% 0 0;
+  color: #301f3a;
+  font-weight: 300;
+  text-align: left;
+}
+/* line 191, css.scss */
+#container p {
+  text-align: left;
+  padding: 2%;
+}
+/* line 195, css.scss */
+#container .long-description, #container .short-description {
+  display: inline-block;
+  padding: 2%;
+  margin: 1%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 200, css.scss */
+#container .long-description p, #container .short-description p {
+  padding: 0 0 0;
+}
+/* line 203, css.scss */
+#container .long-description h3, #container .short-description h3 {
+  color: #5a9245;
+  font-size: 1em;
+  margin: 2% 0;
+}
+/* line 208, css.scss */
+#container .long-description img, #container .short-description img {
+  width: 100px;
+  margin: 0 2% 1% 0;
+  box-shadow: 0 1px 1px 2px #5a9245;
+}
+/* line 215, css.scss */
+#container a:hover {
+  box-shadow: 0 0 0 2px #5a9245;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+/* line 218, css.scss */
+#container a:hover h3 {
+  text-decoration: underline;
+}
+/* line 223, css.scss */
+#container .long-description {
+  width: 96%;
+  text-align: left;
+}
+/* line 226, css.scss */
+#container .long-description img {
+  float: left;
+  vertical-align: top;
+}
+/* line 230, css.scss */
+#container .long-description img.unsubscribe {
+  width: 100%;
+  margin-top: 2%;
+}
+/* line 234, css.scss */
+#container .long-description p {
+  margin-top: 2%;
+  color: #301f3a;
+}
+/* line 239, css.scss */
+#container .short-description {
+  color: #5a9245;
+  width: 30%;
+}
+/* line 242, css.scss */
+#container .short-description img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+/* line 247, css.scss */
+#container .short-description p {
+  text-align: center;
+}
+/* line 251, css.scss */
+#container .more, #container .less {
+  display: none;
+  cursor: pointer;
+  float: right;
+  color: #5a9245;
+}
+/* line 256, css.scss */
+#container .more:hover, #container .less:hover {
+  text-decoration: underline;
+  color: #301f3a;
+}
+/* line 261, css.scss */
+#container iframe {
+  /*500 x 325 100 x 65 200 130*/
+  display: block;
+  margin: 0 auto 1%;
+  width: 300px;
+  height: 195px;
+  box-shadow: 0 1px 1px 2px #5a9245;
+}
+
+/* line 270, css.scss */
+footer {
+  text-align: right;
+  height: 38px;
+  line-height: 28px;
+  padding: 5px 3%;
+  background: url("../images/gel-btn.png") repeat-x #5a9245;
+}
+
+/* line 277, css.scss */
+#socnet {
+  height: 28px;
+  font-size: 14px;
+  text-align: right;
+}
+/* line 281, css.scss */
+#socnet h4 {
+  display: inline-block;
+  line-height: 28px;
+  vertical-align: top;
+  color: white;
+  font-weight: 400;
+}
+/* line 288, css.scss */
+#socnet a {
+  margin-left: 1%;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
+}
+/* line 295, css.scss */
+#socnet .fb {
+  background-position: 0 -28px;
+}
+/* line 297, css.scss */
+#socnet .fb:hover {
+  background-position: 0 0;
+}
+/* line 301, css.scss */
+#socnet .tw {
+  background-position: -28px -28px;
+}
+/* line 303, css.scss */
+#socnet .tw:hover {
+  background-position: -28px 0;
+}
+/* line 307, css.scss */
+#socnet .go {
+  background-position: -56px -28px;
+}
+/* line 309, css.scss */
+#socnet .go:hover {
+  background-position: -56px 0;
+}
+/* line 313, css.scss */
+#socnet .in {
+  background-position: -84px -28px;
+}
+/* line 315, css.scss */
+#socnet .in:hover {
+  background-position: -84px 0;
+}
+/* line 319, css.scss */
+#socnet .em {
+  background-position: -112px -28px;
+}
+/* line 321, css.scss */
+#socnet .em:hover {
+  background-position: -112px 0;
+}
+
+@media (max-width: 800px) {
+  /* line 329, css.scss */
+  #container h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 650px) {
+  /* line 335, css.scss */
+  body {
+    font-size: .8em;
+  }
+
+  /* line 338, css.scss */
+  header li a div {
+    display: inline-block;
+  }
+
+  /* line 341, css.scss */
+  header li a {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  /* line 347, css.scss */
+  #container .short-description {
+    width: 45%;
+  }
+  /* line 350, css.scss */
+  #container iframe {
+    width: 200px;
+    height: 130px;
+  }
+}
