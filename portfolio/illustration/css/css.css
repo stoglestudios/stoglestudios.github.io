@@ -205,95 +205,143 @@ header li .phone {
   padding: 2%;
 }
 /* line 195, css.scss */
-#container .long-description, #container .short-description {
+#container .summery {
   display: inline-block;
-  padding: 2%;
   margin: 1%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-/* line 200, css.scss */
-#container .long-description p, #container .short-description p {
-  padding: 0 0 0;
-}
-/* line 203, css.scss */
-#container .long-description h3, #container .short-description h3 {
-  color: #5a9245;
-  font-size: 1em;
-  margin: 2% 0;
-}
-/* line 208, css.scss */
-#container .long-description img, #container .short-description img {
-  width: 100px;
-  margin: 0 2% 1% 0;
-  box-shadow: 0 1px 1px 2px #5a9245;
-}
-/* line 215, css.scss */
-#container a:hover {
-  box-shadow: 0 0 0 2px #5a9245;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-/* line 218, css.scss */
-#container a:hover h3 {
-  text-decoration: underline;
-}
-/* line 223, css.scss */
-#container .long-description {
   width: 96%;
   text-align: left;
+  background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 226, css.scss */
-#container .long-description img {
+/* line 202, css.scss */
+#container .summery p {
+  padding: 0 0 0;
+  margin-top: 2%;
+  color: #301f3a;
+}
+/* line 207, css.scss */
+#container .summery h3 {
+  color: #5a9245;
+  font-size: 1em;
+  margin: 2%;
+}
+/* line 212, css.scss */
+#container .summery img.thumb {
   float: left;
   vertical-align: top;
-}
-/* line 230, css.scss */
-#container .long-description img.unsubscribe {
-  width: 100%;
-  margin-top: 2%;
-}
-/* line 234, css.scss */
-#container .long-description p {
-  margin-top: 2%;
-  color: #301f3a;
-}
-/* line 239, css.scss */
-#container .short-description {
-  color: #5a9245;
-  width: 30%;
-}
-/* line 242, css.scss */
-#container .short-description img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 6px;
-}
-/* line 247, css.scss */
-#container .short-description p {
-  text-align: center;
-}
-/* line 251, css.scss */
-#container .more, #container .less {
-  display: none;
-  cursor: pointer;
-  float: right;
-  color: #5a9245;
-}
-/* line 256, css.scss */
-#container .more:hover, #container .less:hover {
-  text-decoration: underline;
-  color: #301f3a;
-}
-/* line 261, css.scss */
-#container iframe {
-  /*500 x 325 100 x 65 200 130*/
-  display: block;
-  margin: 0 auto 1%;
-  width: 300px;
-  height: 195px;
+  width: 100px;
+  margin: 2%;
   box-shadow: 0 1px 1px 2px #5a9245;
 }
+/* line 219, css.scss */
+#container .summery .more, #container .summery .less {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  font-size: 16px;
+  right: 0;
+  margin: 2%;
+}
+/* line 227, css.scss */
+#container .summery .more {
+  color: #5a9245;
+  bottom: 0;
+}
+/* line 231, css.scss */
+#container .summery .more:hover {
+  color: #301f3a;
+}
+/* line 234, css.scss */
+#container .summery .more:hover div {
+  background-color: #301f3a;
+}
+/* line 237, css.scss */
+#container .summery .more div {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #5a9245;
+  vertical-align: text-bottom;
+  line-height: 16px;
+  font-size: 16px;
+  color: #D4E2C8;
+  text-align: center;
+}
+/* line 249, css.scss */
+#container .summery .more div:after {
+  content: "+";
+}
+/* line 254, css.scss */
+#container .summery .less {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  top: 0;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+/* line 261, css.scss */
+#container .summery .less div {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: black;
+  vertical-align: text-bottom;
+  line-height: 16px;
+  font-size: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  color: grey;
+  text-align: center;
+}
+/* line 274, css.scss */
+#container .summery .less div:after {
+  content: "X";
+}
+/* line 278, css.scss */
+#container .summery .less:hover {
+  color: white;
+}
+/* line 281, css.scss */
+#container .summery .less:hover div {
+  background-color: white;
+}
+/* line 285, css.scss */
+#container .summery .lightroom {
+  clear: both;
+  padding: 2%;
+  text-align: center;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5) inset;
+  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
+  background-size: cover, 10px 10px, cover, cover;
+}
+/* line 296, css.scss */
+#container .summery .lightroom img {
+  clear: both;
+  float: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+/* line 301, css.scss */
+#container .summery .lightroom img.full {
+  width: 84%;
+  margin: 6% 8%;
+}
+/* line 305, css.scss */
+#container .summery .lightroom img.half {
+  width: 38%;
+  margin: 6% 4%;
+  /*
+  &:nth-child(odd) {
+      float: left;
+  }
+  &:nth-child(even) {
+      float: right;
+  }*/
+}
 
-/* line 270, css.scss */
+/* line 320, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -302,13 +350,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 277, css.scss */
+/* line 327, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 281, css.scss */
+/* line 331, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -316,7 +364,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 288, css.scss */
+/* line 338, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -324,78 +372,68 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 295, css.scss */
+/* line 345, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 297, css.scss */
+/* line 347, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 301, css.scss */
+/* line 351, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 303, css.scss */
+/* line 353, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 307, css.scss */
+/* line 357, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 309, css.scss */
+/* line 359, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 313, css.scss */
+/* line 363, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 315, css.scss */
+/* line 365, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 319, css.scss */
+/* line 369, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 321, css.scss */
+/* line 371, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
 @media (max-width: 800px) {
-  /* line 329, css.scss */
+  /* line 379, css.scss */
   #container h1 {
     text-align: center;
   }
 }
 @media (max-width: 650px) {
-  /* line 335, css.scss */
+  /* line 385, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 338, css.scss */
+  /* line 388, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 341, css.scss */
+  /* line 391, css.scss */
   header li a {
     width: 30px;
     height: 30px;
     margin: 0 5px;
-  }
-
-  /* line 347, css.scss */
-  #container .short-description {
-    width: 45%;
-  }
-  /* line 350, css.scss */
-  #container iframe {
-    width: 200px;
-    height: 130px;
   }
 }

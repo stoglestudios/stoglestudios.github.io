@@ -192,78 +192,128 @@ header {
             text-align: left;
             padding: 2%;
         }
-        .long-description, .short-description {
+        .summery {
             display: inline-block;
-            padding: 2%;
             margin: 1%;
+            width: 96%;
+            text-align: left;
             background-color: rgba(255,255,255,.5);
+            
             p {
                 padding: 0 0 0;
+                margin-top: 2%;
+                color: $purple;
             }
             h3 {
                 color: $green;
                 font-size: 1em;
-                margin: 2% 0;
+                margin: 2%;
             }
-            img {
-                width: 100px;
-                margin: 0 2% 1% 0;
-                box-shadow: 0 1px 1px 2px $green;
-            }
-        }
-        a {
-            &:hover {
-                box-shadow: 0 0 0 2px $green;
-                background-color: rgba(255,255,255,.7);
-                h3 {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .long-description {
-            width: 96%;
-            text-align: left;
-            img {
+            img.thumb {
                 float: left;
                 vertical-align: top;
+                width: 100px;
+                margin: 2%;
+                box-shadow: 0 1px 1px 2px $green;
             }
-            img.unsubscribe {
-                width: 100%;
-                margin-top: 2%;
+            .more, .less {
+                display: none;
+                cursor: pointer;
+                position: absolute;
+                font-size: 16px;
+                right: 0;
+                margin: 2%;
             }
-            p { 
-                margin-top: 2%;
-                color: $purple;
+            .more {
+                color: $green;
+                
+                bottom: 0;
+                &:hover {
+                    color: $purple;
+                }
+                &:hover div {
+                    background-color: $purple;
+                }
+                div {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    background-color: $green;
+                    vertical-align: text-bottom;
+                    line-height: 16px;
+                    font-size: 16px;
+                    color: #D4E2C8;
+                    text-align: center;
+                    &:after {
+                        content: "+";
+                    }
+                }
             }
-        }
-        .short-description {
-            color: $green;
-            width: 30%;
-            img {
-                display: block;
-                margin: 0 auto;
-                margin-bottom: 6px;
+            .less {
+                color: black;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 16px;
+                top: 0;
+                text-shadow: 0 5px 10px rgba(0,0,0,.5);
+                div {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    background-color: black;
+                    vertical-align: text-bottom;
+                    line-height: 16px;
+                    font-size: 16px;
+                    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+                    color: grey;
+                    text-align: center;
+                    &:after {
+                        content: "X";
+                    }
+                }
+                &:hover {
+                    color: white;
+                }
+                &:hover div {
+                    background-color: white;
+                }
             }
-            p {
+            .lightroom {
+                clear: both;
+                padding: 2%;
                 text-align: center;
+                box-shadow: 0 5px 10px 5px rgba(0,0,0,.5) inset;
+                background-image: 
+                    radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+                    url("../images/cross.png"),
+                    linear-gradient( 135deg, $purple, black )
+                ;
+                background-size: cover, 10px 10px, cover, cover;
+                img {
+                    clear: both;
+                    float: none;
+                    box-shadow: 0 10px 20px rgba(0,0,0,.5);
+                }
+                img.full {
+                    width: 84%;
+                    margin: 6% 8%;
+                }
+                img.half {
+                    width: 38%;
+                    margin: 6% 4%;
+                    /*
+                    &:nth-child(odd) {
+                        float: left;
+                    }
+                    &:nth-child(even) {
+                        float: right;
+                    }*/
+                }
             }
-        }
-        .more, .less {
-            display: none;
-            cursor: pointer;
-            float: right;
-            color: $green;
-            &:hover {
-                text-decoration: underline;
-                color: $purple;
-            }
-        }
-        iframe { /*500 x 325 100 x 65 200 130*/
-            display: block;
-            margin: 0 auto 1%;
-            width: 300px;
-            height: 195px;
-            box-shadow: 0 1px 1px 2px $green;
         }
     }
 
@@ -343,14 +393,4 @@ header {
         height: $icon-size;
         margin: 0 $bleed/2;
     }
-    #container {
-        .short-description {
-            width: 45%;
-        }
-        iframe {
-            width: 200px;
-            height: 130px;
-        }
-    }
-    
 }
