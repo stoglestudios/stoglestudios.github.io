@@ -293,7 +293,7 @@ footer {
         padding-right: 0%;
     }
     #ai {
-        padding-right: 8%;
+        padding-right: 6%;
     }
     #ae {
         padding-right: 4%;
@@ -302,28 +302,28 @@ footer {
         padding-right: 6%;
     }
     #in {
-        padding-right: 22%;
+        padding-right: 18%;
     }
     #office {
-        padding-right: 10%;
+        padding-right: 6%;
     }
     #win {
-        padding-right: 5%;
+        padding-right: 3%;
     }
     #osx {
         padding-right: 0%;
     }
     #css {
-        padding-right: 4%;
+        padding-right: 2%;
     }
     #jq {
-        padding-right: 6%;
+        padding-right: 4%;
     }
     #js {
         padding-right: 8%;
     }
     #as {
-        padding-right: 2%;
+        padding-right: 0%;
     }
     #git {
         padding-right: 10%;
@@ -355,6 +355,12 @@ footer {
 	content: “”;
 	display: table;
 	clear: both;
+}
+footer a {
+    color: white;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 
