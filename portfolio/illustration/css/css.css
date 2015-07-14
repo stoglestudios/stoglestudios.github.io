@@ -274,7 +274,7 @@ header li .phone {
 }
 /* line 254, css.scss */
 #container .summery .less {
-  color: black;
+  color: #938D97;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -288,12 +288,12 @@ header li .phone {
   height: 16px;
   border-radius: 50%;
   margin-right: 5px;
-  background-color: black;
+  background-color: #938D97;
   vertical-align: text-bottom;
   line-height: 16px;
   font-size: 16px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  color: grey;
+  color: #301f3a;
   text-align: center;
 }
 /* line 274, css.scss */
