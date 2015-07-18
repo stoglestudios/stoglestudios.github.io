@@ -234,6 +234,10 @@ header {
                 &:hover div {
                     background-color: $purple;
                 }
+                transition:all 0.5s ease; 
+                div {
+                    transition:all 0.5s ease; 
+                }
                 div {
                     display: inline-block;
                     width: 16px;
