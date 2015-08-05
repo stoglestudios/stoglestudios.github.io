@@ -92,23 +92,24 @@ header {
   max-width: 1000px;
   width: 100%;
   z-index: 10;
-  background: linear-gradient(#5a9245, #436337) #5a9245;
+  background-color: #5a9245;
+  background-image: linear-gradient(#5a9245, #436337);
   color: white;
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
-/* line 107, css.scss */
+/* line 108, css.scss */
 header li {
   display: inline-block;
   padding-bottom: 10px;
   font-size: .9em;
 }
-/* line 111, css.scss */
+/* line 112, css.scss */
 header li a {
   color: white;
   overflow: hidden;
   margin: 0 10px;
 }
-/* line 115, css.scss */
+/* line 116, css.scss */
 header li a div {
   display: none;
   height: 30px;
@@ -119,93 +120,94 @@ header li a div {
   border-radius: 10%;
   vertical-align: middle;
 }
-/* line 127, css.scss */
+/* line 128, css.scss */
 header li a #phone {
   background-position: 25% 100%;
 }
-/* line 130, css.scss */
+/* line 131, css.scss */
 header li a #email {
   background-position: 50% 100%;
 }
-/* line 132, css.scss */
+/* line 133, css.scss */
 header li a #email:hover {
   background-position: 50% 0%;
 }
-/* line 136, css.scss */
+/* line 137, css.scss */
 header li a #demoreel {
   background-position: 75% 100%;
 }
-/* line 138, css.scss */
+/* line 139, css.scss */
 header li a #demoreel:hover {
   background-position: 75% 0%;
 }
-/* line 142, css.scss */
+/* line 143, css.scss */
 header li a #resume {
   background-position: 87.5% 100%;
 }
-/* line 144, css.scss */
+/* line 145, css.scss */
 header li a #resume:hover {
   background-position: 87.5% 0%;
 }
-/* line 148, css.scss */
+/* line 149, css.scss */
 header li a #linkin {
   background-position: 37.5% 100%;
 }
-/* line 150, css.scss */
+/* line 151, css.scss */
 header li a #linkin:hover {
   background-position: 37.5% 0%;
 }
-/* line 154, css.scss */
+/* line 155, css.scss */
 header li a #address {
   background-position: 12.5% 100%;
 }
-/* line 156, css.scss */
+/* line 157, css.scss */
 header li a #address:hover {
   background-position: 12.5% 0%;
 }
-/* line 161, css.scss */
+/* line 162, css.scss */
 header li .btn {
   color: white;
 }
-/* line 164, css.scss */
+/* line 165, css.scss */
 header li .btn:hover {
   text-decoration: underline;
 }
-/* line 168, css.scss */
+/* line 169, css.scss */
 header li .phone {
   cursor: default;
 }
 
-/* line 173, css.scss */
+/* line 174, css.scss */
 #gaius {
   padding: 25px 10px 10px;
   background: url("../images/gaius.png") no-repeat 0 -30px;
   background-size: 700px;
 }
 
-/* line 178, css.scss */
+/* line 179, css.scss */
 #container {
   width: 96%;
   text-align: center;
   padding: 1% 1% 5%;
   margin: 2%;
-  background: linear-gradient(#e5eec7, #5a9245);
+  background-color: #e5eec7;
+  background-image: linear-gradient(#e5eec7, #5a9245);
   border-radius: 10px;
   box-shadow: 0 2px 8px black;
 }
-/* line 186, css.scss */
+/* line 188, css.scss */
 #container h1 {
   padding: 2% 0 0;
   color: #301f3a;
   font-weight: 300;
   text-align: left;
 }
-/* line 192, css.scss */
+/* line 194, css.scss */
 #container p {
   text-align: left;
   padding: 2%;
 }
-/* line 196, css.scss */
+/* line 198, css.scss */
 #container .summery {
   display: inline-block;
   margin: 1%;
@@ -213,19 +215,19 @@ header li .phone {
   text-align: left;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 203, css.scss */
+/* line 205, css.scss */
 #container .summery p {
   padding: 0 0 0;
   margin-top: 2%;
   color: #301f3a;
 }
-/* line 208, css.scss */
+/* line 210, css.scss */
 #container .summery h3 {
   color: #5a9245;
   font-size: 1em;
   margin: 2%;
 }
-/* line 213, css.scss */
+/* line 215, css.scss */
 #container .summery img.thumb {
   float: left;
   vertical-align: top;
@@ -233,7 +235,7 @@ header li .phone {
   margin: 2%;
   box-shadow: 0 1px 1px 2px #5a9245;
 }
-/* line 220, css.scss */
+/* line 222, css.scss */
 #container .summery .more, #container .summery .less {
   display: none;
   cursor: pointer;
@@ -242,25 +244,25 @@ header li .phone {
   right: 0;
   margin: 2%;
 }
-/* line 228, css.scss */
+/* line 230, css.scss */
 #container .summery .more {
   color: #5a9245;
   bottom: 0;
   transition: all 0.5s ease;
 }
-/* line 232, css.scss */
+/* line 234, css.scss */
 #container .summery .more:hover {
   color: #301f3a;
 }
-/* line 235, css.scss */
+/* line 237, css.scss */
 #container .summery .more:hover div {
   background-color: #301f3a;
 }
-/* line 239, css.scss */
+/* line 241, css.scss */
 #container .summery .more div {
   transition: all 0.5s ease;
 }
-/* line 242, css.scss */
+/* line 244, css.scss */
 #container .summery .more div {
   display: inline-block;
   width: 16px;
@@ -274,11 +276,11 @@ header li .phone {
   color: #D4E2C8;
   text-align: center;
 }
-/* line 254, css.scss */
+/* line 256, css.scss */
 #container .summery .more div:after {
   content: "+";
 }
-/* line 259, css.scss */
+/* line 261, css.scss */
 #container .summery .less {
   color: #938D97;
   font-weight: 700;
@@ -287,7 +289,7 @@ header li .phone {
   top: 0;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
-/* line 266, css.scss */
+/* line 268, css.scss */
 #container .summery .less div {
   display: inline-block;
   width: 16px;
@@ -302,19 +304,19 @@ header li .phone {
   color: #301f3a;
   text-align: center;
 }
-/* line 279, css.scss */
+/* line 281, css.scss */
 #container .summery .less div:after {
   content: "X";
 }
-/* line 283, css.scss */
+/* line 285, css.scss */
 #container .summery .less:hover {
   color: white;
 }
-/* line 286, css.scss */
+/* line 288, css.scss */
 #container .summery .less:hover div {
   background-color: white;
 }
-/* line 290, css.scss */
+/* line 292, css.scss */
 #container .summery .lightroom {
   clear: both;
   padding: 2%;
@@ -323,18 +325,18 @@ header li .phone {
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 301, css.scss */
+/* line 303, css.scss */
 #container .summery .lightroom img {
   clear: both;
   float: none;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
-/* line 306, css.scss */
+/* line 308, css.scss */
 #container .summery .lightroom img.full {
   width: 84%;
   margin: 6% 8%;
 }
-/* line 310, css.scss */
+/* line 312, css.scss */
 #container .summery .lightroom img.half {
   width: 38%;
   margin: 6% 4%;
@@ -347,7 +349,7 @@ header li .phone {
   }*/
 }
 
-/* line 325, css.scss */
+/* line 327, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -356,13 +358,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 332, css.scss */
+/* line 334, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 336, css.scss */
+/* line 338, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -370,7 +372,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 343, css.scss */
+/* line 345, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -378,65 +380,65 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 350, css.scss */
+/* line 352, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 352, css.scss */
+/* line 354, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 356, css.scss */
+/* line 358, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 358, css.scss */
+/* line 360, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 362, css.scss */
+/* line 364, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 364, css.scss */
+/* line 366, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 368, css.scss */
+/* line 370, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 370, css.scss */
+/* line 372, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 374, css.scss */
+/* line 376, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 376, css.scss */
+/* line 378, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
 @media (max-width: 800px) {
-  /* line 384, css.scss */
+  /* line 386, css.scss */
   #container h1 {
     text-align: center;
   }
 }
 @media (max-width: 650px) {
-  /* line 390, css.scss */
+  /* line 392, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 393, css.scss */
+  /* line 395, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 396, css.scss */
+  /* line 398, css.scss */
   header li a {
     width: 30px;
     height: 30px;
