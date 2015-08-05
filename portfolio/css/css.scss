@@ -181,7 +181,7 @@ header {
         text-align: center;
         padding: 1% 1% 5%;
         margin: 2%;
-        background: linear-gradient($accent-color, $green);
+        background-image: linear-gradient($accent-color, $green);
         background-color: $accent-color;
         border-radius: $bleed;
         box-shadow: 0 2px 8px black;

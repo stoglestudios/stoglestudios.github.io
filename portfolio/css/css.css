@@ -91,23 +91,24 @@ header {
   max-width: 1000px;
   width: 100%;
   z-index: 10;
-  background: linear-gradient(#5a9245, #436337) #5a9245;
+  background-color: #5a9245;
+  background-image: linear-gradient(#5a9245, #436337);
   color: white;
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
-/* line 107, css.scss */
+/* line 108, css.scss */
 header li {
   display: inline-block;
   padding-bottom: 10px;
   font-size: .9em;
 }
-/* line 111, css.scss */
+/* line 112, css.scss */
 header li a {
   color: white;
   overflow: hidden;
   margin: 0 10px;
 }
-/* line 115, css.scss */
+/* line 116, css.scss */
 header li a div {
   display: none;
   height: 30px;
@@ -118,172 +119,173 @@ header li a div {
   border-radius: 10%;
   vertical-align: middle;
 }
-/* line 127, css.scss */
+/* line 128, css.scss */
 header li a #phone {
   background-position: 25% 100%;
 }
-/* line 130, css.scss */
+/* line 131, css.scss */
 header li a #email {
   background-position: 50% 100%;
 }
-/* line 132, css.scss */
+/* line 133, css.scss */
 header li a #email:hover {
   background-position: 50% 0%;
 }
-/* line 136, css.scss */
+/* line 137, css.scss */
 header li a #demoreel {
   background-position: 75% 100%;
 }
-/* line 138, css.scss */
+/* line 139, css.scss */
 header li a #demoreel:hover {
   background-position: 75% 0%;
 }
-/* line 142, css.scss */
+/* line 143, css.scss */
 header li a #resume {
   background-position: 87.5% 100%;
 }
-/* line 144, css.scss */
+/* line 145, css.scss */
 header li a #resume:hover {
   background-position: 87.5% 0%;
 }
-/* line 148, css.scss */
+/* line 149, css.scss */
 header li a #linkin {
   background-position: 37.5% 100%;
 }
-/* line 150, css.scss */
+/* line 151, css.scss */
 header li a #linkin:hover {
   background-position: 37.5% 0%;
 }
-/* line 154, css.scss */
+/* line 155, css.scss */
 header li a #address {
   background-position: 12.5% 100%;
 }
-/* line 156, css.scss */
+/* line 157, css.scss */
 header li a #address:hover {
   background-position: 12.5% 0%;
 }
-/* line 161, css.scss */
+/* line 162, css.scss */
 header li .btn {
   color: white;
 }
-/* line 164, css.scss */
+/* line 165, css.scss */
 header li .btn:hover {
   text-decoration: underline;
 }
-/* line 168, css.scss */
+/* line 169, css.scss */
 header li .phone {
   cursor: default;
 }
 
-/* line 173, css.scss */
+/* line 174, css.scss */
 #gaius {
   padding: 25px 10px 10px;
   background: url("../images/gaius.png") no-repeat 0 -30px;
   background-size: 700px;
 }
 
-/* line 178, css.scss */
+/* line 179, css.scss */
 #container {
   width: 96%;
   text-align: center;
   padding: 1% 1% 5%;
   margin: 2%;
-  background: linear-gradient(#e5eec7, #5a9245);
+  background-image: linear-gradient(#e5eec7, #5a9245);
+  background-color: #e5eec7;
   border-radius: 10px;
   box-shadow: 0 2px 8px black;
 }
-/* line 186, css.scss */
+/* line 188, css.scss */
 #container h1 {
   padding: 2% 0 0;
   color: #301f3a;
   font-weight: 300;
   text-align: left;
 }
-/* line 192, css.scss */
+/* line 194, css.scss */
 #container p {
   text-align: left;
   padding: 2%;
 }
-/* line 196, css.scss */
+/* line 198, css.scss */
 #container .long-description, #container .short-description {
   display: inline-block;
   padding: 2%;
   margin: 1%;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 201, css.scss */
+/* line 203, css.scss */
 #container .long-description p, #container .short-description p {
   padding: 0 0 0;
 }
-/* line 204, css.scss */
+/* line 206, css.scss */
 #container .long-description h3, #container .short-description h3 {
   color: #5a9245;
   font-size: 1em;
   margin: 2% 0;
 }
-/* line 209, css.scss */
+/* line 211, css.scss */
 #container .long-description img, #container .short-description img {
   width: 100px;
   margin: 0 2% 1% 0;
   box-shadow: 0 1px 1px 2px #5a9245;
 }
-/* line 216, css.scss */
+/* line 218, css.scss */
 #container a:hover {
   box-shadow: 0 0 0 2px #5a9245;
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 219, css.scss */
+/* line 221, css.scss */
 #container a:hover h3 {
   text-decoration: underline;
 }
-/* line 224, css.scss */
+/* line 226, css.scss */
 #container .long-description {
   width: 96%;
   text-align: left;
 }
-/* line 227, css.scss */
+/* line 229, css.scss */
 #container .long-description img {
   float: left;
   vertical-align: top;
 }
-/* line 231, css.scss */
+/* line 233, css.scss */
 #container .long-description img.unsubscribe {
   width: 100%;
   margin-top: 2%;
 }
-/* line 235, css.scss */
+/* line 237, css.scss */
 #container .long-description p {
   margin-top: 2%;
   color: #301f3a;
 }
-/* line 240, css.scss */
+/* line 242, css.scss */
 #container .short-description {
   color: #5a9245;
   width: 30%;
 }
-/* line 243, css.scss */
+/* line 245, css.scss */
 #container .short-description img {
   display: block;
   margin: 0 auto;
   margin-bottom: 6px;
 }
-/* line 248, css.scss */
+/* line 250, css.scss */
 #container .short-description p {
   text-align: center;
 }
-/* line 252, css.scss */
+/* line 254, css.scss */
 #container .more, #container .less {
   display: none;
   cursor: pointer;
   float: right;
   color: #5a9245;
 }
-/* line 257, css.scss */
+/* line 259, css.scss */
 #container .more:hover, #container .less:hover {
   text-decoration: underline;
   color: #301f3a;
 }
-/* line 262, css.scss */
+/* line 264, css.scss */
 #container iframe {
   /*500 x 325 100 x 65 200 130*/
   display: block;
@@ -293,7 +295,7 @@ header li .phone {
   box-shadow: 0 1px 1px 2px #5a9245;
 }
 
-/* line 271, css.scss */
+/* line 273, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -302,13 +304,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 278, css.scss */
+/* line 280, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 282, css.scss */
+/* line 284, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -316,7 +318,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 289, css.scss */
+/* line 291, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -324,76 +326,76 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 296, css.scss */
+/* line 298, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 298, css.scss */
+/* line 300, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 302, css.scss */
+/* line 304, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 304, css.scss */
+/* line 306, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 308, css.scss */
+/* line 310, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 310, css.scss */
+/* line 312, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 314, css.scss */
+/* line 316, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 316, css.scss */
+/* line 318, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 320, css.scss */
+/* line 322, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 322, css.scss */
+/* line 324, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
 @media (max-width: 800px) {
-  /* line 330, css.scss */
+  /* line 332, css.scss */
   #container h1 {
     text-align: center;
   }
 }
 @media (max-width: 650px) {
-  /* line 336, css.scss */
+  /* line 338, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 339, css.scss */
+  /* line 341, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 342, css.scss */
+  /* line 344, css.scss */
   header li a {
     width: 30px;
     height: 30px;
     margin: 0 5px;
   }
 
-  /* line 348, css.scss */
+  /* line 350, css.scss */
   #container .short-description {
     width: 45%;
   }
-  /* line 351, css.scss */
+  /* line 353, css.scss */
   #container iframe {
     width: 200px;
     height: 130px;
