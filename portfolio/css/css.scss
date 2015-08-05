@@ -180,7 +180,8 @@ header {
         text-align: center;
         padding: 1% 1% 5%;
         margin: 2%;
-        background: linear-gradient($accent-color, $green) $accent-color;
+        background-color: $accent-color;
+        background: linear-gradient($accent-color, $green);
         border-radius: $bleed;
         box-shadow: 0 2px 8px black;
         h1 {
