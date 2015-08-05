@@ -323,20 +323,21 @@ header li .phone {
   text-align: center;
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5) inset;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
+  background-color: #301f3a;
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 303, css.scss */
+/* line 304, css.scss */
 #container .summery .lightroom img {
   clear: both;
   float: none;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
-/* line 308, css.scss */
+/* line 309, css.scss */
 #container .summery .lightroom img.full {
   width: 84%;
   margin: 6% 8%;
 }
-/* line 312, css.scss */
+/* line 313, css.scss */
 #container .summery .lightroom img.half {
   width: 38%;
   margin: 6% 4%;
@@ -349,7 +350,7 @@ header li .phone {
   }*/
 }
 
-/* line 327, css.scss */
+/* line 328, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -358,13 +359,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 334, css.scss */
+/* line 335, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 338, css.scss */
+/* line 339, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -372,7 +373,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 345, css.scss */
+/* line 346, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -380,65 +381,65 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 352, css.scss */
+/* line 353, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 354, css.scss */
+/* line 355, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 358, css.scss */
+/* line 359, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 360, css.scss */
+/* line 361, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 364, css.scss */
+/* line 365, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 366, css.scss */
+/* line 367, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 370, css.scss */
+/* line 371, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 372, css.scss */
+/* line 373, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 376, css.scss */
+/* line 377, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 378, css.scss */
+/* line 379, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
 @media (max-width: 800px) {
-  /* line 386, css.scss */
+  /* line 387, css.scss */
   #container h1 {
     text-align: center;
   }
 }
 @media (max-width: 650px) {
-  /* line 392, css.scss */
+  /* line 393, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 395, css.scss */
+  /* line 396, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 398, css.scss */
+  /* line 399, css.scss */
   header li a {
     width: 30px;
     height: 30px;

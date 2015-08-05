@@ -299,6 +299,7 @@ header {
                     url("../images/cross.png"),
                     linear-gradient( 135deg, $purple, black )
                 ;
+                background-color: $purple;
                 background-size: cover, 10px 10px, cover, cover;
                 img {
                     clear: both;
