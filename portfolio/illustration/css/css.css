@@ -92,8 +92,8 @@ header {
   max-width: 1000px;
   width: 100%;
   z-index: 10;
-  background-color: #5a9245;
   background-image: linear-gradient(#5a9245, #436337);
+  background-color: #5a9245;
   color: white;
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
@@ -190,8 +190,8 @@ header li .phone {
   text-align: center;
   padding: 1% 1% 5%;
   margin: 2%;
-  background-color: #e5eec7;
   background-image: linear-gradient(#e5eec7, #5a9245);
+  background-color: #e5eec7;
   border-radius: 10px;
   box-shadow: 0 2px 8px black;
 }
