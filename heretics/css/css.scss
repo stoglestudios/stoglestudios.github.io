@@ -157,6 +157,7 @@ nav ul li {
 }
     .selected {
         background: linear-gradient(to right, $orange, darkred);
+        background-color: $orange;
         a {
             text-shadow: 0 0 20px $orange;
             color: beige;
@@ -200,7 +201,8 @@ nav ul li {
         width: 94%;
         margin: $gutter 0 0;
         border-radius: $gutter;
-        background: linear-gradient(beige, burlywood);
+        background-image: linear-gradient(beige, burlywood);
+        background-color: beige;
         padding: $gutter;
         text-align: left;
         &:last-child {
