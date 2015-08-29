@@ -226,7 +226,22 @@ nav ul li {
             color: #600;
             font-size: 1.4em;
             margin-top: $gutter;
-
+            line-height: 1.4em;
+        }
+        p:first-letter {
+            font-family: $fonts-main;
+            text-transform: capitalize;
+            float: left;
+            color: $orange;
+            font-size: 1.8em;
+            line-height: 1em;
+            width: 20px;
+            background-color: darkred;
+            border: solid .1em darkred;
+            margin: .1em 5px 0 0;
+            padding: .05em .1em;
+            box-shadow: 0 0 0 2px $orange inset, 0 0 10px black inset;
+            text-shadow: 0 0 10px black;
         }
     }
     #premise div {
