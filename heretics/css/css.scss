@@ -231,15 +231,16 @@ nav ul li {
         p:first-letter {
             font-family: $fonts-main;
             text-transform: capitalize;
+            text-align: center;
             float: left;
             color: $orange;
-            font-size: 1.8em;
+            font-size: 1.7em;
             line-height: 1em;
-            width: 20px;
+            min-width: 1em;
             background-color: darkred;
             border: solid .1em darkred;
             margin: .1em 5px 0 0;
-            padding: .05em .1em;
+            padding: .1em .1em;
             box-shadow: 0 0 0 2px $orange inset, 0 0 10px black inset;
             text-shadow: 0 0 10px black;
         }
@@ -564,14 +565,14 @@ footer {
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     #intro { 
         div h1 {
-            margin: 16vh 0 0;
+            margin: 3vh 0 0;
             font-size: 1em;
             padding: 0;
             text-align: center;
         }
         div img {
-            width: 150%;
-            margin-left: -25%;
+            width: 120%;
+            margin-left: -10%;
         }
         .skip {
             font-size: 1em;
