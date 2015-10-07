@@ -9,9 +9,9 @@ $(document).ready(function() {
         if ( $(this).data("ektron-attributes") ) {
             var thisAttributes = $(this).data("ektron-attributes").split("&");
             for (var i=0; i<thisAttributes.length; i++) {
-                thisAttr = thisAttributes[i].trim().split("=");
+                thisAttr = $.trim(thisAttributes[i]).split("=");
                 if ( thisAttr[0] && thisAttr[1] ) {
-                    $(this).attr(thisAttr[0].trim(), thisAttr[1].trim());
+                    $.trim($(this).attr(thisAttr[0]), $.trim(thisAttr[1]));
                 }
             }
         }
@@ -27,12 +27,12 @@ $(document).ready(function() {
                 var thisStyleComplete = "";
                 if ( thisCsses[i].indexOf("@") < 0 ) {
                     console.log($(this).attr("id") + " [no @, " + i + "]: " + thisCsses[i]);
-                    thisCssS = thisCsses[i].trim().split(";");
+                    thisCssS = $.trim(thisCsses[i]).split(";");
                     for ( var j=0; j<thisCssS.length; j++) {
-                        thisCss = thisCssS[j].trim().split(":");
+                        thisCss = $.trim(thisCssS[j]).split(":");
                         if ( thisCss[0] && thisCss[1] ) {
-                            thisCss[0] = thisCss[0].trim();
-                            thisCss[1] = thisCss[1].trim();
+                            thisCss[0] = $.trim(thisCss[0]);
+                            thisCss[1] = $.trim(thisCss[1]);
                             thisStyleComplete = thisCss[0] + ": " + thisCss[1] + ";";
                             styleTag += "#" + $(this).attr("id") + " { ";
                             styleTag += thisStyleComplete + " }";
