@@ -2,7 +2,8 @@ $(document).ready(function() {
     $("*").each(function () {
         if ( $(this).data("ektron-text") ) {
             $(this).html(function(index,html){
-                return html.replace( "{placeholder}",$(this).data("ektron-text").trim() );
+                var currentString = $(this).data("ektron-text");
+                return html.replace( "{placeholder}", currentString.trim() );
             });
         }
         if ( $(this).data("ektron-attributes") ) {
