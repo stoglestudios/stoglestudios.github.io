@@ -1,10 +1,11 @@
 $(document).ready(function() {
     $("*").each(function () {
         if ( $(this).data("ektron-text") ) {
-            $(this).html(function(index,html){
-                var currentString = $(this).data("ektron-text");
+            var currentString = $.trim($(this).data("ektron-text"));
+            /*$(this).html(function(index,html){
                 return html.replace( "{placeholder}", $.trim(currentString.toString()) );
-            });
+            });*/
+            $(this).children(".ektron-text").replaceWith(currentString);
         }
         if ( $(this).data("ektron-attributes") ) {
             var thisAttributes = $(this).data("ektron-attributes").split("&");
