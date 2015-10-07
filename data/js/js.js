@@ -43,10 +43,10 @@ $(document).ready(function() {
                     var thisAtMedia = thisCsses[i].split("@");
                     var thisCssesWithMedia = thisAtMedia[0].split(";");
                     for ( var k=0; k<thisCssesWithMedia.length;k++ ) {
-                        thisCssWithMedia = thisCssesWithMedia[k].trim().split(":");
+                        thisCssWithMedia = $.trim(thisCssesWithMedia[k]).split(":");
                         if ( thisCssWithMedia[0] && thisCssWithMedia[1] ) {
-                            thisCssWithMedia[0] = thisCssWithMedia[0].trim();
-                            thisCssWithMedia[1] = thisCssWithMedia[1].trim();
+                            thisCssWithMedia[0] = $.trim(thisCssWithMedia[0]);
+                            thisCssWithMedia[1] = $.trim(thisCssWithMedia[1]);
                             thisStyleComplete += thisCssWithMedia[0] + ": " + thisCssWithMedia[1] + ";"
                         }
                     }
@@ -54,7 +54,7 @@ $(document).ready(function() {
                         var thisStyle = thisAtMedia[1].split(":");
                         if ( thisStyle[0] && thisStyle[1] ) {
                             thisStyle[0] = thisStyle[0].trim().toLowerCase();
-                            thisStyle[1] = Number( thisStyle[1].trim() );
+                            thisStyle[1] = Number( $.trim(thisStyle[1]) );
                             if ( thisStyle[0] == "min" || thisStyle[0] == "max" ) {
                                 styleTag += "@media (" +  thisStyle[0] + "-width: " + thisStyle[1] + "px) {";
                                 styleTag += "#" + $(this).attr("id") + " { ";
