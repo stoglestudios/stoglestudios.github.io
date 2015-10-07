@@ -3,7 +3,7 @@ $(document).ready(function() {
         if ( $(this).data("ektron-text") ) {
             $(this).html(function(index,html){
                 var currentString = $(this).data("ektron-text");
-                return html.replace( "{placeholder}", currentString.trim() );
+                return html.replace( "{placeholder}", currentString.toString().trim() );
             });
         }
         if ( $(this).data("ektron-attributes") ) {
