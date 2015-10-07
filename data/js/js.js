@@ -53,7 +53,7 @@ $(document).ready(function() {
                     if (thisAtMedia[1]) {
                         var thisStyle = thisAtMedia[1].split(":");
                         if ( thisStyle[0] && thisStyle[1] ) {
-                            thisStyle[0] = thisStyle[0].trim().toLowerCase();
+                            thisStyle[0] = $.trim(thisStyle[0]).toLowerCase();
                             thisStyle[1] = Number( $.trim(thisStyle[1]) );
                             if ( thisStyle[0] == "min" || thisStyle[0] == "max" ) {
                                 styleTag += "@media (" +  thisStyle[0] + "-width: " + thisStyle[1] + "px) {";
