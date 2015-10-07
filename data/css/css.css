@@ -1,0 +1,26 @@
+body {
+    background-color: #9ba;
+    font-family: sans-serif;
+}
+h1, h2 {
+    color: darkgreen;
+}
+img {
+    display: block;
+}
+span:after {
+    content: ">";
+}
+span {
+    padding-left: 5px;
+}
+#highfive {
+    display: inline-block;
+    height: 300px;
+    width: 500px;
+    background-color: antiquewhite;
+    border: solid red 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
