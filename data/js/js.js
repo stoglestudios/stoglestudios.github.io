@@ -7,9 +7,11 @@ $(document).ready(function() {
         if ( $(this).data("ektron-attributes") ) {
             var thisAttributes = $(this).data("ektron-attributes").split("&");
             for (var i=0; i<thisAttributes.length; i++) {
-                thisAttr = $.trim(thisAttributes[i]).split("=");
+                thisAttr = $.trim(thisAttributes[i]).split("="); 
                 if ( thisAttr[0] && thisAttr[1] ) {
-                    $.trim($(this).attr(thisAttr[0]), $.trim(thisAttr[1]));
+                    thisAttr[0] = $.trim(thisAttr[0]);
+                    thisAttr[1] = $.trim(thisAttr[1]);
+                    $(this).attr(thisAttr[0], thisAttr[1]);
                 }
             }
         }
