@@ -17,6 +17,7 @@ $(document).ready(function() {
                         allElementsArray[i] = repeatedItem;
                         $.each(Model[i], function(key, value) {
                             allElementsArray[i] = allElementsArray[i].replace( "<%=" + key + "%>", value);
+                            allElementsArray[i] = allElementsArray[i].replace( "&lt;%=" + key + "%&gt;", value);
                             alert(allElementsArray[i]);
                         });
                         allElementsString += allElementsArray[i];
