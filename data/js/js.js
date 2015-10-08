@@ -43,6 +43,7 @@ $(document).ready(function() {
     repeatText("#repeat");
 });
 function repeatText(theTarget) {
+    alert(theTarget);
     var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
     alert(repeatCycleNumber);
     var theStartText = $(theTarget).text();
