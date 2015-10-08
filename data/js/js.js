@@ -40,16 +40,16 @@ $(document).ready(function() {
         ektronFramework( $(this) );
     });
     //Example Function
-    repeatText();
+    repeatText("#repeat");
 });
 function repeatText(theTarget) {
-    var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
-    var theStartText = $(theTarget).text();
-    var theText = theStartText;
-    for (var i=0; i<repeatCycleNumber; i++) {
-        theText += theStartText;
-    }
-    $(theTarget).text(theText);
+    //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
+    //var theStartText = $(theTarget).text();
+    //var theText = theStartText;
+    //for (var i=0; i<repeatCycleNumber; i++) {
+    //    theText += theStartText;
+    //}
+    //$(theTarget).text(theText);
 }
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") ) {
