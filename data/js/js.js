@@ -41,6 +41,7 @@ $(document).ready(function() {
     });
     //Example Function
     repeatText();
+    alert("stuff");
 });
 function repeatText() {
     alert(theTarget);
