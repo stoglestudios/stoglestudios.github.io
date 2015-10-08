@@ -43,13 +43,13 @@ $(document).ready(function() {
     repeatText("#repeat");
 });
 function repeatText(theTarget) {
-    //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
-    //var theStartText = $(theTarget).text();
-    //var theText = theStartText;
-    //for (var i=0; i<repeatCycleNumber; i++) {
-    //    theText += theStartText;
-    //}
-    //$(theTarget).text(theText);
+    var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
+    var theStartText = $(theTarget).text();
+    var theText = theStartText;
+    for (var i=0; i<repeatCycleNumber; i++) {
+        theText += theStartText;
+    }
+    $(theTarget).text(theText);
 }
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") ) {
@@ -67,7 +67,6 @@ function ektronFramework( $this ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
                 thisAttr[1] = $.trim(thisAttr[1]) + "";
                 $this.attr(thisAttr[0], thisAttr[1]);
-                console.log(thisAttr[0]);
             }
         }
     }
