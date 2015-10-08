@@ -40,7 +40,7 @@ $(document).ready(function() {
         ektronFramework( $(this) );
     });
     //Example Function
-    repeatText("stuff");
+    repeatText("#repeat");
 });
 function repeatText(theTarget) {
     var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
