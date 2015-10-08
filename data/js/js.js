@@ -56,6 +56,7 @@ function repeatText( theTarget ) {
         theText += theStartText;
     }
     $(theTarget).text(theText);
+    alert("function ran");
 }
 
 function ektronFramework( $this ) {
