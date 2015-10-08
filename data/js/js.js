@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    repeatText("stuff");
     // For use developing, this section allows you to build HTML closer to what the Ektron view will look like for looping through data
     $("*").each(function () {
         if ( $(this).data("ektron-temp") ) {
@@ -40,7 +41,7 @@ $(document).ready(function() {
         ektronFramework( $(this) );
     });
     //Example Function
-    repeatText("stuff");
+    
 });
 function repeatText(theTarget) {
     alert(theTarget);
