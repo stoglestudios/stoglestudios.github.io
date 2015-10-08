@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    repeatText("#repeat");
     // For use developing, this section allows you to build HTML closer to what the Ektron view will look like for looping through data
     $("*").each(function () {
         if ( $(this).data("ektron-temp") ) {
@@ -41,7 +40,7 @@ $(document).ready(function() {
         ektronFramework( $(this) );
     });
     //Example Function
-    
+    repeatText("#repeat");
 });
 function repeatText(theTarget) {
     //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
@@ -60,7 +59,7 @@ function ektronFramework( $this ) {
             $this.html(currentString);
         }
     }
-    if ( $this.data("ektron-attributes") ) {
+    if ( $this.data("ektron-attributes") && $this.data("ektron-attributes").indexOf("<%") < 0 ) {
         var thisAttributes = $this.data("ektron-attributes").split("&");
         for (var i=0; i<thisAttributes.length; i++) {
             thisAttr = $.trim(thisAttributes[i]).split("="); 
@@ -68,6 +67,7 @@ function ektronFramework( $this ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
                 thisAttr[1] = $.trim(thisAttr[1]) + "";
                 $this.attr(thisAttr[0], thisAttr[1]);
+                console.log(thisAttr[0]);
             }
         }
     }
