@@ -47,12 +47,12 @@ function repeatText(theTarget) {
     repeatCycleNumber = "2";
     //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
     alert(repeatCycleNumber);
-    var theStartText = $(theTarget).text();
-    var theText = theStartText;
-    for (var i=0; i<repeatCycleNumber; i++) {
-        theText += theStartText;
-    }
-    $(theTarget).text(theText);
+    //var theStartText = $(theTarget).text();
+    //var theText = theStartText;
+    //for (var i=0; i<repeatCycleNumber; i++) {
+    //    theText += theStartText;
+    //}
+    //$(theTarget).text(theText);
 }
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") ) {
