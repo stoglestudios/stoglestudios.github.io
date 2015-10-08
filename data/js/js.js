@@ -40,7 +40,7 @@ $(document).ready(function() {
         ektronFramework( $(this) );
     });
     //Example Function
-    repeatText("#repeat");
+    repeatText("hi");
 });
 function repeatText(theTarget) {
     alert(theTarget);
