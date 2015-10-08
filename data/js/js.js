@@ -44,7 +44,8 @@ $(document).ready(function() {
 });
 function repeatText(theTarget) {
     alert(theTarget);
-    var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
+    repeatCycleNumber = "2";
+    //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
     alert(repeatCycleNumber);
     var theStartText = $(theTarget).text();
     var theText = theStartText;
