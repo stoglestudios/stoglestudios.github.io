@@ -65,8 +65,8 @@ function ektronFramework( $this ) {
         for (var i=0; i<thisAttributes.length; i++) {
             thisAttr = $.trim(thisAttributes[i]).split("="); 
             if ( thisAttr[0] && thisAttr[1] ) {
-                thisAttr[0] = $.trim(thisAttr[0]);
-                thisAttr[1] = $.trim(thisAttr[1]);
+                thisAttr[0] = $.trim(thisAttr[0]) + "";
+                thisAttr[1] = $.trim(thisAttr[1]) + "";
                 $this.attr(thisAttr[0], thisAttr[1]);
             }
         }
