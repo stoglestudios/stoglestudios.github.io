@@ -42,7 +42,7 @@ $(document).ready(function() {
     //Example Function
     repeatText();
 });
-function repeatText( theTarget ) {
+function repeatText() {
     alert(theTarget);
     //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
     //var theStartText = $(theTarget).text();
