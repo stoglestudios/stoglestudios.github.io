@@ -5,17 +5,25 @@
     <body>
         <h1 data-ektron-text="This is the Header"><div class="ektron-text"></div><span></span></h1>
         <p data-ektron-text="Lorem ipsom dolor simet"></p>
-        <p id="repeat" data-ektron="20">
+        <p id="repeat" data-ektron-repeat="20">
             All work and no play make jack a dull boy. 
         </p>
         <a data-ektron-attributes="href=http://google.com" data-ektron-text="Visit google" target="_blank"></a>
         <div id="highfive" data-ektron-css="background-image:url(img/puppy.jpg);&background-image:url(img/highfive.jpg);border:solid green 1px;@min:400&background-image:url(img/puppy.jpg);border:solid blue 1px;@min:800"></div>
         <h2>Another Header</h2>
         <div id="anotherdiv">
-            <img data-ektron-attributes="src=img/puppy.jpg&alt = This is a picture of a puppy" />
+            <img data-ektron-attributes="src=img/puppy.jpg &alt = This is a picture of a puppy %26 a white background." />
         </div>
         <div data-ektron-css="display:inline-block; height:300px; width:500px; background-color:darkgreen;"></div>
         <p></p>
+        <ul>
+            <!-- Loop for easy integration with Ektron -->
+            <li id="my-list" data-ektron-temp="js/temp.json">
+                <h3 data-ektron-text="<%=Title%>"><div class="ektron-text"></h3>
+                <img data-ektron-attributes="src=<%=Image%>" />
+            </li>
+            <!-- end loop -->
+        </ul>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/js.js"></script>
     </body>
