@@ -21,12 +21,8 @@ $(document).ready(function() {
                             allElementsArray[i] = allElementsArray[i].replace( "&lt;%=" + key + "%&gt;", value);
                         });
                         allElementsString += allElementsArray[i];
-                        
                     }
-                    console.log( thisElement );
-                    
                     $(thisElement).replaceWith( allElementsString );
-                    
                     $(thisElement).find("*").each( function () {
                         ektronFramework( $(this) );
                     });
@@ -43,22 +39,19 @@ $(document).ready(function() {
         //Run Framework on document
         ektronFramework( $(this) );
     });
-
     //Example Function
-    repeatText( $("#repeat") );
+    repeatText( "#repeat" );
 });
-
 function repeatText( theTarget ) {
-    var repeatCycleNumber = Number( theTarget.data("ektron-repeat") );
-    var theStartText = theTarget.text();
+    alert(theTarget);
+    var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
+    var theStartText = $(theTarget).text();
     var theText = theStartText;
     for (var i=0; i<repeatCycleNumber; i++) {
         theText += theStartText;
     }
-    theTarget.text(theText);
-    alert("function ran");
+    $(theTarget).text(theText);
 }
-
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") ) {
         var currentString = $.trim($this.data("ektron-text"));
