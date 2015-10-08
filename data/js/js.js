@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    repeatText("#repeat");
     // For use developing, this section allows you to build HTML closer to what the Ektron view will look like for looping through data
     $("*").each(function () {
         if ( $(this).data("ektron-temp") ) {
@@ -40,7 +41,7 @@ $(document).ready(function() {
         ektronFramework( $(this) );
     });
     //Example Function
-    //repeatText("#repeat");
+    
 });
 function repeatText(theTarget) {
     //var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
