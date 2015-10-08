@@ -66,7 +66,7 @@ $(document).ready(function() {
                 }
             }
             styleTag += "</style>";
-            $("head").append(styleTag);
+            $("body").append(styleTag);
         }
     });
     repeatText( "#repeat" );
