@@ -41,7 +41,7 @@ $(document).ready(function() {
         //Run Framework on document
         ektronFramework( $(this) );
     });
-    
+
     //Example Function
     repeatText( "#repeat" );
 });
