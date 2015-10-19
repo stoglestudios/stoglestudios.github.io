@@ -1,14 +1,14 @@
 [
     {
         "Title": "Lord of Rings",
-        "Image": "img/highfive.jpg"
+        "Image": "img/lord.jpg"
     },
     {
         "Title": "Hobbit",
-        "Image": "img/highfive.jpg"
+        "Image": "img/hobbit.jpg"
     },
     {
-        "Title": "TheSimilanrian",
-        "Image": "img/highfive.jpg"
+        "Title": "The silmarillion",
+        "Image": "img/sim.jpg"
     }
 ]

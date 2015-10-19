@@ -4,26 +4,49 @@
         <link rel="stylesheet" type="text/css" href="css/css.css">
     </head>
     <body>
-        <h1 data-ektron-text="This is the Header"><div class="ektron-text"></div><span></span></h1>
+        <!-- This is an example of passing ektron text to display -->
+        <!-- Leave the element blank will add text as normal, but adding an empty div with class="ektron-text" can be use to ensure the text is added without extra whitespace -->
+        <!-- You can use "<%" and "%>" as reminders/markers during development and they will be removed before displaying -->
+        <h1 data-ektron-text="<% Text from Ektron goes here %>"><div class="ektron-text"></div><span></span></h1>
         <p data-ektron-text="Lorem ipsom dolor simet"></p>
+        
+        <!-- This is an example of adding specialty data, not a part of the framework, that can come from Ektron but be used in a javascript function -->
+        <!-- It is not necessary, but by using this naming convention it can be easier to remember to that this data will need come from Ektron 
+                and can be helpful with troubleshooting after integration -->
         <p id="repeat" data-ektron-repeat="20">
             All work and no play make jack a dull boy. 
         </p>
-        <a data-ektron-attributes="href=http://google.com" data-ektron-text="Visit google" target="_blank"></a>
-        <div id="highfive" data-ektron-css="background-image:url(img/puppy.jpg);&background-image:url(img/highfive.jpg);border:solid green 1px;@min:400&background-image:url(img/puppy.jpg);border:solid blue 1px;@min:800"></div>
-        <h2>Another Header</h2>
+        
+        <!-- This is an example of adding attributes -->
+        <!-- attribute name and equal sign and the value -->
+        <!-- Multiple attributes can be added using an "&" just lie a query string -->
+        <a id="link" data-ektron-attributes="href=http://google.com" data-ektron-text="Visit google" target="_blank"></a>
+        
+        <!-- CSS can be used simply by writing just like normal CSS (ie background-color:black;border:solid red 1px;) -->
+        <!-- Media queries can be added by using "&" to deliniate and adding "@min/max:[Number] at the end" -->
+        <!-- Currently, only supports Screen min-width and max-width, but I might add others, like lanscape/portrait or Print etc -->
+        <div id="highfive" data-ektron-css="background-image:url(img/High_five.png);&background-image:url(img/despicable-me-high-five-minions-magnet-4.jpg);background-color:white;@min:400&background-image:url(img/highfive.jpg);background-color:#9bb3e1;@min:800"></div>
+        
+        <h2>Part 2: Puppies</h2>
         <div id="anotherdiv">
-            <img data-ektron-attributes="src=img/puppy.jpg &alt = This is a picture of a puppy %26 a white background." />
+            <img data-ektron-attributes="src=img/puppy.jpg &alt = This is a picture of a puppy %26 a white background." data-ektron-css="border: transparent; &:first-child{border: solid black 1px;}" />
+            <img src="img/puppy.jpg" />
         </div>
-        <div data-ektron-css="display:inline-block; height:300px; width:500px; background-color:darkgreen;"></div>
+        
+        <!-- Framework will auto add random unique id if none are present -->
+        <button data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Click Here</button>
         <p></p>
         <ul>
             <!-- Loop for easy integration with Ektron -->
+            <!-- Passing data-ektron-temp a json file of sample data will generate the elements based on that sample, including child elements -->
+            <!-- Assigning an id will automatically get numbers added (ie my-list becomes my-list0, my-list1, my-list2, etc), but this is
+                    for front end developement and will still need to be added in ektron with <%=j %> -->
+            <!-- <% foreach { %> --> <!-- Use comments like this for front-end devs communication to back-end devs -->
             <li id="my-list" data-ektron-temp="js/temp.json">
                 <h3 data-ektron-text="<%=Title%>"></h3>
                 <img data-ektron-attributes="src=<%=Image%>" />
             </li>
-            <!-- end loop -->
+            <!-- <% } %> -->
         </ul>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/js.js"></script>

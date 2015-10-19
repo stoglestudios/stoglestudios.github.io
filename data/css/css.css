@@ -16,14 +16,47 @@ span {
 }
 ul {
     list-style: none;
+    display: inline-block;
+    background-color: rgba(0,55,0,.2);
+    text-align: center;
+    padding: 0 5px;
+    border: solid black 1px;
+}
+ul img {
+    height: 200px;
+    margin: 0 auto;
+}
+li {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    border: solid white 1px;
+}
+button {
+    border: none;
+    color: white;
+}
+#link {
+    display: block;
+    margin-bottom: 20px;
+}
+#anotherdiv {
+    margin: 20px auto;
+}
+#anotherdiv img {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: solid red 1px;
 }
 #highfive {
     display: inline-block;
     height: 300px;
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
     background-color: antiquewhite;
-    border: solid red 1px;
+    border: solid darkred 2px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }

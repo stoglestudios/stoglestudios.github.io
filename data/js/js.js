@@ -42,6 +42,8 @@ $(document).ready(function() {
     //Example Function
     repeatText("#repeat");
 });
+var psuedoClass = "";
+var psuedoClasses = [":hover", ":first-child", ":last-child"];
 function repeatText(theTarget) {
     var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
     var theStartText = $(theTarget).text();
@@ -53,7 +55,10 @@ function repeatText(theTarget) {
 }
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") ) {
-        var currentString = $.trim($this.data("ektron-text"));
+        var currentString = $this.data("ektron-text");
+        currentString = currentString.replace("<%", "");
+        currentString = currentString.replace("%>", "");
+        currentString = $.trim( currentString );
         $this.children(".ektron-text").replaceWith(currentString);
         if ( !$this.html() ) {
             $this.html(currentString);
@@ -77,7 +82,11 @@ function ektronFramework( $this ) {
             $this.attr("id", createID)
         }
         var styleTag = "<style>";
-        var thisCsses = $this.data("ektron-css").split("&");
+        var $data = $this.data("ektron-css");
+        for (var i=0;i<psuedoClasses.length;i++) {
+            var $data = pseudoClassFinder( $data, $this.attr("id"), psuedoClasses[i] );
+        }
+        var thisCsses = $data.split("&");
         for (var i=0; i<thisCsses.length; i++) {
             var thisStyleComplete = "";
             if ( thisCsses[i].indexOf("@") < 0 ) {
@@ -118,7 +127,19 @@ function ektronFramework( $this ) {
                 }
             }
         }
+        styleTag += psuedoClass;
         styleTag += "</style>";
         $("head").append(styleTag);
     }
 }
+function pseudoClassFinder(teststring, testid, pclass) {
+    teststring = teststring.replace("&:", ":");
+    if ( teststring.indexOf(pclass ) >= 0 ) {
+        var testparts = teststring.split ( pclass );
+        psuedoClass += "#" + testid + pclass + testparts[1];
+        return testparts[0];
+    } else {
+        return teststring;
+    }
+}
+    
