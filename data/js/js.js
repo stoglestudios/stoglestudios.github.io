@@ -70,7 +70,7 @@ function ektronFramework( $this ) {
             thisAttr = $.trim(thisAttributes[i]).split("="); 
             if ( thisAttr[0] && thisAttr[1] ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
-                thisAttr[1] = $.trim(thisAttr[1]) + "";
+                thisAttr[1] = $.trim(thisAttr[1].replace("%26", "&").replace("%3B","=")) + "";
                 $this.attr(thisAttr[0], thisAttr[1]);
             }
         }
