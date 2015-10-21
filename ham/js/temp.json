@@ -1,0 +1,14 @@
+[
+    {
+        "Option": "Home Lending",
+        "Link": "/Home"
+    },
+    {
+        "Option": "Local Business",
+        "Link": "/SmallBiz"
+    },
+    {
+        "Option": "Personal Investing",
+        "Link": "/PersonFin"
+    }
+]
