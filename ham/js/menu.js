@@ -1,10 +1,10 @@
 /* Menu Animation */
 
 $(document).ready(function(){
+    i = 1;
     menuBtnHeight = $("#menu-btn").outerHeight();
     menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $("#menu-options").outerHeight();
     menuPadding = menuHeight - menuBtnHeight;
-    menuPadding = menuPadding*-1;
     $("#menu").css("height", menuBtnHeight +"px");
     imageCheck = 0;
     initialImage = $("#hamburger").css('background-image').replace(")", "").split("/img/");
@@ -18,11 +18,14 @@ $(document).ready(function(){
     
 });
 
-var i = 1;
+
 function transitionHamburger() {
     if (currentImage == initialImage) {
         imageCheck = 1;
     }
+    menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $("#menu-options").outerHeight();
+    menuPadding = menuHeight - menuBtnHeight;
+    $("#menu").css("height", menuBtnHeight +"px");
     var animateHamburger = setInterval(function(){
         currentImage = bgImage[0] + i + bgImage[1];
         console.log(i + " | " + currentImage + " | " + imageCheck);

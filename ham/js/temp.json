@@ -1,14 +1,26 @@
 [
     {
-        "Title": "Lord of Rings",
-        "Image": "img/lord.jpg"
+        "Option": "Home Lending",
+        "Link": "http://h02-ektrn-app1.umpquanet.local/homelending/"
     },
     {
-        "Title": "Hobbit",
-        "Image": "img/hob.jpg"
+        "Option": "Local Business Support",
+        "Link": "http://h02-ektrn-app1.umpquanet.local/localbusiness/"
     },
     {
-        "Title": "The silmarillion",
-        "Image": "img/sim.jpg"
+        "Option": "Personal Investing",
+        "Link": "http://h02-ektrn-app1.umpquanet.local/personalinvesting/"
+    },
+    {
+        "Option": "Home Lending",
+        "Link": "http://h02-ektrn-app1.umpquanet.local/homelending/"
+    },
+    {
+        "Option": "Local Business Support",
+        "Link": "http://h02-ektrn-app1.umpquanet.local/localbusiness/"
+    },
+    {
+        "Option": "Personal Investing",
+        "Link": "http://h02-ektrn-app1.umpquanet.local/personalinvesting/"
     }
 ]
