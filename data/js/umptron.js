@@ -63,6 +63,7 @@ $(document).ready(function() {
                     $(thisElement).removeAttr("data-ektron-temp");
                     $(thisElement).attr("id", thisElementName + l);
                 }
+                console.log( allElementsString );
             }
         } 
         //Run Framework on document
