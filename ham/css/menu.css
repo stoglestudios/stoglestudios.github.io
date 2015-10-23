@@ -1,6 +1,7 @@
 body {
     font-family: helvetica, sans-serif;
     font-weight: 800;
+    background-color: black;
 }
 * {
     box-sizing: border-box;
@@ -20,13 +21,17 @@ nav ul a {
     display: inline-block;
     margin: 1em;
     height: 1em;
-    color: black;
+    color: white;
     text-decoration: none;
 }
-nav ul span {
-    display: inline-block;
-    width: 50%;
-    border-bottom: solid black 1px;
+#menu {
+    background-color: rgba(0,0,0,.5);
+    z-index: 1000;
+}
+#floating-menu {
+    position: fixed;
+    width: 100%;
+    background-color: #afbc22;
 }
 .menu-btn {
     font-size: 1em;
@@ -34,9 +39,40 @@ nav ul span {
     padding: .2em .5em .5em;
     cursor: pointer;
 }
-#menu {
-    background-color: darkseagreen;
-    z-index: 1000;
+.menu-btn span {
+    line-height: 1em;
+    font-size: 1em;
+    vertical-align: middle;
+}
+#menu .menu-btn span {
+    color: white;
+}
+#menu .menu-btn:hover span {
+    color: #2cc1cd;
+}
+#floating-menu .menu-btn span {
+    color: white;
+}
+#floating-menu .menu-btn:hover span {
+    color: black;
+}
+.menu-btn:hover .hamburger {
+    background-position-x: right;
+}
+.hamburger {
+    vertical-align: middle;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background-size: 200% 1000%;
+    background-position-y: 0%;
+    background-position-x: left;
+}
+#menu .hamburger {
+    background-image: url(../img/hamburgerSprite.png);
+}
+#floating-menu .hamburger {
+    background-image: url(../img/hamburgerSpriteFloat.png);
 }
 .menu-spacer {
     display: block;
@@ -47,19 +83,31 @@ nav ul span {
 .last.menu-spacer:last-child {
     height: 3em;
 }
-.menu-btn span {
-    line-height: 1em;
-    font-size: 1em;
-    vertical-align: middle;
+#menu ul a {
+    color: white;
 }
-.hamburger {
-    vertical-align: middle;
+#menu ul a:hover {
+    color: #2cc1cd;
+}
+#floating-menu ul a {
+    color: white;
+}
+#floating-menu ul a:hover {
+    color: black;
+}
+nav ul span {
     display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-image: url(../img/hamburger1.png);
-    background-size: 100% 100%;
+    width: 50%;
+    border-bottom: solid white 1px;
 }
+
+nav ul span {
+    display: inline-block;
+    width: 50%;
+    border-bottom: solid white 1px;
+}
+
+
 .filler {
     height: 4em;
 }

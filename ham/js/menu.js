@@ -7,7 +7,7 @@ $(document).ready(function(){
     menuPadding = menuHeight - menuBtnHeight;
     menuPadding = menuPadding*-1;
     $("#menu").css("height", menuBtnHeight +"px");
-    imageCheck = 0;
+    imageCheck = 1;
     initialImage = $(".hamburger").css('background-image').replace(")", "").split("/img/");
     bgImage = initialImage[1].split("1");
     currentImage = initialImage;
@@ -61,7 +61,7 @@ $(document).ready(function(){
     });
 });
 
-var i = 1;
+i = 1;
 function buildFloatingMenu () {
     //Get HTML of Menu & Assign it new id: "floating-menu"
     var menuMarkup = $( "<" + $("#menu").prop("tagName") + " />" ).append( $( "#menu" ).clone() ).html().replace("id=\"menu", "id=\"floating-menu");
@@ -69,10 +69,7 @@ function buildFloatingMenu () {
     $("body").append(menuMarkup);
     //give it new styles:
     $("#floating-menu").css({
-        position: "fixed",
-        width: "100%",
-        top: "-" + menuBtnHeight + "px",
-        backgroundColor: "lightblue"
+        top: "-" + menuBtnHeight + "px"
     });
     $("#floating-menu").on("click", function() {
         transitionHamburger($(this));
@@ -103,16 +100,15 @@ function transitionHamburger(self) {
     $this = self;
     menuBtnHeight = $(".menu-btn").outerHeight();
     menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $(".menu-list").outerHeight();
-    if (currentImage == initialImage) {
-        imageCheck = 1;
-    }
     var animateHamburger = setInterval(function(){
-        currentImage = bgImage[0] + i + bgImage[1];
-        $this.children("a").children(".hamburger").css("background-image", "url(img/" + currentImage + ")");
-        if (imageCheck) {                
-            if (i>5){
+//        currentImage = bgImage[0] + i + bgImage[1];
+//        $this.children("a").children(".hamburger").css("background-image", "url(img/" + currentImage + ")");
+        $this.children("a").children(".hamburger").css("background-position-y", "-" + i*100 + "%");
+        if (imageCheck) {
+            console.log("imageCheck true");
+            if (i>4){
                 window.clearInterval(animateHamburger);
-                imageCheck = 0;
+                imageCheck = false;
             } else {
                 i++;
             }
@@ -125,11 +121,12 @@ function transitionHamburger(self) {
                     easing: "easeInOutCubic"
                 });
         } else {
-            if (i>10){
+            if (i>9){
                 i=1;
                 window.clearInterval(animateHamburger);
-                $this.children("a").children(".hamburger").css("background-image", "url(img/" + bgImage[0] + 1 + bgImage[1] + ")");
-                imageCheck = 1;
+//                $this.children("a").children(".hamburger").css("background-image", "url(img/" + bgImage[0] + 1 + bgImage[1] + ")");
+                $this.children("a").children(".hamburger").css("background-position-y", "-" + i + "%");
+                imageCheck = true;
             } else {
                 i++;
             }
