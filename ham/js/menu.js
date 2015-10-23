@@ -35,10 +35,8 @@ $(document).ready(function(){
         var windowHeight = $(window).height();
         if ( touchEndPosition > touchStartPosition && documentScroll > windowHeight ) {
             floatingMenuIn();
-            alert("Menu should be flying in");
         } else {
             floatingMenuOut();
-            alert("Menu should be flying out");
         }
     });
     $("#menu").on("click", function() {
