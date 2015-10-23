@@ -61,7 +61,8 @@ function buildFloatingMenu () {
         top: "-" + menuBtnHeight + "px",
         backgroundColor: "lightblue"
     });
-    $("#floating-menu").on("click", function() {
+    $("#floating-menu").on("click, touch", function() {
+        evt.stopPropagation();
         transitionHamburger($(this));
     });
 }
