@@ -27,7 +27,7 @@ $(document).ready(function(){
     });
     $(document).on("touchstart", function ( event ) {
         touchStartPosition = event.originalEvent.touches[0].clientY;
-        alert("TouchStart");
+        //alert("TouchStart");
     });
     $(document).on("touchend", function ( event ) {
         var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
@@ -38,7 +38,7 @@ $(document).ready(function(){
         } else {
             floatingMenuOut();
         }
-        //alert("TouchEnd");
+        alert("TouchEnd");
     });
     $("#menu").on("click", function() {
         transitionHamburger($(this));
