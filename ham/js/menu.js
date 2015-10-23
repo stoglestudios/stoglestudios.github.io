@@ -12,7 +12,20 @@ $(document).ready(function(){
     bgImage = initialImage[1].split("1");
     currentImage = initialImage;
     touchStartPosition = null;
-    $(document).on("mousewheel, DOMMouseScroll", function ( event ) {
+    $(document).on("mousewheel", function ( event ) {
+        if (!menuIsBuilt) {
+            buildFloatingMenu ();
+            menuIsBuilt = true;
+        }
+        var documentScroll = $(document).scrollTop();
+        var windowHeight = $(window).height();
+        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
+            floatingMenuIn();
+        } else {
+            floatingMenuOut();
+        }
+    });
+    $(document).on("DOMMouseScroll", function ( event ) {
         if (!menuIsBuilt) {
             buildFloatingMenu ();
             menuIsBuilt = true;
@@ -61,7 +74,10 @@ function buildFloatingMenu () {
         top: "-" + menuBtnHeight + "px",
         backgroundColor: "lightblue"
     });
-    $("#floating-menu").on("click, touch", function() {
+    $("#floating-menu").on("click", function() {
+        transitionHamburger($(this));
+    });
+    $("#floating-menu").on("touch", function(evt) {
         evt.stopPropagation();
         transitionHamburger($(this));
     });
