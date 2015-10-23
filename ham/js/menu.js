@@ -33,6 +33,10 @@ $(document).ready(function(){
         var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
         var documentScroll = $(document).scrollTop();
         var windowHeight = $(window).height();
+        if (!menuIsBuilt) {
+            buildFloatingMenu ();
+            menuIsBuilt = true;
+        }
         if ( touchEndPosition > touchStartPosition && documentScroll > windowHeight ) {
             floatingMenuIn();
         } else {
