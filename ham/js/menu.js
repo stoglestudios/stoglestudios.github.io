@@ -40,7 +40,6 @@ $(document).ready(function(){
     });
     $(document).on("touchstart", function ( event ) {
         touchStartPosition = event.originalEvent.touches[0].clientY;
-        //alert("TouchStart");
     });
     $(document).on("touchend", function ( event ) {
         var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
@@ -77,7 +76,11 @@ function buildFloatingMenu () {
     $("#floating-menu").on("touch", function(evt) {
         evt.stopPropagation();
         transitionHamburger($(this));
+        $("#floating-menu").css({
+            top: "0px"
+        });
     });
+    console.log("floating menu built");
 }
 function floatingMenuIn() {
     $("#floating-menu").stop().animate({
@@ -101,8 +104,6 @@ function transitionHamburger(self) {
     menuBtnHeight = $(".menu-btn").outerHeight();
     menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $(".menu-list").outerHeight();
     var animateHamburger = setInterval(function(){
-//        currentImage = bgImage[0] + i + bgImage[1];
-//        $this.children("a").children(".hamburger").css("background-image", "url(img/" + currentImage + ")");
         $this.children("a").children(".hamburger").css("background-position-y", "-" + i*100 + "%");
         if (imageCheck) {
             console.log("imageCheck true");
@@ -124,7 +125,6 @@ function transitionHamburger(self) {
             if (i>9){
                 i=1;
                 window.clearInterval(animateHamburger);
-//                $this.children("a").children(".hamburger").css("background-image", "url(img/" + bgImage[0] + 1 + bgImage[1] + ")");
                 $this.children("a").children(".hamburger").css("background-position-y", "-" + i + "%");
                 imageCheck = true;
             } else {
