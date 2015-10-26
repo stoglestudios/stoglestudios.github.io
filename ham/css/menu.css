@@ -42,7 +42,7 @@ nav ul a {
 .menu-btn span {
     line-height: 1em;
     font-size: 1em;
-    vertical-align: middle;
+    vertical-align: top;
 }
 #menu .menu-btn span {
     color: white;
@@ -60,7 +60,7 @@ nav ul a {
     background-position-x: right;
 }
 .hamburger {
-    vertical-align: middle;
+    vertical-align: top;
     display: inline-block;
     height: 1em;
     width: 1em;
