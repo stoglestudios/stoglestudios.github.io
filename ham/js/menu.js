@@ -51,12 +51,14 @@ $(document).ready(function(){
         }
         if ( touchEndPosition > touchStartPosition && documentScroll > windowHeight ) {
             floatingMenuIn();
+        } else if ( touchEndPosition == touchStartPosition ) {
+            console.log("just a click");
         } else {
             floatingMenuOut();
         }
     });
-    $("#menu").on("click", function() {
-        transitionHamburger($(this));
+    $("#menu .menu-btn").on("click", function() {
+        transitionHamburger($(this).parent());
     });
 });
 
@@ -70,16 +72,14 @@ function buildFloatingMenu () {
     $("#floating-menu").css({
         top: "-" + menuBtnHeight + "px"
     });
-    $("#floating-menu").on("click", function() {
-        transitionHamburger($(this));
+    $("#floating-menu .menu-btn").on("click", function() {
+        transitionHamburger($(this).parent());
     });
-    $("#floating-menu").on("touch", function(evt) {
-        evt.stopPropagation();
-        transitionHamburger($(this));
-        $("#floating-menu").css({
-            top: "0px"
-        });
-    });
+//    $("#floating-menu .menu-btn").on("touch", function(evt) {
+//        //evt.stopPropagation();
+//        transitionHamburger($(this).parent());
+//        console.log("Touched");
+//    });
     console.log("floating menu built");
 }
 function floatingMenuIn() {
@@ -106,7 +106,6 @@ function transitionHamburger(self) {
     var animateHamburger = setInterval(function(){
         $this.children("a").children(".hamburger").css("background-position-y", "-" + i*100 + "%");
         if (imageCheck) {
-            console.log("imageCheck true");
             if (i>4){
                 window.clearInterval(animateHamburger);
                 imageCheck = false;
