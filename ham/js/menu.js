@@ -13,6 +13,7 @@ $(document).ready(function(){
     currentImage = initialImage;
     touchStartPosition = null;
     $(document).on("mousewheel", function ( event ) {
+        $float = $("#floating-menu");
         if (!menuIsBuilt) {
             buildFloatingMenu ();
             menuIsBuilt = true;
@@ -23,9 +24,13 @@ $(document).ready(function(){
             floatingMenuIn();
         } else {
             floatingMenuOut();
+            $float.animate({height: menuBtnHeight + "px"}, 60);
+            $float.children("a").children(".hamburger").css("background-position-y", "0%");
+            imageCheck = true;
         }
     });
     $(document).on("DOMMouseScroll", function ( event ) {
+        $float = $("#floating-menu");
         if (!menuIsBuilt) {
             buildFloatingMenu ();
             menuIsBuilt = true;
@@ -36,6 +41,9 @@ $(document).ready(function(){
             floatingMenuIn();
         } else {
             floatingMenuOut();
+            $float.animate({height: menuBtnHeight + "px"}, 60);
+            $float.children("a").children(".hamburger").css("background-position-y", "0%");
+            imageCheck = true;
         }
     });
     $(document).on("touchstart", function ( event ) {
@@ -45,7 +53,6 @@ $(document).ready(function(){
         var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
         var documentScroll = $(document).scrollTop();
         var windowHeight = $(window).height();
-        $float = $("#floating-menu");
         if (!menuIsBuilt) {
             buildFloatingMenu ();
             menuIsBuilt = true;
@@ -56,7 +63,8 @@ $(document).ready(function(){
             console.log("just a click");
         } else {
             floatingMenuOut();
-            if ( $("#floating-menu").height() > menuBtnHeight ) {
+            var $float = $("#floating-menu");
+            if ( $float.height() > menuBtnHeight ) {
                 transitionHamburger( $float );
             }
         }
