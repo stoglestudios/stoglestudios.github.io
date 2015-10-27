@@ -11,7 +11,6 @@ h1 {
 h2 {
     margin-top: 50px;
 }
-
 .index-intro h2 {
     color: darkgreen;
 }
@@ -21,6 +20,7 @@ h2 {
 .index-LOTR h2 {
     color: darkred;
 }
+
 #puppies0 p {
     color: white;
 }
