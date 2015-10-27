@@ -9,27 +9,35 @@
         <link rel="stylesheet" href="css/menu.css">  
     </head>
     <body>
-
-    <nav id="menu" style="height: 34px;">
-        <a class="menu-btn">
-            <div class="hamburger"></div>
-            <span>Menu</span>
-        </a>
-        <div class="first menu-spacer"></div>
-        <ul class="menu-list">
-            <li id="menu-options" data-ektron-temp="js/temp.json">
-                <span></span>
-                <a data-ektron-attributes="href=<%=Link%>" data-ektron-text="<%=Option%>" target="_blank"></a>
-            </li>
-        </ul>
-        <div class="last menu-spacer"></div>
-    </nav>
-    
-    <div class="filler" data-ektron-temp="100"></div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/umptron.js"></script>
-    <script src="js/menu.js"></script>
-
-</body></html>
+        <!--[if lt IE 9]>
+            <script>
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('section');
+                document.createElement('article');
+                document.createElement('aside');
+                document.createElement('footer');
+                document.createElement('hgroup');
+            </script>
+        <![endif]-->
+        <nav id="menu" style="height: 34px;">
+            <a class="menu-btn">
+                <div class="hamburger"></div>
+                <span>Menu</span>
+            </a>
+            <div class="first menu-spacer"></div>
+            <ul class="menu-list">
+                <li id="menu-options" data-ektron-temp="js/temp.json">
+                    <span></span>
+                    <a data-ektron-attributes="href=<%=Link%>" data-ektron-text="<%=Option%>" target="_blank"></a>
+                </li>
+            </ul>
+            <div class="last menu-spacer"></div>
+        </nav>
+        <div class="filler" data-ektron-temp="100"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="js/umptron.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>
