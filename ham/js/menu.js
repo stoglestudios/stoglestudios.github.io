@@ -146,7 +146,7 @@ function transitionHamburger(self) {
                     /*, marginBottom: 0 */
                 }, {
                     duration: 120,
-                    easing: "easeOutBack",
+                    easing: "easeOutBack"
                 } );
         }
     }, 60);
