@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $("body>section").each(function(){
+        giveSectionsUniqueClasses( $(this) );
+    });
     // For use developing, this section allows you to build HTML closer to what the Ektron view will look like for looping through data
     $("*").each(function () {
         if ( $(this).data("ektron-temp") ) {
@@ -7,6 +10,7 @@ $(document).ready(function() {
                 createID = "Ektron" + createID;
                 $(this).attr("id", createID)
             }
+            // If the value is a number, repeat the HTML element that number of time, else get and use JSON data to loop
             if ( isNaN( $(this).data("ektron-temp")*2) ) {
                 var thisElementName = $(this).attr("id");
                 var thisElement = "#" + thisElementName;
@@ -69,20 +73,15 @@ $(document).ready(function() {
         //Run Framework on document
         ektronFramework( $(this) );
     });
-    //Example Function
-    repeatText("#repeat");
 });
+
+//Vars
 var psuedoClass = "";
 var psuedoClasses = [":hover", ":first-child", ":last-child"];
-function repeatText(theTarget) {
-    var repeatCycleNumber = Number( $(theTarget).data("ektron-repeat") );
-    var theStartText = $(theTarget).text();
-    var theText = theStartText;
-    for (var i=0; i<repeatCycleNumber; i++) {
-        theText += theStartText;
-    }
-    $(theTarget).text(theText);
-}
+classCount = 0;
+classIDsArray = [];
+
+//Functions
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") ) {
         var currentString = $this.data("ektron-text");
@@ -172,4 +171,63 @@ function pseudoClassFinder(teststring, testid, pclass) {
         return teststring;
     }
 }
-    
+function giveSectionsUniqueClasses ( self ) {
+    $this = self;
+    var fullPageName = document.location.href;
+    fullPageName = fullPageName.replace("//", "||");
+    var pageNamesArray = fullPageName.split("/");
+    var pageName = pageNamesArray[pageNamesArray.length-1];
+    var pageExtension = pageName.split(".");
+    if ( pageExtension.length > 0 ) {
+        pageName = pageExtension[0];
+    }
+    $this.addClass( pageName );
+    var classID = pageName + "-" + $this.attr("id");
+    $this.addClass( classID );
+    if ( $( "." + classID ).length > 1 && $( "." + classID ).length < 3) {
+        classIDsArray.push(classID);
+    }
+    var n = $("section").length;
+    if ( classCount+1 == n ) {
+        fixMultipleIDs ();
+    }
+    classCount++;
+}
+function fixMultipleIDs () {
+    for (var i=0; i<classIDsArray.length; i++) {
+        var c = $("." + classIDsArray[i]).length;
+        var currentID = $( "." + classIDsArray[i] ).attr("id");
+        for (var k=0; k<c; k++) {
+            $("#" + currentID).attr("id", currentID + k );
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

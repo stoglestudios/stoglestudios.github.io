@@ -5,9 +5,26 @@ body {
 h1, h2 {
     color: darkgreen;
 }
+h1 {
+    color: darkgreen;
+}
 h2 {
     margin-top: 50px;
 }
+
+.index-intro h2 {
+    color: darkgreen;
+}
+.index-puppies h2 {
+    color: darkblue;
+}
+.index-LOTR h2 {
+    color: darkred;
+}
+#puppies0 p {
+    color: white;
+}
+
 img {
     display: block;
 }
