@@ -9,7 +9,6 @@ $(document).ready(function(){
     $("#menu").css("height", menuBtnHeight +"px");
     imageCheck = 1;
     initialImage = $(".hamburger").css('background-image').replace(")", "").split("/img/");
-    bgImage = initialImage[1].split("1");
     currentImage = initialImage;
     touchStartPosition = null;
     $(document).on("mousewheel", function ( event ) {
