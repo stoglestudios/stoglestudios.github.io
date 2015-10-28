@@ -69,6 +69,7 @@ nav ul a {
     background-size: 200% 1000%;
     background-position-y: 0%;
     background-position-x: left;
+    behavior: url(../js/PIE_IE678.js);
 }
 #menu .hamburger {
     background-image: url(../img/hamburgerSprite.png);
