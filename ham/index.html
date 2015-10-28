@@ -20,15 +20,13 @@
                 document.createElement('hgroup');
             </script>
             <style>
-                #menu .hamburger {
-                    background-image: url(../img/hamburgerSpriteSmall.png);
-                }
                 #floating-menu .hamburger {
-                    background-image: url(../img/hamburgerSpriteFloatSmall.png);
+                    width: 0;
+                    height: 0;
                 }
             </style>
         <![endif]-->
-        <nav id="menu" style="height: 34px;">
+        <nav id="menu">
             <a class="menu-btn">
                 <div class="hamburger"></div>
                 <span>Menu</span>
@@ -42,7 +40,9 @@
             </ul>
             <div class="last menu-spacer"></div>
         </nav>
-        <div class="filler" data-ektron-temp="100"></div>
+        <section>
+            <div class="filler" data-ektron-temp="100"></div>
+        </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="js/umptron.js"></script>

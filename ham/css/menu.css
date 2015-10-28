@@ -18,6 +18,10 @@ ul {
     display: inline-block;
     text-align: center;
 }
+section {
+    position: absolute;
+    top: 0;
+}
 nav ul a {
     display: inline-block;
     margin: 1em;
@@ -26,6 +30,9 @@ nav ul a {
     text-decoration: none;
 }
 #menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
     background-color: black;
     background-color: rgba(0,0,0,.5);
     z-index: 1000;
