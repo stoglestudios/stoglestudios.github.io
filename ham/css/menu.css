@@ -66,10 +66,10 @@ nav ul a {
     display: inline-block;
     height: 1em;
     width: 1em;
-    background-size: 200% 1000%;
+    /*background-size: 200% 1000%;*/
     background-position-y: 0%;
     background-position-x: left;
-    behavior: url(../js/PIE_IE678.js);
+    /*behavior: url(../js/PIE_IE678.js);*/
 }
 #menu .hamburger {
     background-image: url(../img/hamburgerSprite.png);
