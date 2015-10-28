@@ -78,6 +78,7 @@ function buildFloatingMenu () {
     //Get HTML of Menu & Assign it new id: "floating-menu"
     var menuMarkup = $( "<" + $("#menu").prop("tagName") + " />" ).append( $( "#menu" ).clone() ).html()/*.replace('id="menu"', 'id="floating-menu"')*/;
     menuMarkup = menuMarkup.replace('id="menu"', 'id="floating-menu"');
+    menuMarkup = menuMarkup.replace("id='menu'", "id='floating-menu'");
     //Make copy of Permanant Top Menu and add it to the body
     $("body").append(menuMarkup);
     //give it new styles:
