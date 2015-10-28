@@ -9,6 +9,7 @@ body {
     margin: 0;
 }
 nav {
+    display: block;
     text-align: center;
     overflow: hidden;
 }
@@ -25,6 +26,7 @@ nav ul a {
     text-decoration: none;
 }
 #menu {
+    background-color: black;
     background-color: rgba(0,0,0,.5);
     z-index: 1000;
 }
@@ -98,16 +100,9 @@ nav ul a {
 nav ul span {
     display: inline-block;
     width: 50%;
+    max-width: 100px;
     border-bottom: solid white 1px;
 }
-
-nav ul span {
-    display: inline-block;
-    width: 50%;
-    border-bottom: solid white 1px;
-}
-
-
 .filler {
     height: 4em;
 }
