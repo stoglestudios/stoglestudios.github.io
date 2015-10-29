@@ -111,6 +111,9 @@ nav ul span {
     max-width: 100px;
     border-bottom: solid white 1px;
 }
+section {
+    width: 100%;
+}
 .filler {
     height: 4em;
 }
