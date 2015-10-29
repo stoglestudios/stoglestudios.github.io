@@ -21,6 +21,7 @@ ul {
 section {
     position: absolute;
     top: 0;
+    width: 100%;
 }
 nav ul a {
     display: inline-block;
@@ -110,9 +111,6 @@ nav ul span {
     width: 50%;
     max-width: 100px;
     border-bottom: solid white 1px;
-}
-section {
-    width: 100%;
 }
 .filler {
     height: 4em;
