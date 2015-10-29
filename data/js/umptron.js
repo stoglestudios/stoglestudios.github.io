@@ -182,7 +182,7 @@ function giveSectionsUniqueClasses ( self ) {
         pageName = pageExtension[0];
     }
     if ( pageName.length < 1 ) {
-        pageName = "home";
+        pageName = pageNamesArray[pageNamesArray.length-2];
     }
     $this.addClass( pageName );
     var classID = pageName + "-" + $this.attr("id");

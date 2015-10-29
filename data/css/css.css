@@ -11,13 +11,13 @@ h1 {
 h2 {
     margin-top: 50px;
 }
-.index-intro h2, .home-intro h2 {
+.index-intro h2, .data-intro h2 {
     color: darkgreen;
 }
-.index-puppies h2, .home-puppies h2 {
+.index-puppies h2, .data-puppies h2 {
     color: darkblue;
 }
-.index-LOTR h2, .home-LOTR h2 {
+.index-LOTR h2, .data-LOTR h2 {
     color: darkred;
 }
 
