@@ -184,6 +184,12 @@ function giveSectionsUniqueClasses ( self ) {
     if ( pageName.length < 1 ) {
         pageName = pageNamesArray[pageNamesArray.length-2];
     }
+    if ( pageName.length < 1 ) {
+        //var fullDomainArray = fullPageName.split("||");
+        //var domainArray = fullDomainArray[1].split(".");
+        //pageName = domainArray[domainArray.length-2];
+        pageName = "home";
+    }
     $this.addClass( pageName );
     var classID = pageName + "-" + $this.attr("id");
     $this.addClass( classID );
