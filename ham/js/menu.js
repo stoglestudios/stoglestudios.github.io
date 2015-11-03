@@ -6,6 +6,7 @@ T_current = 0;
 isScrolling = false;
 initialWindowPostion = null;
 currentWindowPosition = null;
+finalWindowPosition = null;
 windowPositions = [];
 
 $(document).ready(function(){
@@ -20,12 +21,12 @@ $(document).ready(function(){
     currentImage = initialImage;
     touchStartPosition = null;
     $(document).on("scroll", function ( event ) {
-        if (!isScrolling) {
+        if ( !initialWindowPostion ) {
             initialWindowPostion = $(document).scrollTop(); // <-- GET: CURRENT WINDOW POSTION;
-            scrollTracking = setInterval( windowScrolling, 50 );
-            //SET FINAL VAR
+        }
+        if (!isScrolling) {
+            scrollTracking = setInterval( windowScrolling, 5 );
             isScrolling = true;
-            
         }
         flashColors();
     });
@@ -170,37 +171,44 @@ function transitionHamburger(self) {
     }, 60);
 }
 function windowScrolling () {
+    T_previous++;
+    T_current++;
     if ( T_previous == 0 ) {
+        console.log("<--T is 0-->");
         windowPositions[0] = initialWindowPostion;
         windowPositions[1] = $(document).scrollTop();
     } else if ( T_previous > 0 ) {
+        console.log("<--" + initialWindowPostion + "-->");
         windowPositions[T_current] = $(document).scrollTop();
-    }
-    if ( windowPositions[T_current] == windowPositions[T_previous]) {
 
-        // STOP!!
-        //end tracking
-        // if window delta >= 0 run menu close
-        // if window delta < 0 run menu open
-        //reset all vars to intial values
-        T_previous = -1;
-        T_current = 0;
-        isScrolling = false;
-        initialWindowPostion = null;
-        currentWindowPosition = null;
-        windowPositions.length = 0;
-        clearInterval( scrollTracking );
-        setColors();
-    } else {
-        T_previous++;
-        T_current++;
+        if ( windowPositions[T_current] == windowPositions[T_previous]) {
+            isScrolling = false;
+            console.log( "initial: " + initialWindowPostion + " | last: " + $(document).scrollTop() );
+            // STOP!!
+            //end tracking
+            clearInterval( scrollTracking );
+            if ( $(document).scrollTop() > initialWindowPostion ) {
+                setColors();
+            } else if ( $(document).scrollTop() < initialWindowPostion ) {
+                setOtherColors();
+            }
+            //reset all vars to intial values
+            T_previous = -1;
+            T_current = 0;
+            isScrolling = false;
+            initialWindowPostion = null;
+            currentWindowPosition = null;
+            windowPositions.length = 0;
+        }
+        
     }
+    
 }
 function flashColors() {
     $(".filler").each( function() {
-        if ( $(this).css("background-color") == "rgb(105, 105, 105)" || $(this).css("background-color") == "rgb(0, 100, 0)" ) { //grey or green
+        if ( $(this).css("background-color") == "rgb(105, 105, 105)" || $(this).css("background-color") == "rgb(0, 100, 0)" || $(this).css("background-color") == "rgb(218, 112, 0)" ) { //grey or green or orange
             $(this).css("background-color", "rgb(0, 0, 139)" ); //blue
-        } else if ( $(this).css("background-color") == "rgb(112, 128, 144)" || $(this).css("background-color") == "rgb(218, 165, 32)" ) { //periwinkle or goldenrod
+        } else if ( $(this).css("background-color") == "rgb(112, 128, 144)" || $(this).css("background-color") == "rgb(218, 165, 32)" || $(this).css("background-color") == "rgb(100, 0, 100)" ) { //periwinkle or goldenrod or purple
             $(this).css("background-color", "rgb(139, 0, 0)" ); //red
         } else if ( $(this).css("background-color") == "rgb(0, 0, 139)" ) { //blue or 
             $(this).css("background-color", "rgb(105, 105, 105)" ); //grey
@@ -216,6 +224,16 @@ function setColors() {
             $(this).css("background-color", "rgb(218, 165, 32)" ); //goldenrod
         } else if ( $(this).css("background-color") == "rgb(139, 0, 0)" || $(this).css("background-color") == "rgb(112, 128, 144)" ) { //red or periwinkle
             $(this).css("background-color", "rgb(0, 100, 0)" ); //green
+        }
+    });
+    console.log( "setting colors" );
+}
+function setOtherColors() {
+    $(".filler").each( function() {
+        if ( $(this).css("background-color") == "rgb(105, 105, 105)" || $(this).css("background-color") == "rgb(0, 0, 139)" ) { //grey or blue
+            $(this).css("background-color", "rgb(218, 112, 0)" ); //orange
+        } else if ( $(this).css("background-color") == "rgb(139, 0, 0)" || $(this).css("background-color") == "rgb(112, 128, 144)" ) { //red or periwinkle
+            $(this).css("background-color", "rgb(100, 0, 100)" ); //purple
         }
     });
     console.log( "setting colors" );
