@@ -52,8 +52,7 @@ $(document).ready(function(){
 i = 1;
 function buildFloatingMenu () {
     //Get HTML of Menu & Assign it new id: "floating-menu"
-    var menuMarkup = $( "<" + $("#menu").prop("tagName") + " />" ).append( $( "#menu" ).clone().addClass("floating-menu") ).html()/*.replace('id="menu"', 'id="floating-menu"')*/;
-    //DELETE: menuMarkup = menuMarkup.replace('id="menu"', 'id="floating-menu"');
+    var menuMarkup = $( "<" + $("#menu").prop("tagName") + " />" ).append( $( "#menu" ).clone().addClass("floating-menu") ).html();
     //Make copy of Permanant Top Menu and add it to the body
     $("body").append(menuMarkup);
     //give it new styles:
@@ -61,6 +60,7 @@ function buildFloatingMenu () {
     $("#floating-menu").css({
         top: "-" + menuBtnHeight + "px"
     });
+    $("#floating-menu img").attr("src", "img/hamburgerSpriteFloat.png");
     $("#floating-menu .menu-btn").on("click", function() {
         transitionHamburger($(this).parent());
     });
