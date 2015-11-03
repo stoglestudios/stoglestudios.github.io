@@ -21,11 +21,11 @@ $(document).ready(function(){
     currentImage = initialImage;
     touchStartPosition = null;
     $(document).on("scroll", function ( event ) {
-        if ( !initialWindowPostion ) {
+        if ( initialWindowPostion == null ) {
             initialWindowPostion = $(document).scrollTop(); // <-- GET: CURRENT WINDOW POSTION;
         }
-        if (!isScrolling) {
-            scrollTracking = setInterval( windowScrolling, 5 );
+        if ( isScrolling == false ) {
+            scrollTracking = setInterval( windowScrolling, 50 );
             isScrolling = true;
         }
         flashColors();
