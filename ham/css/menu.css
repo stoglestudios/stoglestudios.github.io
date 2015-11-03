@@ -67,6 +67,7 @@ nav ul a {
     color: black;
 }
 .menu-btn:hover .hamburger {
+    background-position: right;
     background-position-x: right;
 }
 .hamburger {
@@ -75,9 +76,9 @@ nav ul a {
     height: 1em;
     width: 1em;
     background-size: 200% 1000%;
+    background-position: 0% left;
     background-position-y: 0%;
     background-position-x: left;
-    behavior: url(../js/PIE_IE678.js);
 }
 #menu .hamburger {
     background-image: url(../img/hamburgerSprite.png);
