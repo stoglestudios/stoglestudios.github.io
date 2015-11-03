@@ -20,9 +20,9 @@ $(document).ready(function(){
     initialImage = $(".hamburger").css('background-image').replace(")", "").split("/img/");
     currentImage = initialImage;
     touchStartPosition = null;
-    $(document).on("scroll", function ( event ) {
-        if (!menuIsBuilt) {
-            buildFloatingMenu ();
+    $(window).on("scroll", function ( event ) {
+        if ( !menuIsBuilt ) {
+            buildFloatingMenu();
             menuIsBuilt = true;
         }
         if ( initialWindowPostion == null ) {
