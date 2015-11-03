@@ -44,15 +44,16 @@ nav ul a {
     background-color: #afbc22;
 }
 .menu-btn {
-    font-size: 1em;
     display: inline-block;
-    padding: .8em .5em .4em;
+    padding: .5em .5em .6em;
     cursor: pointer;
 }
 .menu-btn span {
-    line-height: 1em;
-    font-size: 1em;
-    vertical-align: top;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 16px;
+    font-size: 16px;
+    height: 16px !important;
 }
 #menu .menu-btn span {
     color: white;
@@ -66,26 +67,36 @@ nav ul a {
 #floating-menu .menu-btn:hover span {
     color: black;
 }
-.menu-btn:hover .hamburger {
-    background-position: right;
-    background-position-x: right;
+.menu-btn:hover .hamburger img {
+    float: right;
 }
 .hamburger {
-    vertical-align: top;
+    vertical-align: middle;
+    overflow: hidden;
     display: inline-block;
-    height: 1em;
-    width: 1em;
+    height: 16px;
+    width: 16px;
+/*
     background-size: 200% 1000%;
     background-position: 0% left;
     background-position-y: 0%;
     background-position-x: left;
+*/
 }
+.hamburger img {
+    position: relative;
+    float: left;
+    width: 200%;
+    height: 1000%;
+}
+/*
 #menu .hamburger {
     background-image: url(../img/hamburgerSprite.png);
 }
 #floating-menu .hamburger {
     background-image: url(../img/hamburgerSpriteFloat.png);
 }
+*/
 .menu-spacer {
     display: block;
 }

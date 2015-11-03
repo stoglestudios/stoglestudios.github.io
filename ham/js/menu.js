@@ -88,7 +88,7 @@ function transitionHamburger(self) {
     menuBtnHeight = $(".menu-btn").outerHeight();
     menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $(".menu-list").outerHeight();
     var animateHamburger = setInterval(function(){
-        $this.children("a").children(".hamburger").css("background-position-y", "-" + i*100 + "%");
+        $this.children("a").children(".hamburger").children("img").css("top", "-" + i*100 + "%");
         if (imageCheck) {
             if (i>4){
                 window.clearInterval(animateHamburger);
@@ -108,7 +108,7 @@ function transitionHamburger(self) {
             if (i>9){
                 i=1;
                 window.clearInterval(animateHamburger);
-                $this.children("a").children(".hamburger").css("background-position-y", "-" + i + "%");
+                $this.children("a").children(".hamburger").children("img").css("top", "-" + i + "%");
                 imageCheck = true;
             } else {
                 i++;
