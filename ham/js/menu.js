@@ -6,7 +6,7 @@ T_current = 0;
 isScrolling = false;
 initialWindowPostion = null;
 currentWindowPosition = null;
-finalWindowPosition = null;
+scrollUnequalizer = 0;
 windowPositions = [];
 
 $(document).ready(function(){
@@ -21,6 +21,10 @@ $(document).ready(function(){
     currentImage = initialImage;
     touchStartPosition = null;
     $(document).on("scroll", function ( event ) {
+        if (!menuIsBuilt) {
+            buildFloatingMenu ();
+            menuIsBuilt = true;
+        }
         if ( initialWindowPostion == null ) {
             initialWindowPostion = $(document).scrollTop(); // <-- GET: CURRENT WINDOW POSTION;
         }
@@ -30,66 +34,16 @@ $(document).ready(function(){
         }
         flashColors();
     });
-        
-        
-        
-//    $(document).on("mousewheel", function ( event ) {
-//        $float = $("#floating-menu");
-//        if (!menuIsBuilt) {
-//            buildFloatingMenu ();
-//            menuIsBuilt = true;
-//        }
-//        var documentScroll = $(document).scrollTop();
-//        var windowHeight = $(window).height();
-//        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
-//            floatingMenuIn();
-//        } else {
-//            floatingMenuOut();
-//            $float.animate({height: menuBtnHeight + "px"}, 60);
-//            $float.children("a").children(".hamburger").css("background-position-y", "0%");
-//            imageCheck = true;
-//        }
-//    });
-//    $(document).on("DOMMouseScroll", function ( event ) {
-//        $float = $("#floating-menu");
-//        if (!menuIsBuilt) {
-//            buildFloatingMenu ();
-//            menuIsBuilt = true;
-//        }
-//        var documentScroll = $(document).scrollTop();
-//        var windowHeight = $(window).height();
-//        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
-//            floatingMenuIn();
-//        } else {
-//            floatingMenuOut();
-//            $float.animate({height: menuBtnHeight + "px"}, 60);
-//            $float.children("a").children(".hamburger").css("background-position-y", "0%");
-//            imageCheck = true;
-//        }
-//    });
-//    $(document).on("touchstart", function ( event ) {
-//        touchStartPosition = event.originalEvent.touches[0].clientY;
-//    });
-//    $(document).on("touchend", function ( event ) {
-//        var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
-//        var documentScroll = $(document).scrollTop();
-//        var windowHeight = $(window).height();
-//        if (!menuIsBuilt) {
-//            buildFloatingMenu ();
-//            menuIsBuilt = true;
-//        }
-//        if ( touchEndPosition > touchStartPosition && documentScroll > windowHeight ) {
-//            floatingMenuIn();
-//        } else if ( touchEndPosition == touchStartPosition ) {
-//            console.log("just a click");
-//        } else {
-//            floatingMenuOut();
-//            var $float = $("#floating-menu");
-//            if ( $float.height() > menuBtnHeight ) {
-//                transitionHamburger( $float );
-//            }
-//        }
-//    });
+    $(document).on("mousewheel", function ( event ) {
+        if ( event.originalEvent.wheelDelta < 0 ) {
+            scrollUnequalizer = -5;
+        } else if ( event.originalEvent.wheelDelta > 0 ) {
+            scrollUnequalizer = 5;
+        } else {
+            scrollUnequalizer = 0;
+        } 
+    });
+
     $("#menu .menu-btn").on("click", function() {
         transitionHamburger($(this).parent());
     });
@@ -183,14 +137,19 @@ function windowScrolling () {
 
         if ( windowPositions[T_current] == windowPositions[T_previous]) {
             isScrolling = false;
-            console.log( "initial: " + initialWindowPostion + " | last: " + $(document).scrollTop() );
             // STOP!!
             //end tracking
             clearInterval( scrollTracking );
-            if ( $(document).scrollTop() > initialWindowPostion ) {
+            if ( $(document).scrollTop() > initialWindowPostion + scrollUnequalizer ) {
                 setColors();
-            } else if ( $(document).scrollTop() < initialWindowPostion ) {
+                floatingMenuOut();
+            } else if ( $(document).scrollTop() < initialWindowPostion + scrollUnequalizer ) {
                 setOtherColors();
+                if ( $(document).scrollTop() > $(window).height() ) {
+                    floatingMenuIn();
+                } else {
+                    floatingMenuOut();
+                }
             }
             //reset all vars to intial values
             T_previous = -1;
