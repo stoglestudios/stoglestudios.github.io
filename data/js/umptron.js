@@ -93,8 +93,8 @@ function ektronFramework( $this ) {
             $this.html(currentString);
         }
     }
-    if ( $this.data("ektron-attributes") && $this.data("ektron-attributes").indexOf("<%") < 0 ) {
-        var thisAttributes = $this.data("ektron-attributes").split("&");
+    if ( $this.data("ektron-attr") && $this.data("ektron-attr").indexOf("<%") < 0 ) {
+        var thisAttributes = $this.data("ektron-attr").split("&");
         for (var i=0; i<thisAttributes.length; i++) {
             thisAttr = $.trim(thisAttributes[i]).split("="); 
             if ( thisAttr[0] && thisAttr[1] ) {
@@ -174,10 +174,19 @@ function pseudoClassFinder(teststring, testid, pclass) {
 function giveSectionsUniqueClasses ( self ) {
     $this = self;
     var fullPageName = document.location.href;
-    fullPageName = fullPageName.replace("//", "||");
+    fullPageName = fullPageName.replace("http://", "");
+    fullPageName = fullPageName.replace("https://", "");
+    fullPageName = fullPageName.replace("www.", "");
+    fullPageName = fullPageName.replace(".com", "");
+    console.log(fullPageName);
+    fullPageName = fullPageName.split("#")[0];
+    fullPageName = fullPageName.split("?")[0];
+    fullPageName = fullPageName.split("&")[0];
+    console.log(fullPageName);
     var pageNamesArray = fullPageName.split("/");
     var pageName = pageNamesArray[pageNamesArray.length-1];
     var pageExtension = pageName.split(".");
+    console.log(pageExtension[0]);
     if ( pageExtension.length > 0 ) {
         pageName = pageExtension[0];
     }
@@ -190,6 +199,7 @@ function giveSectionsUniqueClasses ( self ) {
         //pageName = domainArray[domainArray.length-2];
         pageName = "home";
     }
+    console.log(pageName);
     $this.addClass( pageName );
     var classID = pageName + "-" + $this.attr("id");
     $this.addClass( classID );

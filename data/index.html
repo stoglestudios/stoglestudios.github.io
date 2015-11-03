@@ -40,11 +40,11 @@
             <!-- This is an example of adding attributes -->
             <!-- attribute name and equal sign and the value -->
             <!-- Multiple attributes can be added using an "&" just lie a query string -->
-            <a id="link" data-ektron-attributes="href=https://www.google.com/search?q=puppies&espv=2&biw=1679&bih=812&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMI1d3HhN_PyAIVAymICh2I3gIs" data-ektron-text="Google Puppies right Now" target="_blank"></a>
+            <a id="link" data-ektron-attr="href=https://www.google.com/search?q=puppies" data-ektron-text="Google Puppies right Now" target="_blank"></a>
 
             <div id="anotherdiv">
                 <!-- since & and = are used to deliminate, if you want to use an & or =  in an alt attribute you can use the ASCII Hex value instead-->
-                <img data-ektron-attributes="src=img/puppy.jpg &alt = This is a picture of a puppy %26 a white background, which %3B cute." data-ektron-css="border: transparent; &:hover{border: solid black 1px;background-color:darkred;}" />
+                <img data-ektron-attr="src=img/puppy.jpg &alt = This is a picture of a puppy %26 a white background, which %3B cute." data-ektron-css="border: transparent; &:hover{border: solid black 1px;background-color:darkred;}" />
                 <img src="img/puppy.jpg" />
             </div>
 
@@ -68,7 +68,7 @@
                 <!-- <% foreach { %> --> <!-- Use comments like this for front-end devs communication to back-end devs -->
                 <li id="my-list" data-ektron-temp="js/temp.json">
                     <h3 data-ektron-text="<%=Title%>"></h3>
-                    <img data-ektron-attributes="src=<%=Image%>" />
+                    <img data-ektron-attr="src=<%=Image%>" />
                 </li>
                 <!-- <% } %> -->
             </ul>

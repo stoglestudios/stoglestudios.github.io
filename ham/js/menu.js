@@ -11,63 +11,77 @@ $(document).ready(function(){
     initialImage = $(".hamburger").css('background-image').replace(")", "").split("/img/");
     currentImage = initialImage;
     touchStartPosition = null;
-    $(document).on("mousewheel", function ( event ) {
-        $float = $("#floating-menu");
-        if (!menuIsBuilt) {
-            buildFloatingMenu ();
-            menuIsBuilt = true;
-        }
-        var documentScroll = $(document).scrollTop();
-        var windowHeight = $(window).height();
-        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
-            floatingMenuIn();
-        } else {
-            floatingMenuOut();
-            $float.animate({height: menuBtnHeight + "px"}, 60);
-            $float.children("a").children(".hamburger").css("background-position-y", "0%");
-            imageCheck = true;
-        }
-    });
-    $(document).on("DOMMouseScroll", function ( event ) {
-        $float = $("#floating-menu");
-        if (!menuIsBuilt) {
-            buildFloatingMenu ();
-            menuIsBuilt = true;
-        }
-        var documentScroll = $(document).scrollTop();
-        var windowHeight = $(window).height();
-        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
-            floatingMenuIn();
-        } else {
-            floatingMenuOut();
-            $float.animate({height: menuBtnHeight + "px"}, 60);
-            $float.children("a").children(".hamburger").css("background-position-y", "0%");
-            imageCheck = true;
-        }
-    });
-    $(document).on("touchstart", function ( event ) {
-        touchStartPosition = event.originalEvent.touches[0].clientY;
-    });
-    $(document).on("touchend", function ( event ) {
-        var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
-        var documentScroll = $(document).scrollTop();
-        var windowHeight = $(window).height();
-        if (!menuIsBuilt) {
-            buildFloatingMenu ();
-            menuIsBuilt = true;
-        }
-        if ( touchEndPosition > touchStartPosition && documentScroll > windowHeight ) {
-            floatingMenuIn();
-        } else if ( touchEndPosition == touchStartPosition ) {
-            console.log("just a click");
-        } else {
-            floatingMenuOut();
-            var $float = $("#floating-menu");
-            if ( $float.height() > menuBtnHeight ) {
-                transitionHamburger( $float );
+    $(document).on("scroll", function ( event ) {
+        $(".filler").each( function () {
+            console.log ( $(this).css("background-color") );
+            if ( $(this).css("background-color") == "rgb(105, 105, 105)" ) {
+                $(this).css("background-color", "rgb(0, 0, 139)" );
+            } else if ( $(this).css("background-color") == "rgb(112, 128, 144)" ) {
+                $(this).css("background-color", "rgb(139, 0, 0)" );
+            } else if ( $(this).css("background-color") == "rgb(0, 0, 139)" ) {
+                $(this).css("background-color", "rgb(105, 105, 105)" );
+            } else if ( $(this).css("background-color") == "rgb(139, 0, 0)" ) {
+                $(this).css("background-color", "rgb(112, 128, 144)" );
             }
-        }
+        });
     });
+//    $(document).on("mousewheel", function ( event ) {
+//        $float = $("#floating-menu");
+//        if (!menuIsBuilt) {
+//            buildFloatingMenu ();
+//            menuIsBuilt = true;
+//        }
+//        var documentScroll = $(document).scrollTop();
+//        var windowHeight = $(window).height();
+//        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
+//            floatingMenuIn();
+//        } else {
+//            floatingMenuOut();
+//            $float.animate({height: menuBtnHeight + "px"}, 60);
+//            $float.children("a").children(".hamburger").css("background-position-y", "0%");
+//            imageCheck = true;
+//        }
+//    });
+//    $(document).on("DOMMouseScroll", function ( event ) {
+//        $float = $("#floating-menu");
+//        if (!menuIsBuilt) {
+//            buildFloatingMenu ();
+//            menuIsBuilt = true;
+//        }
+//        var documentScroll = $(document).scrollTop();
+//        var windowHeight = $(window).height();
+//        if ( documentScroll > windowHeight && event.originalEvent.wheelDelta >= 0 ) {
+//            floatingMenuIn();
+//        } else {
+//            floatingMenuOut();
+//            $float.animate({height: menuBtnHeight + "px"}, 60);
+//            $float.children("a").children(".hamburger").css("background-position-y", "0%");
+//            imageCheck = true;
+//        }
+//    });
+//    $(document).on("touchstart", function ( event ) {
+//        touchStartPosition = event.originalEvent.touches[0].clientY;
+//    });
+//    $(document).on("touchend", function ( event ) {
+//        var touchEndPosition = event.originalEvent.changedTouches[0].clientY;
+//        var documentScroll = $(document).scrollTop();
+//        var windowHeight = $(window).height();
+//        if (!menuIsBuilt) {
+//            buildFloatingMenu ();
+//            menuIsBuilt = true;
+//        }
+//        if ( touchEndPosition > touchStartPosition && documentScroll > windowHeight ) {
+//            floatingMenuIn();
+//        } else if ( touchEndPosition == touchStartPosition ) {
+//            console.log("just a click");
+//        } else {
+//            floatingMenuOut();
+//            var $float = $("#floating-menu");
+//            if ( $float.height() > menuBtnHeight ) {
+//                transitionHamburger( $float );
+//            }
+//        }
+//    });
     $("#menu .menu-btn").on("click", function() {
         transitionHamburger($(this).parent());
     });
@@ -88,11 +102,6 @@ function buildFloatingMenu () {
     $("#floating-menu .menu-btn").on("click", function() {
         transitionHamburger($(this).parent());
     });
-//    $("#floating-menu .menu-btn").on("touch", function(evt) {
-//        //evt.stopPropagation();
-//        transitionHamburger($(this).parent());
-//        console.log("Touched");
-//    });
     console.log("floating menu built");
 }
 function floatingMenuIn() {
