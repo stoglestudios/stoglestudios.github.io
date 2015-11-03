@@ -128,11 +128,9 @@ function windowScrolling () {
     T_previous++;
     T_current++;
     if ( T_previous == 0 ) {
-        console.log("<--T is 0-->");
         windowPositions[0] = initialWindowPostion;
         windowPositions[1] = $(document).scrollTop();
     } else if ( T_previous > 0 ) {
-        console.log("<--" + initialWindowPostion + "-->");
         windowPositions[T_current] = $(document).scrollTop();
 
         if ( windowPositions[T_current] == windowPositions[T_previous]) {
@@ -141,15 +139,15 @@ function windowScrolling () {
             //end tracking
             clearInterval( scrollTracking );
             if ( $(document).scrollTop() > initialWindowPostion + scrollUnequalizer ) {
-                setColors();
                 floatingMenuOut();
+                setColors();
             } else if ( $(document).scrollTop() < initialWindowPostion + scrollUnequalizer ) {
-                setOtherColors();
                 if ( $(document).scrollTop() > $(window).height() ) {
                     floatingMenuIn();
                 } else {
                     floatingMenuOut();
                 }
+                setOtherColors();
             }
             //reset all vars to intial values
             T_previous = -1;
@@ -159,9 +157,7 @@ function windowScrolling () {
             currentWindowPosition = null;
             windowPositions.length = 0;
         }
-        
     }
-    
 }
 function flashColors() {
     $(".filler").each( function() {
