@@ -1,5 +1,13 @@
 /* Menu Animation */
 
+//SET INITIAL VARS
+T_previous = -1;
+T_current = 0;
+isScrolling = false;
+initialWindowPostion = null;
+currentWindowPosition = null;
+windowPositions = [];
+
 $(document).ready(function(){
     menuIsBuilt = false;
     menuBtnHeight = $(".menu-btn").outerHeight();
@@ -12,19 +20,18 @@ $(document).ready(function(){
     currentImage = initialImage;
     touchStartPosition = null;
     $(document).on("scroll", function ( event ) {
-        $(".filler").each( function () {
-            console.log ( $(this).css("background-color") );
-            if ( $(this).css("background-color") == "rgb(105, 105, 105)" ) {
-                $(this).css("background-color", "rgb(0, 0, 139)" );
-            } else if ( $(this).css("background-color") == "rgb(112, 128, 144)" ) {
-                $(this).css("background-color", "rgb(139, 0, 0)" );
-            } else if ( $(this).css("background-color") == "rgb(0, 0, 139)" ) {
-                $(this).css("background-color", "rgb(105, 105, 105)" );
-            } else if ( $(this).css("background-color") == "rgb(139, 0, 0)" ) {
-                $(this).css("background-color", "rgb(112, 128, 144)" );
-            }
-        });
+        if (!isScrolling) {
+            initialWindowPostion = $(document).scrollTop(); // <-- GET: CURRENT WINDOW POSTION;
+            scrollTracking = setInterval( windowScrolling, 50 );
+            //SET FINAL VAR
+            isScrolling = true;
+            
+        }
+        flashColors();
     });
+        
+        
+        
 //    $(document).on("mousewheel", function ( event ) {
 //        $float = $("#floating-menu");
 //        if (!menuIsBuilt) {
@@ -161,4 +168,55 @@ function transitionHamburger(self) {
                 } );
         }
     }, 60);
+}
+function windowScrolling () {
+    if ( T_previous == 0 ) {
+        windowPositions[0] = initialWindowPostion;
+        windowPositions[1] = $(document).scrollTop();
+    } else if ( T_previous > 0 ) {
+        windowPositions[T_current] = $(document).scrollTop();
+    }
+    if ( windowPositions[T_current] == windowPositions[T_previous]) {
+
+        // STOP!!
+        //end tracking
+        // if window delta >= 0 run menu close
+        // if window delta < 0 run menu open
+        //reset all vars to intial values
+        T_previous = -1;
+        T_current = 0;
+        isScrolling = false;
+        initialWindowPostion = null;
+        currentWindowPosition = null;
+        windowPositions.length = 0;
+        clearInterval( scrollTracking );
+        setColors();
+    } else {
+        T_previous++;
+        T_current++;
+    }
+}
+function flashColors() {
+    $(".filler").each( function() {
+        if ( $(this).css("background-color") == "rgb(105, 105, 105)" || $(this).css("background-color") == "rgb(0, 100, 0)" ) { //grey or green
+            $(this).css("background-color", "rgb(0, 0, 139)" ); //blue
+        } else if ( $(this).css("background-color") == "rgb(112, 128, 144)" || $(this).css("background-color") == "rgb(218, 165, 32)" ) { //periwinkle or goldenrod
+            $(this).css("background-color", "rgb(139, 0, 0)" ); //red
+        } else if ( $(this).css("background-color") == "rgb(0, 0, 139)" ) { //blue or 
+            $(this).css("background-color", "rgb(105, 105, 105)" ); //grey
+        } else if ( $(this).css("background-color") == "rgb(139, 0, 0)" ) { //red
+            $(this).css("background-color", "rgb(112, 128, 144)" ); //periwinkle
+        }
+    });
+    console.log( "flashing colors" );
+}
+function setColors() {
+    $(".filler").each( function() {
+        if ( $(this).css("background-color") == "rgb(105, 105, 105)" || $(this).css("background-color") == "rgb(0, 0, 139)" ) { //grey or blue
+            $(this).css("background-color", "rgb(218, 165, 32)" ); //goldenrod
+        } else if ( $(this).css("background-color") == "rgb(139, 0, 0)" || $(this).css("background-color") == "rgb(112, 128, 144)" ) { //red or periwinkle
+            $(this).css("background-color", "rgb(0, 100, 0)" ); //green
+        }
+    });
+    console.log( "setting colors" );
 }
