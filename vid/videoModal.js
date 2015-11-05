@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //remove existing videos
     $("#video").remove();
-    if ( $(window).width() < $(document).width() ) {
+    if ( $(window).width() < $(document).width()*.95 ) {
         screenSizingWrong = true;
     } else {
         screenSizingWrong = false;
