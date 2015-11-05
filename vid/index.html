@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+    <head>
+        <style>
+            #videoModal {
+                position: absolute;
+                display:none;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                background-color: rgba(0,0,0,.8);
+                z-index: 10000;
+                text-align: center;
+            }
+            #videoModalContainer {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+            }
+            #videoModalContainer>span {
+                position: relative;
+                display: inline-block;
+                height:100%;
+                max-height: 100%;
+                width: 0;
+                line-height: 100%;
+                top:0;
+                left:0;
+                vertical-align: middle;
+            }
+            #videoBox {
+                position: relative;
+                display: inline-block;
+                width: 80%;
+                height: 80%;
+                text-align: center;
+                background-color: #191919;
+                vertical-align: middle;
+                font-size: 16px;
+                padding-top: 1em;
+                box-shadow: 0 0 40px rgba(0,0,0,.8);
+            }
+            #video {
+                width: 100%;
+                height: 100%;
+            }
+            #videoBox a {
+                display: inline-block;
+                position:absolute;
+                right: 0;
+                height: 2em;
+                line-height: 2em;
+                bottom: -1em;
+                padding: 0 1.5em;
+                border-radius: 1em;
+                background-color: #191919;
+                color: white;
+            }
+            #videoBox a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+                color: #2cc1cd;
+            }
+            body {
+                padding: 100px;
+                background-color: #666;
+            }
+            section {
+                width: 100%;
+                text-align: center;
+                padding: inherit;
+                background-color: #557755;
+            }
+            a {
+                color: lightgreen;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <a class="play-video" data-youtube-id="https://www.youtube.com/embed/e2dwwMHg7ZQ" href="">Watch Movie ></a>
+        </section>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="videoModal.js"></script>
+</html>
