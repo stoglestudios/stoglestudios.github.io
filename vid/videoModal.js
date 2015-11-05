@@ -1,6 +1,11 @@
 $(document).ready(function () {
     //remove existing videos
     $("#video").remove();
+    if ( $(window).width() < $(document).width() ) {
+        screenSizingWrong = true;
+    } else {
+        screenSizingWrong = false;
+    }
     createVideoModal();
     $('.play-video').on('click', function (ev) {
         var videoID = $(this).data("youtube-id");
@@ -33,8 +38,14 @@ $(document).ready(function () {
     });
 });
 function sizeVideo () {
+    console.log("Window:\nwidth: " + $(window).width() + " & height: " + $(window).height() + "\n\n")
+    console.log("Document:\nwidth: " + $(document).width() + " & height: " + $(document).height() + "\n\n-----------------------\n\n")
     var viewPortWidth = $(window).width();
     var viewPortHeight = $(window).height();
+    if ( screenSizingWrong ) {
+        // in case device computes window size wrong
+        viewPortWidth = $(document).width();
+    }
     var videoBoxPadding = parseInt($("#videoBox").css("padding-top"));
     var totalVideoPadding = videoBoxPadding * 2;
     var potentialWidth = .8 * viewPortWidth;
@@ -58,6 +69,10 @@ function sizeVideo () {
     $("#videoModalContainer").css("height", viewPortHeight);
     $("#video").css("max-width", "1920px");
     $("#video").css("max-height", "1080px");
+    $("#videoModal").css({
+        "width": viewPortWidth,
+        "height": $(document).height()
+    });
 }
 // Movie Modal
 function createVideoModal() {
