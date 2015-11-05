@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //remove existing videos
     $("#video").remove();
-    // in case device computes window size wrong (.98 is to allow for a few pixels difference)
+    // in case device (ios esp) computes window size wrong (.98 is to allow for a few pixels difference)
     if ( $(window).width() < $(document).width()*.98 ) {
         screenSizingWrong = true;
     } else {
