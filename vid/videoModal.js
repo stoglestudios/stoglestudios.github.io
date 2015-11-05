@@ -71,7 +71,8 @@ function sizeVideo () {
     $("#video").css("max-height", "1080px");
     $("#videoModal").css({
         "width": viewPortWidth,
-        "min-height": $(document).height()
+        "min-height": $(document).height(),
+        "height": $(window).height()
     });
 }
 // Movie Modal
