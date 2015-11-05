@@ -1,6 +1,7 @@
 $(document).ready(function () {
     //remove existing videos
     $("#video").remove();
+    // in case device computes window size wrong (.98 is to allow for a few pixels difference)
     if ( $(window).width() < $(document).width()*.98 ) {
         screenSizingWrong = true;
     } else {
@@ -38,8 +39,6 @@ $(document).ready(function () {
     });
 });
 function sizeVideo () {
-    console.log("Window:\nwidth: " + $(window).width() + " & height: " + $(window).height() + "\n\n")
-    console.log("Document:\nwidth: " + $(document).width() + " & height: " + $(document).height() + "\n\n-----------------------\n\n")
     var viewPortWidth = $(window).width();
     var viewPortHeight = $(window).height();
     if ( screenSizingWrong ) {
@@ -51,7 +50,7 @@ function sizeVideo () {
     var potentialWidth = .8 * viewPortWidth;
     var potentialHeight = .8 * viewPortHeight;
     var letterBoxFactor = 16 / 9;
-    console.log("Pot-w: " + potentialWidth + "; Pot-h: " + potentialHeight + "; pad: " + videoBoxPadding);
+    // determine limiting factor: width or height
     if ( potentialWidth > potentialHeight * letterBoxFactor ) {
         // calculate width from height;
         $("#video").css("width", (potentialHeight - totalVideoPadding) * letterBoxFactor + "px");
