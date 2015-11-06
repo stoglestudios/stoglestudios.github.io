@@ -20,7 +20,7 @@
             <!-- This is an example of passing ektron text to display -->
             <!-- Leave the element blankand it  will add text as expected, but adding an empty element with class="ektron-text" can be use to ensure the text is added without extra whitespace -->
             <!-- You can use "<%" and "%>" as reminders/markers during development and they will be removed before displaying -->
-            <h2 data-ektron-text="<% Part 1: Setting text, data, and CSS - High Fives %>"><div class="ektron-text"></div><span></span></h2>
+            <h2 data-ektron-text="<% Part 1: Setting text, data, and CSS - High Fives %>"><div class="ektron-text">You can put temp text here</div><span></span></h2>
             <p data-ektron-text="Set text by filling emptiness or by using a placeholder. Set CSS with media queries and pseudo classes. Using data for custom JS functions."></p>
 
             <!-- This is an example of adding specialty data, not a part of the framework, that can come from Ektron but be used in a javascript function -->
@@ -38,18 +38,19 @@
         <section id="puppies">
             <h2>Part 2: Attributes and Puppies</h2>
             <!-- This is an example of adding attributes -->
-            <!-- attribute name and equal sign and the value -->
+            <!-- attribute name and 2 equal signs and the value -->
             <!-- Multiple attributes can be added using an "&" just lie a query string -->
-            <a id="link" data-ektron-attr="href=https://www.google.com/search?q=puppies" data-ektron-text="Google Puppies right Now" target="_blank"></a>
+            <!-- Adding the attribute inline, as in the yoube link below, will act as default/temp data if the ektron value fails to populate -->
+            <a id="link" data-ektron-attr="href==https://www.google.com/search?q=puppies" href="//youtube.com" data-ektron-text="Google Puppies right Now" target="_blank"></a>
 
             <div id="anotherdiv">
                 <!-- since & and = are used to deliminate, if you want to use an & or =  in an alt attribute you can use the ASCII Hex value instead-->
-                <img data-ektron-attr="src=img/puppy.jpg &alt = This is a picture of a puppy %26 a white background, which %3B cute." data-ektron-css="border: transparent; &:hover{border: solid black 1px;background-color:darkred;}" />
+                <img data-ektron-attr="src==img/puppy.jpg &alt = This is a picture of a puppy %26 a white background, which %3B cute." data-ektron-css="border: transparent; &:hover{border: solid black 1px;background-color:darkred;}" />
                 <img src="img/puppy.jpg" />
             </div>
 
             <!-- Framework will auto add a random unique id if none are present -->
-            <button data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Click Here</button>
+            <button data-youtube-id="" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch a Puppy Video</button>
             <p>More paragraph text, this time in white.</p>
         </section>
         <section id="puppies">
@@ -59,7 +60,7 @@
             <p>To deal with this, Umptron will update all <b>body>section</b> tags with unique classes based on the page they appear on. One will be the page name from the URL (minus the extension, if applicable). In this case, "index.html" becomes "index". The other class will be the page name plus the section's ID. These unique classes will help targeting elements from different instantiations of the same widget with css and js. If the same widget appears on the same page, its id will get changed to a sequence. "my_id", becomes "my_id0", "my_id1", "my_id2", etc. This means that every widget should really be inclosed with a section tag--which makes semantic sense anyway.</p>
         </section>
         <section id="LOTR">
-            <h2>Part 3: JRR Tolkien and Building Loops in HTML Using Temp Data</h2>
+            <h2>Part 3: JRR Tolkien and Building Ektron-like Loops in HTML Using Temp Data</h2>
             <ul> 
                 <!-- Loop for easy integration with Ektron -->
                 <!-- Passing data-ektron-temp a json file of sample data will generate the elements based on that sample, including child elements -->
@@ -68,7 +69,7 @@
                 <!-- <% foreach { %> --> <!-- Use comments like this for front-end devs communication to back-end devs -->
                 <li id="my-list" data-ektron-temp="js/temp.json">
                     <h3 data-ektron-text="<%=Title%>"></h3>
-                    <img data-ektron-attr="src=<%=Image%>" />
+                    <img data-ektron-attr="src==<%=Image%>" />
                 </li>
                 <!-- <% } %> -->
             </ul>

@@ -83,7 +83,7 @@ classIDsArray = [];
 
 //Functions
 function ektronFramework( $this ) {
-    if ( $this.data("ektron-text") ) {
+    if ( $this.data("ektron-text") && $this.data("ektron-text").length > 0 ) {
         var currentString = $this.data("ektron-text");
         currentString = currentString.replace("<%", "");
         currentString = currentString.replace("%>", "");
@@ -93,14 +93,16 @@ function ektronFramework( $this ) {
             $this.html(currentString);
         }
     }
-    if ( $this.data("ektron-attr") && $this.data("ektron-attr").indexOf("<%") < 0 ) {
+    if ( $this.data("ektron-attr") && $this.data("ektron-attr").indexOf("<%") < 0 && $this.data("ektron-attr").length > 0 ) {
         var thisAttributes = $this.data("ektron-attr").split("&");
         for (var i=0; i<thisAttributes.length; i++) {
-            thisAttr = $.trim(thisAttributes[i]).split("="); 
+            thisAttr = $.trim(thisAttributes[i]).split("=="); 
             if ( thisAttr[0] && thisAttr[1] ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
                 thisAttr[1] = $.trim(thisAttr[1].replace("%26", "&").replace("%3B","=")) + "";
-                $this.attr(thisAttr[0], thisAttr[1]);
+                if ( thisAttr[1].length > 0 ) {
+                    $this.attr(thisAttr[0], thisAttr[1]);
+                }
             }
         }
     }
@@ -221,6 +223,24 @@ function fixMultipleIDs () {
         }
     }
 }
+
+/*
+vimeo:
+<iframe src="//player.vimeo.com/video/VIDEO_ID?autoplay=1&badge=0&byline=0&color=FFF&portrait=0&title=0&player_id=my-player" width="WIDTH" height="HEIGHT" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+youtube:
+<iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://current.com&controls=" frameborder="0"/>
+
+
+enablejsapi=1 allows to be controlled by JS
+playerapiid=anyString
+modestbranding=1
+rel=0
+showinfo=0
+disablekb=1
+autohide=1
+*/
+
 
 
 
