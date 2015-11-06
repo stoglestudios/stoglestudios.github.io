@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Helv N45 Sub Bold Cdn";
-    src: url("fonts/RobotoCondensed-Bold.ttf") format('truetype');
+    src: url("fonts/RobotoCondensed-Light.ttf") format('truetype');
 }
 @font-face {
     font-family: "Helv N45 Sub Reg";
@@ -72,9 +72,19 @@
     color: white;
 }
 #videoBox a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
     color: #72ccd2;
+}
+.close-video:after {
+    content: "X";
+    border-radius: 10px;
+    border: solid white 1px;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+#videoBox a:hover:after {
+    border-color: #72ccd2;
 }
 
 /*
@@ -118,7 +128,7 @@
     text-align: left;
     background-color: white;
     vertical-align: middle;
-    font-size: .8em;
+    font-size: 1em;
     line-height: 1.2em;
     padding: 2em;
     margin: 2em 0;
@@ -145,6 +155,9 @@
     margin-top: 20px;
     box-shadow: 1px 2px 0 rgba(0,0,0,.1);
     cursor: pointer;
+}
+.leaveUmpquaModel a:hover {
+    text-decoration: none;
 }
 .leaveUmpquaModel .dialogCancel {
     margin-right: 20px;

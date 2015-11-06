@@ -397,7 +397,7 @@ function createVideoModal() {
     $("#videoModalContainer").css("height", $(window).height());
     $("#videoModalContainer").append("<span></span>");
     $("#videoModalContainer").append("<div id='videoBox'></div>");
-    $("#videoBox").append("<a class='close-video'>Close (X)</a>");
+    $("#videoBox").append("<a class='close-video'>Close</a>");
     $(".close-video, #videoModal").on("click", function () {
         $("#videoModal").hide();
         $("#video").remove();
