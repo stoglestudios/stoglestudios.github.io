@@ -67,7 +67,6 @@ $(document).ready(function() {
                     $(thisElement).removeAttr("data-ektron-temp");
                     $(thisElement).attr("id", thisElementName + l);
                 }
-                console.log( allElementsString );
             }
         } 
         //Run Framework on document
@@ -94,14 +93,13 @@ function ektronFramework( $this ) {
         }
     }
     if ( $this.data("ektron-attr") && $this.data("ektron-attr").indexOf("<%") < 0 && $this.data("ektron-attr").length > 0 ) {
-        var thisAttributes = $this.data("ektron-attr").split("&");
+        var thisAttributes = $this.data("ektron-attr").split("&&");
         for (var i=0; i<thisAttributes.length; i++) {
             thisAttr = $.trim(thisAttributes[i]).split("=="); 
             if ( thisAttr[0] && thisAttr[1] ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
-                thisAttr[1] = $.trim(thisAttr[1].replace("%26", "&").replace("%3B","=")) + "";
                 if ( thisAttr[1].length > 0 ) {
-                    $this.attr(thisAttr[0], thisAttr[1]);
+                    $this.attr( thisAttr[0], $.trim( thisAttr[1] ) );
                 }
             }
         }
@@ -162,6 +160,133 @@ function ektronFramework( $this ) {
         styleTag += "</style>";
         $("head").append(styleTag);
     }
+    // <-- ADD INTERSESSIONAL BUTTON CODE
+    if ( $this.data("ektron-warning") ) {
+        if ( !$(".leaveUmpquaModell").length ) {
+            createLeaveUmpquaDialog();
+        }
+        $this.on("click", function (event) {
+            event.preventDefault();
+            var linkOutside = $this.attr("href");
+            $(".leaveUmpquaModel").show();
+            if ( $this.data("ektron-warning").length > 1 ) {
+                $(".leaveModalBox").children("p").text( $this.data("ektron-warning") );
+            }
+            $(".dialogOK").attr("href", linkOutside);
+        });
+    }
+    // <-- VIDEO MODAL CODE
+    if ( $this.data("ektron-youtube") || $this.data("ektron-vimeo") ) {
+        if ( !$("#videoModal").length ) {
+            createVideoModal();
+        }
+        var videoOptions = '';
+        if ( $this.data("ektron-options") ) {
+            videoOptions = $this.data("ektron-options");
+        }
+        var videoSource = "youtube";
+        if ( $this.data("ektron-vimeo") ) {
+            videoSource = "vimeo";
+        }
+        //build iFrame string
+        var videoIframe = '<iframe id="video" src="';
+        //attache click handler
+        if ( videoSource == "vimeo") {
+            videoIframe += 'http://player.vimeo.com/video/';
+            videoIframe += $this.data("ektron-vimeo") + '?';
+            
+        } else {
+            videoIframe += 'http://www.youtube.com/embed/';
+            videoIframe += $this.data("ektron-youtube") + '?';
+        }
+        videoIframe += attachOptions( videoSource, videoOptions);
+        videoIframe += '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+        $this.on("click", function(){
+            $("#videoModal").show();
+            $("#videoBox").prepend(videoIframe);
+            sizeVideo();
+        });
+    }
+    $(window).resize(function () {
+        sizeVideo();
+    });
+    
+}
+var youtubeDefaults = [
+    "autoplay=1",
+    "enablejsapi=1",
+    "playerapiid=umplayer",
+    "modestbranding=0",
+    "rel=0",
+    "showinfo=0",
+    "disablekb=1",
+    "autohide=1",
+    "origin=" + window.location.href
+]; 
+var vimeoDefaults = [
+    "autoplay=1",
+    "badge=0",
+    "byline=0",
+    "color=FFF",
+    "portrait=0",
+    "title=0",
+    "player_id=umplayer"
+];
+function attachOptions ( source, options ) {
+    var videoQS = "";
+    var customOptions = options.split("&");
+    if ( source == "vimeo") {
+        for (var i=0; i<customOptions.length; i++) {
+            var paramName = customOptions[i].split("=")[0];
+            // SEARCH through array and DELETE any that contain paramName
+            for (var a=0; a<vimeoDefaults.length; a++) {
+                if ( vimeoDefaults[a].indexOf(paramName) > -1 ) {
+                    vimeoDefaults.splice(a, 1);
+                }
+            }
+            // ADD items from 
+            vimeoDefaults.push( customOptions[i] );
+        }
+        for ( var b=0; b<vimeoDefaults.length; b++) {
+            videoQS += vimeoDefaults[b] + "&";
+        }
+        videoQS = videoQS.substring(0, videoQS.length - 1);
+    } else {
+        for (var j=0; j<customOptions.length; j++) {
+            var paramName = customOptions[j].split("=")[0];
+            // SEARCH through array and DELETE any that contain paramName
+            for (var c=0; c<youtubeDefaults.length; c++) {
+                if ( youtubeDefaults[c].indexOf(paramName) > -1 ) {
+                    youtubeDefaults.splice(c, 1);
+                }
+            }
+            // ADD items from 
+            youtubeDefaults.push( customOptions[j] );
+        }
+        for ( var d=0; d<youtubeDefaults.length; d++) {
+            videoQS += youtubeDefaults[d] + "&";
+        }
+        videoQS = videoQS.substring(0, videoQS.length - 1);
+    }
+    return videoQS;
+}
+function createLeaveUmpquaDialog() {
+    $("body").append("<div class='leaveUmpquaModel'></div>");
+    var winHeight = $("html").height() + $(window).height()/2;
+    $(".leaveUmpquaModel").css("height", winHeight );
+    $(".leaveUmpquaModel").append("<div class='windowModalContainer'></div>");
+    $(".windowModalContainer").css("height", $(window).height());
+    $(".windowModalContainer").append("<span></span>");
+    $(".windowModalContainer").append("<div class='leaveModalBox'></div>");
+    $(".leaveModalBox").append("<h1>HELLO THERE!</h1>");
+    $(".leaveModalBox").append("<p>By following this link, you will be leaving umpquabank.com. Click OK to continue or cancel to remain in umpquabank.com.</p>");
+    $(".leaveModalBox").append("<a class='dialogCancel'>CANCEL</a>");
+    $(".leaveModalBox").append("<a href='' class='dialogOK' target='_blank'>OK</a>");
+    $(".leaveUmpquaModel").hide();
+    console.log("Leave domain Modal Created");
+    $(".dialogCancel, .dialogOK, .leaveUmpquaModel").on("click", function () {
+        $(".leaveUmpquaModel").hide();
+    });
 }
 function pseudoClassFinder(teststring, testid, pclass) {
     teststring = teststring.replace("&:", ":");
@@ -180,15 +305,12 @@ function giveSectionsUniqueClasses ( self ) {
     fullPageName = fullPageName.replace("https://", "");
     fullPageName = fullPageName.replace("www.", "");
     fullPageName = fullPageName.replace(".com", "");
-    console.log(fullPageName);
     fullPageName = fullPageName.split("#")[0];
     fullPageName = fullPageName.split("?")[0];
     fullPageName = fullPageName.split("&")[0];
-    console.log(fullPageName);
     var pageNamesArray = fullPageName.split("/");
     var pageName = pageNamesArray[pageNamesArray.length-1];
     var pageExtension = pageName.split(".");
-    console.log(pageExtension[0]);
     if ( pageExtension.length > 0 ) {
         pageName = pageExtension[0];
     }
@@ -201,7 +323,6 @@ function giveSectionsUniqueClasses ( self ) {
         //pageName = domainArray[domainArray.length-2];
         pageName = "home";
     }
-    console.log(pageName);
     $this.addClass( pageName );
     var classID = pageName + "-" + $this.attr("id");
     $this.addClass( classID );
@@ -224,12 +345,83 @@ function fixMultipleIDs () {
     }
 }
 
+function sizeVideo() {
+    if ( $("#video").length ) {
+        var viewPortWidth = $(window).width();
+        var viewPortHeight = $(window).height();
+        if (screenSizingWrong) {
+            // in case device computes window size wrong
+            viewPortWidth = $(document).width();
+        }
+        var videoBoxPadding = parseInt($("#videoBox").css("padding-top"));
+        var totalVideoPadding = videoBoxPadding * 2;
+        var potentialWidth = .8 * viewPortWidth;
+        var potentialHeight = .8 * viewPortHeight;
+        var letterBoxFactor = 16 / 9;
+        // determine limiting factor: width or height
+        if (potentialWidth > potentialHeight * letterBoxFactor) {
+            // calculate width from height;
+            $("#video").css("width", (potentialHeight - totalVideoPadding) * letterBoxFactor + "px");
+            $("#video").css("height", potentialHeight - totalVideoPadding + "px");
+            $("#videoBox").css("width", potentialHeight * letterBoxFactor + "px");
+            $("#videoBox").css("height", potentialHeight + "px");
+        } else {
+            // calculate width from height;
+            $("#video").css("width", (potentialWidth - totalVideoPadding) + "px");
+            $("#video").css("height", (potentialWidth - totalVideoPadding) / letterBoxFactor + "px");
+            $("#videoBox").css("width", potentialWidth + "px");
+            $("#videoBox").css("height", potentialWidth / letterBoxFactor + "px");
+        }
+        $("#videoBox").css("padding-top", videoBoxPadding + "px");
+        $("#videoModalContainer").css("height", viewPortHeight);
+        $("#video").css("max-width", "1920px");
+        $("#video").css("max-height", "1080px");
+        $("#videoModal").css({
+            "width": viewPortWidth,
+            "min-height": $(document).height(),
+            "height": $(window).height()
+        });
+    }
+
+}
+// Movie Modal
+function createVideoModal() {
+    if ($(window).width() < $(document).width() * .98) {
+        screenSizingWrong = true;
+    } else {
+        screenSizingWrong = false;
+    }
+    $("body").append("<div id='videoModal'></div>");
+    $("#videoModal").css("height", $("html").css("height"));
+    $("#videoModal").append("<div id='videoModalContainer'></div>");
+    $("#videoModalContainer").css("height", $(window).height());
+    $("#videoModalContainer").append("<span></span>");
+    $("#videoModalContainer").append("<div id='videoBox'></div>");
+    $("#videoBox").append("<a class='close-video'>Close (X)</a>");
+    $(".close-video, #videoModal").on("click", function () {
+        $("#videoModal").hide();
+        $("#video").remove();
+    });
+    $("#videoModal").hide();
+    console.log("Video Modal Created");
+}
+
+
+
 /*
 vimeo:
-<iframe src="//player.vimeo.com/video/VIDEO_ID?autoplay=1&badge=0&byline=0&color=FFF&portrait=0&title=0&player_id=my-player" width="WIDTH" height="HEIGHT" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe 
+    src="//player.vimeo.com/video/VIDEO_ID?autoplay=1&badge=0&byline=0&color=FFF&portrait=0&title=0&player_id=my-player" 
+    frameborder="0"
+    id="video"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 youtube:
-<iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://current.com&controls=" frameborder="0"/>
+<iframe 
+    src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://current.com&controls="   
+    frameborder="0"
+    id="video"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 enablejsapi=1 allows to be controlled by JS
@@ -240,8 +432,6 @@ showinfo=0
 disablekb=1
 autohide=1
 */
-
-
 
 
 

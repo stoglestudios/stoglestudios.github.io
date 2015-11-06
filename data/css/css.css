@@ -47,6 +47,14 @@ ul img {
     margin: 0 auto;
     box-shadow: 1px 2px 5px rgba(0,0,0,.2);
 }
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 li {
     display: inline-block;
     margin: 10px 5px;
