@@ -182,5 +182,6 @@
 @media only screen and (orientation: landscape) {
     .close-video {
         display: none;
+        color: red;
     }
 }
