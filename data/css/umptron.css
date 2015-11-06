@@ -184,3 +184,8 @@
         display: none;
     }
 }
+@media all and (max-device-width: 500px) and (orientation: portrait) {
+    .leaveModalBox {
+        max-width: 180px;
+    }
+}
