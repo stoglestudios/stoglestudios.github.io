@@ -179,7 +179,7 @@
 .leaveUmpquaModel .dialogOK:hover {
     background-color: #72ccd2;
 }
-@media all and (orientation: landscape) {
+@media all and (max-device-width: 700px) and (orientation: landscape) {
     #videoBox a {
         display: none;
     }
