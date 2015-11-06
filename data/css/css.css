@@ -30,7 +30,7 @@ button {
 img {
     display: block;
 }
-span:after {
+h2 span:after {
     content: ">";
 }
 span {
