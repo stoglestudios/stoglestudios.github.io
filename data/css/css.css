@@ -24,7 +24,9 @@ h2 {
 #puppies0 p {
     color: white;
 }
-
+button {
+    margin: 10px;
+}
 img {
     display: block;
 }
