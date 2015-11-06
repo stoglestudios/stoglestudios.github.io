@@ -173,6 +173,7 @@ function ektronFramework( $this ) {
                 $(".leaveModalBox").children("p").text( $this.data("ektron-warning") );
             }
             $(".dialogOK").attr("href", linkOutside);
+            $(".windowModalContainer").css( "height", $(window).height() );
         });
     }
     // <-- VIDEO MODAL CODE
