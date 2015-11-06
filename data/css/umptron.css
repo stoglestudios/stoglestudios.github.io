@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: "Helv N45 Sub Bold Cdn";
-    src: url("fonts/texgyreheroscn-bold.otf") format('opentype');
+    src: url("fonts/RobotoCondensed-Bold.ttf") format('truetype');
 }
 @font-face {
     font-family: "Helv N45 Sub Reg";
-    src: url("fonts/texgyreheros-regular.otf") format('opentype');
+    src: url("fonts/Roboto-Medium.ttf") format('truetype');
 }
 
 /*
