@@ -180,8 +180,7 @@
     background-color: #72ccd2;
 }
 @media all and (orientation: landscape) {
-    .close-video {
+    #videoBox a {
         display: none;
-        color: red;
     }
 }
