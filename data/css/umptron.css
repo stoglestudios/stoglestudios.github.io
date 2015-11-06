@@ -179,3 +179,8 @@
 .leaveUmpquaModel .dialogOK:hover {
     background-color: #72ccd2;
 }
+@media only screen and (orientation: landscape) {
+    .close-video {
+        display: none;
+    }
+}
