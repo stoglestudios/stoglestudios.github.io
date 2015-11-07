@@ -20,12 +20,12 @@
             </script>
         <![endif]-->
         <section id="intro">
-            <h1>Umptron: Building a JS Framework for Easy Ektron Development</h1>
+            <h1>Umptron: A Framework for Easy Ektron Integration</h1>
             <!-- This is an example of passing ektron text to display -->
             <!-- Leave the element blankand it  will add text as expected, but adding an empty element with class="ektron-text" can be use to ensure the text is added without extra whitespace -->
             <!-- You can use "<%" and "%>" as reminders/markers during development and they will be removed before displaying -->
-            <h2 data-ektron-text="<% Part 1: Setting text, data, and CSS - High Fives %>"><div class="ektron-text">You can put temp text here</div><span></span></h2>
-            <p data-ektron-text="Set text by filling emptiness or by using a placeholder. Set CSS with media queries and pseudo classes. Using data for custom JS functions."></p>
+            <h2 data-ektron-text="<%= Part 1: Setting text, data, and CSS - High Fives %>"><div class="ektron-text">You can put temp text here</div><span></span></h2>
+            <p data-ektron-text="Set text by filling emptiness or by using a placeholder. Set CSS with media queries and pseudo classes. Use data from Ektron for custom JS functions."></p>
 
             <!-- This is an example of adding specialty data, not a part of the framework, that can come from Ektron but be used in a javascript function -->
             <!-- It is not necessary, but by using this naming convention it can be easier to remember that this data will need come from Ektron 
@@ -45,9 +45,9 @@
             <!-- attribute name and 2 equal signs and the value -->
             <!-- Multiple attributes can be added using an "&&" just like a query string, -->
             <!-- but doubled to differentiate from query strings that might appear in an href -->
-            <!-- Adding the attribute inline, as in the yoube link below, will act as default/temp data if the ektron value fails to populate -->
+            <!-- Adding the attribute inline, as in the youtube link below, will act as default/temp data if the ektron value fails to populate -->
             <!-- data-ektron-warning adds a leaving domain pop-up. this has default text that can be overridden by replacing the value "1" with a string -->
-            <a id="link" data-ektron-warning="1" data-ektron-attr="href==https://www.google.com/search?q=puppies" href="//youtube.com" data-ektron-text="Google Puppies Right Now!!!" target="_blank"></a>
+            <a id="link" data-ektron-warning="1" data-ektron-attr="href==<%= https://www.google.com/search?q=puppies %>" href="//youtube.com" data-ektron-text="Google Puppies Right Now!!!" target="_blank"></a>
 
             <div id="anotherdiv">
                 <!-- since & is used to deliminate, if you want to use one, you can use the ASCII Hex value instead -->
@@ -62,16 +62,17 @@
             <!-- Vimeo, for example, let's you customize a theme color. Umptron allows for easy setup for this color to be managed by Ektron -->
             <button data-ektron-youtube="e2dwwMHg7ZQ" data-ektron-options="modestbranding=1&rel=1" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch Made to Grow</button>
             <button data-ektron-vimeo="144404612" data-ektron-options="color=72ccd2" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch a Puppy Video</button>
-            <p>More paragraph text, this time in white.</p>
+            <p>Umptron provides a quick and easy way to add video, both YouTube and Vimeo, to a page that will be easy for Ektron to provide the video id and even paramenters such as the color theme for vimeo.</p>
         </section>
         <section id="puppies">
-            <p>One advantage to a CMS, like Ektron, is that the widgets can be reused. However, this can also be problematic with id attributes because they must be unique on each page. Therefore, we should try to avoid using id attributes wherever possible and use classes instead. Additionally, the CSS can be hard to work with since the same widget will have exactly the same class and id names as other instantiations of that same widget elsewhere. This will makes things difficult if you want to style those instances differently but with the same stylesheets. Or target them in JS/jQuery, for that matter.   </p>
+            <p>One advantage to a CMS, like Ektron, is that the widgets can be reused. However, I found this problematic with id attributes because they must be unique on each page and should be unique across pages of a microsite for CSS/JS targeting. Therefore, we should try to avoid using id attributes wherever possible and use classes instead. </p>
         </section>
         <section id="puppies">
-            <p>To deal with this, Umptron will update all <b>body>section</b> tags with unique classes based on the page they appear on. One will be the page name from the URL (minus the extension, if applicable). In this case, "index.html" becomes "index". The other class will be the page name plus the section's ID. These unique classes will help targeting elements from different instantiations of the same widget with css and js. If the same widget appears on the same page, its id will get changed to a sequence. "my_id", becomes "my_id0", "my_id1", "my_id2", etc. This means that every widget should really be inclosed with a section tag--which makes semantic sense anyway.</p>
+            <p>Umptron can help with this issue by automatically updating all <b>body>section</b> tags with unique classes based on the page they appear on. One will be the page name from the URL (minus the extension, if applicable). In this case, "index.html" becomes "index". The other class will be the page name plus the section's ID. These unique classes will help targeting elements from different instantiations of the same widget with css and js. If the same widget appears on the same page, its id will get changed to a sequence. "my_id", becomes "my_id0", "my_id1", "my_id2", etc. This means that every widget should really be inclosed with a section tag--which makes semantic sense anyway.</p>
         </section>
         <section id="LOTR">
             <h2>Part 3: JRR Tolkien and Building Ektron-like Loops in HTML Using Temp Data</h2>
+            <p>The list below is made from a JSON file. This way the HTML will look very similar to what the Ektron view code will look like which can help with communication between devs as well as help see potential problems before handing off ot the back end. This should make things easier for the integration, but also front end development because A) you don't have to hand code every item in the list. (sure you could use Angular, but that will just be removed and redone upon integration and Angualr isn't built specificly for this kind of CMS development. And B) it helps the front end dev think about things in the right way in order to avoid tangled issues later.</p>
             <ul> 
                 <!-- Loop for easy integration with Ektron -->
                 <!-- Passing data-ektron-temp a json file of sample data will generate the elements based on that sample, including child elements -->

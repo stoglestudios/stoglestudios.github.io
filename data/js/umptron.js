@@ -84,6 +84,7 @@ classIDsArray = [];
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") && $this.data("ektron-text").length > 0 ) {
         var currentString = $this.data("ektron-text");
+        currentString = currentString.replace("<%=", "");
         currentString = currentString.replace("<%", "");
         currentString = currentString.replace("%>", "");
         currentString = $.trim( currentString );
@@ -92,12 +93,21 @@ function ektronFramework( $this ) {
             $this.html(currentString);
         }
     }
-    if ( $this.data("ektron-attr") && $this.data("ektron-attr").indexOf("<%") < 0 && $this.data("ektron-attr").length > 0 ) {
-        var thisAttributes = $this.data("ektron-attr").split("&&");
+    $attr = $this.data("ektron-attr");
+    if ( $attr && $attr.length > 0 ) {
+        $attr = $attr.replace("<%=", "");
+        $attr = $attr.replace("<%", "");
+        $attr = $attr.replace("%>", "");
+        
+        
+        var thisAttributes = $attr.split("&&");
         for (var i=0; i<thisAttributes.length; i++) {
             thisAttr = $.trim(thisAttributes[i]).split("=="); 
             if ( thisAttr[0] && thisAttr[1] ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
+                //thisAttr[1] = thisAttr[1].replace("<%=", "");
+                //thisAttr[1] = thisAttr[1].replace("<%", "");
+                //thisAttr[1] = thisAttr[1].replace("%>", "");
                 if ( thisAttr[1].length > 0 ) {
                     $this.attr( thisAttr[0], $.trim( thisAttr[1] ) );
                 }
