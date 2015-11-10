@@ -37,7 +37,7 @@
             <!-- CSS can be used simply by writing normal CSS (ie background-color:black;border:solid red 1px;) -->
             <!-- Media queries can be added by using "&" to deliniate and adding "@min/max:[Number] at the end" -->
             <!-- Currently, only supports Screen min-width and max-width, but I might add others, like lanscape/portrait or Print etc -->
-            <div id="highfive" data-ektron-css="background-image:url(img/High_five.png);&background-image:url(img/despicable-me-high-five-minions-magnet-4.jpg);background-color:white;@min:400&background-image:url(img/highfive.jpg);background-color:#9bb3e1;@min:800"></div>
+            <div id="highfive" data-ektron-css="background-image:url(<%= img/High_five.png %>);&background-image:url(<%= img/despicable-me-high-five-minions-magnet-4.jpg %>);background-color:white;@min:400&background-image:url(<%= img/highfive.jpg %>);background-color:#9bb3e1;@min:800"></div>
         </section>
         <section id="puppies">
             <h2>Part 2: Attributes and Puppies</h2>
@@ -46,11 +46,11 @@
             <!-- Multiple attributes can be added using an "&&" just like a query string, -->
             <!-- but doubled to differentiate from query strings that might appear in an href -->
             <!-- Adding the attribute inline, as in the youtube link below, will act as default/temp data if the ektron value fails to populate -->
-            <!-- data-ektron-warning adds a leaving domain pop-up. this has default text that can be overridden by replacing the value "1" with a string -->
+            <!-- data-ektron-warning adds a leaving domain pop-up. 
+            <!-- This has default text that can be overridden by replacing the value "1" with a string, making it manangeable through Ektron -->
             <a id="link" data-ektron-warning="1" data-ektron-attr="href==<%= https://www.google.com/search?q=puppies %>" href="//youtube.com" data-ektron-text="Google Puppies Right Now!!!" target="_blank"></a>
 
             <div id="anotherdiv">
-                <!-- since & is used to deliminate, if you want to use one, you can use the ASCII Hex value instead -->
                 <img data-ektron-attr="src==img/puppy.jpg &&alt == This is a picture of a cute puppy." data-ektron-css="border: transparent; &:hover{border: solid black 1px;background-color:darkred;}" />
                 <img src="img/puppy.jpg" />
             </div>
@@ -59,9 +59,9 @@
             <!-- Built in support for YouTube and Vimeo videos to play in a lightbox -->
             <!-- Just add the video id into the data-ektron-youtube/vimeo attr. -->
             <!-- Umptron has its own presets for these players but you can override them with the data-ektron-options, same format as the APIs for these players -->
+            <button data-ektron-youtube="e2dwwMHg7ZQ" data-ektron-options="modestbranding=1&rel=<%= 1 %>" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch Made to Grow</button>
             <!-- Vimeo, for example, let's you customize a theme color. Umptron allows for easy setup for this color to be managed by Ektron -->
-            <button data-ektron-youtube="e2dwwMHg7ZQ" data-ektron-options="modestbranding=1&rel=1" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch Made to Grow</button>
-            <button data-ektron-vimeo="144404612" data-ektron-options="color=72ccd2" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch a Puppy Video</button>
+            <button data-ektron-vimeo="<%= 144404612 %>" data-ektron-options="color=<%= 72ccd2%>" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch a Puppy Video</button>
             <p>Umptron provides a quick and easy way to add video, both YouTube and Vimeo, to a page that will be easy for Ektron to provide the video id and even paramenters such as the color theme for vimeo.</p>
         </section>
         <section id="puppies">

@@ -72,9 +72,12 @@ $(document).ready(function() {
         //Run Framework on document
         ektronFramework( $(this) );
     });
+    dynamicCSS += "</style>";
+    $("head").append(dynamicCSS);
 });
 
 //Vars
+var dynamicCSS = "<style>/*Dynamic CSS*/\n\n";
 var psuedoClass = "";
 var psuedoClasses = [":hover", ":first-child", ":last-child"];
 classCount = 0;
@@ -83,10 +86,7 @@ classIDsArray = [];
 //Functions
 function ektronFramework( $this ) {
     if ( $this.data("ektron-text") && $this.data("ektron-text").length > 0 ) {
-        var currentString = $this.data("ektron-text");
-        currentString = currentString.replace("<%=", "");
-        currentString = currentString.replace("<%", "");
-        currentString = currentString.replace("%>", "");
+        var currentString = stripEktronTags( $this.data("ektron-text"), false );
         currentString = $.trim( currentString );
         $this.children(".ektron-text").replaceWith(currentString);
         if ( !$this.html() ) {
@@ -95,19 +95,12 @@ function ektronFramework( $this ) {
     }
     $attr = $this.data("ektron-attr");
     if ( $attr && $attr.length > 0 ) {
-        $attr = $attr.replace("<%=", "");
-        $attr = $attr.replace("<%", "");
-        $attr = $attr.replace("%>", "");
-        
-        
+        $attr = stripEktronTags( $attr, false );
         var thisAttributes = $attr.split("&&");
         for (var i=0; i<thisAttributes.length; i++) {
             thisAttr = $.trim(thisAttributes[i]).split("=="); 
             if ( thisAttr[0] && thisAttr[1] ) {
                 thisAttr[0] = $.trim(thisAttr[0]) + "";
-                //thisAttr[1] = thisAttr[1].replace("<%=", "");
-                //thisAttr[1] = thisAttr[1].replace("<%", "");
-                //thisAttr[1] = thisAttr[1].replace("%>", "");
                 if ( thisAttr[1].length > 0 ) {
                     $this.attr( thisAttr[0], $.trim( thisAttr[1] ) );
                 }
@@ -120,8 +113,8 @@ function ektronFramework( $this ) {
             createID = "Ektron" + createID;
             $this.attr("id", createID)
         }
-        var styleTag = "<style>";
-        var $data = $this.data("ektron-css");
+        var styleTag = "";// "<style>";
+        var $data = stripEktronTags( $this.data("ektron-css"), false );
         for (var i=0;i<psuedoClasses.length;i++) {
             var $data = pseudoClassFinder( $data, $this.attr("id"), psuedoClasses[i] );
         }
@@ -135,9 +128,9 @@ function ektronFramework( $this ) {
                     if ( thisCss[0] && thisCss[1] ) {
                         thisCss[0] = $.trim(thisCss[0]);
                         thisCss[1] = $.trim(thisCss[1]);
-                        thisStyleComplete = thisCss[0] + ": " + thisCss[1] + ";";
-                        styleTag += "#" + $this.attr("id") + " { ";
-                        styleTag += thisStyleComplete + " }";
+                        thisStyleComplete = "  " + thisCss[0] + ": " + thisCss[1] + ";\n";
+                        styleTag += "#" + $this.attr("id") + " {\n ";
+                        styleTag += thisStyleComplete + "}\n";
                     }
                 }
             } else {
@@ -148,7 +141,7 @@ function ektronFramework( $this ) {
                     if ( thisCssWithMedia[0] && thisCssWithMedia[1] ) {
                         thisCssWithMedia[0] = $.trim(thisCssWithMedia[0]);
                         thisCssWithMedia[1] = $.trim(thisCssWithMedia[1]);
-                        thisStyleComplete += thisCssWithMedia[0] + ": " + thisCssWithMedia[1] + ";"
+                        thisStyleComplete += "    " + thisCssWithMedia[0] + ": " + thisCssWithMedia[1] + ";\n"
                     }
                 }
                 if (thisAtMedia[1]) {
@@ -157,9 +150,9 @@ function ektronFramework( $this ) {
                         thisStyle[0] = $.trim(thisStyle[0]).toLowerCase();
                         thisStyle[1] = Number( $.trim(thisStyle[1]) );
                         if ( thisStyle[0] == "min" || thisStyle[0] == "max" ) {
-                            styleTag += "@media (" +  thisStyle[0] + "-width: " + thisStyle[1] + "px) {";
-                            styleTag += "#" + $this.attr("id") + " { ";
-                            styleTag += thisStyleComplete + " } }";
+                            styleTag += "@media (" +  thisStyle[0] + "-width: " + thisStyle[1] + "px) {\n";
+                            styleTag += "  #" + $this.attr("id") + " {\n";
+                            styleTag += thisStyleComplete + "  }\n}\n";
 
                         }
                     }
@@ -167,8 +160,9 @@ function ektronFramework( $this ) {
             }
         }
         styleTag += psuedoClass;
-        styleTag += "</style>";
-        $("head").append(styleTag);
+        //styleTag += "</style>";
+        //$("head").append(styleTag);
+        dynamicCSS += styleTag;
     }
     // <-- ADD INTERSESSIONAL BUTTON CODE
     if ( $this.data("ektron-warning") ) {
@@ -193,22 +187,25 @@ function ektronFramework( $this ) {
         }
         var videoOptions = '';
         if ( $this.data("ektron-options") ) {
-            videoOptions = $this.data("ektron-options");
+            videoOptions = stripEktronTags( $this.data("ektron-options"), true );
         }
         var videoSource = "youtube";
         if ( $this.data("ektron-vimeo") ) {
             videoSource = "vimeo";
+            $vimeo_id = stripEktronTags( $this.data("ektron-vimeo"), true );
+        } else {
+            $youtube_id = stripEktronTags( $this.data("ektron-youtube"), true );
         }
         //build iFrame string
         var videoIframe = '<iframe id="video" src="';
         //attache click handler
         if ( videoSource == "vimeo") {
             videoIframe += 'http://player.vimeo.com/video/';
-            videoIframe += $this.data("ektron-vimeo") + '?';
+            videoIframe += $.trim( $vimeo_id ) + '?';
             
         } else {
             videoIframe += 'http://www.youtube.com/embed/';
-            videoIframe += $this.data("ektron-youtube") + '?';
+            videoIframe += $.trim( $youtube_id ) + '?';
         }
         videoIframe += attachOptions( videoSource, videoOptions);
         videoIframe += '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
@@ -221,7 +218,6 @@ function ektronFramework( $this ) {
     $(window).resize(function () {
         sizeVideo();
     });
-    
 }
 var youtubeDefaults = [
     "autoplay=1",
@@ -301,7 +297,10 @@ function createLeaveUmpquaDialog() {
 }
 function pseudoClassFinder(teststring, testid, pclass) {
     teststring = teststring.replace("&:", ":");
-    if ( teststring.indexOf(pclass ) >= 0 ) {
+    teststring = teststring.replace(/;/g, ";\n  ");
+    teststring = teststring.replace("{", " {\n  ");
+    teststring = teststring.replace("  }", "}\n");
+    if ( teststring.indexOf( pclass ) >= 0 ) {
         var testparts = teststring.split ( pclass );
         psuedoClass += "#" + testid + pclass + testparts[1];
         return testparts[0];
@@ -416,7 +415,15 @@ function createVideoModal() {
     $("#videoModal").hide();
     console.log("Video Modal Created");
 }
-
+function stripEktronTags ( thestring, complete ) {
+    thestring = thestring.replace(/<%=/g, "");
+    thestring = thestring.replace(/<%/g, "");
+    thestring = thestring.replace(/%>/g, "");
+    if (complete) {
+        thestring = thestring.replace(/ /g, "");
+    }
+    return thestring;
+}
 
 
 /*

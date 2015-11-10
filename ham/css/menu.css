@@ -1,68 +1,67 @@
-body {
-    font-family: helvetica, sans-serif;
-    font-weight: 800;
-    background-color: lightslategrey;
+@font-face {
+    font-family: "BebasNeue Bold";
+	src: url("/fonts/BebasNeue Bold.otf") format('opentype');
 }
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-nav {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-}
-ul {
-    list-style: none;
-    display: inline-block;
-    text-align: center;
+body {
+    font-family: helvetica, sans-serif;
+    font-weight: 800;
+    background-color: lightslategrey;
 }
 section {
     position: absolute;
     top: 0;
     width: 100%;
 }
-nav ul a {
-    display: inline-block;
-    margin: 1em;
-    height: 1em;
-    color: white;
-    text-decoration: none;
-}
-#menu {
-    position: absolute;
+/************************************* FULL MENU OBJ **************************************/
+nav#menu, nav#floating-menu {
+    font-family: "BebasNeue Bold";
+    display: block;
+    text-align: center;
+    overflow: hidden;
     top: 0;
     width: 100%;
-    background-color: black;
+}
+nav#menu {
+    position: absolute;
+    background-color: black; /* FOR OLD IEs */
     background-color: rgba(0,0,0,.5);
     z-index: 1000;
 }
 #floating-menu {
     position: fixed;
-    width: 100%;
     background-color: #afbc22;
+    z-index: 1001;
 }
+nav#menu>a, nav#menu>ul, nav#floating-menu>a, nav#floating-menu>ul {
+    padding: 12px 32px 8px;
+}
+nav#menu ul, nav#floating-menu ul {
+    list-style: none;
+}
+
+/************************************** MENU BTN ****************************************/
 .menu-btn {
     display: inline-block;
-    padding: .5em .5em .6em;
     cursor: pointer;
+    float: left;
+    color: white;
 }
-.menu-btn span {
-    vertical-align: middle;
+.menu-btn>span {
     display: inline-block;
     line-height: 16px;
     font-size: 16px;
     height: 16px !important;
 }
-#menu .menu-btn span {
-    color: white;
-}
-#menu .menu-btn:hover span {
-    color: #2cc1cd;
-}
 #floating-menu .menu-btn span {
     color: white;
+}
+#menu .menu-btn:hover>span {
+    color: #2cc1cd;
 }
 #floating-menu .menu-btn:hover span {
     color: black;
@@ -76,12 +75,6 @@ nav ul a {
     display: inline-block;
     height: 16px;
     width: 16px;
-/*
-    background-size: 200% 1000%;
-    background-position: 0% left;
-    background-position-y: 0%;
-    background-position-x: left;
-*/
 }
 .hamburger img {
     position: relative;
@@ -89,15 +82,81 @@ nav ul a {
     width: 200%;
     height: 1000%;
 }
-/*
-#menu .hamburger {
-    background-image: url(../img/hamburgerSprite.png);
+
+/************************************** MENU CTA ****************************************/
+nav .menu-cta {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    float: right;
 }
-#floating-menu .hamburger {
-    background-image: url(../img/hamburgerSpriteFloat.png);
+nav .menu-cta li {
+    float: none;
+    display: inline-block;
+    margin-left: 16px;
 }
-*/
+nav .menu-cta a {
+    display: inline-block;
+    text-transform: uppercase;
+    height: 16px;
+    color: white;
+    text-decoration: none;
+}
+nav .menu-cta img {
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+}
+#menu a {
+    color: white;
+}
+#menu a:hover {
+    color: #2cc1cd;
+}
+#floating-menu a {
+    color: white;
+}
+#floating-menu a:hover {
+    color: black;
+}
+
+/* hide images not used for the given menu */
+nav#menu img.float, nav#menu img.float-hover {
+    display: none;
+}
+nav#floating-menu img.default, nav#floating-menu img.hover {
+    display: none;
+}
+nav#menu .menu-cta a img.default {
+    display: inline-block;
+}
+nav#menu .menu-cta a:hover img.default {
+    display: none;
+}
+nav#menu .menu-cta a img.hover {
+    display: none;
+}
+nav#menu .menu-cta a:hover img.hover {
+    display: inline-block;
+}
+
+nav#floating-menu .menu-cta a img.float {
+    display: inline-block;
+}
+nav#floating-menu .menu-cta a:hover img.float {
+    display: none;
+}
+nav#floating-menu .menu-cta a img.float-hover {
+    display: none;
+}
+nav#floating-menu .menu-cta a:hover img.float-hover {
+    display: inline-block;
+}
+
+
+/************************************** NAV LIST ****************************************/
 .menu-spacer {
+    clear: both;
     display: block;
 }
 .first.menu-spacer {
@@ -106,24 +165,26 @@ nav ul a {
 .last.menu-spacer:last-child {
     height: 3em;
 }
-#menu ul a {
+.menu-options a {
+    display: inline-block;
+    margin: 16px;
+    height: 16px;
     color: white;
+    text-decoration: none;
+    text-align: center;
 }
-#menu ul a:hover {
-    color: #2cc1cd;
-}
-#floating-menu ul a {
-    color: white;
-}
-#floating-menu ul a:hover {
-    color: black;
-}
-nav ul span {
+.menu-options span {
     display: inline-block;
     width: 50%;
-    max-width: 100px;
+    max-width: 50px;
     border-bottom: solid white 1px;
+    margin: 0 !important;
 }
+.menu-options:first-child span {
+    border: none;
+}
+
+/* PAGE BACKGROUND STRIPES */
 .filler {
     height: 4em;
 }

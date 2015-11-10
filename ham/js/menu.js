@@ -60,7 +60,7 @@ function buildFloatingMenu () {
     $("#floating-menu").css({
         top: "-" + menuBtnHeight + "px"
     });
-    $("#floating-menu img").attr("src", "img/hamburgerSpriteFloat.png");
+    $("#floating-menu .menu-btn img").attr("src", "img/hamburgerSpriteFloat.png");
     $("#floating-menu .menu-btn").on("click", function() {
         transitionHamburger($(this).parent());
     });
@@ -171,7 +171,6 @@ function flashColors() {
             $(this).css("background-color", "rgb(112, 128, 144)" ); //periwinkle
         }
     });
-    console.log( "flashing colors" );
 }
 function setColors() {
     $(".filler").each( function() {
@@ -181,7 +180,6 @@ function setColors() {
             $(this).css("background-color", "rgb(0, 100, 0)" ); //green
         }
     });
-    console.log( "setting colors" );
 }
 function setOtherColors() {
     $(".filler").each( function() {
@@ -191,5 +189,4 @@ function setOtherColors() {
             $(this).css("background-color", "rgb(100, 0, 100)" ); //purple
         }
     });
-    console.log( "setting colors" );
 }
