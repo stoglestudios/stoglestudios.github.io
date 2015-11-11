@@ -15,7 +15,6 @@ $(document).ready(function(){
     menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $(".menu-list").outerHeight();
     menuPadding = menuHeight - menuBtnHeight;
     menuPadding = menuPadding*-1;
-    $("#menu").css("height", menuBtnHeight +"px");
     imageCheck = 1;
     initialImage = $(".hamburger").css('background-image').replace(")", "").split("/img/");
     currentImage = initialImage;
@@ -45,8 +44,33 @@ $(document).ready(function(){
     });
 
     $("#menu .menu-btn").on("click", function() {
-        transitionHamburger($(this).parent());
+        transitionHamburger( $(this).parent() );
     });
+    $(".menu-options a").on("click", function() {
+        transitionHamburger( $(this).parent().parent().parent().parent() );
+    });
+    $(".menu-list").on("click", function(){
+        transitionHamburger( $(this).parent() );
+    });
+    $("#menu").css({
+        height: menuBtnHeight +"px"
+//    }).find("a").css({
+//        color:  convertHexToRGBA( $("#menu").data("color"), "1" )
+//    }).hover(function(){
+//        $(this).css({
+//            color:  convertHexToRGBA( $("#menu").data("hover-color"), "1" )
+//        });
+//    }, function(){
+//        $(this).css({
+//            color:  convertHexToRGBA( $("#menu").data("color"), "1" )
+//        });
+    });
+    
+    var menuCSS = "<style>nav#menu {\n  background-color: " + convertHexToRGBA( $("#menu").data("bg-color"), $("#menu").data("bg-opacity") ) + "\n}\n";
+    menuCSS += "nav#menu a {\n  color: " + convertHexToRGBA( $("#menu").data("color"), "1" ) + "\n}\n";
+    menuCSS += "nav#menu a:hover {\n  color: " + convertHexToRGBA( $("#menu").data("hover-color"), "1" ) + "\n}</style>";
+    $("head").append( menuCSS );
+    
 });
 
 i = 1;
@@ -58,7 +82,23 @@ function buildFloatingMenu () {
     //give it new styles:
     $(".floating-menu").attr("id", "floating-menu");
     $("#floating-menu").css({
-        top: "-" + menuBtnHeight + "px"
+        top: "-" + menuBtnHeight + "px",
+        backgroundColor: convertHexToRGBA( $("#menu").data("float-bg-color"), $("#menu").data("float-bg-opacity") )
+    });
+    $("#floating-menu a").css({
+        color: convertHexToRGBA( $("#menu").data("float-color"), "1" )
+    }).hover(function(){
+        $(this).css({
+            color: convertHexToRGBA( $("#menu").data("float-hover-color"), "1" )
+        }).children("span").css({
+            color: convertHexToRGBA( $("#menu").data("float-hover-color"), "1" )
+        });
+    }, function(){
+        $(this).css({
+            color: convertHexToRGBA( $("#menu").data("float-color"), "1" )
+        }).children("span").css({
+            color: convertHexToRGBA( $("#menu").data("float-color"), "1" )
+        });
     });
     $("#floating-menu .menu-btn img").attr("src", "img/hamburgerSpriteFloat.png");
     $("#floating-menu .menu-btn").on("click", function() {
@@ -189,4 +229,27 @@ function setOtherColors() {
             $(this).css("background-color", "rgb(100, 0, 100)" ); //purple
         }
     });
+}
+function convertHexToRGBA (color, opacity) {
+    if ( color.length == 7 ) {
+        var patt = /^#([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})$/;
+        var matches = patt.exec(color);
+        var firstSet = parseInt(matches[1], 16);
+        var secondSet = parseInt(matches[2], 16);
+        var thirdSet = parseInt(matches[3], 16);
+        var rgba = "rgba(" + firstSet + "," + secondSet + "," + thirdSet + "," + opacity + ");";
+        return rgba;
+    } else if ( color.length == 4 ) {
+        var patt = /^#([\da-fA-F]{1})([\da-fA-F]{1})([\da-fA-F]{1})$/;
+        var matches = patt.exec(color);
+        var firstSet = parseInt(matches[1], 16);
+        var secondSet = parseInt(matches[2], 16);
+        var thirdSet = parseInt(matches[3], 16);
+        var rgba = "rgba(" + Math.floor(firstSet*firstSet*1.13) + "," +  Math.floor(secondSet*secondSet*1.13) + "," +  Math.floor(thirdSet*thirdSet*1.13) + "," + opacity + ");";
+        return rgba;
+    } else {
+        console.log("invalid color");
+        return "rgba(0,0,0,1)";
+    }
+    console.log(rgba);
 }

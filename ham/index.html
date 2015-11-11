@@ -20,20 +20,28 @@
                 document.createElement('hgroup');
             </script>
         <![endif]-->
-        <nav id="menu">
+        <nav id="menu" 
+             data-color="#ffffff" 
+             data-hover-color="#2cc1cd" 
+             data-bg-color="#00000" 
+             data-bg-opacity=".5"
+             data-float-color="#ffffff" 
+             data-float-hover-color="#000000"
+             data-float-bg-color="#afbc22"
+             data-float-bg-opacity="1">
             <ul class="menu-cta">
-                <li class="menu-cta" data-ektron-temp="js/cta.json">
+                <li class="menu-cta-option" data-ektron-temp="js/cta.json">
                     <a href="<%=Link%>">
-                        <img class="default" src="<%=Default%>">
-                        <img class="hover" src="<%=Hover%>">
-                        <img class="float" src="<%=Float%>">
-                        <img class="float-hover" src="<%=Float-Hover%>">
+                        <img class="default" data-ektron-attr="src==<%=Default%>">
+                        <img class="hover" data-ektron-attr="src==<%=Hover%>">
+                        <img class="float" data-ektron-attr="src==<%=Float%>">
+                        <img class="float-hover" data-ektron-attr="src==<%=Float-Hover%>">
                         <span data-ektron-text="<%=Text%>"></span>
                     </a>
                 </li>
             </ul>
             <a class="menu-btn">
-                <div class="hamburger"><img src="img/hamburgerSprite.png"/></div>
+                <div class="hamburger"><img src="img/hamburgerSprite.png" data-alt-src="img/hamburgerSpriteFloat.png" /></div>
                 <span>Menu</span>
             </a>
             <div class="first menu-spacer"></div>
