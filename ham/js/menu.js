@@ -124,11 +124,15 @@ function transitionHamburger(self) {
             var thisHREF = "";
         }
         var currentURL = window.location.pathname.replace("index.html", "");
+        thisHREF = thisHREF.replace("..", "");
         thisHREF = thisHREF.replace(/\//g,"");
         currentURL = currentURL.replace(/\//g,"");
         if ( thisHREF == currentURL ) {
             $(this).addClass("current-page");
             $(this).removeAttr("href");
+            console.log( thisHREF + " == " + currentURL );
+        } else {
+            console.log( thisHREF + " != " + currentURL );
         }
     });
     $this = self;
