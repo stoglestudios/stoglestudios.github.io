@@ -126,7 +126,8 @@ function transitionHamburger(self) {
         thisHREF = thisHREF.replace("..", "");
         thisHREF = thisHREF.replace(/\//g,"");
         currentURL = currentURL.replace(/\//g,"");
-        if ( thisHREF == currentURL ) {
+        //if ( thisHREF == currentURL ) {
+        if ( currentURL.indexOf( thisHREF ) > -1 ) {
             $(this).addClass("current-page");
             $(this).removeAttr("href");
             console.log( thisHREF + " == " + currentURL );
