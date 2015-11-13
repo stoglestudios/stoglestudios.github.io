@@ -115,7 +115,6 @@ function floatingMenuOut() {
         transitionHamburger( $("#floating-menu") );
     }
 }
-
 function transitionHamburger(self) {
     $(".menu-options a").each(function(){
         if ( $(this).attr("href") ) {
