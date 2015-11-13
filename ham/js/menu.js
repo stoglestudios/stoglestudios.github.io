@@ -32,6 +32,7 @@ $(document).ready(function(){
             isScrolling = true;
         }
         flashColors();
+        closeOpenMenus();
     });
     $(document).on("mousewheel", function ( event ) {
         if ( event.originalEvent.wheelDelta < 0 ) {
@@ -54,23 +55,25 @@ $(document).ready(function(){
     });
     $("#menu").css({
         height: menuBtnHeight +"px"
-//    }).find("a").css({
-//        color:  convertHexToRGBA( $("#menu").data("color"), "1" )
-//    }).hover(function(){
-//        $(this).css({
-//            color:  convertHexToRGBA( $("#menu").data("hover-color"), "1" )
-//        });
-//    }, function(){
-//        $(this).css({
-//            color:  convertHexToRGBA( $("#menu").data("color"), "1" )
-//        });
     });
     
-    var menuCSS = "<style>nav#menu {\n  background-color: " + convertHexToRGBA( $("#menu").data("bg-color"), $("#menu").data("bg-opacity") ) + "\n}\n";
+    var menuCSS = "<style>";
+    menuCSS += "nav#menu {\n  background-color: " + convertHexToRGBA( $("#menu").data("bg-color"), $("#menu").data("bg-opacity") ) + "\n}\n";
     menuCSS += "nav#menu a {\n  color: " + convertHexToRGBA( $("#menu").data("color"), "1" ) + "\n}\n";
-    menuCSS += "nav#menu a:hover {\n  color: " + convertHexToRGBA( $("#menu").data("hover-color"), "1" ) + "\n}</style>";
-    $("head").append( menuCSS );
+    menuCSS += "nav#menu a:hover {\n  color: " + convertHexToRGBA( $("#menu").data("hover-color"), "1" ) + "\n}\n";
     
+    menuCSS += "nav#menu a.current-page:hover {\n  cursor: default;\n}\n";
+    
+    menuCSS += "nav#menu a.current-page {\n  color: " + convertHexToRGBA( $("#menu").data("current-pg-color"), "1" ) + ";\n}\n";
+    menuCSS += "nav#floating-menu {\n  background-color: " + convertHexToRGBA( $("#menu").data("float-bg-color"), $("#menu").data("float-bg-opacity") ) + ";\n}\n";
+    menuCSS += "nav#floating-menu a {\n  color: " + convertHexToRGBA( $("#menu").data("float-color"), "1" ) + ";\n}\n";
+    menuCSS += "nav#floating-menu a:hover {\n  color: " + convertHexToRGBA( $("#menu").data("float-hover-color"), "1" ) + ";\n}\n";
+    menuCSS += "nav#floating-menu a:hover span {\n  color: " + convertHexToRGBA( $("#menu").data("float-hover-color"), "1" ) + ";\n}\n";
+    menuCSS += "nav#floating-menu a.current-page {\n  color: " + convertHexToRGBA( $("#menu").data("float-current-color"), "1" ) + ";\n}\n";
+    menuCSS += "nav#floating-menu a.current-page:hover {\n  cursor: default;\n}\n";
+    menuCSS += "nav#floating-menu .menu-list span {\n  border-color: " + convertHexToRGBA( $("#menu").data("float-current-color"), "1" ) + ";\n}\n";
+    menuCSS += "</style>";
+    $("head").append( menuCSS );
 });
 
 i = 1;
@@ -83,24 +86,9 @@ function buildFloatingMenu () {
     $(".floating-menu").attr("id", "floating-menu");
     $("#floating-menu").css({
         top: "-" + menuBtnHeight + "px",
-        backgroundColor: convertHexToRGBA( $("#menu").data("float-bg-color"), $("#menu").data("float-bg-opacity") )
+        height: menuBtnHeight + "px"
     });
-    $("#floating-menu a").css({
-        color: convertHexToRGBA( $("#menu").data("float-color"), "1" )
-    }).hover(function(){
-        $(this).css({
-            color: convertHexToRGBA( $("#menu").data("float-hover-color"), "1" )
-        }).children("span").css({
-            color: convertHexToRGBA( $("#menu").data("float-hover-color"), "1" )
-        });
-    }, function(){
-        $(this).css({
-            color: convertHexToRGBA( $("#menu").data("float-color"), "1" )
-        }).children("span").css({
-            color: convertHexToRGBA( $("#menu").data("float-color"), "1" )
-        });
-    });
-    $("#floating-menu .menu-btn img").attr("src", "img/hamburgerSpriteFloat.png");
+    $("#floating-menu .menu-btn img").attr( "src", $("#menu .menu-btn img").data("alt-src") );
     $("#floating-menu .menu-btn").on("click", function() {
         transitionHamburger($(this).parent());
     });
@@ -120,10 +108,29 @@ function floatingMenuOut() {
         }, {
             duration: 200,
             easing: "easeInOutCubic"
-    })
+    });
+    var menuOpen = "-" + 16*5 + "px";
+    var floatCurrent = $("#floating-menu").children("a").children(".hamburger").children("img").css("top");;
+    if ( floatCurrent == menuOpen ) {
+        transitionHamburger( $("#floating-menu") );
+    }
 }
 
 function transitionHamburger(self) {
+    $(".menu-options a").each(function(){
+        if ( $(this).attr("href") ) {
+            var thisHREF = $(this).attr("href");
+        } else {
+            var thisHREF = "";
+        }
+        var currentURL = window.location.pathname.replace("index.html", "");
+        thisHREF = thisHREF.replace(/\//g,"");
+        currentURL = currentURL.replace(/\//g,"");
+        if ( thisHREF == currentURL ) {
+            $(this).addClass("current-page");
+            $(this).removeAttr("href");
+        }
+    });
     $this = self;
     menuBtnHeight = $(".menu-btn").outerHeight();
     menuHeight = menuBtnHeight + $(".first.menu-spacer").outerHeight() + $(".last.menu-spacer").outerHeight() + $(".menu-list").outerHeight();
@@ -252,4 +259,11 @@ function convertHexToRGBA (color, opacity) {
         return "rgba(0,0,0,1)";
     }
     console.log(rgba);
+}
+function closeOpenMenus() {
+    var menuCurrent =  $("#menu").children("a").children(".hamburger").children("img").css("top");
+    var menuOpen = "-" + 16*5 + "px";
+    if ( menuCurrent == menuOpen ) {
+        transitionHamburger( $("#menu") );
+    }
 }

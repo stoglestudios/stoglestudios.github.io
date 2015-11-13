@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="Content-Language" content="en-GB" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/css/menu.css">  
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <script>
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('section');
+                document.createElement('article');
+                document.createElement('aside');
+                document.createElement('footer');
+                document.createElement('hgroup');
+            </script>
+        <![endif]-->
+        <nav id="menu" 
+             data-color="#ffffff" 
+             data-hover-color="#2cc1cd" 
+             data-bg-color="#000000" 
+             data-bg-opacity=".5"
+             data-current-pg-color="#e2e86e"
+             data-float-color="#ffffff" 
+             data-float-hover-color="#000000"
+             data-float-bg-color="#afbc22"
+             data-float-bg-opacity="1" 
+             data-float-current-color="#e2e86e">
+            <ul class="menu-cta">
+                <li class="menu-cta-option" data-ektron-temp="/js/cta.json">
+                    <a href="<%=Link%>">
+                        <img class="default" data-ektron-attr="src==<%=Default%>">
+                        <img class="hover" data-ektron-attr="src==<%=Hover%>">
+                        <img class="float" data-ektron-attr="src==<%=Float%>">
+                        <img class="float-hover" data-ektron-attr="src==<%=Float-Hover%>">
+                        <span data-ektron-text="<%=Text%>"></span>
+                    </a>
+                </li>
+            </ul>
+            <a class="menu-btn">
+                <div class="hamburger"><img src="/img/hamburgerSprite.png" data-alt-src="/img/hamburgerSpriteFloat.png" /></div>
+                <span>Menu</span>
+            </a>
+            <div class="first menu-spacer"></div>
+            <ul class="menu-list">
+                <li class="menu-options" id="menu-options" data-ektron-temp="/js/pages.json">
+                    <span></span><br />
+                    <a data-ektron-attr="href==<%=Link%>" data-ektron-text="<%=Option%>"></a>
+                </li>
+            </ul>
+            <div class="last menu-spacer"></div>
+        </nav>
+        <section>
+            <div class="filler" data-ektron-temp="100"></div>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="/js/umptron.js"></script>
+        <script src="/js/menu.js"></script>
+    </body>
+</html>

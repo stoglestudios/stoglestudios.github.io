@@ -1,14 +1,18 @@
 [
     {
-        "Option": "Home Lending",
-        "Link": "/Home"
+        "Option": "made to grow",
+        "Link": "/madetogrow"
+    },
+    {
+        "Option": "home lending",
+        "Link": "/homelending"
     },
     {
         "Option": "Local Business",
-        "Link": "/SmallBiz"
+        "Link": "/localbusiness"
     },
     {
-        "Option": "Personal Investing",
-        "Link": "/PersonFin"
+        "Option": "investments",
+        "Link": "/personalinvesting"
     }
 ]
