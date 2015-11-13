@@ -2,7 +2,7 @@
     {
         "Text": "find a store",
         "Link": "https://www.umpquabank.com/locations/",
-        "Default": "/img/map-pin.png",
+        "Default": "../img/map-pin.png",
         "Hover": "../img/map-pin-hover.png",
         "Float": "../img/map-pin.png",
         "Float-Hover": "../img/map-pin-float.png"
