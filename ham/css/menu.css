@@ -12,6 +12,9 @@ body {
     font-weight: 800;
     background-color: lightslategrey;
 }
+a img {
+    border: none;
+}
 section {
     position: absolute;
     top: 0;
