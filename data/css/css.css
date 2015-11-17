@@ -1,9 +1,25 @@
+@font-face {
+  font-family: "Helvsub con";
+  src: url("fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Helvsub reg";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Helvsub bld";
+  src: url("fonts/Roboto-Bold.ttf");
+}
 body {
     background-color: #9ba;
     font-family: sans-serif;
+    font-family: "Helvsub reg", sans-serif;
 }
 h1, h2 {
     color: darkgreen;
+    font-family: "Helvsub con", sans-serif;
 }
 h1 {
     text-align: center;
