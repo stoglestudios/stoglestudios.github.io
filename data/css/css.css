@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Helvsub bld";
-  src: url("fonts/Roboto-Bold.ttf");
+  src: url("fonts/RobotoCondensed-Bold.ttf");
 }
 body {
     background-color: #9ba;
@@ -24,9 +24,12 @@ h1, h2 {
 h1 {
     text-align: center;
     color: darkgreen;
+    font-family: "Helvsub bld", sans-serif;
+    text-transform: uppercase;
 }
 h2 {
     margin-top: 50px;
+    font-family: "Helvsub con", sans-serif;
 }
 .index-intro h2, .data-intro h2 {
     color: darkgreen;
