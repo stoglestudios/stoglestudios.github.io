@@ -114,3 +114,7 @@ button {
     background-size: contain;
     background-position: center;
 }
+
+#locator .w-btn-blue {
+    background-color: yellow;
+}

@@ -58,7 +58,8 @@
             <!-- Framework will auto add a random unique id if none are present -->
             <!-- Built in support for YouTube and Vimeo videos to play in a lightbox -->
             <!-- Just add the video id into the data-ektron-youtube/vimeo attr. -->
-            <!-- Umptron has its own presets for these players but you can override them with the data-ektron-options, same format as the APIs for these players -->
+            <!-- Umptron has its own presets for these players but you can override them with the data-ektron-options, -->
+            <!-- same format as the APIs for these players -->
             <button data-ektron-youtube="e2dwwMHg7ZQ" data-ektron-options="modestbranding=1&rel=<%= 1 %>" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch Made to Grow</button>
             <!-- Vimeo, for example, let's you customize a theme color. Umptron allows for easy setup for this color to be managed by Ektron -->
             <button data-ektron-vimeo="<%= 144404612 %>" data-ektron-options="color=<%= 72ccd2%>" data-ektron-css="display:inline-block; height:50px; width:200px; background-color:darkgreen; &:hover{background-color:darkred;box-shadow: 0 0 10px black;}">Watch a Puppy Video</button>
@@ -85,6 +86,9 @@
                 </li>
                 <!-- <% } %> -->
             </ul>
+        </section>
+        <section>
+            <iframe id="locator" src="https://www.umpquabank.com/locations/#site-content" width="975px" height="710px" frameborder="0" scrolling="no" style="margin:50px;box-shadow: 0 2px 10px rgba(0,0,0,.5);"></iframe>
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/umptron.js"></script>

@@ -73,7 +73,6 @@ $(document).ready(function() {
     dynamicCSS += "</style>";
     $("head").append(dynamicCSS);
 });
-
 //Vars
 var dynamicCSS = "<style>/*Dynamic CSS*/\n\n";
 var psuedoClass = "";
@@ -151,7 +150,6 @@ function ektronFramework( $this ) {
                             styleTag += "@media (" +  thisStyle[0] + "-width: " + thisStyle[1] + "px) {\n";
                             styleTag += "  #" + $this.attr("id") + " {\n";
                             styleTag += thisStyleComplete + "  }\n}\n";
-
                         }
                     }
                 }
@@ -191,6 +189,7 @@ function ektronFramework( $this ) {
             $vimeo_id = stripEktronTags( $this.data("ektron-vimeo"), true );
         } else {
             $youtube_id = stripEktronTags( $this.data("ektron-youtube"), true );
+            $youtube_id = parse_yturl( $youtube_id );
         }
         //build iFrame string
         var videoIframe = '<iframe id="video" src="';
@@ -198,7 +197,6 @@ function ektronFramework( $this ) {
         if ( videoSource == "vimeo") {
             videoIframe += 'http://player.vimeo.com/video/';
             videoIframe += $.trim( $vimeo_id ) + '?';
-            
         } else {
             videoIframe += 'http://www.youtube.com/embed/';
             videoIframe += $.trim( $youtube_id ) + '?';
@@ -358,7 +356,6 @@ function fixMultipleIDs () {
         }
     }
 }
-
 function sizeVideo() {
     if ( $("#video").length ) {
         var viewPortWidth = $(window).width();
@@ -396,7 +393,6 @@ function sizeVideo() {
             "height": $(window).height()
         });
     }
-
 }
 // Movie Modal
 function createVideoModal() {
@@ -423,37 +419,18 @@ function stripEktronTags ( thestring, complete ) {
     thestring = thestring.replace(/<%=/g, "");
     thestring = thestring.replace(/<%/g, "");
     thestring = thestring.replace(/%>/g, "");
+    thestring = thestring.replace(/{{/g, "");
+    thestring = thestring.replace(/}}/g, "");
     if (complete) {
         thestring = thestring.replace(/ /g, "");
     }
     return thestring;
 }
-
-
-/*
-vimeo:
-<iframe 
-    src="//player.vimeo.com/video/VIDEO_ID?autoplay=1&badge=0&byline=0&color=FFF&portrait=0&title=0&player_id=my-player" 
-    frameborder="0"
-    id="video"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-youtube:
-<iframe 
-    src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://current.com&controls="   
-    frameborder="0"
-    id="video"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-enablejsapi=1 allows to be controlled by JS
-playerapiid=anyString
-modestbranding=1
-rel=0
-showinfo=0
-disablekb=1
-autohide=1
-*/
+function parse_yturl($url) {
+    $pattern = '#^(?:https?://|//)?(?:www\.|m\.)?(?:youtu\.be/|youtube\.com/(?:embed/|v/|watch\?v=|watch\?.+&v=))([\w-]{11})(?![\w-])#';
+    preg_match($pattern, $url, $matches);
+    return (isset($matches[1])) ? $matches[1] : false;
+}
 
 
 
