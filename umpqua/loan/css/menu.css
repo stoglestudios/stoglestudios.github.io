@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "BebasNeue Bold";
+	src: url("../fonts/BebasNeue Bold.otf") format('opentype');
+}
+@font-face {
+    font-family: "Roboto light";
+	src: url("../fonts/Roboto-light.ttf") format('opentype');
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: "Roboto light", helvetica, sans-serif;
+    color: #343434;
+    line-height: 1.5em;
+    background: url('/img/pattern.png') #58cdd7;
+    text-align: center;
+}
+.title > h1 {
+    font-family: "BebasNeue Bold";
+    color: #22969c;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.title {
+    background-color: white;
+    padding: 10px 5%;
+    text-align: left;
+}
+a {
+    color: #2cc1cd;
+}
+input[type=submit] {
+    background-color: #2cc1cd;
+    font-size: 1em;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    width: 15%;
+    margin: 0;
+}
+input[type=text] {
+    padding: 9px 25px;
+    font-size: 16px;
+    margin: 0;
+    width: 75%;
+    vertical-align: top;
+    border: solid #aaa 1px;
+}
+#main {
+    margin: 50px 0 0;
+    display: inline-block;
+    background-color: white;
+    max-width: 1200px;
+    padding: 25px 8%;
+}
+#column {
+    background-color: #e3f6f6;
+}
+.search {
+    padding: 25px 0;
+    text-align: center;
+}
+ul.entries {
+    overflow: hidden;
+    width: 3em;
+    height: 2.2em;
+    border: solid #343434 1px;
+}
+ul.entries li:first-child:after {
+    content: ">";
+    float: right;
+}
+ul.entries li {
+    font-size: 1em;
+    text-align: left;
+    padding: .3em .5em;
+    
+}
+ul.entries li:hover {
+    background-color: #2cc1cd;
+}
+ul.entries:hover {
+    height: 6.6em;
+}
+.branch {
+    display: inline-block;
+    width: 90%;
+    background-color: white;
+    padding: 25px;
+}
+p:empty:after {
+    content: "Nice little clouds playing around in the sky. We're trying to teach you a technique here and how to use it. Brown is such a nice color. Let's do it again then, what the heck. Just go back and put one little more happy tree in there. If what you're doing doesn't make you happy - you're doing the wrong thing.";
+}

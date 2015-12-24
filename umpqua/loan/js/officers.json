@@ -1,0 +1,18 @@
+[
+    {
+        "Text": "find a store",
+        "Link": "https://www.umpquabank.com/locations/",
+        "Default": "../img/map-pin.png",
+        "Hover": "../img/map-pin-hover.png",
+        "Float": "../img/map-pin.png",
+        "Float-Hover": "../img/map-pin-float.png"
+    },
+    {
+        "Text": "call us",
+        "Link": "tel:+18664867782",
+        "Default": "../img/phone-solid.png",
+        "Hover": "../img/phone-solid-hover.png",
+        "Float": "../img/phone-solid.png",
+        "Float-Hover": "../img/phone-solid-float.png"
+    }
+]

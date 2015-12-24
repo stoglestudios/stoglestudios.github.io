@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Helvsub con";
+  src: url("fonts/RobotoCondensed-Light.ttf");
+}
+
+@font-face {
+  font-family: "Helvsub reg";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Helvsub bld";
+  src: url("fonts/RobotoCondensed-Bold.ttf");
+}
+body {
+    background-color: #9ba;
+    font-family: sans-serif;
+    font-family: "Helvsub reg", sans-serif;
+}
+h1, h2 {
+    color: darkgreen;
+    font-family: "Helvsub con", sans-serif;
+}
+h1 {
+    text-align: center;
+    color: darkgreen;
+    font-family: "Helvsub bld", sans-serif;
+    text-transform: uppercase;
+}
+h2 {
+    margin-top: 50px;
+    font-family: "Helvsub con", sans-serif;
+}
+.index-intro h2, .data-intro h2 {
+    color: darkgreen;
+}
+.index-puppies h2, .data-puppies h2 {
+    color: darkblue;
+}
+.index-LOTR h2, .data-LOTR h2 {
+    color: darkred;
+}
+
+#puppies0 p {
+    color: white;
+}
+button {
+    margin: 10px;
+}
+button:hover {
+    cursor: pointer;
+}
+img {
+    display: block;
+}
+h2 span:after {
+    content: ">";
+}
+span {
+    padding-left: 5px;
+}
+ul {
+    list-style: none;
+    display: inline-block;
+    background-color: rgba(0,55,0,.2);
+    text-align: center;
+    padding: 0 5px;
+    border: solid black 1px;
+}
+ul img {
+    height: 200px;
+    margin: 0 auto;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.2);
+}
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+li {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    border: solid white 1px;
+}
+button {
+    border: none;
+    color: white;
+}
+#link {
+    display: block;
+    margin-bottom: 20px;
+}
+#anotherdiv {
+    margin: 20px auto;
+}
+#anotherdiv img {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: solid red 1px;
+}
+#highfive {
+    display: inline-block;
+    height: 300px;
+    max-width: 500px;
+    width: 90%;
+    background-color: antiquewhite;
+    border: solid darkred 2px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#locator .w-btn-blue {
+    background-color: yellow;
+}

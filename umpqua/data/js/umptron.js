@@ -28,7 +28,8 @@ $(document).ready(function() {
                             $.each(Model[i], function(key, value) {
                                 allElementsArray[i] = allElementsArray[i].replace( "<%=" + key + "%>", value);
                                 // just in case the Greater/Less Than symbols are parsed wrong (I'm looking at you mobile Safari)
-                                allElementsArray[i] = allElementsArray[i].replace( "&lt;%=" + key + "%&gt;", value);
+                                allElementsArray[i] = allElementsArray[i].replace("&lt;%=" + key + "%&gt;", value);
+                                allElementsArray[i] = allElementsArray[i].replace("{%=" + key + "%}", value);
                             });
                             allElementsString += allElementsArray[i];
                         }
@@ -185,7 +186,7 @@ function ektronFramework( $this ) {
         if ( !$("#videoModal").length ) {
             createVideoModal();
         }
-        var videoOptions = '';
+        var videoOptions = 'xyz=1';
         if ( $this.data("ektron-options") ) {
             videoOptions = stripEktronTags( $this.data("ektron-options"), true );
         }
@@ -209,7 +210,8 @@ function ektronFramework( $this ) {
         }
         videoIframe += attachOptions( videoSource, videoOptions);
         videoIframe += '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-        $this.on("click", function(){
+        $this.on("click", function(ev){
+            ev.preventDefault();
             $("#videoModal").show();
             $("#videoBox").prepend(videoIframe);
             sizeVideo();
@@ -275,6 +277,8 @@ function attachOptions ( source, options ) {
         }
         videoQS = videoQS.substring(0, videoQS.length - 1);
     }
+    console.log(videoQS);
+    videoQS = videoQS.replace("&xyz=1", "");
     return videoQS;
 }
 function createLeaveUmpquaDialog() {
@@ -419,6 +423,9 @@ function stripEktronTags ( thestring, complete ) {
     thestring = thestring.replace(/<%=/g, "");
     thestring = thestring.replace(/<%/g, "");
     thestring = thestring.replace(/%>/g, "");
+    thestring = thestring.replace(/{%=/g, "");
+    thestring = thestring.replace(/{%/g, "");
+    thestring = thestring.replace(/%}/g, "");
     if (complete) {
         thestring = thestring.replace(/ /g, "");
     }
