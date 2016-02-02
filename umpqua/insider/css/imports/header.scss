@@ -1,0 +1,108 @@
+/*************************************************
+    HEADER
+*************************************************/
+header {
+    padding: $bleed 0;
+    background-color: $teal;
+    color: white;
+    display: block;
+    ul {
+        padding: 0;
+    }
+    .logo-side {
+        vertical-align: top;
+        float: left;
+        text-align: left;
+        width: 30%;
+        line-height: 62px;
+        .insider-logo img {
+            width: 100%;
+            max-width: 266px;
+        }
+    }
+    .opt-side {
+        width: 70%;
+        float: right;
+        text-align: right;
+        .top-options {
+            li {
+                margin-left: $bleed*2;
+                &::last-child {
+                    margin: 0;
+                    clear: right;
+                }
+            }
+            .code-of-day:before {
+                content: "Code of the Day: ";
+            }
+            .org-chart a:after {
+                content: "Organization Chart";
+            }
+            .assoc-dir a:after {
+                content: "Associate Directory";
+            }
+        }
+        .site-search {
+            width: 100%;
+            input {
+                border: none;
+                width: 90%;
+                max-width: 350px;
+                background-color: aliceblue;
+            }
+        }
+    }
+}
+@media (max-width: $break-phablet) {
+    header {
+        .logo-side, .opt-side {
+            width: 100%;
+            float: none;
+            text-align: center;
+            ul {
+                margin-top: $bleed;
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: $break-small) {    
+    header {
+        .logo-side .insider-logo img {
+            width: 70%;
+        }
+        .opt-side {
+            .top-options {
+                .code-of-day:before {
+                    content: "Code: ";
+                }
+                .org-chart a:after {
+                    content: "Chart";
+                }
+                .assoc-dir a:after {
+                    content: "Directory";
+                }
+            }
+            .site-search {
+                float: none;
+            }
+        } 
+    }
+}
+#mag-glass {
+    padding: .1em;
+    height: 1.2em;
+    width: 1.2em;
+    display: none;
+    a {
+        text-align: right;
+    }
+    img {
+        height: 1em;
+    }
+    &:hover {
+        background-color: $dark-teal;
+        box-shadow: 0 1px 0 0 white;
+    }
+}

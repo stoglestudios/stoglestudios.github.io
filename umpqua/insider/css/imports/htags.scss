@@ -1,0 +1,57 @@
+/**********************************
+    VARS
+***********************************/
+
+$tail-size: 14px;
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+.orange-ribbon {
+    display: inline-block;
+    float: right;
+    clear: right;
+    line-height: $bleed*4;
+    margin-right: -1*($bleed + $tail-size);
+    margin-bottom: $bleed;
+    margin-left: $bleed;
+    color: white !important;
+    background-color: $orange;
+    padding: 0 0 0 $bleed*4 !important;
+    box-shadow: 3px 7px 7px -5px rgba(0,0,0,.5);
+    .ribbon-tail {
+        width: $tail-size;
+        height: $tail-size;
+        vertical-align: bottom;
+        margin-bottom: $tail-size*-1;
+        margin-left: $tail-size + $bleed*5;
+        box-sizing: border-box;
+        content: " ";
+        display: inline-block;
+        border-top-width: $tail-size/2;
+        border-bottom-width: $tail-size/2;
+        border-left-width: $tail-size/2;
+        border-right-width: $tail-size/2;
+        border-style: solid;
+        border-color: transparent;
+        border-top-color: #064347;
+        border-left-color: #064347;
+    }
+}
+.ribbon-clear {
+    clear: right;
+}
+.dash-ribbon {
+    background-color: $pea-green;
+    height: $bleed*5;
+    width: 104%;
+    margin: -2% -2% 1%;
+    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    button {
+        margin: $bleed $bleed $bleed 0;
+    }
+    h3 {
+        line-height: $bleed*3;
+        color: white !important;
+    }
+}

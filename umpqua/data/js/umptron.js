@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
+    setMainHeroBG();
     $("body>section").each(function(){
         giveSectionsUniqueClasses( $(this) );
     });
@@ -154,7 +155,6 @@ function ektronFramework( $this ) {
                             styleTag += "@media (" +  thisStyle[0] + "-width: " + thisStyle[1] + "px) {\n";
                             styleTag += "  #" + $this.attr("id") + " {\n";
                             styleTag += thisStyleComplete + "  }\n}\n";
-
                         }
                     }
                 }
@@ -167,13 +167,13 @@ function ektronFramework( $this ) {
     }
     // <-- ADD INTERSESSIONAL BUTTON CODE
     if ( $this.data("ektron-warning") ) {
-        if ( !$(".leaveUmpquaModell").length ) {
+        if (!$(".leaveUmpquaModal").length) {
             createLeaveUmpquaDialog();
         }
         $this.on("click", function (event) {
             event.preventDefault();
             var linkOutside = $this.attr("href");
-            $(".leaveUmpquaModel").show();
+            $(".leaveUmpquaModal").show();
             if ( $this.data("ektron-warning").length > 1 ) {
                 $(".leaveModalBox").children("p").text( $this.data("ektron-warning") );
             }
@@ -181,11 +181,13 @@ function ektronFramework( $this ) {
             $(".windowModalContainer").css( "height", $(window).height() );
         });
     }
-    // <-- VIDEO MODAL CODE
-    if ( $this.data("ektron-youtube") || $this.data("ektron-vimeo") ) {
+    // <-- VIDEO MODAL CODE ------------------------------------------------------------ !>
+    if ($this.data("ektron-youtube") || $this.data("ektron-vimeo")) {
+        console.log("video link found");
         if ( !$("#videoModal").length ) {
             createVideoModal();
         }
+        $("#video").remove();
         var videoOptions = 'xyz=1';
         if ( $this.data("ektron-options") ) {
             videoOptions = stripEktronTags( $this.data("ektron-options"), true );
@@ -198,14 +200,13 @@ function ektronFramework( $this ) {
             $youtube_id = stripEktronTags( $this.data("ektron-youtube"), true );
         }
         //build iFrame string
-        var videoIframe = '<iframe id="video" src="';
+        var videoIframe = '<iframe id="video" class="vid-test" src="';
         //attache click handler
         if ( videoSource == "vimeo") {
-            videoIframe += 'http://player.vimeo.com/video/';
+            videoIframe += 'https://player.vimeo.com/video/';
             videoIframe += $.trim( $vimeo_id ) + '?';
-            
         } else {
-            videoIframe += 'http://www.youtube.com/embed/';
+            videoIframe += 'https://www.youtube.com/embed/';
             videoIframe += $.trim( $youtube_id ) + '?';
         }
         videoIframe += attachOptions( videoSource, videoOptions);
@@ -213,6 +214,7 @@ function ektronFramework( $this ) {
         $this.on("click", function(ev){
             ev.preventDefault();
             $("#videoModal").show();
+            console.log("video link clicked");
             $("#videoBox").prepend(videoIframe);
             sizeVideo();
         });
@@ -282,10 +284,10 @@ function attachOptions ( source, options ) {
     return videoQS;
 }
 function createLeaveUmpquaDialog() {
-    $("body").append("<div class='leaveUmpquaModel'></div>");
+    $("body").append("<div class='leaveUmpquaModal'></div>");
     var winHeight = $("html").height() + $(window).height()/2;
-    $(".leaveUmpquaModel").css("height", winHeight );
-    $(".leaveUmpquaModel").append("<div class='windowModalContainer'></div>");
+    $(".leaveUmpquaModal").css("height", winHeight);
+    $(".leaveUmpquaModal").append("<div class='windowModalContainer'></div>");
     $(".windowModalContainer").css("height", $(window).height());
     $(".windowModalContainer").append("<span></span>");
     $(".windowModalContainer").append("<div class='leaveModalBox'></div>");
@@ -293,10 +295,10 @@ function createLeaveUmpquaDialog() {
     $(".leaveModalBox").append("<p>By following this link, you will be leaving umpquabank.com. Click OK to continue or cancel to remain in umpquabank.com.</p>");
     $(".leaveModalBox").append("<a class='dialogCancel'>CANCEL</a>");
     $(".leaveModalBox").append("<a href='' class='dialogOK' target='_blank'>OK</a>");
-    $(".leaveUmpquaModel").hide();
+    $(".leaveUmpquaModal").hide();
     console.log("Leave domain Modal Created");
-    $(".dialogCancel, .dialogOK, .leaveUmpquaModel").on("click", function () {
-        $(".leaveUmpquaModel").hide();
+    $(".dialogCancel, .dialogOK, .leaveUmpquaModal").on("click", function () {
+        $(".leaveUmpquaModal").hide();
     });
 }
 function pseudoClassFinder(teststring, testid, pclass) {
@@ -359,44 +361,43 @@ function fixMultipleIDs () {
     }
 }
 
-function sizeVideo() {
-    if ( $("#video").length ) {
+function sizeVideo(override) {
+    if ($("#video").length || override == true) {
         var viewPortWidth = $(window).width();
         var viewPortHeight = $(window).height();
         if (screenSizingWrong) {
             // in case device computes window size wrong
             viewPortWidth = $(document).width();
         }
-        var videoBoxPadding = parseInt($("#videoBox").css("padding-top"));
+        var videoBoxPadding = parseInt( $("#videoBox").css("padding-top") );
         var totalVideoPadding = videoBoxPadding * 2;
         var potentialWidth = .8 * viewPortWidth;
         var potentialHeight = .8 * viewPortHeight;
         var letterBoxFactor = 16 / 9;
         // determine limiting factor: width or height
-        if (potentialWidth > potentialHeight * letterBoxFactor) {
+        if ( potentialWidth > potentialHeight * letterBoxFactor ) {
             // calculate width from height;
-            $("#video").css("width", (potentialHeight - totalVideoPadding) * letterBoxFactor + "px");
-            $("#video").css("height", potentialHeight - totalVideoPadding + "px");
-            $("#videoBox").css("width", potentialHeight * letterBoxFactor + "px");
-            $("#videoBox").css("height", potentialHeight + "px");
+            $("#video").css( "width", ( ( potentialHeight - totalVideoPadding ) * letterBoxFactor ) + "px" );
+            $("#video").css( "height", ( potentialHeight - totalVideoPadding ) + "px" );
+            $("#videoBox").css( "width", potentialHeight * letterBoxFactor + "px" );
+            $("#videoBox").css( "height", potentialHeight + "px" );
         } else {
             // calculate width from height;
-            $("#video").css("width", (potentialWidth - totalVideoPadding) + "px");
-            $("#video").css("height", (potentialWidth - totalVideoPadding) / letterBoxFactor + "px");
-            $("#videoBox").css("width", potentialWidth + "px");
-            $("#videoBox").css("height", potentialWidth / letterBoxFactor + "px");
+            $("#video").css( "width", ( potentialWidth - totalVideoPadding ) + "px" );
+            $("#video").css( "height", ( ( potentialWidth - totalVideoPadding ) / letterBoxFactor ) + "px" );
+            $("#videoBox").css( "width", potentialWidth + "px" );
+            $("#videoBox").css( "height", ( potentialWidth / letterBoxFactor ) + "px" );
         }
-        $("#videoBox").css("padding-top", videoBoxPadding + "px");
-        $("#videoModalContainer").css("height", viewPortHeight);
-        $("#video").css("max-width", "1920px");
-        $("#video").css("max-height", "1080px");
+        $("#videoBox").css( "padding-top", videoBoxPadding + "px" );
+        $("#videoModalContainer").css( "height", viewPortHeight );
+        $("#video").css( "max-width", "1920px" );
+        $("#video").css( "max-height", "1080px" );
         $("#videoModal").css({
             "width": viewPortWidth,
             "min-height": $(document).height(),
             "height": $(window).height()
         });
     }
-
 }
 // Movie Modal
 function createVideoModal() {
@@ -411,52 +412,51 @@ function createVideoModal() {
     $("#videoModalContainer").css("height", $(window).height());
     $("#videoModalContainer").append("<span></span>");
     $("#videoModalContainer").append("<div id='videoBox'></div>");
+    $("#videoBox").append("<iframe id='video'>Close</iframe>");
     $("#videoBox").append("<a class='close-video'>Close</a>");
-    $(".close-video, #videoModal").on("click", function () {
+    $(".close-video").on("click", function () {
         $("#videoModal").hide();
         $("#video").remove();
     });
+    $(document).on("click", "#videoModal", function () {
+        $("#videoModal").hide();
+        $("#video").remove();
+    });
+    sizeVideo();
+    $("#video").remove();
     $("#videoModal").hide();
     console.log("Video Modal Created");
 }
-function stripEktronTags ( thestring, complete ) {
-    thestring = thestring.replace(/<%=/g, "");
-    thestring = thestring.replace(/<%/g, "");
-    thestring = thestring.replace(/%>/g, "");
-    thestring = thestring.replace(/{%=/g, "");
-    thestring = thestring.replace(/{%/g, "");
-    thestring = thestring.replace(/%}/g, "");
-    if (complete) {
-        thestring = thestring.replace(/ /g, "");
+function stripEktronTags(thestring, complete) {
+    if (thestring.length > 0) {
+        thestring = thestring.replace(/<%=/g, "");
+        thestring = thestring.replace(/<%/g, "");
+        thestring = thestring.replace(/%>/g, "");
+        thestring = thestring.replace(/{%=/g, "");
+        thestring = thestring.replace(/{%/g, "");
+        thestring = thestring.replace(/%}/g, "");
+        if (complete) {
+            thestring = thestring.replace(/ /g, "");
+        }
+        return thestring;
+    } else {
+        return "";
     }
-    return thestring;
+    
+    
 }
-
-
-/*
-vimeo:
-<iframe 
-    src="//player.vimeo.com/video/VIDEO_ID?autoplay=1&badge=0&byline=0&color=FFF&portrait=0&title=0&player_id=my-player" 
-    frameborder="0"
-    id="video"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-youtube:
-<iframe 
-    src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://current.com&controls="   
-    frameborder="0"
-    id="video"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-enablejsapi=1 allows to be controlled by JS
-playerapiid=anyString
-modestbranding=1
-rel=0
-showinfo=0
-disablekb=1
-autohide=1
-*/
+/* Set BG image */
+function setMainHeroBG() {
+    var largeBG = $("#heroContent").data("small-bg");
+    var smallBG = $("#heroContent").data("large-bg");
+    $("#heroContent").css("background-image", smallBG);
+    console.log("large image: " + largeBG + "; \nsmall image: " + smallBG);
+    var addedStyle = "<style type='text/css'>";
+    addedStyle += "#heroContent { background: url(\"" + smallBG + "\") no-repeat center center fixed black;}";
+    addedStyle += "@media (min-width: 400px) { background-image: url(\"" + largeBG + "\"); }";
+    addedStyle += "</style>";
+    $("head").append(addedStyle);
+}
 
 
 

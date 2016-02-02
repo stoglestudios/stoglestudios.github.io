@@ -1,0 +1,10 @@
+dark aqua: #00777f
+darker aqua: #005f66
+cerellian: #E4F6F7
+bright aqua: #00A0AF
+orange: #e36f1e
+light-orange: #f49c1d
+warm-white: #fef4ef
+
+pea-green: #afbc22
+light-green: #e4e990

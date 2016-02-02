@@ -1,0 +1,111 @@
+/************************************************
+    VARS
+*************************************************/
+
+// Colors
+$teal: #00777f;
+$dark-teal: #005f66;
+$sky: #E4F6F7;
+$aqua: #00A0AF;
+$orange: #e36f1e;
+$light-orange: #f49c1d;
+$dark-orange: #bb6633;
+$yellow: #ffb933;
+$beige: #fef4ef;
+$pea-green: #afbc22;
+$dark-chartreuse: #779900;
+$pale-chartreuse: #e4e990;
+$blue: #7AD3D9;
+
+// Object sizes
+$gutter: 4%;
+$bleed: 10px;
+$full-width: 100% - $gutter*2;
+$dash-width: 100px;
+$dash-height: 60px; 
+
+// common custom breakpoints
+$break-large: 1400px;
+$break-medium: 1200px;
+$break-small: 1000px;
+$break-tablet: 850px;
+$break-phablet: 700px;
+$break-phone: 450px;
+
+//Bootstrap's col breakpoints
+$bootbreak-xl: 1200px;
+$bootbreak-lg: 992px;
+$bootbreak-md: 768px;
+$bootbreak-sm: 544px;
+
+@import "imports/fonts";
+@import "imports/filler";
+@import "imports/defaults";
+@import "imports/header";
+
+/*************************************************
+    NAV
+*************************************************/
+.news-carousel {
+    display: inline-block; 
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    margin-bottom: $bleed;
+}
+.news-articles {
+    margin: $bleed 0 0 0;
+    padding: 0;
+    p {
+        padding: 0 $bleed $bleed !important;
+        margin: 0;
+    }
+}
+#connectDisplay {
+    display: inline-block;
+    width: 100%;
+    margin: $bleed 0;
+}
+.numberHolder {
+    display: inline-block;
+    padding: 0;
+    width: 50%;
+    text-align: right;
+    float: left;
+    clear: left;
+    margin: $bleed 0 0;
+    height: $bleed*3;
+    .digitHolder {
+        text-align: center;
+        color: black;
+        font-family: $hl;
+        font-size: 1.8em;
+        background-color: $pale-chartreuse;
+        display: inline-block;
+        width: $bleed*2;
+        height: $bleed*3;
+        line-height: $bleed*3;
+        margin: 0 1px;
+    }
+}
+.connect-tags {
+    padding: 0 0 0 $bleed !important;
+    float: right;
+    clear: right;
+    width: 50%;
+    height: $bleed*3;
+    line-height: $bleed*3;
+    display: inline-block;
+    margin: $bleed 0 0;
+    font-size: 1.6em;
+}
+
+@import "imports/dashboard-menu";
+@import "imports/main-menu";
+@import "imports/content-boxes";
+@import 'imports/section-themes';
+@import 'imports/footer';
+@import 'imports/buttons';
+@import "imports/htags";
+
+

@@ -1,0 +1,278 @@
+/*************************************************
+    BUTTONS
+*************************************************/
+
+.umpqua-btn {
+    background-color: $teal;
+    border: none;
+    margin: $bleed;
+    color: white;
+    &:hover {
+        background-color: $orange;
+        color: white;
+    }
+    &:active {
+        background-color: $light-orange !important;
+        color: white;
+    }
+    &:visited {
+        background-color: $dark-teal;
+        color: white;
+    }
+    &:focus {
+        background-color: $dark-teal;
+        color: white;
+    }
+}
+.arrow-up, .arrow-right, .arrow-left, .arrow-down {
+    display: inline-block;
+    background-color: $teal;
+    background-position: center;
+    background-size: contain;
+    &:hover {
+        background-color: $orange;
+    }
+    &:active {
+        background-color: $light-orange !important;
+    }
+    &:focus {
+        background-color: $dark-teal;
+    }
+}
+.arrow-up {
+    background-image: url(../img/up-arrow.png);   
+}
+.arrow-left {
+    background-image: url(../img/left-arrow.png);   
+}
+.arrow-right {
+    background-image: url(../img/right-arrow.png);   
+}
+.arrow-down {
+    background-image: url(../img/down-arrow.png);   
+}
+.orange-btn {
+    background-color: $orange;
+    &:hover {
+        background-color: $yellow;
+    }
+    &:active {
+        background-color: $teal !important;
+    }
+    &:focus {
+        background-color: $dark-orange;
+    }
+}
+.green-btn {
+    background-color: $dark-chartreuse;
+    &:hover {
+        background-color: $pale-chartreuse;
+    }
+    &:active {
+        background-color: $teal !important;
+    }
+    &:focus {
+        background-color: $dark-teal;
+    }
+}
+.teal-btn {
+    background-color: $dark-teal;
+    &:hover {
+        background-color: $blue;
+    }
+    &:active {
+        background-color: $orange !important;
+    }
+    &:focus {
+        background-color: $dark-teal;
+    }
+}
+.sqr-btn-xs, .sqr-btn-sm, .sqr-btn-md, .sqr-btn-lg, .sqr-btn-xl {
+    display: inline-block;
+    border: none;
+    border-radius: $bleed/2;
+    padding: 0;
+    margin: $bleed/2;
+    min-width: 0;
+}
+.sqr-btn-xs {
+    width: $bleed*2;
+    height: $bleed*2;
+}
+.sqr-btn-sm {
+    width: $bleed*3;
+    height: $bleed*3;
+}
+.sqr-btn-md {
+    width: $bleed*4;
+    height: $bleed*4;
+}
+.sqr-btn-lg {
+    width: $bleed*5;
+    height: $bleed*5;
+}
+.sqr-btn-xl {
+    width: $bleed*6;
+    height: $bleed*6;
+}
+.question-mark {
+    line-height: 100%;
+    text-align: center;
+    &:after {
+        content: "?";
+        color: white;
+        font-size: 20px;
+        font-weight: 800;
+        opacity: .8;
+    }
+}
+.forward-arrow {
+    font-size: 1em;
+    img {
+        width: 1em;
+        height: 1em;
+    }
+}
+.ump-fixed-width {
+    width: 80%;
+    max-width: 250px;
+}
+.dash-ctr {
+    position: relative;
+    z-index: 11;
+    float: right; 
+    margin-bottom: -5*$bleed;
+    &.d-two {
+        right: 3.5*$bleed;
+    }
+    &.d-three {
+        right: 7*$bleed;
+    }
+    &.d-four {
+        right: 10.5*$bleed;
+    }
+    &.d-four {
+        right: 14*$bleed;
+    }
+}
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.news-carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    &:hover nav.carousel-controls {
+        opacity: 1;
+        animation-name: fadein;
+        animation-duration: .5s;
+    }
+    .carousel-slide {
+        position: absolute;
+        vertical-align: top;
+        top: 0;
+        left: 100%; 
+        background-color: black;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        padding: 0;
+    }
+} 
+nav.carousel-controls {
+    height: $bleed*2;
+    opacity: 0;
+    animation-name: fadeout;
+    animation-duration: .5s;
+    padding: 0 $bleed/2;
+    display: inline-block;
+    border-radius: $bleed;
+    position: absolute;
+    z-index: 9000;
+    top: $bleed;
+    left: $bleed;
+    background-color: rgba(0,100,100,.5);
+    border: solid green 1px;
+    ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+    }
+    .car-btn {
+        display: inline-block;
+        width: $bleed;
+        height: $bleed;
+        margin: 0 $bleed/4;
+//        background-color: rgba(255,255,255,.2);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .carousel-back, .carousel-forward {
+        background-size: 200% 100%;
+        background-position: top left;
+        &:hover {
+           background-position: top right; 
+        }
+    }
+    .carousel-back {
+        background-image: url(../img/left-arrow-full.png);
+        
+    }
+    .car-slide-btn {
+        border: solid white 1px;
+        border-radius: $bleed/2;
+        background-color: rgba(255,255,255,.4);
+        &:hover {
+            background-color: rgba(255,255,255,1);
+        }
+    }
+    .carousel-pause {
+        height: $bleed;
+        width: $bleed;
+        border-left: solid rgba(255,255,255,.7) 4px;
+        border-right: solid rgba(255,255,255,.7) 4px;
+        &:hover {
+            border-left: solid rgba(255,255,255,1) 4px;
+            border-right: solid rgba(255,255,255,1) 4px;
+        }
+    }
+    .carousel-play {
+        height: $bleed;
+        width: $bleed;
+        display: none;
+        border: solid transparent $bleed/2;
+        border-left-width: $bleed - 1;
+        border-right-width: 0;
+        border-left-color: rgba(255,255,255,.7);
+        &:hover {
+            border-left-color: rgba(255,255,255,1);
+        }
+    }
+    .carousel-forward {
+        background-image: url(../img/right-arrow-full.png);
+    }
+}
+#alice {
+    background-color: yellow;
+    left: 0;
+}
+#bob {
+    background-color: darkred;
+}
+#carlie {
+    background-color: orange;
+}
+#dan {
+    background-color: darkblue;
+}
+#erica {
+    background-color: pink;
+}

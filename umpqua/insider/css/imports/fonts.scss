@@ -1,0 +1,35 @@
+$p: "Helvetica Neue", "Roboto Regular", sans-serif;
+$hc: "Helvetica Neue Condensed", "Roboto Condensed", sans-serif;
+$hl: "Helvetica Neue Light", "Roboto Condensed Light", sans-serif;
+$ht: "Helvetica Neue Thin", "Roboto Thin", sans-serif;
+/*************************************************
+    FONTS
+*************************************************/
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("fonts/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Condensed Light";
+  src: url("fonts/RobotoCondensed-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("fonts/Roboto-Thin.ttf");
+}
+.regular, h1.regular, h2.regular, h3.regular, h4.regular, h5.regular {
+    font-family: $p !important;
+}
+.condensed, h1.condensed, h2.condensed, h3.condensed, h4.condensed, h5.condensed {
+    font-family: $hc !important;
+}
+.condensed-light, h1.condensed-light, h2.condensed-light, h3.condensed-light, h4.condensed-light, h5.condensed-light {
+    font-family: $hl !important;
+}
+.thin, h1.thin, h2.thin, h3.thin, h4.thin, h5.thin {
+    font-family: $ht !important;
+}

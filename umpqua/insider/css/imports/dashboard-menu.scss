@@ -1,0 +1,159 @@
+.dashboard-menu {
+    position: relative;
+    padding: 0;
+    float: left;
+    font-family: $hl;
+    font-size: 1.3em;
+    z-index: 1000;
+    height: $dash-height;
+    .dash-open {
+        a {
+            background-color: $dark-chartreuse;
+        }
+        .dash-tail {
+            border-top-color: $dark-chartreuse;
+        }
+    }
+    .dash-open:hover {
+        a {
+            background-color: $pea-green;
+        }
+        .dash-tail {
+            border-top-color: $pea-green;
+        }
+    }
+    .hamburger {
+        display: none;
+        float: left;
+        background-color: $orange;
+        height: 100%;
+        width: $dash-height;
+    }
+    li {
+        float: none;
+        vertical-align: top;
+        height: $dash-height;
+        width: $dash-width;
+        a {
+            display: inline-block;
+            text-align: center !important;
+            width: $dash-width;
+            height: $dash-height;
+            line-height: 1.2em;
+            background-color: $orange;
+            color: white;
+            padding: $bleed 0;
+            //  To force a line break for visual consitency across these 3 buttons
+            word-spacing: 9999999px;
+            &:focus {
+                text-decoration: none;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                background-color: $light-orange;
+            }
+            .dash-tail {
+                border-top-color: $light-orange;
+            }
+        }
+        &:focus {
+            a {
+                background-color: $light-orange;
+            }
+            .dash-tail {
+                border-top-color: $light-orange;
+            }
+        }
+        &:active {
+            a {
+                background-color: $light-orange;
+            }
+            .dash-tail {
+                border-top-color: $light-orange;
+            }
+        }
+        //  Create Bottom Triangle
+        .dash-tail {
+            left: 0;
+            bottom: $dash-width/-2;
+            box-sizing: border-box;
+            content: " ";
+            display: inline-block;
+            border-top-width: $bleed*2;
+            border-bottom-width: 0;
+            border-left-width: $dash-width/2;
+            border-right-width: $dash-width/2;
+            border-style: solid;
+            border-color: transparent;
+            border-top-color: $orange;
+        }
+    }
+}
+@media ( max-width: $bootbreak-lg ) {
+    .dashboard-menu {
+        font-size: 1.1em;
+        width: $dash-height;
+        height: $dash-height;
+        .hamburger {
+            display: inline-block;
+            text-align: center;
+            &:hover {
+                background-color: $light-orange;
+            }
+            img {
+                margin-top: $dash-height/3;
+                margin-bottom: $dash-height/3;
+                width: $dash-height/3;
+                height: $dash-height/3;
+            }
+        }
+        li {
+            &:not(.hamburger){
+                float: left;
+                display: inline-block;
+                display: none;
+                box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+            }
+            &:nth-child(2){
+                clear: both;
+            }
+            width: $dash-width*1.5;
+            height: $dash-height/2;
+            a {
+                width: $dash-width*1.5;
+                word-spacing: normal;
+                height: $dash-height/2;
+                padding: $bleed/2 0;
+                &:after {
+                    content: none;
+                }
+            }
+            .dash-tail {
+                display: none;
+            }
+            &:nth-child(1) .dash-tail {
+                display: inline-block;
+                border-left-width: $dash-height/2;
+                border-right-width: $dash-height/2;
+            }
+        }
+        &:hover li {
+            display: inline-block;
+        }
+    }
+}
+@media ( max-width: $break-phone ) {
+    .dashboard-menu {
+        .hamburger {
+            width: $dash-height/1.5;
+            &:nth-child(1) .dash-tail {
+                border-left-width: $dash-height/3;
+                border-right-width: $dash-height/3;
+            }
+        }
+    }
+}
+
