@@ -99,9 +99,6 @@ $(document).ready(function() {
         connectCounter( $("#totalAssociates"), Math.round( fullData.Totals["Participating"] ) );
         connectCounter( $("#myTotalHours"), Math.round( fullData["MinutesUsed"]/60 ) );
     });
-    
-    
-    
     $(".news-carousel").each(function(){
         if(typeof carNum !== 'undefined'){
             carNum++;
@@ -127,7 +124,6 @@ $(document).ready(function() {
         $(".carousel-" + carNum + " .carousel-playpause>div").on("click", function(){
             $(this).siblings().show();
             $(this).hide();
-            console.log("play/pause");
         })
         $(".carousel-" + carNum + " .car-slide-btn").on("click", function() {
             $t = $(this);
@@ -208,7 +204,6 @@ function scrubSlideShow ( forward, obj, press ) {
     } else {
         nextChildNum = 1;
     }
-    console.log( "Hey: " + $currentSlide.attr("class") + " - " + childNumber + " of " + totalNumber );
     if ( forward ) {
         $currentSlide.css("left", "0%").animate({
             left: "-100%"
@@ -217,8 +212,6 @@ function scrubSlideShow ( forward, obj, press ) {
         $next.css("left", "100%").animate({
             left: "0%"
         }, slideTime);
-        
-        console.log( "Next: " + $next.attr("class") );
     } else {
         $currentSlide.css("left", "0%").animate({
             left: "100%"
@@ -227,8 +220,6 @@ function scrubSlideShow ( forward, obj, press ) {
         $prev.css("left", "-100%").animate({
             left: "0%"
         }, slideTime);
-        
-        console.log( "Next: " + $prev.attr("class") );
     }
     if ( press ) {
         $parent.children("nav").children(".carousel-playpause").children(".carousel-pause").hide();

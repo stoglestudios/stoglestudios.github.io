@@ -164,9 +164,14 @@
     to {opacity: 1;}
 }
 .news-carousel {
+    display: inline-block; 
+    width: 100%;
+    margin-bottom: $bleed;
     overflow: hidden;
     position: relative;
     padding: 0;
+    height: 500px;
+    background-color: none;
     &:hover nav.carousel-controls {
         opacity: 1;
         animation-name: fadein;
@@ -177,14 +182,56 @@
         vertical-align: top;
         top: 0;
         left: 100%; 
-        background-color: black;
         display: inline-block;
         width: 100%;
         height: 100%;
-        opacity: .5;
         padding: 0;
+        * {
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            display: inline-block;
+            overflow: hidden;
+            opacity: .5;
+        }
+        h1, h2, h3, h4, h5 {
+            i {
+                font-size: .4em;
+                float: right;
+                padding: 1.4em 3px 0 0;
+                color: grey;
+            }
+        }
+        button {
+            margin-left: 0;
+        }
+        .text-box {
+            position: relative;
+            z-index: 10;
+            height: 100px;
+            overflow: hidden;
+            p {
+                position: absolute;
+                z-index: 1;
+                padding: 0;
+            }
+            div {
+                display: inline-block;
+                width: 100%;
+                bottom: 0;
+                position: absolute;
+                height: 0px;
+                background-color: brown;
+                z-index: 200;
+                box-shadow: 0 0 15px 15px $sky;
+            }
+        }
     }
-} 
+}  
 nav.carousel-controls {
     height: $bleed*2;
     opacity: 0;
@@ -261,18 +308,20 @@ nav.carousel-controls {
     }
 }
 #alice {
-    background-color: yellow;
     left: 0;
 }
-#bob {
+#alice img {
+    background-color: yellow;
+}
+#bob img {
     background-color: darkred;
 }
-#carlie {
+#carlie img {
     background-color: orange;
 }
-#dan {
+#dan img {
     background-color: darkblue;
 }
-#erica {
+#erica img {
     background-color: pink;
 }
