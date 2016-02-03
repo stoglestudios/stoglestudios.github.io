@@ -1,0 +1,84 @@
+
+div:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+a {
+    display: inline;
+    clear: none;
+}
+h1 {
+    text-align: center;
+}
+section {
+    display: block;
+    padding: 50px 0;
+}
+.white {
+    height: 200px;
+}
+.widget {
+    min-height: 200px;
+    background-color: #58cdd7;
+    
+}
+.widget > div {
+    width: 33%;
+    display: inline-block;
+    padding: 40px;
+    vertical-align: top;
+}
+.me, .umpqua {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    max-width: 60%;
+    box-shadow: 5px 8px 5px -5px rgba(0,0,0,.2) inset;
+}
+.me {
+    background-color: white;
+    border-radius: 20px 20px 20px 0;
+    float: left;
+}
+.umpqua {
+    background-color: #00a0b0;
+    border-radius: 20px 20px 0 20px;
+    float: right;
+    clear: both;
+    color: white;
+    margin-top: 20px;
+}
+.umpqua a {
+    color: #58cdd7;
+}
+.me p, .umpqua p {
+    padding: 0;
+    margin: 0;
+}
+.tail {
+    box-sizing:border-box;
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    bottom: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 8px;
+    border-left-width: 4px;
+    border-bottom-width: 8px;
+    border-right-width: 4px;
+}
+.me .tail {
+    left: -7px;
+    border-bottom-color: white;
+    border-right-color: white;
+}
+.umpqua .tail {
+    right: -7px;
+    border-bottom-color: #00a0b0;
+    border-left-color: #00a0b0;
+}

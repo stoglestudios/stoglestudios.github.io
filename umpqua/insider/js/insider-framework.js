@@ -39,7 +39,10 @@ $(document).ready(function() {
         dashHeight = dashHeight.toString() + "px";
         $this.addClass("dash-open");
         if ($dash.height() > 0) {
-            $dash.animate({height: "0px", marginTop: "0px"}, 300, "easeInOutBack", function(){
+            $dash.animate({
+                height: "0px", 
+                marginTop: "0px"
+            }, 300, "easeInOutBack", function(){
                 $(thisDash).hide();
                 $(thisDash).siblings().hide();
                 if ( thisDash != dashTracker ) {
