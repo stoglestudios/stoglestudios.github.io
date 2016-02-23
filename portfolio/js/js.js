@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     console.log("Ready");
     $(".unsubscribe").hide();
@@ -15,4 +13,3 @@ $(document).ready(function() {
         $(".more").show();
     });
 });
- 
