@@ -1,11 +1,23 @@
 $(document).ready(function () {
     $(".long-description").each(function(){
         $this = $(this);
-        var $para = $this.children("p");
-        $para.append("<button class='more-txt'>more</button>")
-        $para.each(function() {
-           $(this).addClass("add-para");
-        });
+        if ( $this.children("p").length > 1 ){
+            $this.children("p").addClass("add-p");
+            $this.children("p").first().addClass("first-p").removeClass("add-p").append("<button class='more-txt'>more</button>");
+            $this.children("p").first().children(".more-txt").show().on("click", function(ev){
+                $(this).hide();
+                ev.preventDefault();
+                $(this).parent().siblings(".add-p").show();
+            });
+            $this.children("p").last().append("<button class='less-txt'>less</button>");
+            $this.children(".add-p").hide();
+            $this.children("p").last().children(".less-txt").on("click", function(ev){
+                $(this).parent().hide();
+                $(this).parent().siblings(".add-p").hide();
+                ev.preventDefault();
+                $(this).parent().siblings(".first-p").children(".more-txt").show();
+            });
+        }
     });
     $("*").each(function () {
         // For use developing, this section allows you to build HTML closer to what the Ogle view will look like for looping through data
@@ -129,7 +141,11 @@ function OgleFramework($this) {
             }
         });
     }
-    $attr = $this.data("ogle-attr");
+    if ( $this.data("ogle-attr") ) {
+        $attr = $this.data("ogle-attr");
+    } else {
+        $attr = "";
+    }
     if ( $attr && $attr.length > 0 ) {
         $attr = stripOgleTags( $attr, false );
         var thisAttributes = $attr.split("&&");
@@ -143,23 +159,40 @@ function OgleFramework($this) {
             }
         }
     }
+    if ( $this.data("youtube") ) {
+        var $ytvid = $this.data("youtube");
+        console.log("youtube!");
+    } else {
+        var $ytvid = "";
+    }
+    if ( $this.data("vimeo") ) {
+        var $vimvid = $this.data("vimeo").toString();
+        console.log("vimeo!");
+    } else {
+        var $vimvid = "";
+    }
+    if ( $this.data("video-ratio") ) {
+        var $ratio = $this.data("video-ratio").toString();
+    } else {
+        var $ratio = "16:9";
+    }
     // <-- VIDEO MODAL CODE ------------------------------------------------------------ !>
-    if ( ($this.data("ogle-youtube") && $this.data("ogle-youtube").length>0) || ($this.data("ogle-vimeo") && $this.data("ogle-vimeo").length>0)) {
+    if ( $ytvid.length > 0 || $vimvid.length > 0 ) {
         console.log("video link found");
         if ( !$("#videoModal").length ) {
             createVideoModal();
         }
         $("#video").remove();
         var videoOptions = 'xyz=1';
-        if ( $this.data("ogle-options") ) {
-            videoOptions = stripOgleTags( $this.data("ogle-options"), true );
+        if ( $this.data("video-options") ) {
+            videoOptions = stripOgleTags( $this.data("video-options"), true );
         }
         var videoSource = "youtube";
-        if ( $this.data("ogle-vimeo") ) {
+        if ( $vimvid.length>0 ) {
             videoSource = "vimeo";
-            $vimeo_id = stripOgleTags( $this.data("ogle-vimeo"), true );
+            $vimeo_id = stripOgleTags( $vimvid, true );
         } else {
-            $youtube_id = stripOgleTags( $this.data("ogle-youtube"), true );
+            $youtube_id = stripOgleTags( $ytvid, true );
         }
         //build iFrame string
         var videoIframe = '<iframe id="video" class="vid-test" src="';
@@ -178,6 +211,7 @@ function OgleFramework($this) {
             $("#videoModal").show();
             console.log("video link clicked");
             $("#videoBox").prepend(videoIframe);
+            $("#videoBox").attr("data-ratio", $ratio);
             sizeVideo();
         });
     }
@@ -203,7 +237,9 @@ var vimeoDefaults = [
     "color=FFF",
     "portrait=0",
     "title=0",
-    "player_id=umplayer"
+    "loop=0",
+    "api=1",
+    "player_id=ogplayer"
 ];
 function attachOptions ( source, options ) {
     var videoQS = "";
@@ -301,19 +337,27 @@ function fixMultipleIDs () {
         }
     }
 }
-function sizeVideo(override) {
-    if ($("#video").length || override == true) {
+function sizeVideo() {
+    if ($("#video").length) {
         var viewPortWidth = $(window).width();
         var viewPortHeight = $(window).height();
         if (screenSizingWrong) {
             // in case device computes window size wrong
             viewPortWidth = $(document).width();
         }
-        var videoBoxPadding = parseInt( $("#videoBox").css("padding-top") );
+        var videoBoxPadding = parseInt( $("#video").css("margin") );
         var totalVideoPadding = videoBoxPadding * 2;
         var potentialWidth = .8 * viewPortWidth;
         var potentialHeight = .8 * viewPortHeight;
         var letterBoxFactor = 16 / 9;
+        
+        if ($("#videoBox").data("ratio")) {
+            var getRatio = $("#videoBox").data("ratio");
+            var ratioNumbers = $("#videoBox").data("ratio").split(":");
+            console.log(ratioNumbers[0] + " / " + ratioNumbers[1]);
+            letterBoxFactor = parseInt(ratioNumbers[0]) / parseInt(ratioNumbers[1]);
+        }
+        
         // determine limiting factor: width or height
         if ( potentialWidth > potentialHeight * letterBoxFactor ) {
             // calculate width from height;
@@ -326,9 +370,9 @@ function sizeVideo(override) {
             $("#video").css( "width", ( potentialWidth - totalVideoPadding ) + "px" );
             $("#video").css( "height", ( ( potentialWidth - totalVideoPadding ) / letterBoxFactor ) + "px" );
             $("#videoBox").css( "width", potentialWidth + "px" );
-            $("#videoBox").css( "height", ( potentialWidth / letterBoxFactor ) + "px" );
+            $("#videoBox").css( "height", ( potentialWidth / letterBoxFactor ) + 10 + "px" );
         }
-        $("#videoBox").css( "padding-top", videoBoxPadding + "px" );
+//        $("#videoBox").css( "padding-top", videoBoxPadding + "px" );
         $("#videoModalContainer").css( "height", viewPortHeight );
         $("#video").css( "max-width", "1920px" );
         $("#video").css( "max-height", "1080px" );
