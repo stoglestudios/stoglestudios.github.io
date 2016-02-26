@@ -1,0 +1,44 @@
+[
+    {
+        "priority": 1,
+        "fullname": "Special Agent Kingsley",
+        "thumbnail": "/img/.jpg",
+        "aka": "",
+        "description": ""
+    },
+    {
+        "priority": 2,
+        "fullname": "Caster",
+        "thumbnail": "/img/.jpg",
+        "aka": "(aka The Trickster, the Devil)",
+        "description": "Bellevue"
+    },
+    {
+        "priority": 3,
+        "fullname": "Dan Englemann",
+        "thumbnail": "/img/.jpg",
+        "aka": "(aka The Beast)",
+        "description": "Bellevue"
+    },
+    {
+        "priority": 4,
+        "fullname": "Claire Jensen-Englemann",
+        "thumbnail": "/img/.jpg",
+        "aka": "",
+        "description": "Bellevue"
+    },
+    {
+        "priority": 5,
+        "fullname": "Hecate",
+        "thumbnail": "/img/.jpg",
+        "aka": "",
+        "description": "Bellevue"
+    },
+    {
+        "priority": 6,
+        "fullname": "Professor Thomas Stewart",
+        "thumbnail": "/img/.jpg",
+        "aka": "",
+        "description": "Bellevue"
+    }
+]
