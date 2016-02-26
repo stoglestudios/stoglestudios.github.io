@@ -42,7 +42,9 @@ div {
 img {
     display: inline-block;
     border: 0;
-    outline: none; 
+    outline: none;
+    width: 100%;
+    height: auto;
 }
 a {
     display: inline-block;
@@ -73,7 +75,7 @@ h1 {
     }
 }
 h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: right;
     color: $purple;
     font-weight: 400;
@@ -205,30 +207,26 @@ header {
         }
         .long-description, .short-description {
             display: inline-block;
-            padding: 4%;
             margin: 2%;
             background-color: rgba(255,255,255,.5);
             p {
-                padding: 0 0 0;
+                padding: 0 4% 2%;
             }
             h3 {
                 color: $green;
                 font-size: 2em;
-                margin: 2% 0;
             }
-            img {
-                width: 100px;
-                margin: 0 2% 1% 0;
-                box-shadow: 0 1px 1px 2px $green;
-            }
-        }
-        a {
-            &:hover {
-                box-shadow: 0 0 0 2px $green;
-                background-color: rgba(255,255,255,.7);
-                h3 {
+            a {
+                margin-bottom: 2%;
+                color: $purple;
+                font-style: italic;
+                &:hover {
                     text-decoration: underline;
                 }
+            }
+            img {
+                width: 33%;
+                margin: 0 4% 0 0;
             }
         }
         .long-description {
@@ -243,9 +241,40 @@ header {
                 margin-top: 2%;
             }
             p { 
-                margin-top: 2%;
                 color: $purple;
+                .more-txt {
+                    display: none;
+                }
+                &:last-child {
+                    padding-bottom: 4%;
+                }
+                button {
+                    border: none;
+                    background: none;
+                    color: $green;
+                    font-style: italic;
+                    font-size: .9em;
+                    font-family: $body-font;
+                    padding-left: 10px;
+                    &:hover {
+                        color: $purple;
+                        cursor: pointer;
+                    }
+                    &.more-txt:after {     
+                        content: ">>";
+                        font-size: .7em;
+                        letter-spacing: -4px;
+                        margin-left: 4px;
+                    }
+                    &.less-txt:before {
+                        content: "<<";
+                        font-size: .7em;
+                        letter-spacing: -4px;
+                        margin-right: 4px;
+                    }
+                }
             }
+
         }
         .short-description {
             color: $green;
@@ -335,11 +364,23 @@ header {
             }
 
     }
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     #container {
         h1 {
             text-align: center;
         }
+        
+        .long-description, .short-description {
+            h3 {
+                text-align: center;
+            }
+            img {
+                width: 100%;
+                margin: 0 0 4% 0;
+            }
+        }
+        
+        
     }
 }
 @media (max-width: 650px) {
