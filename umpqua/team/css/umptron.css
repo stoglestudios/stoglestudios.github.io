@@ -1,0 +1,191 @@
+/* Umptron CSS */
+
+@font-face {
+    font-family: "Helv N45 Sub Bold Cdn";
+    src: url("fonts/RobotoCondensed-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Helv N45 Sub Reg";
+    src: url("fonts/Roboto-Medium.ttf") format('truetype');
+}
+
+/*
+    Video Player Modal
+*/
+#videoModal {
+    position: absolute;
+    display:none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    background-color: rgba(0,0,0,.8);
+    z-index: 10000;
+    text-align: center;
+}
+#videoModalContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+#videoModalContainer>span {
+    position: relative;
+    display: inline-block;
+    height:100%;
+    max-height: 100%;
+    width: 0;
+    line-height: 100%;
+    top:0;
+    left:0;
+    vertical-align: middle;
+}
+#videoBox {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    background-color: #191919;
+    vertical-align: middle;
+    font-size: 16px;
+    padding-top: 1em;
+    box-shadow: 0 0 40px rgba(0,0,0,.8);
+}
+#video {
+    width: 100%;
+    height: 100%;
+}
+#videoBox a {
+    font-family: "Helv N45 Sub Bold Cdn", Helvetica, sans-serif;
+    display: inline-block;
+    position:absolute;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    bottom: -1em;
+    padding: 0 1.5em;
+    border-radius: 1em;
+    background-color: #191919;
+    color: white;
+}
+#videoBox a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #72ccd2;
+}
+.close-video:after {
+    content: "X";
+    border-radius: 10px;
+    border: solid white 1px;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+#videoBox a:hover:after {
+    border-color: #72ccd2;
+}
+
+/*
+ * Leave Umpqua Site Modal
+ */
+
+.leaveUmpquaModel {
+    position: absolute;
+    display:none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 10000;
+    text-align: center;
+}
+.windowModalContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.windowModalContainer>span {
+    position: relative;
+    display: inline-block;
+    height:100%;
+    max-height: 100%;
+    width: 0;
+    line-height: 100%;
+    top:0;
+    left:0;
+    vertical-align: middle;
+}
+.leaveModalBox {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    max-width: 350px;
+    text-align: left;
+    background-color: white;
+    vertical-align: middle;
+    font-size: 1em;
+    line-height: 1.2em;
+    padding: 2em;
+    margin: 2em 0;
+    box-shadow: 0 0 40px rgba(0,0,0,.8);
+}
+.leaveUmpquaModel h1 {
+    font-family: "Helv N45 Sub Bold Cdn", Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding:0;
+    color: #00777f;
+}
+.leaveUmpquaModel p {
+    font-family: "Helv N45 Sub Reg", Helvetica, sans-serif;
+    color: #404040;
+}
+.leaveUmpquaModel a {
+    font-family: "Helv N45 Sub Bold Cdn", Helvetica, sans-serif;
+    display: inline-block;
+    padding: 6px;
+    color: white;
+    text-align: center;
+    min-width: 60px;
+    font-size: 1.3em;
+    margin-top: 20px;
+    box-shadow: 1px 2px 0 rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.leaveUmpquaModel a:hover {
+    text-decoration: none;
+}
+.leaveUmpquaModel .dialogCancel {
+    margin-right: 20px;
+    background-color: #bdc3c7;
+}
+.leaveUmpquaModel .dialogCancel:hover {
+    background-color: #666;
+}
+.leaveUmpquaModel .dialogOK {
+    background-color: #00777f; 
+    text-align: left;
+    padding-left: 10px;
+}
+.leaveUmpquaModel .dialogOK:after {
+    content: ">";
+    float: right;
+    margin-right: 5px;
+}
+.leaveUmpquaModel .dialogOK:hover {
+    background-color: #72ccd2;
+}
+@media all and (max-device-width: 700px) and (orientation: landscape) {
+    #videoBox a {
+        display: none;
+    }
+}
+@media all and (max-device-width: 500px) and (orientation: portrait) {
+    .leaveModalBox {
+        max-width: 180px;
+    }
+}
