@@ -18,6 +18,7 @@ $movie-height: 360px;
 $icon-size: 30px;
 
 $green: #5A9245;
+$light: #fdfffc;
 $purple: #301F3A;
 $accent-color: #E5EEC7;
 $neutral-color: #5C5948;
@@ -54,6 +55,7 @@ a img {
 }
 a, a:hover, a:visited, a:active {
     text-decoration: none; 
+    cursor: pointer;
 }
 ul {
     list-style: none;
@@ -66,7 +68,6 @@ h1 {
     font-weight: 100;
     font-size: 4em;
     line-height: 1em;
-    margin-bottom: $bleed;
     a {
         color: white;
         &:hover {
@@ -75,18 +76,24 @@ h1 {
     }
 }
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: right;
     color: $purple;
     font-weight: 400;
-    padding: 2% 2% 0;
-    margin-top: 3%;
-    border-top: solid white 1px;
+    padding: 2px 2% 0;
+    margin-top: 2px;
+    border-top: solid $purple 1px;
     clear: both;
 }
+//h2:not(.first) {
+//    margin-top: 5%;
+//}
 p {
     font-size: 1.2em;
     font-weight: 400;
+}
+p:empty:before, .temp-text:before  {
+    content: "You can create anything that makes you happy. Let the paint work. You can do anything here. So don't worry about it. Look around, look at what we have. Beauty is everywhere, you only have to look to see it. This is probably the greatest thing to happen in my life - to be able to share this with you.";
 }
 body {
     position: relative;
@@ -99,9 +106,9 @@ body {
 //------------------- 
 #portfolio {
     max-width: $pg-width;
-    width: 94%;
+    width: 100%;
     margin: 0 auto;
-    background-color: $purple;
+    background: url("../images/cross.png") $purple;
     box-shadow: 0 0 5px $dark-color;
     overflow: hidden;
 }
@@ -130,7 +137,6 @@ header {
                 background-size: 900% 200%;
                 background-position: bottom;
                 border-radius: 10%;
-                //border: solid white 1px;
                 vertical-align: middle;
             } 
             //portfolio 0 | address 12.5 | phone 25 | linkin  37.5 | mail 50 | printer 62.5 | reel  75 | resume 87.5
@@ -170,7 +176,6 @@ header {
         }
         .btn {
             color: white;
-            
             &:hover {
                 text-decoration: underline;
             }
@@ -192,12 +197,13 @@ header {
         text-align: center;
         padding: 2% 2% 5%;
         margin: 2%;
-        background-image: linear-gradient($accent-color, $green);
-        background-color: $accent-color;
+        background-color: white;
+        background-image: linear-gradient($light, $accent-color);
+        background-attachment: fixed;
         border-radius: $bleed;
         box-shadow: 0 2px 8px black;
         h1 {
-            padding: 2% 0 0;
+            padding: 4% 0 0;
             color: $purple;
             text-align: left;
         }
@@ -207,14 +213,16 @@ header {
         }
         .long-description, .short-description {
             display: inline-block;
-            margin: 2%;
-            background-color: rgba(255,255,255,.5);
+            margin: 4% 2% 2%;
+            background-color: white;
+            
             p {
                 padding: 0 4% 2%;
             }
             h3 {
                 color: $green;
                 font-size: 2em;
+                padding: 4% 0 0;
             }
             a {
                 margin-bottom: 2%;
@@ -298,6 +306,12 @@ header {
                 color: $purple;
             }
         }
+        .stand-alone {
+            h3 {
+                padding-left: 4%;
+                padding-bottom: 2%;
+            }
+        }
         iframe { /*500 x 325 100 x 65 200 130*/
             display: block;
             margin: 0 auto 1%;
@@ -364,12 +378,24 @@ header {
             }
 
     }
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
+    .hideable {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
     #container {
         h1 {
             text-align: center;
         }
-        
+        h2 {
+            text-align: center;
+            padding: 2% 2% 0;
+        }
+        a {
+            display: block;
+            text-align: center;
+        }
         .long-description, .short-description {
             h3 {
                 text-align: center;

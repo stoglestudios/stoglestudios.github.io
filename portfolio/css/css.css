@@ -1,4 +1,4 @@
-/* line 32, css.scss */
+/* line 33, css.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,12 +6,12 @@
   padding: 0;
 }
 
-/* line 39, css.scss */
+/* line 40, css.scss */
 div {
   position: relative;
 }
 
-/* line 42, css.scss */
+/* line 43, css.scss */
 img {
   display: inline-block;
   border: 0;
@@ -20,67 +20,72 @@ img {
   height: auto;
 }
 
-/* line 49, css.scss */
+/* line 50, css.scss */
 a {
   display: inline-block;
 }
 
-/* line 52, css.scss */
+/* line 53, css.scss */
 a img {
   border: 0;
 }
 
-/* line 55, css.scss */
+/* line 56, css.scss */
 a, a:hover, a:visited, a:active {
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* line 58, css.scss */
+/* line 60, css.scss */
 ul {
   list-style: none;
 }
 
-/* line 61, css.scss */
+/* line 63, css.scss */
 h1, h2, h3 {
   font-family: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
 }
 
-/* line 65, css.scss */
+/* line 67, css.scss */
 h1 {
   font-weight: 100;
   font-size: 4em;
   line-height: 1em;
-  margin-bottom: 10px;
 }
-/* line 70, css.scss */
+/* line 71, css.scss */
 h1 a {
   color: white;
 }
-/* line 72, css.scss */
+/* line 73, css.scss */
 h1 a:hover {
   text-decoration: none;
 }
 
-/* line 77, css.scss */
+/* line 78, css.scss */
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: right;
   color: #301f3a;
   font-weight: 400;
-  padding: 2% 2% 0;
-  margin-top: 3%;
-  border-top: solid white 1px;
+  padding: 2px 2% 0;
+  margin-top: 2px;
+  border-top: solid #301f3a 1px;
   clear: both;
 }
 
-/* line 87, css.scss */
+/* line 91, css.scss */
 p {
   font-size: 1.2em;
   font-weight: 400;
 }
 
-/* line 91, css.scss */
+/* line 95, css.scss */
+p:empty:before, .temp-text:before {
+  content: "You can create anything that makes you happy. Let the paint work. You can do anything here. So don't worry about it. Look around, look at what we have. Beauty is everywhere, you only have to look to see it. This is probably the greatest thing to happen in my life - to be able to share this with you.";
+}
+
+/* line 98, css.scss */
 body {
   position: relative;
   width: 100%;
@@ -88,17 +93,17 @@ body {
   font-family: "Quicksand", "Century Gothic", sans-serif;
 }
 
-/* line 100, css.scss */
+/* line 107, css.scss */
 #portfolio {
   max-width: 1600px;
-  width: 94%;
+  width: 100%;
   margin: 0 auto;
-  background-color: #301f3a;
+  background: url("../images/cross.png") #301f3a;
   box-shadow: 0 0 5px #436337;
   overflow: hidden;
 }
 
-/* line 108, css.scss */
+/* line 115, css.scss */
 header {
   text-align: center;
   max-width: 1600px;
@@ -109,19 +114,19 @@ header {
   color: white;
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
-/* line 117, css.scss */
+/* line 124, css.scss */
 header li {
   display: inline-block;
   padding-bottom: 10px;
   font-size: .9em;
 }
-/* line 121, css.scss */
+/* line 128, css.scss */
 header li a {
   color: white;
   overflow: hidden;
   margin: 0 10px;
 }
-/* line 125, css.scss */
+/* line 132, css.scss */
 header li a div {
   display: none;
   height: 30px;
@@ -132,64 +137,64 @@ header li a div {
   border-radius: 10%;
   vertical-align: middle;
 }
-/* line 137, css.scss */
+/* line 143, css.scss */
 header li a #phone {
   background-position: 25% 100%;
 }
-/* line 140, css.scss */
+/* line 146, css.scss */
 header li a #email {
   background-position: 50% 100%;
 }
-/* line 142, css.scss */
+/* line 148, css.scss */
 header li a #email:hover {
   background-position: 50% 0%;
 }
-/* line 146, css.scss */
+/* line 152, css.scss */
 header li a #demoreel {
   background-position: 75% 100%;
 }
-/* line 148, css.scss */
+/* line 154, css.scss */
 header li a #demoreel:hover {
   background-position: 75% 0%;
 }
-/* line 152, css.scss */
+/* line 158, css.scss */
 header li a #resume {
   background-position: 87.5% 100%;
 }
-/* line 154, css.scss */
+/* line 160, css.scss */
 header li a #resume:hover {
   background-position: 87.5% 0%;
 }
-/* line 158, css.scss */
+/* line 164, css.scss */
 header li a #linkin {
   background-position: 37.5% 100%;
 }
-/* line 160, css.scss */
+/* line 166, css.scss */
 header li a #linkin:hover {
   background-position: 37.5% 0%;
 }
-/* line 164, css.scss */
+/* line 170, css.scss */
 header li a #address {
   background-position: 12.5% 100%;
 }
-/* line 166, css.scss */
+/* line 172, css.scss */
 header li a #address:hover {
   background-position: 12.5% 0%;
 }
-/* line 171, css.scss */
+/* line 177, css.scss */
 header li .btn {
   color: white;
 }
-/* line 174, css.scss */
+/* line 179, css.scss */
 header li .btn:hover {
   text-decoration: underline;
 }
-/* line 178, css.scss */
+/* line 183, css.scss */
 header li .phone {
   cursor: default;
 }
 
-/* line 183, css.scss */
+/* line 188, css.scss */
 #gaius {
   padding: 25px 10px 10px;
   background-image: url("../images/gaius.png");
@@ -198,86 +203,88 @@ header li .phone {
   background-size: 900px;
 }
 
-/* line 190, css.scss */
+/* line 195, css.scss */
 #container {
   width: 96%;
   text-align: center;
   padding: 2% 2% 5%;
   margin: 2%;
-  background-image: linear-gradient(#e5eec7, #5a9245);
-  background-color: #e5eec7;
+  background-color: white;
+  background-image: linear-gradient(#fdfffc, #e5eec7);
+  background-attachment: fixed;
   border-radius: 10px;
   box-shadow: 0 2px 8px black;
 }
-/* line 199, css.scss */
+/* line 205, css.scss */
 #container h1 {
-  padding: 2% 0 0;
+  padding: 4% 0 0;
   color: #301f3a;
   text-align: left;
 }
-/* line 204, css.scss */
+/* line 210, css.scss */
 #container p {
   text-align: left;
   padding: 2%;
 }
-/* line 208, css.scss */
+/* line 214, css.scss */
 #container .long-description, #container .short-description {
   display: inline-block;
-  margin: 2%;
-  background-color: rgba(255, 255, 255, 0.5);
+  margin: 4% 2% 2%;
+  background-color: white;
 }
-/* line 212, css.scss */
+/* line 219, css.scss */
 #container .long-description p, #container .short-description p {
   padding: 0 4% 2%;
 }
-/* line 215, css.scss */
+/* line 222, css.scss */
 #container .long-description h3, #container .short-description h3 {
   color: #5a9245;
   font-size: 2em;
+  padding: 4% 0 0;
 }
-/* line 219, css.scss */
+/* line 227, css.scss */
 #container .long-description a, #container .short-description a {
   margin-bottom: 2%;
   color: #301f3a;
   font-style: italic;
 }
-/* line 223, css.scss */
+/* line 231, css.scss */
 #container .long-description a:hover, #container .short-description a:hover {
   text-decoration: underline;
 }
-/* line 227, css.scss */
+/* line 235, css.scss */
 #container .long-description img, #container .short-description img {
   width: 33%;
   margin: 0 4% 0 0;
 }
-/* line 232, css.scss */
+/* line 240, css.scss */
 #container .long-description {
   width: 96%;
   text-align: left;
 }
-/* line 235, css.scss */
+/* line 243, css.scss */
 #container .long-description img {
   float: left;
   vertical-align: top;
 }
-/* line 239, css.scss */
+/* line 247, css.scss */
 #container .long-description img.unsubscribe {
   width: 100%;
   margin-top: 2%;
 }
-/* line 243, css.scss */
+/* line 251, css.scss */
 #container .long-description p {
   color: #301f3a;
 }
-/* line 245, css.scss */
+/* line 253, css.scss */
 #container .long-description p .more-txt {
   display: none;
 }
-/* line 248, css.scss */
+/* line 256, css.scss */
 #container .long-description p:last-child {
   padding-bottom: 4%;
 }
-/* line 251, css.scss */
+/* line 259, css.scss */
 #container .long-description p button {
   border: none;
   background: none;
@@ -287,53 +294,58 @@ header li .phone {
   font-family: "Quicksand", "Century Gothic", sans-serif;
   padding-left: 10px;
 }
-/* line 259, css.scss */
+/* line 267, css.scss */
 #container .long-description p button:hover {
   color: #301f3a;
   cursor: pointer;
 }
-/* line 263, css.scss */
+/* line 271, css.scss */
 #container .long-description p button.more-txt:after {
   content: ">>";
   font-size: .7em;
   letter-spacing: -4px;
   margin-left: 4px;
 }
-/* line 269, css.scss */
+/* line 277, css.scss */
 #container .long-description p button.less-txt:before {
   content: "<<";
   font-size: .7em;
   letter-spacing: -4px;
   margin-right: 4px;
 }
-/* line 279, css.scss */
+/* line 287, css.scss */
 #container .short-description {
   color: #5a9245;
   width: 30%;
 }
-/* line 282, css.scss */
+/* line 290, css.scss */
 #container .short-description img {
   display: block;
   margin: 0 auto;
   margin-bottom: 6px;
 }
-/* line 287, css.scss */
+/* line 295, css.scss */
 #container .short-description p {
   text-align: center;
 }
-/* line 291, css.scss */
+/* line 299, css.scss */
 #container .more, #container .less {
   display: none;
   cursor: pointer;
   float: right;
   color: #5a9245;
 }
-/* line 296, css.scss */
+/* line 304, css.scss */
 #container .more:hover, #container .less:hover {
   text-decoration: underline;
   color: #301f3a;
 }
-/* line 301, css.scss */
+/* line 310, css.scss */
+#container .stand-alone h3 {
+  padding-left: 4%;
+  padding-bottom: 2%;
+}
+/* line 315, css.scss */
 #container iframe {
   /*500 x 325 100 x 65 200 130*/
   display: block;
@@ -343,7 +355,7 @@ header li .phone {
   box-shadow: 0 1px 1px 2px #5a9245;
 }
 
-/* line 310, css.scss */
+/* line 324, css.scss */
 footer {
   text-align: right;
   height: 38px;
@@ -352,13 +364,13 @@ footer {
   background: url("../images/gel-btn.png") repeat-x #5a9245;
 }
 
-/* line 317, css.scss */
+/* line 331, css.scss */
 #socnet {
   height: 28px;
   font-size: 14px;
   text-align: right;
 }
-/* line 321, css.scss */
+/* line 335, css.scss */
 #socnet h4 {
   display: inline-block;
   line-height: 28px;
@@ -366,7 +378,7 @@ footer {
   color: white;
   font-weight: 400;
 }
-/* line 328, css.scss */
+/* line 342, css.scss */
 #socnet a {
   margin-left: 1%;
   width: 28px;
@@ -374,85 +386,101 @@ footer {
   border-radius: 14px;
   background: url("../images/socnet-sprite-lg.png") no-repeat #301f3a;
 }
-/* line 335, css.scss */
+/* line 349, css.scss */
 #socnet .fb {
   background-position: 0 -28px;
 }
-/* line 337, css.scss */
+/* line 351, css.scss */
 #socnet .fb:hover {
   background-position: 0 0;
 }
-/* line 341, css.scss */
+/* line 355, css.scss */
 #socnet .tw {
   background-position: -28px -28px;
 }
-/* line 343, css.scss */
+/* line 357, css.scss */
 #socnet .tw:hover {
   background-position: -28px 0;
 }
-/* line 347, css.scss */
+/* line 361, css.scss */
 #socnet .go {
   background-position: -56px -28px;
 }
-/* line 349, css.scss */
+/* line 363, css.scss */
 #socnet .go:hover {
   background-position: -56px 0;
 }
-/* line 353, css.scss */
+/* line 367, css.scss */
 #socnet .in {
   background-position: -84px -28px;
 }
-/* line 355, css.scss */
+/* line 369, css.scss */
 #socnet .in:hover {
   background-position: -84px 0;
 }
-/* line 359, css.scss */
+/* line 373, css.scss */
 #socnet .em {
   background-position: -112px -28px;
 }
-/* line 361, css.scss */
+/* line 375, css.scss */
 #socnet .em:hover {
   background-position: -112px 0;
 }
 
-@media (max-width: 850px) {
-  /* line 369, css.scss */
+@media (max-width: 1000px) {
+  /* line 382, css.scss */
+  .hideable {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  /* line 388, css.scss */
   #container h1 {
     text-align: center;
   }
-  /* line 374, css.scss */
+  /* line 391, css.scss */
+  #container h2 {
+    text-align: center;
+    padding: 2% 2% 0;
+  }
+  /* line 395, css.scss */
+  #container a {
+    display: block;
+    text-align: center;
+  }
+  /* line 400, css.scss */
   #container .long-description h3, #container .short-description h3 {
     text-align: center;
   }
-  /* line 377, css.scss */
+  /* line 403, css.scss */
   #container .long-description img, #container .short-description img {
     width: 100%;
     margin: 0 0 4% 0;
   }
 }
 @media (max-width: 650px) {
-  /* line 387, css.scss */
+  /* line 413, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 390, css.scss */
+  /* line 416, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 393, css.scss */
+  /* line 419, css.scss */
   header li a {
     width: 30px;
     height: 30px;
     margin: 0 5px;
   }
 
-  /* line 399, css.scss */
+  /* line 425, css.scss */
   #container .short-description {
     width: 45%;
   }
-  /* line 402, css.scss */
+  /* line 428, css.scss */
   #container iframe {
     width: 200px;
     height: 130px;

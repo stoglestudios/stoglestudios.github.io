@@ -8,6 +8,7 @@ $(document).ready(function () {
                 $(this).hide();
                 ev.preventDefault();
                 $(this).parent().siblings(".add-p").show();
+                //$(this).siblings(".hideable").css("display", "block");
             });
             $this.children("p").last().append("<button class='less-txt'>less</button>");
             $this.children(".add-p").hide();
@@ -16,6 +17,12 @@ $(document).ready(function () {
                 $(this).parent().siblings(".add-p").hide();
                 ev.preventDefault();
                 $(this).parent().siblings(".first-p").children(".more-txt").show();
+//                if ($(window).width()<800) {
+//                    $(this).parent().siblings(".first-p").children(".hideable").css("display", "none");
+//                }
+                $('html, body').animate({
+                    scrollTop: $(this).parent().parent().offset().top
+                }, 300);
             });
         }
     });
@@ -141,25 +148,6 @@ function OgleFramework($this) {
             }
         });
     }
-    if ( $this.data("ogle-attr") ) {
-        $attr = $this.data("ogle-attr");
-    } else {
-        $attr = "";
-    }
-
-    if ( $attr && $attr.length > 0 ) {
-        $attr = stripOgleTags( $attr, false );
-        var thisAttributes = $attr.split("&&");
-        for (var i=0; i<thisAttributes.length; i++) {
-            thisAttr = $.trim(thisAttributes[i]).split("=="); 
-            if ( thisAttr[0] && thisAttr[1] ) {
-                thisAttr[0] = $.trim(thisAttr[0]) + "";
-                if ( thisAttr[1].length > 0 ) {
-                    $this.attr( thisAttr[0], $.trim( thisAttr[1] ) );
-                }
-            }
-        }
-    }
     if ( $this.data("youtube") ) {
         var $ytvid = $this.data("youtube");
         console.log("youtube!");
@@ -179,6 +167,9 @@ function OgleFramework($this) {
     }
     // <-- VIDEO MODAL CODE ------------------------------------------------------------ !>
     if ( $ytvid.length > 0 || $vimvid.length > 0 ) {
+        if ( $("#videoModal").length < 1 ) {
+            createVideoModal();
+        }
         if ( $this.data("video-options") ) {
             videoOptions = stripOgleTags( $this.data("video-options"), true );
         }
@@ -332,7 +323,6 @@ function fixMultipleIDs () {
         }
     }
 }
-<<<<<<< HEAD
 function sizeVideo() {
     if ($("#video").length) {
         var viewPortWidth = $(window).width();
