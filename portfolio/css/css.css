@@ -263,7 +263,7 @@ header li .phone {
   text-align: left;
 }
 /* line 242, css.scss */
-#container .long-description img:not(".thumb") {
+#container .long-description img {
   float: left;
   vertical-align: top;
 }
@@ -352,121 +352,6 @@ header li .phone {
   padding-top: 2%;
   padding-left: 4%;
   padding-bottom: 2%;
-}
-/* line 320, css.scss */
-#container img.thumb {
-  float: left;
-  vertical-align: top;
-  width: 100px;
-  margin: 2%;
-  box-shadow: 0 1px 1px 2px #5a9245;
-}
-/* line 327, css.scss */
-#container .lightroom {
-  clear: both;
-  padding: 2%;
-  text-align: center;
-  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5) inset;
-  background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
-  background-color: #301f3a;
-  background-size: cover, 10px 10px, cover, cover;
-}
-/* line 339, css.scss */
-#container .lightroom img {
-  clear: both;
-  float: none;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-/* line 344, css.scss */
-#container .lightroom img.full {
-  width: 84%;
-  margin: 6% 8%;
-}
-/* line 348, css.scss */
-#container .lightroom img.half {
-  width: 38%;
-  margin: 6% 4%;
-}
-/* line 353, css.scss */
-#container .more, #container .less {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  font-size: 16px;
-  right: 0;
-  margin: 2%;
-}
-/* line 361, css.scss */
-#container .more {
-  color: #5a9245;
-  bottom: 0;
-  transition: all 0.5s ease;
-}
-/* line 364, css.scss */
-#container .more:hover {
-  color: #301f3a;
-}
-/* line 367, css.scss */
-#container .more:hover div {
-  background-color: #301f3a;
-}
-/* line 371, css.scss */
-#container .more div {
-  transition: all 0.5s ease;
-}
-/* line 374, css.scss */
-#container .more div {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin-right: 5px;
-  background-color: #5a9245;
-  vertical-align: text-bottom;
-  line-height: 16px;
-  font-size: 16px;
-  color: #D4E2C8;
-  text-align: center;
-}
-/* line 386, css.scss */
-#container .more div:after {
-  content: "+";
-}
-/* line 391, css.scss */
-#container .less {
-  color: #938D97;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  top: 0;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-/* line 398, css.scss */
-#container .less div {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin-right: 5px;
-  background-color: #938D97;
-  vertical-align: text-bottom;
-  line-height: 16px;
-  font-size: 16px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  color: #301f3a;
-  text-align: center;
-}
-/* line 411, css.scss */
-#container .less div:after {
-  content: "X";
-}
-/* line 415, css.scss */
-#container .less:hover {
-  color: white;
-}
-/* line 418, css.scss */
-#container .less:hover div {
-  background-color: white;
 }
 
 /* line 423, css.scss */
@@ -621,23 +506,6 @@ footer:after {
     float: left;
     vertical-align: top;
     width: 100px;
-  }
-  /* line 548, css.scss */
-  #container .illustration {
-    text-align: center;
-  }
-  /* line 550, css.scss */
-  #container .illustration img {
-    float: none;
-    margin: auto;
-  }
-  /* line 554, css.scss */
-  #container .illustration p {
-    display: none;
-  }
-  /* line 557, css.scss */
-  #container .illustration .more {
-    float: none;
   }
 
   /* line 563, css.scss */

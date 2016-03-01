@@ -239,7 +239,7 @@ header {
             margin: 4% 2%;
             width: 96%;
             text-align: left;
-            img:not(".thumb") {
+            img {
                 float: left;
                 vertical-align: top;
             }
@@ -317,108 +317,108 @@ header {
                 padding-bottom: 2%;
             }
         }
-        img.thumb {
-            float: left;
-            vertical-align: top;
-            width: 100px;
-            margin: 2%;
-            box-shadow: 0 1px 1px 2px $green;
-        }
-        .lightroom {
-            clear: both;
-            padding: 2%;
-            text-align: center;
-            box-shadow: 0 5px 10px 5px rgba(0,0,0,.5) inset;
-            background-image: 
-                radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
-                url("../images/cross.png"),
-                linear-gradient( 135deg, $purple, black )
-            ;
-            background-color: $purple;
-            background-size: cover, 10px 10px, cover, cover;
-            img {
-                clear: both;
-                float: none;
-                box-shadow: 0 10px 20px rgba(0,0,0,.5);
-            }
-            img.full {
-                width: 84%;
-                margin: 6% 8%;
-            }
-            img.half {
-                width: 38%;
-                margin: 6% 4%;
-            }
-        }
-        .more, .less {
-            display: none;
-            cursor: pointer;
-            position: absolute;
-            font-size: 16px;
-            right: 0;
-            margin: 2%;
-        }
-        .more {
-            color: $green;
-            bottom: 0;
-            &:hover {
-                color: $purple;
-            }
-            &:hover div {
-                background-color: $purple;
-            }
-            transition:all 0.5s ease; 
-            div {
-                transition:all 0.5s ease; 
-            }
-            div {
-                display: inline-block;
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                margin-right: 5px;
-                background-color: $green;
-                vertical-align: text-bottom;
-                line-height: 16px;
-                font-size: 16px;
-                color: #D4E2C8;
-                text-align: center;
-                &:after {
-                    content: "+";
-                }
-            }
-        }
-        .less {
-            color: #938D97;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 16px;
-            top: 0;
-            text-shadow: 0 5px 10px rgba(0,0,0,.5);
-            div {
-                display: inline-block;
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                margin-right: 5px;
-                background-color: #938D97;
-                vertical-align: text-bottom;
-                line-height: 16px;
-                font-size: 16px;
-                box-shadow: 0 5px 10px rgba(0,0,0,.5);
-                color: $purple;
-                text-align: center;
-                &:after {
-                    content: "X";
-                }
-            } 
-            &:hover {
-                color: white;
-            }
-            &:hover div {
-                background-color: white;
-            }
-        }
+//        img.thumb {
+//            float: left;
+//            vertical-align: top;
+//            width: 100px;
+//            margin: 2%;
+//            box-shadow: 0 1px 1px 2px $green;
+//        }
+//        .lightroom {
+//            clear: both;
+//            padding: 2%;
+//            text-align: center;
+//            box-shadow: 0 5px 10px 5px rgba(0,0,0,.5) inset;
+//            background-image: 
+//                radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+//                url("../images/cross.png"),
+//                linear-gradient( 135deg, $purple, black )
+//            ;
+//            background-color: $purple;
+//            background-size: cover, 10px 10px, cover, cover;
+//            img {
+//                clear: both;
+//                float: none;
+//                box-shadow: 0 10px 20px rgba(0,0,0,.5);
+//            }
+//            img.full {
+//                width: 84%;
+//                margin: 6% 8%;
+//            }
+//            img.half {
+//                width: 38%;
+//                margin: 6% 4%;
+//            }
+//        }
+//        .more, .less {
+//            display: none;
+//            cursor: pointer;
+//            position: absolute;
+//            font-size: 16px;
+//            right: 0;
+//            margin: 2%;
+//        }
+//        .more {
+//            color: $green;
+//            bottom: 0;
+//            &:hover {
+//                color: $purple;
+//            }
+//            &:hover div {
+//                background-color: $purple;
+//            }
+//            transition:all 0.5s ease; 
+//            div {
+//                transition:all 0.5s ease; 
+//            }
+//            div {
+//                display: inline-block;
+//                width: 16px;
+//                height: 16px;
+//                border-radius: 50%;
+//                margin-right: 5px;
+//                background-color: $green;
+//                vertical-align: text-bottom;
+//                line-height: 16px;
+//                font-size: 16px;
+//                color: #D4E2C8;
+//                text-align: center;
+//                &:after {
+//                    content: "+";
+//                }
+//            }
+//        }
+//        .less {
+//            color: #938D97;
+//            font-weight: 700;
+//            font-size: 16px;
+//            line-height: 16px;
+//            top: 0;
+//            text-shadow: 0 5px 10px rgba(0,0,0,.5);
+//            div {
+//                display: inline-block;
+//                width: 16px;
+//                height: 16px;
+//                border-radius: 50%;
+//                margin-right: 5px;
+//                background-color: #938D97;
+//                vertical-align: text-bottom;
+//                line-height: 16px;
+//                font-size: 16px;
+//                box-shadow: 0 5px 10px rgba(0,0,0,.5);
+//                color: $purple;
+//                text-align: center;
+//                &:after {
+//                    content: "X";
+//                }
+//            } 
+//            &:hover {
+//                color: white;
+//            }
+//            &:hover div {
+//                background-color: white;
+//            }
+//        }
     }
     footer {
         text-align: left;
@@ -545,19 +545,19 @@ header {
                 width: 100px;
             }
         }
-        .illustration {
-            text-align: center;
-            img {
-                float: none;
-                margin: auto;
-            }
-            p {
-                display: none;
-            }
-            .more {
-                float: none;
-            }
-        }
+//        .illustration {
+//            text-align: center;
+//            img {
+//                float: none;
+//                margin: auto;
+//            }
+//            p {
+//                display: none;
+//            }
+//            .more {
+//                float: none;
+//            }
+//        }
     }
     footer {
         .copyright {
