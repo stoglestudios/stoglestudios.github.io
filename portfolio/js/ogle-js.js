@@ -125,26 +125,30 @@ function OgleFramework($this) {
         if (slideOffset.indexOf("px") < 0) {
             slideOffset += "px";
         }
-        //console.log($this.attr("class") + " has offset of " + scrollOffset + ", slideoffset of " + slideOffset);
-        $this.css({
-            marginTop: slideOffset,
-            opacity: 0
-        }).show();
+        if ( $(document).scrollTop() < $this.offset().top - $(window).height() ) {
+            $this.css({
+                marginTop: slideOffset,
+                opacity: 0
+            }).show();
+        }
         $(window).on("scroll", function () {
             var distanceFrom = $this.offset();
-            var windowOffset = $(document).scrollTop();
             var triggerPosition = distanceFrom.top - $(window).height() + scrollOffset;
-            //console.log(windowOffset + " | " + triggerPosition);
-            if (windowOffset > triggerPosition || windowOffset == 0 ) {
-                $this.stop().animate({
-                    marginTop: "0px",
-                    opacity: 1
-                }, 400);
-            } else {
-                $this.stop().animate({
-                    marginTop: slideOffset,
-                    opacity: 0
-                }, 400);
+            var windowOffset = $(document).scrollTop();
+            var wholeHeight = $(document).height()-$(window).height();
+            if (windowOffset < wholeHeight) {
+                //console.log(windowOffset + " | " + wholeHeight );
+                if (windowOffset > triggerPosition || windowOffset == 0 ) {
+                    $this.stop().animate({
+                        marginTop: "0px",
+                        opacity: 1
+                    }, 400);
+                } else {
+                    $this.stop().animate({
+                        marginTop: slideOffset,
+                        opacity: 0
+                    }, 400);
+                }
             }
         });
     }

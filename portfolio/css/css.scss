@@ -7,7 +7,7 @@ $gutter: 25px;
 $bleed: 10px;
 $corners: 5px;
 $head-height: 100px;
-$soc-size: 28px;
+$soc-size: 24px;
 $pg-width: 1600px;
 $pg-height: 1100px;
 $fr-width: $pg-width - $gutter*2;
@@ -213,9 +213,7 @@ header {
         }
         .long-description, .short-description {
             display: inline-block;
-            margin: 4% 2% 2%;
             background-color: white;
-            
             p {
                 padding: 0 4% 2%;
             }
@@ -223,7 +221,7 @@ header {
                 color: $green;
                 font-size: 2em;
                 padding: 4% 0 0;
-            }
+            } 
             a {
                 margin-bottom: 2%;
                 color: $purple;
@@ -238,9 +236,10 @@ header {
             }
         }
         .long-description {
+            margin: 4% 2%;
             width: 96%;
             text-align: left;
-            img {
+            img:not(".thumb") {
                 float: left;
                 vertical-align: top;
             }
@@ -282,56 +281,184 @@ header {
                     }
                 }
             }
-
+        }
+        .landing-pages {
+            font-size: 0;
         }
         .short-description {
             color: $green;
-            width: 30%;
+            width: 21%;
+            overflow: hidden;
+            display: inline-block;
+            margin: 0 1% 2%;
             img {
-                display: block;
-                margin: 0 auto;
-                margin-bottom: 6px;
+                width: 100%;
+                display: inline-block;
             }
             p {
+                font-size: 16px;
                 text-align: center;
+                padding: 0;
+                color: white;
+                background-color: $green;
+                line-height: 200%;
+            }
+            &:hover {
+                box-shadow: 0 0 0 2px $dark-color;
+                p {
+                    background-color: $dark-color;
+                }
+            }
+        }
+        .stand-alone {
+            h3 {
+                padding-top: 2%;
+                padding-left: 4%;
+                padding-bottom: 2%;
+            }
+        }
+        img.thumb {
+            float: left;
+            vertical-align: top;
+            width: 100px;
+            margin: 2%;
+            box-shadow: 0 1px 1px 2px $green;
+        }
+        .lightroom {
+            clear: both;
+            padding: 2%;
+            text-align: center;
+            box-shadow: 0 5px 10px 5px rgba(0,0,0,.5) inset;
+            background-image: 
+                radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
+                url("../images/cross.png"),
+                linear-gradient( 135deg, $purple, black )
+            ;
+            background-color: $purple;
+            background-size: cover, 10px 10px, cover, cover;
+            img {
+                clear: both;
+                float: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,.5);
+            }
+            img.full {
+                width: 84%;
+                margin: 6% 8%;
+            }
+            img.half {
+                width: 38%;
+                margin: 6% 4%;
             }
         }
         .more, .less {
             display: none;
             cursor: pointer;
-            float: right;
+            position: absolute;
+            font-size: 16px;
+            right: 0;
+            margin: 2%;
+        }
+        .more {
             color: $green;
+            bottom: 0;
             &:hover {
-                text-decoration: underline;
                 color: $purple;
             }
-        }
-        .stand-alone {
-            h3 {
-                padding-left: 4%;
-                padding-bottom: 2%;
+            &:hover div {
+                background-color: $purple;
+            }
+            transition:all 0.5s ease; 
+            div {
+                transition:all 0.5s ease; 
+            }
+            div {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                margin-right: 5px;
+                background-color: $green;
+                vertical-align: text-bottom;
+                line-height: 16px;
+                font-size: 16px;
+                color: #D4E2C8;
+                text-align: center;
+                &:after {
+                    content: "+";
+                }
             }
         }
-        iframe { /*500 x 325 100 x 65 200 130*/
-            display: block;
-            margin: 0 auto 1%;
-            width: 300px;
-            height: 195px;
-            box-shadow: 0 1px 1px 2px $green;
+        .less {
+            color: #938D97;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            top: 0;
+            text-shadow: 0 5px 10px rgba(0,0,0,.5);
+            div {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                margin-right: 5px;
+                background-color: #938D97;
+                vertical-align: text-bottom;
+                line-height: 16px;
+                font-size: 16px;
+                box-shadow: 0 5px 10px rgba(0,0,0,.5);
+                color: $purple;
+                text-align: center;
+                &:after {
+                    content: "X";
+                }
+            } 
+            &:hover {
+                color: white;
+            }
+            &:hover div {
+                background-color: white;
+            }
         }
     }
-
     footer {
-        text-align: right;
-        height: $soc-size + 10px;
-        line-height: $soc-size;
-        padding: 5px 3%;
-        background: url("../images/gel-btn.png") repeat-x $green;
+        text-align: left;
+        padding: 20px 3%;
+        background-color: $dark-color;
+        color: white;
+        .copyright {
+            width: 49%;
+            float: left;
+            vertical-align: text-bottom;
+            a {
+                color: inherit;
+                font-size: .7em;
+                line-height: 1em;
+                display: block;
+                margin: 5px 0;
+                &:hover {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+                &:first-child {
+                    font-size: .9em;
+                    line-height: $soc-size;
+                }
+            }
+        }
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
     }
         #socnet {
+            line-height: 100%;
             height: $soc-size;
+            width: 40%;
             font-size: 14px;
+            float: right;
             text-align: right;
+            bottom: 0;
             h4 {
                 display: inline-block;
                 line-height: $soc-size;
@@ -345,6 +472,7 @@ header {
                 height: $soc-size;
                 border-radius: $soc-size/2;
                 background: url("../images/socnet-sprite-lg.png") no-repeat $purple;
+                background-size: 500% 200%
             }
             .fb {
                 background-position: 0 -1*$soc-size;
@@ -376,11 +504,18 @@ header {
                     background-position: -4*$soc-size 0;
                 }
             }
-
+        }
+@media (max-width: 1300px) {
+    #container .short-description {
+        width: 31%;
     }
+}
 @media (max-width: 1000px) {
     .hideable {
         display: none;
+    }
+    #container .short-description {
+        width: 47%;
     }
 }
 @media (max-width: 750px) {
@@ -396,7 +531,7 @@ header {
             display: block;
             text-align: center;
         }
-        .long-description, .short-description {
+        .long-description:not(.illustration), .short-description {
             h3 {
                 text-align: center;
             }
@@ -404,9 +539,39 @@ header {
                 width: 100%;
                 margin: 0 0 4% 0;
             }
+            img.thumb {
+                float: left;
+                vertical-align: top;
+                width: 100px;
+            }
         }
-        
-        
+        .illustration {
+            text-align: center;
+            img {
+                float: none;
+                margin: auto;
+            }
+            p {
+                display: none;
+            }
+            .more {
+                float: none;
+            }
+        }
+    }
+    footer {
+        .copyright {
+            width: 100%;
+            float: none;
+            a {
+                text-align: center;
+            }
+        }
+        #socnet {
+            margin-top: $gutter;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 @media (max-width: 650px) {
@@ -421,14 +586,7 @@ header {
         height: $icon-size;
         margin: 0 $bleed/2;
     }
-    #container {
-        .short-description {
-            width: 45%;
-        }
-        iframe {
-            width: 200px;
-            height: 130px;
-        }
+    #container .short-description {
+        width: 94%;
     }
-    
 }

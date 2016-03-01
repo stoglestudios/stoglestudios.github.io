@@ -1,15 +1,16 @@
 $(document).ready(function() {
     console.log("Ready");
-    $(".unsubscribe").hide();
+    $(".lightroom").hide();
     $(".more").show();
+    $(".less").show();
     $(".more").on("click", function(event) {
-        $(".unsubscribe").show();
-        $(".more").hide();
-        $(".less").show();
+        $(this).parent().children(".lightroom").show();
+        $(this).parent().siblings().children(".lightroom").hide();
+        $(this).parent().siblings().children(".more").show();
+        $(this).hide();
     });
     $(".less").on("click", function(event) {
-        $(".unsubscribe").hide();
-        $(".less").hide();
-        $(".more").show();
+        $(this).parent().parent().children(".lightroom").hide();
+        $(this).parent().parent().children(".more").show();
     });
 });

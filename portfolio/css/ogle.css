@@ -75,9 +75,6 @@
 #videoBox a:hover:after {
     border-color: #301F3A;
 }
-/*
- * Leave Umpqua Site Modal
- */
 @media all and (max-device-width: 700px) and (orientation: landscape) {
     #videoBox a {
         display: none;
