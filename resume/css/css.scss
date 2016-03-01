@@ -8,7 +8,7 @@ $bleed: 10px;
 $corners: 5px;
 $head-height: 100px;
 $soc-size: 28px;
-$pg-width: 1000px;
+$pg-width: 1400px;
 $pg-height: 1100px;
 $fr-width: $pg-width - $gutter*2;
 $fr-height: $pg-height - $gutter*2;
@@ -221,6 +221,11 @@ footer {
         margin-top: $gutter;
     }
     li {
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
         border-top: solid $main-color 1px;
         margin-bottom: $bleed;
         b {
@@ -237,6 +242,7 @@ footer {
             width: 82%;
             padding: $bleed 0 0 $gutter;
             vertical-align: text-top;
+            float: right;
             em {
                 font-weight: 600;
                 font-style: normal;
@@ -251,9 +257,16 @@ footer {
 .left {
     float: left;
     width: 50%;
-    border-right: solid $neutral-color 1px;
+//    border-right: solid $neutral-color 1px;
+    //box-shadow: 1px 0 0 0 $neutral-color;
+}
+#accomp.left, #volunteer.left {
+    li {
+        margin-top: $gutter*2;
+    }
 }
 .right {
+    box-shadow: -1px 0 0 0 $neutral-color;
     float: right;
     width: 50%;
     li {
@@ -309,10 +322,13 @@ footer {
         padding-right: 6%;
     }
     #win {
-        padding-right: 3%;
+        padding-right: 5%;
     }
     #osx {
         padding-right: 0%;
+    }
+    #gnu {
+        padding-right: 25%;
     }
     #css {
         padding-right: 2%;
@@ -329,23 +345,26 @@ footer {
     #git {
         padding-right: 10%;
     }
+    #tfs {
+        padding-right: 25%;
+    }
     #php {
         padding-right: 22%;
+    }
+    #net {
+        padding-right: 28%;
     }
     #sql {
         padding-right: 24%;
     }
-    #ls {
+    #ab {
         padding-right: 4%;
     }
-    #tm {
+    #vs {
+        padding-right: 20%;
+    }
+    #scm {
         padding-right: 2%;
-    }
-    #atd {
-        padding-right: 4%;
-    }
-    #prob {
-        padding-right: 0%;
     }
 }
 #volunteer {
@@ -365,7 +384,10 @@ footer a {
 }
 div#exp ul.default {
     list-style:square;
-    
+    list-style-image: url("../images/buttet.gif");
+    width: 70%;
+    float: right;
+    margin-top: $bleed;
     li {
         border: none;
     }
