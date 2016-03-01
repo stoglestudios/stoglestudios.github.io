@@ -427,56 +427,65 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* line 366, css.scss */
+div#exp ul.default {
+  list-style: square;
+}
+/* line 369, css.scss */
+div#exp ul.default li {
+  border: none;
+}
+
 @media (max-width: 800px) {
-  /* line 369, css.scss */
+  /* line 375, css.scss */
   body {
     font-size: .9em;
   }
 
-  /* line 372, css.scss */
+  /* line 378, css.scss */
   h1 {
     font-size: 2.6em;
   }
 
-  /* line 375, css.scss */
+  /* line 381, css.scss */
   #qual-sum {
     padding: 25px 10px 10px;
   }
 
-  /* line 378, css.scss */
+  /* line 384, css.scss */
   .sections {
     padding: 0 10px;
   }
 
-  /* line 381, css.scss */
+  /* line 387, css.scss */
   #resume {
     padding-bottom: 10px;
   }
 
-  /* line 384, css.scss */
+  /* line 390, css.scss */
   footer {
     margin: 0 10px;
   }
 
-  /* line 387, css.scss */
+  /* line 393, css.scss */
   #qual-sum ul li {
     margin-bottom: 25px;
   }
-  /* line 389, css.scss */
+  /* line 395, css.scss */
   #qual-sum ul li p {
     width: 100%;
     padding-top: 10px;
   }
-  /* line 393, css.scss */
+  /* line 399, css.scss */
   #qual-sum ul li b {
     width: 75%;
   }
-  /* line 396, css.scss */
+  /* line 402, css.scss */
   #qual-sum ul li em {
     width: 25%;
   }
 
-  /* line 400, css.scss */
+  /* line 406, css.scss */
   .left, .right {
     float: none;
     width: 100%;
@@ -484,17 +493,17 @@ footer a:hover {
   }
 }
 @media (max-width: 640px) {
-  /* line 407, css.scss */
+  /* line 413, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 410, css.scss */
+  /* line 416, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 413, css.scss */
+  /* line 419, css.scss */
   header li a {
     width: 30px;
     height: 30px;

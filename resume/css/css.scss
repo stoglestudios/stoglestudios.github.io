@@ -363,7 +363,13 @@ footer a {
         text-decoration: underline;
     }
 }
-
+div#exp ul.default {
+    list-style:square;
+    
+    li {
+        border: none;
+    }
+}
 
 @media (max-width: 800px) {
     body {
