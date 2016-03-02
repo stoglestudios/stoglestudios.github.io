@@ -9,7 +9,7 @@ $gutter: 25px;
 $bleed: 10px;
 $head-height: $gutter*2 + $logo-height;
 $soc-size: 22px;
-$col-width: 1000px;
+$col-width: 1400px;
 $corners: 5px;
 
 $height-666: 250px;
@@ -24,9 +24,9 @@ $fb-blue: #3c5a96;
 $tw-blue: #59adeb;
 $go-red: #d82a20;
 $in-blue: #1779b3;
-$em-neutral: #999999;
+$em-neutral: #999999; 
 $bg-orange: #fd6720;
-$pn-red: #c51e23;
+$pn-red: #c51e23; 
 
 
 $ipsum: "Lorem ipsum dolor";
@@ -166,7 +166,7 @@ nav ul li {
 #page {
     text-align: center;
     width: 94%;
-    max-width: 1000px;
+    max-width: $col-width;
     margin: 0 auto;
     background-image: linear-gradient(black, darkred);
     background-color: black;
@@ -178,7 +178,7 @@ nav ul li {
     header {
         display: inline-block;
         width: 100%;
-        max-width: 1000px;
+        max-width: $col-width;
         padding: $gutter 0 $bleed;
         text-align: center;
         background-image: url("../images/666.png");

@@ -1,7 +1,7 @@
 //Authored by Brandon Gaius Ogle
 
 //STUFF TO DO
-//1. Have jQuery turn off WS -> this way if JS is turn off they will go right to the site
+//1. Have jQuery turn off WS -> this way if JS is turned off they will go right to the site
 
 // Variables
 var contactStart = 0;
@@ -69,19 +69,13 @@ for (i=0;i<$openers.length;i++) {
 // Document ready
 $(document).ready(function(){
     //Build assets
-    $('#intro').css("display", "inline-block");
-    $('#intro').append($skip);
+    $('#intro').css("display", "inline-block").append($skip);
     $worlds = $("#cosmology a");
     
-    $(".definitions").addClass("viewdef");
-    $(".definitions").hide();
+    $(".definitions").addClass("viewdef").hide();
     
     //Hide/show appropriate sections
-    $('#page').hide();
-    $('#characters').hide();
-    $('#cosmology').hide();
-    $('#author').hide();
-    $('#contact').hide();
+    $('#page, #characters, #cosmology, #author, #contact').hide();
     
     //Initiate animated opener sections
     $('#intro').animate({ 
@@ -90,12 +84,10 @@ $(document).ready(function(){
     }, 24000, function() {
         $('#intro').fadeOut(2000);
     });
-    $openers[0][0].introAn(0);
-    $openers[1][0].introAn(5000);
-    $openers[2][0].introAn(10000);
-    $openers[3][0].introAn(15000);
-    $openers[4][0].introAn(20000, true);
-    
+    for (var i=0;i<5;i++) {
+        var j = Math.floor(i/4) ? true : false;
+        $openers[i][0].introAn(i*5000, j);
+    }
     //Toggle Sections
     $tabs.click(function(event) {
         event.preventDefault();
