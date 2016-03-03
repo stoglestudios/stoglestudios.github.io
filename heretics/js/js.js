@@ -50,7 +50,8 @@ $skip.click( function() {
                 paddingLeft: '30%',
             }, totaltime);
             $(this).children('img').delay(waitForIt).animate({
-                width: "75vh"
+                width: "80%",
+                paddingLeft: "10%"
             }, totaltime);
         }
         return this;
@@ -75,20 +76,23 @@ $(document).ready(function(){
     }, 24000, function() {
         $('#intro').fadeOut(2000);
     });
-    for (var i=0;i<5;i++) {
-        var j = Math.floor(i/4) ? true : false;
+    for (var i=0;i<$openers.length;i++) {
+        var j = Math.floor(i/($openers.length-1)) ? true : false;
         $openers[i][0].introAn(i*5000, j);
     }
     //Toggle Sections
     $tabs.click(function(event) {
+        $this = $(this);
         event.preventDefault();
-        var pageClicked = $(this).html().toLowerCase();
-        pageClicked = "#" + pageClicked;
-        console.log(pageClicked);
-        $(this).parent().toggleClass("selected");
-        $(this).parent().siblings().removeClass("selected");
-        $("content").hide();
-        $(pageClicked).show();
+        if ( !$this.parent().hasClass("selected") ) {
+            var pageClicked = $this.html().toLowerCase();
+            pageClicked = "#" + pageClicked;
+            console.log(pageClicked);
+            $this.parent().toggleClass("selected");
+            $this.parent().siblings().removeClass("selected");
+            $("content").hide();
+            $(pageClicked).show();
+        }
     });
     $worlds.on("click", function(evt) {
         $("#cosmological-map").css("opacity", ".5");
