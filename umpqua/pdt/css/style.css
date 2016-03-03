@@ -1,0 +1,640 @@
+/**************************************************************************
+    ==================> VARS
+ **************************************************************************/
+/**************************************************************************
+    ==================> 1. DOCUMENT
+                            More Contents:
+                            |   2. MAIN HEADER
+                            |   3. WELCOME MESSAGE
+                            |   4. NAV BAR
+                            |   5. WORK AREA [ie REPORTS/SCHEDULES]
+                            |   6. HELP BOX
+                            |   7. SEARCH BOX
+                            |   8. RESULTS BOX
+                            |   9. BREAKPOINT: TABLETS
+                            |   10. BREAKPOINT: PHABLETS
+                            |   11. BREAKPOINT: PHONES
+
+ **************************************************************************/
+@font-face {
+  font-family: "Helvsub con";
+  src: url("../fonts/texgyreheroscn-regular.otf");
+}
+
+@font-face {
+  font-family: "Helvsub reg";
+  src: url("../fonts/texgyreheros-regular.otf");
+}
+
+@font-face {
+  font-family: "Helvsub bld";
+  src: url("../fonts/texgyreheros-bold.otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  font-family: "Helvsub reg", Helvetica, Arial, sans-sarif;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #00777f;
+}
+
+a, button, input[type=button], input[type=submit] {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Helvsub con", Helvetica, Arial, sans-sarif;
+  font-weight: 100;
+}
+
+p {
+  color: #333333;
+}
+
+section.main {
+  position: relative;
+  width: 96%;
+  max-width: 1400px;
+  background-color: #00a0af;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 0 auto 60px;
+  z-index: 0;
+}
+
+/**************************************************************************
+    ==================> 2. MAIN HEADER
+ **************************************************************************/
+header {
+  position: relative;
+  background-color: #00777f;
+  border-bottom: solid white 6px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  padding: 20px 1% 0;
+}
+
+header a {
+  color: white;
+}
+
+header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 96%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.container h1 {
+  display: inline-block;
+  line-height: 56px;
+}
+
+.container img {
+  vertical-align: top;
+  margin: 0 20px 0 1%;
+  opacity: .9;
+}
+
+/**************************************************************************
+    ==================> 3. WELCOME MESSAGE
+ **************************************************************************/
+#welcome-msg {
+  color: #00a0af;
+  background-color: white;
+  padding: 10px 1% 20px;
+  width: 94%;
+  margin-right: 2%;
+  float: right;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+}
+
+#welcome-msg h3 {
+  color: #00a0af;
+  padding: 25px 1% 0;
+}
+
+#welcome-msg p {
+  color: #00777f;
+  padding: 10px 2% 0;
+}
+
+#welcome, #hide {
+  font-family: "Helvsub con", Helvetica, Arial, sans-sarif;
+  font-size: .7em;
+  float: right;
+  display: none;
+}
+
+#welcome {
+  color: white;
+}
+
+#welcome:hover, #hide:hover {
+  text-decoration: underline;
+}
+
+#hide {
+  color: #00a0af;
+}
+
+/**************************************************************************
+    ==================> 4. NAV BAR
+ **************************************************************************/
+nav {
+  position: relative;
+  background-color: #e4f6f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  z-index: 1;
+  float: left;
+}
+
+nav a:hover {
+  background-color: white;
+}
+
+button.orange {
+  position: relative;
+  background-color: #e36f1e;
+  color: white;
+  height: 60px;
+  width: 10%;
+  margin-right: .33%;
+  font-size: .9em;
+  overflow: visible;
+  z-index: 221;
+  vertical-align: top;
+}
+
+button.orange img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 60px;
+}
+
+button.orange:hover {
+  background-color: #e36f1e;
+  color: white;
+}
+
+button.unselected img {
+  display: none;
+}
+
+button.unselected {
+  position: relative;
+  background-color: #b65918;
+  color: #e7e7e7;
+  box-shadow: none;
+  z-index: 20;
+}
+
+nav ul {
+  display: inline-block;
+  width: 69%;
+  float: right;
+  height: 60px;
+}
+
+nav li {
+  text-align: center;
+  width: 25%;
+  vertical-align: top;
+  display: inline-block;
+  background-color: #e4f6f7;
+}
+
+nav a {
+  display: inline-block;
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav a:not(.current-report):hover {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+nav a.current-report {
+  background-color: #00777f;
+  color: white;
+}
+
+nav a h4 {
+  line-height: 60px;
+}
+
+nav a p {
+  text-align: left;
+  margin: 0 5% 20px 10%;
+  font-size: .9em;
+}
+
+/**************************************************************************
+    ==================> 5. WORK AREA [ie REPORTS/SCHEDULES]
+ **************************************************************************/
+section.workarea {
+  display: inline-block;
+  width: 98%;
+  min-height: 300px;
+  margin: 1%;
+  background-color: #e4f6f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section.workarea h2 {
+  background-color: white;
+  padding: 1%;
+  color: #00a0af;
+}
+
+section.workarea p {
+  padding: 2% 2% 0;
+}
+
+section.search, section.results {
+  margin: 0 1% 1%;
+  border-left: solid white 4px;
+  border-right: solid white 4px;
+  border-bottom: solid white 10px;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.topbar {
+  background-color: white;
+  text-align: right;
+  padding: 1% 0;
+}
+
+.topbar h3 {
+  display: inline-block;
+  margin: 0 1%;
+  color: #00a0af;
+  float: left;
+  font-size: 1.3em;
+  line-height: 24px;
+}
+
+.topbar label {
+  display: inline;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+.topbar input[type=checkbox] {
+  vertical-align: middle;
+}
+
+/**************************************************************************
+    ==================> 6. HELP BOX
+ **************************************************************************/
+div.help-btn-holder {
+  display: inline-block;
+  width: 90%;
+  text-align: right;
+  margin: 0 5%;
+  height: 20px;
+}
+
+div.help-box {
+  text-align: right;
+  background-color: white;
+  margin: 0 5% 25px;
+  padding: 0 2%;
+  height: 0;
+  overflow: hidden;
+}
+
+a.help-btn, a.help-close-btn {
+  font-family: "Helvsub con", Helvetica, Arial, sans-sarif;
+  font-size: .7em;
+  color: #00a0af;
+  line-height: 20px;
+}
+
+a.help-btn {
+  display: none;
+}
+
+a.help-close-btn {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+a.help-btn:hover, a.help-close-btn:hover {
+  text-decoration: underline;
+}
+
+div.help-box h3 {
+  text-align: left;
+  color: #00a0af;
+  padding: 0;
+}
+
+div.help-box p {
+  padding: 5px 2% 15px;
+  display: block;
+  text-align: left;
+  color: #00777f;
+}
+
+/**************************************************************************
+    ==================> 7. SEARCH FORM
+ **************************************************************************/
+form ul {
+  margin: 1%;
+}
+
+form li {
+  width: 25%;
+  margin-bottom: 10px;
+  vertical-align: top;
+  color: #00a0af;
+  font-family: "Helvsub con", Helvetica, Arial, sans-sarif;
+}
+
+label {
+  display: block;
+  color: #00a0af;
+  font-family: "Helvsub con", Helvetica, Arial, sans-sarif;
+}
+
+label.inline {
+  display: inline-block;
+  vertical-align: top;
+}
+
+li input[type=text], li select {
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  height: 24px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+li input[type=text] {
+  padding: 0px 5px;
+}
+
+li select {
+  padding: 5px;
+}
+
+li input.date-range {
+  width: 36%;
+}
+
+select.export-format {
+  width: 20px;
+  background-color: #00777f;
+  border: none;
+  height: 24px;
+  padding: 5px 5px 5px 0;
+  margin-left: 2px;
+  border-radius: 0 5px 5px 0;
+  vertical-align: top;
+}
+
+select.export-format:hover {
+  box-shadow: 0 0 0 1px #00a0af;
+}
+
+.topbar option {
+  background-color: #00777f;
+  color: white;
+  border: none;
+}
+
+select.export-format option:hover {
+  background-color: #00a0af;
+  color: white;
+}
+
+input[type=button], input[type=submit] {
+  line-height: 24px;
+  background-color: #00777f;
+  border: none;
+  color: white;
+  margin: 0;
+  vertical-align: top;
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+  background-color: #e36f1e;
+}
+
+input[type=submit] {
+  border-radius: 5px;
+  min-width: 100px;
+  margin-right: 1%;
+  padding: 0 10px;
+}
+
+input[type=button] {
+  min-width: 100px;
+  border-radius: 5px 0 0 5px;
+}
+
+/**************************************************************************
+    ==================> 8. RESULTS BOX
+ **************************************************************************/
+ul.pagination {
+  color: #00a0af;
+  display: inline-block;
+  margin-right: 2%;
+}
+
+ul.pagination li {
+  line-height: 24px;
+  width: 10px;
+}
+
+ul.pagination li:first-child, ul.pagination li:last-child {
+  width: 60px;
+}
+
+ul.pagination a:hover {
+  text-decoration: underline;
+  color: #00777f;
+}
+
+ul.pagination a.current-pg {
+  color: black;
+  font-family: "Helvsub bld", Helvetica, Arial, sans-sarif;
+}
+
+#pages {
+  background-color: #00777f;
+  border: none;
+  height: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+#pages:hover {
+  box-shadow: 0 0 0 1px #00a0af;
+}
+
+.results-container {
+  margin: 1% 0;
+  overflow-x: scroll;
+}
+
+thead {
+  background-color: #00777f;
+  color: white;
+}
+
+thead a {
+  color: white;
+}
+
+thead th {
+  padding: 5px 10px;
+}
+
+table {
+  font-size: .8em;
+}
+
+.results-container tr:nth-child(even) {
+  background-color: white;
+}
+
+.results-container td {
+  padding: 0 10px;
+}
+
+/**************************************************************************
+    ==================> 9. BREAKPOINT: TABLETS
+ **************************************************************************/
+@media screen and (max-width: 1000px) {
+  nav {
+    float: none;
+    margin-bottom: 1%;
+  }
+
+  button.orange {
+    width: 33%;
+    max-width: 100px;
+  }
+
+  nav ul {
+    width: 100%;
+    float: none;
+    border-top: solid white 10px;
+  }
+
+  form li {
+    width: 33%;
+  }
+
+  section.workarea {
+    width: 98%;
+  }
+
+  #welcome-msg {
+    float: none;
+    width: 96%;
+    margin-left: 1%;
+  }
+}
+/**************************************************************************
+    ==================> 10. BREAKPOINT: PHABLETS
+ **************************************************************************/
+@media screen and (max-width: 650px) {
+  nav li {
+    width: 50%;
+  }
+
+  nav ul {
+    height: auto;
+  }
+
+  form li {
+    width: 50%;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  #welcome-msg {
+    height: 0;
+    display: none;
+  }
+
+  #hide {
+    margin-left: 20%;
+  }
+
+  #welcome {
+    display: inline;
+    margin: 0 auto -15px;
+    padding-left: 50%;
+  }
+}
+/**************************************************************************
+    ==================> 11. BREAKPOINT: PHONES
+ **************************************************************************/
+@media screen and (max-width: 450px) {
+  header {
+    text-align: center;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  form li {
+    width: 100%;
+  }
+
+  .topbar h3 {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .topbar ul {
+    display: block;
+    text-align: center;
+  }
+
+  .topbar {
+    text-align: left;
+  }
+}

@@ -1,0 +1,76 @@
+﻿.widget-editor {
+    padding: 10px;
+}
+
+    .widget-editor .title {
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-family: 'HelveticaNeueW01-75Bold', Helvetica, Arial, sans-serif;
+        font-weight: normal;
+    }
+
+    .widget-editor .sub-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+        font-family: 'HelveticaNeueW01-75Bold', Helvetica, Arial, sans-serif;
+        font-weight: normal;
+    }
+
+    .widget-editor .field-block {
+        margin: 5px 0px;
+    }
+
+    .widget-editor .selector {
+        margin: 0px !important;
+        padding: 0px;
+    }
+
+    .widget-editor .scrolling-list {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .widget-editor .buttons {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .widget-editor label {
+        display:inline-block;
+        min-width: 130px;
+    }
+
+        .widget-editor label.inline {
+            display: inline;
+        }
+
+        .widget-editor .selector th {
+            text-align: left;
+        }
+
+        .widget-editor .selector td {
+            padding: 5px;
+        }
+
+    .widget-editor .selector-option {
+        padding-top: 10px;
+        border-top: 1px solid #fff;
+        margin: 10px;
+    }
+    .widget-editor .sub-editor {
+        margin: 5px -10px;
+        padding: 10px;
+        background: rgb(235,235,235);
+
+    }
+        .widget-editor .selector-option .title {
+            background: rgb(235,235,235);
+            padding: 3px;
+            font-size: 13px;
+            margin: 0px -10px 5px -10px;
+        }
+
+        .widget-editor .selector-option .columns {
+            margin: 10px 0px;
+        }

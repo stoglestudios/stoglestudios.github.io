@@ -1,0 +1,3 @@
+A first chance exception of type 'System.Data.Entity.Core.EntityCommandExecutionException' occurred in EntityFramework.SqlServer.dll
+
+The thread 0x2224 has exited with code 259 (0x103).

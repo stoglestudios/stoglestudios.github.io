@@ -1,0 +1,14 @@
+
+
+V0905a179.sterlingsavings.com
+
+
+Was able to Remote Desktop into 10.38.246.44
+
+I think the proj/servername is V0905a179.sterlingsavings.com
+
+
+Test site: http://10.38.246.44:8077
+
+Live site: https://pdt.umpquanet.local
+

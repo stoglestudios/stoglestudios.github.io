@@ -1,0 +1,18 @@
+1. Could the menu system be an overlay, that doesn’t take up horizontal space, similar to the Insider, 
+	so that that space can be used by the pages.
+DONE!
+
+2. Ability to search by pressing enter in the text fields.
+DONE!
+
+3. Default to “Show full Acct Numbers”
+DONE!
+
+4. Hide some columns, that aren’t frequently used, but still should be exported. Possibly another 
+	check to show all columns. Such as the Import File and the Export Seq ID. And the Batch Date.
+**NEED LIST**
+CHECKBOX ADDED!
+
+5. Allocations for a “This is what this page is for/FAQ/Help” flyout for each page. 
+	Similar to the Welcome Instructions, but defaulting to closed.
+DONE!

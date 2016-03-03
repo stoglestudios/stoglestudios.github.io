@@ -24,6 +24,7 @@ $skip.click( function() {
     $('#page').show();
     console.log("Skip Button Pressed");
 });
+// Function to animate opening sequence - REWRITE
 (function( $ ){
     $.fn.introAn = function(waitForIt, startSite) {
         var durationOS = 2000;
@@ -55,16 +56,6 @@ $skip.click( function() {
         return this;
    }; 
 })( jQuery );
- 
-// Adding elements
-/*
-for (i=0;i<$openers.length;i++) {
-    $('#intro').append("<div id='" + $openers[i][1] + "'></div>");
-    $("#" + $openers[i][1]).append("<h1>" + $openers[i][2] + "</h1>");
-    $("#" + $openers[i][1]).append("<img src='images/" + $openers[i][3] + ".png'></img>");
-    $("#" + $openers[i][0]).introAn(i*5000);
-}*/
-
 
 // Document ready
 $(document).ready(function(){
@@ -77,7 +68,7 @@ $(document).ready(function(){
     //Hide/show appropriate sections
     $('#page, #characters, #cosmology, #author, #contact').hide();
     
-    //Initiate animated opener sections
+    //Initiate animated opener sections -> REWRITE
     $('#intro').animate({ 
         backgroundPositionX: '100%',
         backgroundPositionY: '100%',
@@ -108,62 +99,5 @@ $(document).ready(function(){
     $(".backbutton").on("click", function(evt) {
         $("#cosmological-map").css("opacity", "1");
         //$(".definitions").hide().removeClass("viewdef");
-    });
-    $("*").each(function(){
-        $this = $(this);
-        if ( $this.data("alert") && $this.data("alert").toString().length >0){
-            var continueTo = $this.attr("href");
-            var modalCode = "<div id='intersession'><span></span><div class='alertBox'><h1></h1><p></p><button class='cancel'>Cancel</button><button class='continue'>Continue</button></div></div>";
-            $("body").append(modalCode);
-            console.log("AlertBox Created");
-            $("#intersession").css({
-                position: "fixed",
-                zIndex: "10101",
-                left: "0",
-                top:"0",
-                width: "100%",
-                height: "100vh",
-                minHeight:"100%",
-                backgroundColor: "black",
-                backgroundColor: "rgba(0,0,0,.8)",
-                display: "none"
-            });
-            $("#intersession span").css({
-                display: "inline-block",
-                height: "100vh",
-                minHeight: "100%",
-                lineHeight: "100%",
-                verticalAlign: "middle",
-                width: "0"
-            });
-            $("#intersession button").css({
-                padding: "5px 10px",
-                margin: "20px 20px 0 0"
-            });
-            $("#intersession .alertBox").css({
-                maxWidth: "300px",
-                backgroundColor: "white",
-                color: "black",
-                padding: "20px"
-            });
-            $(".alertBox h1").text("Greetings");
-            $(".alertBox p").text("This site is currently in flight. Please be aware that there may be bugs or incomplete functionality. That said, reviewing work in progress is arguably more important in understanding me and my workforw than completed projects. I invite you to play around, view code, and leave feedback.");
-            $this.on("click", function(ev) {
-                console.log("AlertBox Button Clicked");
-                ev.preventDefault();
-                $("#intersession").css({
-                    display: "inline-block"
-                });
-            });
-            $("button.cancel").on("click", function(){
-                console.log("Cancel");
-                $(this).parent().parent().hide();
-            });
-            $("button.continue").on("click", function(){
-                console.log("Continue to " + continueTo);
-                $(this).parent().parent().hide();
-                window.open( continueTo );
-            });
-        }
     });
 });
