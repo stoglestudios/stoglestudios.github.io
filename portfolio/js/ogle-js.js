@@ -110,6 +110,70 @@ classIDsArray = [];
 
 //Functions
 function OgleFramework($this) {
+    if ( $this.data("alert") && $this.data("alert").toString().length >0){
+            var continueTo = $this.attr("href");
+            var targetTo = $this.attr("target");
+            var modalCode = "<div id='intersession'><span></span><div class='alertBox'><h1></h1><p></p><button class='cancel'>Cancel</button><button class='continue'>Continue</button></div></div>";
+            $("body").append(modalCode);
+            console.log("AlertBox Created");
+            $("#intersession").css({
+                position: "fixed",
+                zIndex: "10101",
+                left: "0",
+                top:"0",
+                width: "100%",
+                height: "100%",
+                maxHeight: "100vh",
+                textAlign: "center",
+                minHeight:"100%",
+                backgroundColor: "black",
+                backgroundColor: "rgba(0,0,0,.8)",
+                display: "none"
+            });
+            $("#intersession span").css({
+                display: "inline-block",
+                height: "100%",
+                maxHeight: "100vh",
+                lineHeight: "100%",
+                verticalAlign: "middle",
+                width: "0"
+            });
+            $("#intersession button").css({
+                padding: "5px 10px",
+                margin: "20px 10px 0 10px"
+            });
+            $("#intersession .alertBox").css({
+                display: "inline-block",
+                margin: "auto",
+                width: "90%",
+                maxWidth: "450px",
+                maxHeight: "90%",
+                overflow: "auto",
+                verticalAlign: "middle",
+                backgroundImage: "linear-gradient(#fdfffc, #e5eec7)",
+                color: "black",
+                padding: "3%",
+                
+            });
+            $(".alertBox h1").css({color: "#5a9245", padding: "10px 0 30px", textAlign: "left"}).text("Greetings");
+            $(".alertBox p").css("text-align", "left").text("Thank you for your interest. This site is currently in flight. Please be aware that there may be bugs or incomplete functionality. That said, reviewing work in progress is arguably more important for understanding me and my workflow than completed projects are. I invite you to play around, view code, and leave feedback!");
+            $this.on("click", function(ev) {
+                console.log("AlertBox Button Clicked");
+                ev.preventDefault();
+                $("#intersession").css({
+                    display: "inline-block"
+                });
+            });
+            $("button.cancel").on("click", function(){
+                console.log("Cancel");
+                $(this).parent().parent().hide();
+            });
+            $("button.continue").on("click", function(){
+                console.log("Continue to " + continueTo);
+                window.open( continueTo, targetTo );
+                $(this).parent().parent().hide();
+            });
+        }
     if ($this.data("scroll") && $this.data("scroll").length > 0) {
         var slideOffset = "0px";
         var scrollOffset = $this.data("scroll") + "";
