@@ -328,6 +328,7 @@ content {
     }
 }
 #one {
+    background-color: $purple;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/cross.png"),
@@ -336,6 +337,7 @@ content {
     background-size: cover, 10px 10px, cover, cover;
 }
 #two {
+    background-color: $green;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/dots.png"),
@@ -356,6 +358,7 @@ content {
     }
 }
 #three {
+    background-color: $purple;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/hex.png"),
@@ -364,6 +367,7 @@ content {
     background-size: cover, 10px 10px, cover, cover;
 }
 #four {
+    background-color: $green;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/waves2.png"),
@@ -384,6 +388,7 @@ content {
     }
 }
 #five {
+    background-color: $purple;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/grid.png"),
@@ -392,6 +397,7 @@ content {
     background-size: cover, 10px 10px, cover, cover;
 }
 #six {
+    background-color: $green;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/diagnal.png"),
@@ -412,6 +418,7 @@ content {
     }
 }
 #seven {
+    background-color: $purple;
     background-image: 
         radial-gradient( ellipse 100% 200% at top, rgba(255,255,255,.4), rgba(255,255,255,0) ),
         url("../images/v-stripes.png"),

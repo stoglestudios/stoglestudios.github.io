@@ -369,109 +369,116 @@ content {
 
 /* line 330, css.scss */
 #one {
+  background-color: #301f3a;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/cross.png"), linear-gradient(135deg, #301f3a, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 338, css.scss */
+/* line 339, css.scss */
 #two {
+  background-color: #5c9149;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/dots.png"), linear-gradient(135deg, #5c9149, #003300);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 345, css.scss */
+/* line 347, css.scss */
 #two .container {
   border-color: #301f3a;
 }
-/* line 347, css.scss */
+/* line 349, css.scss */
 #two .container h1 {
   color: #301f3a;
 }
-/* line 350, css.scss */
+/* line 352, css.scss */
 #two .container .jumpdown {
   background-position: bottom;
 }
-/* line 352, css.scss */
+/* line 354, css.scss */
 #two .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 358, css.scss */
+/* line 360, css.scss */
 #three {
+  background-color: #301f3a;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/hex.png"), linear-gradient(135deg, #330033, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 366, css.scss */
+/* line 369, css.scss */
 #four {
+  background-color: #5c9149;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/waves2.png"), linear-gradient(135deg, #5c9149, #000000);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 373, css.scss */
+/* line 377, css.scss */
 #four .container {
   border-color: #301f3a;
 }
-/* line 375, css.scss */
+/* line 379, css.scss */
 #four .container h1 {
   color: #301f3a;
 }
-/* line 378, css.scss */
+/* line 382, css.scss */
 #four .container .jumpdown {
   background-position: bottom;
 }
-/* line 380, css.scss */
+/* line 384, css.scss */
 #four .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 386, css.scss */
+/* line 390, css.scss */
 #five {
+  background-color: #301f3a;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/grid.png"), linear-gradient(135deg, #2f4f4f, #000000, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
 
-/* line 394, css.scss */
+/* line 399, css.scss */
 #six {
+  background-color: #5c9149;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/diagnal.png"), linear-gradient(135deg, #228b22, #669966, #5c9149);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 401, css.scss */
+/* line 407, css.scss */
 #six .container {
   border-color: #301f3a;
 }
-/* line 403, css.scss */
+/* line 409, css.scss */
 #six .container h1 {
   color: #301f3a;
 }
-/* line 406, css.scss */
+/* line 412, css.scss */
 #six .container .jumpdown {
   background-position: bottom;
 }
-/* line 408, css.scss */
+/* line 414, css.scss */
 #six .container .jumpdown:hover {
   background-position: top;
 }
 
-/* line 414, css.scss */
+/* line 420, css.scss */
 #seven {
+  background-color: #301f3a;
   background-image: radial-gradient(ellipse 100% 200% at top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), url("../images/v-stripes.png"), linear-gradient(135deg, #9966cc, #2f4f4f, #301f3a);
   background-size: cover, 10px 10px, cover, cover;
 }
-/* line 421, css.scss */
+/* line 428, css.scss */
 #seven ul {
   margin: 3% 6% 3%;
 }
-/* line 423, css.scss */
+/* line 430, css.scss */
 #seven ul li {
   width: 30%;
   margin: 0 0 3%;
 }
-/* line 426, css.scss */
+/* line 433, css.scss */
 #seven ul li a {
   color: #301f3a;
   font-size: .9em;
   overflow: hidden;
 }
-/* line 430, css.scss */
+/* line 437, css.scss */
 #seven ul li a div {
   vertical-align: middle;
   width: 30px;
@@ -483,129 +490,129 @@ content {
   background-size: 700% 200%;
   border-radius: 5px;
 }
-/* line 441, css.scss */
+/* line 448, css.scss */
 #seven ul li a:hover {
   color: #5c9149;
 }
-/* line 443, css.scss */
+/* line 450, css.scss */
 #seven ul li a:hover div {
   background-color: #5c9149;
 }
-/* line 447, css.scss */
+/* line 454, css.scss */
 #seven ul li a #demo-reel {
   background-position: -30px -30px;
 }
-/* line 450, css.scss */
+/* line 457, css.scss */
 #seven ul li a #portfolio-link {
   background-position: 0px -30px;
 }
-/* line 453, css.scss */
+/* line 460, css.scss */
 #seven ul li a #resume-link {
   background-position: -60px -30px;
 }
-/* line 456, css.scss */
+/* line 463, css.scss */
 #seven ul li a #linked-in {
   background-position: -120px -30px;
 }
-/* line 459, css.scss */
+/* line 466, css.scss */
 #seven ul li a #email-link {
   background-position: -180px -30px;
 }
-/* line 462, css.scss */
+/* line 469, css.scss */
 #seven ul li a #phone-link {
   background-position: -150px -30px;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 475, css.scss */
+  /* line 482, css.scss */
   .section .container {
     width: 94%;
     padding: 2% 2% 1%;
   }
-  /* line 479, css.scss */
+  /* line 486, css.scss */
   .section h1 {
     font-weight: 400;
     font-size: 1.3em;
   }
-  /* line 483, css.scss */
+  /* line 490, css.scss */
   .section p {
     padding: 2% 0;
   }
 
-  /* line 489, css.scss */
+  /* line 496, css.scss */
   #seven ul li {
     width: 15%;
   }
-  /* line 491, css.scss */
+  /* line 498, css.scss */
   #seven ul li a {
     font-size: .7em;
     line-height: 2em;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 501, css.scss */
+  /* line 508, css.scss */
   .section .container {
     width: 94%;
     margin: 3% 3% 80px;
   }
-  /* line 505, css.scss */
+  /* line 512, css.scss */
   .section h1 {
     font-size: 1.2em;
     font-weight: 400;
   }
-  /* line 509, css.scss */
+  /* line 516, css.scss */
   .section p {
     line-height: 1em;
   }
 
-  /* line 515, css.scss */
+  /* line 522, css.scss */
   #seven ul li a {
     height: 30px;
     font-size: 0em;
   }
 }
 @media screen and (max-height: 550px) {
-  /* line 523, css.scss */
+  /* line 530, css.scss */
   .illustration {
     margin: 50px;
     width: 30vh;
     height: 30vh;
   }
 
-  /* line 530, css.scss */
+  /* line 537, css.scss */
   #seven ul li {
     width: 15%;
   }
-  /* line 532, css.scss */
+  /* line 539, css.scss */
   #seven ul li a {
     font-size: .5em;
   }
 }
 @media screen and (max-height: 350px) {
-  /* line 541, css.scss */
+  /* line 548, css.scss */
   .section .container {
     width: 94%;
     padding: 1% 3%;
   }
-  /* line 545, css.scss */
+  /* line 552, css.scss */
   .section .illustration {
     display: none;
   }
-  /* line 548, css.scss */
+  /* line 555, css.scss */
   .section h1 {
     font-size: 1em;
   }
-  /* line 551, css.scss */
+  /* line 558, css.scss */
   .section p {
     padding: 1% 0;
     font-size: .95em;
   }
 
-  /* line 558, css.scss */
+  /* line 565, css.scss */
   #seven ul li {
     width: 10%;
   }
-  /* line 560, css.scss */
+  /* line 567, css.scss */
   #seven ul li a {
     font-size: .5em;
   }
