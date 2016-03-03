@@ -21,3 +21,18 @@ _BrandonTestImages/
 _BrandonTestImages/*
 
 Mongoose.app
+
+.sass-cache/
+.sass-cache/*
+
+heretics/.sass-cache/
+heretics/.sass-cache/*
+
+portfolio/.sass-cache/
+portfolio/.sass-cache/*
+
+resume/.sass-cache/
+resume/.sass-cache/*
+
+brandongaiusogle/.sass-cache/
+brandongaiusogle/.sass-cache/*

@@ -24,6 +24,7 @@ $skip.click( function() {
     $('#page').show();
     console.log("Skip Button Pressed");
 });
+// Function to animate opening sequence - REWRITE
 (function( $ ){
     $.fn.introAn = function(waitForIt, startSite) {
         var durationOS = 2000;
@@ -55,16 +56,6 @@ $skip.click( function() {
         return this;
    }; 
 })( jQuery );
- 
-// Adding elements
-/*
-for (i=0;i<$openers.length;i++) {
-    $('#intro').append("<div id='" + $openers[i][1] + "'></div>");
-    $("#" + $openers[i][1]).append("<h1>" + $openers[i][2] + "</h1>");
-    $("#" + $openers[i][1]).append("<img src='images/" + $openers[i][3] + ".png'></img>");
-    $("#" + $openers[i][0]).introAn(i*5000);
-}*/
-
 
 // Document ready
 $(document).ready(function(){
@@ -77,7 +68,7 @@ $(document).ready(function(){
     //Hide/show appropriate sections
     $('#page, #characters, #cosmology, #author, #contact').hide();
     
-    //Initiate animated opener sections
+    //Initiate animated opener sections -> REWRITE
     $('#intro').animate({ 
         backgroundPositionX: '100%',
         backgroundPositionY: '100%',
