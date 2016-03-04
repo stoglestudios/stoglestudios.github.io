@@ -14,14 +14,19 @@ var $openers = [
     [$('#world'), "world", "Where Will be the Final Battle?", "hecate"],
     [$('#all'), "all", "And Who Will Control it All?", "caster"]
 ];
-var $intro = $("<div></div>");
-var $skip = $("<span class='skip'>Skip</span>");
+var $intro = $('#intro');
+var $skip = $(".skip");
 var $tabs = $("nav li a");
 
 // Functions
 $skip.click( function() {
-    $('#intro').hide();
-    $('#page').show();
+    $intro.stop().animate({
+        opacity: "0"
+    }, 200, function (){
+        $intro.remove();
+    });
+    $('#page').css({opacity: "0"}).show().delay(200).animate({opacity: "1"}, 200);
+    $(this).hide();
     console.log("Skip Button Pressed");
 });
 // Function to animate opening sequence - REWRITE
@@ -68,7 +73,8 @@ $skip.click( function() {
 // Document ready
 $(document).ready(function(){
     //Build assets
-    $('#intro').css("display", "inline-block").append($skip);
+    $('#intro').show();
+    $skip.show();
     $worlds = $("#cosmology a");
     
     $(".definitions").addClass("viewdef").hide();
@@ -141,21 +147,21 @@ $(document).ready(function(){
         }
     });
     //REPLACING WITH ABOVE FUNCTION
-//    $(".inpagelink").on("click", function(event){
-//        event.preventDefault();
-//        $this = $(this);
-//        var divToLoad = $this.attr("href");
-//        var parentID = $this.parents("div").attr("id");
-//        console.log("Link: " + divToLoad + " - Parent: " + parentID );
-//        //
-//        $("#modal").show().animate({opacity: "1"}, 200);
-//        
-//        if ($("#modalBox") && $("#modalBox").length>0) {
-//            $("#modalBox").attr("id", "oldBox").show();
-//            $("#oldBox").animate({opacity: "0"}, 200, function(){
-//                $(this).remove();
-//            });
-//        }  
-//        $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", width: "95%", maxWidth: "900px"}).animate({opacity: "1", width: "90%", maxWidth:"800px"}, 200);
-//    });
+    $(".inpagelink").on("click", function(event){
+        event.preventDefault();
+        $this = $(this);
+        var divToLoad = $this.attr("href");
+        var parentID = $this.parents("div").attr("id");
+        console.log("Link: " + divToLoad + " - Parent: " + parentID );
+        //
+        $("#modal").show().animate({opacity: "1"}, 200);
+        
+        if ($("#modalBox") && $("#modalBox").length>0) {
+            $("#modalBox").attr("id", "oldBox").show();
+            $("#oldBox").animate({opacity: "0"}, 200, function(){
+                $(this).remove();
+            });
+        }  
+        $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", width: "95%", maxWidth: "900px"}).animate({opacity: "1", width: "90%", maxWidth:"800px"}, 200);
+    });
 });
