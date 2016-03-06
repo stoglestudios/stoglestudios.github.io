@@ -9,7 +9,7 @@ $gutter: 25px;
 $bleed: 10px;
 $head-height: $gutter*2 + $logo-height;
 $soc-size: 22px;
-$col-width: 1400px;
+$col-width: 1800px;
 $corners: 5px;
 
 $height-666: 250px;
@@ -79,24 +79,10 @@ body {
     text-align: center;
     color: $orange;
 }
-.skip {
-    display: none;
-    position: fixed;
-    background-color: $orange;
-    z-index: 1000;
-    padding: 5px 10px;
-    right: 20px;
-    bottom: 20px;
-    border: solid 2px $orange;
-    font-size: 1em;
-    font-family: $fonts-main;
-    font-variant: small-caps;
-    color: black;
-    &:hover {
-        background-color: black;
-        color: $orange;
-    }
-}
+/************************************************************
+    INTRO ANIMATION
+ ************************************************************/
+
 #intro {
     position: absolute;
     overflow: hidden;
@@ -138,41 +124,48 @@ body {
             margin-top: -20vh;
         }
     }
-
 }
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    width: 20%;
-    text-align: center;
-    border-left: solid 1px $orange;
-    margin: $bleed 0 0;
-    a {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
+.skip {
+    display: none;
+    position: fixed;
+    background-color: $orange;
+    z-index: 1000;
+    padding: 5px 10px;
+    right: 20px;
+    bottom: 20px;
+    border: solid 2px $orange;
+    font-size: 1em;
+    font-family: $fonts-main;
+    font-variant: small-caps;
+    color: black;
+    &:hover {
+        background-color: black;
         color: $orange;
-        &:hover {
-            text-shadow: 0 0 20px $orange;
-            color: beige;
-        }
-    }
-    &:first-child {
-        border-left: none;
     }
 }
-    .selected {
-        background: linear-gradient(to right, $orange, darkred);
-        background-color: $orange;
-        a {
-            text-shadow: 0 0 20px $orange;
-            color: beige;
-            &:hover {
-                cursor: default;
-            }
+@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
+    #intro { 
+        div h1 {
+            margin: 3vh 0 0;
+            font-size: 1em;
+            padding: 0;
+            text-align: center;
+        }
+        div img {
+            width: 120%;
+            margin-left: -10%;
+            padding-top: 20vh;
         }
     }
+    .skip {
+        font-size: 2em;
+    }
+}
+
+
+/************************************************************
+    PAGE / HEADER / NAV
+ ************************************************************/
 #page {
     text-align: center;
     width: 94%;
@@ -206,151 +199,267 @@ nav ul li {
             text-shadow: 0 0 10px black;
         }
     }
-    content div, .characters, .definitions {
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    width: 20%;
+    text-align: center;
+    border-left: solid 1px $orange;
+    margin: $bleed 0 0;
+    a {
         display: inline-block;
-        width: 94%;
-        margin: $gutter 0 0;
-        border-radius: $gutter;
-        background-image: linear-gradient(beige, burlywood);
-        background-color: beige;
-        padding: $gutter;
-        text-align: left;
+        width: 100%;
+        height: 100%;
+        color: $orange;
+        &:hover {
+            text-shadow: 0 0 20px $orange;
+            color: beige;
+        }
+    }
+    &:first-child {
+        border-left: none;
+    }
+}
+    .selected {
+        background: linear-gradient(to right, $orange, darkred);
+        background-color: $orange;
+        a {
+            text-shadow: 0 0 20px $orange;
+            color: beige;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+@media screen and (max-width: 500px)  {
+    header {
+        padding-top: 0;
+        background-size: $width-666*.68 $height-666*.68;
+        h2 {
+            font-size: 1em;
+            padding: $bleed/2 0;
+        }
+    }
+    nav ul li {
+        width: 50%;
+        &:nth-child(odd) {
+            border: none;
+        }
         &:last-child {
-            margin-bottom: $gutter;
+            border-left: solid 1px $orange;
+            border-right: solid 1px $orange;
         }
-        .standard-img {
-            float: left;
-            border: solid 2px darkred;
-            height: 200px;
-            padding: $bleed;
-            margin-right: $gutter;
-            margin-bottom: $bleed;
-        }
-        h1 {
-            display: inline-block;
-            padding-top: $gutter;
-            color: darkred;
-            font-size: 1.5em;
-        }
-        p {
-            color: #600;
+    }
+}
+@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
+    header {
+        padding-top: $bleed;
+        background-size: $width-666*.86 $height-666*.86;
+        h2 {
             font-size: 1.4em;
-            margin-top: $gutter;
-            line-height: 1.4em;
-        }
-        p:first-letter {
-            font-family: $fonts-main;
-            text-transform: capitalize;
-            text-align: center;
-            float: left;
-            color: $orange;
-            font-size: 1.7em;
-            line-height: 1em;
-            min-width: 1em;
-            background-color: darkred;
-            border: solid .1em darkred;
-            margin: .1em 5px 0 0;
-            padding: .1em .1em;
-            box-shadow: 0 0 0 2px $orange inset, 0 0 10px black inset;
-            text-shadow: 0 0 10px black;
+            padding: $bleed 0;
         }
     }
-    #premise div {
-        padding: 0;
-        p {
-            margin: $gutter auto 0;
-            width: 50%;
-            padding: 0 3% $gutter;
-            &:nth-child(even) {
-                float: left;
-                clear: both;
-            }
-            &:nth-child(odd) {
-                float: right;
-            }
+    nav ul a li {
+        width: 33.33333%;
+        &:last-child {
+            border-right: solid 1px $orange;
         }
-        div {
-            margin: 0;
-            width: 100%;
-            padding: 40% 0 0;
-            background: url("../images/hecateSketch.png") no-repeat top center;
-            background-size: 100%;
-        }
+    }
+    content div {
+        text-align: center;
         h1 {
-            padding: 0 3%;
             display: block;
-            margin: auto;
+        }
+        p {
+            text-align: left;
         }
     }
-    #characters {
-        .character {
-            color: $red;
+}
+/************************************************************
+    CHARACTER & WORLD CONTENT 
+ ************************************************************/
+
+content div, .characters, .definitions {
+    display: inline-block;
+    width: 94%;
+    margin: $gutter 0 0;
+    border-radius: $gutter;
+    background-image: linear-gradient(beige, burlywood);
+    background-color: beige;
+    padding: $gutter;
+    text-align: left;
+    &:last-child {
+        margin-bottom: $gutter;
+    }
+    .standard-img {
+        float: left;
+        border: solid 2px darkred;
+        height: 200px;
+        padding: $bleed;
+        margin-right: $gutter;
+        margin-bottom: $bleed;
+    }
+    h1 {
+        display: inline-block;
+        padding-top: $gutter;
+        color: darkred;
+        font-size: 1.5em;
+    }
+    p {
+        color: #600;
+        font-size: 1.4em;
+        margin-top: $gutter;
+        line-height: 1.4em;
+    }
+    p:first-letter {
+        font-family: $fonts-main;
+        text-transform: capitalize;
+        text-align: center;
+        float: left;
+        color: $orange;
+        font-size: 1.7em;
+        line-height: 1em;
+        min-width: 1em;
+        background-color: darkred;
+        border: solid .1em darkred;
+        margin: .1em 5px 0 0;
+        padding: .1em .1em;
+        box-shadow: 0 0 0 2px $orange inset, 0 0 10px black inset;
+        text-shadow: 0 0 10px black;
+    }
+}
+.world-img {
+    background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
+    background-size: 400%;
+    height: 200px;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    border-radius: 10%;
+}
+.character {
+    color: #c64a19; //mediumvioletred;
+}            
+.periods {
+    color: gray;
+}
+.titans {
+    color: darkblue;
+}
+.gods {
+    color: darkmagenta;
+}
+.angels {
+    color: darkgoldenrod;
+}
+.demons {
+    color: darkred;
+}
+.elementals {
+    color: darkolivegreen;
+}
+.realms {
+    color: saddlebrown;
+}
+.standard-img, .world-img {
+            margin: 0;
+            float: none;
+        }
+.backbutton {
+    float: right;
+    font-style: normal;
+    font-size: 1.2em;
+    color: darkred;
+    display: none;
+    &:hover {
+        color: $orange;
+        text-decoration: none;
+        div {
+            background-color: $orange;
         }
     }
+    &:after {
+        content: " Map";
+        border-radius: 50%;
+    }
+    div {
+        padding: 0;
+        margin: 0;
+        height: 1em;
+        width: 1em;
+        line-height: 1em;
+        background: darkred;
+        color: antiquewhite;
+        border-radius: 50%;
+        &:before {
+            font-size: 1.2em;
+            text-align: center;
+            content: " X";
+        }
+    }
+}
+/************************************************************
+    PREMISE PAGE
+ ************************************************************/
+
+#premise div {
+    padding: 0;
+    p {
+        margin: $gutter auto 0;
+        width: 50%;
+        padding: 0 3% $gutter;
+        &:nth-child(even) {
+            float: left;
+            clear: both;
+        }
+        &:nth-child(odd) {
+            float: right;
+        }
+    }
+    div {
+        margin: 0;
+        width: 100%;
+        padding: 40% 0 0;
+        background: url("../images/hecateSketch.png") no-repeat top center;
+        background-size: 100%;
+    }
+    h1 {
+        padding: 0 3%;
+        display: block;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
+    #premise div p {
+        width: 100%;
+        &:nth-child(even) {
+            float: none;
+            padding-bottom: 0;
+        }
+        &:nth-child(odd) {
+            float: none;
+        } 
+    }
+}
+/************************************************************
+    CHARACTER PAGE
+ ************************************************************/
+
+@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
+
+}
+/************************************************************
+    COSMOLOGY PAGE
+ ************************************************************/
+
     #cosmology {
         div {
-            .world-img {
-                float: left;
-                background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
-                background-size: 400%;
-                height: 200px;
-                margin-right: $gutter;
-                margin-bottom: $gutter;
-                border-radius: 10%;
-            }
+            //Card Styles
             a {
                 font-style: italic;
                 &:hover {
                     text-decoration: underline;
-                }
-            }
-            .periods {
-                color: gray;
-            }
-            .titans {
-                color: darkblue;
-            }
-            .gods {
-                color: blueviolet;
-            }
-            .angels {
-                color: darkgoldenrod;
-            }
-            .demons {
-                color: darkred;
-            }
-            .elementals {
-                color: darkgreen;
-            }
-            .realms {
-                color: saddlebrown;
-            }
-            .backbutton {
-                float: right;
-                font-style: normal;
-                font-size: 1.2em;
-                color: $red;
-                &:hover {
-                    color: $orange;
-                    text-decoration: none;
-                    div {
-                        background-color: $orange;
-                    }
-                }
-                &:after {
-                    content: " Map";
-                }
-                div {
-                    padding: 0;
-                    margin: 0;
-                    height: 1em;
-                    width: 1em;
-                    line-height: 1em;
-                    background: $red;
-                    color: antiquewhite;
-                    &:before {
-                        content: "X";
-                    }
                 }
             }
         }
@@ -366,16 +475,15 @@ nav ul li {
             overflow:auto;
         }
     }
-
         #cosmological-map {
             position: relative;
-            background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
+            background: url("../images/HereticsCosMap_BG.jpg") no-repeat center;
             background-size: 100% 100%;
             height: 100vh;
+            overflow: hidden;
             .realm {
                 position: absolute;
                 background: none;
-                border-radius: 0;
                 text-align: center;
                 padding: 0;
                 margin: 0;
@@ -383,101 +491,259 @@ nav ul li {
                     position: relative;
                     display: inline-block;
                     vertical-align: middle;
-                    width: 80%;
-                    height: 80%;
-                    margin-top: 10%;
+                    margin: -100px;
+                    /* For Dev: */
+                    background-color: rgba(100,0,200, .4);
+                    border-radius: 50%;
                     img {
+                        position: relative;
+                        display: inline-block;
                         vertical-align: middle;
                         width: 100%;
                         height: auto;
                         border: none;
                     }
                     &:hover {
-                        margin-top: 5%;
-                        width: 90%;
-                        height: 90%;
                         cursor: pointer;
                     }
                 }
             }
             .other {
-                width: 250px;
-                height: 250px;
+                width: 26vw;
+                height: 26vw;
+                max-width: 400px;
+                max-height: 400px;
+                min-width: 120px;
+                min-height: 120px;
+                a {
+                    width: 90%;
+                    height: 90%;
+                    max-width: 25vh;
+                    max-height: 25vh;
+                    &:hover {
+                        width: 98%;
+                        height: 98%;
+                        max-width: 30vh;
+                        max-height: 30vh;
+                    }
+                }
             }
             .our {
-                width: 300px;
-                height: 200px;
+                width: 30vw;
+                height: 30vw;
+                max-width: 500px;
+                max-height: 500px;
+                min-width: 150px;
+                min-height: 150px;
+                a {
+                    width: 90%;
+                    height: 90%;
+                    max-width: 25vh;
+                    max-height: 25vh;
+                    &:hover {
+                        width: 98%;
+                        height: 98%;
+                        max-width: 33vh;
+                        max-height: 33vh;
+                    }
+                }
             }
             .helper {
-                position: absolute;
+                position: relative;
                 display: inline-block;
                 top: 0;
                 left: 0;
                 height: 100%;
-                width: 1px;
+                width: 0px;
+                background-color: blue;
                 vertical-align: middle;
                 line-height: 100%;
             }   
             #ouranos {
-                top: -5%;
-                left: 35%;
+                top: -8vh;
+                left: 26%;
             }
             #hyperion {
-                top: 20%;
-                left: 19%;
+                top: 20vh;
+                left: 4%;
             }
             #alfheim {
-                top: 12%;
-                left: 47%;
+                top: 12vh;
+                left: 40%;
             }
             #niflheim {
-                top: 18%;
-                left: 58%;
-            }
-            #earth {
-                top: 33%;
-                left: 38%;
-            }
-            #oceanus {
-                top: 50%;
-                left: 23%;
-            }
-            #khthon {
-                top: 53%;
-                left: 49%;
-            }
-            #vulcan {
-                top: 50%;
+                top: 16vh;
                 left: 68%;
             }
+            #earth {
+                top: 32vh;
+                left: 30%;
+            }
+            #oceanus {
+                top: 50vh;
+                left: 8%;
+            }
+            #khthon {
+                top: 54vh;
+                left: 44%;
+            }
+            #vulcan {
+                top: 48vh;
+                left: 70%;
+            }
             #underworld {
-                top: 75%;
-                left: 45%;
+                top: 75vh;
+                left: 33%;
             }
         }
-    #author div {
-        min-height: 500px;
-        img {
-            content: url("../images/brandon.jpg");
-        }
-        h1:after {
-            content: "Brandon Gaius Ogle";
-        }
-    }
-    #contact div {
-        min-height: 500px;
-        img {
-            content: url("../images/proposal.jpg");
-        }
-        a {
-            margin: $gutter;
-            color: darkred;
-            font-size: 1.2em;
-            &:hover {
-                text-decoration: underline;
+
+//--------------------------------------
+// RESPONSIVE CSS
+//--------------------------------------
+
+@media screen and (max-width: 900px) {
+    #cosmological-map {
+        .realm {
+            a {
+                background-color: rgba(0,200,200, .3);
             }
         }
+        #ouranos {
+            top: 0vh;
+        }
+        #hyperion {
+            top: 26vh;
+        }
+        #alfheim {
+            top: 20vh;
+        }
+        #niflheim {
+            top: 22vh;
+        }
+        #earth {
+            top: 40vh;
+        }
+        #oceanus {
+            top: 58vh;
+        }
+        #khthon {
+            top: 61vh;
+        }
+        #vulcan {
+            top: 54vh;
+        }
+        #underworld {
+            top: 80vh;
+        }
     }
+}
+@media screen and (max-height: 450px) {
+    #cosmology div .world-img {
+        height: 100px;
+    }
+    content div .standard-img {
+        height: 100px;
+    }
+}
+
+@media screen and (max-height: 350px) {
+    #cosmology div {
+        .world-img {
+            float: left;
+            margin-right: $bleed;
+            margin-bottom: $bleed;
+        }
+        h1 {
+            float: right;
+        }
+        h3 {
+            clear: right;
+            float: right;
+        }
+        p {
+            clear: both;
+        }
+    }
+}
+
+/************************************************************
+    DEFINITION SLIDES
+ ************************************************************/
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    display: none;
+    span {
+        position: relative;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        min-height: 100vh;
+        max-height: 100%;
+        width: 1px;
+        vertical-align: middle;
+        line-height: 100%;
+    }
+    #modalBox, .characters, .definitions {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 90%;
+        max-width: 800px;
+        max-height: 90%;
+        margin: auto;
+        overflow: auto;
+    }
+    .backbutton {
+        display: inline-block;
+    }
+}
+
+/************************************************************
+    AUTHOR PAGE
+ ************************************************************/
+
+#author div {
+    min-height: 500px;
+    img {
+        content: url("../images/brandon.jpg");
+    }
+    h1:after {
+        content: "Brandon Gaius Ogle";
+    }
+}
+
+/************************************************************
+    CONTACT PAGE
+ ************************************************************/
+
+#contact div {
+    min-height: 500px;
+    img {
+        content: url("../images/proposal.jpg");
+    }
+    a {
+        margin: $gutter;
+        color: darkred;
+        font-size: 1.2em;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/************************************************************
+    FOOTER
+ ************************************************************/
+
 footer {
     border-top: solid 2px $orange;
     padding: $bleed;
@@ -535,149 +801,7 @@ footer {
         }
     }
 }
-
-//--------------------------------------
-// RESPONSIVE CSS
-//--------------------------------------
-
-@media screen and (max-height: 750px) {
-    #cosmological-map {
-        .other img {
-            margin-top: -12%;
-            //background-color: rgba(255,255,255,.5);
-            max-width: 200px;
-            &:hover {
-                max-width: 220px;
-            }
-        }
-        #earth img {
-            margin-top: -12%;
-            width: 72%;
-            &:hover {
-                width: 77%;
-            }
-        }
-    }
-    #cosmology div .world-img {
-        height: 150px;
-    }
-    content div .standard-img {
-        height: 150px;
-    }
-}
-@media screen and (max-height: 450px) {
-    #cosmological-map {
-        .other img {
-            //background-color: rgba(255,0,0,.5);
-            max-width: 150px;
-            &:hover {
-                max-width: 170px;
-            }
-        }
-        #earth img {
-            width: 52%;
-            &:hover {
-                width: 57%;
-            }
-        }
-    }
-    #cosmology div .world-img {
-        height: 100px;
-    }
-    content div .standard-img {
-        height: 100px;
-    }
-}
-@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
-    #intro { 
-        div h1 {
-            margin: 3vh 0 0;
-            font-size: 1em;
-            padding: 0;
-            text-align: center;
-        }
-        div img {
-            width: 120%;
-            margin-left: -10%;
-            padding-top: 20vh;
-        }
-        .skip {
-            font-size: 1em;
-        }
-    }
-    header {
-        padding-top: $bleed;
-        background-size: $width-666*.86 $height-666*.86;
-        h2 {
-            font-size: 1.4em;
-            padding: $bleed 0;
-        }
-    }
-    nav ul a li {
-        width: 33.33333%;
-        &:last-child {
-            border-right: solid 1px $orange;
-        }
-    }
-    content div {
-        text-align: center;
-        h1 {
-            display: block;
-        }
-        p {
-            text-align: left;
-        }
-    }
-    #characters div, #cosmology div, #author div {
-        .standard-img, .world-img {
-            margin: 0;
-            float: none;
-        }
-        .backbutton {
-            float: none;
-            display: block;
-            margin-bottom: $gutter;
-        }
-    }
-    #premise div p {
-        width: 100%;
-        &:nth-child(even) {
-            float: none;
-            padding-bottom: 0;
-        }
-        &:nth-child(odd) {
-            float: none;
-        } 
-    }
-    footer p {
-        padding-bottom: $bleed;
-        &:last-child {
-            clear: both;
-            padding-top: $bleed;
-            border-top: dashed 1px black;
-        }
-    }
-}
-
 @media screen and (max-width: 500px)  {
-    header {
-        padding-top: 0;
-        background-size: $width-666*.68 $height-666*.68;
-        h2 {
-            font-size: 1em;
-            padding: $bleed/2 0;
-        }
-    }
-    nav ul li {
-        width: 50%;
-        &:nth-child(odd) {
-            border: none;
-        }
-        &:last-child {
-            border-left: solid 1px $orange;
-            border-right: solid 1px $orange;
-        }
-    }
     footer p {
         padding-bottom: $bleed;
         span {
@@ -687,101 +811,3 @@ footer {
         }
     }
 }
-@media screen and (max-height: 350px) {
-    #cosmological-map {
-        .other img {
-            //background-color: rgba(0,0,0,.5);
-            max-width: 100px;
-            &:hover {
-                max-width: 120px;
-            }
-        }
-        #earth img {
-            width: 32%;
-            &:hover {
-                width: 37%;
-            }
-        }
-    }
-    #cosmology div {
-        .world-img {
-            float: left;
-            margin-right: $bleed;
-            margin-bottom: $bleed;
-        }
-        h1 {
-            float: right;
-        }
-        h3 {
-            clear: right;
-            float: right;
-        }
-        p {
-            clear: both;
-        }
-    }
-}
-#modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    background-color: rgba(0,0,0,.8);
-    position: fixed;
-    display: none;
-    span {
-        position: relative;
-        display: inline-block;
-        top: 0;
-        left: 0;
-        height: 100%;
-        min-height: 100vh;
-        max-height: 100%;
-        width: 1px;
-        vertical-align: middle;
-        line-height: 100%;
-    }
-    #modalBox, .characters, .definitions {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        width: 90%;
-        max-width: 800px;
-        max-height: 90%;
-        margin: auto;
-        overflow: auto;
-    }
-    .definitions {
-        h1 {
-            font-size: 2em
-        }
-        img {
-            float: left;
-            width: 40%;
-            height: auto;
-            margin: 0 20px 0 0;
-        }
-    }
-}
-@media screen and (max-width: 650px) {
-    #modal {
-        .definitions {
-            h1 {
-                font-size: 1.4em
-            }
-            img {
-                display: block;
-                margin: -20px auto 0;
-                float: none;
-                width: 70%;
-            }
-        }
-    }
-}
-
-
-
-
-

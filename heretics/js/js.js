@@ -75,9 +75,9 @@ $(document).ready(function(){
     //Build assets
     $('#intro').show();
     $skip.show();
-    $worlds = $("#cosmology a");
+//    $worlds = $("#cosmology a");
     
-    $(".definitions").addClass("viewdef").hide();
+    $(".definitions").hide();
     
     //Hide/show appropriate sections
     $('#page, #characters, #cosmology, #author, #contact').hide();
@@ -107,23 +107,13 @@ $(document).ready(function(){
             $(pageClicked).show();
         }
     });
-//    $worlds.on("click", function(evt) {
-//        $("#cosmological-map").css("opacity", ".5");
-//        var idme = $(this).attr("href");
-//        $(idme).show();
-//        $(idme).siblings(".definitions").hide();
-//    });
-//    $(".backbutton").on("click", function(evt) {
-//        $("#cosmological-map").css("opacity", "1");
-//        //$(".definitions").hide().removeClass("viewdef");
-//    });
     $("#modal").on("click", function(event){
-
         event.preventDefault();
         var getAttrID = event.target.getAttribute("id");
         var getAttrHREF = event.target.getAttribute("href");
+        var getAttrClass = event.target.getAttribute("class");
         var getAttrTag = event.target.tagName.toLowerCase();
-        if (getAttrID == "modal" ) {
+        if (getAttrID == "modal" || getAttrClass == "backbutton") {
             $("#modal").animate({opacity: "0"}, 200, function(){
                 $this = $(this);
                 $this.hide();
@@ -131,17 +121,16 @@ $(document).ready(function(){
             });
         } else {
             console.log("Is: " + getAttrTag + ", href: " + getAttrHREF);
-            if (getAttrTag == "a") {
+            if (getAttrTag == "a" && getAttrClass != "backbutton") {
                 var divToLoad = getAttrHREF;
-                
                 if ($("#modalBox") && $("#modalBox").length>0) {
                     $("#modalBox").attr("id", "oldBox");
-                    $("#oldBox").show().animate({opacity: "0", width: "40%", height: "40%"}, 200, function(){
+                    $("#oldBox").show().animate({opacity: "0", marginLeft: "-100%"}, 200, function(){
                         $(this).remove();
-                        $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", width: "95%", maxWidth: "900px"}).animate({opacity: "1", width: "90%", maxWidth:"800px"}, 200);
                     });
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", marginLeft: "100%"}).delay(100).animate({opacity: "1", marginLeft: "0%"}, 200);
                 } else {
-                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", width: "95%", maxWidth: "900px"}).animate({opacity: "1", width: "90%", maxWidth:"800px"}, 200);
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0"}).animate({opacity: "1"}, 200);
                 }
             }
         }
@@ -152,16 +141,18 @@ $(document).ready(function(){
         $this = $(this);
         var divToLoad = $this.attr("href");
         var parentID = $this.parents("div").attr("id");
-        console.log("Link: " + divToLoad + " - Parent: " + parentID );
+        console.log(".inpagelink button pressed - Link: " + divToLoad + " - Parent: " + parentID );
         //
         $("#modal").show().animate({opacity: "1"}, 200);
         
         if ($("#modalBox") && $("#modalBox").length>0) {
             $("#modalBox").attr("id", "oldBox").show();
-            $("#oldBox").animate({opacity: "0"}, 200, function(){
+            $("#oldBox").animate({opacity: "0", marginLeft: "-100%"}, 200, function(){
                 $(this).remove();
             });
-        }  
-        $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", width: "95%", maxWidth: "900px"}).animate({opacity: "1", width: "90%", maxWidth:"800px"}, 200);
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", marginLeft: "100%"}).animate({opacity: "1", marginLeft: "0%"}, 200);
+        } else {
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0"}).animate({opacity: "1"}, 200);
+        }
     });
 });
