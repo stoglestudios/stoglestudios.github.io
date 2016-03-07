@@ -76,7 +76,7 @@ $(document).ready(function(){
     $('#intro').show();
     $skip.show();
 //    $worlds = $("#cosmology a");
-    
+    $("#cosmological-map").show();
     $(".definitions").hide();
     
     //Hide/show appropriate sections
@@ -125,12 +125,12 @@ $(document).ready(function(){
                 var divToLoad = getAttrHREF;
                 if ($("#modalBox") && $("#modalBox").length>0) {
                     $("#modalBox").attr("id", "oldBox");
-                    $("#oldBox").show().animate({opacity: "0", marginLeft: "-100%"}, 200, function(){
+                    $("#oldBox").show().animate({opacity: "0", marginLeft: "-100%"}, 200, "easeInOutCirc", function(){
                         $(this).remove();
                     });
-                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", marginLeft: "100%"}).delay(100).animate({opacity: "1", marginLeft: "0%"}, 200);
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "100%"}).show().delay(100).animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
                 } else {
-                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0"}).animate({opacity: "1"}, 200);
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0"}).show().animate({opacity: "1"}, 200, "easeInOutCirc");
                 }
             }
         }
@@ -147,12 +147,12 @@ $(document).ready(function(){
         
         if ($("#modalBox") && $("#modalBox").length>0) {
             $("#modalBox").attr("id", "oldBox").show();
-            $("#oldBox").animate({opacity: "0", marginLeft: "-100%"}, 200, function(){
+            $("#oldBox").animate({opacity: "0", marginLeft: "-100%"}, 200, "easeInOutCirc", function(){
                 $(this).remove();
             });
-            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0", marginLeft: "100%"}).animate({opacity: "1", marginLeft: "0%"}, 200);
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "100%"}).show().animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
         } else {
-            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").show().css({opacity: "0"}).animate({opacity: "1"}, 200);
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0"}).show().animate({opacity: "1"}, 200, "easeInOutCirc");
         }
     });
 });

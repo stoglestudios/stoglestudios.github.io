@@ -42,32 +42,7 @@ $lorem: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, 
     padding: 0; 
     //transition:all 0.3s ease; 
 }
-div {
-    position: relative;
-    display: inline-block;
-}
-img {
-    display: inline-block;
-    border: 0;
-    outline: none; 
-}
-a {
-    display: inline-block;
-    transition:all 0.3s ease;
-    div {
-        transition:all 0.3s ease;
-    }
-} 
-a img {
-    border: 0; 
-    transition:all 0.3s ease; 
-}
-a, a:hover, a:visited, a:active {
-    text-decoration: none; 
-}
-p {
-    font-family: $fonts-sub;
-}
+
 body {
     position: absolute;
     width: 100%;
@@ -78,6 +53,35 @@ body {
     background: url("../images/bg-grad.png") repeat-x $orange;
     text-align: center;
     color: $orange;
+}
+div {
+    display: inline-block;
+}
+img {
+    display: inline-block;
+    border: 0;
+    outline: none;
+    &:hover {
+        border: none;
+    }
+}
+a {
+    display: inline-block;
+    transition:all 0.3s ease;
+    div {
+        transition:all 0.3s ease;
+    }
+    img {
+        border: 0; 
+        transition:all 0.3s ease; 
+    }
+} 
+a, a:hover, a:visited, a:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+p {
+    font-family: $fonts-sub;
 }
 /************************************************************
     INTRO ANIMATION
@@ -182,7 +186,7 @@ body {
         display: inline-block;
         width: 100%;
         max-width: $col-width;
-        padding: $gutter 0 $bleed;
+        padding: $gutter 0 $gutter*2;
         text-align: center;
         background-image: url("../images/666.png");
         background-repeat: no-repeat;
@@ -267,11 +271,8 @@ nav ul li {
             border-right: solid 1px $orange;
         }
     }
-    content div {
+    content>div {
         text-align: center;
-        h1 {
-            display: block;
-        }
         p {
             text-align: left;
         }
@@ -281,10 +282,10 @@ nav ul li {
     CHARACTER & WORLD CONTENT 
  ************************************************************/
 
-content div, .characters, .definitions {
+.introduction, .characters, .definitions, .other-card {
     display: inline-block;
     width: 94%;
-    margin: $gutter 0 0;
+    margin: 0 0 $gutter;
     border-radius: $gutter;
     background-image: linear-gradient(beige, burlywood);
     background-color: beige;
@@ -330,6 +331,20 @@ content div, .characters, .definitions {
         text-shadow: 0 0 10px black;
     }
 }
+.definitions, .characters {
+    margin: 0 auto $gutter;
+    top: 10%;
+    width: 94%;
+    max-width: $col-width;
+    background-color: beige;
+    background-image: linear-gradient(beige, burlywood);
+    box-shadow: 0 5px 20px black;
+    overflow: auto;
+}
+.standard-img, .world-img {
+    margin: 0;
+    float: left;
+}
 .world-img {
     background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
     background-size: 400%;
@@ -337,9 +352,23 @@ content div, .characters, .definitions {
     margin-right: $gutter;
     margin-bottom: $gutter;
     border-radius: 10%;
+    float: left;
 }
+
+@media screen and (max-width: 750px) {
+    .standard-img, .world-img {
+        float: none !important;
+        margin: $gutter auto 0 !important;
+        display: block;
+    }
+}
+
+@media screen and (max-height: 350px) {
+
+}
+
 .character {
-    color: #c64a19; //mediumvioletred;
+    color: #c64a19;
 }            
 .periods {
     color: gray;
@@ -362,16 +391,15 @@ content div, .characters, .definitions {
 .realms {
     color: saddlebrown;
 }
-.standard-img, .world-img {
-            margin: 0;
-            float: none;
-        }
+
 .backbutton {
     float: right;
     font-style: normal;
     font-size: 1.2em;
     color: darkred;
     display: none;
+    margin-top: -20px;
+    margin-right: -10px;
     &:hover {
         color: $orange;
         text-decoration: none;
@@ -380,7 +408,7 @@ content div, .characters, .definitions {
         }
     }
     &:after {
-        content: " Map";
+        content: " Back";
         border-radius: 50%;
     }
     div {
@@ -403,43 +431,49 @@ content div, .characters, .definitions {
     PREMISE PAGE
  ************************************************************/
 
-#premise div {
+#premise {
     padding: 0;
-    p {
-        margin: $gutter auto 0;
-        width: 50%;
-        padding: 0 3% $gutter;
-        &:nth-child(even) {
+    .introduction {
+        padding: 0 0 $gutter !important;
+        img {
+            margin: 0 0 -15%;
+            width: 100%;
+        }
+        h1 {
+            padding: 0 3%;
+            display: block;
+            margin: 0 0 $gutter;
+        }
+        .left {
             float: left;
-            clear: both;
+            width: 50%;
+            padding-left: 3%;
+            padding-right: 1.5%
         }
-        &:nth-child(odd) {
+        .right {
             float: right;
+            width: 50%;
+            padding-left: 1.5%;
+            padding-right: 3%
         }
-    }
-    div {
-        margin: 0;
-        width: 100%;
-        padding: 40% 0 0;
-        background: url("../images/hecateSketch.png") no-repeat top center;
-        background-size: 100%;
-    }
-    h1 {
-        padding: 0 3%;
-        display: block;
-        margin: auto;
+        .left, .right {
+            p {
+                text-align: left;
+                width: 100%;
+                padding-bottom: $gutter;
+                margin: 0;
+            }
+        }
     }
 }
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
-    #premise div p {
-        width: 100%;
-        &:nth-child(even) {
+    #premise {
+        .left, .right {
+            width: 100%;
+            padding-left: 1.5%;
+            padding-right: 3%;
             float: none;
-            padding-bottom: 0;
         }
-        &:nth-child(odd) {
-            float: none;
-        } 
     }
 }
 /************************************************************
@@ -453,159 +487,141 @@ content div, .characters, .definitions {
     COSMOLOGY PAGE
  ************************************************************/
 
-    #cosmology {
-        div {
-            //Card Styles
-            a {
-                font-style: italic;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .viewdef {
-            position: fixed;
-            margin: 0 auto;
-            top: 10%;
-            width: 94%;
-            max-width: $col-width;
-            background-color: red;
-            box-shadow: 0 5px 20px black;
-            max-height: 80%;
-            overflow:auto;
-        }
-    }
-        #cosmological-map {
+#cosmological-map {
+    display: none;
+    border-radius: $gutter;
+    width: 94%;
+    position: relative;
+    background: url("../images/HereticsCosMap_BG.jpg") no-repeat center;
+    background-size: 100% 100%;
+    height: 100vh;
+    min-height: 100%;
+    overflow: hidden;
+    .realm {
+        position: absolute;
+        background: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        a {
             position: relative;
-            background: url("../images/HereticsCosMap_BG.jpg") no-repeat center;
-            background-size: 100% 100%;
-            height: 100vh;
-            overflow: hidden;
-            .realm {
-                position: absolute;
-                background: none;
-                text-align: center;
-                padding: 0;
-                margin: 0;
-                a {
-                    position: relative;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin: -100px;
-                    /* For Dev: */
-                    background-color: rgba(100,0,200, .4);
-                    border-radius: 50%;
-                    img {
-                        position: relative;
-                        display: inline-block;
-                        vertical-align: middle;
-                        width: 100%;
-                        height: auto;
-                        border: none;
-                    }
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-            }
-            .other {
-                width: 26vw;
-                height: 26vw;
-                max-width: 400px;
-                max-height: 400px;
-                min-width: 120px;
-                min-height: 120px;
-                a {
-                    width: 90%;
-                    height: 90%;
-                    max-width: 25vh;
-                    max-height: 25vh;
-                    &:hover {
-                        width: 98%;
-                        height: 98%;
-                        max-width: 30vh;
-                        max-height: 30vh;
-                    }
-                }
-            }
-            .our {
-                width: 30vw;
-                height: 30vw;
-                max-width: 500px;
-                max-height: 500px;
-                min-width: 150px;
-                min-height: 150px;
-                a {
-                    width: 90%;
-                    height: 90%;
-                    max-width: 25vh;
-                    max-height: 25vh;
-                    &:hover {
-                        width: 98%;
-                        height: 98%;
-                        max-width: 33vh;
-                        max-height: 33vh;
-                    }
-                }
-            }
-            .helper {
+            display: inline-block;
+            vertical-align: middle;
+            margin: -100px;
+            /* For Dev: */
+            //background-color: rgba(100,0,200, .4);
+            border-radius: 50%;
+            img {
                 position: relative;
                 display: inline-block;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 0px;
-                background-color: blue;
                 vertical-align: middle;
-                line-height: 100%;
-            }   
-            #ouranos {
-                top: -8vh;
-                left: 26%;
+                width: 100%;
+                height: auto;
+                border: none;
             }
-            #hyperion {
-                top: 20vh;
-                left: 4%;
-            }
-            #alfheim {
-                top: 12vh;
-                left: 40%;
-            }
-            #niflheim {
-                top: 16vh;
-                left: 68%;
-            }
-            #earth {
-                top: 32vh;
-                left: 30%;
-            }
-            #oceanus {
-                top: 50vh;
-                left: 8%;
-            }
-            #khthon {
-                top: 54vh;
-                left: 44%;
-            }
-            #vulcan {
-                top: 48vh;
-                left: 70%;
-            }
-            #underworld {
-                top: 75vh;
-                left: 33%;
+            &:hover {
+                cursor: pointer;
             }
         }
+    }
+    .other {
+        width: 26vw;
+        height: 26vw;
+        max-width: 400px;
+        max-height: 400px;
+        min-width: 120px;
+        min-height: 120px;
+        a {
+            width: 90%;
+            height: 90%;
+            max-width: 25vh;
+            max-height: 25vh;
+            &:hover {
+                width: 98%;
+                height: 98%;
+                max-width: 30vh;
+                max-height: 30vh;
+            }
+        }
+    }
+    .our {
+        width: 30vw;
+        height: 30vw;
+        max-width: 500px;
+        max-height: 500px;
+        min-width: 150px;
+        min-height: 150px;
+        a {
+            width: 90%;
+            height: 90%;
+            max-width: 25vh;
+            max-height: 25vh;
+            &:hover {
+                width: 98%;
+                height: 98%;
+                max-width: 33vh;
+                max-height: 33vh;
+            }
+        }
+    }
+    .helper {
+        position: relative;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0px;
+        background-color: blue;
+        vertical-align: middle;
+        line-height: 100%;
+    }   
+    #ouranos {
+        top: -4vh;
+        left: 26%;
+    }
+    #hyperion {
+        top: 20vh;
+        left: 4%;
+    }
+    #alfheim {
+        top: 12vh;
+        left: 40%;
+    }
+    #niflheim {
+        top: 16vh;
+        left: 68%;
+    }
+    #earth {
+        top: 32vh;
+        left: 30%;
+    }
+    #oceanus {
+        top: 50vh;
+        left: 8%;
+    }
+    #khthon {
+        top: 54vh;
+        left: 44%;
+    }
+    #vulcan {
+        top: 48vh;
+        left: 70%;
+    }
+    #underworld {
+        top: 75vh;
+        left: 33%;
+    }
+}
 
 //--------------------------------------
 // RESPONSIVE CSS
 //--------------------------------------
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     #cosmological-map {
         .realm {
             a {
-                background-color: rgba(0,200,200, .3);
+                //background-color: rgba(0,200,200, .3);
             }
         }
         #ouranos {
@@ -637,22 +653,8 @@ content div, .characters, .definitions {
         }
     }
 }
-@media screen and (max-height: 450px) {
-    #cosmology div .world-img {
-        height: 100px;
-    }
-    content div .standard-img {
-        height: 100px;
-    }
-}
-
 @media screen and (max-height: 350px) {
-    #cosmology div {
-        .world-img {
-            float: left;
-            margin-right: $bleed;
-            margin-bottom: $bleed;
-        }
+    #cosmological-map {
         h1 {
             float: right;
         }
@@ -680,6 +682,12 @@ content div, .characters, .definitions {
     background-color: rgba(0,0,0,.8);
     position: fixed;
     display: none;
+    margin: 0;
+    .introduction, .characters, .definitions, .other-card {
+        margin: 0;
+        // Needs to be on something that sits above the text
+        box-shadow: inset 0 -30px 40px -20px burlywood; //burlywood
+    }
     span {
         position: relative;
         display: inline-block;
@@ -687,13 +695,12 @@ content div, .characters, .definitions {
         left: 0;
         height: 100%;
         min-height: 100vh;
-        max-height: 100%;
+        max-height: 100vh;
         width: 1px;
         vertical-align: middle;
         line-height: 100%;
     }
     #modalBox, .characters, .definitions {
-        position: relative;
         display: inline-block;
         vertical-align: middle;
         width: 90%;
