@@ -14,24 +14,35 @@ var $openers = [
     [$('#world'), "world", "Where Will be the Final Battle?", "hecate"],
     [$('#all'), "all", "And Who Will Control it All?", "caster"]
 ];
-var $intro = $("<div></div>");
-var $skip = $("<span class='skip'>Skip</span>");
+var $intro = $('#intro');
+var $skip = $(".skip");
 var $tabs = $("nav li a");
 
 // Functions
 $skip.click( function() {
-    $('#intro').hide();
-    $('#page').show();
+    $intro.stop().animate({
+        opacity: "0"
+    }, 200, function (){
+        $intro.remove();
+    });
+    $('#page').css({opacity: "0"}).show().delay(200).animate({opacity: "1"}, 200);
+    $(this).hide();
     console.log("Skip Button Pressed");
 });
 // Function to animate opening sequence - REWRITE
 (function( $ ){
     $.fn.introAn = function(waitForIt, startSite) {
+        $this = $(this);
+        $thisH = $this.children("h1");
+        $thisImg = $this.children("img");
+        var marH = parseInt($thisImg.css("margin-top"));
+        marH = Math.round( 100*marH/$(window).height() );
+        console.log(marH);
         var durationOS = 2000;
         var fadeTime = 2000;
         var totaltime = durationOS + fadeTime*2;
-        $(this).show();
-        $(this).delay(waitForIt).animate({ 
+        $this.show();
+        $this.delay(waitForIt).animate({ 
             opacity: 1,
         }, fadeTime).delay(durationOS).animate({
             opacity: 0,
@@ -45,13 +56,14 @@ $skip.click( function() {
                 }
             }
         );
-        if ( $(this).children('h1').css("text-align") !== "center" ) {
-            $(this).children('h1').delay(waitForIt).animate({ 
+        if ( $thisH.css("text-align") !== "center" ) {
+            $thisH.delay(waitForIt).animate({ 
                 paddingLeft: '30%',
             }, totaltime);
-            $(this).children('img').delay(waitForIt).animate({
-                width: "80%",
-                paddingLeft: "10%"
+            
+            $thisImg.delay(waitForIt).animate({
+                width: "70%",
+                marginTop: "0vh"
             }, totaltime);
         }
         return this;
@@ -61,10 +73,11 @@ $skip.click( function() {
 // Document ready
 $(document).ready(function(){
     //Build assets
-    $('#intro').css("display", "inline-block").append($skip);
-    $worlds = $("#cosmology a");
-    
-    $(".definitions").addClass("viewdef").hide();
+    $('#intro').show();
+    $skip.show();
+//    $worlds = $("#cosmology a");
+    $("#cosmological-map").show();
+    $(".definitions").hide();
     
     //Hide/show appropriate sections
     $('#page, #characters, #cosmology, #author, #contact').hide();
@@ -94,14 +107,52 @@ $(document).ready(function(){
             $(pageClicked).show();
         }
     });
-    $worlds.on("click", function(evt) {
-        $("#cosmological-map").css("opacity", ".5");
-        var idme = $(this).attr("href");
-        $(idme).show();
-        $(idme).siblings(".definitions").hide();
+    $("#modal").on("click", function(event){
+        event.preventDefault();
+        var getAttrID = event.target.getAttribute("id");
+        var getAttrHREF = event.target.getAttribute("href");
+        var getAttrClass = event.target.getAttribute("class");
+        var getAttrTag = event.target.tagName.toLowerCase();
+        if (getAttrID == "modal" || getAttrClass == "backbutton") {
+            $("#modal").animate({opacity: "0"}, 200, function(){
+                $this = $(this);
+                $this.hide();
+                $this.children("div").remove();
+            });
+        } else {
+            console.log("Is: " + getAttrTag + ", href: " + getAttrHREF);
+            if (getAttrTag == "a" && getAttrClass != "backbutton") {
+                var divToLoad = getAttrHREF;
+                if ($("#modalBox") && $("#modalBox").length>0) {
+                    $("#modalBox").attr("id", "oldBox");
+                    $("#oldBox").show().animate({opacity: "0", marginLeft: "-100%"}, 200, "easeInOutCirc", function(){
+                        $(this).remove();
+                    });
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "100%"}).show().delay(100).animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
+                } else {
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0"}).show().animate({opacity: "1"}, 200, "easeInOutCirc");
+                }
+            }
+        }
     });
-    $(".backbutton").on("click", function(evt) {
-        $("#cosmological-map").css("opacity", "1");
-        //$(".definitions").hide().removeClass("viewdef");
+    //REPLACING WITH ABOVE FUNCTION
+    $(".inpagelink").on("click", function(event){
+        event.preventDefault();
+        $this = $(this);
+        var divToLoad = $this.attr("href");
+        var parentID = $this.parents("div").attr("id");
+        console.log(".inpagelink button pressed - Link: " + divToLoad + " - Parent: " + parentID );
+        //
+        $("#modal").show().animate({opacity: "1"}, 200);
+        
+        if ($("#modalBox") && $("#modalBox").length>0) {
+            $("#modalBox").attr("id", "oldBox").show();
+            $("#oldBox").animate({opacity: "0", marginLeft: "-100%"}, 200, "easeInOutCirc", function(){
+                $(this).remove();
+            });
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "100%"}).show().animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
+        } else {
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0"}).show().animate({opacity: "1"}, 200, "easeInOutCirc");
+        }
     });
 });
