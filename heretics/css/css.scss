@@ -391,7 +391,6 @@ nav ul li {
 .realms {
     color: saddlebrown;
 }
-
 .backbutton {
     float: right;
     font-style: normal;
@@ -468,11 +467,13 @@ nav ul li {
 }
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     #premise {
-        .left, .right {
-            width: 100%;
-            padding-left: 1.5%;
-            padding-right: 3%;
-            float: none;
+        .introduction {
+            .left, .right {
+                width: 100%;
+                padding-left: 3%;
+                padding-right: 3%;
+                float: none;
+            }
         }
     }
 }
@@ -684,9 +685,14 @@ nav ul li {
     display: none;
     margin: 0;
     .introduction, .characters, .definitions, .other-card {
-        margin: 0;
-        // Needs to be on something that sits above the text
-        box-shadow: inset 0 -30px 40px -20px burlywood; //burlywood
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        width: 90%;
+        max-width: 800px;
+        max-height: 90%;
+        margin: auto;
+        overflow: auto;
     }
     span {
         position: relative;
@@ -699,15 +705,6 @@ nav ul li {
         width: 1px;
         vertical-align: middle;
         line-height: 100%;
-    }
-    #modalBox, .characters, .definitions {
-        display: inline-block;
-        vertical-align: middle;
-        width: 90%;
-        max-width: 800px;
-        max-height: 90%;
-        margin: auto;
-        overflow: auto;
     }
     .backbutton {
         display: inline-block;
