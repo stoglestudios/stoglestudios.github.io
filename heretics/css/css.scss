@@ -68,8 +68,12 @@ img {
 a {
     display: inline-block;
     transition:all 0.3s ease;
+    &:before {
+        transition:all 0.3s ease;
+    }
     div {
         transition:all 0.3s ease;
+        
     }
     img {
         border: 0; 
@@ -391,39 +395,44 @@ nav ul li {
 .realms {
     color: saddlebrown;
 }
-.backbutton {
-    float: right;
+.closebutton, .prevbutton {
     font-style: normal;
     font-size: 1.2em;
     color: darkred;
     display: none;
     margin-top: -20px;
     margin-right: -10px;
+    &:before {
+        display: inline-block;
+        padding: 0;
+        margin: 0 5px 0 0;
+        height: 1em;
+        width: 1em;
+        line-height: .9em;
+        background: darkred;
+        color: antiquewhite;
+        border-radius: .5em;
+        font-size: 1.2em;
+        text-align: center;
+    }
     &:hover {
         color: $orange;
         text-decoration: none;
-        div {
+        &:before {
             background-color: $orange;
         }
     }
-    &:after {
-        content: " Back";
-        border-radius: 50%;
+}
+.closebutton {
+    float: right;
+    &:before {
+        content: " x";
     }
-    div {
-        padding: 0;
-        margin: 0;
-        height: 1em;
-        width: 1em;
-        line-height: 1em;
-        background: darkred;
-        color: antiquewhite;
-        border-radius: 50%;
-        &:before {
-            font-size: 1.2em;
-            text-align: center;
-            content: " X";
-        }
+}
+.prevbutton {
+    float: left;
+    &:before {
+        content: " <";
     }
 }
 /************************************************************
@@ -527,7 +536,7 @@ nav ul li {
     }
     .other {
         width: 26vw;
-        height: 26vw;
+        height: 26vh;
         max-width: 400px;
         max-height: 400px;
         min-width: 120px;
@@ -535,19 +544,19 @@ nav ul li {
         a {
             width: 90%;
             height: 90%;
-            max-width: 25vh;
-            max-height: 25vh;
+            max-width: 22vh;
+            max-height: 22vh;
             &:hover {
                 width: 98%;
                 height: 98%;
-                max-width: 30vh;
-                max-height: 30vh;
+                max-width: 26vh;
+                max-height: 26vh;
             }
         }
     }
     .our {
         width: 30vw;
-        height: 30vw;
+        height: 30vh;
         max-width: 500px;
         max-height: 500px;
         min-width: 150px;
@@ -560,8 +569,8 @@ nav ul li {
             &:hover {
                 width: 98%;
                 height: 98%;
-                max-width: 33vh;
-                max-height: 33vh;
+                max-width: 28vh;
+                max-height: 28vh;
             }
         }
     }
@@ -577,39 +586,39 @@ nav ul li {
         line-height: 100%;
     }   
     #ouranos {
-        top: -4vh;
+        top: -1vh;
         left: 26%;
     }
     #hyperion {
-        top: 20vh;
+        top: 23vh;
         left: 4%;
     }
     #alfheim {
-        top: 12vh;
+        top: 15vh;
         left: 40%;
     }
     #niflheim {
-        top: 16vh;
+        top: 19vh;
         left: 68%;
     }
     #earth {
-        top: 32vh;
-        left: 30%;
+        top: 35vh;
+        left: 28%;
     }
     #oceanus {
-        top: 50vh;
+        top: 53vh;
         left: 8%;
     }
     #khthon {
-        top: 54vh;
+        top: 57vh;
         left: 44%;
     }
     #vulcan {
-        top: 48vh;
+        top: 51vh;
         left: 70%;
     }
     #underworld {
-        top: 75vh;
+        top: 78vh;
         left: 33%;
     }
 }
@@ -618,7 +627,7 @@ nav ul li {
 // RESPONSIVE CSS
 //--------------------------------------
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     #cosmological-map {
         .realm {
             a {
@@ -706,8 +715,12 @@ nav ul li {
         vertical-align: middle;
         line-height: 100%;
     }
-    .backbutton {
+    .closebutton {
         display: inline-block;
+    }
+    img {
+        clear: both;
+        margin-top: $gutter;
     }
 }
 
