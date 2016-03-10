@@ -65,10 +65,23 @@ p {
   font-family: "Antic", ariel, sans-serif;
 }
 
+/* line 90, css.scss */
+.helper {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
+  background-color: blue;
+  vertical-align: middle;
+  line-height: 100%;
+}
+
 /************************************************************
     INTRO ANIMATION
  ************************************************************/
-/* line 94, css.scss */
+/* line 105, css.scss */
 #intro {
   position: absolute;
   overflow: hidden;
@@ -86,7 +99,7 @@ p {
   box-shadow: 0 0 10px black;
   text-align: center;
 }
-/* line 110, css.scss */
+/* line 121, css.scss */
 #intro div {
   position: absolute;
   left: 0;
@@ -96,7 +109,7 @@ p {
   height: 100%;
   opacity: 0;
 }
-/* line 118, css.scss */
+/* line 129, css.scss */
 #intro div h1 {
   text-align: left;
   color: #ff9000;
@@ -105,7 +118,7 @@ p {
   margin: 5vh 0 0;
   z-index: 10;
 }
-/* line 126, css.scss */
+/* line 137, css.scss */
 #intro div img {
   z-index: 0;
   height: auto;
@@ -115,7 +128,7 @@ p {
   margin-top: -20vh;
 }
 
-/* line 136, css.scss */
+/* line 147, css.scss */
 .skip {
   display: none;
   position: fixed;
@@ -130,36 +143,36 @@ p {
   font-variant: small-caps;
   color: black;
 }
-/* line 149, css.scss */
+/* line 160, css.scss */
 .skip:hover {
   background-color: black;
   color: #ff9000;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 156, css.scss */
+  /* line 167, css.scss */
   #intro div h1 {
     margin: 3vh 0 0;
     font-size: 1em;
     padding: 0;
     text-align: center;
   }
-  /* line 162, css.scss */
+  /* line 173, css.scss */
   #intro div img {
     width: 120%;
     margin-left: -10%;
     padding-top: 20vh;
   }
 
-  /* line 168, css.scss */
+  /* line 179, css.scss */
   .skip {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 /************************************************************
     PAGE / HEADER / NAV
  ************************************************************/
-/* line 177, css.scss */
+/* line 188, css.scss */
 #page {
   text-align: center;
   width: 94%;
@@ -169,12 +182,12 @@ p {
   background-color: black;
   box-shadow: 0 0 10px black;
 }
-/* line 185, css.scss */
+/* line 196, css.scss */
 #page .filler:after {
   content: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, quo hinc inani affert no. Nullam denique incorrupte sed ea. Vel at eros noluisse laboramus, no paulo choro soleat qui, appetere dignissim gubergren at sit. Mea id debet indoctum. Ne ferri simul pro. Paulo veritus accumsan ne his, te cibo dissentias scripserit sea, diam omnes sit ei.";
 }
 
-/* line 189, css.scss */
+/* line 200, css.scss */
 header {
   display: inline-block;
   width: 100%;
@@ -186,19 +199,19 @@ header {
   background-position: center 5px;
   background-size: 282px 250px;
 }
-/* line 199, css.scss */
+/* line 210, css.scss */
 header img {
   width: 80%;
   max-width: 437px;
 }
-/* line 203, css.scss */
+/* line 214, css.scss */
 header h2 {
   font-size: 1.7em;
   padding: 25px 0;
   text-shadow: 0 0 10px black;
 }
 
-/* line 210, css.scss */
+/* line 221, css.scss */
 nav ul li {
   display: inline-block;
   list-style: none;
@@ -208,90 +221,90 @@ nav ul li {
   border-left: solid 1px #ff9000;
   margin: 10px 0 0;
 }
-/* line 218, css.scss */
+/* line 229, css.scss */
 nav ul li a {
   display: inline-block;
   width: 100%;
   height: 100%;
   color: #ff9000;
 }
-/* line 223, css.scss */
+/* line 234, css.scss */
 nav ul li a:hover {
   text-shadow: 0 0 20px #ff9000;
   color: beige;
 }
-/* line 228, css.scss */
+/* line 239, css.scss */
 nav ul li:first-child {
   border-left: none;
 }
 
-/* line 232, css.scss */
+/* line 243, css.scss */
 .selected {
   background: linear-gradient(to right, #ff9000, #8b0000);
   background-color: #ff9000;
 }
-/* line 235, css.scss */
+/* line 246, css.scss */
 .selected a {
   text-shadow: 0 0 20px #ff9000;
   color: beige;
 }
-/* line 238, css.scss */
+/* line 249, css.scss */
 .selected a:hover {
   cursor: default;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 244, css.scss */
+  /* line 255, css.scss */
   header {
     padding-top: 0;
     background-size: 191.76px 170px;
   }
-  /* line 247, css.scss */
+  /* line 258, css.scss */
   header h2 {
     font-size: 1em;
     padding: 5px 0;
   }
 
-  /* line 252, css.scss */
+  /* line 263, css.scss */
   nav ul li {
     width: 50%;
   }
-  /* line 254, css.scss */
+  /* line 265, css.scss */
   nav ul li:nth-child(odd) {
     border: none;
   }
-  /* line 257, css.scss */
+  /* line 268, css.scss */
   nav ul li:last-child {
     border-left: solid 1px #ff9000;
     border-right: solid 1px #ff9000;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 264, css.scss */
+  /* line 275, css.scss */
   header {
     padding-top: 10px;
     background-size: 242.52px 215px;
   }
-  /* line 267, css.scss */
+  /* line 278, css.scss */
   header h2 {
     font-size: 1.4em;
     padding: 10px 0;
   }
 
-  /* line 272, css.scss */
+  /* line 283, css.scss */
   nav ul a li {
     width: 33.33333%;
   }
-  /* line 274, css.scss */
+  /* line 285, css.scss */
   nav ul a li:last-child {
     border-right: solid 1px #ff9000;
   }
 
-  /* line 278, css.scss */
+  /* line 289, css.scss */
   content > div {
     text-align: center;
   }
-  /* line 280, css.scss */
+  /* line 291, css.scss */
   content > div p {
     text-align: left;
   }
@@ -299,7 +312,7 @@ nav ul li:first-child {
 /************************************************************
     CHARACTER & WORLD CONTENT 
  ************************************************************/
-/* line 289, css.scss */
+/* line 300, css.scss */
 .introduction, .characters, .definitions, .other-card {
   display: inline-block;
   width: 94%;
@@ -310,11 +323,11 @@ nav ul li:first-child {
   padding: 25px;
   text-align: left;
 }
-/* line 298, css.scss */
+/* line 309, css.scss */
 .introduction:last-child, .characters:last-child, .definitions:last-child, .other-card:last-child {
   margin-bottom: 25px;
 }
-/* line 301, css.scss */
+/* line 312, css.scss */
 .introduction .standard-img, .characters .standard-img, .definitions .standard-img, .other-card .standard-img {
   float: left;
   border: solid 2px darkred;
@@ -323,21 +336,21 @@ nav ul li:first-child {
   margin-right: 25px;
   margin-bottom: 10px;
 }
-/* line 309, css.scss */
+/* line 320, css.scss */
 .introduction h1, .characters h1, .definitions h1, .other-card h1 {
   display: inline-block;
   padding-top: 25px;
   color: darkred;
   font-size: 1.5em;
 }
-/* line 315, css.scss */
+/* line 326, css.scss */
 .introduction p, .characters p, .definitions p, .other-card p {
   color: #600;
   font-size: 1.4em;
   margin-top: 25px;
   line-height: 1.4em;
 }
-/* line 321, css.scss */
+/* line 332, css.scss */
 .introduction p:first-letter, .characters p:first-letter, .definitions p:first-letter, .other-card p:first-letter {
   font-family: "Eagle Lake", cursive;
   text-transform: capitalize;
@@ -355,7 +368,7 @@ nav ul li:first-child {
   text-shadow: 0 0 10px black;
 }
 
-/* line 338, css.scss */
+/* line 349, css.scss */
 .definitions, .characters {
   margin: 0 auto 25px;
   top: 10%;
@@ -367,13 +380,13 @@ nav ul li:first-child {
   overflow: auto;
 }
 
-/* line 348, css.scss */
+/* line 359, css.scss */
 .standard-img, .world-img {
   margin: 0;
   float: left;
 }
 
-/* line 352, css.scss */
+/* line 363, css.scss */
 .world-img {
   background: url("../images/HereticsCosMap_BG.jpg") no-repeat;
   background-size: 400%;
@@ -385,54 +398,54 @@ nav ul li:first-child {
 }
 
 @media screen and (max-width: 750px) {
-  /* line 363, css.scss */
+  /* line 374, css.scss */
   .standard-img, .world-img {
     float: none !important;
     margin: 25px auto 0 !important;
     display: block;
   }
 }
-/* line 374, css.scss */
+/* line 385, css.scss */
 .character {
   color: #c64a19;
 }
 
-/* line 377, css.scss */
+/* line 388, css.scss */
 .periods {
   color: gray;
 }
 
-/* line 380, css.scss */
+/* line 391, css.scss */
 .titans {
   color: darkblue;
 }
 
-/* line 383, css.scss */
+/* line 394, css.scss */
 .gods {
   color: darkmagenta;
 }
 
-/* line 386, css.scss */
+/* line 397, css.scss */
 .angels {
   color: darkgoldenrod;
 }
 
-/* line 389, css.scss */
+/* line 400, css.scss */
 .demons {
   color: darkred;
 }
 
-/* line 392, css.scss */
+/* line 403, css.scss */
 .elementals {
   color: darkolivegreen;
 }
 
-/* line 395, css.scss */
+/* line 406, css.scss */
 .realms {
   color: saddlebrown;
 }
 
-/* line 398, css.scss */
+/* line 409, css.scss */
 .closebutton, .prevbutton {
   font-style: normal;
   font-size: 1.2em;
@@ -441,7 +454,7 @@ nav ul li:first-child {
   margin-top: -20px;
   margin-right: -10px;
 }
-/* line 405, css.scss */
+/* line 416, css.scss */
 .closebutton:before, .prevbutton:before {
   display: inline-block;
   padding: 0;
@@ -455,30 +468,30 @@ nav ul li:first-child {
   font-size: 1.2em;
   text-align: center;
 }
-/* line 418, css.scss */
+/* line 429, css.scss */
 .closebutton:hover, .prevbutton:hover {
   color: #ff9000;
   text-decoration: none;
 }
-/* line 421, css.scss */
+/* line 432, css.scss */
 .closebutton:hover:before, .prevbutton:hover:before {
   background-color: #ff9000;
 }
 
-/* line 426, css.scss */
+/* line 437, css.scss */
 .closebutton {
   float: right;
 }
-/* line 428, css.scss */
+/* line 439, css.scss */
 .closebutton:before {
   content: " x";
 }
 
-/* line 432, css.scss */
+/* line 443, css.scss */
 .prevbutton {
   float: left;
 }
-/* line 434, css.scss */
+/* line 445, css.scss */
 .prevbutton:before {
   content: " <";
 }
@@ -486,40 +499,40 @@ nav ul li:first-child {
 /************************************************************
     PREMISE PAGE
  ************************************************************/
-/* line 442, css.scss */
+/* line 453, css.scss */
 #premise {
   padding: 0;
 }
-/* line 444, css.scss */
+/* line 455, css.scss */
 #premise .introduction {
   padding: 0 0 25px !important;
 }
-/* line 446, css.scss */
+/* line 457, css.scss */
 #premise .introduction img {
   margin: 0 0 -15%;
   width: 100%;
 }
-/* line 450, css.scss */
+/* line 461, css.scss */
 #premise .introduction h1 {
   padding: 0 3%;
   display: block;
   margin: 0 0 25px;
 }
-/* line 455, css.scss */
+/* line 466, css.scss */
 #premise .introduction .left {
   float: left;
   width: 50%;
   padding-left: 3%;
   padding-right: 1.5%;
 }
-/* line 461, css.scss */
+/* line 472, css.scss */
 #premise .introduction .right {
   float: right;
   width: 50%;
   padding-left: 1.5%;
   padding-right: 3%;
 }
-/* line 468, css.scss */
+/* line 479, css.scss */
 #premise .introduction .left p, #premise .introduction .right p {
   text-align: left;
   width: 100%;
@@ -528,7 +541,7 @@ nav ul li:first-child {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 480, css.scss */
+  /* line 491, css.scss */
   #premise .introduction .left, #premise .introduction .right {
     width: 100%;
     padding-left: 3%;
@@ -539,10 +552,96 @@ nav ul li:first-child {
 /************************************************************
     CHARACTER PAGE
  ************************************************************/
+/* line 504, css.scss */
+#character-app {
+  position: relative;
+  display: none;
+  height: 80%;
+  min-height: 85vh;
+  width: 94%;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  margin-bottom: 25px;
+}
+
+/* line 516, css.scss */
+.character-box {
+  position: absolute;
+  width: 33%;
+  height: 33%;
+}
+
+/* line 524, css.scss */
+.char {
+  position: relative;
+  background-color: black;
+  border-radius: 50%;
+  margin: -50px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+/* line 533, css.scss */
+.char img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: .3;
+}
+
+/* line 540, css.scss */
+#char-kingsley {
+  top: 3%;
+  left: 15%;
+}
+
+/* line 544, css.scss */
+#char-caster {
+  top: 35%;
+  left: 33%;
+}
+
+/* line 548, css.scss */
+#char-dan {
+  top: 3%;
+  left: 52%;
+}
+
+/* line 552, css.scss */
+#char-claire {
+  top: 42%;
+  left: 3%;
+}
+
+/* line 556, css.scss */
+#char-hecate {
+  top: 70%;
+  left: 33%;
+}
+
+/* line 560, css.scss */
+#char-stewart {
+  top: 42%;
+  left: 64%;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 567, css.scss */
+  .char {
+    background-color: none;
+  }
+  /* line 569, css.scss */
+  .char img {
+    opacity: 1;
+  }
+}
 /************************************************************
     COSMOLOGY PAGE
  ************************************************************/
-/* line 500, css.scss */
+/* line 578, css.scss */
 #cosmological-map {
   display: none;
   border-radius: 25px;
@@ -554,7 +653,7 @@ nav ul li:first-child {
   min-height: 100%;
   overflow: hidden;
 }
-/* line 510, css.scss */
+/* line 588, css.scss */
 #cosmological-map .realm {
   position: absolute;
   background: none;
@@ -562,7 +661,7 @@ nav ul li:first-child {
   padding: 0;
   margin: 0;
 }
-/* line 516, css.scss */
+/* line 594, css.scss */
 #cosmological-map .realm a {
   position: relative;
   display: inline-block;
@@ -571,7 +670,7 @@ nav ul li:first-child {
   /* For Dev: */
   border-radius: 50%;
 }
-/* line 524, css.scss */
+/* line 602, css.scss */
 #cosmological-map .realm a img {
   position: relative;
   display: inline-block;
@@ -580,11 +679,11 @@ nav ul li:first-child {
   height: auto;
   border: none;
 }
-/* line 532, css.scss */
+/* line 610, css.scss */
 #cosmological-map .realm a:hover {
   cursor: pointer;
 }
-/* line 537, css.scss */
+/* line 615, css.scss */
 #cosmological-map .other {
   width: 26vw;
   height: 26vh;
@@ -593,21 +692,21 @@ nav ul li:first-child {
   min-width: 120px;
   min-height: 120px;
 }
-/* line 544, css.scss */
+/* line 622, css.scss */
 #cosmological-map .other a {
   width: 90%;
   height: 90%;
   max-width: 22vh;
   max-height: 22vh;
 }
-/* line 549, css.scss */
+/* line 627, css.scss */
 #cosmological-map .other a:hover {
   width: 98%;
   height: 98%;
   max-width: 26vh;
   max-height: 26vh;
 }
-/* line 557, css.scss */
+/* line 635, css.scss */
 #cosmological-map .our {
   width: 30vw;
   height: 30vh;
@@ -616,127 +715,115 @@ nav ul li:first-child {
   min-width: 150px;
   min-height: 150px;
 }
-/* line 564, css.scss */
+/* line 642, css.scss */
 #cosmological-map .our a {
   width: 90%;
   height: 90%;
   max-width: 25vh;
   max-height: 25vh;
 }
-/* line 569, css.scss */
+/* line 647, css.scss */
 #cosmological-map .our a:hover {
   width: 98%;
   height: 98%;
   max-width: 28vh;
   max-height: 28vh;
 }
-/* line 577, css.scss */
-#cosmological-map .helper {
-  position: relative;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0px;
-  background-color: blue;
-  vertical-align: middle;
-  line-height: 100%;
-}
-/* line 588, css.scss */
+/* line 655, css.scss */
 #cosmological-map #ouranos {
   top: -1vh;
   left: 26%;
 }
-/* line 592, css.scss */
+/* line 659, css.scss */
 #cosmological-map #hyperion {
   top: 23vh;
   left: 4%;
 }
-/* line 596, css.scss */
+/* line 663, css.scss */
 #cosmological-map #alfheim {
   top: 15vh;
   left: 40%;
 }
-/* line 600, css.scss */
+/* line 667, css.scss */
 #cosmological-map #niflheim {
   top: 19vh;
   left: 68%;
 }
-/* line 604, css.scss */
+/* line 671, css.scss */
 #cosmological-map #earth {
   top: 35vh;
   left: 28%;
 }
-/* line 608, css.scss */
+/* line 675, css.scss */
 #cosmological-map #oceanus {
   top: 53vh;
   left: 8%;
 }
-/* line 612, css.scss */
+/* line 679, css.scss */
 #cosmological-map #khthon {
   top: 57vh;
   left: 44%;
 }
-/* line 616, css.scss */
+/* line 683, css.scss */
 #cosmological-map #vulcan {
   top: 51vh;
   left: 70%;
 }
-/* line 620, css.scss */
+/* line 687, css.scss */
 #cosmological-map #underworld {
   top: 78vh;
   left: 33%;
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 637, css.scss */
+  /* line 704, css.scss */
   #cosmological-map #ouranos {
     top: 0vh;
   }
-  /* line 640, css.scss */
+  /* line 707, css.scss */
   #cosmological-map #hyperion {
     top: 26vh;
   }
-  /* line 643, css.scss */
+  /* line 710, css.scss */
   #cosmological-map #alfheim {
     top: 20vh;
   }
-  /* line 646, css.scss */
+  /* line 713, css.scss */
   #cosmological-map #niflheim {
     top: 22vh;
   }
-  /* line 649, css.scss */
+  /* line 716, css.scss */
   #cosmological-map #earth {
     top: 40vh;
   }
-  /* line 652, css.scss */
+  /* line 719, css.scss */
   #cosmological-map #oceanus {
     top: 58vh;
   }
-  /* line 655, css.scss */
+  /* line 722, css.scss */
   #cosmological-map #khthon {
     top: 61vh;
   }
-  /* line 658, css.scss */
+  /* line 725, css.scss */
   #cosmological-map #vulcan {
     top: 54vh;
   }
-  /* line 661, css.scss */
+  /* line 728, css.scss */
   #cosmological-map #underworld {
     top: 80vh;
   }
 }
 @media screen and (max-height: 350px) {
-  /* line 668, css.scss */
+  /* line 735, css.scss */
   #cosmological-map h1 {
     float: right;
   }
-  /* line 671, css.scss */
+  /* line 738, css.scss */
   #cosmological-map h3 {
     clear: right;
     float: right;
   }
-  /* line 675, css.scss */
+  /* line 742, css.scss */
   #cosmological-map p {
     clear: both;
   }
@@ -744,7 +831,7 @@ nav ul li:first-child {
 /************************************************************
     DEFINITION SLIDES
  ************************************************************/
-/* line 685, css.scss */
+/* line 752, css.scss */
 #modal {
   position: absolute;
   top: 0;
@@ -756,8 +843,9 @@ nav ul li:first-child {
   position: fixed;
   display: none;
   margin: 0;
+  z-index: 1000;
 }
-/* line 696, css.scss */
+/* line 764, css.scss */
 #modal .introduction, #modal .characters, #modal .definitions, #modal .other-card {
   position: static;
   display: inline-block;
@@ -768,7 +856,7 @@ nav ul li:first-child {
   margin: auto;
   overflow: auto;
 }
-/* line 706, css.scss */
+/* line 774, css.scss */
 #modal span {
   position: relative;
   display: inline-block;
@@ -781,11 +869,11 @@ nav ul li:first-child {
   vertical-align: middle;
   line-height: 100%;
 }
-/* line 718, css.scss */
+/* line 786, css.scss */
 #modal .closebutton {
   display: inline-block;
 }
-/* line 721, css.scss */
+/* line 789, css.scss */
 #modal img {
   clear: both;
   margin-top: 25px;
@@ -794,15 +882,15 @@ nav ul li:first-child {
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 731, css.scss */
+/* line 799, css.scss */
 #author div {
   min-height: 500px;
 }
-/* line 733, css.scss */
+/* line 801, css.scss */
 #author div img {
   content: url("../images/brandon.jpg");
 }
-/* line 736, css.scss */
+/* line 804, css.scss */
 #author div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -810,21 +898,21 @@ nav ul li:first-child {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 745, css.scss */
+/* line 813, css.scss */
 #contact div {
   min-height: 500px;
 }
-/* line 747, css.scss */
+/* line 815, css.scss */
 #contact div img {
   content: url("../images/proposal.jpg");
 }
-/* line 750, css.scss */
+/* line 818, css.scss */
 #contact div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 754, css.scss */
+/* line 822, css.scss */
 #contact div a:hover {
   text-decoration: underline;
 }
@@ -832,29 +920,29 @@ nav ul li:first-child {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 764, css.scss */
+/* line 832, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 767, css.scss */
+/* line 835, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 770, css.scss */
+/* line 838, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 772, css.scss */
+/* line 840, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 776, css.scss */
+/* line 844, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 779, css.scss */
+/* line 847, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -865,56 +953,69 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 789, css.scss */
+/* line 857, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 791, css.scss */
+/* line 859, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 795, css.scss */
+/* line 863, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 797, css.scss */
+/* line 865, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 801, css.scss */
+/* line 869, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 803, css.scss */
+/* line 871, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 807, css.scss */
+/* line 875, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 809, css.scss */
+/* line 877, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 813, css.scss */
+/* line 881, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 815, css.scss */
+/* line 883, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 822, css.scss */
+  /* line 891, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 824, css.scss */
+  /* line 893, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
+  }
+  /* line 900, css.scss */
+  footer .name-copy {
+    float: none;
+    clear: both;
+    padding: 0;
+  }
+  /* line 904, css.scss */
+  footer .name-copy span {
+    display: inline-block;
+    clear: both;
+    margin: 25px 0 10px;
+    text-align: center;
   }
 }

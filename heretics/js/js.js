@@ -77,6 +77,9 @@ $(document).ready(function(){
     $('#intro').show();
     $skip.show();
 //    $worlds = $("#cosmology a");
+    $("#character-app").show();
+    $(".characters").hide();
+    
     $("#cosmological-map").show();
     $(".definitions").hide();
     
@@ -181,5 +184,57 @@ $(document).ready(function(){
             $("#modalBox .prevbutton").css("display", "none");
         }
         lastDivToLoad.push(divToLoad);
+    });
+    $("a.char").on("mouseover", function(){
+        $this = $(this);
+        $this.css({
+            zIndex: "100",
+            width: "150px",
+            height: "150px"
+        });
+        $this.children("img").css({
+            opacity: "1"
+        });
+        $("." + $this.data("close")).css({
+            zIndex: "99",
+            width: "140px",
+            height: "140px"
+        });
+        $("." + $this.data("close") + " img").css({
+            opacity: ".8"
+        });
+        $("." + $this.data("dist")).css({
+            width: "120px",
+            height: "120px"
+        });
+        $("." + $this.data("dist") + " img").css({
+            opacity: ".6"
+        });
+    })
+    $("a.char").on("mouseout", function(){
+        $this = $(this);
+        $this.css({
+            zIndex: "1",
+            width: "100px",
+            height: "100px"
+        });
+        $this.children("img").css({
+            opacity: ".3"
+        });
+        $("." + $this.data("close")).css({
+            zIndex: "1",
+            width: "100px",
+            height: "100px"
+        });
+        $("." + $this.data("close") + " img").css({
+            opacity: ".3"
+        });
+        $("." + $this.data("dist")).css({
+            width: "100px",
+            height: "100px"
+        });
+        $("." + $this.data("dist") + " img").css({
+            opacity: ".3"
+        });
     });
 });

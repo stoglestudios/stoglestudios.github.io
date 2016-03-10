@@ -87,6 +87,17 @@ a, a:hover, a:visited, a:active {
 p {
     font-family: $fonts-sub;
 }
+.helper {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    background-color: blue;
+    vertical-align: middle;
+    line-height: 100%;
+} 
 /************************************************************
     INTRO ANIMATION
  ************************************************************/
@@ -166,7 +177,7 @@ p {
         }
     }
     .skip {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -490,8 +501,75 @@ nav ul li {
     CHARACTER PAGE
  ************************************************************/
 
-@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
+#character-app {
+    position: relative;
+    display: none;
+    height: 80%;
+    min-height: 85vh;
+    width: 94%;
+    border-radius: $gutter;
+    padding: $bleed;
+    background-color: rgba(0,0,0,.5);
+    background-size: cover;
+    margin-bottom: $gutter;
+}
+.character-box {
+    position: absolute;
+    width: 33%;
+    height: 33%;
+    .helper {
+        
+    }
+}
+.char {
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    margin: -50px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        opacity: .3;
+    }
+}
+#char-kingsley {
+    top: 3%;
+    left: 15%;
+}
+#char-caster {
+    top: 35%;
+    left: 33%;
+}
+#char-dan {
+    top: 3%;
+    left: 52%;
+}
+#char-claire {
+    top: 42%;
+    left: 3%;
+}
+#char-hecate {
+    top: 70%;
+    left: 33%;
+}
+#char-stewart {
+    top: 42%;
+    left: 64%;
+}
 
+
+@media screen and (max-width: 700px) /*and (orientation: portrait)*/ {
+    .char {
+        background-color: none;
+        img {
+            opacity: 1;
+        }
+    }
 }
 /************************************************************
     COSMOLOGY PAGE
@@ -573,18 +651,7 @@ nav ul li {
                 max-height: 28vh;
             }
         }
-    }
-    .helper {
-        position: relative;
-        display: inline-block;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0px;
-        background-color: blue;
-        vertical-align: middle;
-        line-height: 100%;
-    }   
+    }  
     #ouranos {
         top: -1vh;
         left: 26%;
@@ -693,6 +760,7 @@ nav ul li {
     position: fixed;
     display: none;
     margin: 0;
+    z-index: 1000;
     .introduction, .characters, .definitions, .other-card {
         position: static;
         display: inline-block;
@@ -819,12 +887,26 @@ footer {
     }
 }
 @media screen and (max-width: 500px)  {
-    footer p {
-        padding-bottom: $bleed;
-        span {
-            text-align: left;
-            padding-left: $bleed;
-            display: block;
+    footer {
+        p {
+            padding-bottom: $bleed;
+            span {
+                text-align: left;
+                padding-left: $bleed;
+                display: block;
+            }
+
+        }
+        .name-copy {
+            float: none;
+            clear: both;
+            padding: 0;
+            span {
+                display: inline-block;
+                clear: both;
+                margin: $gutter 0 $bleed;
+                text-align: center;
+            }
         }
     }
 }
