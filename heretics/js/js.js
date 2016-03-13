@@ -84,7 +84,7 @@ $(document).ready(function(){
     $(".definitions").hide();
     
     //Hide/show appropriate sections
-    $('#page, #characters, #cosmology, #author, #contact').hide();
+    $('#page, #characters, #cosmology, #samples, #author, #contact').hide();
     
     //Initiate animated opener sections -> REWRITE
     $('#intro').animate({ 
@@ -190,7 +190,8 @@ $(document).ready(function(){
         $this.css({
             zIndex: "100",
             width: "150px",
-            height: "150px"
+            height: "150px",
+            boxShadow: "0 0 100px " + $this.data("color")
         });
         $this.children("img").css({
             opacity: "1"
@@ -198,17 +199,19 @@ $(document).ready(function(){
         $("." + $this.data("close")).css({
             zIndex: "99",
             width: "140px",
-            height: "140px"
+            height: "140px",
+            boxShadow: "0 0 70px " + $this.data("color")
         });
         $("." + $this.data("close") + " img").css({
-            opacity: ".8"
+            opacity: ".9"
         });
         $("." + $this.data("dist")).css({
             width: "120px",
-            height: "120px"
+            height: "120px",
+            boxShadow: "0 0 40px " + $this.data("color")
         });
         $("." + $this.data("dist") + " img").css({
-            opacity: ".6"
+            opacity: ".7"
         });
     })
     $("a.char").on("mouseout", function(){
@@ -216,25 +219,28 @@ $(document).ready(function(){
         $this.css({
             zIndex: "1",
             width: "100px",
-            height: "100px"
+            height: "100px",
+            boxShadow: "0 0 10px black"
         });
         $this.children("img").css({
-            opacity: ".3"
+            opacity: ".5"
         });
         $("." + $this.data("close")).css({
             zIndex: "1",
             width: "100px",
-            height: "100px"
+            height: "100px",
+            boxShadow: "0 0 10px black"
         });
         $("." + $this.data("close") + " img").css({
-            opacity: ".3"
+            opacity: ".5"
         });
         $("." + $this.data("dist")).css({
             width: "100px",
-            height: "100px"
+            height: "100px",
+            boxShadow: "0 0 10px black"
         });
         $("." + $this.data("dist") + " img").css({
-            opacity: ".3"
+            opacity: ".5"
         });
     });
 });
