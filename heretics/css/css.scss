@@ -259,33 +259,13 @@ nav ul li {
             }
         }
     }
-@media screen and (max-width: 600px)  {
-    header {
-        padding-top: 0;
-        background-size: $width-666*.68 $height-666*.68;
-        h2 {
-            font-size: 1em;
-            padding: $bleed/2 0;
-        }
-    }
-    nav ul li {
-        width: 50%;
-        &:nth-child(odd) {
-            border: none;
-        }
-//        &:last-child {
-//            border-left: solid 1px $orange;
-//            border-right: solid 1px $orange;
-//        }
-    }
-}
 @media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
     header {
         padding-top: $bleed;
         background-size: $width-666*.86 $height-666*.86;
         h2 {
-            font-size: 1.4em;
-            padding: $bleed 0;
+            font-size: 1.3em;
+            padding: 0 0 $bleed;
         }
     }
     nav ul a li {
@@ -300,6 +280,35 @@ nav ul li {
             text-align: left;
         }
     }
+}
+@media screen and (max-width: 600px)  {
+    header {
+        padding-top: 0;
+        background-size: $width-666*.68 $height-666*.68;
+        h2 {
+            font-size: 1em;
+            padding: 0 0 $bleed/2;
+        }
+    }
+    nav ul li {
+        width: 50%;
+        &:nth-child(odd) {
+            border: none;
+        }
+//        &:last-child {
+//            border-left: solid 1px $orange;
+//            border-right: solid 1px $orange;
+//        }
+    }
+}
+@media screen and (orientation: landscape)  {
+    header {
+        background-size: $width-666*.5 $height-666*.5;
+        img {
+            width: 50%;
+        }
+    }
+    
 }
 /************************************************************
     CHARACTER & WORLD CONTENT 
@@ -512,8 +521,8 @@ nav ul li {
 #character-app {
     position: relative;
     display: none;
-    height: 80%;
-    min-height: 85vh;
+    height: 90%;
+    min-height: 90vh;
     width: 94%;
     border-radius: $gutter;
     padding: $bleed;
@@ -524,19 +533,20 @@ nav ul li {
 }
 .character-box {
     position: absolute;
-    width: 33%;
-    height: 33%;
-    .helper {
-        
-    }
+    width: 50vw;
+    height: 50vw;
+    max-width: 50vh;
+    max-height: 50vh;
+//    margin: -50%;
 }
+
 .char {
     position: relative;
     background-color: #330000;
     border-radius: 50%;
     margin: -50px;
-    width: 100px;
-    height: 100px;
+    width: 50%;
+    height: 50%;
     overflow: hidden;
     vertical-align: middle;
     box-shadow: 0 0 10px black;
@@ -544,41 +554,66 @@ nav ul li {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        opacity: .5;
+//        opacity: .5;
     }
 }
 #char-kingsley {
-    top: 3%;
+    top: -10%;
     left: 15%;
 }
 #char-caster {
-    top: 35%;
-    left: 33%;
+    top: 20%;
+    left: 34%;
 }
 #char-dan {
-    top: 3%;
+    top: -10%;
     left: 52%;
 }
 #char-claire {
-    top: 42%;
+    top: 28%;
     left: 3%;
 }
 #char-hecate {
-    top: 70%;
+    top: 56%;
     left: 33%;
 }
 #char-stewart {
-    top: 42%;
+    top: 28%;
     left: 64%;
 }
+@media screen and (max-width: 1000px) /*and (orientation: portrait)*/ {
+    .character-box {
+        margin-left: -5%;
+    }
+}
 
-
-@media screen and (max-width: 700px) /*and (orientation: portrait)*/ {
+@media screen and (max-width: 600px) and (min-height: 700px) {
+    #char-kingsley {
+        top: 0%;
+    }
+    #char-caster {
+        top: 30%;
+    }
+    #char-dan {
+        top: 0%;
+    }
+    #char-claire {
+        top: 43%;
+    }
+    #char-hecate {
+        top: 66%;
+    }
+    #char-stewart {
+        top: 43%;
+    }
     .char {
         background-color: none;
         img {
             opacity: 1;
         }
+    }
+    .character-box {
+        margin-left: -10%;
     }
 }
 /************************************************************

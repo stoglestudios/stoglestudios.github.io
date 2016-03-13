@@ -189,58 +189,40 @@ $(document).ready(function(){
         $this = $(this);
         $this.css({
             zIndex: "100",
-            width: "150px",
-            height: "150px",
+            width: "75%",
+            height: "75%",
             boxShadow: "0 0 100px " + $this.data("color")
-        });
-        $this.children("img").css({
-            opacity: "1"
         });
         $("." + $this.data("close")).css({
             zIndex: "99",
-            width: "140px",
-            height: "140px",
+            width: "70%",
+            height: "70%",
             boxShadow: "0 0 70px " + $this.data("color")
         });
-        $("." + $this.data("close") + " img").css({
-            opacity: ".9"
-        });
         $("." + $this.data("dist")).css({
-            width: "120px",
-            height: "120px",
+            width: "60%",
+            height: "60%",
             boxShadow: "0 0 40px " + $this.data("color")
-        });
-        $("." + $this.data("dist") + " img").css({
-            opacity: ".7"
         });
     })
     $("a.char").on("mouseout", function(){
         $this = $(this);
         $this.css({
             zIndex: "1",
-            width: "100px",
-            height: "100px",
+            width: "50%",
+            height: "50%",
             boxShadow: "0 0 10px black"
-        });
-        $this.children("img").css({
-            opacity: ".5"
         });
         $("." + $this.data("close")).css({
             zIndex: "1",
-            width: "100px",
-            height: "100px",
+            width: "50%",
+            height: "50%",
             boxShadow: "0 0 10px black"
-        });
-        $("." + $this.data("close") + " img").css({
-            opacity: ".5"
         });
         $("." + $this.data("dist")).css({
-            width: "100px",
-            height: "100px",
+            width: "50%",
+            height: "50%",
             boxShadow: "0 0 10px black"
-        });
-        $("." + $this.data("dist") + " img").css({
-            opacity: ".5"
         });
     });
 });
