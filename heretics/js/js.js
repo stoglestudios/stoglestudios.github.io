@@ -117,7 +117,6 @@ $(document).ready(function(){
     var startSpeed = 200;
     var transSpeed = 200;
     var delaySpeed = 100;
-    anSpeed = 10000;
     $("#modal").on("click", function(event){
         event.preventDefault();
         var getAttrID = event.target.getAttribute("id");
@@ -216,37 +215,6 @@ $(document).ready(function(){
         }
         lastDivToLoad.push(divToLoad);
     });
-//    $("#modal .prevbutton").on("click", function(event){
-//        event.preventDefault();
-//        $this = $(this);
-//        var divToLoad = $this.attr("href");
-//        $("#modalBox").show().animate({
-//            opacity: "0", 
-//            marginLeft: "100%"
-//        }, transSpeed, "easeInOutCirc", function(){
-//            $(this).remove();
-//            $(lastDivToLoad[lastDivToLoad.length-2]).clone().appendTo("#modal").attr("id", "modalBox").css({
-//                opacity: "0", 
-//                marginRight: "100%"
-//            }).show().animate({
-//                opacity: "1", 
-//                marginRight: "0%"
-//            }, transSpeed, "easeInOutCirc", function(){
-//                console.log("an ended");
-//            });
-//            if (lastDivToLoad.length>2) {
-//                $("#modalBox .prevbutton").css("display", "inline-block");
-//            } else {
-//                $("#modalBox .prevbutton").css("display", "none");
-//            }
-//        });
-//        if (lastDivToLoad.length>0) {
-//            $("#modalBox .prevbutton").css("display", "inline-block");
-//        } else {
-//            $("#modalBox .prevbutton").css("display", "none");
-//        }
-//        lastDivToLoad.pop();
-//    });
     $("a.char").on("mouseover", function(){
         $this = $(this);
         $this.css({
