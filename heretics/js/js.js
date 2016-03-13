@@ -160,9 +160,7 @@ $(document).ready(function(){
             if (getAttrTag == "a" && getAttrClass != "closebutton"  && getAttrClass != "prevbutton") {
                 var divToLoad = getAttrHREF;
                 if ($("#modalBox") && $("#modalBox").length>0) {
-                    // ************************************  OLD CARD  ************************************
-//                    $("#modalBox").attr("id", "oldBox");
-//                    $("#modalBox").stop().remove();
+                    // ************************************  OLD CARD  ************************************q
                     $("#modalBox").show().animate({
                         opacity: "0", 
                         marginLeft: "-100%"
@@ -205,29 +203,12 @@ $(document).ready(function(){
         $("#modal").show().animate({
             opacity: "1"
         }, startSpeed);
-        if ($("#modalBox") && $("#modalBox").length>0) { // <- If model is empty
-//            $("#modalBox").attr("id", "oldBox").show();
-//            $("#oldBox").animate({
-//                opacity: "0", 
-//                marginLeft: "-100%"
-//            }, anSpeed, "easeInOutCirc", function(){
-//                $(this).remove();
-//            });
-//            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
-//                opacity: "0", 
-//                marginLeft: "100%"
-//            }).show().delay(anSpeed/2).animate({
-//                opacity: "1", 
-//                marginLeft: "0%"
-//            }, anSpeed, "easeInOutCirc");
-        } else {
-            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
-                opacity: "0"
-            }).show().animate({
-                opacity: "1"
-            }, startSpeed, "easeInOutCirc");
-            $("#modalBox .prevbutton").css("display", "none");
-        }
+        $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
+            opacity: "0"
+        }).show().animate({
+            opacity: "1"
+        }, startSpeed, "easeInOutCirc");
+        $("#modalBox .prevbutton").css("display", "none");
         if (lastDivToLoad.length>0) {
             $("#modalBox .prevbutton").css("display", "inline-block");
         } else {
@@ -235,6 +216,37 @@ $(document).ready(function(){
         }
         lastDivToLoad.push(divToLoad);
     });
+//    $("#modal .prevbutton").on("click", function(event){
+//        event.preventDefault();
+//        $this = $(this);
+//        var divToLoad = $this.attr("href");
+//        $("#modalBox").show().animate({
+//            opacity: "0", 
+//            marginLeft: "100%"
+//        }, transSpeed, "easeInOutCirc", function(){
+//            $(this).remove();
+//            $(lastDivToLoad[lastDivToLoad.length-2]).clone().appendTo("#modal").attr("id", "modalBox").css({
+//                opacity: "0", 
+//                marginRight: "100%"
+//            }).show().animate({
+//                opacity: "1", 
+//                marginRight: "0%"
+//            }, transSpeed, "easeInOutCirc", function(){
+//                console.log("an ended");
+//            });
+//            if (lastDivToLoad.length>2) {
+//                $("#modalBox .prevbutton").css("display", "inline-block");
+//            } else {
+//                $("#modalBox .prevbutton").css("display", "none");
+//            }
+//        });
+//        if (lastDivToLoad.length>0) {
+//            $("#modalBox .prevbutton").css("display", "inline-block");
+//        } else {
+//            $("#modalBox .prevbutton").css("display", "none");
+//        }
+//        lastDivToLoad.pop();
+//    });
     $("a.char").on("mouseover", function(){
         $this = $(this);
         $this.css({
