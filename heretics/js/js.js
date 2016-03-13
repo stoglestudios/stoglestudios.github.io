@@ -73,6 +73,9 @@ $skip.click( function() {
 
 // Document ready
 $(document).ready(function(){
+    var cardNav = "<a class='prevbutton'>Prev</a><a class='closebutton'>Close</a>";
+    var cardFade = "<div class='shadow'></div>"
+    $(".characters, .definitions").prepend(cardNav).append(cardFade);
     //Build assets
     $('#intro').show();
     $skip.show();
@@ -111,6 +114,10 @@ $(document).ready(function(){
             $(pageClicked).show();
         }
     });
+    var startSpeed = 200;
+    var transSpeed = 200;
+    var delaySpeed = 100;
+    anSpeed = 10000;
     $("#modal").on("click", function(event){
         event.preventDefault();
         var getAttrID = event.target.getAttribute("id");
@@ -118,64 +125,107 @@ $(document).ready(function(){
         var getAttrClass = event.target.getAttribute("class");
         var getAttrTag = event.target.tagName.toLowerCase();
         if (getAttrID == "modal" || getAttrClass == "closebutton") {
-            $("#modal").animate({opacity: "0"}, 200, function(){
+            $("#modal").animate({
+                opacity: "0"
+            }, startSpeed, function(){
                 $this = $(this);
                 $this.hide();
                 $this.children("div").remove();
             });
+// ***************************************  PREV BUTTON  **************************************
         } else if (getAttrClass == "prevbutton" && lastDivToLoad.length>0) {
-            $("#modalBox").attr("id", "oldBox").show();
-            $("#oldBox").animate({opacity: "0", marginLeft: "100%"}, 200, "easeInOutCirc", function(){
+            $("#modalBox").show().animate({
+                opacity: "0", 
+                marginLeft: "100%"
+            }, transSpeed, "easeInOutCirc", function(){
                 $(this).remove();
+                $(lastDivToLoad[lastDivToLoad.length-2]).clone().appendTo("#modal").attr("id", "modalBox").css({
+                    opacity: "0", 
+                    marginRight: "100%"
+                }).show().animate({
+                    opacity: "1", 
+                    marginRight: "0%"
+                }, transSpeed, "easeInOutCirc", function(){
+                    console.log("an ended");
+                });
+                if (lastDivToLoad.length>2) {
+                    $("#modalBox .prevbutton").css("display", "inline-block");
+                } else {
+                    $("#modalBox .prevbutton").css("display", "none");
+                }
             });
-            console.log(lastDivToLoad[lastDivToLoad.length-1]);
-            $(lastDivToLoad[lastDivToLoad.length-2]).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "-100%"}).show().animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
-            if (lastDivToLoad.length>2) {
-                $("#modalBox .prevbutton").css("display", "inline-block");
-            } else {
-                $("#modalBox .prevbutton").css("display", "none");
-            }
             lastDivToLoad.pop();
+// ************************************  LINK TO NEXT CARD  ************************************
         } else {
             if (getAttrTag == "a" && getAttrClass != "closebutton"  && getAttrClass != "prevbutton") {
                 var divToLoad = getAttrHREF;
                 if ($("#modalBox") && $("#modalBox").length>0) {
-                    $("#modalBox").attr("id", "oldBox");
-                    $("#oldBox").show().animate({opacity: "0", marginLeft: "-100%"}, 200, "easeInOutCirc", function(){
+                    // ************************************  OLD CARD  ************************************
+//                    $("#modalBox").attr("id", "oldBox");
+//                    $("#modalBox").stop().remove();
+                    $("#modalBox").show().animate({
+                        opacity: "0", 
+                        marginLeft: "-100%"
+                    }, transSpeed, "easeInOutCirc", function(){
                         $(this).remove();
+                        console.log("Old Box finished");
+                        $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
+                            opacity: "0", 
+                            marginLeft: "100%"
+                        }).show().animate({
+                            opacity: "1", 
+                            marginLeft: "0%"
+                        }, transSpeed, "easeInOutCirc", function () {
+                            console.log("new an finished");
+                        });
+                        if (lastDivToLoad.length>0) {
+                            $("#modalBox .prevbutton").css("display", "inline-block");
+                        } else {
+                            $("#modalBox .prevbutton").css("display", "none");
+                        }
                     });
-                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "100%"}).show().delay(100).animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
+                    // ************************************  NEW CARD  ************************************
                     $("#modalBox .prevbutton").css("display", "inline-block");
                 } else {
-                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0"}).show().animate({opacity: "1"}, 200, "easeInOutCirc");
-                    
-                }
-                if (lastDivToLoad.length>0) {
-                    $("#modalBox .prevbutton").css("display", "inline-block");
-                } else {
-                    $("#modalBox .prevbutton").css("display", "none");
+                    $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
+                        opacity: "0"
+                    }).show().animate({
+                        opacity: "1"
+                    }, startSpeed, "easeInOutCirc");
                 }
                 lastDivToLoad.push(divToLoad);
             }
         }
     });
     //REPLACING WITH ABOVE FUNCTION
-    $(".inpagelink").on("click", function(event){
+    $("#page .inpagelink").on("click", function(event){
         event.preventDefault();
         $this = $(this);
         var divToLoad = $this.attr("href");
-        var parentID = $this.parents("div").attr("id");
-        //console.log(".inpagelink button pressed - Link: " + divToLoad + " - Parent: " + parentID );
-        $("#modal").show().animate({opacity: "1"}, 200);
-        
-        if ($("#modalBox") && $("#modalBox").length>0) {
-            $("#modalBox").attr("id", "oldBox").show();
-            $("#oldBox").animate({opacity: "0", marginLeft: "-100%"}, 200, "easeInOutCirc", function(){
-                $(this).remove();
-            });
-            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0", marginLeft: "100%"}).show().animate({opacity: "1", marginLeft: "0%"}, 200, "easeInOutCirc");
+        $("#modal").show().animate({
+            opacity: "1"
+        }, startSpeed);
+        if ($("#modalBox") && $("#modalBox").length>0) { // <- If model is empty
+//            $("#modalBox").attr("id", "oldBox").show();
+//            $("#oldBox").animate({
+//                opacity: "0", 
+//                marginLeft: "-100%"
+//            }, anSpeed, "easeInOutCirc", function(){
+//                $(this).remove();
+//            });
+//            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
+//                opacity: "0", 
+//                marginLeft: "100%"
+//            }).show().delay(anSpeed/2).animate({
+//                opacity: "1", 
+//                marginLeft: "0%"
+//            }, anSpeed, "easeInOutCirc");
         } else {
-            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({opacity: "0"}).show().animate({opacity: "1"}, 200, "easeInOutCirc");
+            $(divToLoad).clone().appendTo("#modal").attr("id", "modalBox").css({
+                opacity: "0"
+            }).show().animate({
+                opacity: "1"
+            }, startSpeed, "easeInOutCirc");
             $("#modalBox .prevbutton").css("display", "none");
         }
         if (lastDivToLoad.length>0) {

@@ -46,6 +46,7 @@ $lorem: "Lorem ipsum dolor sit amet, te consetetur inciderint theophrastus qui, 
 body {
     position: absolute;
     width: 100%;
+    overflow-x: hidden;
     height: 100%;
     font-family: $fonts-main;
     font-weight: 400;
@@ -97,14 +98,15 @@ p {
     background-color: blue;
     vertical-align: middle;
     line-height: 100%;
+    margin: 0;
 }
 .shadow {
     position: relative;
     bottom: 0;
-    width: 100%;
     height: 1px;
-    background-color: aqua;
-    box-shadow: 0 0 10px green;
+    width: 100%;
+    box-shadow: 0 -10px 30px green;
+    margin: -30px;
 }
 /************************************************************
     INTRO ANIMATION
@@ -221,31 +223,35 @@ p {
         }
         h2 {
             font-size: 1.7em;
-            padding: $gutter 0;
+            padding: $bleed 0;
             //border-bottom: solid 1px darkred;
             text-shadow: 0 0 10px black;
         }
     }
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    width: 16.666%;
-    text-align: center;
-    border-left: solid 1px $orange;
-    margin: $bleed 0 0;
-    a {
+nav {
+    position: relative;
+    z-index: 999;
+    ul li {
         display: inline-block;
-        width: 100%;
-        height: 100%;
-        color: $orange;
-        &:hover {
-            text-shadow: 0 0 20px $orange;
-            color: beige;
+        list-style: none;
+        margin: 0;
+        width: 16.666%;
+        text-align: center;
+        border-left: solid 1px $orange;
+        margin: $bleed 0 0;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: $orange;
+            &:hover {
+                text-shadow: 0 0 20px $orange;
+                color: beige;
+            }
         }
-    }
-    &:first-child {
-        border-left: none;
+        &:first-child {
+            border-left: none;
+        }
     }
 }
     .selected {
@@ -394,11 +400,6 @@ nav ul li {
         display: block;
     }
 }
-
-@media screen and (max-height: 350px) {
-
-}
-
 .character {
     color: #c64a19;
 }            
@@ -423,46 +424,7 @@ nav ul li {
 .realms {
     color: saddlebrown;
 }
-.closebutton, .prevbutton {
-    font-style: normal;
-    font-size: 1.2em;
-    color: darkred;
-    display: none;
-    margin-top: -20px;
-    margin-right: -10px;
-    &:before {
-        display: inline-block;
-        padding: 0;
-        margin: 0 5px 0 0;
-        height: 1em;
-        width: 1em;
-        line-height: .9em;
-        background: darkred;
-        color: antiquewhite;
-        border-radius: .5em;
-        font-size: 1.2em;
-        text-align: center;
-    }
-    &:hover {
-        color: $orange;
-        text-decoration: none;
-        &:before {
-            background-color: $orange;
-        }
-    }
-}
-.closebutton {
-    float: right;
-    &:before {
-        content: " x";
-    }
-}
-.prevbutton {
-    float: left;
-    &:before {
-        content: " <";
-    }
-}
+
 /************************************************************
     PREMISE PAGE
  ************************************************************/
@@ -793,49 +755,81 @@ nav ul li {
 /************************************************************
     DEFINITION SLIDES
  ************************************************************/
-
+.closebutton, .prevbutton {
+    font-style: normal;
+    font-size: 1.2em;
+    color: darkred;
+    display: none;
+    margin-top: -20px;
+    margin-right: -10px;
+    &:before {
+        display: inline-block;
+        padding: 0;
+        margin: 0 5px 0 0;
+        height: 1em;
+        width: 1em;
+        line-height: .9em;
+        background: darkred;
+        color: antiquewhite;
+        border-radius: .5em;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    &:hover {
+        color: $orange;
+        text-decoration: none;
+        &:before {
+            background-color: $orange;
+        }
+    }
+}
 #modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 300%;
     height: 100%;
     min-height: 100vh;
+    max-height: 100vh;
     background-color: rgba(0,0,0,.8);
-    position: fixed;
     display: none;
-    margin: 0;
+    margin-left: -100%;
+    padding: 0;
     z-index: 1000;
+    span {
+        margin-left: -200%;
+        margin-right: 200%;
+    }
     .introduction, .characters, .definitions, .other-card {
         position: static;
+        left: 0;
         display: inline-block;
         vertical-align: middle;
         width: 90%;
         max-width: 800px;
         max-height: 90%;
-        margin: auto;
-        overflow: auto;
-    }
-    span {
-        position: relative;
-        display: inline-block;
-        top: 0;
-        left: 0;
-        height: 100%;
-        min-height: 100vh;
-        max-height: 100vh;
-        width: 1px;
-        vertical-align: middle;
-        line-height: 100%;
-    }
-    .closebutton {
-        display: inline-block;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     img {
         clear: both;
         margin-top: $gutter;
     }
+    .closebutton {
+        display: inline-block;
+        float: right;
+        &:before {
+            content: " x";
+        }
+    }
+    .prevbutton {
+        float: left;
+        &:before {
+            content: " <";
+        }
+    }
 }
+
 /************************************************************
     SAMPLES PAGE
  ************************************************************/
