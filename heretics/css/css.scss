@@ -100,14 +100,6 @@ p {
     line-height: 100%;
     margin: 0;
 }
-.shadow {
-    position: relative;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    box-shadow: 0 -10px 30px green;
-    margin: -30px;
-}
 /************************************************************
     INTRO ANIMATION
  ************************************************************/
@@ -187,7 +179,7 @@ p {
         }
     }
     .skip {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 }
 
@@ -483,8 +475,9 @@ nav {
 #character-app {
     position: relative;
     display: none;
-    height: 90%;
-    min-height: 90vh;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
     width: 94%;
     border-radius: $gutter;
     padding: $bleed;
@@ -495,10 +488,10 @@ nav {
 }
 .character-box {
     position: absolute;
-    width: 50vw;
-    height: 50vw;
-    max-width: 50vh;
-    max-height: 50vh;
+    width: 30vw;
+    height: 30vw;
+    max-width: 60vh;
+    max-height: 60vh;
 //    margin: -50%;
 }
 
@@ -509,6 +502,8 @@ nav {
     margin: -50px;
     width: 50%;
     height: 50%;
+//    max-width: 350px;
+//    max-height: 350px;
     overflow: hidden;
     vertical-align: middle;
     box-shadow: 0 0 10px black;
@@ -543,13 +538,7 @@ nav {
     top: 28%;
     left: 64%;
 }
-@media screen and (max-width: 1000px) /*and (orientation: portrait)*/ {
-    .character-box {
-        margin-left: -5%;
-    }
-}
-
-@media screen and (max-width: 600px) and (min-height: 700px) {
+@media screen and (max-width: 1600px) and (min-height: 900px) {
     #char-kingsley {
         top: 0%;
     }
@@ -568,14 +557,105 @@ nav {
     #char-stewart {
         top: 43%;
     }
-    .char {
-        background-color: none;
-        img {
-            opacity: 1;
-        }
+}
+@media screen and (max-width: 1000px) and (min-height: 500px) {
+    #char-kingsley {
+        top: 0%;
     }
-    .character-box {
-        margin-left: -10%;
+    #char-caster {
+        top: 30%;
+    }
+    #char-dan {
+        top: 0%;
+    }
+    #char-claire {
+        top: 43%;
+    }
+    #char-hecate {
+        top: 66%;
+    }
+    #char-stewart {
+        top: 43%;
+    }
+}
+@media screen and (max-width: 600px) and (min-height: 700px) {
+    #char-kingsley {
+        top: 10%;
+    }
+    #char-caster {
+        top: 40%;
+    }
+    #char-dan {
+        top: 10%;
+    }
+    #char-claire {
+        top: 53%;
+    }
+    #char-hecate {
+        top: 76%;
+    }
+    #char-stewart {
+        top: 53%;
+    }
+}
+@media screen and (max-width: 600px) and (max-height: 700px) {
+    #char-kingsley {
+        top: 10%;
+    }
+    #char-caster {
+        top: 40%;
+    }
+    #char-dan {
+        top: 10%;
+    }
+    #char-claire {
+        top: 53%;
+    }
+    #char-hecate {
+        top: 76%;
+    }
+    #char-stewart {
+        top: 53%;
+    }
+}
+@media screen and (max-width: 900px) and (max-height: 700px) {
+    #char-kingsley {
+        top: 0%;
+    }
+    #char-caster {
+        top: 30%;
+    }
+    #char-dan {
+        top: 0%;
+    }
+    #char-claire {
+        top: 43%;
+    }
+    #char-hecate {
+        top: 66%;
+    }
+    #char-stewart {
+        top: 43%;
+    }
+}
+@media screen and (max-width: 800px) and (max-height: 600px) and (orientation: landscape) {
+    #char-kingsley {
+        top: -10%;
+    }
+    #char-caster {
+        top: 20%;
+    }
+    #char-dan {
+        top: -10%;
+    }
+    #char-claire {
+        top: 33%;
+    }
+    #char-hecate {
+        top: 56%;
+    }
+    #char-stewart {
+        top: 33%;
     }
 }
 /************************************************************
@@ -796,6 +876,10 @@ nav {
     margin-left: -100%;
     padding-bottom: 10%;
     z-index: 1000;
+    p {
+        position: relative;
+        z-index: 0;
+    }
     span {
         margin-left: -200%;
         margin-right: 200%;
@@ -808,7 +892,7 @@ nav {
         width: 30%;
         max-width: 800px;
         max-height: 80%;
-        overflow-y: auto;
+        overflow-y:auto;
         overflow-x: hidden;
     }
     img {
@@ -946,7 +1030,41 @@ footer {
                 padding-left: $bleed;
                 display: block;
             }
-
+            a {
+                width: $soc-size*1.5;
+                height: $soc-size*1.5;
+                background-size: 900% 200%;
+            }
+            .fb {
+                background-position: 0 0;
+                &:hover {
+                    background-position: 0 -1.5*$soc-size;
+                }
+            }
+            .bl {
+                background-position: -7.5*$soc-size 0;
+                &:hover {
+                    background-position:-7.5*$soc-size -1.5*$soc-size;
+                }
+            }
+            .tw {
+                background-position: -1.5*$soc-size 0;
+                &:hover {
+                    background-position:-1.5*$soc-size -1.5*$soc-size;
+                }
+            }
+            .gl {
+                background-position: -3*$soc-size 0;
+                &:hover {
+                    background-position: -3*$soc-size -1.5*$soc-size;
+                }
+            }
+            .em {
+                background-position: -6*$soc-size 0;
+                &:hover {
+                    background-position: -6*$soc-size -1.5*$soc-size;
+                }
+            }
         }
         .name-copy {
             float: none;

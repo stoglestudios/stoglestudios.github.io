@@ -74,8 +74,7 @@ $skip.click( function() {
 // Document ready
 $(document).ready(function(){
     var cardNav = "<a class='prevbutton'>Prev</a><a class='closebutton'>Close</a>";
-    var cardFade = "<div class='shadow'></div>"
-    $(".characters, .definitions").prepend(cardNav).append(cardFade);
+    $(".characters, .definitions").prepend(cardNav);
     //Build assets
     $('#intro').show();
     $skip.show();
@@ -147,13 +146,14 @@ $(document).ready(function(){
                 }, transSpeed, "easeInOutCirc", function(){
                     console.log("an ended");
                 });
-                if (lastDivToLoad.length>2) {
+                lastDivToLoad.pop();
+                if (lastDivToLoad.length>1) {
                     $("#modalBox .prevbutton").css("display", "inline-block");
                 } else {
                     $("#modalBox .prevbutton").css("display", "none");
                 }
             });
-            lastDivToLoad.pop();
+            
 // ************************************  LINK TO NEXT CARD  ************************************
         } else {
             if (getAttrTag == "a" && getAttrClass != "closebutton"  && getAttrClass != "prevbutton") {
@@ -175,11 +175,7 @@ $(document).ready(function(){
                         }, transSpeed, "easeInOutCirc", function () {
                             console.log("new an finished");
                         });
-                        if (lastDivToLoad.length>0) {
-                            $("#modalBox .prevbutton").css("display", "inline-block");
-                        } else {
-                            $("#modalBox .prevbutton").css("display", "none");
-                        }
+                        $("#modalBox .prevbutton").css("display", "inline-block");
                     });
                     // ************************************  NEW CARD  ************************************
                     $("#modalBox .prevbutton").css("display", "inline-block");
