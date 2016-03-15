@@ -70,6 +70,7 @@ img {
 a {
     display: inline-block;
     transition:all 0.3s ease;
+    font-size:inherit;
     &:before {
         transition:all 0.3s ease;
     }
