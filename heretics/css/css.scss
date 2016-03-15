@@ -85,6 +85,7 @@ a {
 a, a:hover, a:visited, a:active {
     text-decoration: none;
     cursor: pointer;
+    font-family: $fonts-sub;
 }
 p {
     font-family: $fonts-sub;
@@ -392,8 +393,9 @@ nav {
         display: block;
     }
 }
-.character {
+a.character {
     color: #c64a19;
+    font-size: 1em !important;
 }            
 .periods {
     color: gray;
