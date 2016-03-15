@@ -912,6 +912,7 @@ a.character {
         margin-right: 200%;
     }
     .introduction, .characters, .definitions, .other-card {
+        -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
         position: relative;
         left: 0;
         display: inline-block;
@@ -943,7 +944,6 @@ a.character {
 @media screen and (orientation: landscape) and (max-width: 1000px)  {
     #modal {
         .introduction, .characters, .definitions, .other-card {
-            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
             img {
                 float: left !important;
                 margin-right: 3% !important;

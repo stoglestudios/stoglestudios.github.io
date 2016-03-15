@@ -1071,6 +1071,8 @@ a.character {
 }
 /* line 914, css.scss */
 #modal .introduction, #modal .characters, #modal .definitions, #modal .other-card {
+  -webkit-text-size-adjust: 100%;
+  /* Prevent font scaling in landscape while allowing user zoom */
   position: relative;
   left: 0;
   display: inline-block;
@@ -1081,35 +1083,30 @@ a.character {
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* line 925, css.scss */
+/* line 926, css.scss */
 #modal img {
   clear: both;
   margin-top: 25px;
 }
-/* line 929, css.scss */
+/* line 930, css.scss */
 #modal .closebutton {
   display: inline-block;
   float: right;
 }
-/* line 932, css.scss */
+/* line 933, css.scss */
 #modal .closebutton:before {
   content: " x";
 }
-/* line 936, css.scss */
+/* line 937, css.scss */
 #modal .prevbutton {
   float: left;
 }
-/* line 938, css.scss */
+/* line 939, css.scss */
 #modal .prevbutton:before {
   content: " <";
 }
 
 @media screen and (orientation: landscape) and (max-width: 1000px) {
-  /* line 945, css.scss */
-  #modal .introduction, #modal .characters, #modal .definitions, #modal .other-card {
-    -webkit-text-size-adjust: 100%;
-    /* Prevent font scaling in landscape while allowing user zoom */
-  }
   /* line 947, css.scss */
   #modal .introduction img, #modal .characters img, #modal .definitions img, #modal .other-card img {
     float: left !important;
