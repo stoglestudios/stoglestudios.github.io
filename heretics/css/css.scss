@@ -51,7 +51,7 @@ body {
     height: 100%;
     font-family: $fonts-main;
     font-weight: 400;
-    font-size: 12px;
+    font-size: .8em;
     background: url("../images/bg-grad.png") repeat-x $orange;
     text-align: center;
     color: $orange;
@@ -85,14 +85,9 @@ a {
 a, a:hover, a:visited, a:active {
     text-decoration: none;
     cursor: pointer;
-    font-size: 1em;
 }
 p {
     font-family: $fonts-sub;
-    font-size: 1em;
-    a {
-        font-size:1em !important;
-    }
 }
 .helper {
     position: relative;
@@ -346,7 +341,6 @@ nav {
     }
     p {
         color: #600;
-        font-size: 1.4em;
         margin-top: $gutter;
         line-height: 1.4em;
     }
@@ -883,7 +877,6 @@ nav {
         background: darkred;
         color: antiquewhite;
         border-radius: .5em;
-        font-size: 1.2em;
         text-align: center;
     }
     &:hover {
@@ -947,15 +940,11 @@ nav {
 @media screen and (orientation: landscape) and (max-width: 1000px)  {
     #modal {
         .introduction, .characters, .definitions, .other-card {
-            font-size: 12px;
             img {
                 float: left !important;
                 margin-right: 3% !important;
                 width: 150px;
                 height: 150px;
-            }
-            a, p {
-                font-size: .8em !important;
             }
         }
     }
