@@ -945,6 +945,7 @@ a.character {
 @media screen and (orientation: landscape) and (max-width: 1000px)  {
     #modal {
         .introduction, .characters, .definitions, .other-card {
+            font-size: 1.2em;
             img {
                 float: left !important;
                 margin-right: 3% !important;
