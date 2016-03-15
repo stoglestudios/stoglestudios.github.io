@@ -91,7 +91,7 @@ p {
     font-family: $fonts-sub;
     font-size: 1em;
     a {
-        font-size:inherit !important;
+        font-size:1em !important;
     }
 }
 .helper {
@@ -954,6 +954,9 @@ nav {
                 width: 150px;
                 height: 150px;
             }
+            a {
+                font-size: 1em !important;
+            }
         }
     }
 }
@@ -964,12 +967,6 @@ nav {
                 padding: 5px;
                 width: 100px;
                 height: 100px;
-            }
-            p {
-                font-size: 1em;
-                a {
-                    font-size: 1em;
-                }
             }
         }
     }
