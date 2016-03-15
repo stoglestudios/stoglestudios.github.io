@@ -26,8 +26,13 @@ $skip.click( function() {
     }, 200, function (){
         $intro.remove();
     });
-    $('#page').css({opacity: "0"}).show().delay(200).animate({opacity: "1"}, 200);
+    $('#page').css({
+        opacity: "0"
+    }).show().delay(200).animate({
+        opacity: "1"
+    }, 200);
     $(this).hide();
+    setCookie("seenit", "true", 1);
     //console.log("Skip Button Pressed");
 });
 // Function to animate opening sequence - REWRITE
@@ -76,9 +81,7 @@ $(document).ready(function(){
     var cardNav = "<a class='prevbutton'>Prev</a><a class='closebutton'>Close</a>";
     $(".characters, .definitions").prepend(cardNav);
     //Build assets
-    $('#intro').show();
-    $skip.show();
-//    $worlds = $("#cosmology a");
+    
     $("#character-app").show();
     $(".characters").hide();
     
@@ -86,19 +89,34 @@ $(document).ready(function(){
     $(".definitions").hide();
     
     //Hide/show appropriate sections
-    $('#page, #characters, #cosmology, #samples, #author, #contact').hide();
+    $('#characters, #cosmology, #samples, #author, #contact').hide();
     
     //Initiate animated opener sections -> REWRITE
-    $('#intro').animate({ 
-        backgroundPositionX: '100%',
-        backgroundPositionY: '100%',
-    }, 24000, function() {
-        $('#intro').fadeOut(2000);
-    });
-    for (var i=0;i<$openers.length;i++) {
-        var j = Math.floor(i/($openers.length-1)) ? true : false;
-        $openers[i][0].introAn(i*5000, j);
+    if (getCookie("seenit") != "true") {
+        $("#page").hide();
+        $('#intro').show();
+        $skip.show();
+        $('#intro').animate({ 
+            backgroundPositionX: '100%',
+            backgroundPositionY: '100%',
+        }, 24000, function() {
+            $('#intro').fadeOut(2000);
+            //setCookie("seenit", "true", 1);
+        });
+        for (var i=0;i<$openers.length;i++) {
+            var j = Math.floor(i/($openers.length-1)) ? true : false;
+            $openers[i][0].introAn(i*5000, j);
+        }
+    } else {
+        if (window.location.href.indexOf("#") > -1){
+            var getURL = "#" + window.location.href.split("#")[1];
+            $("content").hide();
+            $(getURL).show();
+        }
     }
+    
+    
+    
     //Toggle Sections
     $tabs.click(function(event) {
         $this = $(this);
@@ -130,6 +148,7 @@ $(document).ready(function(){
                 $this.hide();
                 $this.children("div").remove();
             });
+            $("body").css("overflow-y", "auto");
 // ***************************************  PREV BUTTON  **************************************
         } else if (getAttrClass == "prevbutton" && lastDivToLoad.length>0) {
             $("#modalBox").show().animate({
@@ -190,7 +209,6 @@ $(document).ready(function(){
             }
         }
     });
-    //REPLACING WITH ABOVE FUNCTION
     $("#page .inpagelink").on("click", function(event){
         event.preventDefault();
         $this = $(this);
@@ -210,6 +228,7 @@ $(document).ready(function(){
             $("#modalBox .prevbutton").css("display", "none");
         }
         lastDivToLoad.push(divToLoad);
+        $("body").css("overflow-y", "hidden");
     });
     $("a.char").on("mouseover", function(){
         $this = $(this);
@@ -252,3 +271,20 @@ $(document).ready(function(){
         });
     });
 });
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}

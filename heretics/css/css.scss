@@ -47,6 +47,7 @@ body {
     position: absolute;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
     height: 100%;
     font-family: $fonts-main;
     font-weight: 400;
@@ -84,9 +85,11 @@ a {
 a, a:hover, a:visited, a:active {
     text-decoration: none;
     cursor: pointer;
+    font-size: 1em;
 }
 p {
     font-family: $fonts-sub;
+    font-size: 1em;
 }
 .helper {
     position: relative;
@@ -538,6 +541,7 @@ nav {
     top: 28%;
     left: 64%;
 }
+
 @media screen and (max-width: 1600px) and (min-height: 900px) {
     #char-kingsley {
         top: 0%;
@@ -656,6 +660,30 @@ nav {
     }
     #char-stewart {
         top: 33%;
+    }
+}
+@media screen and (orientation: portrait) {
+    .character-box {
+        width: 45vw;
+        height: 45vw;
+    }
+    #char-kingsley {
+        left: 8%;
+    }
+    #char-caster {
+        left: 27%;
+    }
+    #char-dan {
+        left: 45%;
+    }
+    #char-claire {
+        left: -4%;
+    }
+    #char-hecate {
+        left: 26%;
+    }
+    #char-stewart {
+        left: 57%;
     }
 }
 /************************************************************
@@ -913,6 +941,30 @@ nav {
         }
     }
 }
+@media screen and (orientation: landscape) and (max-width: 1000px)  {
+    #modal {
+        .introduction, .characters, .definitions, .other-card {
+            font-size: .8em;
+            img {
+                float: left !important;
+                margin-right: 3% !important;
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 700px)  {
+    #modal {
+        .introduction, .characters, .definitions, .other-card {
+            img {
+                padding: 5px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
 
 /************************************************************
     SAMPLES PAGE
@@ -1025,6 +1077,12 @@ footer {
     footer {
         p {
             padding-bottom: $bleed;
+            &:first-child {
+                margin-right: -50%;
+            }
+            &:last-child {
+                margin-left: -50%;
+            }
             span {
                 text-align: left;
                 padding-left: $bleed;
