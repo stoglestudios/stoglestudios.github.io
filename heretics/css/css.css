@@ -1122,7 +1122,7 @@ nav ul li:first-child {
     height: 150px;
   }
   /* line 957, css.scss */
-  #modal .introduction a, #modal .characters a, #modal .definitions a, #modal .other-card a {
+  #modal .introduction a, #modal .introduction p, #modal .characters a, #modal .characters p, #modal .definitions a, #modal .definitions p, #modal .other-card a, #modal .other-card p {
     font-size: 1em !important;
   }
 }
