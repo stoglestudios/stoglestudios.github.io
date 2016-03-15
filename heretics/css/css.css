@@ -1130,11 +1130,15 @@ nav ul li:first-child {
   #modal .introduction p, #modal .characters p, #modal .definitions p, #modal .other-card p {
     font-size: 1em;
   }
+  /* line 968, css.scss */
+  #modal .introduction p a, #modal .characters p a, #modal .definitions p a, #modal .other-card p a {
+    font-size: 1em;
+  }
 }
 /************************************************************
     SAMPLES PAGE
  ************************************************************/
-/* line 977, css.scss */
+/* line 980, css.scss */
 #samples {
   display: inline-block;
   width: 94%;
@@ -1147,15 +1151,15 @@ nav ul li:first-child {
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 990, css.scss */
+/* line 993, css.scss */
 #author div {
   min-height: 500px;
 }
-/* line 992, css.scss */
+/* line 995, css.scss */
 #author div img {
   content: url("../images/brandon.jpg");
 }
-/* line 995, css.scss */
+/* line 998, css.scss */
 #author div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1163,21 +1167,21 @@ nav ul li:first-child {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1004, css.scss */
+/* line 1007, css.scss */
 #contact div {
   min-height: 500px;
 }
-/* line 1006, css.scss */
+/* line 1009, css.scss */
 #contact div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1009, css.scss */
+/* line 1012, css.scss */
 #contact div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1013, css.scss */
+/* line 1016, css.scss */
 #contact div a:hover {
   text-decoration: underline;
 }
@@ -1185,29 +1189,29 @@ nav ul li:first-child {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1023, css.scss */
+/* line 1026, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1026, css.scss */
+/* line 1029, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1029, css.scss */
+/* line 1032, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1031, css.scss */
+/* line 1034, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1035, css.scss */
+/* line 1038, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1038, css.scss */
+/* line 1041, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1218,119 +1222,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1048, css.scss */
+/* line 1051, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1050, css.scss */
+/* line 1053, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1054, css.scss */
+/* line 1057, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1056, css.scss */
+/* line 1059, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1060, css.scss */
+/* line 1063, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1062, css.scss */
+/* line 1065, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1066, css.scss */
+/* line 1069, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1068, css.scss */
+/* line 1071, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1072, css.scss */
+/* line 1075, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1074, css.scss */
+/* line 1077, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1082, css.scss */
+  /* line 1085, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1084, css.scss */
+  /* line 1087, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1087, css.scss */
+  /* line 1090, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1090, css.scss */
+  /* line 1093, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1095, css.scss */
+  /* line 1098, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1100, css.scss */
+  /* line 1103, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1102, css.scss */
+  /* line 1105, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1106, css.scss */
+  /* line 1109, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1108, css.scss */
+  /* line 1111, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1112, css.scss */
+  /* line 1115, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1114, css.scss */
+  /* line 1117, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1118, css.scss */
+  /* line 1121, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1120, css.scss */
+  /* line 1123, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1124, css.scss */
+  /* line 1127, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1126, css.scss */
+  /* line 1129, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1131, css.scss */
+  /* line 1134, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1135, css.scss */
+  /* line 1138, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;
