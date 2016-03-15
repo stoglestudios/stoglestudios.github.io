@@ -70,7 +70,6 @@ img {
 a {
     display: inline-block;
     transition:all 0.3s ease;
-    font-size:inherit;
     &:before {
         transition:all 0.3s ease;
     }
@@ -91,6 +90,9 @@ a, a:hover, a:visited, a:active {
 p {
     font-family: $fonts-sub;
     font-size: 1em;
+    a {
+        font-size:inherit !important;
+    }
 }
 .helper {
     position: relative;
