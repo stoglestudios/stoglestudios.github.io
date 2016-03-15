@@ -948,6 +948,9 @@ a.character {
                 width: 150px;
                 height: 150px;
             }
+            p, a {
+                font-size: 12px !important;
+            }
         }
     }
 }
