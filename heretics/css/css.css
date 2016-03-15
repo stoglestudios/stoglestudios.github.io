@@ -1112,7 +1112,7 @@ nav ul li:first-child {
 @media screen and (orientation: landscape) and (max-width: 1000px) {
   /* line 949, css.scss */
   #modal .introduction, #modal .characters, #modal .definitions, #modal .other-card {
-    font-size: .8em;
+    font-size: 12px;
   }
   /* line 951, css.scss */
   #modal .introduction img, #modal .characters img, #modal .definitions img, #modal .other-card img {
@@ -1123,7 +1123,7 @@ nav ul li:first-child {
   }
   /* line 957, css.scss */
   #modal .introduction a, #modal .introduction p, #modal .characters a, #modal .characters p, #modal .definitions a, #modal .definitions p, #modal .other-card a, #modal .other-card p {
-    font-size: 1em !important;
+    font-size: .8em !important;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 700px) {

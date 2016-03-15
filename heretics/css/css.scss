@@ -947,7 +947,7 @@ nav {
 @media screen and (orientation: landscape) and (max-width: 1000px)  {
     #modal {
         .introduction, .characters, .definitions, .other-card {
-            font-size: .8em;
+            font-size: 12px;
             img {
                 float: left !important;
                 margin-right: 3% !important;
@@ -955,7 +955,7 @@ nav {
                 height: 150px;
             }
             a, p {
-                font-size: 1em !important;
+                font-size: .8em !important;
             }
         }
     }
