@@ -913,6 +913,7 @@ a.character {
     }
     .introduction, .characters, .definitions, .other-card {
         -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+        font-size: 1em;
         position: relative;
         left: 0;
         display: inline-block;
