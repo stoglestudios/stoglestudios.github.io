@@ -863,6 +863,7 @@ a.character {
     DEFINITION SLIDES
  ************************************************************/
 .closebutton, .prevbutton {
+    font-family: $fonts-main;
     font-style: normal;
     font-size: 1.2em;
     color: darkred;
@@ -942,14 +943,19 @@ a.character {
 @media screen and (orientation: landscape) and (max-width: 1000px)  {
     #modal {
         .introduction, .characters, .definitions, .other-card {
+            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
             img {
                 float: left !important;
                 margin-right: 3% !important;
                 width: 150px;
                 height: 150px;
             }
-            p, a {
+            p {
                 font-size: 12px !important;
+                
+                a {
+                    font-size: 12px !important;
+                }
             }
         }
     }
