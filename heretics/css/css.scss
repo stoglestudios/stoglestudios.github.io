@@ -85,7 +85,6 @@ a {
 a, a:hover, a:visited, a:active {
     text-decoration: none;
     cursor: pointer;
-    font-family: $fonts-sub;
 }
 p {
     font-family: $fonts-sub;
@@ -218,7 +217,6 @@ p {
         h2 {
             font-size: 1.7em;
             padding: $bleed 0;
-            //border-bottom: solid 1px darkred;
             text-shadow: 0 0 10px black;
         }
     }
@@ -308,7 +306,6 @@ nav {
             width: 50%;
         }
     }
-    
 }
 /************************************************************
     CHARACTER & WORLD CONTENT 
@@ -494,7 +491,6 @@ a.character {
     height: 30vw;
     max-width: 60vh;
     max-height: 60vh;
-//    margin: -50%;
 }
 
 .char {
@@ -504,8 +500,6 @@ a.character {
     margin: -50px;
     width: 50%;
     height: 50%;
-//    max-width: 350px;
-//    max-height: 350px;
     overflow: hidden;
     vertical-align: middle;
     box-shadow: 0 0 10px black;
@@ -513,7 +507,6 @@ a.character {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-//        opacity: .5;
     }
 }
 #char-kingsley {
@@ -946,6 +939,19 @@ a.character {
     #modal {
         .introduction, .characters, .definitions, .other-card {
             font-size: 1.2em;
+        }
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 1000px)  {
+    #modal {
+        .introduction, .characters, .definitions, .other-card {
+            font-size: 1.2em;
+        }
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 1000px)  {
+    #modal {
+        .introduction, .characters, .definitions, .other-card {
             img {
                 float: left !important;
                 margin-right: 3% !important;
@@ -972,19 +978,20 @@ a.character {
  ************************************************************/
 
 #samples {
-    display: inline-block;
-    width: 94%;
-    border-radius: $gutter;
-    margin-bottom: $gutter;
-    min-height: 300px;
-    background-color: black;
+    text-align: center;
+    .other-card {
+        min-height: 500px;
+    }
+}
+#sample-menu {
+    display: none;
 }
 
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
 
-#author div {
+#author>div {
     min-height: 500px;
     img {
         content: url("../images/brandon.jpg");

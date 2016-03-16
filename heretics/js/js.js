@@ -114,9 +114,6 @@ $(document).ready(function(){
             $(getURL).show();
         }
     }
-    
-    
-    
     //Toggle Sections
     $tabs.click(function(event) {
         $this = $(this);
