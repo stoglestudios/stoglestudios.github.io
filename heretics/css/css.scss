@@ -221,6 +221,7 @@ p {
         }
     }
 nav {
+    margin-top: $gutter;
     position: relative;
     z-index: 999;
     ul li {
@@ -261,15 +262,21 @@ nav {
     header {
         padding-top: $bleed;
         background-size: $width-666*.86 $height-666*.86;
+        img {
+            max-width: 320px;
+        }
         h2 {
             font-size: 1.3em;
             padding: 0 0 $bleed;
         }
     }
-    nav ul a li {
-        width: 33.33333%;
-        &:last-child {
-            border-right: solid 1px $orange;
+    nav {
+        margin-top: 0;
+        ul a li {
+            width: 33.33333%;
+            &:last-child {
+                border-right: solid 1px $orange;
+            }
         }
     }
     content>div {
@@ -484,6 +491,7 @@ a.character {
     background-image: url(../images/charactersBG.jpg);
     background-size: 100% 100%;
     margin-bottom: $gutter;
+    overflow: hidden;
 }
 .character-box {
     position: absolute;
@@ -535,148 +543,64 @@ a.character {
 }
 
 @media screen and (max-width: 1600px) and (min-height: 900px) {
-    #char-kingsley {
-        top: 0%;
-    }
-    #char-caster {
-        top: 30%;
-    }
-    #char-dan {
-        top: 0%;
-    }
-    #char-claire {
-        top: 43%;
-    }
-    #char-hecate {
-        top: 66%;
-    }
-    #char-stewart {
-        top: 43%;
-    }
+    #char-kingsley { top: 0%; }
+    #char-caster { top: 30%; }
+    #char-dan { top: 0%; }
+    #char-claire { top: 43%; }
+    #char-hecate { top: 66%; }
+    #char-stewart { top: 43%; }
 }
 @media screen and (max-width: 1000px) and (min-height: 500px) {
-    #char-kingsley {
-        top: 0%;
-    }
-    #char-caster {
-        top: 30%;
-    }
-    #char-dan {
-        top: 0%;
-    }
-    #char-claire {
-        top: 43%;
-    }
-    #char-hecate {
-        top: 66%;
-    }
-    #char-stewart {
-        top: 43%;
-    }
+    #char-kingsley { top: 0%; }
+    #char-caster { top: 30%; }
+    #char-dan { top: 0%; }
+    #char-claire { top: 43%; }
+    #char-hecate { top: 66%; }
+    #char-stewart { top: 43%; }
 }
 @media screen and (max-width: 600px) and (min-height: 700px) {
-    #char-kingsley {
-        top: 10%;
-    }
-    #char-caster {
-        top: 40%;
-    }
-    #char-dan {
-        top: 10%;
-    }
-    #char-claire {
-        top: 53%;
-    }
-    #char-hecate {
-        top: 76%;
-    }
-    #char-stewart {
-        top: 53%;
-    }
+    #char-kingsley { top: 10%; }
+    #char-caster { top: 40%; }
+    #char-dan { top: 10%; }
+    #char-claire { top: 53%; }
+    #char-hecate { top: 76%; }
+    #char-stewart { top: 53%; }
 }
 @media screen and (max-width: 600px) and (max-height: 700px) {
-    #char-kingsley {
-        top: 10%;
-    }
-    #char-caster {
-        top: 40%;
-    }
-    #char-dan {
-        top: 10%;
-    }
-    #char-claire {
-        top: 53%;
-    }
-    #char-hecate {
-        top: 76%;
-    }
-    #char-stewart {
-        top: 53%;
-    }
+    #char-kingsley { top: 10%; }
+    #char-caster { top: 40%; }
+    #char-dan { top: 10%; }
+    #char-claire { top: 53%; }
+    #char-hecate { top: 76%; }
+    #char-stewart { top: 53%; }
 }
 @media screen and (max-width: 900px) and (max-height: 700px) {
-    #char-kingsley {
-        top: 0%;
-    }
-    #char-caster {
-        top: 30%;
-    }
-    #char-dan {
-        top: 0%;
-    }
-    #char-claire {
-        top: 43%;
-    }
-    #char-hecate {
-        top: 66%;
-    }
-    #char-stewart {
-        top: 43%;
-    }
+    #char-kingsley { top: 0%; }
+    #char-caster { top: 30%; }
+    #char-dan { top: 0%; }
+    #char-claire { top: 43%; }
+    #char-hecate { top: 66%; }
+    #char-stewart { top: 43%; }
 }
 @media screen and (max-width: 800px) and (max-height: 600px) and (orientation: landscape) {
-    #char-kingsley {
-        top: -10%;
-    }
-    #char-caster {
-        top: 20%;
-    }
-    #char-dan {
-        top: -10%;
-    }
-    #char-claire {
-        top: 33%;
-    }
-    #char-hecate {
-        top: 56%;
-    }
-    #char-stewart {
-        top: 33%;
-    }
+    #char-kingsley { top: -10%; }
+    #char-caster { top: 20%; }
+    #char-dan { top: -10%; }
+    #char-claire { top: 33%; }
+    #char-hecate { top: 56%; }
+    #char-stewart { top: 33%; }
 }
 @media screen and (orientation: portrait) {
     .character-box {
         width: 45vw;
         height: 45vw;
     }
-    #char-kingsley {
-        left: 8%;
-    }
-    #char-caster {
-        left: 27%;
-    }
-    #char-dan {
-        left: 45%;
-    }
-    #char-claire {
-        left: -4%;
-    }
-    #char-hecate {
-        left: 26%;
-    }
-    #char-stewart {
-        left: 57%;
-    }
+    #char-kingsley { left: 8%; }
+    #char-caster { left: 27%; }
+    #char-dan { left: 45%; }
+    #char-claire { left: -4%; }
+    #char-hecate { left: 26%; }
+    #char-stewart { left: 57%; }
 }
 /************************************************************
     COSMOLOGY PAGE
@@ -705,7 +629,7 @@ a.character {
             margin: -100px;
             border-radius: 13vh;
             /* For Dev: */
-            background-color: rgba(100,0,200, .4);
+//            background-color: rgba(100,0,200, .4);
             border-radius: 50%;
             img {
                 position: relative;
@@ -963,7 +887,25 @@ a.character {
         }
     }
 }
-
+@media screen and (orientation: landscape) and (max-width: 1000px)  {
+    #author>div, #contact>div {
+        img {
+            float: left !important;
+            margin-right: 3% !important;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 700px)  {
+    #author>div, #contact>div {
+        img {
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
 /************************************************************
     SAMPLES PAGE
  ************************************************************/
@@ -1144,7 +1086,7 @@ nav.carousel-controls {
  ************************************************************/
 
 #author>div {
-    min-height: 500px;
+    //min-height: 500px;
     img {
         content: url("../images/brandon.jpg");
     }
@@ -1157,8 +1099,8 @@ nav.carousel-controls {
     CONTACT PAGE
  ************************************************************/
 
-#contact div {
-    min-height: 500px;
+#contact>div {
+    //min-height: 500px;
     img {
         content: url("../images/proposal.jpg");
     }
