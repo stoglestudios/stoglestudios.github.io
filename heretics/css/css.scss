@@ -986,6 +986,167 @@ a.character {
 #sample-menu {
     display: none;
 }
+.sample-thumbs {
+    width: 100px;
+    height: 150px;
+    img {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+    }
+}
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.sample-carousel {
+    display: inline-block; 
+    width: 100%;
+    margin-bottom: $bleed;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    height: 500px;
+    background-color: darkred;
+    &:hover nav.carousel-controls {
+        opacity: 1;
+        animation-name: fadein;
+        animation-duration: .5s;
+    }
+    .carousel-slide {
+        position: absolute;
+        vertical-align: top;
+        top: 0;
+        left: 100%; 
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        * {
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        img {
+            width: auto;
+            height: 100%;
+            display: inline-block;
+            overflow: hidden;
+            background-color: black;
+            opacity: .5;
+        }
+        h1, h2, h3, h4, h5 {
+            i {
+                font-size: .4em;
+                float: right;
+                padding: 1.4em 3px 0 0;
+                color: grey;
+            }
+        }
+        button {
+            margin-left: 0;
+        }
+        .text-box {
+            position: relative;
+            z-index: 10;
+            height: 100px;
+            overflow: hidden;
+            p {
+                position: absolute;
+                z-index: 1;
+                padding: 0;
+            }
+            div {
+                display: inline-block;
+                width: 100%;
+                bottom: 0;
+                position: absolute;
+                height: 0px;
+                background-color: brown;
+                z-index: 200;
+                box-shadow: 0 0 15px 15px rgba(0,0,0,.5);
+            }
+        }
+    }
+}  
+nav.carousel-controls {
+    height: $bleed*2;
+    opacity: 0;
+    animation-name: fadeout;
+    animation-duration: .5s;
+    padding: 0 $bleed/2;
+    display: inline-block;
+    border-radius: $bleed;
+    position: absolute;
+    z-index: 9000;
+    top: $bleed;
+    left: $bleed;
+    background-color: rgba(0,100,100,.5);
+    border: solid green 1px;
+    ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+    }
+    .car-btn {
+        display: inline-block;
+        width: $bleed;
+        height: $bleed;
+        margin: 0 $bleed/4;
+        //background-color: rgba(255,255,255,.2);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .carousel-back, .carousel-forward {
+        background-size: 200% 100%;
+        background-position: top left;
+        &:hover {
+           background-position: top right; 
+        }
+    }
+    .carousel-back {
+        background-image: url(../images/left-arrow-full.png);
+    }
+    .car-slide-btn {
+        border: solid white 1px;
+        border-radius: $bleed/2;
+        background-color: rgba(255,255,255,.4);
+        &:hover {
+            background-color: rgba(255,255,255,1);
+        }
+    }
+    .carousel-pause {
+        height: $bleed;
+        width: $bleed;
+        border-left: solid rgba(255,255,255,.7) 4px;
+        border-right: solid rgba(255,255,255,.7) 4px;
+        &:hover {
+            border-left: solid rgba(255,255,255,1) 4px;
+            border-right: solid rgba(255,255,255,1) 4px;
+        }
+    }
+    .carousel-play {
+        height: $bleed;
+        width: $bleed;
+        display: none;
+        border: solid transparent $bleed/2;
+        border-left-width: $bleed - 1;
+        border-right-width: 0;
+        border-left-color: rgba(255,255,255,.7);
+        &:hover {
+            border-left-color: rgba(255,255,255,1);
+        }
+    }
+    .carousel-forward {
+        background-image: url(../images/right-arrow-full.png);
+    }
+}
 
 /************************************************************
     AUTHOR PAGE

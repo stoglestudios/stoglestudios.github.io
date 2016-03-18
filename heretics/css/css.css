@@ -1152,18 +1152,221 @@ a.character {
   display: none;
 }
 
+/* line 989, css.scss */
+.sample-thumbs {
+  width: 100px;
+  height: 150px;
+}
+/* line 992, css.scss */
+.sample-thumbs img {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+@keyframes fadeout {
+  /* line 999, css.scss */
+  from {
+    opacity: 1;
+  }
+
+  /* line 1000, css.scss */
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  /* line 1003, css.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 1004, css.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+/* line 1006, css.scss */
+.sample-carousel {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  height: 500px;
+  background-color: darkred;
+}
+/* line 1015, css.scss */
+.sample-carousel:hover nav.carousel-controls {
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: .5s;
+}
+/* line 1020, css.scss */
+.sample-carousel .carousel-slide {
+  position: absolute;
+  vertical-align: top;
+  top: 0;
+  left: 100%;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+/* line 1029, css.scss */
+.sample-carousel .carousel-slide * {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 1034, css.scss */
+.sample-carousel .carousel-slide img {
+  width: auto;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+  background-color: black;
+  opacity: .5;
+}
+/* line 1043, css.scss */
+.sample-carousel .carousel-slide h1 i, .sample-carousel .carousel-slide h2 i, .sample-carousel .carousel-slide h3 i, .sample-carousel .carousel-slide h4 i, .sample-carousel .carousel-slide h5 i {
+  font-size: .4em;
+  float: right;
+  padding: 1.4em 3px 0 0;
+  color: grey;
+}
+/* line 1050, css.scss */
+.sample-carousel .carousel-slide button {
+  margin-left: 0;
+}
+/* line 1053, css.scss */
+.sample-carousel .carousel-slide .text-box {
+  position: relative;
+  z-index: 10;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 1058, css.scss */
+.sample-carousel .carousel-slide .text-box p {
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+}
+/* line 1063, css.scss */
+.sample-carousel .carousel-slide .text-box div {
+  display: inline-block;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 0px;
+  background-color: brown;
+  z-index: 200;
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* line 1076, css.scss */
+nav.carousel-controls {
+  height: 20px;
+  opacity: 0;
+  animation-name: fadeout;
+  animation-duration: .5s;
+  padding: 0 5px;
+  display: inline-block;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 9000;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 100, 100, 0.5);
+  border: solid green 1px;
+}
+/* line 1090, css.scss */
+nav.carousel-controls ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+/* line 1096, css.scss */
+nav.carousel-controls .car-btn {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 2.5px;
+}
+/* line 1102, css.scss */
+nav.carousel-controls .car-btn:hover {
+  cursor: pointer;
+}
+/* line 1106, css.scss */
+nav.carousel-controls .carousel-back, nav.carousel-controls .carousel-forward {
+  background-size: 200% 100%;
+  background-position: top left;
+}
+/* line 1109, css.scss */
+nav.carousel-controls .carousel-back:hover, nav.carousel-controls .carousel-forward:hover {
+  background-position: top right;
+}
+/* line 1113, css.scss */
+nav.carousel-controls .carousel-back {
+  background-image: url(../images/left-arrow-full.png);
+}
+/* line 1116, css.scss */
+nav.carousel-controls .car-slide-btn {
+  border: solid white 1px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* line 1120, css.scss */
+nav.carousel-controls .car-slide-btn:hover {
+  background-color: white;
+}
+/* line 1124, css.scss */
+nav.carousel-controls .carousel-pause {
+  height: 10px;
+  width: 10px;
+  border-left: solid rgba(255, 255, 255, 0.7) 4px;
+  border-right: solid rgba(255, 255, 255, 0.7) 4px;
+}
+/* line 1129, css.scss */
+nav.carousel-controls .carousel-pause:hover {
+  border-left: solid white 4px;
+  border-right: solid white 4px;
+}
+/* line 1134, css.scss */
+nav.carousel-controls .carousel-play {
+  height: 10px;
+  width: 10px;
+  display: none;
+  border: solid transparent 5px;
+  border-left-width: 9px;
+  border-right-width: 0;
+  border-left-color: rgba(255, 255, 255, 0.7);
+}
+/* line 1142, css.scss */
+nav.carousel-controls .carousel-play:hover {
+  border-left-color: white;
+}
+/* line 1146, css.scss */
+nav.carousel-controls .carousel-forward {
+  background-image: url(../images/right-arrow-full.png);
+}
+
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 994, css.scss */
+/* line 1155, css.scss */
 #author > div {
   min-height: 500px;
 }
-/* line 996, css.scss */
+/* line 1157, css.scss */
 #author > div img {
   content: url("../images/brandon.jpg");
 }
-/* line 999, css.scss */
+/* line 1160, css.scss */
 #author > div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1171,21 +1374,21 @@ a.character {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1008, css.scss */
+/* line 1169, css.scss */
 #contact div {
   min-height: 500px;
 }
-/* line 1010, css.scss */
+/* line 1171, css.scss */
 #contact div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1013, css.scss */
+/* line 1174, css.scss */
 #contact div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1017, css.scss */
+/* line 1178, css.scss */
 #contact div a:hover {
   text-decoration: underline;
 }
@@ -1193,29 +1396,29 @@ a.character {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1027, css.scss */
+/* line 1188, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1030, css.scss */
+/* line 1191, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1033, css.scss */
+/* line 1194, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1035, css.scss */
+/* line 1196, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1039, css.scss */
+/* line 1200, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1042, css.scss */
+/* line 1203, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1226,119 +1429,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1052, css.scss */
+/* line 1213, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1054, css.scss */
+/* line 1215, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1058, css.scss */
+/* line 1219, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1060, css.scss */
+/* line 1221, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1064, css.scss */
+/* line 1225, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1066, css.scss */
+/* line 1227, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1070, css.scss */
+/* line 1231, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1072, css.scss */
+/* line 1233, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1076, css.scss */
+/* line 1237, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1078, css.scss */
+/* line 1239, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1086, css.scss */
+  /* line 1247, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1088, css.scss */
+  /* line 1249, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1091, css.scss */
+  /* line 1252, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1094, css.scss */
+  /* line 1255, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1099, css.scss */
+  /* line 1260, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1104, css.scss */
+  /* line 1265, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1106, css.scss */
+  /* line 1267, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1110, css.scss */
+  /* line 1271, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1112, css.scss */
+  /* line 1273, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1116, css.scss */
+  /* line 1277, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1118, css.scss */
+  /* line 1279, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1122, css.scss */
+  /* line 1283, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1124, css.scss */
+  /* line 1285, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1128, css.scss */
+  /* line 1289, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1130, css.scss */
+  /* line 1291, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1135, css.scss */
+  /* line 1296, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1139, css.scss */
+  /* line 1300, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;
