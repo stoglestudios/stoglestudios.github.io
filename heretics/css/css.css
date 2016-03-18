@@ -1162,17 +1162,17 @@ a.character {
   }
 }
 @media screen and (orientation: portrait) and (max-width: 1000px) {
-  /* line 862, css.scss */
+  /* line 861, css.scss */
+  #modal {
+    padding-bottom: 25%;
+    max-height: 90%;
+  }
+  /* line 864, css.scss */
   #modal .introduction, #modal .characters, #modal .definitions, #modal .other-card {
     font-size: 1.2em;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 1000px) {
-  /* line 868, css.scss */
-  #modal {
-    padding-bottom: 25%;
-    max-height: 90%;
-  }
   /* line 872, css.scss */
   #modal .introduction img, #modal .characters img, #modal .definitions img, #modal .other-card img {
     float: left !important;
