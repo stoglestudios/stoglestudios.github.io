@@ -113,6 +113,10 @@ $(document).ready(function(){
             $("content").hide();
             $(getURL).show();
             //$('#page').scrollTop(0);
+        } else {
+            var getURL = "#premise";
+            $("content").hide();
+            $(getURL).show();
         }
         $("nav ul li").each(function(){
             $this = $(this);
@@ -214,7 +218,7 @@ $(document).ready(function(){
             }
         }
     });
-    $("#page .inpagelink").on("click", function(event){
+    $("#page .inpagelink").on("click touchend", function(event){
         event.preventDefault();
         $this = $(this);
         var divToLoad = $this.attr("href");
@@ -235,7 +239,8 @@ $(document).ready(function(){
         lastDivToLoad.push(divToLoad);
         $("body").css("overflow-y", "hidden");
     });
-    $("a.char").on("mouseover", function(){
+    $("a.char").on("mouseover touchstart", function(event){
+        event.preventDefault();
         $this = $(this);
         $this.css({
             zIndex: "100",
@@ -255,7 +260,8 @@ $(document).ready(function(){
             boxShadow: "0 0 40px " + $this.data("color")
         });
     })
-    $("a.char").on("mouseout", function(){
+    $("a.char").on("mouseout touchend", function(event){
+        event.preventDefault();
         $this = $(this);
         $this.css({
             zIndex: "1",

@@ -703,8 +703,9 @@ a.character {
             display: inline-block;
             vertical-align: middle;
             margin: -100px;
+            border-radius: 13vh;
             /* For Dev: */
-            //background-color: rgba(100,0,200, .4);
+            background-color: rgba(100,0,200, .4);
             border-radius: 50%;
             img {
                 position: relative;
@@ -729,13 +730,13 @@ a.character {
         a {
             width: 90%;
             height: 90%;
-            max-width: 22vh;
-            max-height: 22vh;
+            max-width: 26vh;
+            max-height: 26vh;
             &:hover {
                 width: 98%;
                 height: 98%;
-                max-width: 26vh;
-                max-height: 26vh;
+                max-width: 30vh;
+                max-height: 30vh;
             }
         }
     }
@@ -749,13 +750,13 @@ a.character {
         a {
             width: 90%;
             height: 90%;
-            max-width: 25vh;
-            max-height: 25vh;
+            max-width: 28vh;
+            max-height: 28vh;
             &:hover {
                 width: 98%;
                 height: 98%;
-                max-width: 28vh;
-                max-height: 28vh;
+                max-width: 32vh;
+                max-height: 32vh;
             }
         }
     }  
@@ -769,11 +770,11 @@ a.character {
     }
     #alfheim {
         top: 15vh;
-        left: 40%;
+        left: 42%;
     }
     #niflheim {
         top: 19vh;
-        left: 68%;
+        left: 65%;
     }
     #earth {
         top: 35vh;
@@ -803,38 +804,28 @@ a.character {
 
 @media screen and (max-width: 1000px) {
     #cosmological-map {
-        .realm {
-            a {
-                //background-color: rgba(0,200,200, .3);
-            }
-        }
-        #ouranos {
-            top: 0vh;
-        }
-        #hyperion {
-            top: 26vh;
-        }
-        #alfheim {
-            top: 20vh;
-        }
-        #niflheim {
-            top: 22vh;
-        }
-        #earth {
-            top: 40vh;
-        }
-        #oceanus {
-            top: 58vh;
-        }
-        #khthon {
-            top: 61vh;
-        }
-        #vulcan {
-            top: 54vh;
-        }
-        #underworld {
-            top: 80vh;
-        }
+        #ouranos { top: 0vh; }
+        #hyperion { top: 24vh; }
+        #alfheim { top: 18vh; }
+        #niflheim { top: 20vh; }
+        #earth { top: 38vh; }
+        #oceanus { top: 56vh; }
+        #khthon { top: 59vh; }
+        #vulcan { top: 52vh; }
+        #underworld { top: 76vh; }
+    }
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+    #cosmological-map {
+        #ouranos { top: -2vh; }
+        #hyperion { top: 17vh; }
+        #alfheim { top: 13vh; }
+        #niflheim { top: 15vh; }
+        #earth { top: 33vh; }
+        #oceanus { top: 51vh; }
+        #khthon { top: 54vh; }
+        #vulcan { top: 47vh; }
+        #underworld { top: 70vh; }
     }
 }
 @media screen and (max-height: 350px) {
