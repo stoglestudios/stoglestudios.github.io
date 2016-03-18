@@ -8,11 +8,13 @@ var contactStart = 0;
 
 // Objects
 var $openers = [
+    
     [$('#evil'), "evil", "What Does it Mean to be Evil?", "beast"],
     [$('#love'), "love", "When is Love too Powerfull?", "johnny"],
     [$('#hero'), "hero", "When Does One Become a Hero?", "kingsley"],
-    [$('#world'), "world", "Where Will be the Final Battle?", "hecate"],
-    [$('#all'), "all", "And Who Will Control it All?", "caster"]
+    [$('#world'), "world", "Where Can Hope Be Found?", "hecate"],
+    [$('#all'), "all", "Who Will Control it All?", "caster"],
+    [$('#title'), "title", "There Are Two Sides to Every Story...", "heretics"]
 ];
 var $intro = $('#intro');
 var $skip = $(".skip");
@@ -41,6 +43,7 @@ $skip.click( function() {
         $this = $(this);
         $thisH = $this.children("h1");
         $thisImg = $this.children("img");
+        $thisTitle = $this.children("#heretics-an");
         var marH = parseInt($thisImg.css("margin-top"));
         marH = Math.round( 100*marH/$(window).height() );
         //console.log(marH);
@@ -56,7 +59,7 @@ $skip.click( function() {
             function() {
                 if (startSite) {
                     $('#intro').hide();
-                    $('#page').fadeIn(2000);        
+                    //$('#page').fadeIn(2000);        
                     $skip.hide();
                     console.log("Opening Animation finished");
                 }
@@ -66,12 +69,14 @@ $skip.click( function() {
             $thisH.delay(waitForIt).animate({ 
                 paddingLeft: '30%',
             }, totaltime);
-            
             $thisImg.delay(waitForIt).animate({
                 width: "70%",
                 marginTop: "0vh"
             }, totaltime);
         }
+        $thisTitle.children("img").delay(waitForIt).animate({
+            margin: "0 .5%"
+        }, totaltime);
         return this;
    }; 
 })( jQuery );
@@ -90,17 +95,18 @@ $(document).ready(function(){
     
     // Hide/show appropriate sections
     $('#characters, #cosmology, #samples, #author, #contact').hide();
-    
     //Initiate animated opener sections -> REWRITE
-    if (getCookie("seenit") != "true") {
+    if (getCookie("seenit") != "true" || getParameterByName("an") == "1") {
         $("#page").hide();
         $('#intro').show();
         $skip.show();
         $('#intro').animate({ 
             backgroundPositionX: '100%',
             backgroundPositionY: '100%',
-        }, 24000, function() {
+        }, 28000, function() {
             $('#intro').fadeOut(2000);
+            $('.skip').fadeOut(1000);
+            $('#page').show();
             // setCookie("seenit", "true", 1);
         });
         for (var i=0;i<$openers.length;i++) {
@@ -424,4 +430,14 @@ function scrubSlideShow ( forward, obj, press ) {
         $parent.children("nav").children(".carousel-playpause").children(".carousel-pause").hide();
         $parent.children("nav").children(".carousel-playpause").children(".carousel-play").show();
     }
+}
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    url = url.toLowerCase(); // This is just to avoid case sensitiveness  
+    name = name.replace(/[\[\]]/g, "\\$&").toLowerCase();// This is just to avoid case sensitiveness for query parameter name
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
