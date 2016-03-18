@@ -1168,7 +1168,12 @@ a.character {
   }
 }
 @media screen and (orientation: landscape) and (max-width: 1000px) {
-  /* line 870, css.scss */
+  /* line 868, css.scss */
+  #modal {
+    padding-bottom: 25%;
+    max-height: 90%;
+  }
+  /* line 872, css.scss */
   #modal .introduction img, #modal .characters img, #modal .definitions img, #modal .other-card img {
     float: left !important;
     margin-right: 3% !important;
@@ -1177,7 +1182,7 @@ a.character {
   }
 }
 @media screen and (orientation: landscape) and (max-width: 700px) {
-  /* line 882, css.scss */
+  /* line 884, css.scss */
   #modal .introduction img, #modal .characters img, #modal .definitions img, #modal .other-card img {
     padding: 5px;
     width: 100px;
@@ -1185,7 +1190,7 @@ a.character {
   }
 }
 @media screen and (orientation: landscape) and (max-width: 1000px) {
-  /* line 892, css.scss */
+  /* line 894, css.scss */
   #author > div img, #contact > div img {
     float: left !important;
     margin-right: 3% !important;
@@ -1194,7 +1199,7 @@ a.character {
   }
 }
 @media screen and (orientation: landscape) and (max-width: 700px) {
-  /* line 902, css.scss */
+  /* line 904, css.scss */
   #author > div img, #contact > div img {
     padding: 5px;
     width: 100px;
@@ -1204,26 +1209,26 @@ a.character {
 /************************************************************
     SAMPLES PAGE
  ************************************************************/
-/* line 913, css.scss */
+/* line 915, css.scss */
 #samples {
   text-align: center;
 }
-/* line 915, css.scss */
+/* line 917, css.scss */
 #samples .other-card {
   min-height: 500px;
 }
 
-/* line 919, css.scss */
+/* line 921, css.scss */
 #sample-menu {
   display: none;
 }
 
-/* line 922, css.scss */
+/* line 924, css.scss */
 .sample-thumbs {
   width: 100px;
   height: 150px;
 }
-/* line 925, css.scss */
+/* line 927, css.scss */
 .sample-thumbs img {
   width: 100%;
   height: 100%;
@@ -1231,30 +1236,30 @@ a.character {
 }
 
 @keyframes fadeout {
-  /* line 932, css.scss */
+  /* line 934, css.scss */
   from {
     opacity: 1;
   }
 
-  /* line 933, css.scss */
+  /* line 935, css.scss */
   to {
     opacity: 0;
   }
 }
 
 @keyframes fadein {
-  /* line 936, css.scss */
+  /* line 938, css.scss */
   from {
     opacity: 0;
   }
 
-  /* line 937, css.scss */
+  /* line 939, css.scss */
   to {
     opacity: 1;
   }
 }
 
-/* line 939, css.scss */
+/* line 941, css.scss */
 .sample-carousel {
   display: inline-block;
   width: 100%;
@@ -1265,13 +1270,13 @@ a.character {
   height: 500px;
   background-color: darkred;
 }
-/* line 948, css.scss */
+/* line 950, css.scss */
 .sample-carousel:hover nav.carousel-controls {
   opacity: 1;
   animation-name: fadein;
   animation-duration: .5s;
 }
-/* line 953, css.scss */
+/* line 955, css.scss */
 .sample-carousel .carousel-slide {
   position: absolute;
   vertical-align: top;
@@ -1282,13 +1287,13 @@ a.character {
   height: 100%;
   padding: 0;
 }
-/* line 962, css.scss */
+/* line 964, css.scss */
 .sample-carousel .carousel-slide * {
   position: relative;
   padding-left: 0;
   padding-right: 0;
 }
-/* line 967, css.scss */
+/* line 969, css.scss */
 .sample-carousel .carousel-slide img {
   width: auto;
   height: 100%;
@@ -1297,31 +1302,31 @@ a.character {
   background-color: black;
   opacity: .5;
 }
-/* line 976, css.scss */
+/* line 978, css.scss */
 .sample-carousel .carousel-slide h1 i, .sample-carousel .carousel-slide h2 i, .sample-carousel .carousel-slide h3 i, .sample-carousel .carousel-slide h4 i, .sample-carousel .carousel-slide h5 i {
   font-size: .4em;
   float: right;
   padding: 1.4em 3px 0 0;
   color: grey;
 }
-/* line 983, css.scss */
+/* line 985, css.scss */
 .sample-carousel .carousel-slide button {
   margin-left: 0;
 }
-/* line 986, css.scss */
+/* line 988, css.scss */
 .sample-carousel .carousel-slide .text-box {
   position: relative;
   z-index: 10;
   height: 100px;
   overflow: hidden;
 }
-/* line 991, css.scss */
+/* line 993, css.scss */
 .sample-carousel .carousel-slide .text-box p {
   position: absolute;
   z-index: 1;
   padding: 0;
 }
-/* line 996, css.scss */
+/* line 998, css.scss */
 .sample-carousel .carousel-slide .text-box div {
   display: inline-block;
   width: 100%;
@@ -1333,7 +1338,7 @@ a.character {
   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* line 1009, css.scss */
+/* line 1011, css.scss */
 nav.carousel-controls {
   height: 20px;
   opacity: 0;
@@ -1349,60 +1354,60 @@ nav.carousel-controls {
   background-color: rgba(0, 100, 100, 0.5);
   border: solid green 1px;
 }
-/* line 1023, css.scss */
+/* line 1025, css.scss */
 nav.carousel-controls ul {
   display: inline-block;
   padding: 0;
   margin: 0;
   font-size: 0;
 }
-/* line 1029, css.scss */
+/* line 1031, css.scss */
 nav.carousel-controls .car-btn {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin: 0 2.5px;
 }
-/* line 1035, css.scss */
+/* line 1037, css.scss */
 nav.carousel-controls .car-btn:hover {
   cursor: pointer;
 }
-/* line 1039, css.scss */
+/* line 1041, css.scss */
 nav.carousel-controls .carousel-back, nav.carousel-controls .carousel-forward {
   background-size: 200% 100%;
   background-position: top left;
 }
-/* line 1042, css.scss */
+/* line 1044, css.scss */
 nav.carousel-controls .carousel-back:hover, nav.carousel-controls .carousel-forward:hover {
   background-position: top right;
 }
-/* line 1046, css.scss */
+/* line 1048, css.scss */
 nav.carousel-controls .carousel-back {
   background-image: url(../images/left-arrow-full.png);
 }
-/* line 1049, css.scss */
+/* line 1051, css.scss */
 nav.carousel-controls .car-slide-btn {
   border: solid white 1px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.4);
 }
-/* line 1053, css.scss */
+/* line 1055, css.scss */
 nav.carousel-controls .car-slide-btn:hover {
   background-color: white;
 }
-/* line 1057, css.scss */
+/* line 1059, css.scss */
 nav.carousel-controls .carousel-pause {
   height: 10px;
   width: 10px;
   border-left: solid rgba(255, 255, 255, 0.7) 4px;
   border-right: solid rgba(255, 255, 255, 0.7) 4px;
 }
-/* line 1062, css.scss */
+/* line 1064, css.scss */
 nav.carousel-controls .carousel-pause:hover {
   border-left: solid white 4px;
   border-right: solid white 4px;
 }
-/* line 1067, css.scss */
+/* line 1069, css.scss */
 nav.carousel-controls .carousel-play {
   height: 10px;
   width: 10px;
@@ -1412,11 +1417,11 @@ nav.carousel-controls .carousel-play {
   border-right-width: 0;
   border-left-color: rgba(255, 255, 255, 0.7);
 }
-/* line 1075, css.scss */
+/* line 1077, css.scss */
 nav.carousel-controls .carousel-play:hover {
   border-left-color: white;
 }
-/* line 1079, css.scss */
+/* line 1081, css.scss */
 nav.carousel-controls .carousel-forward {
   background-image: url(../images/right-arrow-full.png);
 }
@@ -1424,11 +1429,11 @@ nav.carousel-controls .carousel-forward {
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 1090, css.scss */
+/* line 1092, css.scss */
 #author > div img {
   content: url("../images/brandon.jpg");
 }
-/* line 1093, css.scss */
+/* line 1095, css.scss */
 #author > div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1436,17 +1441,17 @@ nav.carousel-controls .carousel-forward {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1104, css.scss */
+/* line 1106, css.scss */
 #contact > div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1107, css.scss */
+/* line 1109, css.scss */
 #contact > div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1111, css.scss */
+/* line 1113, css.scss */
 #contact > div a:hover {
   text-decoration: underline;
 }
@@ -1454,29 +1459,29 @@ nav.carousel-controls .carousel-forward {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1121, css.scss */
+/* line 1123, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1124, css.scss */
+/* line 1126, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1127, css.scss */
+/* line 1129, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1129, css.scss */
+/* line 1131, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1133, css.scss */
+/* line 1135, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1136, css.scss */
+/* line 1138, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1487,119 +1492,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1146, css.scss */
+/* line 1148, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1148, css.scss */
+/* line 1150, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1152, css.scss */
+/* line 1154, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1154, css.scss */
+/* line 1156, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1158, css.scss */
+/* line 1160, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1160, css.scss */
+/* line 1162, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1164, css.scss */
+/* line 1166, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1166, css.scss */
+/* line 1168, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1170, css.scss */
+/* line 1172, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1172, css.scss */
+/* line 1174, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1180, css.scss */
+  /* line 1182, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1182, css.scss */
+  /* line 1184, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1185, css.scss */
+  /* line 1187, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1188, css.scss */
+  /* line 1190, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1193, css.scss */
+  /* line 1195, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1198, css.scss */
+  /* line 1200, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1200, css.scss */
+  /* line 1202, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1204, css.scss */
+  /* line 1206, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1206, css.scss */
+  /* line 1208, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1210, css.scss */
+  /* line 1212, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1212, css.scss */
+  /* line 1214, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1216, css.scss */
+  /* line 1218, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1218, css.scss */
+  /* line 1220, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1222, css.scss */
+  /* line 1224, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1224, css.scss */
+  /* line 1226, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1229, css.scss */
+  /* line 1231, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1233, css.scss */
+  /* line 1235, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;

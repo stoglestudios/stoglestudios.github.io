@@ -462,7 +462,7 @@ a.character {
         }
     }
 }
-@media screen and (max-width: 800px) /*and (orientation: portrait)*/ {
+@media screen and (max-width: 800px) {
     #premise {
         .introduction {
             .left, .right {
@@ -866,6 +866,8 @@ a.character {
 }
 @media screen and (orientation: landscape) and (max-width: 1000px)  {
     #modal {
+        padding-bottom: 25%;
+        max-height: 90%;
         .introduction, .characters, .definitions, .other-card {
             img {
                 float: left !important;
