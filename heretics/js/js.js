@@ -8,13 +8,12 @@ var contactStart = 0;
 
 // Objects
 var $openers = [
-    [$('#all'), "all", "Who Will Control it All?", "caster"],
-    [$('#title'), "title", "There Are Two Sides to Every Story...", "heretics"],
     [$('#evil'), "evil", "What Does it Mean to be Evil?", "beast"],
     [$('#love'), "love", "When is Love too Powerfull?", "johnny"],
     [$('#hero'), "hero", "When Does One Become a Hero?", "kingsley"],
-    [$('#world'), "world", "Where Can Hope Be Found?", "hecate"]
-    
+    [$('#world'), "world", "Where Can Hope Be Found?", "hecate"],
+    [$('#all'), "all", "Who Will Control it All?", "caster"],
+    [$('#title'), "title", "There Are Two Sides to Every Story...", "heretics"],
 ];
 var $intro = $('#intro');
 var $skip = $(".skip");
