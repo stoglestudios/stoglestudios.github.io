@@ -481,68 +481,72 @@ footer:after {
   footer .copyright a {
     font-size: 1em;
   }
+  /* line 421, css.scss */
+  footer .copyright a:first-child {
+    font-size: 1.1em;
+  }
 }
 @media (max-width: 700px) and (orientation: portrait) {
-  /* line 426, css.scss */
+  /* line 429, css.scss */
   #gaius h1 {
     font-size: 3em;
     margin-bottom: 10px;
   }
 
-  /* line 432, css.scss */
+  /* line 435, css.scss */
   #container h1:not(:first-child) {
     margin-top: 50px;
   }
-  /* line 435, css.scss */
+  /* line 438, css.scss */
   #container h1 {
     font-size: 3em;
   }
-  /* line 438, css.scss */
+  /* line 441, css.scss */
   #container h2 {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 750px) {
-  /* line 446, css.scss */
+  /* line 449, css.scss */
   #container h1 {
     text-align: center;
   }
-  /* line 449, css.scss */
+  /* line 452, css.scss */
   #container h2 {
     text-align: center;
     padding: 2% 2% 0;
   }
-  /* line 453, css.scss */
+  /* line 456, css.scss */
   #container a {
     display: block;
     text-align: center;
   }
-  /* line 458, css.scss */
+  /* line 461, css.scss */
   #container .long-description:not(.illustration) h3, #container .short-description h3 {
     text-align: center;
   }
-  /* line 461, css.scss */
+  /* line 464, css.scss */
   #container .long-description:not(.illustration) img, #container .short-description img {
     width: 100%;
     margin: 0 0 4% 0;
   }
-  /* line 465, css.scss */
+  /* line 468, css.scss */
   #container .long-description:not(.illustration) img.thumb, #container .short-description img.thumb {
     float: left;
     vertical-align: top;
     width: 100px;
   }
 
-  /* line 473, css.scss */
+  /* line 476, css.scss */
   footer .copyright {
     width: 100%;
     float: none;
   }
-  /* line 476, css.scss */
+  /* line 479, css.scss */
   footer .copyright a {
     text-align: center;
   }
-  /* line 480, css.scss */
+  /* line 483, css.scss */
   footer #socnet {
     margin-top: 25px;
     text-align: center;
@@ -550,38 +554,38 @@ footer:after {
   }
 }
 @media (max-width: 650px) {
-  /* line 488, css.scss */
+  /* line 491, css.scss */
   body {
     font-size: .8em;
   }
 
-  /* line 491, css.scss */
+  /* line 494, css.scss */
   header li a div {
     display: inline-block;
   }
 
-  /* line 494, css.scss */
+  /* line 497, css.scss */
   header li a {
     width: 30px;
     height: 30px;
     margin: 0 5px;
   }
 
-  /* line 499, css.scss */
+  /* line 502, css.scss */
   #container .short-description {
     width: 47%;
   }
-  /* line 501, css.scss */
+  /* line 504, css.scss */
   #container .short-description p {
     font-size: 12px;
   }
 }
 @media (max-width: 700px) and (orientation: landscape) {
-  /* line 507, css.scss */
+  /* line 510, css.scss */
   #container .short-description {
     width: 22%;
   }
-  /* line 509, css.scss */
+  /* line 512, css.scss */
   #container .short-description p {
     font-size: 12px;
   }

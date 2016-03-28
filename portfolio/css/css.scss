@@ -418,6 +418,9 @@ header {
     footer {
         .copyright a {
             font-size: 1em;
+            &:first-child {
+                font-size: 1.1em;
+            }
         }
     }
 }
