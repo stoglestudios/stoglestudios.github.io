@@ -491,10 +491,10 @@ function scrubSlideShow ( forward, obj, press ) {
         if($prev.hasClass("first-sample")){
             $(".sample-menu li:nth-child(1)").addClass("highlighted");
             $(".slide-btns li.first").addClass("cur-pages");
-        } else if ($next.hasClass("second-sample")) {
+        } else if ($prev.hasClass("second-sample")) {
             $(".sample-menu li:nth-child(2)").addClass("highlighted");
             $(".slide-btns li.second").addClass("cur-pages");
-        } else if ($next.hasClass("third-sample")) {
+        } else if ($prev.hasClass("third-sample")) {
             $(".sample-menu li:nth-child(3)").addClass("highlighted");
             $(".slide-btns li.third").addClass("cur-pages");
         }
