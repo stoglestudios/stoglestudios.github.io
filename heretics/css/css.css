@@ -1278,115 +1278,203 @@ a.character {
 }
 
 /* line 975, css.scss */
-#sample-menu {
-  display: none;
-}
-
-/* line 978, css.scss */
-.sample-thumbs {
-  width: 100px;
-  height: 150px;
-}
-/* line 981, css.scss */
-.sample-thumbs img {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-@keyframes fadeout {
-  /* line 988, css.scss */
-  from {
-    opacity: 1;
-  }
-
-  /* line 989, css.scss */
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fadein {
-  /* line 992, css.scss */
-  from {
-    opacity: 0;
-  }
-
-  /* line 993, css.scss */
-  to {
-    opacity: 1;
-  }
-}
-
-/* line 995, css.scss */
-.sample-carousel {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 10px;
-  overflow: hidden;
-  position: relative;
+.sample-menu {
+  text-align: center;
   padding: 0;
-  height: 500px;
+}
+/* line 978, css.scss */
+.sample-menu li {
+  display: inline-block;
+  color: white;
+  margin: 0 10px;
+  width: 10%;
+  max-width: 100px;
+  border: solid 2px transparent;
+}
+/* line 985, css.scss */
+.sample-menu li img {
+  width: 100%;
+  height: auto;
+}
+/* line 988, css.scss */
+.sample-menu li img:hover {
   background-color: darkred;
 }
-/* line 1004, css.scss */
-.sample-carousel:hover nav.carousel-controls {
-  opacity: 1;
-  animation-name: fadein;
-  animation-duration: .5s;
+/* line 992, css.scss */
+.sample-menu li:nth-child(1) {
+  border-color: #960000;
 }
-/* line 1009, css.scss */
-.sample-carousel .carousel-slide {
+/* line 995, css.scss */
+.sample-menu li:nth-child(2) {
+  border-color: black;
+}
+/* line 998, css.scss */
+.sample-menu li:nth-child(3) {
+  border-color: #c84600;
+}
+/* line 1001, css.scss */
+.sample-menu li.highlighted {
+  width: 11%;
+  max-width: 110px;
+}
+
+/* line 1007, css.scss */
+.news-carousel {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 25px 0;
+  background-color: none;
+  text-align: center;
+}
+/* line 1016, css.scss */
+.news-carousel div {
+  display: inline-block;
+}
+/* line 1019, css.scss */
+.news-carousel img.sizer {
+  float: left;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  opacity: 0;
+}
+/* line 1026, css.scss */
+.news-carousel .carousel-slide {
   position: absolute;
+  display: inline-block;
   vertical-align: top;
+  text-align: center;
+  z-index: 100;
   top: 0;
   left: 100%;
-  display: inline-block;
   width: 100%;
-  height: 100%;
   padding: 0;
 }
-/* line 1018, css.scss */
-.sample-carousel .carousel-slide * {
+/* line 1036, css.scss */
+.news-carousel .carousel-slide .page-col {
   position: relative;
-  padding-left: 0;
-  padding-right: 0;
+  max-width: 500px;
 }
-/* line 1023, css.scss */
-.sample-carousel .carousel-slide img {
-  width: auto;
-  height: 100%;
+/* line 1040, css.scss */
+.news-carousel .carousel-slide .page-box {
+  position: relative;
+  margin: auto;
+}
+/* line 1043, css.scss */
+.news-carousel .carousel-slide .page-box img {
+  float: left;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+/* line 1051, css.scss */
+.news-carousel .carousel-slide .page-box:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+/* line 1056, css.scss */
+.news-carousel .carousel-slide .page-box .speech-bubble, .news-carousel .carousel-slide .page-box .caption-bubble {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 1059, css.scss */
+.news-carousel .carousel-slide .page-box .speech-bubble:hover, .news-carousel .carousel-slide .page-box .caption-bubble:hover {
+  box-shadow: 0 0 5px 5px red;
+}
+/* line 1063, css.scss */
+.news-carousel .carousel-slide .page-box .speech-bubble {
+  border-radius: 50%;
+}
+/* line 1066, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text, .news-carousel .carousel-slide .page-box .caption-text {
+  position: absolute;
+  display: none;
+  margin: 10px;
+  box-shadow: 0 0 5px black;
+  max-width: 400px;
+}
+/* line 1072, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text span, .news-carousel .carousel-slide .page-box .caption-text span {
   display: inline-block;
-  overflow: hidden;
-  background-color: black;
-  opacity: .5;
+  padding-top: 10px;
+  font-weight: 900;
 }
-/* line 1032, css.scss */
-.sample-carousel .carousel-slide h1 i, .sample-carousel .carousel-slide h2 i, .sample-carousel .carousel-slide h3 i, .sample-carousel .carousel-slide h4 i, .sample-carousel .carousel-slide h5 i {
+/* line 1077, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text p, .news-carousel .carousel-slide .page-box .caption-text p {
+  padding: 10px;
+}
+/* line 1080, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text.br, .news-carousel .carousel-slide .page-box .caption-text.br {
+  bottom: 0;
+  right: 0;
+}
+/* line 1084, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text.bl, .news-carousel .carousel-slide .page-box .caption-text.bl {
+  bottom: 0;
+  left: 0;
+}
+/* line 1088, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text.tr, .news-carousel .carousel-slide .page-box .caption-text.tr {
+  top: 0;
+  right: 0;
+}
+/* line 1092, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text.tl, .news-carousel .carousel-slide .page-box .caption-text.tl {
+  top: 0;
+  left: 0;
+}
+/* line 1096, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text .next-bubble, .news-carousel .carousel-slide .page-box .caption-text .next-bubble {
+  color: dimgrey;
+  font-style: italic;
+  opacity: .6;
+}
+/* line 1100, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text .next-bubble:hover, .news-carousel .carousel-slide .page-box .caption-text .next-bubble:hover {
+  opacity: 1;
+}
+/* line 1105, css.scss */
+.news-carousel .carousel-slide .page-box .speech-text {
+  border-radius: 10px;
+  background-color: white;
+}
+/* line 1109, css.scss */
+.news-carousel .carousel-slide .page-box .caption-text {
+  border-radius: none;
+  background-color: bisque;
+}
+/* line 1115, css.scss */
+.news-carousel .carousel-slide h1 i, .news-carousel .carousel-slide h2 i, .news-carousel .carousel-slide h3 i, .news-carousel .carousel-slide h4 i, .news-carousel .carousel-slide h5 i {
   font-size: .4em;
   float: right;
   padding: 1.4em 3px 0 0;
   color: grey;
 }
-/* line 1039, css.scss */
-.sample-carousel .carousel-slide button {
+/* line 1122, css.scss */
+.news-carousel .carousel-slide button {
   margin-left: 0;
 }
-/* line 1042, css.scss */
-.sample-carousel .carousel-slide .text-box {
+/* line 1125, css.scss */
+.news-carousel .carousel-slide .text-box {
   position: relative;
   z-index: 10;
   height: 100px;
   overflow: hidden;
 }
-/* line 1047, css.scss */
-.sample-carousel .carousel-slide .text-box p {
+/* line 1130, css.scss */
+.news-carousel .carousel-slide .text-box p {
   position: absolute;
   z-index: 1;
   padding: 0;
 }
-/* line 1052, css.scss */
-.sample-carousel .carousel-slide .text-box div {
+/* line 1135, css.scss */
+.news-carousel .carousel-slide .text-box div {
   display: inline-block;
   width: 100%;
   bottom: 0;
@@ -1397,102 +1485,148 @@ a.character {
   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* line 1065, css.scss */
+/* line 1148, css.scss */
 nav.carousel-controls {
-  height: 20px;
-  opacity: 0;
-  animation-name: fadeout;
-  animation-duration: .5s;
-  padding: 0 5px;
-  display: inline-block;
-  border-radius: 10px;
-  position: absolute;
-  z-index: 9000;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(0, 100, 100, 0.5);
-  border: solid green 1px;
+  clear: both;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  z-index: 900;
 }
-/* line 1079, css.scss */
-nav.carousel-controls ul {
-  display: inline-block;
-  padding: 0;
+/* line 1155, css.scss */
+nav.carousel-controls ul.slide-btns {
   margin: 0;
-  font-size: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap !important;
+  /* prevent word wrap */
 }
-/* line 1085, css.scss */
+/* line 1162, css.scss */
+nav.carousel-controls ul.slide-btns li {
+  display: inline-block;
+  margin: 0 5px;
+}
+/* line 1167, css.scss */
 nav.carousel-controls .car-btn {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 2.5px;
+  margin: 0 1%;
+  vertical-align: top;
 }
-/* line 1091, css.scss */
+/* line 1173, css.scss */
 nav.carousel-controls .car-btn:hover {
   cursor: pointer;
 }
-/* line 1095, css.scss */
-nav.carousel-controls .carousel-back, nav.carousel-controls .carousel-forward {
-  background-size: 200% 100%;
-  background-position: top left;
+/* line 1178, css.scss */
+nav.carousel-controls .carousel-back:after, nav.carousel-controls .carousel-forward:after {
+  font-size: 1.5em;
+  line-height: 0em;
+  font-weight: 900;
+  color: #960000;
 }
-/* line 1098, css.scss */
-nav.carousel-controls .carousel-back:hover, nav.carousel-controls .carousel-forward:hover {
-  background-position: top right;
+/* line 1184, css.scss */
+nav.carousel-controls .carousel-back:hover:after, nav.carousel-controls .carousel-forward:hover:after {
+  color: red;
 }
-/* line 1102, css.scss */
-nav.carousel-controls .carousel-back {
-  background-image: url(../images/left-arrow-full.png);
+/* line 1189, css.scss */
+nav.carousel-controls .carousel-back:after {
+  content: "<";
 }
-/* line 1105, css.scss */
+/* line 1193, css.scss */
 nav.carousel-controls .car-slide-btn {
-  border: solid white 1px;
+  border: solid red 1px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
 }
-/* line 1109, css.scss */
+/* line 1196, css.scss */
 nav.carousel-controls .car-slide-btn:hover {
-  background-color: white;
+  background-color: red;
 }
-/* line 1113, css.scss */
+/* line 1200, css.scss */
+nav.carousel-controls .car-slide-btn.first {
+  border-color: #960000;
+  background-color: rgba(150, 0, 0, 0.7);
+}
+/* line 1203, css.scss */
+nav.carousel-controls .car-slide-btn.first:hover {
+  background-color: #960000;
+}
+/* line 1207, css.scss */
+nav.carousel-controls .car-slide-btn.second {
+  border-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 1210, css.scss */
+nav.carousel-controls .car-slide-btn.second:hover {
+  background-color: black;
+}
+/* line 1214, css.scss */
+nav.carousel-controls .car-slide-btn.third {
+  border-color: #c84600;
+  background-color: rgba(200, 70, 0, 0.7);
+}
+/* line 1217, css.scss */
+nav.carousel-controls .car-slide-btn.third:hover {
+  background-color: #c84600;
+}
+/* line 1221, css.scss */
+nav.carousel-controls .car-slide-btn.cur-slide {
+  background-color: #fac800;
+}
+/* line 1224, css.scss */
 nav.carousel-controls .carousel-pause {
+  float: left;
   height: 10px;
   width: 10px;
-  border-left: solid rgba(255, 255, 255, 0.7) 4px;
-  border-right: solid rgba(255, 255, 255, 0.7) 4px;
+  border-left: solid #960000 4px;
+  border-right: solid #960000 4px;
 }
-/* line 1118, css.scss */
+/* line 1230, css.scss */
 nav.carousel-controls .carousel-pause:hover {
-  border-left: solid white 4px;
-  border-right: solid white 4px;
+  border-left: solid red 4px;
+  border-right: solid red 4px;
 }
-/* line 1123, css.scss */
+/* line 1235, css.scss */
 nav.carousel-controls .carousel-play {
+  float: left;
   height: 10px;
   width: 10px;
   display: none;
   border: solid transparent 5px;
   border-left-width: 9px;
   border-right-width: 0;
-  border-left-color: rgba(255, 255, 255, 0.7);
+  border-left-color: #960000;
 }
-/* line 1131, css.scss */
+/* line 1244, css.scss */
 nav.carousel-controls .carousel-play:hover {
-  border-left-color: white;
+  border-left-color: red;
 }
-/* line 1135, css.scss */
-nav.carousel-controls .carousel-forward {
-  background-image: url(../images/right-arrow-full.png);
+/* line 1249, css.scss */
+nav.carousel-controls .carousel-forward:after {
+  content: ">";
 }
 
+@media screen and (max-width: 1000px) {
+  /* line 1257, css.scss */
+  nav.carousel-controls ul.slide-btns li {
+    display: none;
+  }
+  /* line 1260, css.scss */
+  nav.carousel-controls ul.slide-btns .cur-pages {
+    display: inline-block;
+  }
+}
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 1146, css.scss */
+/* line 1273, css.scss */
 #author > div img {
   content: url("../images/brandon.jpg");
 }
-/* line 1149, css.scss */
+/* line 1276, css.scss */
 #author > div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1500,17 +1634,17 @@ nav.carousel-controls .carousel-forward {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1160, css.scss */
+/* line 1287, css.scss */
 #contact > div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1163, css.scss */
+/* line 1290, css.scss */
 #contact > div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1167, css.scss */
+/* line 1294, css.scss */
 #contact > div a:hover {
   text-decoration: underline;
 }
@@ -1518,29 +1652,29 @@ nav.carousel-controls .carousel-forward {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1177, css.scss */
+/* line 1304, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1180, css.scss */
+/* line 1307, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1183, css.scss */
+/* line 1310, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1185, css.scss */
+/* line 1312, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1189, css.scss */
+/* line 1316, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1192, css.scss */
+/* line 1319, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1551,119 +1685,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1202, css.scss */
+/* line 1329, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1204, css.scss */
+/* line 1331, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1208, css.scss */
+/* line 1335, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1210, css.scss */
+/* line 1337, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1214, css.scss */
+/* line 1341, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1216, css.scss */
+/* line 1343, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1220, css.scss */
+/* line 1347, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1222, css.scss */
+/* line 1349, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1226, css.scss */
+/* line 1353, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1228, css.scss */
+/* line 1355, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1236, css.scss */
+  /* line 1363, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1238, css.scss */
+  /* line 1365, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1241, css.scss */
+  /* line 1368, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1244, css.scss */
+  /* line 1371, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1249, css.scss */
+  /* line 1376, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1254, css.scss */
+  /* line 1381, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1256, css.scss */
+  /* line 1383, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1260, css.scss */
+  /* line 1387, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1262, css.scss */
+  /* line 1389, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1266, css.scss */
+  /* line 1393, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1268, css.scss */
+  /* line 1395, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1272, css.scss */
+  /* line 1399, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1274, css.scss */
+  /* line 1401, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1278, css.scss */
+  /* line 1405, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1280, css.scss */
+  /* line 1407, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1285, css.scss */
+  /* line 1412, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1289, css.scss */
+  /* line 1416, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;
