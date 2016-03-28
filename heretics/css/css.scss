@@ -980,27 +980,32 @@ a.character {
         color: white;
         margin: 0 $bleed;
         width: 10%;
-        max-width: 100px;
-        border: solid 2px transparent;
+        padding: 0;
+        vertical-align: middle;
         img {
             width: 100%;
+            max-width: 100px;
             height: auto;
+            margin: 0;
+            border: solid 2px transparent;
             &:hover {
                 background-color: darkred;
             }
         }
-        &:nth-child(1) {
+        &:nth-child(1) img {
             border-color: rgba(150,0,0,1);
         }
-        &:nth-child(2) {
+        &:nth-child(2) img {
             border-color: rgba(0,0,0,1);
         }
-        &:nth-child(3) {
+        &:nth-child(3) img {
             border-color: rgba(200,70,0,1);
         }
         &.highlighted {
             width: 11%;
-            max-width: 110px;
+            img {
+                max-width: 110px;
+            }
         }
     }
 } 
