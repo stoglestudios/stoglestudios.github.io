@@ -361,7 +361,7 @@ $(".news-carousel").each(function(){
         $(".speech-text, .caption-text").hide();
         $this.siblings($this.data("bubble")).show();
     });
-    $(".next-bubble").on("click", function(e){ // <-------------------------------------------------UPDATED
+    $(".next-bubble").on("click", function(e){ // <----------------------------------------UD:v3
         e.stopPropagation();
         var $this = $(this).parents("p").parent("div");
         var $parent = $this.parents(".news-carousel");
@@ -383,7 +383,7 @@ $(".news-carousel").each(function(){
             } 
         });
     });
-    $(".next-page").on("click", function(e){ // <-------------------------------------------------------NEW
+    $(".next-page").on("click", function(e){ // <-----------------------------------------------NEW:v3
         e.stopPropagation();
         var $this = $(this).parents(".carousel-slide");
         var $parent = $this.parents(".news-carousel");
@@ -396,40 +396,63 @@ $(".news-carousel").each(function(){
         $(".speech-text, .caption-text").hide();
     });
     /* SWIPE LEFT / RIGHT */
-    $(document).on("touchstart", ".carousel-slide", function(event){ // <----------------------------------NEW
+    $(document).on("touchstart", ".carousel-slide", function(event){ // <----------------------------NEW:v3
         startX = event.originalEvent.touches[0].pageX ? event.originalEvent.touches[0].pageX : 0;
     });
-    $(document).on("touchmove", ".carousel-slide", function(event){ // <------------------------------------NEW
+    $(document).on("touchmove", ".carousel-slide", function(event){ // <-----------------------------NEW:v3
         endX = event.originalEvent.touches[0].pageX ? event.originalEvent.touches[0].pageX : 0;
     });
-    $(document).on("touchend", ".carousel-slide", function(event){ // <-------------------------------------NEW
+    $(document).on("touchend", ".carousel-slide", function(event){ // <---------------------------NEW:V3 - UD:V4
+        var $this = $(this);
+        if ( $this.hasClass("carousel-slide1") ){
+            var $prev = $(".carousel-slide" + $(".carousel-slide").length );
+        } else {
+            //the last one
+            var $prev = $this.prev();
+        }
+        if ( $this.next() && $this.next().prop('tagName').toLowerCase() == "img" ) {
+            var $next = $(".carousel-slide1");
+        } else {
+            var $next = $this.next();
+        }
         if ( typeof(endX) != "undefined" ) {
             if ( endX-10 > startX ) {
                 //alert("Prev Page! - drag to left");
-                advanceSlideShow ( $(this).prev() )
+                advanceSlideShow ( $prev )
             } else if ( endX+10 < startX ) {
                 //alert("Next Page! - drag to right");
-                advanceSlideShow ( $(this).next() )
+                advanceSlideShow ( $next )
             }
         }
         delete startX;
         delete endX;
     });
-    $(document).on("mousedown", ".carousel-slide", function(event){ // <--------------------------------------NEW
+    $(document).on("mousedown", ".carousel-slide", function(event){ // <--------------------------NEW:v3
         startMouseX = event.pageX ? event.pageX : 0;
         event.preventDefault();
     });
-    $(document).on("mousemove", ".carousel-slide", function(event){ // <----------------------------------NEW
+    $(document).on("mousemove", ".carousel-slide", function(event){ // <--------------------------NEW:v3
         endMouseX = event.pageX ? event.pageX : 0;
     });
-    $(document).on("mouseup", ".carousel-slide", function(event){ // <---------------------------------------NEW
+    $(document).on("mouseup", ".carousel-slide", function(event){ // <-------------------------NEW:V3 - UD:V4
+        var $this = $(this);
+        if ( $this.hasClass("carousel-slide1") ){
+            var $prev = $(".carousel-slide" + $(".carousel-slide").length );
+        } else {
+            var $prev = $this.prev();
+        }    
+        if ( $this.next() && $this.next().prop('tagName').toLowerCase() == "img" ) {
+            var $next = $(".carousel-slide1");
+        } else {
+            var $next = $this.next();
+        }
         if ( typeof(endMouseX) != "undefined" ) {
             if ( endMouseX-10 > startMouseX ) {
                 //alert("Prev Page! - drag to left");
-                advanceSlideShow ( $(this).prev() )
+                advanceSlideShow ( $prev )
             } else if ( endMouseX+10 < startMouseX ) {
                 //alert("Next Page! - drag to right");
-                advanceSlideShow ( $(this).next() )
+                advanceSlideShow ( $next )
             }
         }
         delete startMouseX;
