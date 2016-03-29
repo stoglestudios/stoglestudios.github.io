@@ -362,6 +362,9 @@ $(".news-carousel").each(function(){
         $this = $(this);
         $(".speech-text, .caption-text").hide();
         $this.siblings($this.data("bubble")).show();
+        var $parent = $this.parents(".news-carousel");
+        $parent.children("nav").children(".carousel-playpause").children(".carousel-pause").hide();
+        $parent.children("nav").children(".carousel-playpause").children(".carousel-play").show();
     });
     $(".next-bubble").on("click", function(e){ // <----------------------------------------UD:v3
         e.stopPropagation();
