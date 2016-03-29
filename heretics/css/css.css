@@ -1418,11 +1418,15 @@ a.character {
 .news-carousel .carousel-slide .page-box .speech-bubble:hover, .news-carousel .carousel-slide .page-box .caption-bubble:hover {
   box-shadow: 0 0 5px 5px red;
 }
-/* line 1088, css.scss */
+/* line 1087, css.scss */
+.news-carousel .carousel-slide .page-box .speech-bubble.hl-bubble, .news-carousel .carousel-slide .page-box .caption-bubble.hl-bubble {
+  box-shadow: 0 0 5px 5px red;
+}
+/* line 1091, css.scss */
 .news-carousel .carousel-slide .page-box .speech-bubble {
   border-radius: 50%;
 }
-/* line 1091, css.scss */
+/* line 1094, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text, .news-carousel .carousel-slide .page-box .caption-text {
   position: absolute;
   display: none;
@@ -1433,38 +1437,38 @@ a.character {
   max-width: 400px;
   font-size: 1em;
 }
-/* line 1100, css.scss */
+/* line 1103, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text span, .news-carousel .carousel-slide .page-box .caption-text span {
   display: inline-block;
   padding: 0 0 10px;
   font-weight: 900;
 }
-/* line 1105, css.scss */
+/* line 1108, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text p, .news-carousel .carousel-slide .page-box .caption-text p {
   margin: 0;
   padding: 0 0 10px;
 }
-/* line 1109, css.scss */
+/* line 1112, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.br, .news-carousel .carousel-slide .page-box .caption-text.br {
   bottom: 0;
   right: 0;
 }
-/* line 1113, css.scss */
+/* line 1116, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.bl, .news-carousel .carousel-slide .page-box .caption-text.bl {
   bottom: 0;
   left: 0;
 }
-/* line 1117, css.scss */
+/* line 1120, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.tr, .news-carousel .carousel-slide .page-box .caption-text.tr {
   top: 0;
   right: 0;
 }
-/* line 1121, css.scss */
+/* line 1124, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.tl, .news-carousel .carousel-slide .page-box .caption-text.tl {
   top: 0;
   left: 0;
 }
-/* line 1125, css.scss */
+/* line 1128, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text .next-bubble, .news-carousel .carousel-slide .page-box .speech-text .next-page, .news-carousel .carousel-slide .page-box .caption-text .next-bubble, .news-carousel .carousel-slide .page-box .caption-text .next-page {
   color: red;
   font-style: italic;
@@ -1474,45 +1478,45 @@ a.character {
   text-align: center;
   padding-top: 10px;
 }
-/* line 1133, css.scss */
+/* line 1136, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text .next-bubble:hover, .news-carousel .carousel-slide .page-box .speech-text .next-page:hover, .news-carousel .carousel-slide .page-box .caption-text .next-bubble:hover, .news-carousel .carousel-slide .page-box .caption-text .next-page:hover {
   opacity: 1;
 }
-/* line 1138, css.scss */
+/* line 1141, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text {
   border-radius: 50%;
   background-color: white;
 }
-/* line 1143, css.scss */
+/* line 1146, css.scss */
 .news-carousel .carousel-slide .page-box .caption-text {
   border-radius: none;
   background-color: bisque;
 }
-/* line 1149, css.scss */
+/* line 1152, css.scss */
 .news-carousel .carousel-slide h1 i, .news-carousel .carousel-slide h2 i, .news-carousel .carousel-slide h3 i, .news-carousel .carousel-slide h4 i, .news-carousel .carousel-slide h5 i {
   font-size: .4em;
   float: right;
   padding: 1.4em 3px 0 0;
   color: grey;
 }
-/* line 1156, css.scss */
+/* line 1159, css.scss */
 .news-carousel .carousel-slide button {
   margin-left: 0;
 }
-/* line 1159, css.scss */
+/* line 1162, css.scss */
 .news-carousel .carousel-slide .text-box {
   position: relative;
   z-index: 10;
   height: 100px;
   overflow: hidden;
 }
-/* line 1164, css.scss */
+/* line 1167, css.scss */
 .news-carousel .carousel-slide .text-box p {
   position: absolute;
   z-index: 1;
   padding: 0;
 }
-/* line 1169, css.scss */
+/* line 1172, css.scss */
 .news-carousel .carousel-slide .text-box div {
   display: inline-block;
   width: 100%;
@@ -1524,7 +1528,7 @@ a.character {
   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* line 1182, css.scss */
+/* line 1185, css.scss */
 nav.carousel-controls {
   clear: both;
   position: relative;
@@ -1534,7 +1538,7 @@ nav.carousel-controls {
   z-index: 900;
   margin-top: 0;
 }
-/* line 1190, css.scss */
+/* line 1193, css.scss */
 nav.carousel-controls ul.slide-btns {
   margin: 0;
   padding: 0;
@@ -1544,12 +1548,12 @@ nav.carousel-controls ul.slide-btns {
   white-space: nowrap !important;
   /* prevent word wrap */
 }
-/* line 1197, css.scss */
+/* line 1200, css.scss */
 nav.carousel-controls ul.slide-btns li {
   display: inline-block;
   margin: 0 5px;
 }
-/* line 1202, css.scss */
+/* line 1205, css.scss */
 nav.carousel-controls .car-btn {
   display: inline-block;
   width: 12px;
@@ -1557,17 +1561,17 @@ nav.carousel-controls .car-btn {
   margin: 0 1%;
   vertical-align: top;
 }
-/* line 1208, css.scss */
+/* line 1211, css.scss */
 nav.carousel-controls .car-btn:hover {
   cursor: pointer;
 }
-/* line 1212, css.scss */
+/* line 1215, css.scss */
 nav.carousel-controls .carousel-back, nav.carousel-controls .carousel-forward {
   position: relative;
   line-height: 12px;
   height: 12px;
 }
-/* line 1216, css.scss */
+/* line 1219, css.scss */
 nav.carousel-controls .carousel-back:after, nav.carousel-controls .carousel-forward:after {
   position: absolute;
   top: -2px;
@@ -1576,76 +1580,76 @@ nav.carousel-controls .carousel-back:after, nav.carousel-controls .carousel-forw
   font-weight: 900;
   color: #960000;
 }
-/* line 1224, css.scss */
+/* line 1227, css.scss */
 nav.carousel-controls .carousel-back:hover:after, nav.carousel-controls .carousel-forward:hover:after {
   color: red;
 }
-/* line 1229, css.scss */
+/* line 1232, css.scss */
 nav.carousel-controls .carousel-back:after {
   content: "<";
 }
-/* line 1233, css.scss */
+/* line 1236, css.scss */
 nav.carousel-controls .car-slide-btn {
   border: solid red 1px;
   border-radius: 50%;
 }
-/* line 1236, css.scss */
+/* line 1239, css.scss */
 nav.carousel-controls .car-slide-btn:hover {
   background-color: red;
 }
-/* line 1240, css.scss */
+/* line 1243, css.scss */
 nav.carousel-controls .car-slide-btn.first {
   border-color: #960000;
   background-color: rgba(150, 0, 0, 0.7);
 }
-/* line 1243, css.scss */
+/* line 1246, css.scss */
 nav.carousel-controls .car-slide-btn.first:hover {
   background-color: #960000;
 }
-/* line 1247, css.scss */
+/* line 1250, css.scss */
 nav.carousel-controls .car-slide-btn.second {
   border-color: black;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 1250, css.scss */
+/* line 1253, css.scss */
 nav.carousel-controls .car-slide-btn.second:hover {
   background-color: black;
 }
-/* line 1254, css.scss */
+/* line 1257, css.scss */
 nav.carousel-controls .car-slide-btn.third {
   border-color: #c84600;
   background-color: rgba(200, 70, 0, 0.7);
 }
-/* line 1257, css.scss */
+/* line 1260, css.scss */
 nav.carousel-controls .car-slide-btn.third:hover {
   background-color: #c84600;
 }
-/* line 1261, css.scss */
+/* line 1264, css.scss */
 nav.carousel-controls .car-slide-btn.cur-slide {
   background-color: #fac800;
 }
-/* line 1263, css.scss */
+/* line 1266, css.scss */
 nav.carousel-controls .car-slide-btn.cur-slide:hover {
   background-color: #fac800;
   cursor: default;
 }
-/* line 1268, css.scss */
+/* line 1271, css.scss */
 nav.carousel-controls .carousel-pause, nav.carousel-controls .carousel-play {
   float: left;
   height: 12px;
   width: 12px;
 }
-/* line 1273, css.scss */
+/* line 1276, css.scss */
 nav.carousel-controls .carousel-pause {
   border-left: solid #960000 4px;
   border-right: solid #960000 4px;
 }
-/* line 1276, css.scss */
+/* line 1279, css.scss */
 nav.carousel-controls .carousel-pause:hover {
   border-left: solid red 4px;
   border-right: solid red 4px;
 }
-/* line 1281, css.scss */
+/* line 1284, css.scss */
 nav.carousel-controls .carousel-play {
   display: none;
   border: solid transparent 5px;
@@ -1653,27 +1657,27 @@ nav.carousel-controls .carousel-play {
   border-right-width: 0;
   border-left-color: #960000;
 }
-/* line 1287, css.scss */
+/* line 1290, css.scss */
 nav.carousel-controls .carousel-play:hover {
   border-left-color: red;
 }
-/* line 1292, css.scss */
+/* line 1295, css.scss */
 nav.carousel-controls .carousel-forward:after {
   content: ">";
 }
 
 @media screen and (max-width: 700px) {
-  /* line 1300, css.scss */
+  /* line 1303, css.scss */
   nav.carousel-controls ul.slide-btns li {
     display: none;
   }
-  /* line 1303, css.scss */
+  /* line 1306, css.scss */
   nav.carousel-controls ul.slide-btns .cur-pages {
     display: inline-block;
   }
 }
 @media screen and (max-width: 800px) and (orientation: landscape) {
-  /* line 1310, css.scss */
+  /* line 1313, css.scss */
   .speech-text, .caption-text {
     max-height: 65vh;
     width: 250px;
@@ -1682,11 +1686,11 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 1322, css.scss */
+/* line 1325, css.scss */
 #author > div img {
   content: url("../images/brandon.jpg");
 }
-/* line 1325, css.scss */
+/* line 1328, css.scss */
 #author > div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1694,17 +1698,17 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1336, css.scss */
+/* line 1339, css.scss */
 #contact > div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1339, css.scss */
+/* line 1342, css.scss */
 #contact > div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1343, css.scss */
+/* line 1346, css.scss */
 #contact > div a:hover {
   text-decoration: underline;
 }
@@ -1712,29 +1716,29 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1353, css.scss */
+/* line 1356, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1356, css.scss */
+/* line 1359, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1359, css.scss */
+/* line 1362, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1361, css.scss */
+/* line 1364, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1365, css.scss */
+/* line 1368, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1368, css.scss */
+/* line 1371, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1745,119 +1749,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1378, css.scss */
+/* line 1381, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1380, css.scss */
+/* line 1383, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1384, css.scss */
+/* line 1387, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1386, css.scss */
+/* line 1389, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1390, css.scss */
+/* line 1393, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1392, css.scss */
+/* line 1395, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1396, css.scss */
+/* line 1399, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1398, css.scss */
+/* line 1401, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1402, css.scss */
+/* line 1405, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1404, css.scss */
+/* line 1407, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1412, css.scss */
+  /* line 1415, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1414, css.scss */
+  /* line 1417, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1417, css.scss */
+  /* line 1420, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1420, css.scss */
+  /* line 1423, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1425, css.scss */
+  /* line 1428, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1430, css.scss */
+  /* line 1433, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1432, css.scss */
+  /* line 1435, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1436, css.scss */
+  /* line 1439, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1438, css.scss */
+  /* line 1441, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1442, css.scss */
+  /* line 1445, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1444, css.scss */
+  /* line 1447, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1448, css.scss */
+  /* line 1451, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1450, css.scss */
+  /* line 1453, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1454, css.scss */
+  /* line 1457, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1456, css.scss */
+  /* line 1459, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1461, css.scss */
+  /* line 1464, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1465, css.scss */
+  /* line 1468, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;
