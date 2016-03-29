@@ -1271,18 +1271,21 @@ a.character {
 /* line 969, css.scss */
 #samples {
   text-align: center;
+  height: 100vh;
+  min-height: 100%;
+  max-height: 100vh;
 }
-/* line 971, css.scss */
+/* line 974, css.scss */
 #samples .other-card {
-  min-height: 500px;
+  height: 100vh;
 }
 
-/* line 975, css.scss */
+/* line 978, css.scss */
 .sample-menu {
   text-align: center;
   padding: 0;
 }
-/* line 978, css.scss */
+/* line 981, css.scss */
 .sample-menu li {
   display: inline-block;
   color: white;
@@ -1291,7 +1294,7 @@ a.character {
   padding: 0;
   vertical-align: middle;
 }
-/* line 985, css.scss */
+/* line 988, css.scss */
 .sample-menu li img {
   width: 100%;
   max-width: 100px;
@@ -1299,32 +1302,32 @@ a.character {
   margin: 0;
   border: solid 2px transparent;
 }
-/* line 991, css.scss */
+/* line 994, css.scss */
 .sample-menu li img:hover {
   background-color: darkred;
 }
-/* line 995, css.scss */
+/* line 998, css.scss */
 .sample-menu li:nth-child(1) img {
   border-color: #960000;
 }
-/* line 998, css.scss */
+/* line 1001, css.scss */
 .sample-menu li:nth-child(2) img {
   border-color: black;
 }
-/* line 1001, css.scss */
+/* line 1004, css.scss */
 .sample-menu li:nth-child(3) img {
   border-color: #c84600;
 }
-/* line 1004, css.scss */
+/* line 1007, css.scss */
 .sample-menu li.highlighted {
   width: 11%;
 }
-/* line 1006, css.scss */
+/* line 1009, css.scss */
 .sample-menu li.highlighted img {
   max-width: 110px;
 }
 
-/* line 1012, css.scss */
+/* line 1015, css.scss */
 .news-carousel {
   display: inline-block;
   position: relative;
@@ -1335,19 +1338,20 @@ a.character {
   background-color: none;
   text-align: center;
 }
-/* line 1021, css.scss */
+/* line 1024, css.scss */
 .news-carousel div {
   display: inline-block;
 }
-/* line 1024, css.scss */
+/* line 1027, css.scss */
 .news-carousel img.sizer {
   float: left;
   width: 100%;
   max-width: 500px;
+  max-height: 60vh;
   margin-bottom: 25px;
   opacity: 0;
 }
-/* line 1031, css.scss */
+/* line 1035, css.scss */
 .news-carousel .carousel-slide {
   position: absolute;
   display: inline-block;
@@ -1359,45 +1363,45 @@ a.character {
   width: 100%;
   padding: 0;
 }
-/* line 1041, css.scss */
+/* line 1045, css.scss */
 .news-carousel .carousel-slide .page-col {
   position: relative;
   max-width: 500px;
 }
-/* line 1045, css.scss */
+/* line 1049, css.scss */
 .news-carousel .carousel-slide .page-box {
   position: relative;
   margin: auto;
 }
-/* line 1048, css.scss */
+/* line 1052, css.scss */
 .news-carousel .carousel-slide .page-box img {
   float: left;
   position: relative;
   z-index: 0;
-  width: 100%;
   max-width: 500px;
+  max-height: 60vh;
   height: auto;
 }
-/* line 1056, css.scss */
+/* line 1060, css.scss */
 .news-carousel .carousel-slide .page-box:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 1061, css.scss */
+/* line 1065, css.scss */
 .news-carousel .carousel-slide .page-box .speech-bubble, .news-carousel .carousel-slide .page-box .caption-bubble {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 1064, css.scss */
+/* line 1068, css.scss */
 .news-carousel .carousel-slide .page-box .speech-bubble:hover, .news-carousel .carousel-slide .page-box .caption-bubble:hover {
   box-shadow: 0 0 5px 5px red;
 }
-/* line 1068, css.scss */
+/* line 1072, css.scss */
 .news-carousel .carousel-slide .page-box .speech-bubble {
   border-radius: 50%;
 }
-/* line 1071, css.scss */
+/* line 1075, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text, .news-carousel .carousel-slide .page-box .caption-text {
   position: absolute;
   display: none;
@@ -1405,81 +1409,81 @@ a.character {
   box-shadow: 0 0 5px black;
   max-width: 400px;
 }
-/* line 1077, css.scss */
+/* line 1081, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text span, .news-carousel .carousel-slide .page-box .caption-text span {
   display: inline-block;
   padding-top: 10px;
   font-weight: 900;
 }
-/* line 1082, css.scss */
+/* line 1086, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text p, .news-carousel .carousel-slide .page-box .caption-text p {
   padding: 10px;
 }
-/* line 1085, css.scss */
+/* line 1089, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.br, .news-carousel .carousel-slide .page-box .caption-text.br {
   bottom: 0;
   right: 0;
 }
-/* line 1089, css.scss */
+/* line 1093, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.bl, .news-carousel .carousel-slide .page-box .caption-text.bl {
   bottom: 0;
   left: 0;
 }
-/* line 1093, css.scss */
+/* line 1097, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.tr, .news-carousel .carousel-slide .page-box .caption-text.tr {
   top: 0;
   right: 0;
 }
-/* line 1097, css.scss */
+/* line 1101, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text.tl, .news-carousel .carousel-slide .page-box .caption-text.tl {
   top: 0;
   left: 0;
 }
-/* line 1101, css.scss */
+/* line 1105, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text .next-bubble, .news-carousel .carousel-slide .page-box .caption-text .next-bubble {
   color: dimgrey;
   font-style: italic;
   opacity: .6;
 }
-/* line 1105, css.scss */
+/* line 1109, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text .next-bubble:hover, .news-carousel .carousel-slide .page-box .caption-text .next-bubble:hover {
   opacity: 1;
 }
-/* line 1110, css.scss */
+/* line 1114, css.scss */
 .news-carousel .carousel-slide .page-box .speech-text {
   border-radius: 10px;
   background-color: white;
 }
-/* line 1114, css.scss */
+/* line 1118, css.scss */
 .news-carousel .carousel-slide .page-box .caption-text {
   border-radius: none;
   background-color: bisque;
 }
-/* line 1120, css.scss */
+/* line 1124, css.scss */
 .news-carousel .carousel-slide h1 i, .news-carousel .carousel-slide h2 i, .news-carousel .carousel-slide h3 i, .news-carousel .carousel-slide h4 i, .news-carousel .carousel-slide h5 i {
   font-size: .4em;
   float: right;
   padding: 1.4em 3px 0 0;
   color: grey;
 }
-/* line 1127, css.scss */
+/* line 1131, css.scss */
 .news-carousel .carousel-slide button {
   margin-left: 0;
 }
-/* line 1130, css.scss */
+/* line 1134, css.scss */
 .news-carousel .carousel-slide .text-box {
   position: relative;
   z-index: 10;
   height: 100px;
   overflow: hidden;
 }
-/* line 1135, css.scss */
+/* line 1139, css.scss */
 .news-carousel .carousel-slide .text-box p {
   position: absolute;
   z-index: 1;
   padding: 0;
 }
-/* line 1140, css.scss */
+/* line 1144, css.scss */
 .news-carousel .carousel-slide .text-box div {
   display: inline-block;
   width: 100%;
@@ -1491,7 +1495,7 @@ a.character {
   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* line 1153, css.scss */
+/* line 1157, css.scss */
 nav.carousel-controls {
   clear: both;
   position: relative;
@@ -1500,7 +1504,7 @@ nav.carousel-controls {
   text-align: center;
   z-index: 900;
 }
-/* line 1160, css.scss */
+/* line 1164, css.scss */
 nav.carousel-controls ul.slide-btns {
   margin: 0;
   padding: 0;
@@ -1510,12 +1514,12 @@ nav.carousel-controls ul.slide-btns {
   white-space: nowrap !important;
   /* prevent word wrap */
 }
-/* line 1167, css.scss */
+/* line 1171, css.scss */
 nav.carousel-controls ul.slide-btns li {
   display: inline-block;
   margin: 0 5px;
 }
-/* line 1172, css.scss */
+/* line 1176, css.scss */
 nav.carousel-controls .car-btn {
   display: inline-block;
   width: 10px;
@@ -1523,66 +1527,66 @@ nav.carousel-controls .car-btn {
   margin: 0 1%;
   vertical-align: top;
 }
-/* line 1178, css.scss */
+/* line 1182, css.scss */
 nav.carousel-controls .car-btn:hover {
   cursor: pointer;
 }
-/* line 1183, css.scss */
+/* line 1187, css.scss */
 nav.carousel-controls .carousel-back:after, nav.carousel-controls .carousel-forward:after {
   font-size: 1.5em;
   line-height: 0em;
   font-weight: 900;
   color: #960000;
 }
-/* line 1189, css.scss */
+/* line 1193, css.scss */
 nav.carousel-controls .carousel-back:hover:after, nav.carousel-controls .carousel-forward:hover:after {
   color: red;
 }
-/* line 1194, css.scss */
+/* line 1198, css.scss */
 nav.carousel-controls .carousel-back:after {
   content: "<";
 }
-/* line 1198, css.scss */
+/* line 1202, css.scss */
 nav.carousel-controls .car-slide-btn {
   border: solid red 1px;
   border-radius: 5px;
 }
-/* line 1201, css.scss */
+/* line 1205, css.scss */
 nav.carousel-controls .car-slide-btn:hover {
   background-color: red;
 }
-/* line 1205, css.scss */
+/* line 1209, css.scss */
 nav.carousel-controls .car-slide-btn.first {
   border-color: #960000;
   background-color: rgba(150, 0, 0, 0.7);
 }
-/* line 1208, css.scss */
+/* line 1212, css.scss */
 nav.carousel-controls .car-slide-btn.first:hover {
   background-color: #960000;
 }
-/* line 1212, css.scss */
+/* line 1216, css.scss */
 nav.carousel-controls .car-slide-btn.second {
   border-color: black;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 1215, css.scss */
+/* line 1219, css.scss */
 nav.carousel-controls .car-slide-btn.second:hover {
   background-color: black;
 }
-/* line 1219, css.scss */
+/* line 1223, css.scss */
 nav.carousel-controls .car-slide-btn.third {
   border-color: #c84600;
   background-color: rgba(200, 70, 0, 0.7);
 }
-/* line 1222, css.scss */
+/* line 1226, css.scss */
 nav.carousel-controls .car-slide-btn.third:hover {
   background-color: #c84600;
 }
-/* line 1226, css.scss */
+/* line 1230, css.scss */
 nav.carousel-controls .car-slide-btn.cur-slide {
   background-color: #fac800;
 }
-/* line 1229, css.scss */
+/* line 1233, css.scss */
 nav.carousel-controls .carousel-pause {
   float: left;
   height: 10px;
@@ -1590,12 +1594,12 @@ nav.carousel-controls .carousel-pause {
   border-left: solid #960000 4px;
   border-right: solid #960000 4px;
 }
-/* line 1235, css.scss */
+/* line 1239, css.scss */
 nav.carousel-controls .carousel-pause:hover {
   border-left: solid red 4px;
   border-right: solid red 4px;
 }
-/* line 1240, css.scss */
+/* line 1244, css.scss */
 nav.carousel-controls .carousel-play {
   float: left;
   height: 10px;
@@ -1606,21 +1610,21 @@ nav.carousel-controls .carousel-play {
   border-right-width: 0;
   border-left-color: #960000;
 }
-/* line 1249, css.scss */
+/* line 1253, css.scss */
 nav.carousel-controls .carousel-play:hover {
   border-left-color: red;
 }
-/* line 1254, css.scss */
+/* line 1258, css.scss */
 nav.carousel-controls .carousel-forward:after {
   content: ">";
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 1262, css.scss */
+  /* line 1266, css.scss */
   nav.carousel-controls ul.slide-btns li {
     display: none;
   }
-  /* line 1265, css.scss */
+  /* line 1269, css.scss */
   nav.carousel-controls ul.slide-btns .cur-pages {
     display: inline-block;
   }
@@ -1628,11 +1632,11 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 1278, css.scss */
+/* line 1282, css.scss */
 #author > div img {
   content: url("../images/brandon.jpg");
 }
-/* line 1281, css.scss */
+/* line 1285, css.scss */
 #author > div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1640,17 +1644,17 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1292, css.scss */
+/* line 1296, css.scss */
 #contact > div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1295, css.scss */
+/* line 1299, css.scss */
 #contact > div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1299, css.scss */
+/* line 1303, css.scss */
 #contact > div a:hover {
   text-decoration: underline;
 }
@@ -1658,29 +1662,29 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1309, css.scss */
+/* line 1313, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1312, css.scss */
+/* line 1316, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1315, css.scss */
+/* line 1319, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1317, css.scss */
+/* line 1321, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1321, css.scss */
+/* line 1325, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1324, css.scss */
+/* line 1328, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1691,119 +1695,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1334, css.scss */
+/* line 1338, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1336, css.scss */
+/* line 1340, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1340, css.scss */
+/* line 1344, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1342, css.scss */
+/* line 1346, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1346, css.scss */
+/* line 1350, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1348, css.scss */
+/* line 1352, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1352, css.scss */
+/* line 1356, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1354, css.scss */
+/* line 1358, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1358, css.scss */
+/* line 1362, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1360, css.scss */
+/* line 1364, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1368, css.scss */
+  /* line 1372, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1370, css.scss */
+  /* line 1374, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1373, css.scss */
+  /* line 1377, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1376, css.scss */
+  /* line 1380, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1381, css.scss */
+  /* line 1385, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1386, css.scss */
+  /* line 1390, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1388, css.scss */
+  /* line 1392, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1392, css.scss */
+  /* line 1396, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1394, css.scss */
+  /* line 1398, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1398, css.scss */
+  /* line 1402, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1400, css.scss */
+  /* line 1404, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1404, css.scss */
+  /* line 1408, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1406, css.scss */
+  /* line 1410, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1410, css.scss */
+  /* line 1414, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1412, css.scss */
+  /* line 1416, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1417, css.scss */
+  /* line 1421, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1421, css.scss */
+  /* line 1425, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;
