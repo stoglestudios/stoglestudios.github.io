@@ -532,12 +532,18 @@ a.character {
     CHARACTER PAGE
  ************************************************************/
 
+#characters {
+    height: 98%;
+    min-height: 98vh;
+    max-height: 98vh;
+}
 #character-app {
+    margin-top: 3vh;
     position: relative;
     display: none;
-    height: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
+    height: 96%;
+    min-height: 96vh;
+    max-height: 96vh;
     width: 94%;
     border-radius: $gutter;
     padding: $bleed;
@@ -659,7 +665,11 @@ a.character {
 /************************************************************
     COSMOLOGY PAGE
  ************************************************************/
-
+#cosmology {
+    height: 98%;
+    min-height: 98vh;
+    max-height: 98vh;
+}
 #cosmological-map {
     display: none;
     border-radius: $gutter;
@@ -667,8 +677,10 @@ a.character {
     position: relative;
     background: url("../images/HereticsCosMap_BG.jpg") no-repeat center;
     background-size: 100% 100%;
-    height: 100vh;
-    min-height: 100%;
+    height: 96vh;
+    min-height: 96%;
+    max-height: 96vh;
+    margin-top: 2%;
     overflow: hidden;
     .realm {
         position: absolute;
@@ -968,27 +980,31 @@ a.character {
 
 #samples {
     text-align: center;
-    height: 100vh;
-    min-height: 100%;
-    max-height: 100vh;
+    height: 98vh;
+    min-height: 98%;
+    max-height: 98vh;
     .other-card {
-        height: 100vh;
+        height: 96vh;
+        padding: 2vh 0 0;
     }
 }
 .sample-menu {
+    margin-top: 2vh;
     text-align: center;
     padding: 0;
+    height: 12vh;
+    overflow: hidden;
     li {
         display: inline-block;
         color: white;
         margin: 0 $bleed;
-        width: 10%;
+        height: 90%;
         padding: 0;
         vertical-align: middle;
         img {
-            width: 100%;
-            max-width: 100px;
-            height: auto;
+            height: 100%;
+            max-height: 100px;
+            width: auto;
             margin: 0;
             border: solid 2px transparent;
             &:hover {
@@ -1005,9 +1021,9 @@ a.character {
             border-color: rgba(200,70,0,1);
         }
         &.highlighted {
-            width: 11%;
+            height: 100%;
             img {
-                max-width: 110px;
+                max-height: 110px;
             }
         }
     }
@@ -1018,7 +1034,7 @@ a.character {
     overflow: hidden;
     width: 100%;
     padding: 0;
-    margin: $gutter 0;
+    margin: $bleed 0 0;
     background-color: none;
     text-align: center;
     div {
@@ -1028,8 +1044,8 @@ a.character {
         float: left;
         width: 100%;
         max-width: 500px;
-        max-height: 60vh;
-        margin-bottom: $gutter;
+        max-height: 68vh;
+        margin-bottom: $bleed;
         opacity: 0;
     }
     .carousel-slide {
@@ -1054,7 +1070,7 @@ a.character {
                 position: relative;
                 z-index: 0;
                 max-width: 500px;
-                max-height: 60vh;
+                max-height: 68vh;
                 height: auto;
             }
             &:after {
@@ -1064,7 +1080,7 @@ a.character {
             }
             .speech-bubble, .caption-bubble {
                 position: absolute;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255,255,255,0);
                 &:hover {
                     box-shadow: 0 0 5px 5px rgba(255,0,0,1);
                 }
@@ -1076,15 +1092,19 @@ a.character {
                 position: absolute;
                 display: none;
                 margin: $bleed;
+                padding: $bleed $gutter;
+                border: solid black 2px;
                 box-shadow: 0 0 5px black;
                 max-width: 400px;
+                font-size: 1em;
                 span {
                     display: inline-block;
-                    padding-top: $bleed;
+                    padding: 0 0 $bleed;
                     font-weight: 900;
                 }
                 p {
-                    padding: $bleed;
+                    margin: 0;
+                    padding: 0 0 $bleed;
                 }
                 &.br {
                     bottom: 0;
@@ -1102,17 +1122,22 @@ a.character {
                     top: 0;
                     left: 0;
                 }
-                .next-bubble {
-                    color: dimgrey;
+                .next-bubble, .next-page {
+                    color: red;
                     font-style: italic;
                     opacity: .6;
+                    clear: both;
+                    display: block;
+                    text-align: center;
+                    padding-top: $bleed;
                     &:hover {
                         opacity: 1;
                     }
                 }
             }
             .speech-text {
-                border-radius: $bleed;
+                //border-radius: $gutter*2;
+                border-radius: 50%;
                 background-color: white;
             }
             .caption-text {
@@ -1161,6 +1186,7 @@ nav.carousel-controls {
     width: 100%;
     text-align: center;
     z-index: 900;
+    margin-top: 0;
     ul.slide-btns {
         margin: 0;
         padding: 0;
@@ -1270,6 +1296,12 @@ nav.carousel-controls {
                 display: inline-block;
             }
         }
+    }
+}
+@media screen and (max-width: 800px) and (orientation:landscape) {
+    .speech-text, .caption-text {
+        max-height: 65vh;
+        width: 250px;
     }
 }
 
