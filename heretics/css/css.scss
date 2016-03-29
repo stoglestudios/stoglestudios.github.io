@@ -1201,8 +1201,8 @@ nav.carousel-controls {
     }
     .car-btn {
         display: inline-block;
-        width: $bleed;
-        height: $bleed;
+        width: 12px;
+        height: 12px;
         margin: 0 1%;
         vertical-align: top;
         &:hover {
@@ -1210,9 +1210,14 @@ nav.carousel-controls {
         }
     }
     .carousel-back, .carousel-forward {
+        position: relative;
+        line-height: 12px;
+        height: 12px;
         &:after {
-            font-size: 1.5em;
-            line-height: 0em;
+            position: absolute;
+            top: -2px;
+            left: 1px;
+            font-size: 18px;
             font-weight: 900;
             color: rgba(150,0,0,1);
         }
@@ -1227,7 +1232,7 @@ nav.carousel-controls {
     }
     .car-slide-btn {
         border: solid red 1px;
-        border-radius: $bleed/2;
+        border-radius: 50%;
         &:hover {
             background-color: rgba(255,0,0,1);
         }
@@ -1255,11 +1260,17 @@ nav.carousel-controls {
     }
     .car-slide-btn.cur-slide {
         background-color: rgba(250,200,0,1);
+        &:hover {
+            background-color: rgba(250,200,0,1);
+            cursor: default;
+        }
+    }
+    .carousel-pause, .carousel-play {
+        float: left;
+        height: 12px;
+        width: 12px;
     }
     .carousel-pause {
-        float: left;
-        height: $bleed;
-        width: $bleed;
         border-left: solid rgba(150,0,0,1) 4px;
         border-right: solid rgba(150,0,0,1) 4px;
         &:hover {
@@ -1268,9 +1279,6 @@ nav.carousel-controls {
         }
     }
     .carousel-play {
-        float: left;
-        height: $bleed;
-        width: $bleed;
         display: none;
         border: solid transparent $bleed/2;
         border-left-width: $bleed - 1;
@@ -1286,7 +1294,7 @@ nav.carousel-controls {
         }
     }
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:700px) {
     nav.carousel-controls {
         ul.slide-btns {
             li {

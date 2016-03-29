@@ -326,7 +326,9 @@ $(".news-carousel").each(function(){
         })
         $(".carousel-" + carNum + " .car-slide-btn").on("click", function() {
             $t = $(this);
-            advanceSlideShow( $t.data("target-slide") );
+            if ( $($t.data("target-slide")).css("left") != "0px" ){
+                advanceSlideShow( $t.data("target-slide") );
+            }
         });
         $(".carousel-" + carNum + " .carousel-back").on("click", function() {
             scrubSlideShow ( false, $(this), true );
@@ -487,8 +489,6 @@ function advanceSlideShow ( target ) {
         $(".sample-menu li:nth-child(3)").addClass("highlighted");
         $(".slide-btns li.third").addClass("cur-pages");
     }
-    
-    
     if ( goForward ) {
         $targetSlide.css("left", "100%").animate({
             left: "0%"

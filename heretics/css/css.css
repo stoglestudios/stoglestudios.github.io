@@ -1552,8 +1552,8 @@ nav.carousel-controls ul.slide-btns li {
 /* line 1202, css.scss */
 nav.carousel-controls .car-btn {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   margin: 0 1%;
   vertical-align: top;
 }
@@ -1561,106 +1561,119 @@ nav.carousel-controls .car-btn {
 nav.carousel-controls .car-btn:hover {
   cursor: pointer;
 }
-/* line 1213, css.scss */
+/* line 1212, css.scss */
+nav.carousel-controls .carousel-back, nav.carousel-controls .carousel-forward {
+  position: relative;
+  line-height: 12px;
+  height: 12px;
+}
+/* line 1216, css.scss */
 nav.carousel-controls .carousel-back:after, nav.carousel-controls .carousel-forward:after {
-  font-size: 1.5em;
-  line-height: 0em;
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  font-size: 18px;
   font-weight: 900;
   color: #960000;
 }
-/* line 1219, css.scss */
+/* line 1224, css.scss */
 nav.carousel-controls .carousel-back:hover:after, nav.carousel-controls .carousel-forward:hover:after {
   color: red;
 }
-/* line 1224, css.scss */
+/* line 1229, css.scss */
 nav.carousel-controls .carousel-back:after {
   content: "<";
 }
-/* line 1228, css.scss */
+/* line 1233, css.scss */
 nav.carousel-controls .car-slide-btn {
   border: solid red 1px;
-  border-radius: 5px;
+  border-radius: 50%;
 }
-/* line 1231, css.scss */
+/* line 1236, css.scss */
 nav.carousel-controls .car-slide-btn:hover {
   background-color: red;
 }
-/* line 1235, css.scss */
+/* line 1240, css.scss */
 nav.carousel-controls .car-slide-btn.first {
   border-color: #960000;
   background-color: rgba(150, 0, 0, 0.7);
 }
-/* line 1238, css.scss */
+/* line 1243, css.scss */
 nav.carousel-controls .car-slide-btn.first:hover {
   background-color: #960000;
 }
-/* line 1242, css.scss */
+/* line 1247, css.scss */
 nav.carousel-controls .car-slide-btn.second {
   border-color: black;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 1245, css.scss */
+/* line 1250, css.scss */
 nav.carousel-controls .car-slide-btn.second:hover {
   background-color: black;
 }
-/* line 1249, css.scss */
+/* line 1254, css.scss */
 nav.carousel-controls .car-slide-btn.third {
   border-color: #c84600;
   background-color: rgba(200, 70, 0, 0.7);
 }
-/* line 1252, css.scss */
+/* line 1257, css.scss */
 nav.carousel-controls .car-slide-btn.third:hover {
   background-color: #c84600;
 }
-/* line 1256, css.scss */
+/* line 1261, css.scss */
 nav.carousel-controls .car-slide-btn.cur-slide {
   background-color: #fac800;
 }
-/* line 1259, css.scss */
-nav.carousel-controls .carousel-pause {
+/* line 1263, css.scss */
+nav.carousel-controls .car-slide-btn.cur-slide:hover {
+  background-color: #fac800;
+  cursor: default;
+}
+/* line 1268, css.scss */
+nav.carousel-controls .carousel-pause, nav.carousel-controls .carousel-play {
   float: left;
-  height: 10px;
-  width: 10px;
+  height: 12px;
+  width: 12px;
+}
+/* line 1273, css.scss */
+nav.carousel-controls .carousel-pause {
   border-left: solid #960000 4px;
   border-right: solid #960000 4px;
 }
-/* line 1265, css.scss */
+/* line 1276, css.scss */
 nav.carousel-controls .carousel-pause:hover {
   border-left: solid red 4px;
   border-right: solid red 4px;
 }
-/* line 1270, css.scss */
+/* line 1281, css.scss */
 nav.carousel-controls .carousel-play {
-  float: left;
-  height: 10px;
-  width: 10px;
   display: none;
   border: solid transparent 5px;
   border-left-width: 9px;
   border-right-width: 0;
   border-left-color: #960000;
 }
-/* line 1279, css.scss */
+/* line 1287, css.scss */
 nav.carousel-controls .carousel-play:hover {
   border-left-color: red;
 }
-/* line 1284, css.scss */
+/* line 1292, css.scss */
 nav.carousel-controls .carousel-forward:after {
   content: ">";
 }
 
-@media screen and (max-width: 1000px) {
-  /* line 1292, css.scss */
+@media screen and (max-width: 700px) {
+  /* line 1300, css.scss */
   nav.carousel-controls ul.slide-btns li {
     display: none;
   }
-  /* line 1295, css.scss */
+  /* line 1303, css.scss */
   nav.carousel-controls ul.slide-btns .cur-pages {
     display: inline-block;
   }
 }
 @media screen and (max-width: 800px) and (orientation: landscape) {
-  /* line 1302, css.scss */
+  /* line 1310, css.scss */
   .speech-text, .caption-text {
     max-height: 65vh;
     width: 250px;
@@ -1669,11 +1682,11 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     AUTHOR PAGE
  ************************************************************/
-/* line 1314, css.scss */
+/* line 1322, css.scss */
 #author > div img {
   content: url("../images/brandon.jpg");
 }
-/* line 1317, css.scss */
+/* line 1325, css.scss */
 #author > div h1:after {
   content: "Brandon Gaius Ogle";
 }
@@ -1681,17 +1694,17 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     CONTACT PAGE
  ************************************************************/
-/* line 1328, css.scss */
+/* line 1336, css.scss */
 #contact > div img {
   content: url("../images/proposal.jpg");
 }
-/* line 1331, css.scss */
+/* line 1339, css.scss */
 #contact > div a {
   margin: 25px;
   color: darkred;
   font-size: 1.2em;
 }
-/* line 1335, css.scss */
+/* line 1343, css.scss */
 #contact > div a:hover {
   text-decoration: underline;
 }
@@ -1699,29 +1712,29 @@ nav.carousel-controls .carousel-forward:after {
 /************************************************************
     FOOTER
  ************************************************************/
-/* line 1345, css.scss */
+/* line 1353, css.scss */
 footer {
   border-top: solid 2px #ff9000;
   padding: 10px;
 }
-/* line 1348, css.scss */
+/* line 1356, css.scss */
 footer b {
   font-family: helvetica;
 }
-/* line 1351, css.scss */
+/* line 1359, css.scss */
 footer p {
   font-family: "Eagle Lake", cursive;
 }
-/* line 1353, css.scss */
+/* line 1361, css.scss */
 footer p:nth-child(1) {
   float: left;
   padding-right: 64px;
 }
-/* line 1357, css.scss */
+/* line 1365, css.scss */
 footer p:nth-child(2) {
   float: right;
 }
-/* line 1360, css.scss */
+/* line 1368, css.scss */
 footer p a {
   display: inline-block;
   vertical-align: middle;
@@ -1732,119 +1745,119 @@ footer p a {
   background-size: 900% 200%;
   margin-left: 10px;
 }
-/* line 1370, css.scss */
+/* line 1378, css.scss */
 footer p .fb {
   background-position: 0 0;
 }
-/* line 1372, css.scss */
+/* line 1380, css.scss */
 footer p .fb:hover {
   background-position: 0 -22px;
 }
-/* line 1376, css.scss */
+/* line 1384, css.scss */
 footer p .bl {
   background-position: -110px 0;
 }
-/* line 1378, css.scss */
+/* line 1386, css.scss */
 footer p .bl:hover {
   background-position: -110px -22px;
 }
-/* line 1382, css.scss */
+/* line 1390, css.scss */
 footer p .tw {
   background-position: -22px 0;
 }
-/* line 1384, css.scss */
+/* line 1392, css.scss */
 footer p .tw:hover {
   background-position: -22px -22px;
 }
-/* line 1388, css.scss */
+/* line 1396, css.scss */
 footer p .gl {
   background-position: -44px 0;
 }
-/* line 1390, css.scss */
+/* line 1398, css.scss */
 footer p .gl:hover {
   background-position: -44px -22px;
 }
-/* line 1394, css.scss */
+/* line 1402, css.scss */
 footer p .em {
   background-position: -88px 0;
 }
-/* line 1396, css.scss */
+/* line 1404, css.scss */
 footer p .em:hover {
   background-position: -88px -22px;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 1404, css.scss */
+  /* line 1412, css.scss */
   footer p {
     padding-bottom: 10px;
   }
-  /* line 1406, css.scss */
+  /* line 1414, css.scss */
   footer p:first-child {
     margin-right: -50%;
   }
-  /* line 1409, css.scss */
+  /* line 1417, css.scss */
   footer p:last-child {
     margin-left: -50%;
   }
-  /* line 1412, css.scss */
+  /* line 1420, css.scss */
   footer p span {
     text-align: left;
     padding-left: 10px;
     display: block;
   }
-  /* line 1417, css.scss */
+  /* line 1425, css.scss */
   footer p a {
     width: 33px;
     height: 33px;
     background-size: 900% 200%;
   }
-  /* line 1422, css.scss */
+  /* line 1430, css.scss */
   footer p .fb {
     background-position: 0 0;
   }
-  /* line 1424, css.scss */
+  /* line 1432, css.scss */
   footer p .fb:hover {
     background-position: 0 -33px;
   }
-  /* line 1428, css.scss */
+  /* line 1436, css.scss */
   footer p .bl {
     background-position: -165px 0;
   }
-  /* line 1430, css.scss */
+  /* line 1438, css.scss */
   footer p .bl:hover {
     background-position: -165px -33px;
   }
-  /* line 1434, css.scss */
+  /* line 1442, css.scss */
   footer p .tw {
     background-position: -33px 0;
   }
-  /* line 1436, css.scss */
+  /* line 1444, css.scss */
   footer p .tw:hover {
     background-position: -33px -33px;
   }
-  /* line 1440, css.scss */
+  /* line 1448, css.scss */
   footer p .gl {
     background-position: -66px 0;
   }
-  /* line 1442, css.scss */
+  /* line 1450, css.scss */
   footer p .gl:hover {
     background-position: -66px -33px;
   }
-  /* line 1446, css.scss */
+  /* line 1454, css.scss */
   footer p .em {
     background-position: -132px 0;
   }
-  /* line 1448, css.scss */
+  /* line 1456, css.scss */
   footer p .em:hover {
     background-position: -132px -33px;
   }
-  /* line 1453, css.scss */
+  /* line 1461, css.scss */
   footer .name-copy {
     float: none;
     clear: both;
     padding: 0;
   }
-  /* line 1457, css.scss */
+  /* line 1465, css.scss */
   footer .name-copy span {
     display: inline-block;
     clear: both;
