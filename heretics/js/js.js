@@ -401,6 +401,7 @@ $(".news-carousel").each(function(){
     });
     $("body, #samples").on("click", function(){
         $(".speech-text, .caption-text").hide();
+        $(".speech-bubble, .caption-bubble").removeClass("hl-bubble");
     });
     /* SWIPE LEFT / RIGHT */
     $(document).on("touchstart", ".carousel-slide", function(event){ // <----------------------------NEW:v3
