@@ -365,6 +365,8 @@ $(".news-carousel").each(function(){
         var $parent = $this.parents(".news-carousel");
         $parent.children("nav").children(".carousel-playpause").children(".carousel-pause").hide();
         $parent.children("nav").children(".carousel-playpause").children(".carousel-play").show();
+        $(".speech-bubble, .caption-bubble").removeClass("hl-bubble");
+        $this.addClass("hl-bubble");
     });
     $(".next-bubble").on("click", function(e){ // <----------------------------------------UD:v3
         e.stopPropagation();
@@ -513,6 +515,7 @@ function advanceSlideShow ( target ) {
             $($targetSlide.data("target-btn")).addClass("cur-slide");
         });
     }
+    $(".speech-bubble, .caption-bubble").removeClass("hl-bubble");
 }
 function scrubSlideShow ( forward, obj, press ) {
     var $button = obj;
@@ -588,6 +591,7 @@ function scrubSlideShow ( forward, obj, press ) {
         $parent.children("nav").children(".carousel-playpause").children(".carousel-pause").hide();
         $parent.children("nav").children(".carousel-playpause").children(".carousel-play").show();
     }
+    $(".speech-bubble, .caption-bubble").removeClass("hl-bubble");
 }
 
 function setCookie(cname, cvalue, exdays) {
