@@ -1,21 +1,17 @@
 [
     {
         "priority": 1,
-        "id": "kingsley",
         "fullname": "Special Agent Kingsley",
-        "thumbnail": "/img/kingsley.jpg",
-        "aka": "(aka The Trickster, the Devil)",
-        "description": "~/discriptions/kinglsey.txt",
-        "class": "characters"
+        "thumbnail": "/img/.jpg",
+        "aka": "",
+        "description": ""
     },
     {
         "priority": 2,
-        "id": "caster",
         "fullname": "Caster",
         "thumbnail": "/img/.jpg",
         "aka": "(aka The Trickster, the Devil)",
-        "description": "Bellevue",
-        "class": "characters"
+        "description": "Bellevue"
     },
     {
         "priority": 3,
